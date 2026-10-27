@@ -1,0 +1,78 @@
+# Builds a preview copy of the site for every branch except main,
+# and uploads it to the "Pathfinder Previews" Cloudflare account only.
+# The live site (main) is built by Cloudflare's own GitHub connection,
+# not by this file.
+
+name: Preview build
+
+on:
+  push:
+    branches-ignore:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PREVIEWS_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ce234e5d082062afcf4c5a90177e9880
+      WRANGLER_SEND_METRICS: "false"
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Build
+        run: npm run build
+
+      - name: Tell search engines to ignore previews
+        run: |
+          printf '/*\n  X-Robots-Tag: noindex, nofollow\n' >> dist/_headers
+
+      - name: Make a safe address name from the branch name
+        id: alias
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          slug=$(printf '%s' "$BRANCH" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9-]+/-/g; s/^-+//; s/-+$//')
+          case "$slug" in [a-z]*) ;; *) slug="b-$slug" ;; esac
+          slug=$(printf '%s' "$slug" | cut -c1-50 | sed -E 's/-+$//')
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+
+      - name: Stop if the pass is missing
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::The CLOUDFLARE_PREVIEWS_API_TOKEN pass is not stored in GitHub yet."
+            exit 1
+          fi
+
+      - name: First run only - create the preview Worker
+        run: |
+          if ! npx wrangler deployments list -c wrangler.preview.jsonc >/dev/null 2>&1; then
+            echo "Preview Worker not found. Creating it."
+            npx wrangler deploy -c wrangler.preview.jsonc
+          fi
+
+      - name: Upload this branch's preview
+        run: |
+          npx wrangler versions upload -c wrangler.preview.jsonc \
+            --preview-alias "${{ steps.alias.outputs.slug }}" \
+            --message "${{ github.ref_name }} @ ${GITHUB_SHA::7}"

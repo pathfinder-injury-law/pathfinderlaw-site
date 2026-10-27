@@ -1,0 +1,18 @@
+{
+  // PREVIEW COPIES ONLY. Used by .github/workflows/preview.yml.
+  // The live site uses wrangler.jsonc and is built by Cloudflare itself.
+  //
+  // account_id pins every preview upload to the "Pathfinder Previews"
+  // Cloudflare account. The pass stored in GitHub only works there too,
+  // so a preview can never reach the live account.
+  "account_id": "ce234e5d082062afcf4c5a90177e9880",
+  "name": "pf-preview",
+  "compatibility_date": "2026-10-27",
+  // Each branch gets its own address: <branch>-pf-preview.<subdomain>.workers.dev
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
