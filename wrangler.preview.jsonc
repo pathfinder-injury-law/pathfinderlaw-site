@@ -1,0 +1,16 @@
+{
+  // PREVIEWS ONLY. Used by the Worker in the separate "Pathfinder Previews"
+  // Cloudflare account. The live site never reads this file.
+  // The name is deliberately neutral: it appears in the preview address.
+  // Must match the Worker name chosen in the Previews dashboard.
+  "name": "site-preview",
+  "compatibility_date": "2026-10-27",
+  // Previews are reached at *.workers.dev addresses (behind Cloudflare Access).
+  "workers_dev": true,
+  "preview_urls": true,
+  // No account_id: Cloudflare's build supplies the Previews account.
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
