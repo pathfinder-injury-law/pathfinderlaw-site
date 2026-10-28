@@ -35,6 +35,7 @@ const path = '/location/';
             <p class="appt">By appointment only</p>
             <p><a class="cta-phone-dark" href={site.phoneHref}>{site.phoneDisplay}</a></p>
             <a class="btn btn-primary" href={o.mapUrl} rel="noopener">View on Google Maps</a>
+            {o.page && <p class="office-page"><a href={o.page.href}>{o.page.label}</a></p>}
           </div>
         ))}
       </div>
@@ -84,6 +85,10 @@ const path = '/location/';
   }
   address span {
     display: block;
+  }
+  .office-page {
+    margin: 1rem 0 0;
+    font-weight: 600;
   }
   .appt {
     margin: 0 0 0.75rem;

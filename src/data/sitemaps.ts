@@ -13,6 +13,9 @@ export interface SitemapUrl {
   lastmod?: Date;
 }
 
+// The Eastern Shore page uses the city template but is listed with the pages (owner's build note, Oct 28).
+const EASTERN_SHORE = '/eastern-shore-workers-comp-lawyer/';
+
 const urls = (paths: string[]): SitemapUrl[] => paths.map((path) => ({ path }));
 
 export const sitemaps: Record<string, SitemapUrl[]> = {
@@ -30,6 +33,7 @@ export const sitemaps: Record<string, SitemapUrl[]> = {
     '/disclaimer/',
     '/about-us/',
     '/virginia-workers-comp-faq/',
+    EASTERN_SHORE,
     ...Object.values(articlesB).map((a) => a.path),
   ]),
   practice_areas: urls([
@@ -42,7 +46,7 @@ export const sitemaps: Record<string, SitemapUrl[]> = {
     ...subArticles.map((a) => `${ARTICLE_BASE}${a.slug}/`),
   ]),
   attorneys: urls(['/bryn-swartz/', '/mandy-swartz/']),
-  arears_served: urls(cities.map((c) => c.path)),
+  arears_served: urls(cities.map((c) => c.path).filter((p) => p !== EASTERN_SHORE)),
 };
 
 // Pages that appear in a child sitemap more than once would be a bug; fail the build.

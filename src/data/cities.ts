@@ -1,4 +1,4 @@
-// Wording for the 18 city pages. One template (src/components/CityPage.astro) draws every page from this file.
+// Wording for the 19 city pages. One template (src/components/CityPage.astro) draws every page from this file.
 //
 // Wording is carried over from the live pages. Changes from the live pages (owner's decisions, Oct 28):
 //  - Work illness / occupational illness removed everywhere, including "or illness" in descriptions.
@@ -921,6 +921,85 @@ export const cities: City[] = [
         body: [
           'Your Virginia Beach work accident may have devastated you and your family. You can’t work, you’re in debt, and you’re struggling to deal with the losses you’re facing. Luckily, you don’t have to face this difficult, confusing time alone.',
           'You can instead work with our team at Pathfinder Injury Law. Your Virginia Beach Workers’ Comp lawyer can be your guide when you’re struggling to get compensated. To take advantage of your free consultation, reach out by calling {phone} or by completing the [online contact form](/contact/) below.',
+        ],
+      },
+    ],
+  },
+  // --------------------------------------------------------------- The Eastern Shore
+  // Added Oct 28, 2026 (Eastern Shore page, draft of Oct 28 with Bryn's decisions S1 to S7).
+  // Shared statements use the Round 3 wording on this branch, not the draft's older wording:
+  // employer threshold, attorney fees (Commission must approve; contingency; costs advanced), and
+  // the 30-day notice sentence (no "written").
+  {
+    path: '/eastern-shore-workers-comp-lawyer/',
+    name: 'the Eastern Shore',
+    h1: 'Eastern Shore Workers’ Compensation Lawyer',
+    title: "Eastern Shore Workers' Comp Lawyer | Pathfinder Injury Law",
+    description:
+      "Hurt at work on Virginia's Eastern Shore? Pathfinder Injury Law has a Chincoteague office and handles Workers' Comp claims in Accomack and Northampton.",
+    intro: [
+      `If you were hurt at work on Virginia’s Eastern Shore, you may be eligible for Workers’ Comp benefits that help with your medical care and part of your lost wages. [Pathfinder Injury Law](${WC}) has an office in Chincoteague and takes clients across Accomack and Northampton counties.`,
+      'Work on the Shore can be hard on the body. Poultry and seafood processing, farming and aquaculture, construction, and seasonal tourism and hospitality jobs all carry real risks of injury. When you are hurt, the questions come fast. Who pays for your treatment? What happens to your paycheck? What do you do if the insurance company says no?',
+      'Our team can walk you through the claim process, starting with a free consultation, so you can focus on getting better.',
+    ],
+    sections: [
+      {
+        h: 'Workers’ Comp for Eastern Shore Employees',
+        body: [
+          `${EMPLOYER_THRESHOLD} If you are not sure whether your employer has to carry coverage, or whether your job is covered, call us and we will help you find out.`,
+          'Farm and horticultural workers, such as nursery and greenhouse workers, are covered by Workers’ Comp only if the employer regularly has more than three full-time employees. If you work on a farm or for a company that processes what farms produce, the details of your job matter. Tell us what you do and who pays you, and we can help you understand where you stand.',
+          'You may still be able to file a Workers’ Comp claim regardless of your immigration status.',
+        ],
+      },
+      {
+        h: 'Common Work Injuries on the Eastern Shore',
+        body: [
+          'Some examples of work injuries:',
+          {
+            list: [
+              'Slips and falls on wet or slippery floors',
+              'Injuries from machinery, knives, or conveyors',
+              'Cuts and burns',
+              'Back, shoulder, and neck injuries from lifting heavy loads',
+              'Broken bones and crush injuries',
+              'Falls from ladders, roofs, or scaffolding',
+              'Vehicle accidents while driving for work',
+            ],
+          },
+          'Learn more about [factory accidents](/virginia-factory-accident-lawyer/), [construction accidents](/virginia-construction-accident-lawyer/), [work vehicle accidents](/car-accident-at-work-in-virginia/), and [back injuries](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
+        ],
+      },
+      {
+        h: 'What to Do After a Work Injury on the Eastern Shore',
+        body: [
+          {
+            list: [
+              'Tell your employer. The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the accident, although exceptions exist. It is best to give notice in writing.',
+              'Get medical care. Tell every doctor, nurse, or clinic that your injury happened at work.',
+              'Document what happened. If you can, take photos of where the accident happened and of your injuries, and write down everything you remember.',
+              'Watch the filing deadline. Your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply.',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'If Your Workers’ Comp Claim Is Denied',
+        body: [
+          `${HEARING} A lawyer can help you review the reason for the denial and prepare for a hearing. Learn more about [appealing a denial](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'Our Chincoteague Office and Video Consultations',
+        body: [
+          'Our Chincoteague office is at 6294 Cropper Street, Chincoteague, VA 23336. It is open by appointment only, and video consultations are available, so you can talk with our team from home. Office hours are Monday to Friday, 9am to 5pm, with weekend appointments by arrangement. See all of our [locations](/location/).',
+        ],
+      },
+      {
+        h: 'Call a Workers’ Comp Lawyer on the Eastern Shore',
+        body: [
+          'We offer a free consultation to answer your questions. The Virginia Workers’ Compensation Commission must approve all attorney fees in Workers’ Comp cases. We are generally paid on contingency, meaning we collect attorney fees from the benefits we obtain for our clients. Costs we advance are subject to reimbursement from the client.',
+          'We take clients from across the Eastern Shore of Virginia, including Chincoteague, Accomac, Onancock, Parksley, Wachapreague, Onley, Melfa, Exmore, Nassawadox, Cape Charles, and Eastville.',
+          'To talk with our team, call {phone} or fill out the form below.',
         ],
       },
     ],

@@ -45,6 +45,7 @@ const description =
             </address>
             <p class="appt">By appointment only</p>
             <a class="map-link" href={o.mapUrl} rel="noopener">View on Google Maps</a>
+            {o.page && <p class="office-page"><a href={o.page.href}>{o.page.label}</a></p>}
           </div>
         ))}
       </div>
@@ -79,6 +80,10 @@ const description =
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
+  }
+  .office-page {
+    margin: 1rem 0 0;
+    font-weight: 600;
   }
   .big-phone {
     display: block;
