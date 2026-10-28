@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import TornEdge from '../components/TornEdge.astro';
 import TopicIcon from '../components/TopicIcon.astro';
-import { site } from '../data/site';
+import ContactSection from '../components/ContactSection.astro';
 
 // Title, description and wording match the current live homepage, except the
 // approved results wording (migration plan, Section VIII, fix 1).
@@ -189,70 +189,6 @@ const results = [
   </section>
 
   <!-- Call to action with contact form -->
-  <section class="section cta contour on-dark" id="contact">
-    <img class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" loading="lazy" />
-    <div class="wrap cta-grid">
-      <div data-reveal>
-        <ul class="cta-points caps">
-          <li>No Pressure</li>
-          <li>No Hidden Fees</li>
-        </ul>
-        <h2>100% Free Consultation</h2>
-        <hr class="rule" />
-        <p class="lede">Learn how we can help you win your Workers’ Comp case.</p>
-        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
-      </div>
-
-      <div class="form-card" data-reveal>
-        <h3>Speak To An Attorney</h3>
-        <form id="contact-form" method="post" action="/contact/" novalidate>
-          <div class="field">
-            <label for="cf-name">Name*</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div class="field-pair">
-            <div class="field">
-              <label for="cf-email">Email*</label>
-              <input id="cf-email" name="email" type="email" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="cf-phone">Phone Number*</label>
-              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" required />
-            </div>
-          </div>
-          <div class="field">
-            <label for="cf-message">Message*</label>
-            <textarea id="cf-message" name="message" required></textarea>
-          </div>
-          <!-- Spam trap: people never see this field, bots fill it in. -->
-          <div class="hp" aria-hidden="true">
-            <label for="cf-company">Company</label>
-            <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off" />
-          </div>
-          <button class="btn btn-primary" type="submit">Send To An Attorney</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </div>
-  </section>
+  <ContactSection />
 </Base>
 
-<script>
-  // PREVIEW ONLY. This form is not connected to anything yet, so it checks the
-  // fields and says so instead of pretending to send. LAUNCH BLOCKER: replace
-  // with the real spam-protected submission (migration plan, "Contact form and
-  // spam pipeline") before the live site goes out.
-  const form = document.getElementById('contact-form') as HTMLFormElement | null;
-  if (form) {
-    const status = form.querySelector('.form-status') as HTMLElement;
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        status.textContent = 'Please fill in every field marked with a star.';
-        form.reportValidity();
-        return;
-      }
-      status.textContent = 'Preview only: this form is not connected yet, so nothing was sent.';
-    });
-  }
-</script>

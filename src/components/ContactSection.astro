@@ -1,0 +1,22 @@
+---
+import ContactForm from './ContactForm.astro';
+import { site } from '../data/site';
+---
+<section class="section cta contour on-dark" id="contact">
+  <img class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" loading="lazy" />
+  <div class="wrap cta-grid">
+    <div data-reveal>
+      <ul class="cta-points caps">
+        <li>No Pressure</li>
+        <li>No Hidden Fees</li>
+      </ul>
+      <h2>100% Free Consultation</h2>
+      <hr class="rule" />
+      <p class="lede">Learn how we can help you win your Workers’ Comp case.</p>
+      <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+    </div>
+    <div data-reveal>
+      <ContactForm />
+    </div>
+  </div>
+</section>

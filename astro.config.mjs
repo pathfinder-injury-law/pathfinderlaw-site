@@ -6,4 +6,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://pathfinderlaw.com',
   output: 'static',
+  // Keep the spaces between words and links when text is written across lines.
+  // With compression on, Astro drops them ("forworkers' compensation").
+  compressHTML: false,
 });

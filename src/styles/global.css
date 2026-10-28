@@ -1106,6 +1106,341 @@ mark {
   }
 }
 
+/* ---------- Inner pages ---------- */
+.page-hero {
+  position: relative;
+  color: var(--white);
+  background: var(--forest);
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 24rem;
+  display: grid;
+  align-items: end;
+}
+.page-hero .hero-photo {
+  animation: none;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--wash);
+  mix-blend-mode: multiply;
+  opacity: 0.92;
+  z-index: -1;
+}
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 32, 22, 0.55), rgba(14, 32, 22, 0.35) 60%, rgba(14, 32, 22, 0.55));
+  z-index: -1;
+}
+.page-hero .wrap {
+  padding-block: calc(var(--header-h) + 3.5rem) 6rem;
+  text-shadow: 0 2px 24px rgba(10, 25, 15, 0.5);
+  animation: rise 0.9s var(--ease) both;
+}
+.page-hero h1 {
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  margin: 0;
+  max-width: 22ch;
+}
+.crumbs ol {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.crumbs li + li::before {
+  content: "/";
+  margin-right: 0.6rem;
+  opacity: 0.7;
+}
+.crumbs a {
+  text-decoration: none;
+  opacity: 0.9;
+}
+.crumbs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.page-body {
+  display: grid;
+  gap: 3rem;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 7vw, 5rem);
+}
+@media (min-width: 64rem) {
+  .page-body {
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    gap: 4.5rem;
+    align-items: start;
+  }
+}
+.side {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 64rem) {
+  .side {
+    position: sticky;
+    top: calc(var(--header-h) + 1rem);
+  }
+}
+.side-card {
+  background: var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.side-card h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.9rem;
+}
+.side-call {
+  background: var(--forest);
+  color: var(--white);
+  text-align: center;
+}
+.side-call h2 {
+  color: var(--sun);
+}
+.side-call .cta-phone {
+  display: block;
+  margin-bottom: 1rem;
+}
+.toc {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.98rem;
+}
+.toc a {
+  display: block;
+  text-decoration: none;
+  padding: 0.4rem 0 0.4rem 0.9rem;
+  border-left: 3px solid transparent;
+  line-height: 1.35;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.toc a:hover {
+  border-left-color: var(--moss);
+  color: var(--pine);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Long-form text */
+.prose {
+  max-width: 46rem;
+}
+.prose > :first-child {
+  margin-top: 0;
+}
+.prose h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+  margin: 3rem 0 1rem;
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+.prose h2::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 0.28rem;
+  border-radius: 99px;
+  background: var(--moss);
+  margin-top: 0.7rem;
+}
+.prose h3 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.6rem;
+  color: var(--pine);
+}
+.prose p,
+.prose li {
+  line-height: 1.7;
+}
+.prose a {
+  color: var(--pine);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: rgba(99, 140, 28, 0.55);
+}
+.prose a:hover {
+  text-decoration-color: var(--moss);
+}
+.prose ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: grid;
+  gap: 0.55rem;
+}
+.prose ul li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+.prose ul li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.62em;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--moss);
+}
+.prose .lead {
+  font-size: 1.3rem;
+  line-height: 1.55;
+  font-weight: 500;
+}
+.prose .topic-grid {
+  margin: 1.75rem 0 2.25rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.prose .topic-grid li {
+  padding-left: 0;
+}
+.prose .topic-grid li::before {
+  display: none;
+}
+@media (min-width: 40rem) {
+  .prose .topic-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem 0.5rem;
+  }
+}
+.prose .topic-circle {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.prose .topic-icon {
+  width: 2.9rem;
+  height: 2.9rem;
+}
+.prose .topic-label {
+  font-size: 0.98rem;
+}
+.prose .topic-grid a:hover .topic-circle {
+  background: var(--forest);
+  color: var(--sun);
+}
+
+/* The four disability types as cards */
+.type-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 1.75rem;
+}
+@media (min-width: 40rem) {
+  .type-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.type-card {
+  background: var(--mist);
+  border-radius: var(--radius);
+  border-top: 0.3rem solid var(--moss);
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+.type-card h4 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+.type-card h4 abbr {
+  display: inline-block;
+  background: var(--forest);
+  color: var(--sun);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 0.15rem 0.55rem;
+  border-radius: 99px;
+  margin-right: 0.5rem;
+  vertical-align: 0.1em;
+}
+.type-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pull {
+  background: var(--sage);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  margin: 2.5rem 0;
+}
+.pull h2 {
+  margin-top: 0;
+}
+.pull > :last-child {
+  margin-bottom: 0;
+}
+
+/* Questions that open and close */
+.faq {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.faq details {
+  background: var(--mist);
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+.faq details[open] {
+  background: var(--sage);
+}
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.1rem 3.25rem 1.1rem 1.35rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  position: relative;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--sun);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform 0.25s var(--ease);
+}
+.faq details[open] summary::after {
+  content: "\2212";
+}
+.faq .answer {
+  padding: 0 1.35rem 1.1rem;
+}
+.faq .answer p:last-child {
+  margin-bottom: 0;
+}
+
 /* ---------- Motion ---------- */
 /* Sections fade up as they scroll into view. Without script, or with reduced
    motion, everything just shows. Children of a group arrive one after another. */
