@@ -7,8 +7,19 @@ export const site = {
   phoneDisplay: '(804) 505-0633',
   phoneHeader: '804-505-0633',
   phoneHref: 'tel:+18045050633',
-  address: ['8010 Ridge Road, Suite A', 'Richmond, VA 23229'],
-  mapUrl: 'https://g.page/Glen-Allen-Workers-Comp-Lawyer?share',
+  // Both offices are by appointment only.
+  offices: [
+    {
+      name: 'Richmond',
+      lines: ['8010 Ridge Road, Suite A', 'Richmond, VA 23229'],
+      mapUrl: 'https://g.page/Glen-Allen-Workers-Comp-Lawyer?share',
+    },
+    {
+      name: 'Chincoteague',
+      lines: ['6294 Cropper Street', 'Chincoteague, VA 23336'],
+      mapUrl: undefined as string | undefined,
+    },
+  ],
   hours: ['Mon-Fri: 9am-5pm', 'Sat-Sun: By Appt.', 'Video Consultations Avail.'],
   social: [
     { name: 'Facebook', url: 'https://www.facebook.com/PathfinderInjuryLaw/' },

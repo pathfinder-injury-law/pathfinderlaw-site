@@ -632,6 +632,11 @@ p {
 }
 .site-footer address {
   font-style: normal;
+  margin-bottom: 0.9rem;
+}
+.site-footer .appt {
+  font-size: 0.9rem;
+  margin: 0;
 }
 .site-footer a {
   text-decoration: none;

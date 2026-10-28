@@ -12,9 +12,17 @@ const year = new Date().getFullYear();
       <div>
         <h2>Get In Touch</h2>
         <p><a href={site.phoneHref}>{site.phoneDisplay}</a></p>
-        <address>
-          <a href={site.mapUrl}>{site.address[0]}<br />{site.address[1]}</a>
-        </address>
+        {site.offices.map((o) => (
+          <address>
+            <strong>{o.name}</strong><br />
+            {o.mapUrl ? (
+              <a href={o.mapUrl}>{o.lines[0]}<br />{o.lines[1]}</a>
+            ) : (
+              <>{o.lines[0]}<br />{o.lines[1]}</>
+            )}
+          </address>
+        ))}
+        <p class="appt">Both offices by appointment only.</p>
       </div>
       <div>
         <h2>Office Hours</h2>
