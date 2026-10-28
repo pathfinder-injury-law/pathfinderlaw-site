@@ -6,39 +6,51 @@ date: 2020-12-18T21:06:39Z
 updated: 2022-10-21T17:48:53Z
 tags: ["causes","benefits"]
 ---
+Warehouses are using more robots, conveyors, and automated systems to move, sort, and pack items. Automation can change the kind of risks workers face. If you were hurt working in an automated warehouse, including a large e-commerce fulfillment center, Virginia Workers’ Compensation may be available to you.
 
-Automation has sped up the packing process in many Amazon warehouses across the United States. But that doesn’t mean these warehouses are safer for workers. You may be one of many people who have suffered serious injuries because of the robots involved in automation.
-
-If you’ve suffered an automated warehouse injury as an Amazon worker, you need to know that you have options to recover benefits. If you’re concerned about getting your Workers’ Comp benefits, or if you’ve already been denied your benefits, reach out to a [Virginia Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) to see about getting compensated fairly.
+This guide explains how these injuries can happen and what to know about a Workers’ Comp claim in Virginia. If you are concerned about getting your benefits, or your claim has been denied, you may want to talk with a [Virginia Workers’ Comp lawyer](/virginia-workers-comp-lawyer/).
 
 ## How Do Automated Warehouse Injuries Happen?
 
-Amazon’s automated warehouses rely heavily on robots to pick items, pack boxes, and fill many of the roles human workers once filled for the company. While this has reduced the time it takes to package and ship items, it can also create new risks of warehouse injuries.
+Automated warehouses combine people with machines. Workers may load, unload, or restock items, clear jams, or work near moving equipment. Injuries can happen in several ways:
 
-Automated warehouse work can lead to injuries including falls, electrical injuries, traumatic amputations, and other severe losses.
+- Being struck by or caught in moving equipment, such as conveyors or robotic carts
+- Falls from platforms, ladders, or equipment
+- Electrical injuries while working around powered machinery
+- Crush injuries and, in serious cases, amputations
+- Repetitive motion and overexertion injuries from fast-paced or heavy work
 
-## Liability for Your Warehouse Injuries
+The cause of your injury matters less for a Workers’ Comp claim than you might think. Fault generally doesn’t matter in Virginia Workers’ Compensation claims. You generally don’t have to prove who caused the accident, but your accident must arise out of and in the course of your employment.
 
-When [you’re hurt on the job](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), it’s typically your employer’s responsibility to pay for your recovery. If you’re considered an employee for Amazon, the company is typically liable for your injuries. However, Amazon also outsources many of its personnel needs to staffing agencies, so just because you get hurt working for Amazon does not necessarily mean you will receive compensation from Amazon.
+## Who Is Your Employer?
 
-In addition, Amazon may try to downplay the severity of your injuries, or the company may claim you were injured elsewhere or that for some legal reason your accident does not qualify you for compensation. In these situations, they may try to shift the liability back to you.
+Workers’ Comp benefits generally come through your employer’s insurance. In a warehouse, it is not always simple to tell who that is. Some warehouse workers are hired directly by the operator of the facility. Others are hired through staffing agencies or contractors. Which company is responsible for your claim can depend on the facts of your situation, and it can affect who must carry the insurance and who may be named in your claim. If you are not sure, talk with a lawyer before assuming that your claim cannot go forward.
 
-Because of this, it’s important to bring the facts to a Workers’ Comp lawyer who can help you protect your Workers’ Comp claim and seek the benefits you’re due.
+## What Should You Do After a Warehouse Injury?
 
-## Benefits for Injured Amazon Workers
+- **Get medical care.** See a doctor promptly, even if the injury seems minor. Your employer must offer a panel of three doctors, and you choose one.
+- **Report the injury in writing.** The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist. Give written notice if at all possible. Verbal notice is OK, but much harder to prove.
+- **Write down what happened.** Note the date, time, location, the equipment involved, and the names of any witnesses while the details are fresh.
+- **Keep your records.** Save medical records, work schedules, and pay stubs.
+- **Know your deadline.** Claims for benefits must generally be filed with the Virginia Workers’ Compensation Commission within two years of an accident, or else you can forever lose benefit entitlement. See our guide on [how to file a Workers’ Comp claim](/how-to-file-a-workers-comp-claim/).
 
-Luckily, you don’t have to recover from your accident without help. You may have grounds for workers comp benefits that cover your losses after a machine or robot injured you in an Amazon warehouse accident. These benefits should cover the costs of your recovery such as medical bills, as well as covering a percentage of the wages you received before the accident.
+## What Can Happen to Your Claim?
 
-If you’re unsure what benefits you’re due, talk to your Workers’ Compensation lawyer about your injuries and the costs of your care. Below are some of the Workers’ Comp benefits you may be due:
+An employer or its insurance company may dispute a claim. They may question how serious your injuries are, whether the injury happened at work, or whether your accident qualifies for benefits. If that happens, you may be able to request a hearing before the Commission. Read about [what happens if your claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). A lawyer can help you understand your options.
 
-- Medical care coverage
+## Benefits for Injured Warehouse Workers
+
+If your claim is accepted, Workers’ Comp may provide several types of benefits. Which ones apply depends on your injuries and your situation:
+
+- Medical care related to the work injury
+- Temporary total disability benefits while a doctor has you totally out of work
 - [Partial disability benefits](https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf)
-- Total disability benefits
-- Mileage reimbursement
-- Death benefits in the case of a fatally injured loved one, including funeral expenses and loss of income benefits
+- Permanent partial disability benefits for some injuries
+- Mileage reimbursement for medical travel
+- Death benefits for the family or dependents of a worker who dies from a work injury, including funeral expenses
+
+Generally, the law calculates your workers’ compensation rate by taking the average of your earnings in the 52 weeks prior to your accident and paying you two thirds of this figure on a weekly basis while a doctor has you totally out of work.
 
 ## Talk to a Work Comp Lawyer After a Robot-Related Injury
 
-When you’re hurt in one of Virginia’s Amazon warehouses, you may be due Workers’ Compensation for your injuries. Long hours, heavy machinery, and automated tools can all turn dangerous quickly. Unfortunately, that can leave you with severe injuries your employer may try to avoid covering.
-
-If you’re struggling to get compensated after an automated warehouse injury or other robot-related injury, you may need a lawyer from Pathfinder Injury Law. We can guide you to the benefits you’re due so you can focus less on your legal claim and more on your health and family. To get started with a free consultation, reach out by calling [804-505-0633](tel:+18045050633) or by completing the online contact form below.
+If you were hurt in an automated warehouse, a lawyer can review your situation and explain your options. Pathfinder Injury Law handles Virginia Workers’ Compensation claims. To get started with a free consultation, reach out by calling [804-505-0633](tel:+18045050633) or by completing the online contact form below.
