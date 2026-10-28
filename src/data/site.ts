@@ -12,12 +12,12 @@ export const site = {
     {
       name: 'Richmond',
       lines: ['8010 Ridge Road, Suite A', 'Richmond, VA 23229'],
-      mapUrl: 'https://g.page/Glen-Allen-Workers-Comp-Lawyer?share',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=8010+Ridge+Road+Suite+A+Richmond+VA+23229',
     },
     {
       name: 'Chincoteague',
       lines: ['6294 Cropper Street', 'Chincoteague, VA 23336'],
-      mapUrl: undefined as string | undefined,
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=6294+Cropper+Street+Chincoteague+VA+23336',
     },
   ],
   hours: ['Mon-Fri: 9am-5pm', 'Sat-Sun: By Appt.', 'Video Consultations Avail.'],
