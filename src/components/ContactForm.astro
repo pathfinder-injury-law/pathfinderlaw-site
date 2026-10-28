@@ -1,12 +1,23 @@
 ---
-// The contact form. PREVIEW ONLY: it checks the fields and says nothing was
-// sent. LAUNCH BLOCKER: replace with the real spam-protected submission
-// (migration plan, "Contact form and spam pipeline") before the live site goes out.
+// The contact form, used by the homepage, the Contact page and the section
+// forms on every other page. It posts JSON to /api/contact (the Worker in
+// src/worker/). See docs/form-pipeline.md.
+import { site } from '../data/site';
+
 const { id = 'contact-form' } = Astro.props;
+
+// Turnstile public site key, supplied at build time. Cloudflare's published
+// always-pass test key is used for previews. A live build without the real
+// key fails here instead of quietly shipping the test key.
+const TEST_SITE_KEY = '1x00000000000000000000AA';
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
+if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
+  throw new Error('PUBLIC_TURNSTILE_SITE_KEY must be set for a live build (see docs/form-pipeline.md).');
+}
 ---
 <div class="form-card">
   <h3>Speak To An Attorney</h3>
-  <form class="contact-form" id={id} method="post" action="/contact/" novalidate>
+  <form class="contact-form" id={id} method="post" action="/contact/" novalidate data-sitekey={siteKey || TEST_SITE_KEY} data-phone={site.phoneHeader} data-phone-href={site.phoneHref}>
     <div class="field">
       <label for={`${id}-name`}>Name*</label>
       <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />
@@ -41,22 +52,110 @@ const { id = 'contact-form' } = Astro.props;
       <label for={`${id}-company`}>Company</label>
       <input id={`${id}-company`} name="company" type="text" tabindex="-1" autocomplete="off" />
     </div>
+    <div class="ts-widget"></div>
     <button class="btn btn-primary" type="submit">Send Inquiry</button>
     <p class="form-status" role="status" aria-live="polite"></p>
   </form>
 </div>
 
 <script>
-  document.querySelectorAll<HTMLFormElement>('.contact-form').forEach((form) => {
+  // Loaded only on pages that contain the form (Astro includes this script only
+  // where the component is used). Cloudflare's Turnstile script loads on the
+  // first form found, never on other pages.
+  type TurnstileApi = { render(el: Element, opts: Record<string, unknown>): string; reset(id?: string): void };
+  const forms = document.querySelectorAll<HTMLFormElement>('.contact-form');
+  const pageLoaded = Date.now();
+  const kind = location.pathname === '/' || location.pathname === '/contact/' ? 'main' : 'sidebar';
+
+  if (forms.length) {
+    const s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    s.async = true;
+    s.onload = () => forms.forEach((f) => (f as any)._renderTs?.());
+    s.onerror = () => forms.forEach((f) => ((f as any)._tsFailed = true));
+    document.head.appendChild(s);
+  }
+
+  forms.forEach((form) => {
     const status = form.querySelector('.form-status') as HTMLElement;
-    form.addEventListener('submit', (e) => {
+    const button = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const widget = form.querySelector('.ts-widget') as HTMLElement;
+    const state = form as any;
+    let token = '';
+    let widgetId: string | undefined;
+
+    state._renderTs = () => {
+      const ts = (window as any).turnstile as TurnstileApi | undefined;
+      if (!ts || widgetId) return;
+      widgetId = ts.render(widget, {
+        sitekey: form.dataset.sitekey,
+        callback: (t: string) => (token = t),
+        'expired-callback': () => (token = ''),
+        'error-callback': () => ((state._tsFailed = true), (token = '')),
+      });
+    };
+    if ((window as any).turnstile) state._renderTs();
+
+    const showFailure = () => {
+      status.textContent = 'We could not send your message. Please call us at ';
+      const a = document.createElement('a');
+      a.href = form.dataset.phoneHref || '';
+      a.textContent = form.dataset.phone || '';
+      status.append(a, ' and we will help you right away.');
+    };
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!form.checkValidity()) {
         status.textContent = 'Please fill in every field marked with a star, including the acknowledgement.';
         form.reportValidity();
         return;
       }
-      status.textContent = 'Preview only: this form is not connected yet, so nothing was sent.';
+      if (!token) {
+        if (state._tsFailed) return showFailure();
+        status.textContent = 'One moment, we are checking your browser. Please press Send Inquiry again.';
+        return;
+      }
+      const data = new FormData(form);
+      button.disabled = true;
+      status.textContent = 'Sending...';
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            name: data.get('name'),
+            email: data.get('email'),
+            phone: data.get('phone'),
+            message: data.get('message'),
+            acknowledged: data.get('acknowledged') === 'on',
+            company: data.get('company'),
+            form: kind,
+            fillMs: Date.now() - pageLoaded,
+            turnstileToken: token,
+          }),
+        });
+        const result = await res.json().catch(() => ({}));
+        if (res.ok && result.ok) {
+          if (result.preview) {
+            status.textContent = result.message || 'Preview: nothing was sent.';
+            button.disabled = false;
+            return;
+          }
+          location.href = '/thank-you/';
+          return;
+        }
+        if (res.status === 400) {
+          status.textContent = 'Please check that every field is filled in correctly and the acknowledgement is checked.';
+        } else {
+          showFailure();
+        }
+      } catch {
+        showFailure();
+      }
+      token = '';
+      (window as any).turnstile?.reset(widgetId);
+      button.disabled = false;
     });
   });
 </script>
