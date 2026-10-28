@@ -14,9 +14,9 @@
   --white: #ffffff;
 
   /* The Brand Book font, Nexa, is a paid font, so it is not used on the site.
-     Outfit is a free look-alike (SIL Open Font License), served from this site. */
-  --font-head: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Outfit Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+     Figtree is a free font (SIL Open Font License), served from this site. */
+  --font-head: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Figtree Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --wrap: 72rem;
   --gutter: 1.25rem;
