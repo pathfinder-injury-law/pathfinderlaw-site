@@ -12,7 +12,9 @@
 #  - The 15 /results/{amount}/ and 21 /testimonials/{name}/ addresses are covered by one rule each
 #    at the bottom, so each old address does not need its own line.
 
-# Work illness is no longer a case type on the site.
+# Work illness is no longer a case type on the site (this includes the occupational
+# diseases article). The two Spanish pages go to the English practice page (plan notes).
+# Work illness redirects below.
 /virginia-workers-comp-lawyer/virginia-work-illness-lawyer/ /virginia-workers-comp-lawyer/ 301
 /virginia-workers-comp-lawyer/virginia-work-illness-lawyer /virginia-workers-comp-lawyer/ 301
 
@@ -36,8 +38,10 @@
 /how-long-can-a-workers-comp-claim-stay-open /how-long-can-a-workers-comp-claim-stay-open/ 301
 /virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute /virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/ 301
 /should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim /should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/ 301
-/abogados-de-compensacion-al-trabajador-en-richmond /abogados-de-compensacion-al-trabajador-en-richmond/ 301
-/abogados-de-compensacion-al-trabajador-en-virginia /abogados-de-compensacion-al-trabajador-en-virginia/ 301
+/abogados-de-compensacion-al-trabajador-en-richmond /virginia-workers-comp-lawyer/ 301
+/abogados-de-compensacion-al-trabajador-en-richmond/ /virginia-workers-comp-lawyer/ 301
+/abogados-de-compensacion-al-trabajador-en-virginia /virginia-workers-comp-lawyer/ 301
+/abogados-de-compensacion-al-trabajador-en-virginia/ /virginia-workers-comp-lawyer/ 301
 /how-to-win-a-virginia-workers-comp-case /how-to-win-a-virginia-workers-comp-case/ 301
 /disclaimer /disclaimer/ 301
 /sitemap /sitemap/ 301
@@ -85,7 +89,8 @@
 /virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims /virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/ 301
 /virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia /virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia/ 301
 /virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia /virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/ 301
-/virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp /virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp/ 301
+/virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp /virginia-workers-comp-lawyer/ 301
+/virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp/ /virginia-workers-comp-lawyer/ 301
 /virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement /virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/ 301
 /virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia /virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/ 301
 /virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing /virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/ 301
