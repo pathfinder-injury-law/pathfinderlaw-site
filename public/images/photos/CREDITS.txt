@@ -6,3 +6,7 @@ tile-a.jpg, tile-b.jpg, tile-c.jpg   Unsplash photos carried over from the previ
                  (file names on the old site began with "photo-", the Unsplash pattern).
 
 No paid stock photos or paid fonts belong in this public repository.
+
+public/images/blog/birthday/   23 photos in the "Happy Birthday to Pathfinder Injury Law!" post.
+                 The firm's own photos (owner-approved for use, Oct 28, 2026), copied from the
+                 old site's uploads folder. Not stock photos; no license needed.

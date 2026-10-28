@@ -113,6 +113,33 @@ const minutes = Math.max(1, Math.round(post.words / 220));
   .bp-article ul {
     margin-bottom: 1.5rem;
   }
+  /* Photo gallery used by the birthday post. */
+  .bp-gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 40rem) {
+    .bp-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+    }
+  }
+  .bp-gallery figure {
+    margin: 0;
+  }
+  .bp-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 0.4rem 1.2rem rgba(41, 70, 52, 0.14);
+  }
+  .bp-gallery figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(41, 70, 52, 0.85);
+  }
   .bp-related {
     margin-top: 4rem;
     padding-top: 1rem;

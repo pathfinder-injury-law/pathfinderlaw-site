@@ -13,9 +13,9 @@ If you’ve suffered an automated warehouse injury as an Amazon worker, you need
 
 ## How Do Automated Warehouse Injuries Happen?
 
-Amazon’s automated warehouses rely heavily on robots to pick items, pack boxes, and fill many of the roles human workers once filled for the company. While this has reduced the time it takes to package and ship items, it has also led to an increase in warehouse injuries.
+Amazon’s automated warehouses rely heavily on robots to pick items, pack boxes, and fill many of the roles human workers once filled for the company. While this has reduced the time it takes to package and ship items, it can also create new risks of warehouse injuries.
 
-For years, Amazon has received complaints and fines for the many injuries its workers suffer. These injuries include falls, electrical injuries, traumatic amputations, and other severe losses.
+Automated warehouse work can lead to injuries including falls, electrical injuries, traumatic amputations, and other severe losses.
 
 ## Liability for Your Warehouse Injuries
 

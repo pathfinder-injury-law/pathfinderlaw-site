@@ -15,7 +15,7 @@ If you believe your employer has retaliated against you for [filing a Workers’
 
 Many employees worry about reporting a work accident out of fear that their employer will retaliate against them. You may be worried about being blamed for the accident, refused Workers’ Comp benefits, or even demoted or fired from your job.
 
-But your employer has no legal grounds to do this. [Employer retaliation is illegal](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/), and they may face stiff fines and other penalties if they retaliate against you for seeking Workers’ Comp benefits.
+But your employer has no legal grounds to do this. [Employer retaliation is illegal](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/), and an employer that retaliates against you for seeking Workers’ Comp benefits may face legal consequences.
 
 ## Your Rights as an Injured Worker
 
