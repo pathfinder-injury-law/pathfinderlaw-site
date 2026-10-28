@@ -31,6 +31,8 @@ In order for an accident to be covered, it must be the result of a specific work
 
 Determine the exact occurrence and timing of the injury. It is important to note that only sudden mechanical changes are compensable in Virginia. Workers’ compensation insurance will not cover injuries that occur gradually or may be attributable to repetitive trauma.
 
+<figure class="bp-photo"><img src="/images/blog/broken-leg.jpg" alt="A person with a broken leg in a blue walking boot" width="1400" height="933" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@tomspentys" rel="noopener">@tomspentys</a> on Unsplash</figcaption></figure>
+
 ## What Do I Need to Prove for My Workers’ Comp Claim?
 
 Once you severely injure your foot in the workplace, you need to begin collecting evidence. The burden of proof for your workers’ compensation claim lies with you, and the sooner you start preparing, the better.

@@ -13,7 +13,7 @@ However, an employer can’t just call you an independent contractor to avoid ce
 
 ## Make Sure You Are an Employee
 
-If your employer has you listed as an independent contractor, first make sure you are a real employee. If you meet any of the below statements, you are an independent contractor and not a regular employee.
+If your employer has you listed as an independent contractor, first look at how you actually work. Factors like these may suggest that you are an independent contractor rather than a regular employee. Your classification depends on the facts of your situation.
 
 - You are paid by project, not hourly or monthly.
 - You use your own tools and [equipment](/how-faulty-equipment-causes-workplace-injuries/).
@@ -32,7 +32,7 @@ If you believe that you have been wrongly classified, tell your employer. If the
 
 ## Partner with a Lawyer
 
-If your employer isn’t cooperating and won’t listen to your concerns, you might want to consider your legal options. It’s illegal for an employer to file this status if it doesn’t truly reflect your job duties.
+If your employer isn’t cooperating and won’t listen to your concerns, you might want to consider your legal options. Listing you as an independent contractor when your job duties are those of an employee may be unlawful.
 
 It can also put you in harm’s way if you were to get [injured on the job](/virginia-work-injury-lawyer/) or need health insurance.
 

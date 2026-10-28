@@ -15,7 +15,9 @@ Because of this, you may need to speak with a [Workers’ Compensation lawyer](/
 
 When your job requires you to make the same motion over and over, it can injure you. For example, you may have suffered from a rotator cuff injury after making the same lifting motion so many times. Recovery from a rotator cuff injury can be expensive and require rehabilitation.
 
-Likewise, impingement syndrome, which can be painful, can also lead to expensive treatment and time that you can’t work. Either of these injuries—or others—caused by repetitive motions may be grounds for Workers’ Comp benefits.
+Likewise, impingement syndrome, which can be painful, can also lead to expensive treatment and time that you can’t work.
+
+Keep in mind that Virginia workers’ comp generally does not cover injuries that develop gradually from repetitive trauma. Benefits require an identifiable accident that causes a sudden structural or mechanical change in the body. A workers’ comp lawyer can review how your shoulder injury happened and whether it meets that standard.
 
 ## Slip-and-Fall Injuries
 
