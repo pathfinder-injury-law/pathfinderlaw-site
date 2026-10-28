@@ -1,0 +1,3 @@
+# Keep the form confirmation page out of search results (it is also left out of the sitemap).
+/thank-you/
+  X-Robots-Tag: noindex, nofollow

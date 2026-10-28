@@ -1,0 +1,85 @@
+---
+import BioPage from '../../components/BioPage.astro';
+
+// Wording is carried over from the live page. Changes from the live page, for Bryn's review:
+//  - "Glen Allen" became "Richmond" (the footer and offices list Richmond).
+//  - The two "Virginia Bar Association Top Attorney Award" lines are left out: no year, source
+//    unknown, and the owner's rule is "experienced", not "top". Add back only if Bryn confirms them.
+//  - Award and association logos (Best Law Firms, Super Lawyers, a "1 million" badge) are left out:
+//    they were files from the old paid theme and need dates and permission to use.
+//  - The sidebar said "Cum Laude" for Randolph-Macon while the biography says "magna cum laude";
+//    the sidebar now matches the biography. Bryn to confirm.
+// Claims to screen (kept as written): "hundreds and hundreds" of cases, "first-class representation
+// with a work product that is second to none", the Virginia Lawyers Weekly and Super Lawyers honors.
+const title = 'Bryn Swartz - Pathfinder Injury Law';
+const description =
+  "Don't worry about work injuries all on your own. Call Bryn Swartz of Pathfinder Injury Law to discuss your Virginia workers' comp case.";
+const facts = [
+  {
+    heading: 'Education',
+    items: [
+      'B.A. Randolph-Macon College (Magna Cum Laude, Phi Beta Kappa)',
+      'J.D. University of Richmond School of Law (Magna Cum Laude, Walter Scott McNeill Law Honor Society)',
+    ],
+  },
+  {
+    heading: 'Honors',
+    items: [
+      'Virginia Lawyers Weekly “Go-To Lawyer for Workers’ Compensation,” 2021',
+      'Super Lawyers Rising Star, 2021 and 2022',
+    ],
+  },
+  { heading: 'Associations', items: ['Virginia State Bar', 'Virginia Trial Lawyers Association'] },
+];
+---
+<BioPage
+  title={title}
+  description={description}
+  path="/bryn-swartz/"
+  name="Bryn Swartz"
+  role="Owner & Attorney"
+  photo="/images/photos/bryn.jpg"
+  photoAlt="Bryn Swartz, owner and attorney at Pathfinder Injury Law"
+  facts={facts}
+>
+  <p class="lead">
+    Bryn founded Pathfinder Injury Law to pursue his goal to give every client the diligent,
+    attentive service they need in the midst of a work-related injury.
+  </p>
+
+  <h2 id="about">About Bryn Swartz</h2>
+  <p>
+    Bryn Swartz is the owner of Pathfinder Injury Law, a conscientiously small, boutique Workers’
+    Compensation law firm in Richmond. Bryn’s entire practice consists of helping people hurt at work
+    in Virginia. He was born and raised in Richmond, Virginia, the son of two musicians and
+    schoolteachers. After dropping out of college to go on tour and make albums with his punk band,
+    he resumed his education at Randolph-Macon College. He graduated in 2008 magna cum laude, in the
+    top seven percent of his class, and with membership in the Phi Beta Kappa honor society. He then
+    attended law school at the University of Richmond School of Law, from which he graduated magna
+    cum laude, in the top eleven percent of his class, and with membership in the Walter Scott McNeill
+    Law Honor Society.
+  </p>
+  <p>
+    Bryn has handled hundreds and hundreds of
+    <a href="/virginia-workers-comp-lawyer/">Workers’ Compensation</a> cases through the process of
+    filing claims, conducting discovery, litigating hearings, and pursuing review appeals. He has
+    worked on both claimant- and defense-side of the Virginia Workers’ Compensation system. The
+    genesis of Pathfinder Injury Law began when Bryn was laid off from a claimant-side law firm the
+    day his son was born in 2019. He and his wife Mandy Truman Swartz founded Pathfinder sitting in
+    the hospital room while Mandy was recovering from a C-section with a brand new baby boy, nothing
+    to lose, and the whole world to gain. Bryn has built a reputation for giving clients first-class
+    representation with a work product that is second to none, all while wearing shorts and a NORML
+    or mountain biking tee shirt. He firmly disavows the fallacy that one must wear a suit or
+    uncomfortable shoes or have a dumb, self-serious office to be a great lawyer and a fierce client
+    advocate. He is well known amongst his peers as a diligent, resourceful, and…unconventional
+    lawyer. He prefers to do his job while riding his beloved Yeti SB130 mountain bike lost in the
+    woods on the side of a mountain somewhere.
+  </p>
+  <p>
+    Bryn was voted a 2021 Virginia Lawyers Weekly “Go-To Lawyer for Workers’ Compensation” and a 2021
+    and 2022 SuperLawyers Rising Star. He is a member of various professional associations,
+    including the Virginia State Bar and the Virginia Trial Lawyers Association. Outside of law, Bryn
+    loves mountain biking, traveling, eating great food, hanging out with his family and dogs, being
+    a coffee snob, playing drums, and listening to podcasts, audiobooks, and music.
+  </p>
+</BioPage>

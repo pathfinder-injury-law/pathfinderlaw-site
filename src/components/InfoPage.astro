@@ -1,0 +1,31 @@
+---
+// Plain inner page: photo header, one readable column, and the contact form at the bottom.
+// Used by the simple pages (privacy policy, disclaimer, sitemap, thank-you, client portal).
+import Base from '../layouts/Base.astro';
+import PageHero from './PageHero.astro';
+import ContactSection from './ContactSection.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  h1: string;
+  showContact?: boolean;
+}
+const { title, description, path, h1, showContact = true } = Astro.props;
+---
+<Base title={title} description={description} path={path} crumbs={[{ name: h1, path }]} overlay>
+  <PageHero title={h1} crumbs={[{ name: h1 }]} />
+  <div class="wrap info-body">
+    <article class="prose">
+      <slot />
+    </article>
+  </div>
+  {showContact && <ContactSection />}
+</Base>
+
+<style>
+  .info-body {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 7vw, 5rem);
+  }
+</style>

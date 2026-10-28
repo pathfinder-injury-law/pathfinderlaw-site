@@ -1,0 +1,75 @@
+---
+import BioPage from '../../components/BioPage.astro';
+
+// Wording is carried over from the live page. Changes from the live page, for Bryn's review:
+//  - Title is "Firm Administrator/Paralegal" (owner's decision); the live page said "Certified Paralegal".
+//    The meta description drops "certified" for the same reason.
+//  - The live sidebar listed "Current - Juris Doctor", but the biography says she graduated in 2024.
+//    The sidebar now matches the biography. Bryn to confirm.
+//  - The live page listed three items under "Awards" that are really two associations and one honor;
+//    they are sorted into "Honor" and "Associations".
+const title = 'Mandy Truman Swartz - Pathfinder Injury Law';
+const description =
+  'Pathfinder Injury Law is a family business, and Mandy Truman Swartz serves as firm administrator and paralegal. Read more about her journey.';
+const facts = [
+  {
+    heading: 'Education',
+    items: [
+      'Juris Doctor, University of Richmond School of Law (Summa Cum Laude, 2024)',
+      'Bachelor of Science, University of Richmond (Summa Cum Laude, 2021)',
+      'Associate of Applied Science in Paralegal Studies, J. Sargeant Reynolds (Magna Cum Laude)',
+    ],
+  },
+  { heading: 'Honor', items: ['Virginia Lawyers Weekly Unsung Legal Hero'] },
+  {
+    heading: 'Associations',
+    items: ['Virginia Paralegal Association', 'National Association of Legal Assistants'],
+  },
+];
+---
+<BioPage
+  title={title}
+  description={description}
+  path="/mandy-swartz/"
+  name="Mandy Truman Swartz"
+  role="Firm Administrator/Paralegal"
+  photo="/images/photos/mandy.jpg"
+  photoAlt="Mandy Truman Swartz, firm administrator and paralegal at Pathfinder Injury Law"
+  facts={facts}
+>
+  <p class="lead">
+    Pathfinder is a family business, and Mandy Truman Swartz rounds out the Pathfinder team as firm
+    administrator and paralegal.
+  </p>
+
+  <h2 id="about">About Mandy Truman Swartz</h2>
+  <p>
+    Mandy Truman Swartz is Pathfinder’s firm administrator, the strategic brains behind the
+    operation, and is married to Bryn. Mandy brings years of workers’ compensation experience to her
+    work with Pathfinder. She was born and raised in Mechanicsville, Virginia. Her career in workers’
+    compensation began as a teenager with a position at the Virginia Workers’ Compensation
+    Commission. She later worked at the Supreme Court of Virginia and as a paralegal at a workers’
+    compensation defense firm in Richmond. This gave way to forming Pathfinder Injury Law with Bryn
+    while the two sat in their hospital room the day their son was born in August 2019.
+  </p>
+  <p>
+    Given her experience in the various levels of the judicial system and her work as a defense
+    paralegal, Mandy brings invaluable perspective on the inner workings of insurance companies and
+    the judiciary. She has a strong interest in legal research and writing and can often be found at
+    her desk with empty coffee cups, snack containers, Legos, and law books strewn about, notes and
+    flags sticking out everywhere and questionable 80s music playing (to Bryn’s dismay).
+  </p>
+  <p>
+    Mandy earned her Bachelor of Science summa cum laude in 2021 from the University of Richmond. She
+    then attended the University of Richmond School of Law, from which she graduated in 2024 summa
+    cum laude, in the top five students in her class. She received no less than six CALI awards for
+    scoring the highest grades in various classes; was on Law Review; and was inducted into the Order
+    of the Coif. She further served as President of the Animal Law Society, Vice President of First
+    Generation Law Students, and Networking and Alumni Relations Chair for the Phi Alpha Delta law
+    fraternity. This, while also raising a small child and helping run a law firm.
+  </p>
+  <p>
+    In her free time, Mandy enjoys reading, listening to music, hanging out with the family and the
+    hounds, and drinking way too much coffee.
+  </p>
+</BioPage>

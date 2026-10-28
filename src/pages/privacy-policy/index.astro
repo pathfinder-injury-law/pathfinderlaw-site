@@ -1,0 +1,75 @@
+---
+import InfoPage from '../../components/InfoPage.astro';
+
+// Wording is carried over from the live page (last updated April 25, 2025), unchanged.
+// Change from the live page: the meta description said "work accident and illness cases"; "illness"
+// is removed (owner's rule: no work illness content anywhere).
+// NEEDS BRYN BEFORE LAUNCH: this policy only covers text messaging (SMS). The migration plan says
+// the privacy policy must also describe the new site's contact form, Cloudflare Turnstile, web
+// analytics and how long form messages are kept. Nothing about those is written here, because
+// those facts are not final yet. The contact email below was hidden by the old site's spam
+// protection and was read from its page source.
+const title = 'Privacy Policy - Pathfinder Injury Law';
+const description =
+  'Pathfinder Injury Law helps in Virginia work accident cases. View our privacy policy or contact us for a consultation.';
+---
+<InfoPage title={title} description={description} path="/privacy-policy/" h1="Privacy Policy">
+  <p>
+    We prioritize Your confidentiality and privacy. This privacy policy, last updated on April 25,
+    2025, explains how We collect, use, disclose, and protect Your information concerning SMS (Short
+    Message Service) messaging through 10DLC to enable effective communication between You and Us.
+  </p>
+
+  <h2>Information We Collect</h2>
+  <p>When You opt-in to receive SMS messages from Us, We may collect the following types of information:</p>
+  <ul>
+    <li>Personal Information: Name, phone number, and email address (if provided);</li>
+    <li>Case-Related Information: case number and client ID (if applicable);</li>
+    <li>Relevant details necessary for effective communication regarding Your case; and</li>
+    <li>Message Data: The content of SMS messages sent and received, delivery status of SMS messages, and interaction data related to SMS messages.</li>
+  </ul>
+
+  <h2>How We Use Your Information</h2>
+  <p>We use the collected information strictly for case management and communication purposes, specifically for:</p>
+  <ul>
+    <li>Communication: Providing case updates, obtaining information, sending and receiving photos and files, and responding to client inquiries and delivering necessary legal support via SMS.</li>
+    <li>Service Improvement: Understanding and analyzing the use of our SMS services and improving communication methods to better serve clients.</li>
+    <li>Legal Compliance: Complying with applicable laws and regulations and responding to lawful requests and legal processes</li>
+  </ul>
+
+  <h2>Sharing Your Information</h2>
+  <p>We will never sell Your information to anyone ever. We may share or disclose Your information to third parties as necessary in the following cases:</p>
+  <ul>
+    <li>Service Providers: We may share Your information with trusted third-party service providers that assist us in operating our firm, such as case management systems and SMS services. These parties are required to maintain the confidentiality and security of your information.</li>
+    <li>Third-Party Counsel and Referral Attorneys: We may share Your information with trusted third-party counsel and attorneys to whom We refer You, if You authorize Us to do so.</li>
+    <li>Legal Requirements: We may disclose Your information if required by law or in response to a valid legal request such as a subpoena, court order, or government demand.</li>
+  </ul>
+
+  <h2>Security of Your Information</h2>
+  <p>
+    We take reasonable measures to protect Your information from unauthorized access, disclosure,
+    alteration, or destruction. However, no method of transmission over the Internet or electronic
+    storage is 100% secure, and We cannot guarantee absolute security.
+  </p>
+
+  <h2>Your Rights and Choices</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Opt-Out: You can opt out of receiving SMS messages from Us by replying “STOP” to any message, or by contacting Us at any of the methods set out in the “Contact Us” section below.</li>
+    <li>Access and Correction: You can request access to or correction of Your personal information by contacting Us at any of the methods set out in the “Contact Us” section below.</li>
+  </ul>
+
+  <h2>Changes to This Policy</h2>
+  <p>
+    We may update this Privacy Policy from time to time. Any changes will be effective when We post
+    the revised policy on Our website. We encourage You to review this Privacy Policy periodically.
+  </p>
+
+  <h2>Contact Us</h2>
+  <p>If You have any questions or concerns about this Privacy Policy or Our privacy practices, you may contact Us by any of the following methods:</p>
+  <ul>
+    <li>By phone: <a href="tel:+18045050633">(804) 505-0633</a></li>
+    <li>By email: <a href="mailto:admin@pathfinderlaw.com">admin@pathfinderlaw.com</a></li>
+    <li>By mail: Pathfinder Injury Law, 8010 Ridge Road, Suite A, Richmond, Virginia 23229</li>
+  </ul>
+</InfoPage>
