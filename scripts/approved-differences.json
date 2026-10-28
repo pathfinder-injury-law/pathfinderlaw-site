@@ -168,6 +168,104 @@
       "live": "Need a Loudoun County workers’ comp lawyer? Pathfinder Injury Law has you covered. Let's discuss your Virginia work injury or illness case.",
       "new": "Need a Loudoun County workers’ comp lawyer? Pathfinder Injury Law has you covered. Let's discuss your Virginia work injury case.",
       "reason": "Owner decision: work-illness content removed; 'or illness' dropped."
+    },
+    {
+      "address": "/what-happens-when-you-file-a-workers-comp-claim/",
+      "field": "description",
+      "live": "What happens when you file a Virginia workers' comp claim? Here's what you need to know from the trusted lawyers at Pathfinder Injury Law.",
+      "new": "What happens when you file a Virginia workers' comp claim? Here's what you need to know from the trusted team at Pathfinder Injury Law.",
+      "reason": "Owner decision 10-28-26: 'trusted lawyers' became 'trusted team'."
+    },
+    {
+      "address": "/about-us/",
+      "field": "description",
+      "live": "¿Necesita ayuda de los abogados de compensación de trabajadores de Richmond? Llame a Pathfinder Injury Law al 804-505-0633 para discutir.",
+      "new": "Need help from a Richmond workers’ compensation law firm? Call Pathfinder Injury Law at 804-505-0633 to discuss your case.",
+      "reason": "The live description was Spanish by mistake; the new one is English."
+    },
+    {
+      "address": "/contact/",
+      "field": "description",
+      "live": "Hurt at work and don't know where to turn? Make Pathfinder Injury Law your first call. Contact VA workers' comp lawyers at 804-505-0633.",
+      "new": "Hurt at work and don't know where to turn? Make Pathfinder Injury Law your first call. Contact our VA workers' comp team at 804-505-0633.",
+      "reason": "Owner decision 10-28-26: 'lawyers' became 'our team'."
+    },
+    {
+      "address": "/blog/",
+      "field": "title",
+      "live": "Blog - Pathfinder Injury Law",
+      "new": "Workers’ Comp Blog | Pathfinder Injury Law",
+      "reason": "Blog title and description rewritten for launch; the wider content rework comes later."
+    },
+    {
+      "address": "/blog/",
+      "field": "description",
+      "live": "Injured at work? Pathfinder Injury Law is here to guide you on the path to compensation. Read our blog or call us at 804-505-0633 today.",
+      "new": "Articles from Pathfinder Injury Law about Virginia workers’ compensation: how to file a claim, what insurance adjusters do, and what to expect after a work injury.",
+      "reason": "Blog title and description rewritten for launch; the wider content rework comes later."
+    },
+    {
+      "address": "/how-to-prepare-for-a-workers-comp-deposition/",
+      "field": "description",
+      "live": "Pathfinder Injury Law can help you prepare for a Virginia workers' comp deposition. Call our trusted lawyers for a 100% free consultation.",
+      "new": "Pathfinder Injury Law can help you prepare for a Virginia workers' comp deposition. Call our trusted team for a 100% free consultation.",
+      "reason": "Owner decision 10-28-26: 'trusted lawyers' became 'trusted team'."
+    },
+    {
+      "address": "/virginia-factory-accident-lawyer/",
+      "field": "description",
+      "live": "After a factory accident, you need a Virginia workers' compensation lawyer you can trust. Call Pathfinder Injury Law in Richmond today.",
+      "new": "After a factory accident, you need a Virginia workers’ compensation lawyer you can trust. Call Pathfinder Injury Law in Richmond today.",
+      "reason": "Typography only: straight apostrophe became curly."
+    },
+    {
+      "address": "/car-accident-at-work-in-virginia/",
+      "field": "description",
+      "live": "Pathfinder Injury helps with Virginia work vehicle accidents. Get assistance now - call 804-505-0633 for your consultation.",
+      "new": "Pathfinder Injury Law helps with Virginia work vehicle accidents. Get assistance now - call 804-505-0633 for your consultation.",
+      "reason": "Firm name completed: 'Pathfinder Injury' became 'Pathfinder Injury Law'."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation/",
+      "field": "description",
+      "live": "Are you eligible for vocational rehabilitation after a Virginia work accident? Explore your options with Pathfinder Injury Law attorneys.",
+      "new": "Are you eligible for vocational rehabilitation after a Virginia work accident? Explore your options with Pathfinder Injury Law.",
+      "reason": "Word 'attorneys' removed; the plan limits who-is-a-lawyer wording."
+    },
+    {
+      "address": "/mandy-swartz/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is a family business, and Mandy Truman Swartz serves as firm administrator and certified paralegal. Read more about her journey.",
+      "new": "Pathfinder Injury Law is a family business, and Mandy Truman Swartz serves as firm administrator. Read more about her journey.",
+      "reason": "Owner decision 10-28-26: Mandy is the firm administrator and is not presented as a paralegal; 'certified' removed."
+    },
+    {
+      "address": "/richmond-workers-comp-lawyer/",
+      "field": "description",
+      "live": "A richmond workers’ comp lawyer help you recover after a work accident with the benefits you're entitled to. Call Pathfinder Injury Law now.",
+      "new": "A Richmond workers’ comp lawyer can help you recover after a work accident with the benefits you're entitled to. Call Pathfinder Injury Law now.",
+      "reason": "Grammar and capitalization fix."
+    },
+    {
+      "address": "/loudoun-county-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Loudon County Worker's Compensation Claims & Attorney",
+      "new": "Loudoun County Workers' Compensation Claims & Attorney",
+      "reason": "Title typo fix: 'Loudon' became 'Loudoun'."
+    },
+    {
+      "address": "/roanoke-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Hurt at work in Roanoke? Hire a trusted workers’ comp lawyer who offer sound advice. Visit the Pathfinder Injury Law website to learn more.",
+      "new": "Hurt at work in Roanoke? Hire a trusted workers’ comp lawyer who offers sound advice. Visit the Pathfinder Injury Law website to learn more.",
+      "reason": "Grammar fix: 'offer' became 'offers'."
+    },
+    {
+      "address": "/norfolk-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Norfolk Workers' Compensation Claims & Lawyer |",
+      "new": "Norfolk Workers' Compensation Claims & Lawyer",
+      "reason": "Stray trailing pipe removed from title."
     }
   ]
 }
