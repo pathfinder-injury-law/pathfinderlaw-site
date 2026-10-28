@@ -988,6 +988,29 @@ mark {
     grid-template-columns: 1fr 1fr;
   }
 }
+.field-hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  margin: 0.25rem 0 1.25rem;
+  padding: 0.9rem 1rem;
+  background: var(--mist);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.consent input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  accent-color: var(--forest);
+}
 .hp {
   position: absolute;
   left: -9999px;
