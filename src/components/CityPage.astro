@@ -6,7 +6,7 @@ import { site } from '../data/site';
 import { cities, cityByPath } from '../data/cities';
 import type { Block } from '../data/cities';
 
-// One template for all 18 city pages. Wording lives in src/data/cities.ts.
+// One template for all 19 city pages. Wording lives in src/data/cities.ts.
 interface Props {
   path: string;
 }
@@ -33,6 +33,8 @@ const slug = (text: string) =>
 const sections = city.sections.map((s) => ({ ...s, id: slug(s.h) }));
 const toc = sections.map((s) => ({ id: s.id, label: s.h }));
 const others = cities.filter((c) => c.path !== city.path);
+// Names such as "the Eastern Shore" read mid-sentence in the sidebar; in the link list they start with a capital.
+const listLabel = (name: string) => name.charAt(0).toUpperCase() + name.slice(1);
 const isList = (b: Block): b is { list: string[] } => typeof b !== 'string';
 ---
 <Base
@@ -86,7 +88,7 @@ const isList = (b: Block): b is { list: string[] } => typeof b !== 'string';
     <div class="wrap">
       <h2>Areas We Serve</h2>
       <ul>
-        {others.map((c) => <li><a href={c.path}>{c.name}</a></li>)}
+        {others.map((c) => <li><a href={c.path}>{listLabel(c.name)}</a></li>)}
       </ul>
     </div>
   </nav>

@@ -1,6 +1,13 @@
 // Facts and links used on every page. Wording and addresses are copied from the
 // current live site so the migration changes as little as possible.
 
+export type Office = {
+  name: string;
+  lines: string[];
+  mapUrl: string;
+  page?: { label: string; href: string };
+};
+
 export const site = {
   name: 'Pathfinder Injury Law',
   tagline: "Virginia Workers' Comp Lawyer",
@@ -18,8 +25,10 @@ export const site = {
       name: 'Chincoteague',
       lines: ['6294 Cropper Street', 'Chincoteague, VA 23336'],
       mapUrl: 'https://www.google.com/maps/search/?api=1&query=6294+Cropper+Street+Chincoteague+VA+23336',
+      // Page for people who work on the Eastern Shore; linked from the Location and Contact cards.
+      page: { label: 'Eastern Shore Workers’ Comp Lawyer', href: '/eastern-shore-workers-comp-lawyer/' },
     },
-  ],
+  ] as Office[],
   hours: ['By appointment only', 'Mon-Fri: 9am-5pm', 'Sat-Sun: By arrangement', 'Video Consultations Avail.'],
   social: [
     { name: 'Facebook', url: 'https://www.facebook.com/PathfinderInjuryLaw/' },

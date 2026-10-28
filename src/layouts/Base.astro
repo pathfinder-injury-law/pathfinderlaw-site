@@ -4,6 +4,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
+import { cities } from '../data/cities';
 
 interface Props {
   title: string;
@@ -29,7 +30,52 @@ const image = new URL('/images/open-graph-card.jpg', origin).href;
 const live = import.meta.env.PUBLIC_SITE_LIVE === '1';
 const robots = live ? 'max-image-preview:large' : 'noindex, nofollow, max-image-preview:large';
 
-// Structured data: the same four blocks the current site carries on every page.
+// LegalService (local-business) data, built from src/data/site.ts and the city pages so it cannot drift.
+// Deliberately absent: geo coordinates (not in site.ts; they must come from the Google Maps pin),
+// ratings and review counts, and any spoken-language property (Bryn's S4 decision: interpreter or
+// translation service only, never "staff speak Spanish").
+const addressOf = (o: { lines: string[] }) => {
+  const m = o.lines[1].match(/^(.*), ([A-Z]{2}) (\d{5})$/)!;
+  return { '@type': 'PostalAddress', streetAddress: o.lines[0], addressLocality: m[1], addressRegion: m[2], postalCode: m[3], addressCountry: 'US' };
+};
+const virginia = { '@type': 'State', name: 'Virginia' };
+// The Eastern Shore page is covered by its two counties, so it is not listed as a separate area.
+const cityAreas = cities
+  .filter((c) => c.path !== '/eastern-shore-workers-comp-lawyer/')
+  .map((c) => ({
+    '@type': /County$/.test(c.name) ? 'AdministrativeArea' : 'City',
+    name: c.name,
+    containedInPlace: virginia,
+  }));
+const legalService = {
+  '@type': 'LegalService',
+  '@id': `${origin}/#legalservice`,
+  name: site.name,
+  url: `${origin}/`,
+  telephone: '+18045050633',
+  description: 'Virginia Workers’ Comp law firm with offices in Richmond and Chincoteague. Both offices are by appointment only.',
+  logo: { '@id': `${origin}/#organizationLogo` },
+  image: { '@id': `${origin}/#organizationLogo` },
+  parentOrganization: { '@id': `${origin}/#organization` },
+  location: site.offices.map((o) => ({
+    '@type': 'Place',
+    name: `${site.name}, ${o.name} office`,
+    telephone: '+18045050633',
+    address: addressOf(o),
+    // By appointment only: these are the hours appointments are offered, weekends by arrangement.
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' },
+    ],
+  })),
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Accomack County', containedInPlace: virginia },
+    { '@type': 'AdministrativeArea', name: 'Northampton County', containedInPlace: virginia },
+    virginia,
+    ...cityAreas,
+  ],
+};
+
+// Structured data: the same four blocks the current site carries on every page, plus LegalService above.
 const trail = [{ name: 'Home', path: '/' }, ...crumbs];
 const graph = [
   {
@@ -59,6 +105,7 @@ const graph = [
     image: { '@id': `${origin}/#organizationLogo` },
     sameAs: site.social.map((s) => s.url),
   },
+  legalService,
   {
     '@type': 'WebPage',
     '@id': `${url}#webpage`,
