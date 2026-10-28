@@ -23,18 +23,22 @@ const traits = ['Local', 'Experienced', 'Focused', 'Fighting Spirit', 'Calming P
 const results = [
   {
     amount: '$1,200,000',
+    count: 1200000,
     text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.',
   },
   {
     amount: '$360,000',
+    count: 360000,
     text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.',
   },
   {
     amount: '$250,000',
+    count: 250000,
     text: 'Settlement obtained in a contested concussion/brain injury Workers’ Compensation case with psychosomatic issues following mediation before the Virginia Workers’ Compensation Commission.',
   },
   {
     amount: '$240,000',
+    count: 240000,
     text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.',
   },
 ];
@@ -44,19 +48,20 @@ const results = [
   description={description}
   path="/"
   datePublished="2022-02-25T23:07:43+00:00"
+  overlay
 >
   <!-- Hero -->
   <section class="hero on-dark">
-    <img class="hero-photo" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" fetchpriority="high" />
+    <img class="hero-photo" src="/images/photos/hero-hiker.jpg" alt="" width="2000" height="1329" fetchpriority="high" />
     <div class="wrap">
       <p class="hero-kicker">Virginia</p>
       <h1>Workers’ Comp Lawyer</h1>
       <p class="hero-tag"><span class="accent">Hurt?</span> We’ll Show You The Way</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="/contact/">Free Consultation</a>
+        <a class="btn btn-primary" href="#contact">Free Consultation</a>
       </div>
     </div>
-    <TornEdge />
+    <TornEdge fill="var(--white)" />
   </section>
 
   <!-- Intro -->
@@ -73,8 +78,8 @@ const results = [
           workplaces.
         </p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="/about-us/">Learn About Our Firm</a>
-          <a class="btn btn-outline" href="/contact/">Get Help Now</a>
+          <a class="btn btn-dark" href="/about-us/">Learn About Our Firm</a>
+          <a class="btn btn-primary" href="#contact">Get Help Now</a>
         </div>
       </div>
     </div>
@@ -88,7 +93,7 @@ const results = [
         <h2>Workers’ Comp Law</h2>
         <hr class="rule" />
       </div>
-      <div class="tiles" data-reveal>
+      <div class="tiles" data-stagger>
         <a class="tile" href="/virginia-workers-comp-lawyer/">
           <img src="/images/photos/tile-b.jpg" alt="" width="1400" height="886" loading="lazy" />
           <h3>Workers’ Compensation</h3>
@@ -98,7 +103,7 @@ const results = [
           <h3>Workers’ Comp Denials</h3>
         </a>
       </div>
-      <ul class="topic-grid" data-reveal>
+      <ul class="topic-grid" data-stagger>
         {topics.map((t) => (
           <li>
             <a href={t.href}>
@@ -112,21 +117,27 @@ const results = [
   </section>
 
   <!-- Why choose us -->
-  <section class="section section-sage">
+  <section class="section">
     <div class="wrap">
       <div class="section-head center" data-reveal>
         <h2>Why Choose Us?</h2>
         <hr class="rule" />
       </div>
-      <div class="why" data-reveal>
+      <div class="why" data-stagger>
         <a class="person" href="/bryn-swartz/">
           <img src="/images/photos/bryn.jpg" alt="" width="900" height="900" loading="lazy" />
           <h3>Bryn Swartz</h3>
           <p>Founder &amp; Attorney</p>
         </a>
-        <ul class="traits">
-          {traits.map((t) => <li>{t}</li>)}
-        </ul>
+        <div class="traits-wrap">
+          <svg class="traits-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M19 42l3-26h4l3 26z" /><path d="M20 28h8M20.8 22h6.4" /><rect x="20" y="10" width="8" height="6" rx="1" /><path d="M24 4v3M12 8l4 3M36 8l-4 3" /><path d="M15 42h18" />
+          </svg>
+          <hr class="rule" style="margin-inline: auto" />
+          <ul class="traits">
+            {traits.map((t) => <li>{t}</li>)}
+          </ul>
+        </div>
         <a class="person" href="/mandy-swartz/">
           <img src="/images/photos/mandy.jpg" alt="" width="900" height="900" loading="lazy" />
           <h3>Mandy Truman Swartz</h3>
@@ -137,26 +148,26 @@ const results = [
   </section>
 
   <!-- Results -->
-  <section class="section">
+  <section class="section results contour on-dark">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <h2>Results For Our Clients</h2>
         <hr class="rule" />
       </div>
-      <div class="results-grid" data-reveal>
+      <div class="results-grid" data-stagger>
         {results.map((r) => (
           <article class="result">
-            <p class="amount">{r.amount}</p>
+            <p class="amount" data-count={r.count}>{r.amount}</p>
             <span class="gross caps">Gross amount, before attorney’s fees, costs, and liens</span>
             <p>{r.text}</p>
           </article>
         ))}
       </div>
-      <p class="disclaimer">
+      <p class="disclaimer" data-reveal>
         Every case is different. These results depended on facts unique to each case and do not
         predict or guarantee the result in yours.
       </p>
-      <p class="more-link"><a class="btn btn-outline" href="/results/">View More Case Results</a></p>
+      <p class="more-link"><a class="btn btn-primary" href="/results/">View More Case Results</a></p>
     </div>
   </section>
 
@@ -165,7 +176,7 @@ const results = [
     <div class="wrap review" data-reveal>
       <img class="quote-mark" src="/images/quote.svg" width="46" height="34" alt="" />
       <h2>Our Clients Love Us</h2>
-      <hr class="rule" style="margin-inline: auto" />
+      <hr class="rule" />
       <blockquote>
         <p>
           Could not ask for a better group of people to work with! Very knowledgeable and on top of
@@ -174,23 +185,75 @@ const results = [
         </p>
       </blockquote>
       <cite>&ndash; R.A.</cite>
-      <a class="btn btn-outline" href="/reviews/">Read More Reviews</a>
+      <a class="btn btn-dark" href="/reviews/">Read More Reviews</a>
     </div>
   </section>
 
-  <!-- Call to action -->
-  <section class="section cta contour on-dark">
-    <div class="wrap" data-reveal>
-      <ul class="cta-points caps">
-        <li>No Pressure</li>
-        <li>No Hidden Fees</li>
-      </ul>
-      <h2>100% Free Consultation</h2>
-      <p class="lede">Learn how we can help you win your Workers’ Comp case.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="/contact/">Get Help Now</a>
-        <a class="btn btn-outline" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+  <!-- Call to action with contact form -->
+  <section class="section cta contour on-dark" id="contact">
+    <img class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" loading="lazy" />
+    <div class="wrap cta-grid">
+      <div data-reveal>
+        <ul class="cta-points caps">
+          <li>No Pressure</li>
+          <li>No Hidden Fees</li>
+        </ul>
+        <h2>100% Free Consultation</h2>
+        <hr class="rule" />
+        <p class="lede">Learn how we can help you win your Workers’ Comp case.</p>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+      </div>
+
+      <div class="form-card" data-reveal>
+        <h3>Speak To An Attorney</h3>
+        <form id="contact-form" method="post" action="/contact/" novalidate>
+          <div class="field">
+            <label for="cf-name">Name*</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field-pair">
+            <div class="field">
+              <label for="cf-email">Email*</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="cf-phone">Phone Number*</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message*</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <!-- Spam trap: people never see this field, bots fill it in. -->
+          <div class="hp" aria-hidden="true">
+            <label for="cf-company">Company</label>
+            <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <button class="btn btn-primary" type="submit">Send To An Attorney</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
 </Base>
+
+<script>
+  // PREVIEW ONLY. This form is not connected to anything yet, so it checks the
+  // fields and says so instead of pretending to send. LAUNCH BLOCKER: replace
+  // with the real spam-protected submission (migration plan, "Contact form and
+  // spam pipeline") before the live site goes out.
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  if (form) {
+    const status = form.querySelector('.form-status') as HTMLElement;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        status.textContent = 'Please fill in every field marked with a star.';
+        form.reportValidity();
+        return;
+      }
+      status.textContent = 'Preview only: this form is not connected yet, so nothing was sent.';
+    });
+  }
+</script>

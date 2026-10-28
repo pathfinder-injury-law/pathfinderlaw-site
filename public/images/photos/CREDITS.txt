@@ -1,0 +1,8 @@
+Photo credits (all free to use under the Unsplash License, https://unsplash.com/license)
+
+hero-hiker.jpg   "Adventure in the mountains" by Holly Mandarich, Unsplash
+                 https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls
+tile-a.jpg, tile-b.jpg, tile-c.jpg   Unsplash photos carried over from the previous site
+                 (file names on the old site began with "photo-", the Unsplash pattern).
+
+No paid stock photos or paid fonts belong in this public repository.

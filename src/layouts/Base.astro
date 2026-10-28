@@ -13,9 +13,11 @@ interface Props {
   // Breadcrumb trail after "Home". Empty on the home page.
   crumbs?: { name: string; path: string }[];
   datePublished?: string;
+  // True when a full-width photo sits behind the header (the home page).
+  overlay?: boolean;
 }
 
-const { title, description, path, crumbs = [], datePublished } = Astro.props;
+const { title, description, path, crumbs = [], datePublished, overlay = false } = Astro.props;
 const origin = Astro.site!.origin;
 const url = new URL(path, origin).href;
 const image = new URL('/images/open-graph-card.jpg', origin).href;
@@ -106,21 +108,48 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
 
     <script type="application/ld+json" set:html={jsonLd} />
   </head>
-  <body>
+  <body class:list={[overlay && 'has-overlay']}>
     <Header />
     <main id="main">
       <slot />
     </main>
     <Footer />
     <script is:inline>
-      // Fade-up on scroll. If anything here fails, the page simply shows normally.
+      // Motion helpers. If anything here fails, the page simply shows normally.
       (function () {
-        var els = document.querySelectorAll('[data-reveal]');
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Header turns solid once the page scrolls past the top.
+        var header = document.querySelector('.site-header');
+        function onScroll() { header && header.classList.toggle('is-solid', window.scrollY > 40); }
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        // Dollar amounts count up the first time they appear.
+        function countUp(el) {
+          var target = parseInt(el.getAttribute('data-count'), 10);
+          if (!target || reduce) return;
+          var start = null, dur = 1600;
+          function step(t) {
+            if (start === null) start = t;
+            var p = Math.min((t - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = '$' + Math.round(target * eased).toLocaleString('en-US');
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+
+        // Fade-up on scroll.
+        var els = document.querySelectorAll('[data-reveal], [data-stagger]');
         if (!('IntersectionObserver' in window) || !els.length) return;
         document.documentElement.classList.add('js');
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
-            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            if (!e.isIntersecting) return;
+            e.target.classList.add('in');
+            e.target.querySelectorAll('[data-count]').forEach(countUp);
+            io.unobserve(e.target);
           });
         }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
         els.forEach(function (el) { io.observe(el); });
