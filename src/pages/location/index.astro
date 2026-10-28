@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { site } from '../../data/site';
+
+// Changes from the live page:
+//  - The live page showed only the Richmond office, with a Google Map embed. This page shows both
+//    offices (Richmond and Chincoteague, by appointment only) with Google Maps links by address and
+//    no third-party map embed (owner's decision, Oct 28).
+//  - Live title was the lowercase "location - Pathfinder Injury Law"; capitalized here.
+//  - Live description named only Richmond; now names both offices. Needs Bryn's OK.
+const title = 'Location - Pathfinder Injury Law';
+const description =
+  "Pathfinder Injury Law is a trusted workers' compensation law firm with offices in Richmond and Chincoteague, VA, by appointment only. Get in touch with us for a 100% free case consultation.";
+const path = '/location/';
+---
+<Base title={title} description={description} path={path} crumbs={[{ name: 'Location', path }]} overlay>
+  <PageHero title="Our Locations" crumbs={[{ name: 'Location' }]} />
+
+  <section class="section loc-intro">
+    <div class="wrap">
+      <div class="section-head center">
+        <h2>Pathfinder Injury Law</h2>
+        <hr class="rule" />
+        <p>Both offices are by appointment only. Video consultations are available.</p>
+      </div>
+      <div class="loc-cards">
+        {site.offices.map((o) => (
+          <div class="loc-card">
+            <h3>{o.name} Office</h3>
+            <address>
+              {o.lines.map((l) => <span>{l}</span>)}
+            </address>
+            <p class="appt">By appointment only</p>
+            <p><a class="cta-phone-dark" href={site.phoneHref}>{site.phoneDisplay}</a></p>
+            <a class="btn btn-primary" href={o.mapUrl} rel="noopener">View on Google Maps</a>
+          </div>
+        ))}
+      </div>
+      <div class="loc-hours">
+        <h3>Office Hours</h3>
+        <ul>
+          {site.hours.map((h) => <li>{h}</li>)}
+        </ul>
+        <p><a href="/contact/">Contact Us</a></p>
+      </div>
+    </div>
+  </section>
+
+  <ContactSection />
+</Base>
+
+<style>
+  .loc-intro {
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .loc-cards {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 46rem) {
+    .loc-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .loc-card {
+    background: var(--mist);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border-top: 0.4rem solid var(--moss);
+    text-align: center;
+  }
+  .loc-card h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  address {
+    font-style: normal;
+    margin-bottom: 0.6rem;
+    font-size: 1.15rem;
+  }
+  address span {
+    display: block;
+  }
+  .appt {
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+    color: var(--pine);
+  }
+  .cta-phone-dark {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .loc-hours {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  .loc-hours ul {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+</style>
