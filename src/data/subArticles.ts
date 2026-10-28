@@ -151,21 +151,13 @@ export const subArticles: SubArticle[] = [
         h2: 'Workers’ Comp and Your SSDI Benefits',
         blocks: [
           'Workers’ Comp benefits are offered to support injured workers when their injuries leave them unable to work. SSDI benefits are meant to support those who have suffered a severe, disabling injury, regardless of whether it happened at work. So how do they work together?',
-          'The good news is, you may be eligible for both types of benefits. These benefits are offered through different systems. While these benefits may impact one another, together they can help with the financial strain of an injury.',
+          'The good news is, you may be eligible for both types of benefits. These benefits are offered through different systems. While these benefits may impact one another, together they can help with the financial strain of an injury. But receiving both can cause problems, so talk to a lawyer first.',
         ],
       },
       {
-        h2: 'Qualifying for SSDI',
+        h2: 'Qualifying for Workers’ Comp',
         blocks: [
           'When qualifying for these programs, getting Workers’ Comp benefits may be simpler. If you’re an employee who qualifies for Workers’ Comp benefits and you’re [hurt on the job](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), you should be eligible for Workers’ Compensation. But disability benefits may not be so simple.',
-          'To qualify for SSDI benefits, you must first have a medical condition that has lasted a year, is expected to last for at least a year, or may end in death. This severe condition may prevent you from working. If you’re not sure whether you qualify, speak with your lawyer.',
-        ],
-      },
-      {
-        h2: 'Limits to Your Benefits',
-        blocks: [
-          'But being able to seek both of these types of benefits doesn’t mean there’s no limit to the funds you can receive. You may be limited to receiving only 80 percent of your average current wages before your work accident. That means, even if you’re able to receive both types of benefits, your options may still be capped.',
-          'While you may be unable to seek out the full value of your wages, these funds can still help you support yourself and your family during this difficult time.',
         ],
       },
     ],
@@ -226,7 +218,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'Vocational Rehabilitation',
     intro: [
       'A serious work accident can bring your career to a halt. You may be worried that you’ll never work again, especially after a traumatic injury like an amputation, as an example.',
-      'But what if you’re able to work, just not in your former position? In these situations, you may be eligible for vocational rehabilitation that can help you get back to work. Work with your [lawyer at Pathfinder Injury Law](/virginia-workers-comp-lawyer/) for guidance on getting back to building a career.',
+      'But what if you’re able to work, just not in your former position? In these situations, you may be eligible for vocational rehabilitation that can help you get back to work. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first. Work with your [lawyer at Pathfinder Injury Law](/virginia-workers-comp-lawyer/) for guidance on getting back to building a career.',
     ],
     sections: [
       {
@@ -421,7 +413,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'Medical Bills',
         blocks: [
-          'After a serious work injury, you shouldn’t have to pay for your medical care yourself. Although you may need to visit a doctor your employer chooses, ' + MEDICAL.charAt(0).toLowerCase() + MEDICAL.slice(1),
+          'After a serious work injury, you shouldn’t have to pay for your medical care yourself. You may need to visit a doctor your employer chooses. If the employer denies your claim, you get to choose your own doctors. ' + MEDICAL,
           'These benefits should cover your travel to medical appointments, too. For example, you may have to travel out of your town to see a specialist about your injury, and workers’ comp can reimburse mileage for travel to and from medical appointments.',
         ],
       },
@@ -469,7 +461,7 @@ export const subArticles: SubArticle[] = [
         h2: 'Calculate Your Workers’ Comp Benefits',
         blocks: [
           'During your Virginia Workers’ Comp hearing, you have a chance to ask for the benefits you need for your injuries. These benefits may include wage replacement, coverage for medical expenses, and more.',
-          'If you don’t have the right tools, that is easier said than done. Luckily, your Workers’ Comp lawyer in Virginia can help. They have the tools you need to show the [Virginia Workers’ Compensation Commission](https://www.workcomp.virginia.gov/) how much your claim is worth. This includes calculating current and future medical expenses, for example.',
+          'If you don’t have the right tools, that is easier said than done. Luckily, your Workers’ Comp lawyer in Virginia can help.',
         ],
       },
     ],
@@ -642,7 +634,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'As Soon as You’re Approved',
         blocks: [
-          'If you’ve filed for Workers’ Comp, you may already be on your way to the [benefits you’re due](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide). Once you’ve reported your accident to your employer, they should notify the insurance company. The adjuster should then review your accident and determine whether you’re eligible for compensation.',
+          'If you’ve filed for Workers’ Comp, you may already be on your way to the [benefits you’re due](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide). Once you’ve reported your accident to your employer, they should notify the insurance company. The adjuster should then review your accident and determine whether you’re eligible for compensation. Be careful what you say to the adjuster, and do not assume they are looking out for you.',
           'If you’re approved, your Workers’ Comp benefits should start coming soon. Your Workers’ Comp should cover your losses as soon as possible so you don’t have to worry about missing bill payments or not being able to cover your necessities. However, there is a seven-day waiting period in Virginia before wage loss benefits begin. Then, if you’re out of work for more than 21 days, the insurance company should go back and pay those first seven days.',
         ],
       },
@@ -686,7 +678,7 @@ export const subArticles: SubArticle[] = [
         blocks: [
           'Getting Workers’ Comp coverage isn’t always easy. You need to take the right steps to protect your claim and get the funds you’re due.',
           'For example, you’ll first need to act fast and [report your injury](https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf) as soon as possible. ' + NOTICE + ' ' + FILING + ' Once you report your Virginia work accident, your employer must contact the insurance company about coverage and your benefits.',
-          'The insurance adjuster will then review your accident and determine what benefits you’re due. Then, you’ll get a notification approving or denying those benefits. If you’re denied, don’t panic. ' + DISPUTE + ' Your lawyer can help you [seek the Workers’ Comp benefits](/virginia-workers-comp-lawyer/) you’re due.',
+          'The insurance adjuster will then review your accident and determine what benefits you’re due. Then, you’ll get a notification approving or denying those benefits. Be careful what you say to the adjuster, and do not assume they are looking out for you. If you’re denied, don’t panic. ' + DISPUTE + ' Your lawyer can help you [seek the Workers’ Comp benefits](/virginia-workers-comp-lawyer/) you’re due.',
         ],
       },
     ],
