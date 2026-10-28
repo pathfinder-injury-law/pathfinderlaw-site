@@ -290,7 +290,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'How to Prepare for an IME',
     intro: [
       'After a work accident, you may be expected to take an independent medical exam, or IME. These appointments help the insurance company gauge your injuries and how seriously you suffered. But that means they may be trying to trip you up, tricking you into showing that you’re not really that injured.',
-      'Because of this, you need to know how to prepare for an IME in Virginia. Luckily, our dedicated team at Pathfinder Injury Law has some tips to help you get ready and can represent you at every step of the Workers’ Comp process.',
+      'Because of this, you need to know how to prepare for an IME in Virginia. Luckily, our dedicated team at Pathfinder Injury Law has some tips to help you get ready and may be able to help as you go through the Workers’ Comp process.',
     ],
     sections: [
       {
@@ -447,7 +447,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'Hearing Preparation',
     intro: [
       'After a serious work injury, you may have been denied Workers’ Compensation after reporting your injury. Now, you’ll need to dispute your employer and their Workers’ Comp insurer.',
-      'If you’re unsure how to prepare for a Virginia Workers’ Comp hearing, reach out to a dedicated lawyer at Pathfinder Injury Law. We can help you prepare for your Virginia Workers’ Comp hearing and represent you throughout the process.',
+      'If you’re unsure how to prepare for a Virginia Workers’ Comp hearing, reach out to a dedicated lawyer at Pathfinder Injury Law. We may be able to help you prepare for your Virginia Workers’ Comp hearing.',
     ],
     sections: [
       {
@@ -592,7 +592,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'How Long Settlements Take',
     intro: [
       'After a serious injury at work, it can be tough to wait for your Workers’ Comp benefits to arrive. You may be worried about how long your Virginia Workers’ Comp settlement will take, especially as your medical bills and other debts pile up.',
-      'Here’s the good news—a lawyer from Pathfinder Injury Law could help you speed up the process. If you’re struggling to overcome your injuries following a work accident, take a look at how you can get your benefits as soon as possible and how a [Workers’ Comp lawyer in Virginia](/virginia-workers-comp-lawyer/) can help.',
+      'Here’s the good news—a lawyer from Pathfinder Injury Law may be able to help you understand the process. If you’re struggling to overcome your injuries following a work accident, take a look at how you can get your benefits as soon as possible and how a [Workers’ Comp lawyer in Virginia](/virginia-workers-comp-lawyer/) can help.',
     ],
     sections: [
       {

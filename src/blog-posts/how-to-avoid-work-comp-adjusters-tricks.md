@@ -9,7 +9,7 @@ tags: ["insurance","settlement"]
 
 *Disclaimer: Please note nothing in this article is to be considered legal advice. You should always consult with an attorney about the specific facts of your situation before making any legal decisions. No attorney/client relationship or representation relationship is created by the dissemination of this content or your consumption thereof.*
 
-If you have been injured on the job, your first step is to notify your employer. It will be your employer’s insurance that will be on the hook to pay for your injuries. This process means an insurance adjuster will be assigned to your case, and their main goal is the opposite of yours. You want benefits. They do not desire to give them to you. With the assistance of a Virginia [workers’ compensation attorney](/virginia-workers-comp-lawyer/) who understands the process and tactics of insurance adjusters, you are more likely to receive a higher compensation amount or the benefits you need.
+If you have been injured on the job, your first step is to notify your employer. It will be your employer’s insurance that will be on the hook to pay for your injuries. This process means an insurance adjuster will be assigned to your case, and their main goal is the opposite of yours. You want benefits. They do not desire to give them to you. With the assistance of a Virginia [workers’ compensation attorney](/virginia-workers-comp-lawyer/) who understands the process and tactics of insurance adjusters, you may have help understanding the benefits that may be available to you.
 
 ## What Are the Different Types of Settlements?
 
@@ -107,7 +107,7 @@ If the adjuster says you do not qualify for wage loss benefits, ask why specific
 
 ## Will an Attorney Get You More Money?
 
-Following an injury at work, you will have a lot on your mind as you continue medical treatments and possibly even rehabilitation. It is at this point you may be considering whether to hire an experienced workers’ compensation attorney and if, by doing so, you can get more money.
+Following an injury at work, you will have a lot on your mind as you continue medical treatments and possibly even rehabilitation. It is at this point you may be considering whether to hire an experienced workers’ compensation attorney and what a lawyer may be able to do for your claim.
 
 An attorney may be able to help you through the workers’ compensation process by talking to the insurance company and the Virginia Workers’ Compensation Commission on your behalf. With experience in workers’ compensation law, your attorney already understands the benefits you are eligible for and will work to obtain the compensation payout for those benefits.
 

@@ -9,7 +9,7 @@ tags: ["body-parts","settlement"]
 
 *Disclaimer: Please note nothing in this article is to be considered legal advice. You should always consult with an attorney about the specific facts of your situation before making any legal decisions. No attorney/client relationship or representation relationship is created by the dissemination of this content or your consumption thereof.*
 
-In 2021, [48,201 major workplace injuries](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) were reported to the Virginia Workers’ Compensation Commission, and these included various types of foot injuries. A foot injury received while at work can severely impact your quality of life and your ability to perform well at your job. If this happens to you, [Pathfinder Injury Law](/virginia-workers-comp-lawyer/) is here to help guide you through the confusing process of workers’ compensation in Virginia and seek the results you need.
+In 2021, [48,201 major workplace injuries](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) were reported to the Virginia Workers’ Compensation Commission, and these included various types of foot injuries. A foot injury received while at work can severely impact your quality of life and your ability to perform well at your job. If this happens to you, [Pathfinder Injury Law](/virginia-workers-comp-lawyer/) is here to help guide you through the confusing process of workers’ compensation in Virginia and seek the benefits you may be due.
 
 ## Are You Eligible for Workers’ Comp Due to a Foot Injury?
 
@@ -109,7 +109,7 @@ Determining how much a workers’ comp foot injury will be worth in Virginia req
 
 Since cases are rarely the same, a dollar value cannot be put on a workers’ compensation case before evaluating medical records and all the facts surrounding the claim itself. You will need to prove the causal relationship between the foot injury and your employment, identify complications, symptoms, and future medical expenses, and identify whether permanent disability is a possibility.
 
-So, to sum it up, there is no average workers’ settlement amount when it comes to workers’ compensation. Foot injury settlements are voluntary agreements between the claimant and your employer’s insurance company. No one can force anyone to accept or pay a settlement. For these reasons, working with an attorney experienced in workers’ compensation law can help you achieve results and reach an agreement for a fair settlement on your behalf.
+So, to sum it up, there is no average workers’ settlement amount when it comes to workers’ compensation. Foot injury settlements are voluntary agreements between the claimant and your employer’s insurance company. No one can force anyone to accept or pay a settlement. For these reasons, working with an attorney experienced in workers’ compensation law can help you understand your options and communicate with the insurance company on your behalf.
 
 In addition, there are [different types of workers’ comp settlements](/workers-comp-settlement-in-virginia/) to seek in different circumstances. These include:
 
@@ -140,7 +140,7 @@ The Virginia Workers’ Compensation Commission set up [guidelines for vocationa
 
 ## Why You Should Consider Hiring a Virginia Workers’ Compensation Attorney
 
-As a claimant, you probably have a greater potential for increasing your final outcome under the guidance of a workers’ comp lawyer. Insurance companies tend to take advantage of a claimant’s lack of knowledge and will use this for lower settlement offers and to pay less than they should for cases. With legal representation, your injury lawyer can go toe to toe with them and not walk away until you receive a fair settlement.
+As a claimant, you probably have a greater potential for increasing your final outcome under the guidance of a workers’ comp lawyer. Insurance companies tend to take advantage of a claimant’s lack of knowledge and will use this for lower settlement offers and to pay less than they should for cases. With legal representation, your injury lawyer can communicate with them on your behalf and explain your options.
 
 A workers’ comp attorney may be able to assist you in collecting evidence and talking with both the insurance company and the Commission on your behalf. They can even take your workers’ compensation case to litigation if need be.
 

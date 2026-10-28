@@ -27,7 +27,7 @@ Luckily, your Virginia lawyer can help you determine the costs of your injuries.
 
 As the injured party, you may be asked to testify about your injuries and your suffering. In some cases, the insurance company may try to push you into making a mistake. Inconsistencies in your story can help these companies avoid paying for your Workers’ Comp benefits.
 
-Luckily, your [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) can help you prepare for your testimony. Knowing what to say and when to say it can help your claim succeed. Being prepared for questions before your hearing begins can help you answer with confidence, too, making it easier to prove you’re due benefits.
+Luckily, your [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) can help you prepare for your testimony. Knowing what to say and when to say it can help you feel prepared. Being prepared for questions before your hearing begins can help you answer with confidence, too, making it easier to prove you’re due benefits.
 
 ## Connect with a Workers’ Comp Lawyer Before Your Hearing
 
