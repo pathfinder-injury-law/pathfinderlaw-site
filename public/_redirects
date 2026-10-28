@@ -1,0 +1,7 @@
+# Permanent (301) redirects for old addresses. Every line states 301 on purpose:
+# a line without a code is a temporary redirect. The full list comes from the
+# URL Inventory in the migration plan.
+
+# Work illness is no longer a case type on the site.
+/virginia-workers-comp-lawyer/virginia-work-illness-lawyer/ /virginia-workers-comp-lawyer/ 301
+/virginia-workers-comp-lawyer/virginia-work-illness-lawyer /virginia-workers-comp-lawyer/ 301
