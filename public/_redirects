@@ -1,7 +1,130 @@
 # Permanent (301) redirects for old addresses. Every line states 301 on purpose:
-# a line without a code is a temporary redirect. The full list comes from the
-# URL Inventory in the migration plan.
+# a line without a code is a temporary redirect. Built from the URL Inventory in the
+# migration plan (sections A, B and C), plus the live site's own behavior (checked Oct 28).
+#
+# NOT in this file, on purpose:
+#  - http:// to https:// and www to the bare domain. Those are zone-level rules in Cloudflare
+#    (a _redirects file cannot match a host name). Set them at cutover.
+#  - /?s=search-term. This file cannot match query strings, so a search address simply shows
+#    the home page, which is the plan's outcome.
+#  - /wp-login.php and /wp-admin/. They have no page here, so they return the site's 404.
+#  - /feed/. A real feed file is a launch task; the three redirects below point at it.
+#  - The 15 /results/{amount}/ and 21 /testimonials/{name}/ addresses are covered by one rule each
+#    at the bottom, so each old address does not need its own line.
 
 # Work illness is no longer a case type on the site.
 /virginia-workers-comp-lawyer/virginia-work-illness-lawyer/ /virginia-workers-comp-lawyer/ 301
 /virginia-workers-comp-lawyer/virginia-work-illness-lawyer /virginia-workers-comp-lawyer/ 301
+
+# Old WordPress archive and vendor addresses (plan section B).
+/category/blog/page/2/ /blog/page/2/ 301
+/category/blog/ /blog/ 301
+/author/brynswartz/ /bryn-swartz/ 301
+/author/webops/ /blog/ 301
+/blog/feed/ /feed/ 301
+/comments/feed/ /feed/ 301
+/sitemap.rss /feed/ 301
+
+
+# Addresses without the trailing slash go to the same address with one (plan section C).
+# Cloudflare would do this itself but with a temporary (307) redirect, so it is spelled out.
+/virginia-work-injury-lawyer /virginia-work-injury-lawyer/ 301
+/location /location/ 301
+/what-if-a-workers-comp-insurer-delays-my-benefits /what-if-a-workers-comp-insurer-delays-my-benefits/ 301
+/are-workers-comp-benefits-taxable /are-workers-comp-benefits-taxable/ 301
+/what-happens-when-you-file-a-workers-comp-claim /what-happens-when-you-file-a-workers-comp-claim/ 301
+/how-long-can-a-workers-comp-claim-stay-open /how-long-can-a-workers-comp-claim-stay-open/ 301
+/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute /virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/ 301
+/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim /should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/ 301
+/abogados-de-compensacion-al-trabajador-en-richmond /abogados-de-compensacion-al-trabajador-en-richmond/ 301
+/abogados-de-compensacion-al-trabajador-en-virginia /abogados-de-compensacion-al-trabajador-en-virginia/ 301
+/how-to-win-a-virginia-workers-comp-case /how-to-win-a-virginia-workers-comp-case/ 301
+/disclaimer /disclaimer/ 301
+/sitemap /sitemap/ 301
+/thank-you /thank-you/ 301
+/about-us /about-us/ 301
+/workers-comp-process-in-virginia /workers-comp-process-in-virginia/ 301
+/workers-comp-settlement-in-virginia /workers-comp-settlement-in-virginia/ 301
+/virginia-workers-comp-faq /virginia-workers-comp-faq/ 301
+/reviews /reviews/ 301
+/results /results/ 301
+/contact /contact/ 301
+/blog /blog/ 301
+/privacy-policy /privacy-policy/ 301
+/insurance-recorded-statement /insurance-recorded-statement/ 301
+/what-should-you-do-if-you-have-a-spine-injury-at-work /what-should-you-do-if-you-have-a-spine-injury-at-work/ 301
+/foot-injury-workers-comp /foot-injury-workers-comp/ 301
+/how-to-avoid-work-comp-adjusters-tricks /how-to-avoid-work-comp-adjusters-tricks/ 301
+/work-injury-compensation /work-injury-compensation/ 301
+/knee-injury-compensation /knee-injury-compensation/ 301
+/hurt-your-hip-at-work /hurt-your-hip-at-work/ 301
+/how-to-qualify-for-workers-comp-in-virginia /how-to-qualify-for-workers-comp-in-virginia/ 301
+/how-to-file-a-workers-comp-claim /how-to-file-a-workers-comp-claim/ 301
+/pre-existing-conditions-and-workers-comp-claims /pre-existing-conditions-and-workers-comp-claims/ 301
+/what-to-do-when-your-employer-lists-you-as-an-independent-contractor /what-to-do-when-your-employer-lists-you-as-an-independent-contractor/ 301
+/questions-to-ask-a-workers-comp-lawyer /questions-to-ask-a-workers-comp-lawyer/ 301
+/how-to-prepare-for-a-workers-comp-deposition /how-to-prepare-for-a-workers-comp-deposition/ 301
+/how-faulty-equipment-causes-workplace-injuries /how-faulty-equipment-causes-workplace-injuries/ 301
+/causes-of-on-the-job-shoulder-injuries /causes-of-on-the-job-shoulder-injuries/ 301
+/employer-retaliation-and-your-workers-comp-rights /employer-retaliation-and-your-workers-comp-rights/ 301
+/essential-elements-of-a-successful-workers-comp-claim /essential-elements-of-a-successful-workers-comp-claim/ 301
+/automated-warehouse-injuries-what-amazon-workers-need-to-know /automated-warehouse-injuries-what-amazon-workers-need-to-know/ 301
+/steps-to-take-before-a-workers-comp-hearing /steps-to-take-before-a-workers-comp-hearing/ 301
+/happy-birthday-to-pathfinder-injury-law /happy-birthday-to-pathfinder-injury-law/ 301
+/virginia-workers-comp-lawyer /virginia-workers-comp-lawyer/ 301
+/how-to-appeal-a-workers-comp-denial-in-virginia /how-to-appeal-a-workers-comp-denial-in-virginia/ 301
+/virginia-construction-accident-lawyer /virginia-construction-accident-lawyer/ 301
+/virginia-factory-accident-lawyer /virginia-factory-accident-lawyer/ 301
+/car-accident-at-work-in-virginia /car-accident-at-work-in-virginia/ 301
+/virginia-workers-comp-lawyer/virginia-back-injury-lawyer /virginia-workers-comp-lawyer/virginia-back-injury-lawyer/ 301
+/virginia-workers-comp-lawyer/virginia-workers-compensation /virginia-workers-comp-lawyer/virginia-workers-compensation/ 301
+/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied /virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/ 301
+/virginia-workers-comp-lawyer/can-i-receive-workers-comp-and-social-security-disability-at-the-same-time /virginia-workers-comp-lawyer/can-i-receive-workers-comp-and-social-security-disability-at-the-same-time/ 301
+/virginia-workers-comp-lawyer/can-an-employer-deny-a-workers-comp-claim /virginia-workers-comp-lawyer/can-an-employer-deny-a-workers-comp-claim/ 301
+/virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation /virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation/ 301
+/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims /virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/ 301
+/virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia /virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia/ 301
+/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia /virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/ 301
+/virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp /virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp/ 301
+/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement /virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/ 301
+/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia /virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/ 301
+/virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing /virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/ 301
+/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages /virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/ 301
+/virginia-workers-comp-lawyer/average-workers-comp-settlement-in-virginia /virginia-workers-comp-lawyer/average-workers-comp-settlement-in-virginia/ 301
+/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia /virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/ 301
+/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take /virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/ 301
+/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying /virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/ 301
+/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid /virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/ 301
+/mandy-swartz /mandy-swartz/ 301
+/bryn-swartz /bryn-swartz/ 301
+/richmond-workers-comp-lawyer /richmond-workers-comp-lawyer/ 301
+/powhatan-county-workers-comp-lawyer /powhatan-county-workers-comp-lawyer/ 301
+/hanover-county-workers-comp-lawyer /hanover-county-workers-comp-lawyer/ 301
+/chesterfield-county-workers-comp-lawyer /chesterfield-county-workers-comp-lawyer/ 301
+/prince-william-county-workers-comp-lawyer /prince-william-county-workers-comp-lawyer/ 301
+/fairfax-county-workers-comp-lawyer /fairfax-county-workers-comp-lawyer/ 301
+/loudoun-county-workers-comp-lawyer /loudoun-county-workers-comp-lawyer/ 301
+/harrisonburg-workers-comp-worker /harrisonburg-workers-comp-worker/ 301
+/lynchburg-workers-comp-lawyer /lynchburg-workers-comp-lawyer/ 301
+/suffolk-workers-comp-lawyer /suffolk-workers-comp-lawyer/ 301
+/portsmouth-workers-comp-lawyer /portsmouth-workers-comp-lawyer/ 301
+/newport-news-workers-comp-lawyer /newport-news-workers-comp-lawyer/ 301
+/roanoke-workers-comp-lawyer /roanoke-workers-comp-lawyer/ 301
+/hampton-workers-comp-lawyer /hampton-workers-comp-lawyer/ 301
+/alexandria-workers-comp-lawyer /alexandria-workers-comp-lawyer/ 301
+/chesapeake-workers-comp-lawyer /chesapeake-workers-comp-lawyer/ 301
+/norfolk-workers-comp-lawyer /norfolk-workers-comp-lawyer/ 301
+/virginia-beach-workers-comp-lawyer /virginia-beach-workers-comp-lawyer/ 301
+/blog/page/2 /blog/page/2/ 301
+
+# Redirects the old site already had (plan section C). A :name or :slug stands for exactly one
+# address segment, so the list pages /results/ and /testimonials/ themselves are not caught
+# (a * wildcard would catch them). Placed last: Cloudflare checks plain lines first, which is faster.
+/attorneys/:name/ /:name/ 301
+/attorneys/:name /:name/ 301
+/arears_served/:city/ /:city/ 301
+/arears_served/:city /:city/ 301
+/results/:slug/ / 301
+/results/:slug / 301
+/testimonials/:slug/ / 301
+/testimonials/:slug / 301
