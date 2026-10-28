@@ -1,0 +1,128 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from './PageHero.astro';
+import ContactSection from './ContactSection.astro';
+import { site } from '../data/site';
+import { cities, cityByPath } from '../data/cities';
+import type { Block } from '../data/cities';
+
+// One template for all 18 city pages. Wording lives in src/data/cities.ts.
+interface Props {
+  path: string;
+}
+const city = cityByPath(Astro.props.path);
+
+// Turns the small markup used in the data file into HTML: [text](address) and {phone}.
+// The text comes only from our own data file, never from visitors.
+const inline = (text: string) =>
+  text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) =>
+      /^https?:/.test(href)
+        ? `<a href="${href}" rel="noopener">${label}</a>`
+        : `<a href="${href}">${label}</a>`,
+    )
+    .replace(/\{phone\}/g, `<a href="${site.phoneHref}">${site.phoneHeader}</a>`);
+
+const slug = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[’']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+const sections = city.sections.map((s) => ({ ...s, id: slug(s.h) }));
+const toc = sections.map((s) => ({ id: s.id, label: s.h }));
+const others = cities.filter((c) => c.path !== city.path);
+const isList = (b: Block): b is { list: string[] } => typeof b !== 'string';
+---
+<Base
+  title={city.title}
+  description={city.description}
+  path={city.path}
+  crumbs={[{ name: city.h1, path: city.path }]}
+  overlay
+  author
+>
+  <PageHero title={city.h1} crumbs={[{ name: city.h1 }]} />
+
+  <div class="wrap page-body">
+    <article class="prose">
+      {city.intro.map((p, i) => <p class={i === 0 ? 'lead' : undefined} set:html={inline(p)} />)}
+
+      {sections.map((s) => (
+        <>
+          <h2 id={s.id}>{s.h}</h2>
+          {s.body.map((b) =>
+            isList(b) ? (
+              <ul>{b.list.map((li) => <li set:html={inline(li)} />)}</ul>
+            ) : (
+              <p set:html={inline(b)} />
+            ),
+          )}
+        </>
+      ))}
+    </article>
+
+    <aside class="side" aria-label="Page navigation and contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+        <p class="side-note">
+          We take cases from all corners of Virginia, including {city.name}. Video consultations available.
+        </p>
+      </div>
+      <nav class="side-card" aria-label="On this page">
+        <h2>On This Page</h2>
+        <ul class="toc">
+          {toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <nav class="areas" aria-label="Other places we serve">
+    <div class="wrap">
+      <h2>Areas We Serve</h2>
+      <ul>
+        {others.map((c) => <li><a href={c.path}>{c.name}</a></li>)}
+      </ul>
+    </div>
+  </nav>
+
+  <ContactSection />
+</Base>
+
+<style>
+  .areas {
+    background: var(--mist);
+    padding-block: clamp(2rem, 5vw, 3rem);
+  }
+  .areas h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .areas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+    gap: 0.5rem 1.5rem;
+  }
+  .areas a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .areas a:hover {
+    text-decoration: underline;
+  }
+  .side-note {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+</style>
