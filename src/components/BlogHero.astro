@@ -1,0 +1,56 @@
+---
+import TornEdge from './TornEdge.astro';
+
+// Same photo header as PageHero, with a smaller headline so long post titles fit,
+// and an optional line under the headline (author and date).
+interface Props {
+  title: string;
+  crumbs?: { name: string; href?: string }[];
+  image?: string;
+}
+const { title, crumbs = [], image = '/images/photos/tile-b.jpg' } = Astro.props;
+---
+<section class="page-hero blog-hero on-dark">
+  <img class="hero-photo" src={image} alt="" width="1400" height="886" fetchpriority="high" />
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        {crumbs.map((c) => (
+          <li>{c.href ? <a href={c.href}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>
+        ))}
+      </ol>
+    </nav>
+    <h1>{title}</h1>
+    <slot />
+  </div>
+  <TornEdge fill="var(--white)" />
+</section>
+<style is:global>
+  .blog-hero h1 {
+    font-size: clamp(2rem, 4.6vw, 3.25rem);
+    max-width: 26ch;
+    text-wrap: balance;
+  }
+  .blog-hero .byline {
+    margin: 1.25rem 0 0;
+    font-weight: 600;
+    font-size: 1.05rem;
+    opacity: 0.95;
+  }
+  .blog-hero .byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.4rem;
+  }
+  @media (min-width: 40rem) {
+    .blog-hero .byline {
+      gap: 0.2rem 0;
+    }
+    .blog-hero .byline span + span::before {
+      content: "•";
+      margin: 0 0.7rem;
+      opacity: 0.7;
+    }
+  }
+</style>

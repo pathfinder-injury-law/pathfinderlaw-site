@@ -1,0 +1,29 @@
+---
+import type { BlogPost } from '../data/blogPosts';
+import { site } from '../data/site';
+
+// BlogPosting structured data (schema.org). The shared layout already writes the page's
+// WebPage, Breadcrumbs, Organization, WebSite and author Person blocks; this adds the
+// BlogPosting block and points back at them by id. JSON-LD may sit anywhere in the page.
+interface Props { post: BlogPost }
+const { post } = Astro.props;
+const origin = Astro.site!.origin;
+const url = new URL(post.path, origin).href;
+const data = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  '@id': `${url}#blogposting`,
+  mainEntityOfPage: { '@id': `${url}#webpage` },
+  headline: post.title,
+  description: post.description,
+  url,
+  inLanguage: 'en-US',
+  datePublished: post.date.toISOString(),
+  dateModified: post.updated.toISOString(),
+  author: { '@type': 'Person', '@id': `${origin}/#author`, name: 'Bryn Swartz', url: `${origin}/bryn-swartz/` },
+  publisher: { '@type': 'Organization', '@id': `${origin}/#organization`, name: site.name },
+  isPartOf: { '@id': `${origin}/#website` },
+  image: `${origin}/images/open-graph-card.jpg`,
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(data)} />
