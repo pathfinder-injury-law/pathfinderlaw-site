@@ -67,6 +67,8 @@ As you can see, the litigation process for a Virginia workers’ compensation cl
 
 ## What Are Common Types of Spine Injuries in the Workplace?
 
+<figure class="bp-photo"><img src="/images/blog/sore-back.jpg" alt="A woman holding her sore lower back" width="1400" height="933" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@sasun1990" rel="noopener">@sasun1990</a> on Unsplash</figcaption></figure>
+
 Many types of spinal injuries are possible in different workplaces. Some of the most common types of injuries are as follows:
 
 ### Cervical Spine Injuries
@@ -164,6 +166,8 @@ Surgery can be very expensive. Insurance companies tend not to want to pay for s
 To be eligible for workers’ comp benefits, you must have sustained your injuries arising out of and in the course of your employment. One of the first things an insurance adjuster or defense attorney will likely do is challenge whether your injury fits within the legal criteria to receive workers’ comp benefits. You will probably be surprised to learn that just because an accident happens at work, this does not necessarily mean it qualifies for workers’ comp benefits. For example, the insurance company might deny a herniated disc claim on the grounds that the injury was the result of long-term degeneration and not the work accident. Or they might contend that even if the injury was directly related to your accident, your accident was nonetheless not compensable in the first place, meaning it doesn’t matter what injuries you suffered. An experienced Virginia workers’ compensation lawyer can help you navigate these challenges. 
 
 ## Can I File a Workers’ Comp Claim If I Was Injured Driving in Virginia?
+
+<figure class="bp-photo bp-photo-portrait"><img src="/images/blog/neck-pain.jpg" alt="A person holding the back of their neck with both hands" width="800" height="1200" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@kkalerry" rel="noopener">@kkalerry</a> on Unsplash</figcaption></figure>
 
 If your spinal or back injury occurred in a car accident, you may be able to qualify for workers’ comp according to the Virginia Workers’ Compensation Act and its interpretive case law. Commuting to work generally does not qualify under the workers’ compensation system unless one of the following applies:
 

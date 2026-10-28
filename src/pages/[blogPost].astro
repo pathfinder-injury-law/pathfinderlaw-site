@@ -113,6 +113,23 @@ const minutes = Math.max(1, Math.round(post.words / 220));
   .bp-article ul {
     margin-bottom: 1.5rem;
   }
+  /* Credited free photos inside posts. */
+  .bp-photo {
+    margin: 2rem 0;
+  }
+  .bp-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+  }
+  .bp-photo-portrait {
+    max-width: 20rem;
+  }
+  .bp-photo figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(41, 70, 52, 0.75);
+  }
   /* Photo gallery used by the birthday post. */
   .bp-gallery {
     display: grid;

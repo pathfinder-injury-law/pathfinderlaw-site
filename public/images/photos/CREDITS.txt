@@ -10,3 +10,12 @@ No paid stock photos or paid fonts belong in this public repository.
 public/images/blog/birthday/   23 photos in the "Happy Birthday to Pathfinder Injury Law!" post.
                  The firm's own photos (owner-approved for use, Oct 28, 2026), copied from the
                  old site's uploads folder. Not stock photos; no license needed.
+
+public/images/blog/   Free photos from Unsplash (Unsplash License, https://unsplash.com/license),
+                 each confirmed "Free Photo" (not Unsplash+) on its page. Downloaded Oct 28, 2026 with the owner's OK.
+  phone-call.jpg      @silverkblack  https://unsplash.com/photos/woman-talking-on-phone-at-desk-with-laptop-QzY81G7dbOo
+  colleagues.jpg      @silverkblack  https://unsplash.com/photos/two-colleagues-collaborating-on-a-project-at-a-desk-UUcgVSq2m3g
+  signing-papers.jpg  @gabriellefaithhenderson  https://unsplash.com/photos/woman-signing-on-white-printer-paper-beside-woman-about-to-touch-the-documents-HJckKnwCXxQ
+  sore-back.jpg       @sasun1990     https://unsplash.com/photos/woman-holding-her-sore-lower-back-bNdiJ1FEbV4
+  neck-pain.jpg       @kkalerry      https://unsplash.com/photos/person-touching-neck-with-blonde-hair-TcUfF24fUMY
+  broken-leg.jpg      @tomspentys    https://unsplash.com/photos/a-person-with-a-broken-leg-wearing-a-pair-of-blue-boots-AtWb4spCKHI
