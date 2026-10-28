@@ -1,0 +1,300 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { site } from '../../data/site';
+
+// Wording is carried over from the current live page. Changes from the live page:
+//  - Employer threshold now reads "three or more people" and the notice/filing deadlines are
+//    stated correctly (30 days to tell the employer, two years to file, exceptions apply),
+//    matching the owner's legal review of the Workers' Comp page. The live page said to notify the
+//    employer "within two years" and "more than two employees".
+//  - Death benefits use the reviewed Workers' Comp page wording (no dollar figure).
+//  - "court" wording reworded: the Commission holds hearings and is not a court.
+//  - Live FAQ promised a hearing "within thirty days"; replaced with a plain statement. Needs Bryn's review.
+//  - Live FAQ about a "second injury fund" replaced with a general statement about aggravated
+//    old injuries. Needs Bryn's review.
+//  - Link to a non-Commission eye-safety page removed (citation rule).
+//  - Photo from the old page left out (source unknown).
+const title = 'Virginia Factory Accident Attorney | Factory Accident Claims';
+const description =
+  'After a factory accident, you need a Virginia workers’ compensation lawyer you can trust. Call Pathfinder Injury Law in Richmond today.';
+const h1 = 'Virginia Factory Accident Lawyer';
+const path = '/virginia-factory-accident-lawyer/';
+
+const toc = [
+  { id: 'injuries', label: 'Common Factory Accident Injuries in Virginia' },
+  { id: 'eligible', label: 'Am I Eligible for Workers’ Comp Benefits After a Factory Accident?' },
+  { id: 'benefits', label: 'Your Benefits for a Virginia Factory Accident' },
+  { id: 'faq', label: 'Virginia Factory Accident FAQ' },
+  { id: 'help', label: 'Contact a Factory Accident Lawyer in Virginia' },
+];
+---
+<Base
+  title={title}
+  description={description}
+  path={path}
+  crumbs={[
+    { name: 'Workers’ Compensation Lawyer Serving Virginia', path: '/virginia-workers-comp-lawyer/' },
+    { name: h1, path },
+  ]}
+  overlay
+  author
+>
+  <PageHero
+    title={h1}
+    crumbs={[{ name: 'Workers’ Comp', href: '/virginia-workers-comp-lawyer/' }, { name: 'Factory Accidents' }]}
+  />
+
+  <div class="wrap page-body">
+    <article class="prose">
+      <p class="lead">
+        If you’re hurt in a factory accident in Virginia, you have a chance to get the benefits you
+        need to recover. Your lawyer can guide you through your legal concerns, so you can focus on
+        your health.
+      </p>
+      <p>
+        When you’re hurt at your job in a Virginia factory, the results can change your life.
+        Amputations, paralysis, and other severe injuries can have permanent effects, making it tough
+        to recover from your injuries. You’re not just overwhelmed, either—you don’t have the tools you
+        need for a successful <a href="/virginia-workers-comp-lawyer/">Workers’ Comp claim</a>.
+      </p>
+      <p>
+        Luckily, your Virginia factory accident lawyer does have the right tools. At Pathfinder Law,
+        we’re ready to help you get compensated fairly when you’re hurt on the job, so you don’t have
+        to worry about feeding your family and recovering from your injuries.
+      </p>
+
+      <h2 id="injuries">Common Factory Accident Injuries in Virginia</h2>
+      <p>
+        Your Virginia factory accident can lead to some severe injuries that may take a little more than
+        rest to cure. You may suffer from permanent, painful injuries that impact your quality of life.
+        In some cases, you may lose an important sense like sight, or you may be unable to take care of
+        yourself after the accident.
+      </p>
+      <p>
+        Your factory accident lawyer in Virginia can step in when you’re injured and help you get
+        compensated for your suffering. Below are some common injuries you may have suffered in a
+        Virginia factory accident:
+      </p>
+      <ul>
+        <li><a href="/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/">Back injuries</a></li>
+        <li>Brain injuries</li>
+        <li>Spinal cord injuries</li>
+        <li>Broken bones</li>
+        <li>Traumatic amputations</li>
+        <li>Eye damage</li>
+        <li>Musculoskeletal disorders</li>
+      </ul>
+
+      <h2 id="eligible">Am I Eligible for Workers’ Comp Benefits After a Factory Accident?</h2>
+      <p>
+        When you’re seriously hurt in a factory accident, you may not know where to start. Are you even
+        eligible for Workers’ Comp benefits? How do you get them? Getting these answers now can help you
+        prepare for your hearing with the Virginia Workers’ Compensation Commission.
+      </p>
+      <p>
+        The short version is, most workers in the state are eligible for Workers’ Comp benefits. If
+        your employer has three or more people, which usually means two or more employees plus the
+        owner, they should have that coverage. If not, your factory accident lawyer can determine
+        whether your employer is breaking the law.
+      </p>
+      <p>
+        Once you know you’re eligible for compensation, getting started is easy. You should notify your
+        employer of your injury within thirty days, and your claim must be filed with the Commission
+        <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Workers-Guide.pdf" rel="noopener">within two years of the date of your accident</a>,
+        although exceptions apply. From there, your factory accident lawyer can step in and ensure you
+        get your benefits.
+      </p>
+
+      <div class="pull">
+        <p><strong>Learn how we can help you with your factory accident Workers’ Comp case.</strong></p>
+        <p><a class="btn btn-primary" href="#contact">Get Help Now</a></p>
+      </div>
+
+      <h2 id="benefits">Your Benefits for a Virginia Factory Accident</h2>
+      <p>
+        Worried about getting benefits after a Virginia factory accident? If you’re unsure what
+        benefits you’re due, it’s easy to accept an agreement that doesn’t meet your needs following
+        your factory accident. Because of this, you need to know what coverage you’re eligible for and
+        talk it over with your factory accident lawyer.
+      </p>
+      <p>
+        First, you shouldn’t have to pay out of pocket for your doctor visits when you’re hurt on the
+        job. Your Workers’ Comp benefits should cover all your costs following a serious injury. That’s
+        not just your initial treatment, either. Your travel costs, rehabilitation, and any specialist
+        visits should be included in your Workers’ Compensation benefits, too.
+      </p>
+      <p>
+        If you’re unable to work, you still need money for your needs. Your bills won’t stop just
+        because you can’t work. Because of this, you may need disability benefits, which replace a
+        portion of your weekly wages. The wage replacement benefits you get will depend on the details
+        of your claim, like whether you’re able to return to work at all.
+      </p>
+      <p>
+        What if you’re not the one injured in a factory accident? Maybe you recently lost a loved one to
+        a fatal factory accident. That puts you in a difficult position financially because you may have
+        relied on them, as your spouse or guardian, for your financial needs. Luckily, a factory
+        accident lawyer can help you pursue death benefits, which can pay for a limited amount of
+        funeral expenses, medical bills incurred before the death, and lost wages for certain periods of
+        time for certain survivors or dependents who meet statutory criteria.
+      </p>
+
+      <h2 id="faq">Virginia Factory Accident FAQ</h2>
+      <p>
+        After a factory accident, you may have more questions than answers. All you’re sure of is that
+        you’re hurt, and you need benefits to recover from your injuries. Luckily, your factory accident
+        lawyer in Virginia can answer those tough questions for you.
+      </p>
+      <p>
+        Got some case-specific questions? We can answer your questions based on the details of your
+        claim, too. Check out the questions below and reach out for further answers you need.
+      </p>
+      <div class="faq">
+        <details>
+          <summary>When can I expect my benefits from my accident?</summary>
+          <div class="answer">
+            <p>
+              When you’re hurt in a Virginia factory accident, you need Workers’ Comp benefits now, not
+              later. You should receive confirmation that your claim has been accepted or denied as soon
+              as possible. If your claim is denied, you have the right to request a hearing before the
+              Virginia Workers’ Compensation Commission so you don’t have to keep waiting for your
+              Workers’ Comp coverage.
+            </p>
+            <p><a href="/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>What if my employer denied my Virginia Workers’ Comp claim?</summary>
+          <div class="answer">
+            <p>
+              Sadly, you may have received a letter about your Workers’ Comp benefits, only to find
+              you’ve been denied compensation. But that doesn’t mean you’re out of options. Your factory
+              accident lawyer can help you
+              <a href="/virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/">prepare for a hearing</a>,
+              leading the way to your <a href="/virginia-workers-comp-lawyer/">Workers’ Comp benefits</a>.
+              You have the opportunity to seek benefits even if you’ve been denied.
+            </p>
+            <p><a href="/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>In Virginia, can I get all my Workers’ Comp benefits right now?</summary>
+          <div class="answer">
+            <p>
+              In some cases, you may want a
+              <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">lump-sum settlement</a>
+              for your Virginia factory accident, rather than weekly payments. A lump sum means you’ll
+              receive a compromised payment of your benefits all at once. But you may be unable to get
+              further benefits for your injury if you’re not healing as fast as your doctors thought.
+              Your factory accident lawyer can help you decide on your best options for benefits payment.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What if I don’t have a new injury from the accident, but my old injury is worse?</summary>
+          <div class="answer">
+            <p>
+              In some cases, your factory accident may not have caused a new injury. But that old back
+              injury flared up, or a previous head injury made your concussion much worse. In these
+              situations, your injury may be more severe than it would have been. Your Workers’ Comp
+              lawyer can look at your medical history and tell you whether you may be able to seek
+              benefits for the worsening of that condition.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need a factory accident lawyer?</summary>
+          <div class="answer">
+            <p>
+              When you’re hurt in a factory accident, you may not have the answers you need. Sure, you
+              know to tell your employer about the accident, but what about the insurance company? What
+              if your claim is going to a hearing? Dealing with a factory accident can be complex, and
+              you don’t need that on your plate. You can instead work with a lawyer to better your
+              chances of getting your maximum benefits.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Does Virginia Workers’ Comp pay for lost wages?</summary>
+          <div class="answer">
+            <p>
+              After a serious work injury in Virginia, you may be directed to your Workers’ Comp
+              benefits to recover from your injuries. You can’t cover your bills and needs without your
+              wages, so it’s vital that you get coverage.
+            </p>
+            <p>
+              But does Virginia Workers’ Comp pay for lost wages? If you’re worried about losing your
+              wages, reach out to Pathfinder Injury Law. We can help you seek out the coverage you need
+              from your Workers’ Comp provider.
+            </p>
+            <p><a href="/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens when you file a Workers’ Comp claim?</summary>
+          <div class="answer">
+            <p>
+              After a serious work accident, you may have immediately reported your accident to your
+              employer. They need to know about injuries that happen at work, and they’re responsible
+              for your Workers’ Comp benefits.
+            </p>
+            <p>
+              But once you file a Workers’ Comp claim, what happens? If you’re worried about the next
+              steps in your Workers’ Comp process, a Workers’ Comp lawyer from Pathfinder Injury Law is
+              here to help. Here’s what you can expect when you’re hurt in a work accident…
+            </p>
+            <p><a href="/what-happens-when-you-file-a-workers-comp-claim/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>What’s the Workers’ Comp Process in Virginia?</summary>
+          <div class="answer">
+            <p>
+              Virginia state law requires every employer with three or more people, which usually means
+              two or more employees plus the owner, to carry Workers’ Compensation insurance. If an
+              employee receives an injury while completing their job-related duties, they can file a
+              claim with the Virginia Workers’ Compensation Commission to collect financial restitution
+              for their costs. Employees can use the Workers’ Comp process to apply for several
+              financial benefits.
+            </p>
+            <p><a href="/workers-comp-process-in-virginia/">Learn More</a></p>
+          </div>
+        </details>
+      </div>
+
+      <div class="pull" id="help">
+        <h2>Contact a Factory Accident Lawyer in Virginia</h2>
+        <p>
+          When you’re hurt in a factory accident, you may have trouble getting compensated for your
+          injuries. Some Virginia employers may claim you’re ineligible, or you may have already been
+          denied benefits after your injury. <a href="/">Pathfinder Law</a> is ready to help you get
+          Workers’ Comp benefits for your factory accident.
+        </p>
+        <p>
+          Reach out to a Virginia factory accident lawyer about your claim. We can take care of your
+          claim, representing you during your hearing and fighting for your compensation. We can get you
+          started with a free consultation, so you know what we can do for your claim. To take advantage
+          of your free consultation, call <a href={site.phoneHref}>804-505-0633</a> or fill out our
+          <a href="#contact">online contact form</a>.
+        </p>
+      </div>
+    </article>
+
+    <aside class="side" aria-label="Page navigation and contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+      <nav class="side-card" aria-label="On this page">
+        <h2>On This Page</h2>
+        <ul class="toc">
+          {toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <ContactSection />
+</Base>
