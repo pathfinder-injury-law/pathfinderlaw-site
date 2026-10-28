@@ -35,4 +35,4 @@ While bursitis is typically caused by overuse of a joint, a serious injury can a
 
 A serious shoulder injury may leave you unable to work for weeks or months. You shouldn’t have to pay for it in the meantime—if you were injured at work, you may be due compensation for your shoulder injuries.
 
-But getting your Workers’ Comp benefits isn’t always simple. If you’re struggling to get your Workers’ Compensation, reach out to a lawyer at Pathfinder Injury Law. We can help you determine the cause of your on-the-job shoulder injury so you can get the funds you need to focus on your health. For guidance on your claim, call [804-505-0633](tel:804-505-0633) or complete the following online contact form for a free consultation.
+But getting your Workers’ Comp benefits isn’t always simple. If you’re struggling to get your Workers’ Compensation, reach out to a lawyer at Pathfinder Injury Law. We can help you determine the cause of your on-the-job shoulder injury so you can get the funds you need to focus on your health. For guidance on your claim, call [804-505-0633](tel:+18045050633) or complete the following online contact form for a free consultation.

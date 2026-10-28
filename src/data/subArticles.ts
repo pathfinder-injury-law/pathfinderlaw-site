@@ -225,7 +225,7 @@ export const subArticles: SubArticle[] = [
         h2: 'What Is Vocational Rehabilitation?',
         blocks: [
           'When you’re hurt at work, you may be unable to return to your job. For example, you may have suffered a brain injury that makes it difficult to focus, which may be a serious problem for your ability to complete your daily tasks.',
-          'Vocational rehabilitation helps you find, train for, and get a job that you can complete despite your injuries. Vocational rehabilitation services [offer training services](https://www.workcomp.virginia.gov/sites/default/files/documents/Vocational-Rehabilitation-Guidelines.pdf) for those who may be able to work but are unable to return to their former positions.',
+          'Vocational rehabilitation helps you find, train for, and get a job that you can complete despite your injuries. Vocational rehabilitation services [offer training services](https://workcomp.virginia.gov/vocational-rehabilitation-guidelines) for those who may be able to work but are unable to return to their former positions.',
         ],
       },
       {
@@ -310,7 +310,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'Bring Your Medical History',
         blocks: [
-          'Your work injury may not be the only thing affecting your overall health. Other health concerns may also be important to [your medical exam](https://www.vwcconference.workcomp.virginia.gov/materials/ABCs-of-FCEs-and-IMEs.pdf). For example, if you have a previous concussion, your injuries may have been worse than they would have been without that preexisting condition.',
+          'Your work injury may not be the only thing affecting your overall health. Other health concerns may also be important to your medical exam. For example, if you have a previous concussion, your injuries may have been worse than they would have been without that preexisting condition.',
           'But it can be tough to remember every surgery, diagnosis, and health condition on the spot. Because of this, you and your [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) in Virginia can review your medical history before your IME to ensure you have all the information you need.',
         ],
       },
@@ -339,7 +339,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'What’s an IME For?',
         blocks: [
-          'An IME is a chance for the defense to [review your medical condition](https://www.vwcconference.workcomp.virginia.gov/materials/ABCs-of-FCEs-and-IMEs.pdf) with a doctor of their choosing. During the exam, the doctor will ask you questions about your health, your medical history, and how the injury happened. Unfortunately, these questions are more than a health test—they want to show you don’t need Workers’ Comp benefits.',
+          'An IME is a chance for the defense to review your medical condition with a doctor of their choosing. During the exam, the doctor will ask you questions about your health, your medical history, and how the injury happened. Unfortunately, these questions are more than a health test—they want to show you don’t need Workers’ Comp benefits.',
           'Because of this, you need to come prepared. Your [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) in Virginia can discuss the questions you’ll be asked and how you can prepare for a Workers’ Comp IME.',
         ],
       },

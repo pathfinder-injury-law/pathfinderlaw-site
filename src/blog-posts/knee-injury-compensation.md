@@ -11,7 +11,7 @@ tags: ["body-parts","settlement"]
 
 Like most of us, you’re a hard worker. When you head off to your job in the morning, you expect that your employer has all of the safety precautions in place to protect you from injury. Unfortunately, severe accidents happen even to the most conscientious employees, and they can affect you for the rest of your life. The work injury could impact whether you can work in the same field in the future. In those situations, having a knowledgeable [workers’ compensation attorney](/virginia-workers-comp-lawyer/) is critical.
 
-Severe injuries and accidents affect workers regularly. In fact, in 2021, the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/sites/default/files/annual-reports/Annual-Report-2021.pdf) reported there were 48,201 major injuries and 69,080 minor injuries. Richmond City alone saw more than 5,000 injuries. As a result, you need to be prepared in case of a work injury.
+Severe injuries and accidents affect workers regularly. In fact, in 2021, the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) reported there were 48,201 major injuries and 69,080 minor injuries. Richmond City alone saw more than 5,000 injuries. As a result, you need to be prepared in case of a work injury.
 
 **Pathfinder Injury Law is here to help with many types of knee injury claims, from start to finish. Our law firm will be right by your side after a work accident to help you get the compensation you deserve.**  That money can help you address medical bills and provide critical funds for partial income replacement while you recover.
 

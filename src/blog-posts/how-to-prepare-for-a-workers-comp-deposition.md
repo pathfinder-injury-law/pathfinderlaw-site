@@ -13,7 +13,7 @@ When preparing for your deposition, keep the following in mind. Acting now, befo
 
 ## What Is a Deposition?
 
-A [Workers’ Comp deposition](https://workcomp.virginia.gov/sites/default/files/documents/Rules-of-the-Commission.pdf) is simply a court session where you’ll be asked questions about yourself, your medical history, and your work accident. This deposition gives the court a recorded statement about the work accident, giving them the details they need.
+A [Workers’ Comp deposition](https://workcomp.virginia.gov/sites/default/files/documents/Rules-of-the-Commission-Branded.pdf) is simply a court session where you’ll be asked questions about yourself, your medical history, and your work accident. This deposition gives the court a recorded statement about the work accident, giving them the details they need.
 
 The problem is, your deposition can work against you. You’re speaking under oath at the time, and that can be intimidating. It’s easy to make a mistake during this session. Fortunately, your [Workers’ Compensation lawyer](/virginia-workers-comp-lawyer/) can help you prepare for anything you’re asked during the deposition.
 
@@ -33,4 +33,4 @@ Because of this, you and your lawyer may need to discuss what to avoid during yo
 
 When you’re hurt in a work accident, you need your benefits to cover all your needs. Because of this, you need to ensure you’re taking the right steps throughout your claim. A mistake can cost you. Because of this, you may need to speak with Pathfinder Injury Law before you attend your deposition.
 
-Your Workers’ Comp attorney can help you prepare your statements, and they can ensure you’re telling them all they need to hear, and nothing more. Your lawyer can guide you through this process when you reach out for a free consultation, leading you to the benefits you’re due. When you’re ready to work with a lawyer, call [804-505-0633](tel:804-505-0633) or complete the online contact form below.
+Your Workers’ Comp attorney can help you prepare your statements, and they can ensure you’re telling them all they need to hear, and nothing more. Your lawyer can guide you through this process when you reach out for a free consultation, leading you to the benefits you’re due. When you’re ready to work with a lawyer, call [804-505-0633](tel:+18045050633) or complete the online contact form below.

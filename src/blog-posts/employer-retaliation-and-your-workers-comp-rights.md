@@ -19,7 +19,7 @@ But your employer has no legal grounds to do this. [Employer retaliation is ille
 
 ## Your Rights as an Injured Worker
 
-As a worker, your rights are protected by Virginia law. If you’re injured in the scope of your job, you may be [entitled to certain benefits](https://www.vwc.state.va.us/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf). For example, you shouldn’t have to pay out of pocket for any medical expenses related to the work accident. You may also be due compensation for the lost wages you suffered while unable to work.
+As a worker, your rights are protected by Virginia law. If you’re injured in the scope of your job, you may be [entitled to certain benefits](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf). For example, you shouldn’t have to pay out of pocket for any medical expenses related to the work accident. You may also be due compensation for the lost wages you suffered while unable to work.
 
 Because of this, you also have a right to file a claim against your employer if they retaliated against you. As a worker, you should be protected by state law from these acts of retaliation.
 
@@ -35,4 +35,4 @@ You may also simply not have the time and energy to represent yourself. Even if 
 
 When you’re hurt on the job, you shouldn’t have to worry about losing your job or facing other penalties for the accident. Unfortunately, many Virginia workers face this difficult situation, and many are worried they won’t receive Workers’ Comp benefits when they need them.
 
-If you’re concerned that your benefits may be denied or that your employer may retaliate against you, reach out to Pathfinder Injury Law. Our firm has the resources you need to seek the benefits you need for your recovery and to protect yourself from retaliation. To get started with a free consultation, call [804-505-0633](tel:804-505-0633) or fill out the online contact form below.
+If you’re concerned that your benefits may be denied or that your employer may retaliate against you, reach out to Pathfinder Injury Law. Our firm has the resources you need to seek the benefits you need for your recovery and to protect yourself from retaliation. To get started with a free consultation, call [804-505-0633](tel:+18045050633) or fill out the online contact form below.

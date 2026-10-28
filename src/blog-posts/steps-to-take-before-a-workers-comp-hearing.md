@@ -33,4 +33,4 @@ Luckily, your [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) can help 
 
 An on-the-job injury can have devastating impacts, and you may struggle to get compensated for those losses. Your Virginia Workers’ Comp hearing gives you a chance to seek the benefits you may have been denied. But you also need to take the right steps before your hearing.
 
-Your lawyer at [Pathfinder Injury Law](/) is ready to help you when you’re unsure about the steps to take before a Workers’ Comp hearing. We can even meet for a free consultation about your claim before your hearing. Start by calling [804-505-0633](tel:804-505-0633) or by filling out the online contact form below.
+Your lawyer at [Pathfinder Injury Law](/) is ready to help you when you’re unsure about the steps to take before a Workers’ Comp hearing. We can even meet for a free consultation about your claim before your hearing. Start by calling [804-505-0633](tel:+18045050633) or by filling out the online contact form below.

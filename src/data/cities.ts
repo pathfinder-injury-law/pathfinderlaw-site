@@ -506,7 +506,7 @@ export const cities: City[] = [
         h: 'Investigating Your Lynchburg Workers’ Comp Claim',
         body: [
           'When you’ve been injured on the job, you may not know where to turn next. How do you get compensated for your medical bills related to your accident? What do you do if temporary or permanent disability keeps you out of work?',
-          `In Virginia, [employers are required to carry Workers’ Compensation insurance](https://www.vwc.state.va.us/content/injured-workers) if they have three or more people, which usually means two or more employees plus the owner. Workers don’t need to prove that their employer or anyone else was at fault in order to receive compensation. In theory, this should make these benefits accessible to all who need them. The reality couldn’t be more different, however.`,
+          `In Virginia, [employers are required to carry Workers’ Compensation insurance](https://workcomp.virginia.gov/content/injured-workers) if they have three or more people, which usually means two or more employees plus the owner. Workers don’t need to prove that their employer or anyone else was at fault in order to receive compensation. In theory, this should make these benefits accessible to all who need them. The reality couldn’t be more different, however.`,
           'Insurance companies, as with any other business, look to protect themselves and their own profits more than any other interest. The sad result of this is that many injured workers have their claims denied or delayed by insurers that should be taking care of them. That’s why, if you’re going to receive the benefits you deserve for your injuries, you need to take swift action.',
         ],
       },
@@ -913,7 +913,7 @@ export const cities: City[] = [
         h: 'How to Fight a Workers’ Comp Denial',
         body: [
           'When you’re denied Workers’ Comp benefits, you may need help fighting back against that denial. Your denial letter should include the reason for your denial, but you may be unsure what to do with that information.',
-          'Your Workers’ Comp lawyer can help you build your case, gathering evidence like eyewitnesses, doctor’s opinions, and video footage of the accident. From there, your lawyer can represent you at each stage of the process, including a hearing with the [Virginia Workers’ Compensation Commission](https://www.vwc.state.va.us/). They can help you dispute the denial and pursue the benefits you’re due.',
+          'Your Workers’ Comp lawyer can help you build your case, gathering evidence like eyewitnesses, doctor’s opinions, and video footage of the accident. From there, your lawyer can represent you at each stage of the process, including a hearing with the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/). They can help you dispute the denial and pursue the benefits you’re due.',
         ],
       },
       {

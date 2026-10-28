@@ -29,10 +29,10 @@ Your doctor can step in as an expert witness. They can discuss the evidence of y
 
 When you have a Workers’ Comp claim in Virginia, you may need to focus on protecting it. Many employers and insurance companies are focused on their profits, not on your recovery. Because of this, you may need to prepare a strong defense for your claim.
 
-Gathering evidence can help you determine what your best approach is for your Workers’ Comp claim. Luckily, [your lawyer](/virginia-work-injury-lawyer/) can help you determine this. They can review the details of your claim and represent you in the courtroom before the [Virginia Workers’ Compensation Commission](https://www.vwc.state.va.us/).
+Gathering evidence can help you determine what your best approach is for your Workers’ Comp claim. Luckily, [your lawyer](/virginia-work-injury-lawyer/) can help you determine this. They can review the details of your claim and represent you in the courtroom before the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/).
 
 ## Prepare a Successful Workers’ Comp Claim with a Lawyer
 
 When you’re hurt at work, recovering from your injuries can be difficult. Worse, you may not have gathered the elements of a Workers’ Comp claim that can help yours succeed.
 
-Luckily, your lawyer at Pathfinder Injury Law is here to help. If you’ve been injured at work and you’re concerned about the success of your claim, reach out for help from a lawyer, starting with a free consultation. We can help you determine your needs for your claim and seek the benefits you need. To start with your free consultation, call [804-505-0633](tel:804-505-0633) or fill out the online contact form below.
+Luckily, your lawyer at Pathfinder Injury Law is here to help. If you’ve been injured at work and you’re concerned about the success of your claim, reach out for help from a lawyer, starting with a free consultation. We can help you determine your needs for your claim and seek the benefits you need. To start with your free consultation, call [804-505-0633](tel:+18045050633) or fill out the online contact form below.

@@ -31,7 +31,9 @@ const { page } = Astro.props;
 const path = page.currentPage === 1 ? '/blog/' : `/blog/page/${page.currentPage}/`;
 const title = "Workers’ Comp Blog";
 const description =
-  "Articles from Pathfinder Injury Law about Virginia workers’ compensation: how to file a claim, what insurance adjusters do, and what to expect after a work injury.";
+  page.currentPage === 1
+    ? "Articles from Pathfinder Injury Law about Virginia workers’ compensation: how to file a claim, how adjusters work, and what to expect after a work injury."
+    : "More articles from Pathfinder Injury Law about Virginia workers’ compensation and what to expect after a work injury. Page 2 of our blog.";
 ---
 <Base
   title={page.currentPage === 1 ? "Workers’ Comp Blog | Pathfinder Injury Law" : `Workers’ Comp Blog, Page ${page.currentPage} | Pathfinder Injury Law`}

@@ -105,4 +105,4 @@ Experiencing a work-related injury is stressful enough, but when you need surger
 
 In addition, our law office only handles workers’ comp cases. We always work for you and will seek compensation that meets your individual needs.
 
-If you need a workers’ compensation lawyer you can count on in Richmond or the Central Virginia area, look no further than Pathfinder Injury Law. We will be glad to provide you with an initial consultation and case evaluation virtually or over the phone. Call [(804) 505-0633](tel:804-505-0633) today or go to our website and fill out the available [contact form](/contact/). We look forward to talking with you soon!
+If you need a workers’ compensation lawyer you can count on in Richmond or the Central Virginia area, look no further than Pathfinder Injury Law. We will be glad to provide you with an initial consultation and case evaluation virtually or over the phone. Call [(804) 505-0633](tel:+18045050633) today or go to our website and fill out the available [contact form](/contact/). We look forward to talking with you soon!

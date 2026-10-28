@@ -20,6 +20,9 @@ ${offices}
 
 Both offices are by appointment only.
 
+Office hours:
+${firm.hours.map((h) => `- ${h}`).join('\n')}
+
 ## Main pages
 
 ${link('Home', '/')}
