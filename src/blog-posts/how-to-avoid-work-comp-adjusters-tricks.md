@@ -47,7 +47,7 @@ Any benefits you receive will come from the insurance agency of your employer, n
 
 The adjuster may offer you an insufficient settlement quickly, so you have less time to consider your rights and options. Many offers involve scare tactics, such as telling you how long the process takes and how benefits can be delayed. They may tell you that the volume of information needed to review a worker’s compensation claim is massive, and you can alleviate yourself of this burden by accepting the generous settlement they are now offering now.
 
-In addition, the adjuster may send you an agreement form that leaves out important information. For instance, the form may calculate the amount using a lower average weekly wage or fail to provide enough wage loss benefits for the time you, the injured employee, are already out of work. In other instances, the adjuster purposely fails to list all injured body parts from the work-related accident, potentially eliminating coverage for many medical bills.
+In addition, the adjuster may send you an agreement form that leaves out important information. For instance, the form may calculate the amount using a lower average weekly wage or fail to provide enough wage loss benefits for the time you, the injured employee, are already out of work. In other instances, the adjuster fails to list all injured body parts from the work-related accident, potentially limiting coverage for many medical bills.
 
 ### Get You to Sign a Statement Immediately or Give a Recorded Statement
 
@@ -93,7 +93,7 @@ If the adjuster requests you sign a statement, a consent for medical records, or
 
 ### Do Not Offer Personal Information
 
-Keep the exchange of information strictly professional and associated with the work-related injury and accident. Do not offer personal information, such as your current financial situation, your family life, or details of any past personal injury or pre-existing medical conditions. Also, avoid sharing any contradictory posts on social media as adjusters can find these and use them against you.
+Keep the exchange of information strictly professional and associated with the work-related injury and accident. Talk with a lawyer before you decide what personal information to share with an adjuster, if any. If you do answer questions, you must be truthful. However, speaking with an adjuster before talking with a lawyer can be a very bad idea. Also, avoid sharing any contradictory posts on social media as adjusters can find these and use them against you.
 
 ### Stay Persistent
 

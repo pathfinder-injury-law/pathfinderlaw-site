@@ -9,7 +9,7 @@ tags: ["hearing"]
 
 One moment, you’re doing your job, without any trouble to worry about. The next, you’ve been seriously injured. Now you’re struggling to get compensated for the injuries you suffered. You may be worried about the right steps to take before a Workers’ Comp hearing.
 
-Recovering from a work injury can be tough, especially if you’re appealing a [Workers’ Compensation denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). Luckily, your lawyer can help you take the right steps before your court date arrives. Check out the steps below to help turn your Workers’ Comp hearing into a success.
+Recovering from a work injury can be tough, especially if you’re appealing a [Workers’ Compensation denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). Luckily, a lawyer can help you take the right steps before your hearing date arrives. Check out the steps below to help turn your Workers’ Comp hearing into a success.
 
 ## Gathering Evidence
 
@@ -19,7 +19,7 @@ For example, the insurance company may claim you weren’t actually injured on t
 
 ## Calculate Your Damages
 
-When you’re hurt on the job, you also need to know what damages, or losses caused by the work accident, you suffered. Knowing what these damages are worth can help you avoid settling for less than your claim is worth.
+When you’re hurt on the job, you also need to know what losses the work accident caused you. Knowing what these damages are worth can help you avoid settling for less than your claim is worth.
 
 Luckily, your Virginia lawyer can help you determine the costs of your injuries. They can help you pursue benefits that cover all the time you’ve been unable to work and help you assess the type of benefits you’re due, like [partial or total disability](https://www.workcomp.virginia.gov/documents/injured-workers-benefits-guide) benefits. Your lawyer can also help you determine how long you should receive these benefits, or whether you should receive these benefits on a permanent basis.
 

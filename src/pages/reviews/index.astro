@@ -44,6 +44,7 @@ const reviews = [
 
   <section class="section reviews-section">
     <div class="wrap">
+      <p class="reviews-note">These comments are from past clients. Each case is different, and these comments do not promise or predict a result in yours.</p>
       <div class="review-wall">
         {reviews.map((r) => (
           <figure class="review-card" data-reveal>
@@ -66,6 +67,13 @@ const reviews = [
 <style>
   .reviews-section {
     padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .reviews-note {
+    max-width: 46rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--pine);
   }
   .review-wall {
     columns: 1;

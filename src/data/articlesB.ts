@@ -51,7 +51,7 @@ export const articlesB = {
         h2: 'Eligibility for Virginia Work Injury Compensation',
         // Live: "almost all workers... Any employer with three or more employees must provide...".
         html: `
-          <p>One of your first concerns may be about whether you’re eligible for Workers’ Compensation benefits. The Virginia Workers’ Compensation Act requires any Virginia employer that has three or more people, which usually means two or more employees plus the owner, to have workers’ compensation insurance which provides workers’ compensation benefits in the event of an accident.</p>
+          <p>One of your first concerns may be about whether you’re eligible for Workers’ Compensation benefits. The Virginia Workers’ Compensation Act requires virtually all Virginia employers with three or more employees regularly in service to have workers’ compensation insurance which provides workers’ compensation benefits in the event of an accident.</p>
           <p>But things are more complicated for those <a href="https://workcomp.virginia.gov/sites/default/files/documents/Employer-FAQs_1.pdf" rel="noopener">listed as independent contractors</a>. If you believe you should be counted as an employee, your work injury lawyer can help you build a case to prove you were acting as an employee in order to seek the coverage you need.</p>`,
       },
       {
@@ -84,7 +84,7 @@ export const articlesB = {
         html: `
           <p>So you’ve been <a href="${WC}">injured at work</a>. Now what? First, don’t panic. There are several steps you can take in order to make things a little easier:</p>
           <ul>
-            <li><strong>Report Your Injury:</strong> As soon as you’re able, make sure you report your injury to your employer. The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury, and prompt reporting is important to try and avoid having your claim denied.</li>
+            <li><strong>Report Your Injury:</strong> As soon as you’re able, make sure you report your injury to your employer. The Virginia Workers’ Compensation Act requires you to give written notice to your employer within thirty days of the accident, although exceptions exist, and prompt reporting is important to try and avoid having your claim denied.</li>
             <li><strong>Keep Track of Everything:</strong> When getting treatment, it’s important to keep track of everything. Missed days, lost wages, out of pocket expenses—it’s better to have too much information than too little.</li>
             <li><strong>Contact a Work Injury Lawyer:</strong> Facing a worker’s comp case can be frightening, so it can be helpful to find an attorney for assistance. Pathfinder Injury Law is here to help explain the specifics of Virginia work injury law and guide you through your case.</li>
           </ul>`,
@@ -117,7 +117,7 @@ export const articlesB = {
         // for "prompt payment" (that section is "Liability of insurer"; link dropped). The
         // "presumption of connection" sentence (a rule for certain diseases) is left out.
         html: `
-          <p>The Virginia Workers’ Compensation Act requires any Virginia employer that has three or more people, which usually means two or more employees plus the owner, to have workers’ compensation insurance. However, if you are covered under Workers’ Comp insurance, it doesn’t mean the benefits are automatic once you suffer an injury.</p>
+          <p>The Virginia Workers’ Compensation Act requires virtually all Virginia employers with three or more employees regularly in service to have workers’ compensation insurance. However, if you are covered under Workers’ Comp insurance, it doesn’t mean the benefits are automatic once you suffer an injury.</p>
           <p>While the law does require the insurer to make prompt payment if you are entitled to the benefits, you still have to prove that entitlement.</p>
           <p>Specifically, a successful workers’ comp claim requires evidence that your accident arose out of and in the course of your employment and that it resulted in a sudden, identifiable, structural or mechanical change to your body.</p>`,
       },
@@ -141,7 +141,7 @@ export const articlesB = {
         h2: 'How Can an Attorney Help?',
         // Live: "you can be sure you will receive full benefits and compensation due by law".
         html: `
-          <p>With an experienced Workers’ Comp lawyer at your side, you can have help pursuing the benefits and compensation due by law. At Pathfinder Law, your Workers’ Comp lawyer can help build your case to seek your benefits and, where it applies, a penalty if the Workers’ Comp insurer pays late.</p>`,
+          <p>With an experienced Workers’ Comp lawyer at your side, you can have help pursuing the benefits and compensation due by law. At Pathfinder Injury Law, your Workers’ Comp lawyer can help build your case to seek your benefits and, where it applies, a penalty if the Workers’ Comp insurer pays late.</p>`,
       },
     ],
     closing: {
@@ -167,7 +167,7 @@ export const articlesB = {
         // LIVE WORDING (tax statements, no reviewed equivalent). The live sentence that an employer "may
         // be able to get a tax break" (with a winchesterva.gov link) is left out: outside source.
         html: `
-          <p>Typically, you don’t have to worry about your Workers’ Comp benefits being taxed. These benefits aren’t a form of income like your wages before the accident were. These benefits are repayment for a single work accident paid through an insurance policy. Because of that, you shouldn’t have to worry about including your workers comp benefits in your taxes.</p>`,
+          <p>Workers’ Comp benefits are typically not taxed, but talk with a tax professional about your situation. These benefits aren’t a form of income like your wages before the accident were. These benefits are repayment for a single work accident paid through an insurance policy. Because of that, you shouldn’t have to worry about including your workers comp benefits in your taxes.</p>`,
       },
       {
         id: 'ssdi',
@@ -215,7 +215,7 @@ export const articlesB = {
         // company". That mixed up the thirty-day notice and the two-year filing deadline, and the
         // employer-notifies-insurer sentence has no reviewed equivalent, so it is rewritten.
         html: `
-          <p>The Virginia Workers’ Compensation Act requires you to give notice to your employer within <a href="https://workcomp.virginia.gov/content/injured-workers" rel="noopener">thirty days of the injury</a>, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Once you’ve done this, the insurance company is responsible for assessing your claim.</p>
+          <p>The Virginia Workers’ Compensation Act requires written notice to your employer within <a href="https://workcomp.virginia.gov/content/injured-workers" rel="noopener">thirty days of the accident</a>, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Once you’ve done this, the insurance company is responsible for assessing your claim.</p>
           <p>This review is meant to determine whether you were seriously injured, whether your injuries happened on the job, and what funds you’re due for the injuries you suffered.</p>
           <p>Once the insurance company has reviewed your claim, you’ll then receive a notice about whether your claim was approved or denied.</p>`,
       },
@@ -261,7 +261,7 @@ export const articlesB = {
       "How long can a Virginia workers' comp claim stay open? Here's what you need to know from our team at Pathfinder Injury Law.",
     h1: 'How Long Can a Workers’ Comp Claim Stay Open?',
     lead: `
-      <p class="lead">If you have suffered an injury at work, it’s always a good idea to file a Workers’ Comp claim. This way, medical services and wages can be paid even if you have to miss some time off work. Workers’ Compensation policies are put into place so that you can have medical care, wages, and ongoing care at least partially covered after a work injury. In the event of a fatal accident, benefits can pay for a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.</p>
+      <p class="lead">If you have suffered an injury at work, it’s a good idea to file a Workers’ Comp claim. This way, medical services and wages can be paid even if you have to miss some time off work. Workers’ Compensation policies are put into place so that you can have medical care, wages, and ongoing care at least partially covered after a work injury. In the event of a fatal accident, benefits can pay for a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.</p>
       <p>Workers’ Compensation protects both the employer and the employee. Knowing the basics of claims and how to close and open claims is essential to both parties. Having a <a href="${WC}">Virginia Workers’ Comp lawyer</a> on your side will give you the advantage of knowledge.</p>`,
     sections: [
       {
@@ -271,8 +271,8 @@ export const articlesB = {
         // 30-45 days". Replaced with the reviewed deadlines. "Scheduled payments" (structured
         // settlements) removed from the last paragraph.
         html: `
-          <p>In most cases, you must notify your employer within thirty days of the injury, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Missing these deadlines could affect your ability to receive benefits.</p>
-          <p>Claims do not have a limit on how long they stay open. Wage loss benefits are usually capped at 500 weeks unless permanent total disability is awarded, which is rare. There are limits on consequences of your accident being covered.</p>`,
+          <p>In most cases, you must give written notice to your employer within thirty days of the accident, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Missing these deadlines could affect your ability to receive benefits.</p>
+          <p>A request for review based on a change in condition generally must be made within 24 months from the last day for which compensation was paid, with longer periods for some claims. Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity. There are limits on consequences of your accident being covered.</p>`,
       },
       {
         id: 'changes',
@@ -304,7 +304,8 @@ export const articlesB = {
     parents: [{ name: 'Virginia Work Injury Lawyer', path: '/virginia-work-injury-lawyer/' }],
     lead: `
       <p class="lead">A single mistake or distraction on the job can leave you hurt and suffering. Your Workers’ Comp benefits are supposed to protect you and compensate you when this happens, but you may not have much luck getting your compensation.</p>
-      <p>Luckily, your lawyer at Pathfinder Injury Law can guide you through the steps to settle a Virginia Workers’ Comp dispute. If you were hurt on the job and you’ve been denied Workers’ Comp benefits or had a dispute with your claim, <a href="${WC}">your Workers’ Comp lawyer</a> can help you get answers.</p>`,
+      <p>Luckily, your lawyer at Pathfinder Injury Law can guide you through the steps to settle a Virginia Workers’ Comp dispute. If you were hurt on the job and you’ve been denied Workers’ Comp benefits or had a dispute with your claim, <a href="${WC}">your Workers’ Comp lawyer</a> can help you get answers.</p>
+      <p>A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.</p>`,
     sections: [
       {
         id: 'reason',
@@ -314,7 +315,7 @@ export const articlesB = {
         // thirty-day notice and two-year filing wording.
         html: `
           <p>Your first option is to speak with the insurance company and your employer about your Workers’ Comp claim. Your lawyer can request more information about the reason for your denial, determining why you didn’t receive compensation.</p>
-          <p>Once you know the reasons for your denial, you and your lawyer can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://workcomp.virginia.gov/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you and your lawyer may focus on proving you met those deadlines.</p>`,
+          <p>Once you know the reasons for your denial, you and your lawyer can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://workcomp.virginia.gov/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you and your lawyer may focus on proving you met those deadlines.</p>`,
       },
       {
         id: 'hearing',
@@ -322,6 +323,7 @@ export const articlesB = {
         // Live heading: "Take Your Claim to Court". The Commission is not a court, and the reviewed
         // wording is "hearing before the Commission". LIVE WORDING kept: mediation sentence.
         html: `
+          <p>Pathfinder Injury Law can also help at mediation. Mediations are is settlement conferences with the insurance company and a judge (called a deputy commissioner) for the purpose of trying to reach a lump sum settlement.</p>
           <p>But <a href="https://workcomp.virginia.gov/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. While your Workers’ Comp lawyer can help you provide evidence that you are <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
           <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://workcomp.virginia.gov/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, your lawyer can represent you and present evidence that you’re due Workers’ Comp benefits. Once all evidence has been presented, the commissioner will determine whether you’re due benefits.</p>`,
       },
@@ -345,7 +347,8 @@ export const articlesB = {
     crumb: 'Lump Sum Settlement',
     lead: `
       <p class="lead">When you’re hurt in a work accident, you may have the option to take a lump sum settlement for your Workers’ Comp claim. A lump sum settlement means you may receive the benefits for your claim at once. But is it the best option for your Workers’ Comp claim?</p>
-      <p>If you’re <a href="${WC}">seeking Workers’ Comp</a> benefits and you’re unsure what options to pursue, Pathfinder Injury Law can guide you through your options. We can help you understand the benefits you may be due and weigh your choices.</p>`,
+      <p>If you’re <a href="${WC}">seeking Workers’ Comp</a> benefits and you’re unsure what options to pursue, Pathfinder Injury Law can guide you through your options. We can help you understand the benefits you may be due and weigh your choices.</p>
+      <p>A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.</p>`,
     sections: [
       {
         id: 'difference',
@@ -390,7 +393,8 @@ export const articlesB = {
     crumb: 'Strengthen Your Workers’ Comp Case',
     lead: `
       <p class="lead">A work accident can leave you struggling with debts, a lack of income, and strain on your family. When this happens, you need to get compensated fairly and get your Virginia Workers’ Comp benefits. The insurance company may not be so willing to help you do that.</p>
-      <p>But don’t worry, Pathfinder Injury Law can guide you through the steps that matter most in a Virginia Workers’ Comp case. Continue reading to learn more about how to build a strong Virginia Workers’ Comp claim.</p>`,
+      <p>But don’t worry, Pathfinder Injury Law can guide you through the steps that matter most in a Virginia Workers’ Comp case. Continue reading to learn more about how to build a strong Virginia Workers’ Comp claim.</p>
+      <p>Not every case is winnable, and we are not guaranteeing results.</p>`,
     sections: [
       {
         id: 'treatment',
@@ -399,14 +403,14 @@ export const articlesB = {
         // reviewed equivalent; Commission link kept as on live. Needs Bryn's review.
         html: `
           <p>If you’ve been injured on the job, your first step is to seek medical care. Yes, you need it, even if you feel fine—you may not notice a serious injury until it’s worsened, and the insurance company may doubt your claim if you don’t act immediately.</p>
-          <p>You may need to seek medical attention from your <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">employer’s chosen doctor</a>. If the employer denies your claim, you get to choose your own doctors.</p>`,
+          <p>Your employer must offer a <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">panel of three doctors</a>, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.</p>`,
       },
       {
         id: 'file',
         h2: 'File a Virginia Workers’ Comp Case on Time',
         // Live: "You have only two years to file".
         html: `
-          <p>It can be tough to file a Workers’ Comp claim on time when you’re hurt. You may be stuck in the hospital for days or weeks, recovering from your injuries. But to make your claim stronger, it’s important to act as soon as possible. Start by giving notice of your injury to your employer within thirty days of the injury.</p>
+          <p>It can be tough to file a Workers’ Comp claim on time when you’re hurt. You may be stuck in the hospital for days or weeks, recovering from your injuries. But to make your claim stronger, it’s important to act as soon as possible. Start by giving written notice of your injury to your employer within thirty days of the accident.</p>
           <p>Your claim must also be on file with the <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf" rel="noopener">Virginia Workers’ Compensation Commission</a> within two years of your date of accident, although exceptions apply. Acting now can protect your claim and help you get your benefits sooner. That means less time worrying about how you’ll feed your family, and more time focusing on your health.</p>`,
       },
       {
@@ -440,7 +444,7 @@ export const articlesB = {
         // Live: "every employer with more than two employees"; reviewed wording used. "Vocational
         // rehabilitation" is LIVE WORDING (no reviewed equivalent; city pages kept it too).
         html: `
-          <p>Virginia state law requires every employer with three or more people, which usually means two or more employees plus the owner, to carry Workers’ Compensation insurance. If an employee receives an injury while completing their job-related duties, they can file a claim with the Virginia Workers’ Compensation Commission to collect financial restitution for their costs. Employees can use the Workers’ Comp process to apply for several financial benefits including:</p>
+          <p>Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance. If an employee receives an injury while completing their job-related duties, they can file a claim with the Virginia Workers’ Compensation Commission to seek benefits including reimbursement of costs. Employees can use the Workers’ Comp process to apply for several financial benefits including:</p>
           <ul>
             <li>Lost wages</li>
             <li>Medical benefits</li>
@@ -468,7 +472,7 @@ export const articlesB = {
             <li>Going to hearing or settling your case</li>
             <li>Appealing the decision if not in your favor at hearing</li>
           </ul>
-          <p>If you don’t follow the correct procedure when you pursue your <a href="${WC}">Workers’ Compensation claim in Virginia</a>, you may lose your case on a technicality. For example, the Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury, and failing to do so could affect your ability to receive benefits. Your claim must also be on file with the Commission within two years of your date of accident, although exceptions apply. It’s easy to miss these kinds of deadlines. That’s where we can help. <a href="/">Pathfinder Injury Law</a> has years of experience helping our clients pursue their claims. We can leverage that experience to help you pursue yours. Call ${phone} for your no-obligation consultation.</p>`,
+          <p>If you don’t follow the correct procedure when you pursue your <a href="${WC}">Workers’ Compensation claim in Virginia</a>, you may lose your case on a technicality. For example, the Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits. Your claim must also be on file with the Commission within two years of your date of accident, although exceptions apply. It’s easy to miss these kinds of deadlines. That’s where we can help. <a href="/">Pathfinder Injury Law</a> has years of experience helping our clients pursue their claims. We can leverage that experience to help you pursue yours. Call ${phone} for your no-obligation consultation.</p>`,
       },
     ],
     closing: {
@@ -482,10 +486,11 @@ export const articlesB = {
     path: '/workers-comp-settlement-in-virginia/',
     title: 'Workers’ Comp Settlement in Virginia - Pathfinder Injury Law',
     description:
-      "Pathfinder Injury Law is a law firm specializing in Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
+      "Pathfinder Injury Law is a law firm exclusively handling Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
     h1: 'Workers’ Comp Settlement in Virginia',
     lead: `
-      <p class="lead">When you’ve been injured, you know you’ll likely have to file a Workers’ Comp claim. Many people wonder what the average Workers’ Compensation settlement is, and may worry about the process they’ll have to go through. When you’re preparing for a Workers’ Comp settlement in Virginia, trust <a href="${WC}">Pathfinder Injury Law</a>. We have years of experience helping clients with their Workers’ Compensation settlements and are more than willing to answer any questions you may have on the process.</p>`,
+      <p class="lead">When you’ve been injured, you know you’ll likely have to file a Workers’ Comp claim. Many people wonder what the average Workers’ Compensation settlement is, and may worry about the process they’ll have to go through. When you’re preparing for a Workers’ Comp settlement in Virginia, trust <a href="${WC}">Pathfinder Injury Law</a>. We have years of experience helping clients with their Workers’ Compensation settlements and are more than willing to answer any questions you may have on the process.</p>
+      <p>A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.</p>`,
     sections: [
       {
         id: 'types',

@@ -1,7 +1,7 @@
 ---
 title: "How to Prepare for a Workers’ Comp Deposition"
 metaTitle: "How To Prepare For a Work Comp Deposition in Virginia"
-description: "Pathfinder Injury Law can help you prepare for a Virginia workers' comp deposition. Call our trusted team for a 100% free consultation."
+description: "Pathfinder Injury Law can help you prepare for a Virginia workers' comp deposition. Call us for a 100% free consultation."
 date: 2021-05-20T20:39:00Z
 updated: 2022-10-21T16:45:58Z
 tags: ["hearing","hiring-a-lawyer"]
@@ -13,7 +13,7 @@ When preparing for your deposition, keep the following in mind. Acting now, befo
 
 ## What Is a Deposition?
 
-A [Workers’ Comp deposition](https://workcomp.virginia.gov/sites/default/files/documents/Rules-of-the-Commission-Branded.pdf) is simply a court session where you’ll be asked questions about yourself, your medical history, and your work accident. This deposition gives the court a recorded statement about the work accident, giving them the details they need.
+A [Workers’ Comp deposition](https://workcomp.virginia.gov/sites/default/files/documents/Rules-of-the-Commission-Branded.pdf) is sworn questioning, outside the hearing room, about yourself, your medical history, and your work accident. This deposition gives the court a recorded statement about the work accident, giving them the details they need.
 
 The problem is, your deposition can work against you. You’re speaking under oath at the time, and that can be intimidating. It’s easy to make a mistake during this session. Fortunately, your [Workers’ Compensation lawyer](/virginia-workers-comp-lawyer/) can help you prepare for anything you’re asked during the deposition.
 
@@ -25,7 +25,7 @@ During the deposition, the lawyer present may ask you questions about your medic
 
 ## What to Share during Your Deposition
 
-But you don’t have to share everything during your deposition. While you are under oath, meaning you can’t lie during the deposition, you’re not obligated to share all the details of your discussions with your lawyer, for example. Client-attorney privilege still applies to your case, even in the courtroom.
+Answer each question truthfully, and answer only the question asked. While you are under oath, meaning you can’t lie during the deposition, you’re not obligated to share all the details of your discussions with your lawyer, for example. Client-attorney privilege still applies to your case, even in the courtroom.
 
 Because of this, you and your lawyer may need to discuss what to avoid during your deposition. The details of this will depend on your case, but one thing is certain—your lawyer can help you decide what to share and when to object to the questions.
 
@@ -33,4 +33,4 @@ Because of this, you and your lawyer may need to discuss what to avoid during yo
 
 When you’re hurt in a work accident, you need your benefits to cover all your needs. Because of this, you need to ensure you’re taking the right steps throughout your claim. A mistake can cost you. Because of this, you may need to speak with Pathfinder Injury Law before you attend your deposition.
 
-Your Workers’ Comp attorney can help you prepare your statements, and they can ensure you’re telling them all they need to hear, and nothing more. Your lawyer can guide you through this process when you reach out for a free consultation, leading you to the benefits you’re due. When you’re ready to work with a lawyer, call [804-505-0633](tel:+18045050633) or complete the online contact form below.
+Your Workers’ Comp attorney can help you prepare, explain what to expect, and object to improper questions. Talk with a lawyer before your deposition. Your lawyer can guide you through this process when you reach out for a free consultation, leading you to the benefits you’re due. When you’re ready to work with a lawyer, call [804-505-0633](tel:+18045050633) or complete the online contact form below.

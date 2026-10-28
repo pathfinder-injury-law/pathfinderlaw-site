@@ -35,8 +35,8 @@ const CODE = 'https://law.lis.virginia.gov/vacode/';
 
 // Reviewed wording reused from the Workers' Comp page.
 const EMPLOYER_THRESHOLD =
-  'Virginia law requires every employer with three or more people, which usually means two or more employees plus the owner, to carry workers’ compensation insurance.';
-const NOTICE = 'The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury.';
+  'Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance.';
+const NOTICE = 'The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist.';
 const DEADLINE =
   'Your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply.';
 const COMPENSABLE =
@@ -54,7 +54,7 @@ export const cities: City[] = [
     path: '/richmond-workers-comp-lawyer/',
     name: 'Richmond',
     h1: 'Richmond Workers’ Comp Attorney',
-    title: "Richmond Workers' Compensation Attorney | Pathfinder Law",
+    title: "Richmond Workers' Compensation Attorney | Pathfinder Injury Law",
     description:
       "A Richmond workers’ comp lawyer can help you recover after a work accident with the benefits you're entitled to. Call Pathfinder Injury Law now.",
     intro: [
@@ -98,7 +98,7 @@ export const cities: City[] = [
             ],
           },
           `Determining [what type of benefits you may be eligible to receive](/employer-retaliation-and-your-workers-comp-rights/) or how to go about getting those benefits can be confusing.`,
-          'Since no workers’ compensation benefits are automatically given after an accident, an injured worker must file a claim with the Commission to receive them! It is important to call an injured workers’ law firm for a free consultation and case evaluation. To learn more about how to file a workers’ compensation claim in Richmond, Virginia, or anywhere in the state, contact Pathfinder Injury Law at {phone} or use our online form. We look forward to speaking with you.',
+          'If the insurance company denies your workers’ comp claim or doesn’t respond, you will need to file a claim for benefits. Claims for benefits must generally be filed within two years of an accident or else you can forever lose benefit entitlement. It is important to call an injured workers’ law firm for a free consultation and case evaluation. To learn more about how to file a workers’ compensation claim in Richmond, Virginia, or anywhere in the state, contact Pathfinder Injury Law at {phone} or use our online form. We look forward to speaking with you.',
         ],
       },
       {
@@ -121,14 +121,14 @@ export const cities: City[] = [
         h: 'Why Hire a Workers’ Compensation Law Firm?',
         body: [
           `A qualified and experienced [workers’ compensation law firm](${WC}) can help you build the right case to get the benefits you need. If a hearing is scheduled before the Virginia Workers’ Compensation Commission to challenge a denial by the workers’ compensation insurance company, you may want someone in your corner to help show that you are due benefits, for medical expenses and lost wages.`,
-          'Many times, proving entitlement for benefits can be difficult for certain injuries, such as back injuries or shoulder injuries, that require more medical intervention than physical therapy and an x-ray. Having the right lawyer is key – they can help you not only prove your injuries, but also assist as you seek the benefits you may be due.',
+          'Many times, proving entitlement for benefits can be difficult for certain injuries, such as back injuries or shoulder injuries, that require more medical intervention than physical therapy and an x-ray. A lawyer can help you prove your injuries, understand your options, and pursue benefits.',
           'Additionally, an experienced workers’ compensation lawyer will look at the entire case to determine the best practices moving forward. They will know the ins and outs of litigation to plot a strategy that will work for your specific case. You won’t be just a number.',
         ],
       },
       {
         h: 'Injured in a Workplace Accident? Find Out How We Can Help You!',
         body: [
-          'At Pathfinder Injury Law, you’re not just a number. Our legal team cares about you and puts the attorney-client relationship at the forefront. We value personalized attention and service.',
+          'At Pathfinder Injury Law, you’re not just a number. Our team cares about you and puts the attorney-client relationship at the forefront. We value personalized attention and service.',
           'Additionally, we listen to our clients’ needs and endeavor to obtain results to fit their individual situation.',
           'If you’re looking for a workers’ compensation attorney in Richmond or in central Virginia, we are happy to do an initial consultation over the phone or virtually. Just call us at {phone} or fill out our [contact form](/contact/) online. We look forward to speaking with you!',
         ],
@@ -173,7 +173,7 @@ export const cities: City[] = [
         body: [
           'Some basic steps will need to be taken after your injury in order to increase your chances of being awarded Workers’ Compensation benefits. For starters, notifying your supervisor or employer as soon as possible is advisable.',
           `${NOTICE} Failing to do so could affect your ability to recover benefits.`,
-          'Before sending off your official claim form, you’ll also need to make sure that the claims you’re making in the form are well substantiated by the evidence. Sadly, many Workers’ Compensation insurance companies will always put the company’s bottom line ahead of the needs of accident victims.',
+          'Before sending off your official claim form, you’ll also need to make sure that the claims you’re making in the form are well substantiated by the evidence. Sadly, many Workers’ Compensation insurance companies put the company’s bottom line ahead of the needs of accident victims.',
           'One way to ensure that the claims in your Workers’ Compensation application are backed up by solid evidence is to take photographs of the accident site and your injuries. If possible, make sure to take pictures of faulty or broken equipment at the site before you leave the premises so that evidence isn’t later covered up by your employer.',
           'Finally, consulting a trusted doctor and a Workers’ Comp lawyer in Powhatan County can help you get your injuries on file.',
         ],
@@ -193,7 +193,7 @@ export const cities: City[] = [
     path: '/hanover-county-workers-comp-lawyer/',
     name: 'Hanover County',
     h1: 'Hanover County Workers’ Compensation Attorney',
-    title: "Hanover County Workers' Compensation Lawyer | Pathfinder Law",
+    title: "Hanover County Workers' Compensation Lawyer | Pathfinder Injury Law",
     description:
       'Pathfinder Injury Law is a proven choice when you need a Hanover County workers’ comp lawyer. Call our trusted law office at 804-505-0633.',
     intro: [
@@ -226,7 +226,7 @@ export const cities: City[] = [
             list: [
               'Check to Make Sure You’re OK – Even injuries that appear minor can have an impact. If you’re bleeding, feel lightheaded, or have a broken bone, you may need immediate medical attention.',
               'Document Your Injuries and Surroundings – Take pictures of everything—it helps lend credibility to your claim.',
-              `[Notify Your Employer](${CODE}title65.2/chapter6/section65.2-600/) of Your Injuries – If you’ve been taken immediately to the hospital, odds are good that your supervisor is already aware. Regardless, the Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury, and failing to do so could affect your ability to receive benefits.`,
+              `[Notify Your Employer](${CODE}title65.2/chapter6/section65.2-600/) of Your Injuries – If you’ve been taken immediately to the hospital, odds are good that your supervisor is already aware. Regardless, the Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits.`,
             ],
           },
         ],
@@ -331,8 +331,8 @@ export const cities: City[] = [
           {
             list: [
               'Document Everything – Take pictures of the accident site before you leave the premises, and take pictures of your injuries.',
-              'Receive Medical Attention – Going to see a trusted doctor can help get your injuries on file—an important piece of evidence that you’ll need for your Workers’ Compensation claim. Keep in mind that you might have to see a doctor of your employer’s choosing. If the employer denies your claim, you get to choose your own doctors.',
-              'Inform Your Supervisor – The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury. Failing to do so could affect your ability to receive benefits.',
+              'Receive Medical Attention – Going to see a trusted doctor can help get your injuries on file—an important piece of evidence that you’ll need for your Workers’ Compensation claim. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.',
+              'Inform Your Supervisor – The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist. Failing to do so could affect your ability to receive benefits.',
               'File Your Claim – Your Workers’ Compensation [claim form](https://workcomp.virginia.gov/forms/claim-form) can be submitted electronically, faxed, or mailed.',
             ],
           },
@@ -354,7 +354,7 @@ export const cities: City[] = [
     path: '/fairfax-county-workers-comp-lawyer/',
     name: 'Fairfax County',
     h1: 'Fairfax County Workers’ Compensation Attorney',
-    title: 'Fairfax County Workers Comp Claims & Lawyer - Pathfinder Law',
+    title: 'Fairfax County Workers Comp Claims & Lawyer - Pathfinder Injury Law',
     description:
       "Pathfinder Injury Law is your trusted Fairfax County workers’ comp lawyer. Let's talk about your options after a work accident.",
     intro: [
@@ -375,7 +375,7 @@ export const cities: City[] = [
         h: 'Deadlines and Appeals for Your Fairfax County Workers’ Comp Decision',
         body: [
           `Following your injury, it’s important to make your supervisor aware of your accident as soon as possible. ${NOTICE} Failing to report your injuries within that period could affect your ability to receive benefits.`,
-          `Similarly, if [your claim has been rejected](${DENIALS}), ${DEADLINE.charAt(0).toLowerCase()}${DEADLINE.slice(1)} If you’re worried about the timeline, a Workers’ Compensation lawyer can help prepare your claim.`,
+          `${DEADLINE} If you’re worried about the timeline, a Workers’ Compensation lawyer can help prepare your claim.`,
         ],
       },
       {
@@ -413,7 +413,7 @@ export const cities: City[] = [
               'Injuries related to the operation of workplace vehicles, including traumatic brain injury',
             ],
           },
-          'Sometimes, Loudoun County workplace injuries can even result in the death of your loved one. For this reason, death benefits are just one of the range of benefits that could potentially be available to you as the family member or dependent of a deceased worker. In other cases, benefits such as medical compensation, short- and long-term disability, or even vocational rehabilitation could be awarded. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first.',
+          'Sometimes, Loudoun County workplace injuries can even result in the death of your loved one. For this reason, death benefits are just one of the range of benefits that could potentially be available to you as the family member or dependent of a deceased worker. In other cases, benefits such as medical payments, disability benefits, or even vocational rehabilitation could be awarded. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first.',
         ],
       },
       {
@@ -457,7 +457,7 @@ export const cities: City[] = [
       {
         h: 'What Are the Common Types of Workplace Accidents?',
         body: [
-          `Workplace injuries are commonplace—that’s why [Virginia law](${WC}) requires most employers to carry Workers’ Compensation insurance, which usually means any employer with three or more people (two or more employees plus the owner). And although many people associate dangerous jobs with construction crews or other occupations involving the use of heavy machinery, we know from experience that a workplace accident can happen anywhere, anytime.`,
+          `Workplace injuries are commonplace—that’s why [Virginia law](${WC}) requires most employers to carry Workers’ Compensation insurance, which includes virtually all employers with three or more employees regularly in service in Virginia. And although many people associate dangerous jobs with construction crews or other occupations involving the use of heavy machinery, we know from experience that a workplace accident can happen anywhere, anytime.`,
           'Some of the common types of Harrisonburg workplace accident that occur include:',
           {
             list: [
@@ -494,7 +494,7 @@ export const cities: City[] = [
     path: '/lynchburg-workers-comp-lawyer/',
     name: 'Lynchburg',
     h1: 'Lynchburg Workers’ Compensation Attorney',
-    title: "Lynchburg Workers' Comp Claims & Attorney | Pathfinder Law",
+    title: "Lynchburg Workers' Comp Claims & Attorney | Pathfinder Injury Law",
     description:
       "Need a Lynchburg workers' comp lawyer? Trust the team at Pathfinder Injury Law with your Virginia work injury case.",
     intro: [
@@ -506,7 +506,7 @@ export const cities: City[] = [
         h: 'Investigating Your Lynchburg Workers’ Comp Claim',
         body: [
           'When you’ve been injured on the job, you may not know where to turn next. How do you get compensated for your medical bills related to your accident? What do you do if temporary or permanent disability keeps you out of work?',
-          `In Virginia, [employers are required to carry Workers’ Compensation insurance](https://workcomp.virginia.gov/content/injured-workers) if they have three or more people, which usually means two or more employees plus the owner. Workers don’t need to prove that their employer or anyone else was at fault in order to receive compensation. In theory, this should make these benefits accessible to all who need them. The reality couldn’t be more different, however.`,
+          `In Virginia, [employers are required to carry Workers’ Compensation insurance](https://workcomp.virginia.gov/content/injured-workers) if they have three or more employees regularly in service, although some exceptions apply. Workers don’t need to prove that their employer or anyone else was at fault in order to receive compensation. In theory, this should make these benefits accessible to all who need them. The reality couldn’t be more different, however.`,
           'Insurance companies, as with any other business, look to protect themselves and their own profits more than any other interest. The sad result of this is that many injured workers have their claims denied or delayed by insurers that should be taking care of them. That’s why, if you’re going to seek the benefits you may be due for your injuries, you need to take swift action.',
         ],
       },
@@ -540,7 +540,7 @@ export const cities: City[] = [
     path: '/suffolk-workers-comp-lawyer/',
     name: 'Suffolk',
     h1: 'Suffolk Workers’ Compensation Attorney',
-    title: "Suffolk Workers' Comp Claims & Lawyer - Pathfinder Law",
+    title: "Suffolk Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
     description:
       'An efficient Suffolk work comp lawyer can help you prepare a successful claim after a work injury. Call Pathfinder Injury Law.',
     intro: [
@@ -581,7 +581,7 @@ export const cities: City[] = [
     path: '/portsmouth-workers-comp-lawyer/',
     name: 'Portsmouth',
     h1: 'Portsmouth Workers’ Compensation Attorney',
-    title: "Portsmouth Workers' Comp Claims & Lawyer - Pathfinder Law",
+    title: "Portsmouth Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
     description:
       "Get the benefits you're entitled to after a Portsmouth work accident with the help of a workers’ comp lawyer. Call Pathfinder today.",
     intro: [
@@ -781,7 +781,7 @@ export const cities: City[] = [
         h: 'The Workers’ Comp Claim Process',
         body: [
           'After a work accident, your first step is to seek medical care. Your injuries may worsen if not treated right away. You could face permanent damage or death without medical care. You’ll also need to notify your Alexandria employer that you’re hurt and need Workers’ Comp benefits.',
-          'Once you’ve gotten that care and notified your employer, you just need to wait for the insurance company to review your claim. If you’re approved, your Workers’ Comp benefits should be paid shortly after, so you can focus on your health.',
+          'If the insurance company denies your workers’ comp claim or doesn’t respond, you will need to file a claim for benefits. Claims for benefits must generally be filed within two years of an accident or else you can forever lose benefit entitlement. If you’re approved, your Workers’ Comp benefits should be paid shortly after, so you can focus on your health.',
           'If you’re denied, you may still be eligible for benefits. Your Workers’ Comp lawyer can review the reason for your denial, gather evidence for your claim, and represent you in your hearing to dispute the denial before the Virginia Workers’ Compensation Commission.',
         ],
       },
@@ -799,7 +799,7 @@ export const cities: City[] = [
     path: '/chesapeake-workers-comp-lawyer/',
     name: 'Chesapeake',
     h1: 'Chesapeake Workers’ Compensation Attorney',
-    title: "Chesapeake Workers' Comp Claims & Lawyer - Pathfinder Law",
+    title: "Chesapeake Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
     description:
       'Need a dedicated Chesapeake workers’ comp lawyer? Contact Pathfinder Injury Law to seek the benefits you may be due.',
     intro: [
@@ -885,7 +885,7 @@ export const cities: City[] = [
     path: '/virginia-beach-workers-comp-lawyer/',
     name: 'Virginia Beach',
     h1: 'Virginia Beach Workers’ Compensation Lawyer',
-    title: "Virginia Beach Workers' Comp Attorney | Pathfinder Law",
+    title: "Virginia Beach Workers' Comp Attorney | Pathfinder Injury Law",
     description:
       'Are you eligible for workers\' compensation? Find out with the help of your Virginia Beach workers’ comp lawyer at Pathfinder Injury Law.',
     intro: [

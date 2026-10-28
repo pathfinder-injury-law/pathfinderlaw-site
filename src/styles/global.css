@@ -899,6 +899,11 @@ mark {
   line-height: 1.55;
   font-weight: 500;
 }
+.review .review-note {
+  font-size: 0.95rem;
+  margin: 0 auto 1.5rem;
+  max-width: 38rem;
+}
 .review cite {
   font-style: normal;
   font-weight: 700;
@@ -1109,6 +1114,19 @@ mark {
 }
 .footer-logo img {
   width: 100%;
+}
+.legal-note {
+  margin: 2.75rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  max-width: 60rem;
+}
+.legal-note + .copyright {
+  margin-top: 1.25rem;
+  border-top: 0;
+  padding-top: 0;
 }
 .copyright {
   margin: 2.75rem 0 0;

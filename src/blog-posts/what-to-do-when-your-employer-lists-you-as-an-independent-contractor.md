@@ -7,7 +7,7 @@ updated: 2022-09-21T19:35:17Z
 tags: ["eligibility"]
 ---
 
-If you are being listed as an independent contractor for the first time or just started working with a new employer, you might be confused by this term and what it means for your job and taxes. Independent contractors do not have the same status as regular employees and are not covered under most federal employment statuses.
+If you are being listed as an independent contractor for the first time or just started working with a new employer, you might be confused by this term and what it means for your job and taxes. Independent contractors do not have the same status and protections as regular employees in many situations.
 
 However, an employer can’t just call you an independent contractor to avoid certain requirements at the federal or state levels. If you are performing duties as a regular employee, then you need to be paid and referred to as a regular employee. If you’re unsure whether your position should be contracted out or not, contact a [lawyer](/virginia-workers-comp-lawyer/) for help.
 
@@ -28,7 +28,7 @@ Usually, people know if they are independent contractors. If you have never hear
 
 The first, simple step is to talk to your employer. Ask why you have been listed as an independent contractor and what duties you perform that meet the definition of an independent contractor.
 
-If you believe that you have been wrongly classified, tell your employer. If they still insist that you are not a regular employee, you might need to start thinking about taking legal action to get the fair wage and benefits you deserve.
+If you believe that you have been wrongly classified, tell your employer. If they still insist that you are not a regular employee, you might need to get a lawyer involved. Pathfinder Injury Law handles Workers’ Compensation claims, and we can speak with you about your options.
 
 ## Partner with a Lawyer
 

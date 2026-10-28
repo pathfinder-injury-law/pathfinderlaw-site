@@ -1,7 +1,7 @@
 ---
 title: "Here’s What You Can Expect After Hurting Your Knee At Work"
 metaTitle: "Average Compensation Payout for Knee Injury in Virginia"
-description: "Read our guide on the average compensation for a knee injury workers' compensation claim in Virginia. Contact us online for additional information!"
+description: "Read our guide to what can affect a knee injury workers' compensation claim in Virginia. Contact us online for additional information!"
 date: 2022-10-04T19:15:50Z
 updated: 2022-10-11T10:46:25Z
 tags: ["body-parts","settlement"]

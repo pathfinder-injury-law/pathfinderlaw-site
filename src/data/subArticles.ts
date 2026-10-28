@@ -36,7 +36,7 @@ export const ARTICLE_BASE = '/virginia-workers-comp-lawyer/';
 
 // ---- Reviewed wording, copied exactly from the Workers' Comp page ----
 const NOTICE =
-  'The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury.';
+  'The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist.';
 const FILING =
   'A claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply.';
 const DISPUTE =
@@ -51,7 +51,7 @@ const DEATH =
   'Workers’ comp can provide death benefits to the family of a worker who loses their life because of a workplace injury. These benefits can pay for a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.';
 const NO_FAULT = 'Workers’ compensation is a form of no-fault insurance coverage.';
 const FAULT =
-  'Fault generally doesn’t matter in Virginia Workers’ Compensation claims. Even if your own mistake or negligence caused your work injury, you can usually still recover benefits. However, breaking safety rules or breaking statutes can bar recovery.';
+  'Fault generally doesn’t matter in Virginia Workers’ Compensation claims. Even if your own mistake or negligence caused your work injury, you can usually still recover benefits. However, a willful failure to use a safety appliance or perform a statutory duty, or a willful breach of a known, reasonable rule of the employer, can bar recovery. The employer has the burden of proof.';
 
 export const subArticles: SubArticle[] = [
   {
@@ -111,7 +111,7 @@ export const subArticles: SubArticle[] = [
         blocks: [
           'Before you take your claim to a hearing, your first step is determining why your [claim was denied](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601.2/). Your denial letter should include a reason for the denial, but you may need to turn to a lawyer to get answers about what it means or what your next steps should be.',
           'Typically, a denial depends on the details of your accident. For example, you may not have had many witnesses who saw the accident. The insurance company may use this lack of evidence against you. Even if others did see your accident, you may be denied in other cases if you didn’t give notice on time. ' +
-            NOTICE.replace('within thirty days of the injury', '[within thirty days of the injury](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)'),
+            NOTICE.replace('within thirty days of the accident', '[within thirty days of the accident](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)'),
           'While individual Workers’ Comp cases vary, your lawyer can be a constant source of aid and guidance. Your lawyer can gather evidence supporting your claim and seek compensation on your behalf.',
         ],
       },
@@ -151,7 +151,7 @@ export const subArticles: SubArticle[] = [
         h2: 'Workers’ Comp and Your SSDI Benefits',
         blocks: [
           'Workers’ Comp benefits are offered to support injured workers when their injuries leave them unable to work. SSDI benefits are meant to support those who have suffered a severe, disabling injury, regardless of whether it happened at work. So how do they work together?',
-          'The good news is, you may be eligible for both types of benefits. These benefits are offered through different systems. While these benefits may impact one another, together they can help with the financial strain of an injury. But receiving both can cause problems, so talk to a lawyer first.',
+          'Some people may receive both types of benefits, but caution is advised because one can affect the other. Talk with a lawyer about your situation. These benefits are offered through different systems. While these benefits may impact one another, together they can help with the financial strain of an injury.',
         ],
       },
       {
@@ -186,7 +186,7 @@ export const subArticles: SubArticle[] = [
         blocks: [
           'When an employer denies your Workers’ Comp claim, you need to know why you were denied before you get started. Knowing why you were denied can help your lawyer find the right approach to your claim.',
           'For example, your employer may claim you didn’t give notice on time. ' +
-            NOTICE.replace('within thirty days of the injury', '[within thirty days of the injury](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)') +
+            NOTICE.replace('within thirty days of the accident', '[within thirty days of the accident](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)') +
             ' If you don’t act on time, you may be denied your Workers’ Comp benefits. In these cases, your lawyer may focus on showing you reported the accident to your employer on time. Your lawyer can review the specific details of your claim with you.',
         ],
       },
@@ -290,13 +290,13 @@ export const subArticles: SubArticle[] = [
     crumb: 'How to Prepare for an IME',
     intro: [
       'After a work accident, you may be expected to take an independent medical exam, or IME. These appointments help the insurance company gauge your injuries and how seriously you suffered. But that means they may be trying to trip you up, tricking you into showing that you’re not really that injured.',
-      'Because of this, you need to know how to prepare for an IME in Virginia. Luckily, our dedicated team at Pathfinder Injury Law has some tips to help you get ready and may be able to help as you go through the Workers’ Comp process.',
+      'Because of this, you need to know how to prepare for an IME in Virginia. Luckily, we at Pathfinder Injury Law have some tips to help you get ready.',
     ],
     sections: [
       {
         h2: 'Bring Someone with You',
         blocks: [
-          'When you schedule an appointment for your IME, you may want to bring someone with you. These exams are supposed to give insurers a clear medical opinion about your health, and it can impact your insurance. It’s easy to get frustrated or confused without a little help.',
+          'You cannot bring friends or family to your IME appointment, but you have the right to have your own doctor present at the exam, at your own expense. These exams are supposed to give insurers a clear medical opinion about your health, and it can impact your insurance. It’s easy to get frustrated or confused without a little help.',
           'That’s where your companion can help. They can help you follow the questions, avoid saying the wrong thing, and keep up with anything you need to know about your injuries.',
         ],
       },
@@ -355,7 +355,7 @@ export const subArticles: SubArticle[] = [
     closing: {
       h2: 'Get Help with Your Workers’ Comp IME in Virginia',
       blocks: [
-        'After a work injury, it can be tough to show you were actually hurt and need Workers’ Comp benefits. Even the doctors may be focused on showing you don’t need Virginia Workers’ Comp benefits.',
+        'After a work injury, it can be tough to show you were actually hurt and need Workers’ Comp benefits.',
         '[Pathfinder Injury Law](/) is focused on your recovery and on helping you seek the Virginia Workers’ Comp coverage you need. If you’re ready to learn more about what happens after a Workers’ Comp IME in Virginia, reach out for a free consultation. Call {phone} or fill out the {contact} below.',
       ],
     },
@@ -371,6 +371,7 @@ export const subArticles: SubArticle[] = [
     intro: [
       'When you’ve suffered a work injury, you may need financial aid that covers your losses. The problem is, you don’t know how to calculate a Virginia Workers’ Comp settlement. You may have no experience, and your injuries may be sapping any time and energy you had for learning about Workers’ Comp law.',
       'That’s where Pathfinder Injury Law can help. If you’re hurt because of a work accident, reach out to a [dedicated lawyer](/virginia-work-injury-lawyer/) from our firm for help when calculating your Virginia Workers’ Comp settlement.',
+      'A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.',
     ],
     sections: [
       {
@@ -413,7 +414,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'Medical Bills',
         blocks: [
-          'After a serious work injury, you shouldn’t have to pay for your medical care yourself. You may need to visit a doctor your employer chooses. If the employer denies your claim, you get to choose your own doctors. ' + MEDICAL,
+          'After a serious work injury, you shouldn’t have to pay for your medical care yourself. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions. ' + MEDICAL,
           'These benefits should cover your travel to medical appointments, too. For example, you may have to travel out of your town to see a specialist about your injury, and workers’ comp can reimburse mileage for travel to and from medical appointments.',
         ],
       },
@@ -513,14 +514,15 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'average-workers-comp-settlement-in-virginia',
-    title: "Average Virginia Workers' Compensation Settlement Amount",
+    title: "What Affects Workers' Comp Settlement Value in Virginia",
     description:
       "Your Virginia workers’ comp settlement depends on your injuries. Visit the Pathfinder Injury Law website or call us at 804-505-0633 today.",
-    h1: 'Average Workers’ Comp Settlement in Virginia',
+    h1: 'What Affects Workers’ Comp Settlement Value in Virginia',
     crumb: 'Average Settlement',
     intro: [
-      'When you’re hurt in a work accident, you need funds that meet your needs for your recovery. Those funds should come from your Workers’ Comp settlement, but what should you realistically expect?',
+      'When you’re hurt in a work accident, you need funds that meet your needs for your recovery. A settlement is optional, voluntary, and many factors affect its value.',
       'At Pathfinder Injury Law, we can help you understand what you may be due after a work accident. If the average Workers’ Comp settlement in Virginia isn’t enough for you to recover, we can talk through what your situation may need.',
+      'A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.',
     ],
     sections: [
       {
@@ -541,7 +543,7 @@ export const subArticles: SubArticle[] = [
     closing: {
       h2: 'Talk to a Lawyer About Your Workers’ Comp Settlement in Virginia',
       blocks: [
-        'A serious work accident can leave you unable to work as you once did and in need of funds for yourself and your family. Unfortunately, you may be worried that you won’t even receive the average Workers’ Comp settlement in Virginia, let alone the full amount you need.',
+        'A serious work accident can leave you unable to work as you once did and in need of funds for yourself and your family. You may be worried you won’t receive the full amount you need.',
         '[Pathfinder Injury Law](/) can help. If you’re struggling with a Workers’ Comp claim, your lawyer can talk with you about the compensation you may be due for your losses. Take advantage of our free consultations by calling {phone} or by completing the online contact form below.',
       ],
     },
@@ -593,13 +595,14 @@ export const subArticles: SubArticle[] = [
     intro: [
       'After a serious injury at work, it can be tough to wait for your Workers’ Comp benefits to arrive. You may be worried about how long your Virginia Workers’ Comp settlement will take, especially as your medical bills and other debts pile up.',
       'Here’s the good news—a lawyer from Pathfinder Injury Law may be able to help you understand the process. If you’re struggling to overcome your injuries following a work accident, take a look at how you can get your benefits as soon as possible and how a [Workers’ Comp lawyer in Virginia](/virginia-workers-comp-lawyer/) can help.',
+      'A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.',
     ],
     sections: [
       {
         h2: 'Filing Your Claim Quickly',
         blocks: [
           'After a work accident, you need to report your injuries to your employer and request your Workers’ Comp benefits as soon as possible. ' + NOTICE + ' ' + FILING,
-          'Even if you feel fine, you may also need to head to the hospital as soon as possible. Delayed injuries may not be obvious right away, and it can hurt your claim if the insurance company thinks you weren’t injured in the accident. Getting looked at as soon as possible helps erase those doubts.',
+          'If you were hurt at work, see a doctor promptly, even if the injury seems minor. Delayed injuries may not be obvious right away, and it can hurt your claim if the insurance company thinks you weren’t injured in the accident. Getting looked at as soon as possible helps erase those doubts.',
         ],
       },
       {

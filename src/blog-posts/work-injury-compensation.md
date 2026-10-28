@@ -1,7 +1,7 @@
 ---
 title: "How Much You Should Expect For Your Work Injury Compensation"
 metaTitle: "How Much Compensation Do I Receive For A Work Injury?"
-description: "Have you suffered a workplace injury and expect to receive compensation? Read here on how much you should expect to receive for your injury."
+description: "Have you suffered a workplace injury and expect to receive compensation? Read here about what can affect the value of a workers’ comp claim."
 date: 2022-11-22T23:16:14Z
 updated: 2022-11-28T18:25:07Z
 tags: ["settlement","benefits"]
@@ -50,7 +50,7 @@ While knowing how much you can receive in compensation due to a surgery from a w
 
 However, most importantly, it all depends on whether the accident is legally compensable in the first place. A person could be left completely paralyzed by an accident, but they would get $0 for it if the accident does not meet Virginia’s legal standard for workers’ compensation claim compensability.
 
-Meeting these legal standards in Virginia all begins with the requirement that the accident must “arise out of and during the course of the employment” to be considered compensable, according to the [Code of Virginia](https://law.lis.virginia.gov/vacode/).
+Meeting these legal standards in Virginia all begins with the requirement that the accident must be “arising out of and in the course and scope of the employment” to be considered compensable, according to the [Code of Virginia](https://law.lis.virginia.gov/vacode/).
 
 As for how much you can receive, while you can conduct your own research online, understand any mention of an average workers’ comp settlement amount or range is not considered a standard. Every claim is different and, as such, must be treated differently. Also, keep in mind that any advice on workers’ comp amounts reported to you by family members and friends is not reliable. It does not matter if your cousin receives a million dollars for a toe injury in another state. Your workers’ comp case will be unique based on the specific circumstances and the fact that your accident took place in Virginia.
 
@@ -63,6 +63,8 @@ The Virginia Workers’ Compensation Commission website has a calculator to figu
 Instead, several factors will need to be included in a calculation to determine the type of lump sum payout that may be available to you. It is essential to know, however, that a lump-sum settlement with medical benefits included is rare. You are unlikely to receive a chunk of money plus an agreement to pay for all your past and future medical expenses.
 
 ## What Are the Different Types of Settlements for Workers’ Compensation?
+
+A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.
 
 When it comes to workers’ compensation insurance, there are [different types of settlements](/workers-comp-settlement-in-virginia/) potentially involved. It helps to understand the differences ahead of time, so you will not be left with questions or concerns that you got taken advantage of by the insurance company or your employer. Below are the different types you may be offered for your workers’ compensation claim.
 
@@ -78,14 +80,14 @@ This settlement of your entire claim then transfers the responsibility of paying
 
 Full and final settlements with Workers’ Compensation Medicare Set Aside (WCMSA) involves a specific arrangement facilitated and funded by your employer or its workers’ compensation insurance company.
 
-This settlement type applies only to certain workers’ compensation claimants and sets aside a separate account that you must use to pay medical expenses that relate to the work injury. If the set aside account is depleted, Medicare will usually step in and pay for the remaining medical care you require, as long as the set aside funds were adequate and were used correctly.
+This settlement type applies only to certain workers’ compensation claimants and sets aside a separate account that you must use to pay medical expenses that relate to the work injury. If the set-aside account is depleted, Medicare will generally step in and pay for the remaining medical care you require, as long as the set-aside funds were adequate and you have documented they were used correctly.
 
 Reasons for going with this settlement type can include:
 
 - You are already eligible for coverage under Medicare due to your age or a disability.
 - You have a pending claim for Social Security Disability benefits with the Social Security Administration.
 - You receive Social Security Disability Insurance benefits already.
-- You have suffered a catastrophic injury (e.g., brain injury, spine, or severe back injury) and will probably need to file for Social Security Disability at some point in the future.
+- You have suffered a catastrophic injury (e.g., brain injury, severe spine injury) and may need to file for Social Security Disability in the future.
 
 ## Why Should You Hire a Virginia Workers’ Compensation Attorney?
 
@@ -93,9 +95,9 @@ Suffering an injury at work interrupts not only your career but also your day-to
 
 A workers’ comp lawyer will help you through the workers’ compensation process by talking with the insurance company and adjuster on your behalf. They will also represent you before the Virginia Workers’ Compensation Commission and ensure you are adequately represented there as well.
 
-By having experience with workers’ compensation claims and understanding how to communicate with all those involved, you may have a higher chance of receiving workers’ comp benefits and a fair settlement so you can rest easier at night.
+Having an experienced advocate in your corner can help even the playing field against the insurance company.
 
-Pathfinder Injury Law can also help with mediation, where we do a workers’ comp settlement conference with the insurance company and a judge to try and work out the case for a lump sum settlement. If this fails or settlement is not an option, our law firm may need to take your case to litigation.
+Pathfinder Injury Law can also help at mediation. Mediations are is settlement conferences with the insurance company and a judge (called a deputy commissioner) for the purpose of trying to reach a lump sum settlement. If this fails or settlement is not an option, our law firm may need to take your case to litigation.
 
 While you cannot sue your employer in Virginia, there are legal actions we can take on your behalf to potentially gain compensation. You generally should not discuss settlement value with your employer and its insurance carrier without the advice and guidance of a seasoned workers’ comp attorney.
 
