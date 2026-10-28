@@ -1,0 +1,19 @@
+{
+  "_about": "Known, approved differences between the live site and the new build. An entry only matches when the address, the field, the live value and the new value are all exactly as written, so a changed wording fails again. Fields: title, description, h1, canonical, robots, schema.",
+  "approved": [
+    {
+      "address": "/virginia-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is your trusted Virginia workers' comp lawyer. Call 804-505-0633 for a 100% free consultation with our legal experts.",
+      "new": "Pathfinder Injury Law is your trusted Virginia workers' comp lawyer. Call 804-505-0633 for a 100% free consultation with our team.",
+      "reason": "Migration plan Section VIII, fix 6: 'our legal experts' became 'our team'."
+    },
+    {
+      "address": "/virginia-construction-accident-lawyer/",
+      "field": "description",
+      "live": "Hurt in a construction accident? Speak to Virginia workers' comp lawyers at Pathfinder Injury Law today. Call 804-505-0633 to get started.",
+      "new": "Hurt in a construction accident? Speak to a Virginia workers' comp lawyer at Pathfinder Injury Law today. Call 804-505-0633 to get started.",
+      "reason": "Plural 'lawyers' changed to singular, the approved type of change listed for this build."
+    }
+  ]
+}
