@@ -128,8 +128,8 @@ export const cities: City[] = [
       {
         h: 'Injured in a Workplace Accident? Find Out How We Can Help You!',
         body: [
-          'At Pathfinder Injury Law, you’re not just a number. Our legal team cares about you and puts the attorney-client relationship at the forefront. We value personalized attention and service. Owner Bryn Swartz has even been voted one of Virginia’s Super Lawyers Rising Stars for two years running as an acknowledgment for his dedicated service to clients.',
-          'Additionally, we listen to our clients’ needs and endeavor to obtain results to fit their individual situation. Pathfinder Injury Law has recovered millions of dollars in benefits and settlement for injured workers. But don’t take our word for it! Please look at our [testimonials from previous clients](/reviews/).',
+          'At Pathfinder Injury Law, you’re not just a number. Our legal team cares about you and puts the attorney-client relationship at the forefront. We value personalized attention and service.',
+          'Additionally, we listen to our clients’ needs and endeavor to obtain results to fit their individual situation.',
           'If you’re looking for a workers’ compensation attorney in Richmond or in central Virginia, we are happy to do an initial consultation over the phone or virtually. Just call us at {phone} or fill out our [contact form](/contact/) online. We look forward to speaking with you!',
         ],
       },
@@ -302,7 +302,7 @@ export const cities: City[] = [
     h1: 'Prince William County Workers’ Comp Lawyer',
     title: 'Prince William Workers Compensation Attorney | Work Claims',
     description:
-      'Win your case with a strategic Prince William County workers’ comp lawyer. Call Pathfinder Injury Law at 804-505-0633 to get started today.',
+      'Pathfinder Injury Law represents injured workers in Prince William County. Call 804-505-0633 to talk with a workers’ comp lawyer and get started today.',
     intro: [
       'When you’re injured at work, you may not be aware of the full range of benefits available. When in doubt, a Workers’ Comp lawyer in Prince William County can help you out.',
       'From documenting your injuries to filing your claim, these are the steps you’ll want to take after a workplace accident. And if you need some additional help, a Prince William County Workers’ Comp lawyer is standing by.',
@@ -482,7 +482,7 @@ export const cities: City[] = [
       {
         h: 'Contact a Workers’ Comp Lawyer in Harrisonburg Today',
         body: [
-          'At Pathfinder Injury Law, we’re motivated by a genuine desire to defend the rights of injured Harrisonburg workers. We’ve helped clients overturn their Workers’ Compensation decisions, and we might be able to do the same for you.',
+          'At Pathfinder Injury Law, we’re motivated by a genuine desire to defend the rights of injured Harrisonburg workers. We help clients take denied Workers’ Compensation claims to a hearing before the Virginia Workers’ Compensation Commission, and we can talk with you about whether that is an option in your case.',
           'Call {phone} or [fill out the below form](/contact/) to set up your free case consult with a Harrisonburg Workers’ Comp lawyer from our firm.',
         ],
       },
