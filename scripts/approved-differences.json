@@ -14,6 +14,13 @@
       "live": "Hurt in a construction accident? Speak to Virginia workers' comp lawyers at Pathfinder Injury Law today. Call 804-505-0633 to get started.",
       "new": "Hurt in a construction accident? Speak to a Virginia workers' comp lawyer at Pathfinder Injury Law today. Call 804-505-0633 to get started.",
       "reason": "Plural 'lawyers' changed to singular, the approved type of change listed for this build."
+    },
+    {
+      "address": "/reviews/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is here to help win your Virginia workers' compensation case. Check out recent client testimonials or give us a call.",
+      "new": "Pathfinder Injury Law is here to help with your Virginia workers' compensation case. Check out recent client testimonials or give us a call.",
+      "reason": "Owner decision Oct 28: reword outcome-promise ('win') language to factual wording."
     }
   ]
 }

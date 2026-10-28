@@ -259,7 +259,7 @@ export const cities: City[] = [
         body: [
           `Workers’ Compensation benefits help injured workers get support following an accident at their place of employment. Due to the relative frequency of these types of accidents, ${EMPLOYER_THRESHOLD}`,
           `[Workers’ Compensation benefits](${CODE}title65.2/chapter5/) aren’t dependent on proving fault in order to be awarded. ${COMPENSABLE.charAt(0).toUpperCase()}${COMPENSABLE.slice(1)}.`,
-          'Unfortunately, many Chesterfield County Workers’ Compensation insurance companies will still seek to avoid paying injured workers fair compensation. Insurance companies are businesses like any other. They are motivated by a desire to protect the company’s bottom line. In order to win the benefits you need, then, you’ll have to clearly establish the facts of your case.',
+          'Unfortunately, many Chesterfield County Workers’ Compensation insurance companies will still seek to avoid paying injured workers fair compensation. Insurance companies are businesses like any other. They are motivated by a desire to protect the company’s bottom line. In order to receive the benefits you need, then, you’ll have to clearly establish the facts of your case.',
           'Taking pictures of any injuries and the site of the work accident in question can help build your case. Going to a doctor to officially get your injuries on file can also strengthen your argument. Finally, ensuring that all forms have been properly filed by the respective deadlines will also be vital. If you’re unsure how to proceed, a workers comp lawyer in Chesterfield County could help.',
         ],
       },
