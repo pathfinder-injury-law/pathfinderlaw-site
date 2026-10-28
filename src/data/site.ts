@@ -59,4 +59,5 @@ export const nav: NavItem[] = [
   { label: 'Reviews', href: '/reviews/' },
   { label: 'Results', href: '/results/' },
   { label: 'Contact', href: '/contact/' },
+  { label: 'Client Portal', href: '/client-portal/' },
 ];

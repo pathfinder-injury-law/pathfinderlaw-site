@@ -305,7 +305,8 @@ body:not(.has-overlay) .site-header .nav-toggle {
   display: none;
 }
 
-@media (min-width: 64rem) {
+/* Full menu from 72rem up; below that the Menu button is used so nine items never wrap. */
+@media (min-width: 72rem) {
   .nav-mobile {
     display: none;
   }
@@ -336,6 +337,7 @@ body:not(.has-overlay) .site-header .nav-toggle {
     align-items: center;
   }
   .desktop-nav a {
+    white-space: nowrap;
     text-decoration: none;
     color: var(--white);
     font-weight: 600;
@@ -818,7 +820,7 @@ mark {
 }
 @media (min-width: 62rem) {
   .results-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 .result {
@@ -836,7 +838,7 @@ mark {
 .result .amount {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: 2.4rem;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
   line-height: 1.05;
   margin: 0;
   font-variant-numeric: tabular-nums;
