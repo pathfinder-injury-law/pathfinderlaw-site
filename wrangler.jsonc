@@ -6,9 +6,36 @@
   // extra *.workers.dev address and per-version preview addresses.
   "workers_dev": false,
   "preview_urls": false,
-  // Serve the built site as static files. No server code runs.
+  // Worker code handles only /api/* (the contact form) and the scheduled jobs.
+  // See docs/form-pipeline.md.
+  "main": "src/worker/index.ts",
+  // Serve the built site as static files. Only /api/* runs Worker code, so
+  // every page stays a free, fast static file.
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  // Form log (production account "Pathfinder Injury Law"). IDs are not secrets.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pathfinder-forms",
+      "database_id": "9f7c86d0-7826-43cb-9409-a73f648ebecd",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Screening rules live here (key "rules"), not in the public repository.
+  "kv_namespaces": [
+    { "binding": "SETTINGS", "id": "9cfc276b5526434ea88e48547b257fa0" }
+  ],
+  // Cron runs in UTC. 12:15 and 12:30 UTC are 7:15 and 7:30 a.m. Eastern
+  // standard time (winter). In daylight time (from March 14, 2027) change
+  // them to 11:15 and 11:30 to stay at the same clock time.
+  "triggers": {
+    "crons": ["15 12 * * *", "30 12 * * *"]
   }
+  // Secrets, added in the dashboard and never written here:
+  //   GOOGLE_SA_KEY, TURNSTILE_SECRET, HEARTBEAT_URL, ALERT_URL
 }

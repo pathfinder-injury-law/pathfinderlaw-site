@@ -1020,6 +1020,13 @@ mark {
   height: 1px;
   overflow: hidden;
 }
+.ts-widget {
+  max-width: 100%;
+  overflow: hidden;
+}
+.ts-widget:not(:empty) {
+  margin: 0 0 1rem;
+}
 .form-card .btn {
   width: 100%;
   padding-block: 1.1rem;

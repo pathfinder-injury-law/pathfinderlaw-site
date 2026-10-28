@@ -1,0 +1,30 @@
+{
+  "agencyDomains": [
+    "example-agency.com"
+  ],
+  "agencyPhrases": [
+    "virtual assistant",
+    "seo",
+    "ai employee",
+    "lead generation",
+    "guaranteed leads",
+    "grow your firm",
+    "grow your practice",
+    "marketing services",
+    "backlinks",
+    "web design services",
+    "increase your traffic",
+    "outsourcing"
+  ],
+  "caseWords": [
+    "injur", "hurt", "accident", "job", "work", "employ", "boss", "supervisor",
+    "doctor", "physician", "hospital", "surgery", "surgeon", "medical", "pain",
+    "fell", "fall", "broke", "fracture", "back", "claim", "comp", "denied",
+    "benefit", "wage", "disab", "commission", "insurance", "adjuster", "light duty"
+  ],
+  "limits": {
+    "screenAtLinks": 3,
+    "repeatWindowHours": 24,
+    "repeatMax": 3
+  }
+}
