@@ -1,0 +1,272 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { site } from '../../data/site';
+
+// Wording is carried over from the current live page. Changes from the live page:
+//  - "Who's liable" section rewritten to match the owner's reviewed fault wording: benefits do not
+//    depend on fault, breaking safety rules or statutes can bar recovery, and a negligent third
+//    party may be sued. The live page said the employer "is responsible for the actions of their
+//    employees", which is not how the fault rule works. Needs Bryn's review.
+//  - "injuries, pain, and wages" in the intro became "injuries and lost wages" (pain and suffering
+//    is not payable under workers' comp, per the reviewed Workers' Comp page).
+//  - Death benefits use the reviewed Workers' Comp page wording (no dollar figure, no remarriage rule).
+//  - FAQ answers copied from the Factory page on the live site said "factory accident"; corrected to
+//    "work accident". The "hearing within thirty days" promise is replaced with a plain statement
+//    and the employer threshold now reads "three or more people". Needs Bryn's review.
+//  - Links to non-Commission medical and Social Security pages removed (citation rule).
+//  - Photo from the old page left out (source unknown).
+const title = 'Virginia Work-Related Car Accident Attorney | Pathfinder Law';
+const description =
+  'Pathfinder Injury Law helps with Virginia work vehicle accidents. Get assistance now - call 804-505-0633 for your consultation.';
+const h1 = 'Virginia Work-Related Car Accident Lawyer';
+const path = '/car-accident-at-work-in-virginia/';
+
+const toc = [
+  { id: 'liable', label: 'Who’s Liable for a Car Accident at Work?' },
+  { id: 'compensation', label: 'Compensation for a Virginia Car Accident at Work' },
+  { id: 'denied', label: 'What If My Virginia Workers’ Comp Claim Is Denied?' },
+  { id: 'help', label: 'Contact a Virginia Work Accident Lawyer' },
+  { id: 'faq', label: 'Virginia Workers’ Comp Car Accident FAQ' },
+];
+---
+<Base
+  title={title}
+  description={description}
+  path={path}
+  crumbs={[
+    { name: 'Workers’ Compensation Lawyer Serving Virginia', path: '/virginia-workers-comp-lawyer/' },
+    { name: h1, path },
+  ]}
+  overlay
+  author
+>
+  <PageHero
+    title={h1}
+    crumbs={[{ name: 'Workers’ Comp', href: '/virginia-workers-comp-lawyer/' }, { name: 'Work Vehicle Accidents' }]}
+  />
+
+  <div class="wrap page-body">
+    <article class="prose">
+      <p class="lead">
+        If you’re hurt in a car accident at work, you need Workers’ Comp benefits from your employer.
+        Your Workers’ Comp lawyer can help you get compensated for your injuries and lost wages.
+      </p>
+      <p>
+        For many of us, driving is part of the job. Whether you’re a delivery driver, a truck driver, or
+        driving is only a small part of your job, you may spend hours behind the wheel every week.
+      </p>
+      <p>Sadly, that means you’re at risk for a serious car accident at work in Virginia.</p>
+      <p>
+        After your car accident, you’re in need of benefits to help you recover from your injuries. At
+        Pathfinder Law, we’re ready to guide you to the
+        <a href="/virginia-workers-comp-lawyer/">Virginia Workers’ Comp benefits</a> you’re due.
+      </p>
+
+      <h2 id="liable">Who’s Liable for a Car Accident at Work?</h2>
+      <p>
+        When you’re hurt at work in Virginia, one of your first concerns may be about who caused your
+        injuries and who should pay for them. Someone should be held responsible for their actions,
+        right?
+      </p>
+      <p>
+        Because you’re facing a <a href="/how-to-file-a-workers-comp-claim/">Workers’ Comp claim</a>,
+        you generally don’t have to prove who caused the accident. Even if your own mistake caused it,
+        you can usually still recover benefits. However, breaking safety rules or breaking statutes can
+        bar recovery.
+      </p>
+      <p>
+        But liability can impact your
+        <a href="/what-happens-when-you-file-a-workers-comp-claim/">Workers’ Comp claim</a>. For
+        example, if another driver caused the crash, you may also be able to bring a personal injury
+        claim against that driver, so long as they are not a coworker or in the same trade, business,
+        or occupation as your employer. Or maybe you were intentionally hurt by your employer, or your
+        employer was breaking the law. In these cases, your work accident lawyer in Virginia can
+        discuss your options outside of your employment benefits.
+      </p>
+
+      <div class="pull">
+        <p><strong>Learn how we can help you with your vehicle accident Workers’ Comp case.</strong></p>
+        <p><a class="btn btn-primary" href="#contact">Get Help Now</a></p>
+      </div>
+
+      <h2 id="compensation">Compensation for a Virginia Car Accident at Work</h2>
+      <p>
+        Hurt in a serious car accident while working in Virginia? You’ve got a shot at getting
+        compensated for your injuries through your Workers’ Comp benefits. The problem is, you may have
+        some questions about what these benefits really cover and what you can receive.
+      </p>
+      <p>
+        Below is just a sample of what you can expect from your Workers’ Comp benefits. Your work
+        accident lawyer in Virginia can help you ensure you’re getting the benefits you need for your
+        recovery.
+      </p>
+
+      <h3>Medical Costs</h3>
+      <p>
+        A Virginia car accident can cause some severe injuries, from back injuries to concussions and
+        more. Because of this, you may already have medical bills piling up. Worse, you don’t have the
+        funds to pay for them.
+      </p>
+      <p>
+        That’s where your work accident lawyer in Virginia can step in. They can help you get your
+        Workers’ Comp benefits, which should cover your medical bills when the treatment is reasonable,
+        necessary, and related to your work accident. That includes the costs for travel,
+        rehabilitation, and specialist care.
+      </p>
+
+      <h3>Disability Benefits</h3>
+      <p>
+        It’s not easy to recover if you don’t have the money to pay for your recovery. Your medical
+        bills may be covered, but what about the costs to keep the lights on and food on the table for
+        your family? Luckily, that’s where your disability benefits kick in.
+      </p>
+      <p>
+        Disability benefits replace a portion of the income you lost. What percentage of your original
+        wages you’ll get depends on the severity of your injuries and whether you can return to work.
+        For example, if you’re able to work in some way, you may receive benefits for a shorter time
+        than you would if you were unable to work at all.
+      </p>
+
+      <h3>Benefits for Fatal Accidents</h3>
+      <p>
+        If you’ve lost a loved one in a fatal car accident at their Virginia work site, you may still
+        receive Workers’ Comp benefits for your loss. Losing a loved one is always difficult, but when
+        you rely on them for financial support, you’re facing more than grief—you’re facing serious
+        financial hardship tied to your loss.
+      </p>
+      <p>
+        Family members may receive death benefits for their losses. These benefits can pay for a
+        limited amount of funeral expenses, medical bills incurred before the death, and lost wages for
+        certain periods of time for certain survivors or dependents who meet statutory criteria.
+      </p>
+
+      <h2 id="denied">What If My Virginia Workers’ Comp Claim Is Denied?</h2>
+      <p>
+        You may have been waiting by the mailbox for the letter offering you Workers’ Comp benefits. But
+        when you opened it, you had only a denial letter in your hand.
+      </p>
+      <p>
+        First, don’t panic—a denial doesn’t mean your Workers’ Comp lawyer in Virginia can’t help. We
+        can read through your letter and find the reason for your denial. Then, we can start by
+        gathering evidence to support your claim.
+      </p>
+      <p>
+        When your Workers’ Comp claim is under question, we can strengthen your claim and then
+        represent you at the hearing. We can work to show the Virginia Workers’ Compensation Commission
+        your due compensation for your injuries so you can get the benefits you’re due following your
+        car accident.
+      </p>
+      <p><a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">Workers’ Comp Denials</a></p>
+
+      <div class="pull" id="help">
+        <h2>Contact a Virginia Work Accident Lawyer for Your Car Accident</h2>
+        <p>
+          If you’ve been injured in a Virginia car accident at work, you’re facing severe injuries,
+          costly expenses, and time away from work you can’t afford. Worse, you may be unsure where to
+          start on your Workers’ Comp claim, from reporting to the final decision.
+        </p>
+        <p>
+          If you’re having a tough time recovering from a car accident at work in Virginia, reach out to
+          <a href="/">Pathfinder Law</a>. We understand how tough your position can be, and we’re here
+          to lead the way to the benefits you need. Ready for a free consultation about your claim? Call
+          <a href={site.phoneHref}>804-505-0633</a> or fill out our
+          <a href="#contact">online form</a> to learn more about our services.
+        </p>
+      </div>
+
+      <h2 id="faq">Virginia Workers’ Comp Car Accident FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>When can I expect my benefits from my accident?</summary>
+          <div class="answer">
+            <p>
+              When you’re hurt in a Virginia work accident, you need Workers’ Comp benefits now, not
+              later. You should receive confirmation that your claim has been accepted or denied as soon
+              as possible. If your claim is denied, you have the right to request a hearing before the
+              Virginia Workers’ Compensation Commission so you don’t have to keep waiting for your
+              Workers’ Comp coverage.
+            </p>
+            <p><a href="/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>Does Virginia Workers’ Comp pay for lost wages?</summary>
+          <div class="answer">
+            <p>
+              After a serious work injury in Virginia, you may be directed to your Workers’ Comp
+              benefits to recover from your injuries. You can’t cover your bills and needs without your
+              wages, so it’s vital that you get coverage.
+            </p>
+            <p>
+              But does Virginia Workers’ Comp pay for lost wages? If you’re worried about losing your
+              wages, reach out to Pathfinder Injury Law. We can help you seek out the coverage you need
+              from your Workers’ Comp provider.
+            </p>
+            <p><a href="/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>In Virginia, can I get all my Workers’ Comp benefits right now?</summary>
+          <div class="answer">
+            <p>
+              In some cases, you may want a
+              <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">lump-sum settlement</a>
+              for your Virginia work accident, rather than weekly payments. A lump sum means you’ll
+              receive a compromised payment of your benefits all at once. But you may be unable to get
+              further benefits for your injury if you’re not healing as fast as your doctors thought.
+              Your work accident lawyer can help you decide on your best options for benefits payment.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens when you file a Workers’ Comp claim?</summary>
+          <div class="answer">
+            <p>
+              After a serious work accident, you may have immediately reported your accident to your
+              employer. They need to know about injuries that happen at work, and they’re responsible
+              for your Workers’ Comp benefits.
+            </p>
+            <p>
+              But once you file a Workers’ Comp claim, what happens? If you’re worried about the next
+              steps in your Workers’ Comp process, a Workers’ Comp lawyer from Pathfinder Injury Law is
+              here to help. Here’s what you can expect when you’re hurt in a work accident…
+            </p>
+            <p><a href="/what-happens-when-you-file-a-workers-comp-claim/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>What’s the Workers’ Comp Process in Virginia?</summary>
+          <div class="answer">
+            <p>
+              Virginia state law requires every employer with three or more people, which usually means
+              two or more employees plus the owner, to carry Workers’ Compensation insurance. If an
+              employee receives an injury while completing their job-related duties, they can file a
+              claim with the Virginia Workers’ Compensation Commission to collect financial restitution
+              for their costs. Employees can use the Workers’ Comp process to apply for several
+              financial benefits.
+            </p>
+            <p><a href="/workers-comp-process-in-virginia/">Learn More</a></p>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <aside class="side" aria-label="Page navigation and contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+      <nav class="side-card" aria-label="On this page">
+        <h2>On This Page</h2>
+        <ul class="toc">
+          {toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <ContactSection />
+</Base>
