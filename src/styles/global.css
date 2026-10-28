@@ -279,6 +279,21 @@ p {
   position: static;
 }
 
+/* Over a photo, a dark fade behind the top of the header keeps the menu text readable.
+   It stops showing once the header turns solid. */
+body.has-overlay .site-header:not(.is-solid) {
+  isolation: isolate;
+}
+body.has-overlay .site-header:not(.is-solid)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 9rem;
+  background: linear-gradient(180deg, rgba(14, 32, 22, 0.6), rgba(14, 32, 22, 0));
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* Solid bar: after scrolling, and always on pages without a photo behind the header. */
 .site-header.is-solid,
 body:not(.has-overlay) .site-header {
@@ -412,7 +427,7 @@ body:not(.has-overlay) .site-header .nav-toggle {
     font-weight: 500;
   }
   .desktop-nav .sub a:hover {
-    color: var(--moss);
+    color: var(--pine);
   }
 }
 
@@ -965,7 +980,7 @@ mark {
   font-size: 1.05rem;
   color: var(--forest);
   background: var(--mist);
-  border: 2px solid transparent;
+  border: 2px solid #7a8c7e; /* 3:1 against the white page, so the field edge is visible */
   border-radius: var(--radius);
   padding: 0.85rem 1rem;
   transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
@@ -976,7 +991,6 @@ mark {
 }
 .field input:focus,
 .field textarea:focus {
-  outline: none;
   background: var(--white);
   border-color: var(--moss);
   box-shadow: 0 0 0 4px rgba(99, 140, 28, 0.2);
@@ -1307,6 +1321,14 @@ mark {
 }
 .prose a:hover {
   text-decoration-color: var(--moss);
+}
+/* Buttons inside prose keep their own text color (the .prose a rule above would
+   turn sun-yellow button text pine, which fails contrast). */
+.prose .btn-primary {
+  color: var(--forest);
+}
+.prose .btn-dark {
+  color: var(--white);
 }
 .prose ul {
   list-style: none;
