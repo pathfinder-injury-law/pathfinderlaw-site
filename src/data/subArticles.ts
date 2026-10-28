@@ -56,9 +56,9 @@ const FAULT =
 export const subArticles: SubArticle[] = [
   {
     slug: 'virginia-workers-compensation',
-    title: 'What You Should Know About Virginia’s Workers Compensation',
+    title: "What You Should Know About Virginia's Workers Compensation",
     description:
-      'At Pathfinder Injury Law, we exclusively handle Virginia workers’ compensation cases. Check out our online guide to workers’ comp benefits.',
+      "At Pathfinder Injury Law, we exclusively handle Virginia workers' compensation cases. Check out our online guide to workers' comp benefits.",
     h1: 'Virginia Workers’ Compensation Guide',
     crumb: 'Workers’ Compensation Guide',
     intro: [
@@ -96,9 +96,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'what-happens-if-your-workers-comp-claim-is-denied',
-    title: 'Your Work Comp Claim Was Denied - What To Do Next',
+    title: "Your Work Comp Claim Was Denied - What To Do Next",
     description:
-      'What should you do if your Virginia workers’ compensation claim is denied? Explore your options with the trusted Pathfinder Injury Law team.',
+      "What should you do if your Virginia workers' compensation claim is denied? Explore your options with the trusted Pathfinder Injury Law team.",
     h1: 'What Happens if Your Workers’ Comp Claim Is Denied?',
     crumb: 'If Your Claim Is Denied',
     intro: [
@@ -137,9 +137,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'can-i-receive-workers-comp-and-social-security-disability-at-the-same-time',
-    title: 'Can I Receive Workers’ Comp & SSD Simultaneously?',
+    title: "Can I Receive Workers' Comp & SSD Simultaneously?",
     description:
-      'Could you be eligible for both Virginia workers’ comp and SSDI benefits? Let’s explore your options together at Pathfinder Injury Law.',
+      "Could you be eligible for both Virginia workers' comp and SSDI benefits? Let's explore your options together at Pathfinder Injury Law.",
     h1: 'Can I Receive Workers’ Comp and Social Security Disability at the Same Time?',
     crumb: 'Workers’ Comp and Social Security Disability',
     intro: [
@@ -179,9 +179,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'can-an-employer-deny-a-workers-comp-claim',
-    title: 'Can an Employer Deny a Work Comp Claim?',
+    title: "Can an Employer Deny a Work Comp Claim?",
     description:
-      'Did your employer deny your VA workers’ compensation claim? Call Pathfinder Injury Law for a 100% free consultation to discuss your options.',
+      "Did your employer deny your VA workers' compensation claim? Call Pathfinder Injury Law for a 100% free consultation to discuss your options.",
     h1: 'Can an Employer Deny a Workers’ Comp Claim?',
     crumb: 'Can an Employer Deny a Claim?',
     intro: [
@@ -219,9 +219,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'am-i-eligible-for-vocational-rehabilitation',
-    title: 'Am I Eligible for Vocational Rehabilitation in Virginia?',
+    title: "Am I Eligible for Vocational Rehabilitation in Virginia?",
     description:
-      'Are you eligible for vocational rehabilitation after a Virginia work accident? Explore your options with Pathfinder Injury Law.',
+      "Are you eligible for vocational rehabilitation after a Virginia work accident? Explore your options with Pathfinder Injury Law.",
     h1: 'Am I Eligible for Vocational Rehabilitation After an Injury?',
     crumb: 'Vocational Rehabilitation',
     intro: [
@@ -255,9 +255,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'what-is-maximum-medical-improvement-in-virginia-workers-comp-claims',
-    title: 'What is Maximum Medical Improvement in VA Work Comp Claims?',
+    title: "What is Maximum Medical Improvement in VA Work Comp Claims?",
     description:
-      'Maximum medical improvement is an important consideration for your Virginia workers’ comp case. Read more from Pathfinder Injury Law.',
+      "Maximum medical improvement is an important consideration for your Virginia workers' comp case. Read more from Pathfinder Injury Law.",
     h1: 'Maximum Medical Improvement in Virginia Workers’ Comp Claims',
     crumb: 'Maximum Medical Improvement',
     intro: [
@@ -291,9 +291,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'how-to-prepare-for-an-ime-in-virginia',
-    title: 'How to Prepare for an IME in Virginia + Helpful Tips',
+    title: "How to Prepare for an IME in Virginia + Helpful Tips",
     description:
-      'Pathfinder Injury Law is here to walk you through a workers’ comp claim. This is how to prepare for an independent medical exam in Virginia.',
+      "Pathfinder Injury Law is here to walk you through a workers' comp claim. This is how to prepare for an independent medical exam in Virginia.",
     h1: 'How to Prepare for an IME in Virginia',
     crumb: 'How to Prepare for an IME',
     intro: [
@@ -334,9 +334,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'what-happens-after-a-workers-comp-ime-in-virginia',
-    title: 'What Comes After a Workers’ Comp IME in Virginia?',
+    title: "What Comes After a Workers' Comp IME in Virginia?",
     description:
-      'What happens after a workers’ comp independent medical exam? Here’s everything you need to know from Pathfinder Injury Law in Virginia.',
+      "What happens after a workers' comp independent medical exam? Here's everything you need to know from Pathfinder Injury Law in Virginia.",
     h1: 'What Happens After a Workers’ Comp IME in Virginia?',
     crumb: 'What Happens After an IME',
     intro: [
@@ -371,9 +371,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'how-to-calculate-a-virginia-workers-comp-settlement',
-    title: 'How is a Virginia Workers’ Comp Settlement Determined?',
+    title: "How is a Virginia Workers' Comp Settlement Determined?",
     description:
-      'Pathfinder Injury Law will fight for your rights if you’re hurt at work. Here’s our guide to calculating Virginia workers’ comp settlements.',
+      "Pathfinder Injury Law will fight for your rights if you're hurt at work. Here's our guide to calculating Virginia workers’ comp settlements.",
     h1: 'How to Calculate a Virginia Workers’ Comp Settlement',
     crumb: 'How to Calculate a Settlement',
     intro: [
@@ -408,9 +408,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'what-does-workers-comp-cover-in-virginia',
-    title: 'What Does Workers’ Compensation Cover After an Injury',
+    title: "What Does Workers' Compensation Cover After an Injury",
     description:
-      'Virginia workers’ compensation may cover medical bills, disability benefits, and death benefits. Read more from Pathfinder Injury Law.',
+      "Virginia workers' compensation may cover medical bills, disability benefits, and death benefits. Read more from Pathfinder Injury Law.",
     h1: 'What Does Workers’ Comp Cover in Virginia?',
     crumb: 'What Workers’ Comp Covers',
     intro: [
@@ -448,9 +448,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'how-to-prepare-for-a-virginia-workers-comp-hearing',
-    title: 'Virginia Workers’ Comp Hearing Guide | Pathfinder Injury Law',
+    title: "Virginia Workers' Comp Hearing Guide | Pathfinder Injury Law",
     description:
-      'Get ready for a Virginia workers’ comp hearing with the help of Pathfinder Injury Law. Call us today at 804-505-0633.',
+      "Get ready for a Virginia workers' comp hearing with the help of Pathfinder Injury Law. Call us today at 804-505-0633.",
     h1: 'Virginia Workers’ Comp Hearing Preparation',
     crumb: 'Hearing Preparation',
     intro: [
@@ -483,9 +483,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'does-virginia-workers-comp-pay-for-lost-wages',
-    title: 'Does Virginia Workers’ Comp Pay for Lost Wages?',
+    title: "Does Virginia Workers’ Comp Pay for Lost Wages?",
     description:
-      'Can you get workers’ comp for lost wages after a work accident? Here’s what Pathfinder Injury Law wants you to know. Call 804-505-0633.',
+      "Can you get workers' comp for lost wages after a work accident? Here's what Pathfinder Injury Law wants you to know. Call 804-505-0633.",
     h1: 'Does Virginia Workers’ Comp Pay for Lost Wages?',
     crumb: 'Does Workers’ Comp Pay Lost Wages?',
     intro: [
@@ -521,9 +521,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'average-workers-comp-settlement-in-virginia',
-    title: 'Average Virginia Workers’ Compensation Settlement Amount',
+    title: "Average Virginia Workers' Compensation Settlement Amount",
     description:
-      'Your Virginia workers’ comp settlement depends on your injuries. Visit the Pathfinder Injury Law website or call us at 804-505-0633 today.',
+      "Your Virginia workers’ comp settlement depends on your injuries. Visit the Pathfinder Injury Law website or call us at 804-505-0633 today.",
     h1: 'Average Workers’ Comp Settlement in Virginia',
     crumb: 'Average Settlement',
     intro: [
@@ -557,9 +557,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'how-is-workers-comp-calculated-in-virginia',
-    title: 'How Is Workers’ Comp Benefits Calculated in Virginia?',
+    title: "How Is Workers’ Comp Benefits Calculated in Virginia?",
     description:
-      'How is workers’ comp calculated in Virginia? Pathfinder Injury Law has what you need to know for your work injury case.',
+      "How is workers’ comp calculated in Virginia? Pathfinder Injury Law has what you need to know for your work injury case.",
     h1: 'How Is Workers’ Comp Benefits Calculated in Virginia?',
     crumb: 'How Benefits Are Calculated',
     intro: [
@@ -593,9 +593,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'how-long-do-virginia-workers-comp-settlements-take',
-    title: 'How Long Does a Workers’ Comp Settlement Take in Virginia?',
+    title: "How Long Does a Workers' Comp Settlement Take in Virginia?",
     description:
-      'The trusted team at Pathfinder Injury Law will guide you through the Virginia workers’ compensation claim process. Read more on our website.',
+      "The trusted team at Pathfinder Injury Law will guide you through the Virginia workers' compensation claim process. Read more on our website.",
     h1: 'How Long Do Virginia Workers’ Comp Settlements Take?',
     crumb: 'How Long Settlements Take',
     intro: [
@@ -629,9 +629,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'when-does-virginia-workers-comp-start-paying',
-    title: 'Virginia Workers Compensation Pay Waiting Period',
+    title: "Virginia Workers Compensation Pay Waiting Period",
     description:
-      'When does Virginia workers’ comp start paying? Find out with the help of an experienced work compensation lawyer at Pathfinder Injury Law.',
+      "When does Virginia workers’ comp start paying? Find out with the help of an experienced work compensation lawyer at Pathfinder Injury Law.",
     h1: 'When Does Virginia Workers’ Comp Start Paying?',
     crumb: 'When Benefits Start',
     intro: [
@@ -664,9 +664,9 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'if-i-get-injured-at-work-in-virginia-do-i-get-paid',
-    title: 'Are You Eligible For Compensation If Hurt At Work in VA?',
+    title: "Are You Eligible For Compensation If Hurt At Work in VA?",
     description:
-      'Can you get paid after a work accident? Here’s what you should know about Virginia workers’ comp cases, according to Pathfinder Injury Law.',
+      "Can you get paid after a work accident? Here's what you should know about Virginia workers' comp cases, according to Pathfinder Injury Law.",
     h1: 'If I Get Injured at Work in Virginia, Do I Get Paid?',
     crumb: 'Do I Get Paid If Injured at Work?',
     intro: [
