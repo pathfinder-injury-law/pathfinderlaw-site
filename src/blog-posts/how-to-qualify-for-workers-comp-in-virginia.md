@@ -41,4 +41,4 @@ Even if you are qualified for Workers’ Comp, it does not always assure prompt 
 
 At Pathfinder Law, we believe that clients should not have to suffer twice: first from the work related injury and again from the [unjust denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) of Workers’ Comp benefits. Our Workers’ Comp attorneys can help ensure that your rights are fully represented before the other party, so you can recover what you are entitled to under the law.
 
-When you’re ready to take back control of your life, schedule your free consultation by calling [804-505-0633](tel:804-505-0633) or fill out the contact form on this page.
+When you’re ready to take back control of your life, schedule your free consultation by calling [804-505-0633](tel:+18045050633) or fill out the contact form on this page.

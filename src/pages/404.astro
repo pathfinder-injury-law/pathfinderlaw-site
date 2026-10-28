@@ -23,7 +23,7 @@ const mainPages = [
     <article class="prose">
       <p class="lead">The page you are looking for may have moved or no longer exists.</p>
       <p><a class="btn btn-primary" href="/">Go to the Home Page</a></p>
-      <p>To speak with the firm directly, call <a href={site.phoneHref}>{site.phoneDisplay}</a>.</p>
+      <p>To speak with the firm directly, call <a href={site.phoneHref}>{site.phoneDisplay.replace(' ', '\u00a0')}</a>.</p>
       <p>Or visit one of these main pages:</p>
       <ul>
         {mainPages.map((p) => (

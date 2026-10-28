@@ -20,7 +20,7 @@ export const site = {
       mapUrl: 'https://www.google.com/maps/search/?api=1&query=6294+Cropper+Street+Chincoteague+VA+23336',
     },
   ],
-  hours: ['Mon-Fri: 9am-5pm', 'Sat-Sun: By Appt.', 'Video Consultations Avail.'],
+  hours: ['By appointment only', 'Mon-Fri: 9am-5pm', 'Sat-Sun: By arrangement', 'Video Consultations Avail.'],
   social: [
     { name: 'Facebook', url: 'https://www.facebook.com/PathfinderInjuryLaw/' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/bryn-swartz-5279551ab/' },

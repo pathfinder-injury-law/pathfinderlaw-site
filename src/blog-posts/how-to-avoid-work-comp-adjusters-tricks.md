@@ -115,4 +115,4 @@ An attorney may be able to help you through the workers’ compensation process 
 
 Suffering a work-related injury and enduring the complicated workers’ compensation process that follows can be overwhelming. Your employer’s insurance carrier will assign an adjuster to evaluate your claim and make a determination of benefits. Yet, the adjuster’s goal is to settle your claim for much less than it is worth. Do not let this happen to you!
 
-Avoid falling for the insurance adjuster’s tricks and tactics by consulting with a Virginia workers’ comp lawyer here at the law office of Pathfinder Injury Law. Give us a call today at phone number [804-505-0633](tel:804-505-0633) or submit our [online contact form](/contact/) to get started with a free consultation.
+Avoid falling for the insurance adjuster’s tricks and tactics by consulting with a Virginia workers’ comp lawyer here at the law office of Pathfinder Injury Law. Give us a call today at phone number [804-505-0633](tel:+18045050633) or submit our [online contact form](/contact/) to get started with a free consultation.

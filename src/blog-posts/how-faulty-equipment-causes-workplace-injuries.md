@@ -33,4 +33,4 @@ If you’re having trouble with the insurer or your employer, reach out to a Wor
 
 If you’re struggling to get compensated when faulty equipment has left you seriously injured, you may need legal help to recover from your injuries. Pathfinder Injury Law is here to guide you to the legal solution you need when you’re injured at work.
 
-Discuss your heavy equipment injury case during a free consultation with a work comp lawyer. To schedule your meeting, call [804-505-0633](tel:804-505-0633) or fill out the online contact form at the bottom of this page.
+Discuss your heavy equipment injury case during a free consultation with a work comp lawyer. To schedule your meeting, call [804-505-0633](tel:+18045050633) or fill out the online contact form at the bottom of this page.

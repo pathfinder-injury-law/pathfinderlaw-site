@@ -314,7 +314,7 @@ export const articlesB = {
         // thirty-day notice and two-year filing wording.
         html: `
           <p>Your first option is to speak with the insurance company and your employer about your Workers’ Comp claim. Your lawyer can request more information about the reason for your denial, determining why you didn’t receive compensation.</p>
-          <p>Once you know the reasons for your denial, you and your lawyer can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://www.vwc.state.va.us/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you and your lawyer may focus on proving you met those deadlines.</p>`,
+          <p>Once you know the reasons for your denial, you and your lawyer can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://workcomp.virginia.gov/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you and your lawyer may focus on proving you met those deadlines.</p>`,
       },
       {
         id: 'hearing',
@@ -322,8 +322,8 @@ export const articlesB = {
         // Live heading: "Take Your Claim to Court". The Commission is not a court, and the reviewed
         // wording is "hearing before the Commission". LIVE WORDING kept: mediation sentence.
         html: `
-          <p>But <a href="https://www.vwc.state.va.us/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. While your Workers’ Comp lawyer can help you provide evidence that you are <a href="https://www.vwc.state.va.us/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
-          <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://www.vwc.state.va.us/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, your lawyer can represent you and present evidence that you’re due Workers’ Comp benefits. Once all evidence has been presented, the commissioner will determine whether you’re due benefits.</p>`,
+          <p>But <a href="https://workcomp.virginia.gov/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. While your Workers’ Comp lawyer can help you provide evidence that you are <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
+          <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://workcomp.virginia.gov/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, your lawyer can represent you and present evidence that you’re due Workers’ Comp benefits. Once all evidence has been presented, the commissioner will determine whether you’re due benefits.</p>`,
       },
     ],
     closing: {
@@ -385,7 +385,7 @@ export const articlesB = {
     // Needs Bryn's OK: this changes the live title and H1 of a page that has search traffic.
     title: "Guide to Strengthening Your First Workers' Compensation Case",
     description:
-      "Learn the steps that can help your Virginia workers' compensation claim with Pathfinder Injury Law. Let's discuss the benefits you may be entitled to - call 804-505-0633.",
+      "Learn the steps that can help your Virginia workers' compensation claim with Pathfinder Injury Law. Discuss your benefits - call 804-505-0633.",
     h1: 'How to Strengthen Your Virginia Workers’ Comp Case',
     crumb: 'Strengthen Your Workers’ Comp Case',
     lead: `
@@ -399,7 +399,7 @@ export const articlesB = {
         // reviewed equivalent; Commission link kept as on live. Needs Bryn's review.
         html: `
           <p>If you’ve been injured on the job, your first step is to seek medical care. Yes, you need it, even if you feel fine—you may not notice a serious injury until it’s worsened, and the insurance company may doubt your claim if you don’t act immediately.</p>
-          <p>You may need to seek medical attention from your <a href="https://www.vwc.state.va.us/content/medical-providers" rel="noopener">employer’s chosen doctor</a>. If the employer denies your claim, you get to choose your own doctors.</p>`,
+          <p>You may need to seek medical attention from your <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">employer’s chosen doctor</a>. If the employer denies your claim, you get to choose your own doctors.</p>`,
       },
       {
         id: 'file',

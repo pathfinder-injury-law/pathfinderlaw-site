@@ -205,4 +205,4 @@ Insurance companies know a wide variety of tricks that allow them to deny your c
 
 ## Speak with an Attorney Before Talking with the Insurance Company
 
-If you suffered a [back injury in a work accident](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/) in Virginia, Pathfinder Injury Law is here to help. Our law firm can discuss your case with you in a free consultation. Get started today by calling [804-505-0633](tel:804-505-0633) or filling out the [online contact form](/contact/).
+If you suffered a [back injury in a work accident](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/) in Virginia, Pathfinder Injury Law is here to help. Our law firm can discuss your case with you in a free consultation. Get started today by calling [804-505-0633](tel:+18045050633) or filling out the [online contact form](/contact/).

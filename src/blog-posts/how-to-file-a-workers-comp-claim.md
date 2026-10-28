@@ -36,4 +36,4 @@ If you are having any trouble filling your Workers’ Comp claim or your employe
 
 ## Get Ahold of a Lawyer Today
 
-If you want a lawyer who can help you, call Pathfinder Injury Law today at [804-505-0633](tel:804-505-0633). You can also fill out the online contact form below.
+If you want a lawyer who can help you, call Pathfinder Injury Law today at [804-505-0633](tel:+18045050633). You can also fill out the online contact form below.

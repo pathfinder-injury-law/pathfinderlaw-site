@@ -40,7 +40,7 @@
       "address": "/location/",
       "field": "description",
       "live": "Pathfinder Injury Law is a trusted workers' compensation law firm in Richmond, VA. Get in touch with us for a 100% free case consultation.",
-      "new": "Pathfinder Injury Law is a trusted workers' compensation law firm with offices in Richmond and Chincoteague, VA, by appointment only. Get in touch with us for a 100% free case consultation.",
+      "new": "Pathfinder Injury Law has offices in Richmond and Chincoteague, VA, by appointment only. Get in touch with us for a 100% free case consultation.",
       "reason": "Owner decision: new office wording (Richmond and Chincoteague, by appointment only)."
     },
     {
@@ -75,7 +75,7 @@
       "address": "/how-to-win-a-virginia-workers-comp-case/",
       "field": "description",
       "live": "Win your Virginia workers' compensation case with Pathfinder Injury Law. Let's discuss the benefits you're entitled to - call 804-505-0633.",
-      "new": "Learn the steps that can help your Virginia workers' compensation claim with Pathfinder Injury Law. Let's discuss the benefits you may be entitled to - call 804-505-0633.",
+      "new": "Learn the steps that can help your Virginia workers' compensation claim with Pathfinder Injury Law. Discuss your benefits - call 804-505-0633.",
       "reason": "Owner decision: outcome/win language reworded to factual wording."
     },
     {
@@ -201,7 +201,7 @@
       "address": "/blog/",
       "field": "description",
       "live": "Injured at work? Pathfinder Injury Law is here to guide you on the path to compensation. Read our blog or call us at 804-505-0633 today.",
-      "new": "Articles from Pathfinder Injury Law about Virginia workers’ compensation: how to file a claim, what insurance adjusters do, and what to expect after a work injury.",
+      "new": "Articles from Pathfinder Injury Law about Virginia workers’ compensation: how to file a claim, how adjusters work, and what to expect after a work injury.",
       "reason": "Blog title and description rewritten for launch; the wider content rework comes later."
     },
     {
@@ -266,6 +266,20 @@
       "live": "Norfolk Workers' Compensation Claims & Lawyer |",
       "new": "Norfolk Workers' Compensation Claims & Lawyer",
       "reason": "Stray trailing pipe removed from title."
+    },
+    {
+      "address": "/blog/page/2/",
+      "field": "description",
+      "live": "Injured at work? Pathfinder Injury Law is here to guide you on the path to compensation. Read our blog or call us at 804-505-0633 today. - Page 2",
+      "new": "More articles from Pathfinder Injury Law about Virginia workers’ compensation and what to expect after a work injury. Page 2 of our blog.",
+      "reason": "Blog page 2 given its own description (was a duplicate of /blog/); length kept under 160."
+    },
+    {
+      "address": "/blog/page/2/",
+      "field": "title",
+      "live": "Blog - Pathfinder Injury Law - Page 2",
+      "new": "Workers’ Comp Blog, Page 2 | Pathfinder Injury Law",
+      "reason": "Blog title rewritten for launch, same as /blog/."
     }
   ]
 }

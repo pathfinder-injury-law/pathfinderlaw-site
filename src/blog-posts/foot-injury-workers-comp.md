@@ -9,7 +9,7 @@ tags: ["body-parts","settlement"]
 
 *Disclaimer: Please note nothing in this article is to be considered legal advice. You should always consult with an attorney about the specific facts of your situation before making any legal decisions. No attorney/client relationship or representation relationship is created by the dissemination of this content or your consumption thereof.*
 
-In 2021, [48,201 major workplace injuries](https://workcomp.virginia.gov/sites/default/files/annual-reports/Annual-Report-2021.pdf) were reported to the Virginia Workers’ Compensation Commission, and these included various types of foot injuries. A foot injury received while at work can severely impact your quality of life and your ability to perform well at your job. If this happens to you, [Pathfinder Injury Law](/virginia-workers-comp-lawyer/) is here to help guide you through the confusing process of workers’ compensation in Virginia and seek the results you need.
+In 2021, [48,201 major workplace injuries](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) were reported to the Virginia Workers’ Compensation Commission, and these included various types of foot injuries. A foot injury received while at work can severely impact your quality of life and your ability to perform well at your job. If this happens to you, [Pathfinder Injury Law](/virginia-workers-comp-lawyer/) is here to help guide you through the confusing process of workers’ compensation in Virginia and seek the results you need.
 
 ## Are You Eligible for Workers’ Comp Due to a Foot Injury?
 
@@ -95,7 +95,7 @@ Any of these foot injuries and resulting impairment can limit your abilities and
 
 ## How Common Are Lower Extremity Injuries in the Workplace?
 
-Workplace injuries can affect any part of the body, but certain areas are more common than others, and that includes the feet. According to a 2021 [annual report](https://workcomp.virginia.gov/sites/default/files/annual-reports/Annual-Report-2021.pdf) of the Virginia Workers’ Compensation Commission, 21% of reports involve some part of the injured workers lower extremities, which include a hip, foot, or knee injury.
+Workplace injuries can affect any part of the body, but certain areas are more common than others, and that includes the feet. According to a 2021 [annual report](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) of the Virginia Workers’ Compensation Commission, 21% of reports involve some part of the injured workers lower extremities, which include a hip, foot, or knee injury.
 
 The specific anatomy of the foot makes it highly susceptible to injury in a variety of circumstances. Along with its 26 bones, each foot contains 33 joints and over 100 different muscles, tendons, and ligaments. Nerves also run through the feet, as well as arteries and veins.
 
@@ -146,4 +146,4 @@ A workers’ comp attorney may be able to assist you in collecting evidence and 
 
 ## Walk with Pathfinder Injury Law Toward a Solution
 
-Sustaining a foot injury at work can lead to long healing periods and challenging paperwork to fill out for workers’ compensation benefits. It can quickly become overwhelming, and you may or may not receive the help you need. Pathfinder Injury Law understands how workers’ compensation law works in Virginia and is here to help you find a potential solution. We value the attorney-client relationship and will walk this path with you. Give our law firm a call today at [804-505-0633](tel:804-505-0633) or fill out our [online contact form](/contact/) at our website and schedule your free consultation.
+Sustaining a foot injury at work can lead to long healing periods and challenging paperwork to fill out for workers’ compensation benefits. It can quickly become overwhelming, and you may or may not receive the help you need. Pathfinder Injury Law understands how workers’ compensation law works in Virginia and is here to help you find a potential solution. We value the attorney-client relationship and will walk this path with you. Give our law firm a call today at [804-505-0633](tel:+18045050633) or fill out our [online contact form](/contact/) at our website and schedule your free consultation.

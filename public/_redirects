@@ -20,11 +20,18 @@
 
 # Old WordPress archive and vendor addresses (plan section B).
 /category/blog/page/2/ /blog/page/2/ 301
+/category/blog/page/2 /blog/page/2/ 301
 /category/blog/ /blog/ 301
+/category/blog /blog/ 301
 /author/brynswartz/ /bryn-swartz/ 301
+/author/brynswartz /bryn-swartz/ 301
 /author/webops/ /blog/ 301
+/author/webops /blog/ 301
 /blog/feed/ /feed/ 301
+/blog/feed /feed/ 301
 /comments/feed/ /feed/ 301
+/comments/feed /feed/ 301
+/feed /feed/ 301
 /sitemap.rss /feed/ 301
 
 

@@ -35,4 +35,4 @@ Your Workers’ Comp lawyer can help you seek out a hearing with the [Virginia W
 
 If you were injured previously, your work accident claim may be a little more complex. Luckily, your lawyer is here to make things simple.
 
-At Pathfinder Injury Law, we know pre-existing conditions can complicate matters, making it tough to recover from your injuries. If you’re struggling to get [compensated fairly for a Workers’ Comp claim](/how-to-win-a-virginia-workers-comp-case/), reach out for assistance, starting with a free consultation. We’re here to help when you call [804-505-0633](tel:804-505-0633) or fill out the online contact form below.
+At Pathfinder Injury Law, we know pre-existing conditions can complicate matters, making it tough to recover from your injuries. If you’re struggling to get [compensated fairly for a Workers’ Comp claim](/how-to-win-a-virginia-workers-comp-case/), reach out for assistance, starting with a free consultation. We’re here to help when you call [804-505-0633](tel:+18045050633) or fill out the online contact form below.

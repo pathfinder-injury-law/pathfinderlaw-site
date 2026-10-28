@@ -40,4 +40,4 @@ It can also put you in harm’s way if you were to get [injured on the job](/vir
 
 Now you have an answer to your question about what to do when your employer lists you as an independent contractor. You don’t always have to go to court or get a lawyer when your job status has been filed incorrectly, but it’s certainly an option. It might be important to contact a lawyer, especially if your employer isn’t willing to fix the mistake or change it.
 
-Talk with a lawyer at Pathfinder Injury Law. Call [804-505-0633](tel:804-505-0633) or fill out the contact form below.
+Talk with a lawyer at Pathfinder Injury Law. Call [804-505-0633](tel:+18045050633) or fill out the contact form below.
