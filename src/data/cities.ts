@@ -162,7 +162,7 @@ export const cities: City[] = [
               'Temporary partial disability',
               'Permanent partial disability',
               'Death benefits',
-              'And others, including vocational rehabilitation',
+              'And others, including vocational rehabilitation (which can be a benefit, but an employer can also use it against you, so talk to a lawyer first)',
             ],
           },
           `Regardless of the [type of accident you suffer](/causes-of-on-the-job-shoulder-injuries/) and/or the benefits for which you apply, ${COMPENSABLE}.`,
@@ -331,7 +331,7 @@ export const cities: City[] = [
           {
             list: [
               'Document Everything – Take pictures of the accident site before you leave the premises, and take pictures of your injuries.',
-              'Receive Medical Attention – Going to see a trusted doctor can help get your injuries on file—an important piece of evidence that you’ll need for your Workers’ Compensation claim. Keep in mind that you might have to see a doctor of your employer’s choosing.',
+              'Receive Medical Attention – Going to see a trusted doctor can help get your injuries on file—an important piece of evidence that you’ll need for your Workers’ Compensation claim. Keep in mind that you might have to see a doctor of your employer’s choosing. If the employer denies your claim, you get to choose your own doctors.',
               'Inform Your Supervisor – The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the injury. Failing to do so could affect your ability to receive benefits.',
               'File Your Claim – Your Workers’ Compensation [claim form](https://workcomp.virginia.gov/forms/claim-form) can be submitted electronically, faxed, or mailed.',
             ],
@@ -413,7 +413,7 @@ export const cities: City[] = [
               'Injuries related to the operation of workplace vehicles, including traumatic brain injury',
             ],
           },
-          'Sometimes, Loudoun County workplace injuries can even result in the death of your loved one. For this reason, death benefits are just one of the range of benefits that could potentially be available to you as the family member or dependent of a deceased worker. In other cases, benefits such as medical compensation, short- and long-term disability, or even vocational rehabilitation could be awarded.',
+          'Sometimes, Loudoun County workplace injuries can even result in the death of your loved one. For this reason, death benefits are just one of the range of benefits that could potentially be available to you as the family member or dependent of a deceased worker. In other cases, benefits such as medical compensation, short- and long-term disability, or even vocational rehabilitation could be awarded. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first.',
         ],
       },
       {
@@ -562,7 +562,7 @@ export const cities: City[] = [
         body: [
           'Your Suffolk Workers’ Comp benefits are key to recovering from your work accident. These benefits should cover the losses you’ve suffered for your injuries, even long-term losses that may not be fixed in a few trips to the doctor.',
           'Because of this, you need to know what your claim is worth. If you don’t seek a Workers’ Comp lawyer, it’s easy to accept a settlement offer that doesn’t cover all your needs.',
-          'For example, you need to ensure your Workers’ Comp will cover all your medical expenses after a work accident. That’s not just for your medical bills, either. You may need vocational rehabilitation, a prosthesis, or coverage for your travel expenses. Your Workers’ Comp should cover it all.',
+          'For example, you need to ensure your Workers’ Comp will cover all your medical expenses after a work accident. That’s not just for your medical bills, either. You may need vocational rehabilitation, a prosthesis, or coverage for your travel expenses. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first.',
           `Your Workers’ Comp benefits should also cover a portion of your missed wages. You still need an income to pay your bills and cover your expenses, and your lawyer can work to help you get it. ${TWO_THIRDS}`,
         ],
       },
@@ -729,7 +729,6 @@ export const cities: City[] = [
           'Here’s the good news about your Hampton work accident—you may be due Workers’ Comp benefits for the injuries you’ve suffered at work. These benefits should cover the losses you’ve suffered that you wouldn’t have if you hadn’t been injured at work.',
           'For example, you shouldn’t have to pay for the medical care you need. That’s not just your initial medical treatment, either. You may also be due funds for the costs of your traveling, as well as any specialists you need to see during your treatment.',
           'You may also need funds that replace your lost wages. Hampton workers may be eligible for disability benefits that cover their needs after a loss. The amount and length of time you’ll receive benefits depend on the type of injuries you’ve suffered and whether you’re able to work in any capacity.',
-          `For example, you may have suffered an injury impacting your entire body, like a severe head injury. In these cases, you may have a [different disability benefits settlement](${CODE}title65.2/chapter5/section65.2-503/) than someone who lost use of their arm. But in any case, your Workers’ Comp lawyer could help your claim succeed.`,
         ],
       },
       {

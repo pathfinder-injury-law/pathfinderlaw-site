@@ -134,14 +134,14 @@ export const articlesB = {
         // LIVE WORDING: two-week payment period and 20% increase (same wording the Denials page kept).
         // The Virginia Code link now goes to the section that matches the sentence (65.2-524).
         html: `
-          <p>Once payment from a Workers’ Comp insurer becomes due, the insurer has <a href="${WC}when-does-virginia-workers-comp-start-paying/">two weeks to make the payment</a>. If it <a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/" rel="noopener">fails to pay within that period</a>, the amount to be compensated increases by 20%.</p>`,
+          <p>Once payment from a Workers’ Comp insurer becomes due, the insurer has <a href="${WC}when-does-virginia-workers-comp-start-paying/">two weeks to make the payment</a>. If it <a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/" rel="noopener">fails to pay within that period</a>, a late payment can lead to a penalty, but penalties are not guaranteed.</p>`,
       },
       {
         id: 'attorney',
         h2: 'How Can an Attorney Help?',
         // Live: "you can be sure you will receive full benefits and compensation due by law".
         html: `
-          <p>With an experienced Workers’ Comp lawyer at your side, you can have help pursuing the benefits and compensation due by law. At Pathfinder Law, your Workers’ Comp lawyer can help build your case to seek your benefits and the late payment increase in case of delay by the Workers’ Comp insurer.</p>`,
+          <p>With an experienced Workers’ Comp lawyer at your side, you can have help pursuing the benefits and compensation due by law. At Pathfinder Law, your Workers’ Comp lawyer can help build your case to seek your benefits and, where it applies, a penalty if the Workers’ Comp insurer pays late.</p>`,
       },
     ],
     closing: {
@@ -272,19 +272,7 @@ export const articlesB = {
         // settlements) removed from the last paragraph.
         html: `
           <p>In most cases, you must notify your employer within thirty days of the injury, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Missing these deadlines could affect your ability to receive benefits.</p>
-          <p>In rare cases, claims stay open indefinitely to pay for all future medical bills and issues that might arise from the problem. However, most people’s recovery is shorter, and the claim closes so they can receive a finalized settlement, such as a <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">lump sum of cash</a>.</p>`,
-      },
-      {
-        id: 'reopening',
-        h2: 'Reopening a Claim',
-        // LIVE WORDING kept for the first two sentences. Live also said judges can change an award "if
-        // there is a good reason", that a case can be reopened for "a legal or factual mistake", and
-        // that a new claim can be opened "if there was a petition that a judge denied". Those three have
-        // no reviewed equivalent and are left out. The Virginia Code link now goes to 65.2-708
-        // ("Review of award on change in condition"); live linked 65.2-602 (tolling of limitations).
-        html: `
-          <p>Perhaps you closed a claim and now you think you need to reopen it because of new evidence or a change in your condition. This sometimes happens when you need new medical treatment that relates to an old work injury.</p>
-          <p>The time limit for <a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/" rel="noopener">reopening a claim</a> will depend on Virginia state law, so talk with a lawyer before assuming it is too late.</p>`,
+          <p>Claims do not have a limit on how long they stay open. Wage loss benefits are usually capped at 500 weeks unless permanent total disability is awarded, which is rare. There are limits on consequences of your accident being covered.</p>`,
       },
       {
         id: 'changes',
@@ -356,7 +344,7 @@ export const articlesB = {
     h1: 'Should I Accept a Lump Sum Settlement for My Workers’ Comp Claim?',
     crumb: 'Lump Sum Settlement',
     lead: `
-      <p class="lead">When you’re hurt in a work accident, you may have the option to take a lump sum settlement for your Workers’ Comp claim. A lump sum settlement means you may receive all or part of the benefits for your claim at once. But is it the best option for your Workers’ Comp claim?</p>
+      <p class="lead">When you’re hurt in a work accident, you may have the option to take a lump sum settlement for your Workers’ Comp claim. A lump sum settlement means you may receive the benefits for your claim at once. But is it the best option for your Workers’ Comp claim?</p>
       <p>If you’re <a href="${WC}">seeking Workers’ Comp</a> benefits and you’re unsure what options to pursue, Pathfinder Injury Law can guide you through your options. We can help you understand the benefits you may be due and weigh your choices.</p>`,
     sections: [
       {
@@ -366,17 +354,17 @@ export const articlesB = {
         // SSA link). No reviewed equivalent, so it is left out. The two settlement types below use the
         // reviewed Workers' Comp page wording.
         html: `
-          <p>After a serious work injury, you may want to have all or part of your Virginia Workers’ Comp benefits in one lump sum. In these cases, you’ll receive your benefits at one time, rather than receiving weekly payments for your injuries. Some workers may choose this option to personally manage their funds and have more control over their funds.</p>
+          <p>After a serious work injury, you may want to have your Virginia Workers’ Comp benefits in one lump sum. In these cases, you’ll receive your benefits at one time, rather than receiving weekly payments for your injuries. Some workers may choose this option to personally manage their funds and have more control over their funds.</p>
           <h3>Lump Sum Settlement With Open Medical Payments</h3>
-          <p>You may choose to take a settlement in which you compromise your benefits as a lump sum rather than taking them over time. This allows you to receive a payment of benefits at once without having to deal with the insurer or the VWC again. In this arrangement (sometimes referred to as an “indemnity-only” settlement), it may be possible to receive a compromised lump sum payment of your wage loss benefits with the continued option to pursue future claims for medical expenses.</p>
+          <p>It is exceedingly rare to settle a case for a lump sum with open medicals. Typically, cases settle top to bottom.</p>
           <h3>Full and Final Settlement</h3>
-          <p>You may also choose to receive a one-time payment to resolve your workers’ comp claim, with the understanding that you may not bring any future claims in relation to your injury. A full and final settlement is an arrangement in which you agree to take a lump sum of money to close out your entire case, top to bottom, with no future benefit entitlement of any kind whatsoever, whether for wage loss, medical bills, vocational rehab, permanent partial disability benefits, or any other benefits.</p>`,
+          <p>You may also choose to receive a one-time payment to resolve your workers’ comp claim, with the understanding that you may not bring any future claims in relation to your injury. A full and final settlement is an arrangement in which you agree to take a lump sum of money to close out your entire case, top to bottom, with no future benefit entitlement of any kind whatsoever, whether for wage loss, medical bills, vocational rehab, permanent partial disability benefits, or any other benefits. Settling your case closes everything and ends benefits.</p>`,
       },
       {
         id: 'should-i',
         h2: 'Should I Accept a Lump Sum Settlement?',
         html: `
-          <p>On-the-job injuries can be complex and difficult to judge. That traumatic head injury may feel fine now, but you may suffer health complications shortly hereafter. Because you may need future benefits, settling for a lump sum now may hurt your Virginia Workers’ Comp claim in the future. You should always consult with a lawyer before accepting a settlement.</p>
+          <p>On-the-job injuries can be complex and difficult to judge. That traumatic head injury may feel fine now, but you may suffer health complications shortly hereafter. Because you may need future benefits, keep in mind that settling your case closes everything and ends benefits. You should always consult with a lawyer before accepting a settlement.</p>
           <p>That’s where your lawyer can step in. They have the tools to determine what benefits you may be due based on the severity of your injuries. They can also represent you in a <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Claims-and-Hearings-Flow-Chart.pdf" rel="noopener">Virginia Workers’ Comp hearing</a> if you’re struggling to get compensated fairly. A Virginia work comp lawyer can help those without the right tools for their claim recover from their losses.</p>`,
       },
     ],
@@ -411,7 +399,7 @@ export const articlesB = {
         // reviewed equivalent; Commission link kept as on live. Needs Bryn's review.
         html: `
           <p>If you’ve been injured on the job, your first step is to seek medical care. Yes, you need it, even if you feel fine—you may not notice a serious injury until it’s worsened, and the insurance company may doubt your claim if you don’t act immediately.</p>
-          <p>You’ll also need to seek medical attention from your <a href="https://www.vwc.state.va.us/content/medical-providers" rel="noopener">employer’s chosen doctor</a>. They get to choose the doctors they cover, so you’ll need to turn to them for your medical care.</p>`,
+          <p>You may need to seek medical attention from your <a href="https://www.vwc.state.va.us/content/medical-providers" rel="noopener">employer’s chosen doctor</a>. If the employer denies your claim, you get to choose your own doctors.</p>`,
       },
       {
         id: 'file',
@@ -508,26 +496,17 @@ export const articlesB = {
         html: `
           <p>Common types of Workers’ Compensation settlements include:</p>
           <ul>
-            <li><strong>Full and Final Settlement:</strong> A one-time payment to resolve your workers’ comp claim, with the understanding that you may not bring any future claims in relation to your injury. You agree to take a lump sum of money to close out your entire case, with no future benefit entitlement of any kind, whether for wage loss, medical bills, vocational rehab, permanent partial disability benefits, or any other benefits.</li>
-            <li><strong>Lump Sum Settlement With Open Medical Benefits:</strong> A settlement in which you compromise your benefits as a lump sum rather than taking them over time. It may be possible to receive a compromised lump sum payment of your wage loss benefits with the continued option to pursue future claims for medical expenses.</li>
-            <li><strong>Full and Final Settlement With a Workers’ Compensation Medicare Set-Aside Arrangement (WCMSA) Funded by the Employer/Insurer:</strong> If you have Medicare, then you may need to take that into account when settling a Workers’ Comp claim—specifically, you need to make sure your Medicare funding is set aside.</li>
+            <li><strong>Full and Final Settlement:</strong> A one-time payment to resolve your workers’ comp claim, with the understanding that you may not bring any future claims in relation to your injury. You agree to take a lump sum of money to close out your entire case, with no future benefit entitlement of any kind, whether for wage loss, medical bills, vocational rehab, permanent partial disability benefits, or any other benefits. Typically, cases settle this way, top to bottom. Settling your case closes everything and ends benefits.</li>
+            <li><strong>Lump Sum Settlement With Open Medical Benefits:</strong> It is exceedingly rare to settle a case for a lump sum with open medicals.</li>
           </ul>
-          <p>You should always consult with a lawyer before accepting a settlement. To learn more about the first two, read <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">Should I Accept a Lump Sum Settlement?</a></p>`,
+          <p>You should always consult with a lawyer before accepting a settlement. To learn more, read <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">Should I Accept a Lump Sum Settlement?</a></p>`,
       },
       {
         id: 'average',
         h2: 'What Is the Average Workers’ Compensation Settlement?',
         // Live: "We're compassionate, honest, and skilled at what we do." ("skilled" left out).
         html: `
-          <p>The fact of the matter is, determining the amount you’ll get for a Workers’ Comp settlement is complicated. There are plenty of factors that go into determining the amount, including:</p>
-          <ul>
-            <li>What were your wages like before your injury?</li>
-            <li>Did your injuries cause permanent damage?</li>
-            <li>How much has your insurance company currently paid for medical treatment?</li>
-            <li>Will you need surgery?</li>
-            <li>What kind of treatment will you need in the future?</li>
-          </ul>
-          <p>Lots of other factors can affect how a settlement turns out, so it’s generally beneficial to work with a lawyer who can represent you effectively.</p>`,
+          <p>The fact of the matter is, determining the amount you’ll get for a Workers’ Comp settlement is complicated. It’s generally beneficial to work with a lawyer who can represent you effectively.</p>`,
       },
     ],
     closing: {
