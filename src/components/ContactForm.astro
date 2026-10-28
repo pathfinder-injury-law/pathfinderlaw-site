@@ -26,14 +26,14 @@ const { id = 'contact-form' } = Astro.props;
       <textarea id={`${id}-message`} name="message" required></textarea>
       <p class="field-hint">Please keep this short. Do not include confidential or sensitive details yet.</p>
     </div>
-    <!-- Required acknowledgement (ethics review, LEO 1842). Wording is the owner's. -->
+    <!-- Required acknowledgement (ethics review, LEO 1842). Wording drafted with the owner and approved by him. -->
     <div class="consent">
       <input id={`${id}-consent`} name="acknowledged" type="checkbox" required />
       <label for={`${id}-consent`}>
-        I understand that submitting this form does not create an attorney-client relationship, and
-        that no confidentiality or conflict protection exists until it does. Pathfinder Injury Law
-        does not represent me unless it has signed and returned a written representation agreement
-        to me.*
+        I understand that sending this inquiry does not create an attorney-client relationship, and
+        that confidentiality and conflict protections may not apply until one begins. I am not
+        represented by Pathfinder Injury Law unless an authorized firm representative and I have
+        both signed a written representation agreement.*
       </label>
     </div>
     <!-- Spam trap: people never see this field, bots fill it in. -->
