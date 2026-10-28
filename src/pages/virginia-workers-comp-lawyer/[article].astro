@@ -1,0 +1,11 @@
+---
+// Builds every sub-article page from data/subArticles.ts, one address per entry.
+import SubArticlePage from '../../components/SubArticlePage.astro';
+import { subArticles } from '../../data/subArticles';
+
+export function getStaticPaths() {
+  return subArticles.map((article) => ({ params: { article: article.slug }, props: { article } }));
+}
+const { article } = Astro.props;
+---
+<SubArticlePage article={article} />

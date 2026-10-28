@@ -1,0 +1,138 @@
+---
+// One template for every sub-article under /virginia-workers-comp-lawyer/ (see data/subArticles.ts).
+// Same frame as the practice-area pages: photo header, readable column, side card with the phone
+// number and an "On This Page" list, a closing call to action, a list of sibling articles, and the
+// contact form.
+import Base from '../layouts/Base.astro';
+import PageHero from './PageHero.astro';
+import ContactSection from './ContactSection.astro';
+import { site } from '../data/site';
+import { subArticles, ARTICLE_BASE, type Block, type SubArticle } from '../data/subArticles';
+
+interface Props {
+  article: SubArticle;
+}
+const { article } = Astro.props;
+const path = `${ARTICLE_BASE}${article.slug}/`;
+
+const slugify = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/[’']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+const sections = article.sections.map((s) => ({ ...s, id: slugify(s.h2) }));
+const closingId = 'help';
+const toc = [...sections.map((s) => ({ id: s.id, label: s.h2 })), { id: closingId, label: article.closing.h2 }];
+
+const others = subArticles.filter((a) => a.slug !== article.slug);
+
+// Turns the data file's light markup into safe HTML: [text](address) links plus {phone} and {contact}.
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const inline = (text: string) =>
+  esc(text)
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label, href) => {
+      const external = /^https?:\/\//.test(href);
+      return `<a href="${href}"${external ? ' rel="noopener"' : ''}>${label}</a>`;
+    })
+    .replace(/\{phone\}/g, `<a href="${site.phoneHref}">${site.phoneDisplay}</a>`)
+    .replace(/\{contact\}/g, '<a href="#contact">online contact form</a>');
+const isList = (b: Block): b is { ul: string[] } => typeof b !== 'string';
+---
+<Base
+  title={article.title}
+  description={article.description}
+  path={path}
+  crumbs={[
+    { name: 'Workers’ Compensation Lawyer Serving Virginia', path: ARTICLE_BASE },
+    { name: article.h1, path },
+  ]}
+  overlay
+  author
+>
+  <PageHero
+    title={article.h1}
+    crumbs={[{ name: 'Workers’ Comp', href: ARTICLE_BASE }, { name: article.crumb }]}
+  />
+
+  <div class="wrap page-body">
+    <article class="prose">
+      {article.intro.map((p, i) => <p class={i === 0 ? 'lead' : undefined} set:html={inline(p)} />)}
+
+      {sections.map((s) => (
+        <>
+          <h2 id={s.id}>{s.h2}</h2>
+          {s.blocks.map((b) =>
+            isList(b) ? (
+              <ul>{b.ul.map((li) => <li set:html={inline(li)} />)}</ul>
+            ) : (
+              <p set:html={inline(b)} />
+            ),
+          )}
+        </>
+      ))}
+
+      <div class="pull" id={closingId}>
+        <h2>{article.closing.h2}</h2>
+        {article.closing.blocks.map((b) => !isList(b) && <p set:html={inline(b)} />)}
+      </div>
+
+      <nav class="sub-more" aria-labelledby="sub-more-title">
+        <h2 id="sub-more-title">More Virginia Workers’ Comp Questions</h2>
+        <ul>
+          <li><a href={ARTICLE_BASE}>Workers’ Compensation Lawyer Serving Virginia</a></li>
+          {others.map((a) => <li><a href={`${ARTICLE_BASE}${a.slug}/`}>{a.crumb}</a></li>)}
+        </ul>
+      </nav>
+    </article>
+
+    <aside class="side" aria-label="Page navigation and contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+      <nav class="side-card" aria-label="On this page">
+        <h2>On This Page</h2>
+        <ul class="toc">
+          {toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <ContactSection />
+</Base>
+
+<style>
+  /* "More questions" list: two columns on wide screens, one on a phone. Page-scoped on purpose. */
+  .sub-more {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--sage);
+  }
+  .sub-more h2 {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .sub-more ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.35rem 2rem;
+  }
+  .sub-more a {
+    display: block;
+    padding: 0.35rem 0;
+    line-height: 1.35;
+  }
+  @media (min-width: 40rem) {
+    .sub-more ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
