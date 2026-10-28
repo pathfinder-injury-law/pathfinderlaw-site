@@ -372,7 +372,7 @@ export const articlesB = {
       h2: 'Connect with a Virginia Workers’ Comp Lawyer',
       // Live: "can help you find the best path to your recovery".
       html: `
-        <p>If you’ve been hurt on the job and you’re suffering, you have options when collecting your Workers’ Comp benefits. But should you accept a lump sum settlement for your Workers’ Comp claim? Your Workers’ Comp lawyer at <a href="/">Pathfinder Injury Law</a> can help you weigh your options, starting with a free consultation. Talk to a lawyer by calling <a href="tel:+18045050633">(804) 505-0633</a> or by <a href="#contact">completing the online contact form</a>.</p>`,
+        <p>If you’ve been hurt on the job and you’re suffering, you have options when collecting your Workers’ Comp benefits. But should you accept a lump sum settlement for your Workers’ Comp claim? A lawyer at <a href="/">Pathfinder Injury Law</a> may be able to help you weigh your options, starting with a free consultation. Talk to a lawyer by calling <a href="tel:+18045050633">(804) 505-0633</a> or by <a href="#contact">completing the online contact form</a>.</p>`,
     },
   },
 
@@ -482,7 +482,7 @@ export const articlesB = {
     path: '/workers-comp-settlement-in-virginia/',
     title: 'Workers’ Comp Settlement in Virginia - Pathfinder Injury Law',
     description:
-      "Pathfinder Injury Law is a reputable law firm specializing in Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
+      "Pathfinder Injury Law is a law firm specializing in Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
     h1: 'Workers’ Comp Settlement in Virginia',
     lead: `
       <p class="lead">When you’ve been injured, you know you’ll likely have to file a Workers’ Comp claim. Many people wonder what the average Workers’ Compensation settlement is, and may worry about the process they’ll have to go through. When you’re preparing for a Workers’ Comp settlement in Virginia, trust <a href="${WC}">Pathfinder Injury Law</a>. We have years of experience helping clients with their Workers’ Compensation settlements and are more than willing to answer any questions you may have on the process.</p>`,

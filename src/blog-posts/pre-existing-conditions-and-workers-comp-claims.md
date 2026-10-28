@@ -27,7 +27,7 @@ You may also receive wage replacement benefits. These benefits cover a percentag
 
 ## What if I’m Denied Workers’ Comp?
 
-Unfortunately, the Workers’ Comp insurance company may deny you if they believe your injuries weren’t work-related. Proving your injuries would still be severe because of your work accident can be tough. Luckily, you have a Workers’ Comp lawyer to represent you during these difficult times.
+Unfortunately, the Workers’ Comp insurance company may deny you if they believe your injuries weren’t work-related. Proving your injuries would still be severe because of your work accident can be tough. Luckily, a lawyer at Pathfinder Injury Law may be able to help you during these difficult times.
 
 Your Workers’ Comp lawyer can help you seek out a hearing with the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/), who will hear out your appeal. Your lawyer can represent you, presenting evidence for your claim and seeking out the benefits you need to recover.
 

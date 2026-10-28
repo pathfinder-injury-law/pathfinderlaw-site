@@ -13,7 +13,7 @@ Like most of us, you’re a hard worker. When you head off to your job in the mo
 
 Severe injuries and accidents affect workers regularly. In fact, in 2021, the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) reported there were 48,201 major injuries and 69,080 minor injuries. Richmond City alone saw more than 5,000 injuries. As a result, you need to be prepared in case of a work injury.
 
-**Pathfinder Injury Law is here to help with many types of knee injury claims, from start to finish. Our law firm will be right by your side after a work accident to help you get the compensation you deserve.**  That money can help you address medical bills and provide critical funds for partial income replacement while you recover.
+**Pathfinder Injury Law is here to help with many types of knee injury claims, from start to finish. Our law firm will be right by your side after a work accident to help you seek the compensation you may be due.**  That money can help you address medical bills and provide critical funds for partial income replacement while you recover.
 
 ## What Are Common Types of Knee Injuries?
 
@@ -203,8 +203,8 @@ The best way to get a realistic estimate of the value of your workers’ compens
 
 Although workers’ compensation benefits can provide significant value to employees, they can be tough to obtain in some situations. An attorney can help you assert your rights against your employer when you feel that your employer is not being fair to you.
 
-Unfortunately, both employers and their insurance companies often try to pay as little as possible for a knee injury — even if they agree to accept the claim at first. An attorney can work to force the insurance company to treat you fairly and give you the workers’ comp benefits you deserve.
+Unfortunately, both employers and their insurance companies often try to pay as little as possible for a knee injury — even if they agree to accept the claim at first. An attorney can work to force the insurance company to treat you fairly and seek the workers’ comp benefits you may be due.
 
 ## Talk to a Lawyer About Your Knee Injury
 
-An attorney can help you pursue the benefits you are due. Don’t leave money on the table when it comes to your knee injury — [contact Pathfinder Injury Law](/contact/) to schedule an appointment and get more information.
+An attorney can help you pursue the benefits you are due. Have questions about your knee injury? [Contact Pathfinder Injury Law](/contact/) to schedule an appointment and get more information.

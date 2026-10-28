@@ -280,6 +280,34 @@
       "live": "Blog - Pathfinder Injury Law - Page 2",
       "new": "Workers’ Comp Blog, Page 2 | Pathfinder Injury Law",
       "reason": "Blog title rewritten for launch, same as /blog/."
+    },
+    {
+      "address": "/workers-comp-settlement-in-virginia/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is a reputable law firm specializing in Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
+      "new": "Pathfinder Injury Law is a law firm specializing in Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
+      "reason": "Ethics review 10-28-26: outcome wording made neutral"
+    },
+    {
+      "address": "/results/",
+      "field": "description",
+      "live": "Want to know how Pathfinder will fight to get you maximum compensation for your work comp case? View our recent success stories online.",
+      "new": "Want to know how Pathfinder may be able to help with your work comp case? View some of our past results online.",
+      "reason": "Ethics review 10-28-26: outcome wording made neutral"
+    },
+    {
+      "address": "/fairfax-county-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is your trusted Fairfax County workers’ comp lawyer. Let's get you the compensation you deserve after a work accident.",
+      "new": "Pathfinder Injury Law is your trusted Fairfax County workers’ comp lawyer. Let's talk about your options after a work accident.",
+      "reason": "Ethics review 10-28-26: outcome wording made neutral"
+    },
+    {
+      "address": "/chesapeake-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Need a dedicated Chesapeake workers’ comp lawyer? Trust Pathfinder Injury Law to help you get the benefits you deserve.",
+      "new": "Need a dedicated Chesapeake workers’ comp lawyer? Contact Pathfinder Injury Law to seek the benefits you may be due.",
+      "reason": "Ethics review 10-28-26: outcome wording made neutral"
     }
   ]
 }

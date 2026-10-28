@@ -32,7 +32,7 @@ If you weren’t there when witnesses made their statements, double-check the st
 
 ## Partnering with a Lawyer
 
-If you are having any trouble filling your Workers’ Comp claim or your employer is not being cooperative, you might want to consider partnering with a lawyer. They can guide you through the process and make sure you have all the right papers and all the right [elements of a successful claim](/essential-elements-of-a-successful-workers-comp-claim/). They can also make sure you get the most out of your claim.
+If you are having any trouble filling your Workers’ Comp claim or your employer is not being cooperative, you might want to consider partnering with a lawyer. They can guide you through the process and make sure you have all the right papers and all the right [elements of a successful claim](/essential-elements-of-a-successful-workers-comp-claim/). They can also review your claim and explain your options.
 
 ## Get Ahold of a Lawyer Today
 
