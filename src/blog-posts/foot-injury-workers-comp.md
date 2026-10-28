@@ -31,7 +31,7 @@ In order for an accident to be covered, it must be the result of a specific work
 
 Determine the exact occurrence and timing of the injury. It is important to note that only sudden mechanical changes are compensable in Virginia. Workers’ compensation insurance will not cover injuries that occur gradually or may be attributable to repetitive trauma.
 
-<figure class="bp-photo"><img src="/images/blog/broken-leg.jpg" alt="A person with a broken leg in a blue walking boot" width="1400" height="933" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@tomspentys" rel="noopener">@tomspentys</a> on Unsplash</figcaption></figure>
+<figure class="bp-photo"><img src="/images/blog/broken-leg.jpg" alt="A person with a broken leg in a blue walking boot" width="1400" height="933" loading="lazy" /></figure>
 
 ## What Do I Need to Prove for My Workers’ Comp Claim?
 
@@ -134,7 +134,7 @@ Particular services that fall under vocational rehab include:
 - Education
 - Retraining
 
-Keep in mind, however, that vocational rehab is not something you want to end up in because, nine out of 10 times, it will end in favor of the insurance company. When this happens, they will find a way to cut off your wage loss checks. If you refuse or somehow fail to comply with vocational rehab requirements, you run the risk of losing entitlement to all workers’ comp benefits.
+Keep in mind, however, that vocational rehab is not something you want to end up in because often the insurance company uses it as a tool to cut off your benefits. When this happens, they will find a way to cut off your wage loss checks. If you refuse or fail to comply with vocational rehab requirements, you run the risk of losing entitlement to wage loss benefits.
 
 The Virginia Workers’ Compensation Commission set up [guidelines for vocational rehabilitation](https://workcomp.virginia.gov/documents/vocational-rehabilitation-guidelines) with the hopes of creating less conflict. Yet, vocational rehab is still a fraught endeavor. Once you end up here, we advise you to talk to a workers’ comp lawyer because you are going to need help tiptoeing through this minefield.
 

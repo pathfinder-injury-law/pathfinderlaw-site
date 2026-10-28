@@ -13,7 +13,7 @@ The interesting thing about Pathfinder’s birthday is that it’s also the birt
 
 It’s a totally valid question, and the answer is “Nobody.” But starting Pathfinder the same day Spud was born wasn’t a matter of choice; it was a matter of survival. Let us explain. 
 
-## Pathfinder Law’s Origin Story
+## Pathfinder Injury Law’s Origin Story
 
 This day last year, Bryn was working for one of the biggest Workers’ Compensation law firms in the state. You know the type—suits, ties, a bunch of stuffy offices, all that noise. If you’ve turned on the TV anytime in the last few years, you’ve probably had the guilty pleasure of cringing at their TV ads. 
 
@@ -41,19 +41,19 @@ That’s how we started. But what has our first year held? This year has been in
 
 We have accomplished more than we thought we were capable of. We have grown as people; we have faced off with our doubts and wrestled with our shortcomings. We have had to learn how to be new business owners and new parents at the same time. 
 
-We’d both been doing Workers’ Comp law for years, but running a law firm? That was uncharted territory. But somehow, through serendipity, fortitude, hard work, tenacity, help from the grandparents, and probably a lot of luck, we’ve not only survived—we’ve succeeded. We’ve thrived. 
+We’d both had ties to the workers’ comp world for years, but running a law firm? That was uncharted territory. But somehow, through serendipity, fortitude, hard work, tenacity, help from the grandparents, and probably a lot of luck, we’ve not only survived—we’ve succeeded. We’ve thrived. 
 
 ## Measuring Pathfinder’s Success
 
 Now we should say here that success can mean a lot of things. It can be measured by many different metrics. Some people (and maybe most in the legal field) measure it by money earned, material goods acquired, prestige, awards, accolades, and a bunch of other vapid junk like that. 
 
-If you want to measure success in strict terms of dollars and cents, we’ve been incredibly successful this year. **We’ve gotten our clients almost $1.7 million in settlements and benefits so far** (that’s just cash, not even counting the medical bills we’ve gotten paid for people). We’ve had the privilege of delivering our clients life-altering sums of money, peace of mind, and most importantly, a sense that somebody finally has their back after they got hurt.
+If you want to measure success in strict terms of dollars and cents, we’ve been incredibly successful this year. We’ve had the privilege of delivering our clients life-altering sums of money, peace of mind, and most importantly, a sense that somebody finally has their back after they got hurt.
 
 But success is more than money. It’s purpose, it’s self-determination, it’s autonomy, it’s lifestyle. It’s getting to raise your son with his parents around, teaching him cool things, bringing him to depositions and mediations (well, before the pandemic at least), showing him what struggle and grit and toughness and resourcefulness looks like—not just in words, but in actions. It’s getting to take bike rides in the middle of a weekday. There’s no dollar value to those things. That’s because they’re actually priceless. 
 
-And success is also professional achievement. As a firm, we’ve made law in our cases that changes important things about [how Workers’ Compensation works in Virginia](/virginia-workers-comp-lawyer/). We’ve opened up an avenue to transparency in discovering what insurance companies are paying their doctors to say against Workers’ Compensation claimants. We’ve faced down international behemoths like Amazon and Philip Morris and their multinational law firms with thousands of attorneys, and we’ve not only held our own, we’ve come out on top. 
+And success is also professional achievement. We’ve opened up an avenue to transparency in discovering what insurance companies are paying their doctors to say against Workers’ Compensation claimants. We’ve faced down international behemoths and their multinational legal teams. 
 
-Two upstarts in a tiny office they built themselves (literally swinging hammers and sanding drywall), with no big-firm infrastructure, rising from the ashes after a blow that would have crushed a lot of people, in the middle of a pandemic. Helping people hurt at work, achieving professional success, staring down giants and kicking them in the teeth, recovering huge sums of money for people and doing it all while raising an incredible little baby boy in the process with the lifestyle we wanted. That’s success. 
+Two upstarts in a tiny office they built themselves (literally swinging hammers and sanding drywall), with no big-firm infrastructure, rising from the ashes after a blow that would have crushed a lot of people, in the middle of a pandemic. Helping people hurt at work, and doing it all while raising an incredible little baby boy in the process with the lifestyle we wanted. That’s success. 
 
 ## Moving Forward, Moving Up
 
@@ -63,7 +63,7 @@ And in case you were wondering, Spud came out just perfect. He’s healthy, happ
 
 Thank you to the clients who have trusted us with their cases and their livelihoods; we take that responsibility so seriously and appreciate the trust so much. Thank you to the other lawyers and firms who have referred us cases, given us advice, and been mentors and colleagues. Thank you to our families for holding us up and at least trying to help keep us between the lines. 
 
-And thank you to that former mega-firm for the blessing in disguise of a square roundhouse kick to the face that came in the form of an email three minutes before Spud was born. After coming to and clawing our way back up on our feet, we’ve come to realize they did us (and the clients we’ve now been able to help) an incalculable favor. 
+And thank you to that former firm for the blessing of that email three minutes before Spud was born. After coming to and clawing our way back up on our feet, we’ve come to realize they did us (and the clients we’ve now been able to help) an incalculable favor. 
 
 That’s our story. That’s our first year. Happy birthday, [Pathfinder Injury Law](/)! And happy birthday, Spud! Two brothers (only one of them planned). It’s been a wild ride so far, and we’re just getting started. Here’s to many, many more.
 
@@ -82,7 +82,7 @@ That’s our story. That’s our first year. Happy birthday, [Pathfinder Injury 
 <figure><img src="/images/blog/birthday/11.jpg" alt="Can’t do this when you’re chained to a desk job. Seventeen-day family road trip through New England to see the fall foliage with Spud!" width="720" height="960" loading="lazy" /><figcaption>Can’t do this when you’re chained to a desk job. Seventeen-day family road trip through New England to see the fall foliage with Spud!</figcaption></figure>
 <figure><img src="/images/blog/birthday/12.jpg" alt="Words can’t describe the beauty in the world. We’ve never seen a sunset like this before or after. Kennebunkport, Maine during our road trip." width="960" height="960" loading="lazy" /><figcaption>Words can’t describe the beauty in the world. We’ve never seen a sunset like this before or after. Kennebunkport, Maine during our road trip.</figcaption></figure>
 <figure><img src="/images/blog/birthday/13.jpg" alt="We took Spud with us to the Virginia Workers’ Compensation Commission annual convention! He was perfectly behaved and a crowd favorite." width="960" height="720" loading="lazy" /><figcaption>We took Spud with us to the Virginia Workers’ Compensation Commission annual convention! He was perfectly behaved and a crowd favorite.</figcaption></figure>
-<figure><img src="/images/blog/birthday/14.jpg" alt="We took Spud with us to depositions, mediations, client meetings, etc. When we say we’re a family business, we mean it!" width="960" height="720" loading="lazy" /><figcaption>We took Spud with us to depositions, mediations, client meetings, etc. When we say we’re a family business, we mean it!</figcaption></figure>
+<figure><img src="/images/blog/birthday/14.jpg" alt="We took Spud with us to whatever we could. When we say we’re a family business, we mean it!" width="960" height="720" loading="lazy" /><figcaption>We took Spud with us to whatever we could. When we say we’re a family business, we mean it!</figcaption></figure>
 <figure><img src="/images/blog/birthday/15.jpg" alt="Humble beginnings. This is what Pathfinder consisted of for awhile. Bryn and Mandy with laptops and iPhones." width="720" height="960" loading="lazy" /><figcaption>Humble beginnings. This is what Pathfinder consisted of for awhile. Bryn and Mandy with laptops and iPhones.</figcaption></figure>
 <figure><img src="/images/blog/birthday/16.jpg" alt="When we finally got an office space in March 2020, we had to plan and build out the entire thing ourselves! Literally, we were in there making plans, swinging hammers, hanging drywall, painting, laying floor, etc… Very gratifying to see this project through, and very humbling to finally have an actual office." width="1024" height="1024" loading="lazy" /><figcaption>When we finally got an office space in March 2020, we had to plan and build out the entire thing ourselves! Literally, we were in there making plans, swinging hammers, hanging drywall, painting, laying floor, etc… Very gratifying to see this project through, and very humbling to finally have an actual office.</figcaption></figure>
 <figure><img src="/images/blog/birthday/17.jpg" alt="Building out the office space." width="960" height="720" loading="lazy" /><figcaption>Building out the office space.</figcaption></figure>

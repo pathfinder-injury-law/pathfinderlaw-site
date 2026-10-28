@@ -1,5 +1,5 @@
 ---
-title: "Here’s How Our Team Can Help If You Hurt Your Hip At Work"
+title: "Here’s How We Can Help If You Hurt Your Hip At Work"
 metaTitle: "Have You Hurt Your Hip At Work? Here's How Our Team Can Help"
 description: "Have you recently injured your hip while at work? Read our guide here on workplace injuries to see what you could do today."
 date: 2022-09-30T18:13:33Z
@@ -15,7 +15,7 @@ One work-related injury that is particularly troubling is a hurt hip. Hip injuri
 
 Workplace injuries can be challenging to overcome in a short period of time, and you need to be aware of what to do when one happens to you. If you suffer an injury to your hip in the workplace in Virginia, there are certain steps you will need to take to better your chances at obtaining workers’ compensation benefits.
 
-Within thirty days of the incident that caused your personal injury, you must submit written notice to your employer. Simply telling your employer about the incident is not ideal; it should be written according to Virginia Code [§ 65.2-600](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/).
+Within thirty days of the incident that caused your personal injury, you must give notice to your employer. Written notice is best because it is easier to prove. See Virginia Code [§ 65.2-600](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/).
 
 Be sure to include the following in your written incident report:
 
@@ -28,7 +28,7 @@ As the injured worker, you, the claimant, will need to also file a claim with th
 
 Once the filing of the [injury claim](/what-happens-when-you-file-a-workers-comp-claim/) occurs, the Virginia Workers’ Compensation (VWC) Commission will issue a 30-day order to the employer or their insurance company to force them to indicate whether they are accepting or denying the claim.
 
-Your employer or their insurance carrier must make you aware of their intent toward your workers’ compensation claim. They can either accept, deny, or say they are investigating your claim. If they say their intent is to investigate, it means they are stating that they have a lack of sufficient evidence from the employee or another third party to make a determination and will identify what is missing. This is outlined in Virginia Code § 65.2-601. A workers’ comp attorney can review what is missing and work toward proving your claim and potentially seeking workers’ comp benefits and potentially a lump sum payment settlement down the road.
+Your employer or their insurance carrier must make you aware of their intent toward your workers’ compensation claim. They can either accept, deny, or say they are investigating your claim. If they say their intent is to investigate, it means they are stating that they have a lack of sufficient evidence from the employee or another third party to make a determination and will identify what is missing. This is outlined in Virginia Code § 65.2-701. A workers’ comp attorney can review what is missing and work toward proving your claim and potentially seeking workers’ comp benefits and potentially a lump sum payment settlement down the road.
 
 ## Does Your Hip Injury Make You Eligible for Workers’ Comp?
 

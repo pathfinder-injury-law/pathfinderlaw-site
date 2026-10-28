@@ -9,7 +9,7 @@ tags: ["claim-process","benefits"]
 
 Work-related injuries can be devastating and not just physically. The costs incurred due to a work-related injury can put a major dent in your financial status, which is why it’s important to [consult an attorney and claim compensation](/virginia-workers-comp-lawyer/) when you’ve been injured on the job.
 
-Fortunately, Virginia has a [Workers’ Compensation Act](https://law.lis.virginia.gov/vacode/title65.2/) that provides access to benefits without having to go to court. Employers with three or more people, which usually means two or more employees plus the owner, are required to have Workers’ Comp coverage for their employees.
+Fortunately, Virginia has a [Workers’ Compensation Act](https://law.lis.virginia.gov/vacode/title65.2/) that provides access to benefits without having to go to court. Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance.
 
 If your employer has you covered under Workers’ Comp insurance, it’s still important to know if your situation qualifies for Workers’ Comp benefits in Virginia.
 
@@ -19,7 +19,7 @@ If your employer has you covered under Workers’ Comp insurance, it’s still i
 
 ## When Should You File Your Claim for Workers’ Comp?
 
-If you have a right to Workers’ Comp in Virginia, you should [file it within two years](https://law.lis.virginia.gov/vacodefull/title65.2/#:~:text=%C2%A7%2065.2-601.%20Time%20for%20filing%20claim.) from the date of the work-related accident, although exceptions apply. In case of death, the claim must be filed within two years from the death. Otherwise, your right to pursue it will be forever barred, and you will have to pursue your claims in a court of law.
+If you have a right to Workers’ Comp in Virginia, you should [file it within two years](https://law.lis.virginia.gov/vacodefull/title65.2/#:~:text=%C2%A7%2065.2-601.%20Time%20for%20filing%20claim.) from the date of the work-related accident, although exceptions apply. In case of death, the claim must be filed within two years from the death. Otherwise, your right to pursue it will be forever barred. Workers’ compensation is generally the exclusive remedy against your employer, so a lawsuit against your employer is generally barred except in extremely rare situations. Claims against third parties may exist, such as suing the driver of another vehicle. Talk with a lawyer about your situation.
 
 ## What Are the Benefits You Can Claim from Workers’ Comp?
 
@@ -39,6 +39,6 @@ However, there are other things you need to prove if you want to claim your bene
 
 Even if you are qualified for Workers’ Comp, it does not always assure prompt recovery. The employer or the insurance company may argue that you are not an eligible employee or that the injury you suffered is not related to your employment.
 
-At Pathfinder Law, we believe that clients should not have to suffer twice: first from the work related injury and again from the [unjust denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) of Workers’ Comp benefits. Our Workers’ Comp attorneys can help ensure that your rights are fully represented before the other party, so you can recover what you are entitled to under the law.
+At Pathfinder Injury Law, we believe clients should not have to suffer twice: first from the work-related injury and again from the [denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) of Workers’ Comp benefits. Our Workers’ Comp attorney can help ensure your rights are fully represented, so you can recover what you are entitled to under the law.
 
 When you’re ready to take back control of your life, schedule your free consultation by calling [804-505-0633](tel:+18045050633) or fill out the contact form on this page.

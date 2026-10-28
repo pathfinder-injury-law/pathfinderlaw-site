@@ -42,7 +42,7 @@ Your answers, no matter how honest and trusting you want to be, can negatively i
 
 ## What Should I Do If Insurance Asks for a Recorded Statement?
 
-<figure class="bp-photo"><img src="/images/blog/phone-call.jpg" alt="A woman at a desk talking on the phone with a laptop open" width="1400" height="788" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@silverkblack" rel="noopener">@silverkblack</a> on Unsplash</figcaption></figure>
+<figure class="bp-photo"><img src="/images/blog/phone-call.jpg" alt="A woman at a desk talking on the phone with a laptop open" width="1400" height="788" loading="lazy" /></figure>
 
 During the call, the insurance claims adjuster often tells you they are going to record the call or asks you to provide a recorded statement. Generally, however, it is recommended that you avoid doing so without representation and instead seek legal advice before proceeding.
 
@@ -66,13 +66,13 @@ As soon as possible, contact a Virginia attorney with experience in handling wor
 
 Offer to provide the adjuster with a written statement instead. You can then take your time when writing this out. Your personal injury lawyer can also help you prepare this and review it before submission.
 
-### Do Not Volunteer More Information Than Needed
+### Do Not Volunteer Information
 
 Whether written or recorded, keep your answers short and to the point. Do not volunteer more information than needed and only answer questions the adjuster asks. If you do not know an answer or feel unsure of what response to give, let the adjuster know that you need to review your records and notes and respond at a later date. If you do not remember something, it is OK to say you do not remember.
 
 ## What Other Techniques Should I Watch Out for From Insurance Adjusters?
 
-<figure class="bp-photo"><img src="/images/blog/signing-papers.jpg" alt="Two women at a table, one signing a document" width="1400" height="933" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@gabriellefaithhenderson" rel="noopener">@gabriellefaithhenderson</a> on Unsplash</figcaption></figure>
+<figure class="bp-photo"><img src="/images/blog/signing-papers.jpg" alt="Two women at a table, one signing a document" width="1400" height="933" loading="lazy" /></figure>
 
 Insurance adjusters have plenty of tricks up their sleeves to obtain their goals of paying less or denying your claim altogether. Here are some of the techniques they might use that you need to watch out for when speaking with them.
 
@@ -102,7 +102,7 @@ In many instances, the adjuster will ignore or not return phone calls and emails
 
 ## Other Tips for Dealing with Insurance Adjusters
 
-<figure class="bp-photo"><img src="/images/blog/colleagues.jpg" alt="Two colleagues working together at a desk" width="1400" height="788" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@silverkblack" rel="noopener">@silverkblack</a> on Unsplash</figcaption></figure>
+<figure class="bp-photo"><img src="/images/blog/colleagues.jpg" alt="Two colleagues working together at a desk" width="1400" height="788" loading="lazy" /></figure>
 
 Preparing for your interactions with adjusters can help your claim. Here are a few more tips for dealing with those working on your Virginia workers’ comp claim.
 

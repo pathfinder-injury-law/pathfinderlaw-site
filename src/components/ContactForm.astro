@@ -16,7 +16,7 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
 }
 ---
 <div class="form-card">
-  <h3>Speak To An Attorney</h3>
+  <h3>Talk With Us</h3>
   <form class="contact-form" id={id} method="post" action="/contact/" novalidate data-sitekey={siteKey || TEST_SITE_KEY} data-phone={site.phoneHeader} data-phone-href={site.phoneHref}>
     <div class="field">
       <label for={`${id}-name`}>Name<span aria-hidden="true">*</span></label>
@@ -41,10 +41,7 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
     <div class="consent">
       <input id={`${id}-consent`} name="acknowledged" type="checkbox" required />
       <label for={`${id}-consent`}>
-        I understand sending this inquiry does not create an attorney-client relationship, and
-        confidentiality and conflict protections may not apply until one begins. I acknowledge I am
-        not represented by Pathfinder Injury Law unless an authorized firm representative and I both
-        sign a written representation agreement.<span aria-hidden="true">*</span>
+        I understand sending this form does not make me a client or create an attorney-client relationship, and Pathfinder Injury Law has not agreed to represent me.<span aria-hidden="true">*</span>
       </label>
     </div>
     <!-- Spam trap: people never see this field, bots fill it in. -->

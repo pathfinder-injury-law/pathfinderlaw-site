@@ -15,7 +15,7 @@ If you’re worried about the ways a previous injury can impact your claim, reac
 
 When you’re [injured in a work accident](https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf), you’re due benefits that cover the costs of your recovery. But if you already had an injury or medical condition, that previous condition may make your new injuries worse. For example, if you had already suffered a concussion in the past, a second blow to the head may lead to more severe brain damage than you would have suffered if it was your first injury.
 
-Because of this, your Workers’ Comp can be impacted if you have a pre-existing condition. This condition will be considered by your doctor, and your benefits may be reduced because of that injury. Your doctor may need to calculate how severe your injuries would be if you didn’t have the previous injury.
+Because of this, your Workers’ Comp can be impacted if you have a pre-existing condition. A pre-existing condition can be awarded in a Virginia workers’ comp case, but pre-existing injuries can also cause problems proving what’s related to your work accident. Each case depends on its unique facts, so talk with a lawyer about your situation. Your doctor may need to calculate how severe your injuries would be if you didn’t have the previous injury.
 
 ## Calculating Your Claim’s Value
 

@@ -45,7 +45,7 @@ Once you’ve filed a claim through any of the above methods, the VWC will issue
 
 After you file a claim, the Virginia Workers’ Compensation Commission will issue an order to the insurance company requiring them to respond to your claim within 30 days either approving or denying it. An initial denial of an accident victim’s workers’ compensation claim is fairly common, so there is no cause for despair just yet. The denial simply means that your employer or their insurance company will not voluntarily pay you benefits. Yet the process is far from over. 
 
-But let’s be real here: If you get to this point and the insurance company says they’re denying your claim, you need to talk with a lawyer. By law, the insurance company is required to have a lawyer in court when your claim goes to hearing. If you don’t, you’ll be going up in court against the insurance company’s lawyer. No matter how compelling you think your claim is, the odds are not in your favor at this point. So, do yourself a favor and talk to an experienced Virginia workers’ compensation attorney if the insurance company denies your claim. 
+But let’s be real here: If you get to this point and the insurance company says they’re denying your claim, you need to talk with a lawyer. The insurance company is required to have an attorney when your case goes to hearing. If you don’t, you’ll be going up in court against the insurance company’s lawyer. So, do yourself a favor and talk to an experienced Virginia workers’ compensation attorney if the insurance company denies your claim. 
 
 ### Request and Attend an Evidentiary Hearing
 
@@ -67,7 +67,7 @@ As you can see, the litigation process for a Virginia workers’ compensation cl
 
 ## What Are Common Types of Spine Injuries in the Workplace?
 
-<figure class="bp-photo"><img src="/images/blog/sore-back.jpg" alt="A woman holding her sore lower back" width="1400" height="933" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@sasun1990" rel="noopener">@sasun1990</a> on Unsplash</figcaption></figure>
+<figure class="bp-photo"><img src="/images/blog/sore-back.jpg" alt="A woman holding her sore lower back" width="1400" height="933" loading="lazy" /></figure>
 
 Many types of spinal injuries are possible in different workplaces. Some of the most common types of injuries are as follows:
 
@@ -143,7 +143,7 @@ Permanent total disability compensation, on the other hand, is much less common 
 
 ### What Were Your Wages Before Your Injury?
 
-Workers’ comp benefits can compensate for your loss of earning capacity. The amount of money you earned at your job before your injury will play a major role in determining how much you might be able to receive in workers’ comp benefits or a settlement. Generally, the law calculates your workers’ compensation rate by taking the average of your earnings in the 52 weeks prior to your accident and paying you two thirds (66%) of this figure on a weekly basis while a doctor has you totally out of work. This may be impacted by numerous other factors, though, so speak with an attorney before agreeing to any kind of compensation awards with the insurance company.
+Workers’ comp benefits can compensate for your loss of earning capacity. The amount of money you earned at your job before your injury will play a major role in determining how much you might be able to receive in workers’ comp benefits or a settlement. Generally, the law calculates your workers’ compensation rate by taking the average of your earnings in the 52 weeks prior to your accident and paying you two thirds of this figure on a weekly basis while a doctor has you totally out of work. This may be impacted by numerous other factors, though, so speak with an attorney before agreeing to any kind of compensation awards with the insurance company.
 
 ### Did Your Injuries Cause Permanent Damage?
 
@@ -167,7 +167,7 @@ To be eligible for workers’ comp benefits, you must have sustained your injuri
 
 ## Can I File a Workers’ Comp Claim If I Was Injured Driving in Virginia?
 
-<figure class="bp-photo bp-photo-portrait"><img src="/images/blog/neck-pain.jpg" alt="A person holding the back of their neck with both hands" width="800" height="1200" loading="lazy" /><figcaption>Photo by <a href="https://unsplash.com/@kkalerry" rel="noopener">@kkalerry</a> on Unsplash</figcaption></figure>
+<figure class="bp-photo bp-photo-portrait"><img src="/images/blog/neck-pain.jpg" alt="A person holding the back of their neck with both hands" width="800" height="1200" loading="lazy" /></figure>
 
 If your spinal or back injury occurred in a car accident, you may be able to qualify for workers’ comp according to the Virginia Workers’ Compensation Act and its interpretive case law. Commuting to work generally does not qualify under the workers’ compensation system unless one of the following applies:
 
