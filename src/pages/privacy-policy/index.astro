@@ -4,20 +4,81 @@ import InfoPage from '../../components/InfoPage.astro';
 // Wording is carried over from the live page (last updated April 25, 2025), unchanged.
 // Change from the live page: the meta description said "work accident and illness cases"; "illness"
 // is removed (owner's rule: no work illness content anywhere).
-// NEEDS BRYN BEFORE LAUNCH: this policy only covers text messaging (SMS). The migration plan says
-// the privacy policy must also describe the new site's contact form, Cloudflare Turnstile, web
-// analytics and how long form messages are kept. Nothing about those is written here, because
-// those facts are not final yet. The contact email below was hidden by the old site's spam
-// protection and was read from its page source.
+// Updated Oct 28, 2026 from "Privacy Policy Update - 10-28-26.docx" (Bryn's approved decisions).
+// Added: website contact form, attorney-client notice, retention, Cloudflare Turnstile (with the link
+// Cloudflare requires), Cloudflare Web Analytics, cookies, both offices. All SMS sections are unchanged
+// except "Sharing Your Information" (one sentence added) and the intro and Contact Us.
+// BEFORE LAUNCH: replace [DATE TO BE SET AT LAUNCH] with the real date; confirm Web Analytics is
+// switched on in Cloudflare (the page says it is); check the live site's cookies once after launch.
+// The contact email below was hidden by the old site's spam protection and was read from its page source.
 const title = 'Privacy Policy - Pathfinder Injury Law';
 const description =
   'Pathfinder Injury Law helps in Virginia work accident cases. View our privacy policy or contact us for a consultation.';
 ---
 <InfoPage title={title} description={description} path="/privacy-policy/" h1="Privacy Policy">
   <p>
-    We prioritize Your confidentiality and privacy. This privacy policy, last updated on April 25,
-    2025, explains how We collect, use, disclose, and protect Your information concerning SMS (Short
-    Message Service) messaging through 10DLC to enable effective communication between You and Us.
+    We prioritize Your confidentiality and privacy. This privacy policy, last updated on [DATE TO BE
+    SET AT LAUNCH], explains how We collect, use, disclose, and protect Your information when You use
+    our website, including our contact form, and concerning SMS (Short Message Service) messaging
+    through 10DLC to enable effective communication between You and Us.
+  </p>
+
+  <h2>Our Website and Contact Form</h2>
+  <p>Our website has a contact form. If You use it, We collect:</p>
+  <ul>
+    <li>Your name;</li>
+    <li>Your email address;</li>
+    <li>Your phone number;</li>
+    <li>The message You write; and</li>
+    <li>Your confirmation that You understand sending the form does not create an attorney-client relationship.</li>
+  </ul>
+  <p>
+    We use this information to read and respond to Your inquiry. Each message is saved in a database
+    hosted by Cloudflare, and a copy is emailed to two inboxes at Pathfinder Injury Law. Those emails
+    are sent through Google Workspace. We treat every message as confidential, including messages We
+    think are spam.
+  </p>
+  <p>
+    The contact form does not store Your IP address. Cloudflare, which hosts our website, may keep its
+    own technical records of requests to the site, such as the page requested and the time.
+  </p>
+
+  <h2>Sending Us an Inquiry</h2>
+  <p>
+    Sending an inquiry through this website, or by phone, email, or text, does not create an
+    attorney-client relationship. Confidentiality and conflict protections may not apply until We
+    agree to represent You. For that reason, please do not send confidential or sensitive details,
+    such as medical records or the full facts of Your case, until We have spoken with You. If You need
+    to reach Us about something urgent, call <a href="tel:+18045050633">(804) 505-0633</a>.
+  </p>
+
+  <h2>How Long We Keep Contact Form Messages</h2>
+  <ul>
+    <li>Messages from people who may need our help, and messages Our system is not sure about, are kept in our database as long as We reasonably need them.</li>
+    <li>Messages that Our system identifies as spam or automated are deleted from the database after 90 days.</li>
+  </ul>
+
+  <h2>Bot Protection (Cloudflare Turnstile)</h2>
+  <p>
+    To keep automated spam out, Our contact form uses Cloudflare Turnstile, a bot check provided by
+    Cloudflare, Inc. Turnstile runs in the background when You use the form. You are not asked to solve
+    a puzzle. To tell people from bots, Turnstile receives limited technical information from Your
+    browser, such as Your IP address, browser type, and the website it is running on. Cloudflare
+    handles that information under the
+    <a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener">Cloudflare Turnstile Privacy Addendum</a>
+    and its general Privacy Policy. We do not receive or keep the information Turnstile collects,
+    other than the result of the check.
+  </p>
+
+  <h2>Cookies and Analytics</h2>
+  <p>
+    Our website uses Cloudflare Web Analytics to see how many people visit and which pages they read.
+    Cloudflare has described this service as not using cookies and not tracking individual visitors
+    across sites. We use this only to understand and improve the site.
+  </p>
+  <p>
+    Cloudflare Turnstile may use browser storage or cookies that Cloudflare describes as strictly
+    necessary to detect bots. Apart from those, We do not use cookies on this website.
   </p>
 
   <h2>Information We Collect</h2>
@@ -40,7 +101,7 @@ const description =
   <h2>Sharing Your Information</h2>
   <p>We will never sell Your information to anyone ever. We may share or disclose Your information to third parties as necessary in the following cases:</p>
   <ul>
-    <li>Service Providers: We may share Your information with trusted third-party service providers that assist us in operating our firm, such as case management systems and SMS services. These parties are required to maintain the confidentiality and security of your information.</li>
+    <li>Service Providers: We may share Your information with trusted third-party service providers that assist us in operating our firm, such as case management systems and SMS services. These parties are required to maintain the confidentiality and security of your information. For our website contact form, these providers include Cloudflare (website hosting, database, and bot check) and Google (Google Workspace email).</li>
     <li>Third-Party Counsel and Referral Attorneys: We may share Your information with trusted third-party counsel and attorneys to whom We refer You, if You authorize Us to do so.</li>
     <li>Legal Requirements: We may disclose Your information if required by law or in response to a valid legal request such as a subpoena, court order, or government demand.</li>
   </ul>
@@ -70,6 +131,12 @@ const description =
   <ul>
     <li>By phone: <a href="tel:+18045050633">(804) 505-0633</a></li>
     <li>By email: <a href="mailto:admin@pathfinderlaw.com">admin@pathfinderlaw.com</a></li>
-    <li>By mail: Pathfinder Injury Law, 8010 Ridge Road, Suite A, Richmond, Virginia 23229</li>
+    <li>
+      By mail, or in person by appointment, at either office (the mailing address is the same as the office address):
+      <ul>
+        <li>Richmond office: Pathfinder Injury Law, 8010 Ridge Road, Suite A, Richmond, Virginia 23229</li>
+        <li>Chincoteague office: Pathfinder Injury Law, 6294 Cropper Street, Chincoteague, Virginia 23336</li>
+      </ul>
+    </li>
   </ul>
 </InfoPage>
