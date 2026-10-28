@@ -54,7 +54,6 @@ export const nav: NavItem[] = [
       { label: 'Factory Accidents', href: '/virginia-factory-accident-lawyer/' },
       { label: 'Work Vehicle Accidents', href: '/car-accident-at-work-in-virginia/' },
       { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/' },
-      { label: 'Work Illness', href: '/virginia-workers-comp-lawyer/virginia-work-illness-lawyer/' },
     ],
   },
   { label: 'Reviews', href: '/reviews/' },
