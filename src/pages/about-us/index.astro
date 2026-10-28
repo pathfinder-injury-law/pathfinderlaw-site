@@ -1,0 +1,322 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactSection from '../../components/ContactSection.astro';
+
+// Wording is carried over from the live page. Changes from the live page, for Bryn's review:
+//  - Meta description: the live English page carried a Spanish description (a bug). This is a plain
+//    English version of the same message ("lawyers" made singular per plan Section VIII, fix 6).
+//  - "Our firm is in Glen Allen" became "in Richmond" (the footer and offices list Richmond).
+//  - Powhatan County added to Areas Served: it has a page in the inventory but was missing here.
+// Claims to screen (kept as written): "highly efficient representation and great results",
+// "leading modern Workers' Compensation law firm", "We know how to win", "more than nine years",
+// "hundreds of Virginia Workers' Compensation claims".
+const title = 'About Pathfinder Injury Law - Pathfinder Injury Law';
+const description =
+  'Need help from a Richmond workers’ compensation law firm? Call Pathfinder Injury Law at 804-505-0633 to discuss your case.';
+
+const areas = [
+  ['Alexandria', '/alexandria-workers-comp-lawyer/'],
+  ['Chesapeake', '/chesapeake-workers-comp-lawyer/'],
+  ['Chesterfield County', '/chesterfield-county-workers-comp-lawyer/'],
+  ['Fairfax County', '/fairfax-county-workers-comp-lawyer/'],
+  ['Hampton', '/hampton-workers-comp-lawyer/'],
+  ['Hanover County', '/hanover-county-workers-comp-lawyer/'],
+  ['Harrisonburg', '/harrisonburg-workers-comp-worker/'],
+  ['Loudoun County', '/loudoun-county-workers-comp-lawyer/'],
+  ['Lynchburg', '/lynchburg-workers-comp-lawyer/'],
+  ['Newport News', '/newport-news-workers-comp-lawyer/'],
+  ['Norfolk', '/norfolk-workers-comp-lawyer/'],
+  ['Portsmouth', '/portsmouth-workers-comp-lawyer/'],
+  ['Powhatan County', '/powhatan-county-workers-comp-lawyer/'],
+  ['Prince William County', '/prince-william-county-workers-comp-lawyer/'],
+  ['Richmond', '/richmond-workers-comp-lawyer/'],
+  ['Roanoke', '/roanoke-workers-comp-lawyer/'],
+  ['Suffolk', '/suffolk-workers-comp-lawyer/'],
+  ['Virginia Beach', '/virginia-beach-workers-comp-lawyer/'],
+];
+
+const reasons = [
+  {
+    h: 'We bring a fighting spirit and a calming presence for our clients.',
+    body: [
+      'Let’s be perfectly honest: There are tons of Workers’ Compensation law firms in Virginia, and many of them would like to take your case. Out of all those options, why choose Pathfinder?',
+      'The other guys serve up a fancy suit-and-tie image that we simply don’t have. That’s fine. We’re betting that the workers of Virginia would prefer a little less stuffiness and a little more honesty.',
+      'How’s this for honesty? You probably won’t see us wearing a suit until we’re in the courtroom. We prefer to skip the fluff and focus on what matters. Your case matters. You matter.',
+    ],
+  },
+  {
+    h: 'We don’t take cases. We serve people.',
+    body: [
+      'You’ll never be just a number with Pathfinder Injury Law. You’re a person, and we’ll treat you like one. That means your case will be our case. Our top priority is your well-being—financial and emotional.',
+    ],
+  },
+  {
+    h: 'We’re family-owned and operated.',
+    body: [
+      'We’re a husband-and-wife team that founded our boutique Virginia law firm to serve families like yours and ours. When you reach out to us, we want you to feel like you’re reaching out to family.',
+    ],
+  },
+  {
+    h: 'We’re local.',
+    body: [
+      'Our founder, <a href="/bryn-swartz/">Bryn Swartz</a>, was born and raised in Richmond. He went to Randolph-Macon College in Ashland and the University of Richmond School of Law. Our firm is in Richmond, and we take cases across the state.',
+    ],
+  },
+  {
+    h: 'We’re experienced.',
+    body: [
+      'Our founding attorney has more than nine years of experience and has handled hundreds of Virginia Workers’ Compensation claims. We love putting our experience to use for injured workers in need.',
+    ],
+  },
+  {
+    h: 'We’re focused.',
+    body: [
+      'A lot of Virginia law firms take all kinds of cases. Not us. We are hyper-focused on Workers’ Compensation cases in Virginia. We know the ins and outs of this complex area of the law. We know how to win.',
+    ],
+  },
+];
+---
+<Base
+  title={title}
+  description={description}
+  path="/about-us/"
+  crumbs={[{ name: 'About Pathfinder Injury Law', path: '/about-us/' }]}
+  overlay
+>
+  <PageHero title="About Pathfinder Injury Law" crumbs={[{ name: 'About Pathfinder Injury Law' }]} />
+
+  <section class="section about-intro">
+    <div class="wrap narrow prose">
+      <p class="lead">
+        PATHFINDER INJURY LAW is a
+        <a href="/virginia-workers-comp-lawyer/">Worker’s Compensation law firm</a> nestled in the
+        outskirts of Richmond, Virginia, exclusively representing people who get injured in their
+        workplaces. By focusing on one area of legal practice, we’ve become intimately familiar with
+        this niche and complex area of law.
+      </p>
+      <p>
+        Our practice is made up of professionals with many years of industry experience, coming
+        together to establish a family-owned firm. We understand that the Worker’s Compensation
+        process can be very complex, frustrating, and intimidating. With Pathfinder, clients can
+        expect highly efficient representation and great results in a modernized, approachable
+        setting—unlike the typical perception that law firms are intimidating, impersonal, and rigid.
+      </p>
+      <p>
+        We believe in a new way of serving our clients, so Pathfinder is dedicated to offering a
+        genuine and up to date type of law firm to achieve excellent results. At Pathfinder Injury Law
+        we look at our clients as people, not accounts. We’ll always keep open communication with you
+        to provide ongoing guidance and support.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-sage vision">
+    <div class="wrap narrow">
+      <h2>Our Vision</h2>
+      <hr class="rule" />
+      <p class="vision-text">
+        Is to be the leading modern Workers’ Compensation law firm, helping clients through the
+        Workers’ Comp process with genuineness, skill, and commitment.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center">
+        <h2>Why Choose Us?</h2>
+        <hr class="rule" />
+      </div>
+      <div class="reasons">
+        {reasons.map((r) => (
+          <article class="reason">
+            <h3>{r.h}</h3>
+            {r.body.map((b) => <p set:html={b} />)}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sage" id="areas-served">
+    <div class="wrap">
+      <div class="section-head center">
+        <h2>Areas Served</h2>
+        <hr class="rule" />
+        <p>Pathfinder Injury Law takes clients from all corners of the state of Virginia.</p>
+      </div>
+      <ul class="areas">
+        {areas.map(([name, href]) => <li><a href={href}>{name}</a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center">
+        <h2>Meet The Team</h2>
+        <hr class="rule" />
+      </div>
+      <div class="team">
+        <a class="member" href="/bryn-swartz/">
+          <img src="/images/photos/bryn.jpg" alt="" width="900" height="900" loading="lazy" />
+          <h3>Bryn Swartz</h3>
+          <p class="role">Owner &amp; Attorney</p>
+          <p>
+            Bryn founded Pathfinder Injury Law to pursue his goal to give every client the diligent,
+            attentive service they need in the midst of a work-related injury.
+          </p>
+          <span class="more">View Profile</span>
+        </a>
+        <a class="member" href="/mandy-swartz/">
+          <img src="/images/photos/mandy.jpg" alt="" width="900" height="900" loading="lazy" />
+          <h3>Mandy Truman Swartz</h3>
+          <p class="role">Firm Administrator/Paralegal</p>
+          <p>
+            Pathfinder is a family business, and Mandy Truman Swartz rounds out the Pathfinder team
+            as firm administrator and paralegal.
+          </p>
+          <span class="more">View Profile</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <ContactSection />
+</Base>
+
+<style>
+  .narrow {
+    max-width: 48rem;
+  }
+  .about-intro {
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .vision-text {
+    font-family: var(--font-head);
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .reasons {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 52rem) {
+    .reasons {
+      grid-template-columns: 1fr 1fr;
+    }
+    .reason:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+  .reason {
+    background: var(--mist);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border-top: 0.4rem solid var(--moss);
+  }
+  .reason h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+  }
+  .reason p {
+    margin: 0 0 0.9rem;
+  }
+  .reason p:last-child {
+    margin-bottom: 0;
+  }
+  .reason :global(a) {
+    color: var(--pine);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+  }
+  #areas-served {
+    scroll-margin-top: var(--header-h);
+  }
+  .areas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 46rem) {
+    .areas {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 64rem) {
+    .areas {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .areas a {
+    display: block;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 0.9rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0.25rem 0.9rem rgba(41, 70, 52, 0.1);
+    transition: transform 0.25s var(--ease), background 0.25s, color 0.25s;
+  }
+  .areas a:hover,
+  .areas a:focus-visible {
+    background: var(--forest);
+    color: var(--white);
+    transform: translateY(-3px);
+  }
+  .team {
+    display: grid;
+    gap: 2.5rem;
+    max-width: 52rem;
+    margin-inline: auto;
+  }
+  @media (min-width: 46rem) {
+    .team {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .member {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+  .member img {
+    width: min(100%, 16rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    border: 6px solid var(--forest);
+    box-shadow: var(--shadow);
+    transition: transform 0.5s var(--ease);
+  }
+  .member:hover img {
+    transform: scale(1.03);
+  }
+  .member h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.25rem;
+  }
+  .member .role {
+    margin: 0 0 0.7rem;
+    color: var(--pine);
+    font-weight: 700;
+  }
+  .member p {
+    margin: 0 0 0.8rem;
+  }
+  .member .more {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--moss);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+  }
+</style>

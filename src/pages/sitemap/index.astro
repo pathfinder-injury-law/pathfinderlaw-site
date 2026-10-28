@@ -1,0 +1,125 @@
+---
+import InfoPage from '../../components/InfoPage.astro';
+
+// Page list copied from the live sitemap page (Oct 28). Changes from the live page:
+//  - Work Illness page removed (owner's rule), and Thank You left out (it is not for search).
+//  - "location" is shown as "Office Location", and Client Portal is added to the Pages group.
+// The list is typed by hand. Pages other threads are still building (city pages, blog posts) are
+// already included, so some links 404 in the preview until those branches are merged.
+const title = 'Sitemap - Pathfinder Injury Law';
+const description =
+  "Pathfinder Injury Law knows Virginia workers' compensation. Visit our sitemap or get in touch with our Richmond law office today.";
+
+const groups = [
+  { heading: 'Cases We Handle', links: [
+    ['Workers’ Compensation Lawyer Serving Virginia', '/virginia-workers-comp-lawyer/'],
+    ['How to Appeal a Workers’ Comp Denial in Virginia', '/how-to-appeal-a-workers-comp-denial-in-virginia/'],
+    ['Virginia Construction Accident Lawyer', '/virginia-construction-accident-lawyer/'],
+    ['Virginia Factory Accident Lawyer', '/virginia-factory-accident-lawyer/'],
+    ['Virginia Work-Related Car Accident Lawyer', '/car-accident-at-work-in-virginia/'],
+    ['Back Injury Attorney Serving Virginia', '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/']
+  ] },
+  { heading: 'Meet The Team', links: [
+    ['Bryn Swartz', '/bryn-swartz/'],
+    ['Mandy Truman Swartz', '/mandy-swartz/']
+  ] },
+  { heading: 'Posts', links: [
+    ['What to Do If Insurance Asks for a Recorded Statement', '/insurance-recorded-statement/'],
+    ['What Should You Do If You Have A Spine Injury at Work', '/what-should-you-do-if-you-have-a-spine-injury-at-work/'],
+    ['Work Comp Settlement for Foot Injury', '/foot-injury-workers-comp/'],
+    ['How To Avoid Work Compensation Adjuster’s Tricks', '/how-to-avoid-work-comp-adjusters-tricks/'],
+    ['How Much You Should Expect For Your Work Injury Compensation', '/work-injury-compensation/'],
+    ['Here’s What You Can Expect After Hurting Your Knee At Work', '/knee-injury-compensation/'],
+    ['Here’s How Our Team Can Help If You Hurt Your Hip At Work', '/hurt-your-hip-at-work/'],
+    ['How to Qualify for Workers’ Comp in Virginia', '/how-to-qualify-for-workers-comp-in-virginia/'],
+    ['How to File a Workers’ Compensation Claim', '/how-to-file-a-workers-comp-claim/'],
+    ['Do Pre-Existing Conditions affect Workers’ Comp?', '/pre-existing-conditions-and-workers-comp-claims/'],
+    ['What to Do When Your Employer Lists You as an Independent Contractor?', '/what-to-do-when-your-employer-lists-you-as-an-independent-contractor/'],
+    ['Important Questions For Your Workers’ Comp Attorney', '/questions-to-ask-a-workers-comp-lawyer/'],
+    ['How to Prepare for a Workers’ Comp Deposition', '/how-to-prepare-for-a-workers-comp-deposition/'],
+    ['How Faulty Equipment Causes Workplace Injuries', '/how-faulty-equipment-causes-workplace-injuries/'],
+    ['What Causes Shoulder Injuries At Work', '/causes-of-on-the-job-shoulder-injuries/'],
+    ['Employer Retaliation and Your Workers’ Comp Rights', '/employer-retaliation-and-your-workers-comp-rights/'],
+    ['Essential Elements of a Successful Workers’ Comp Claim', '/essential-elements-of-a-successful-workers-comp-claim/'],
+    ['Automated Warehouse Injuries: Amazon Workers Protection', '/automated-warehouse-injuries-what-amazon-workers-need-to-know/'],
+    ['Steps to Prepare For Your Workers’ Comp Hearing', '/steps-to-take-before-a-workers-comp-hearing/'],
+    ['Happy Birthday to Pathfinder Injury Law!', '/happy-birthday-to-pathfinder-injury-law/']
+  ] },
+  { heading: 'Areas Served', links: [
+    ['Richmond Workers’ Comp Attorney', '/richmond-workers-comp-lawyer/'],
+    ['Powhatan County Workers’ Compensation Attorney', '/powhatan-county-workers-comp-lawyer/'],
+    ['Hanover County Workers’ Compensation Attorney', '/hanover-county-workers-comp-lawyer/'],
+    ['Chesterfield County Workers’ Comp Lawyer', '/chesterfield-county-workers-comp-lawyer/'],
+    ['Prince William County Workers’ Comp Lawyer', '/prince-william-county-workers-comp-lawyer/'],
+    ['Fairfax County Workers’ Compensation Attorney', '/fairfax-county-workers-comp-lawyer/'],
+    ['Loudoun County Workers’ Comp Lawyer', '/loudoun-county-workers-comp-lawyer/'],
+    ['Harrisonburg Workers’ Compensation Lawyer', '/harrisonburg-workers-comp-worker/'],
+    ['Lynchburg Workers’ Compensation Attorney', '/lynchburg-workers-comp-lawyer/'],
+    ['Suffolk Workers’ Compensation Attorney', '/suffolk-workers-comp-lawyer/'],
+    ['Portsmouth Workers’ Compensation Attorney', '/portsmouth-workers-comp-lawyer/'],
+    ['Newport News Workers’ Compensation Lawyer', '/newport-news-workers-comp-lawyer/'],
+    ['Roanoke Workers’ Comp Lawyer', '/roanoke-workers-comp-lawyer/'],
+    ['Hampton Workers’ Compensation Attorney', '/hampton-workers-comp-lawyer/'],
+    ['Alexandria Workers’ Compensation Lawyer', '/alexandria-workers-comp-lawyer/'],
+    ['Chesapeake Workers’ Compensation Attorney', '/chesapeake-workers-comp-lawyer/'],
+    ['Norfolk Workers’ Compensation Attorney', '/norfolk-workers-comp-lawyer/'],
+    ['Virginia Beach Workers’ Compensation Lawyer', '/virginia-beach-workers-comp-lawyer/']
+  ] },
+  { heading: 'Pages', links: [
+    ['Virginia Work Injury Lawyer', '/virginia-work-injury-lawyer/'],
+    ['Office Location', '/location/'],
+    ['Pathfinder Injury Law – Virginia Workers’ Comp Lawyer', '/'],
+    ['What Happens if a Workers’ Comp Insurer Delays Benefits?', '/what-if-a-workers-comp-insurer-delays-my-benefits/'],
+    ['Are Workers’ Comp Benefits Taxable?', '/are-workers-comp-benefits-taxable/'],
+    ['What Happens After You File a Workers’ Comp Claim?', '/what-happens-when-you-file-a-workers-comp-claim/'],
+    ['How Long Can a Workers’ Comp Claim Stay Open?', '/how-long-can-a-workers-comp-claim-stay-open/'],
+    ['How to Settle a Virginia Workers’ Comp Dispute', '/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/'],
+    ['Should I Accept a Lump Sum Settlement for My Workers’ Comp Claim?', '/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/'],
+    ['Abogados de Compensación al Trabajador en Richmond', '/abogados-de-compensacion-al-trabajador-en-richmond/'],
+    ['Abogados de Compensación al Trabajador en Virginia', '/abogados-de-compensacion-al-trabajador-en-virginia/'],
+    ['How to Win Your Virginia Workers’ Comp Case', '/how-to-win-a-virginia-workers-comp-case/'],
+    ['Disclaimer & Terms of Use', '/disclaimer/'],
+    ['Sitemap', '/sitemap/'],
+    ['About Pathfinder Injury Law', '/about-us/'],
+    ['Virginia Workers’ Compensation Process', '/workers-comp-process-in-virginia/'],
+    ['Workers’ Comp Settlement in Virginia', '/workers-comp-settlement-in-virginia/'],
+    ['Virginia Workers’ Comp FAQ', '/virginia-workers-comp-faq/'],
+    ['Recent Client Testimonials', '/reviews/'],
+    ['Results', '/results/'],
+    ['Contact', '/contact/'],
+    ['Blog', '/blog/'],
+    ['Privacy Policy', '/privacy-policy/'],
+    ['Client Portal', '/client-portal/']
+  ] },
+  { heading: 'Resources', links: [
+    ['Virginia Workers’ Compensation Guide', '/virginia-workers-comp-lawyer/virginia-workers-compensation/'],
+    ['What Happens if Your Workers’ Comp Claim Is Denied?', '/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/'],
+    ['Can I Receive Workers’ Comp and Social Security Disability at the Same Time?', '/virginia-workers-comp-lawyer/can-i-receive-workers-comp-and-social-security-disability-at-the-same-time/'],
+    ['Can an Employer Deny a Workers’ Comp Claim?', '/virginia-workers-comp-lawyer/can-an-employer-deny-a-workers-comp-claim/'],
+    ['Am I Eligible for Vocational Rehabilitation After an Injury?', '/virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation/'],
+    ['Maximum Medical Improvement in Virginia Workers’ Comp Claims', '/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/'],
+    ['How to Prepare for an IME in Virginia', '/virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia/'],
+    ['What Happens After a Workers’ Comp IME in Virginia?', '/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/'],
+    ['Occupational Diseases Covered Under Virginia Workers’ Comp', '/virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp/'],
+    ['How to Calculate a Virginia Workers’ Comp Settlement', '/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/'],
+    ['What Does Workers’ Comp Cover in Virginia?', '/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/'],
+    ['Virginia Workers’ Comp Hearing Preparation', '/virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/'],
+    ['Does Virginia Workers’ Comp Pay for Lost Wages?', '/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/'],
+    ['Average Workers’ Comp Settlement in Virginia', '/virginia-workers-comp-lawyer/average-workers-comp-settlement-in-virginia/'],
+    ['How Is Workers’ Comp Benefits Calculated in Virginia?', '/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/'],
+    ['How Long Do Virginia Workers’ Comp Settlements Take?', '/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/'],
+    ['When Does Virginia Workers’ Comp Start Paying?', '/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/'],
+    ['If I Get Injured at Work in Virginia, Do I Get Paid?', '/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/']
+  ] },
+];
+---
+<InfoPage title={title} description={description} path="/sitemap/" h1="Sitemap" showContact={false}>
+  {groups.map((g) => (
+    <>
+      <h2>{g.heading}</h2>
+      <ul class="map-list">
+        {g.links.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+    </>
+  ))}
+</InfoPage>

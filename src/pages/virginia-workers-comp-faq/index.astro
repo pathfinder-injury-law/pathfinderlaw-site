@@ -1,0 +1,165 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { site } from '../../data/site';
+
+// Wording is carried over from the live page. Changes from the live page:
+//  - Two-year deadline: added "although exceptions apply" (same reviewed wording as the Workers' Comp page).
+//  - Typo fixed: "File a claim with the Virginia Workers' Compensation benefits" now says "Commission".
+// Statements of Virginia law below are the live site's, unchanged otherwise, and still need Bryn's review:
+//  - what qualifies as a work accident (five-part list, including willful misconduct / safety rule violation)
+//  - the two "important dates" and the employer's right to stop paying if no claim or award
+//  - the list of available benefits, including "Lifetime medical benefits"
+//  - the steps to receive benefits
+const title = 'Virginia Workers’ Comp FAQ - Pathfinder Injury Law';
+const description =
+  'Pathfinder Injury Law exclusively represents injured workers who are entitled to compensation. Check out our Virginia workers’ comp FAQ.';
+
+const more = [
+  ['What happens when you file a Workers’ Comp claim?', '/what-happens-when-you-file-a-workers-comp-claim/'],
+  ['What if a Workers’ Comp insurer delays my benefits?', '/what-if-a-workers-comp-insurer-delays-my-benefits/'],
+  ['What’s the Workers’ Comp Process in Virginia?', '/workers-comp-process-in-virginia/'],
+  ['What types of Workers’ Compensation settlements are there?', '/workers-comp-settlement-in-virginia/'],
+  ['Should I accept a lump sum settlement for my Workers’ Comp claim?', '/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/'],
+  ['How long can a Workers’ Comp claim stay open?', '/how-long-can-a-workers-comp-claim-stay-open/'],
+  ['Can I receive Workers’ Comp and Social Security Disability at the same time?', '/virginia-workers-comp-lawyer/can-i-receive-workers-comp-and-social-security-disability-at-the-same-time/'],
+  ['Does Virginia Workers’ Comp pay for lost wages?', '/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/'],
+  ['How do you win a Virginia Workers’ Comp case?', '/how-to-win-a-virginia-workers-comp-case/'],
+  ['How do you settle a Virginia Workers’ Comp dispute?', '/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/'],
+  ['How is Workers’ Comp calculated in Virginia?', '/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/'],
+  ['How long do Virginia Workers’ Comp settlements take?', '/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/'],
+  ['How do you calculate a Virginia Workers’ Comp settlement?', '/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/'],
+  ['How do you prepare for a Virginia Workers’ Comp hearing?', '/virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/'],
+  ['How do you prepare for an IME in Virginia?', '/virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia/'],
+  ['If I get injured at work in Virginia, do I get paid?', '/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/'],
+  ['What occupational diseases are covered under Virginia Workers’ Comp?', '/virginia-workers-comp-lawyer/occupational-diseases-covered-under-virginia-workers-comp/'],
+  ['What does Workers’ Comp cover in Virginia?', '/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/'],
+  ['What happens after a Workers’ Comp IME in Virginia?', '/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/'],
+  ['What happens if your Workers’ Comp claim is denied?', '/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/'],
+  ['What is maximum medical improvement in Virginia Workers’ Comp claims?', '/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/'],
+  ['When does Virginia Workers’ Comp start paying?', '/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/'],
+];
+---
+<Base
+  title={title}
+  description={description}
+  path="/virginia-workers-comp-faq/"
+  crumbs={[{ name: 'Virginia Workers’ Comp FAQ', path: '/virginia-workers-comp-faq/' }]}
+  overlay
+>
+  <PageHero title="Virginia Workers’ Comp FAQ" crumbs={[{ name: 'Virginia Workers’ Comp FAQ' }]} />
+
+  <div class="wrap page-body">
+    <article class="prose">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq">
+        <details open>
+          <summary>What qualifies as a work accident in Virginia?</summary>
+          <div class="answer">
+            <p>
+              Just because you get hurt at work doesn’t mean you automatically get Workers’
+              Compensation benefits. Generally speaking, an accident must:
+            </p>
+            <ul>
+              <li>Occur at work or during a work-related function.</li>
+              <li>Arise out of and occur in the course of your employment.</li>
+              <li>Be caused by a specific, identifiable work activity that causes a sudden mechanical change in the body.</li>
+              <li>Happen suddenly at a specific time.</li>
+              <li>Not be the result of willful misconduct or a safety rule violation.</li>
+            </ul>
+            <p>Do you have a case? Call today for a free consultation – <a href={site.phoneHref}>(804) 505-0633</a>.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Are there time limits for my VA Workers’ Comp claim?</summary>
+          <div class="answer">
+            <p>Yes, time limits are very important in Virginia Workers Compensation claims.</p>
+            <p>
+              Important date #1: An employee must file a claim with the Workers’ Compensation
+              Commission within two years from the date of the accident, although exceptions apply, or
+              any right to benefits may be lost.
+            </p>
+            <p>
+              Important date #2: If after returning to work, you are again disabled, you must file a
+              claim within two years of the date for which you were last paid compensation under an
+              award.
+            </p>
+            <p>
+              If no claim is filed with the Commission or no award entered, the employer may stop
+              paying medical expenses or wage loss at any time.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What Workers’ Comp benefits can I receive in Virginia?</summary>
+          <div class="answer">
+            <p>There are several potential benefits available under the Virginia Workers’ Compensation Act:</p>
+            <ul>
+              <li>Wage loss</li>
+              <li>Lifetime medical benefits</li>
+              <li>Permanent partial disability benefits (for loss of use, disfigurement, scarring, etc…)</li>
+              <li>Permanent and total disability benefits</li>
+              <li>Death benefits</li>
+              <li>Lump-sum settlements</li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>What should I have to do to receive Worker’ Comp benefits?</summary>
+          <div class="answer">
+            <ul>
+              <li>Give notice to your employer as soon as possible about your accident and injury.</li>
+              <li>
+                File a claim with the Virginia Workers’ Compensation Commission as soon as possible.
+                Ultimately, the Virginia Workers’ Compensation Commission will decide if you are
+                entitled to benefits, but you must file a claim.
+              </li>
+              <li>Get medical treatment and obtain your medical records.</li>
+              <li>Obtain any documents related to your accident from your employer.</li>
+              <li>
+                Have your case evaluated by an experienced
+                <a href="/virginia-workers-comp-lawyer/">Workers’ Compensation attorney</a> – call
+                <a href={site.phoneHref}>804-505-0633</a>.
+              </li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>Should I get a Workers’ Comp attorney in VA?</summary>
+          <div class="answer">
+            <p>It depends.</p>
+            <p>
+              Sometimes we will speak with clients and recommend they not retain counsel. Some cases
+              are complex and some are not. We are happy to help you make a good decision. No
+              obligations. No heavy-handedness. Just help for you. Call
+              <a href="/">Pathfinder Injury Law</a> today – <a href={site.phoneHref}>(804) 505-0633</a>.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <h2 id="more">Additional FAQ’s</h2>
+      <ul class="more-faq">
+        {more.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+    </article>
+
+    <aside class="side" aria-label="Contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+      <nav class="side-card" aria-label="On this page">
+        <h2>On This Page</h2>
+        <ul class="toc">
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+          <li><a href="#more">Additional FAQ’s</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <ContactSection />
+</Base>

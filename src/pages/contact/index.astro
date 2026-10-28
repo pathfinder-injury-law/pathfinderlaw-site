@@ -1,0 +1,117 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { site } from '../../data/site';
+
+// Wording is carried over from the live page ("Hurt? We'll Show You The Way", the free-consultation
+// block, "Video Consultations Available"). Changes from the live page:
+//  - Meta description: "Contact VA workers' comp lawyers" became "our team" (plan Section VIII, fix 6).
+//  - The live page linked to a separate /location/ page for the Richmond office. Both offices
+//    (Richmond and Chincoteague, by appointment only) are shown here instead, from site.ts.
+const title = 'Contact - Pathfinder Injury Law';
+const description =
+  "Hurt at work and don't know where to turn? Make Pathfinder Injury Law your first call. Contact our VA workers' comp team at 804-505-0633.";
+---
+<Base
+  title={title}
+  description={description}
+  path="/contact/"
+  crumbs={[{ name: 'Contact Us', path: '/contact/' }]}
+  overlay
+>
+  <PageHero title="Contact Us" crumbs={[{ name: 'Contact Us' }]} />
+
+  <section class="section contact-intro">
+    <div class="wrap">
+      <div class="section-head center">
+        <h2>Hurt? We’ll Show You The Way</h2>
+        <hr class="rule" />
+        <p>Video Consultations Available</p>
+      </div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h3>Call Us</h3>
+          <a class="big-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+          <ul class="hours">
+            {site.hours.map((h) => <li>{h}</li>)}
+          </ul>
+        </div>
+        {site.offices.map((o) => (
+          <div class="contact-card">
+            <h3>{o.name} Office</h3>
+            <address>
+              {o.lines.map((l) => <span>{l}</span>)}
+            </address>
+            <p class="appt">By appointment only</p>
+            <a class="map-link" href={o.mapUrl} rel="noopener">View on Google Maps</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <ContactSection />
+</Base>
+
+<style>
+  .contact-intro {
+    padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .contact-cards {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 52rem) {
+    .contact-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .contact-card {
+    background: var(--mist);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border-top: 0.4rem solid var(--moss);
+    text-align: center;
+  }
+  .contact-card h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .big-phone {
+    display: block;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+  .big-phone:hover {
+    color: var(--pine);
+  }
+  .hours {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  address {
+    font-style: normal;
+    margin-bottom: 0.6rem;
+  }
+  address span {
+    display: block;
+  }
+  .appt {
+    margin: 0 0 1rem;
+    font-weight: 700;
+    color: var(--pine);
+  }
+  .map-link {
+    font-weight: 700;
+    text-decoration-color: var(--moss);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+  }
+</style>
