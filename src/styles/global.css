@@ -508,8 +508,10 @@ body:not(.has-overlay) main {
   left: 0;
   bottom: -1px;
   width: 100%;
-  height: clamp(1.8rem, 3.6vw, 3.25rem);
-  display: block;
+  height: 3.75rem;
+  background: var(--torn-fill, var(--white));
+  -webkit-mask: url("/images/edge.svg") repeat-x left bottom / auto 100%;
+  mask: url("/images/edge.svg") repeat-x left bottom / auto 100%;
 }
 
 /* Hero text rises in one line at a time. */
