@@ -45,13 +45,12 @@ const results = [
         {results.map((r) => (
           <article class="result">
             <p class="amount" data-count={r.count}>{r.amount}</p>
-            <span class="gross caps">Gross amount, before attorney’s fees, costs, and liens</span>
             <p>{r.text}</p>
           </article>
         ))}
       </div>
       <p class="disclaimer" data-reveal>
-        Every case is different. These results depended on facts unique to each case and do not
+        Amounts shown are gross, before attorney’s fees, costs, and liens. Every case is different. These results depended on facts unique to each case and do not
         predict or guarantee the result in yours.
       </p>
     </div>
