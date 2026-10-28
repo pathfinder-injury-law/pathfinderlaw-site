@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import TornEdge from '../components/TornEdge.astro';
+import TopicIcon from '../components/TopicIcon.astro';
 import { site } from '../data/site';
 
 // Title, description and wording match the current live homepage, except the
@@ -9,11 +11,11 @@ const description =
   "At Pathfinder Injury Law, all we do is workers' comp cases. Call our dedicated law office in Richmond, Virginia at 804-505-0633 today.";
 
 const topics = [
-  { label: 'Construction Accidents', href: '/virginia-construction-accident-lawyer/' },
-  { label: 'Factory Accidents', href: '/virginia-factory-accident-lawyer/' },
-  { label: 'Vehicle Accidents', href: '/car-accident-at-work-in-virginia/' },
-  { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/' },
-  { label: 'Work Illnesses', href: '/virginia-workers-comp-lawyer/virginia-work-illness-lawyer/' },
+  { label: 'Construction Accidents', href: '/virginia-construction-accident-lawyer/', icon: 'construction' },
+  { label: 'Factory Accidents', href: '/virginia-factory-accident-lawyer/', icon: 'factory' },
+  { label: 'Vehicle Accidents', href: '/car-accident-at-work-in-virginia/', icon: 'vehicle' },
+  { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', icon: 'spine' },
+  { label: 'Work Illnesses', href: '/virginia-workers-comp-lawyer/virginia-work-illness-lawyer/', icon: 'lungs' },
 ];
 
 const traits = ['Local', 'Experienced', 'Focused', 'Fighting Spirit', 'Calming Presence'];
@@ -54,19 +56,21 @@ const results = [
         <a class="btn btn-primary" href="/contact/">Free Consultation</a>
       </div>
     </div>
+    <TornEdge />
   </section>
 
   <!-- Intro -->
   <section class="section">
-    <div class="wrap intro">
+    <div class="wrap intro" data-reveal>
       <img class="intro-icon" src="/images/brand/icon.png" width="626" height="626" alt="" />
       <div>
         <h2>Injured At Work?</h2>
         <hr class="rule" />
-        <p class="lede">We’ll guide you on the path to compensation.</p>
+        <p class="lede lede-caps">We’ll guide you on the path to <mark>compensation.</mark></p>
         <p>
-          Pathfinder Injury Law is a Worker’s Compensation law firm nestled in the outskirts of
-          Richmond, Virginia, exclusively representing people who get injured in their workplaces.
+          <strong>Pathfinder Injury Law</strong> is a Worker’s Compensation law firm nestled in the
+          outskirts of Richmond, Virginia, exclusively representing people who get injured in their
+          workplaces.
         </p>
         <div class="btn-row">
           <a class="btn btn-primary" href="/about-us/">Learn About Our Firm</a>
@@ -77,14 +81,14 @@ const results = [
   </section>
 
   <!-- All we do -->
-  <section class="section focus-band">
+  <section class="section focus-band contour on-dark">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head center" data-reveal>
         <p class="caps">All We Do Is</p>
         <h2>Workers’ Comp Law</h2>
         <hr class="rule" />
       </div>
-      <div class="tiles">
+      <div class="tiles" data-reveal>
         <a class="tile" href="/virginia-workers-comp-lawyer/">
           <img src="/images/photos/tile-b.jpg" alt="" width="1400" height="886" loading="lazy" />
           <h3>Workers’ Compensation</h3>
@@ -94,8 +98,15 @@ const results = [
           <h3>Workers’ Comp Denials</h3>
         </a>
       </div>
-      <ul class="topic-list">
-        {topics.map((t) => <li><a href={t.href}>{t.label}</a></li>)}
+      <ul class="topic-grid" data-reveal>
+        {topics.map((t) => (
+          <li>
+            <a href={t.href}>
+              <span class="topic-circle"><TopicIcon name={t.icon} /></span>
+              <span class="topic-label">{t.label}</span>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   </section>
@@ -103,11 +114,11 @@ const results = [
   <!-- Why choose us -->
   <section class="section section-sage">
     <div class="wrap">
-      <div class="section-head center">
+      <div class="section-head center" data-reveal>
         <h2>Why Choose Us?</h2>
         <hr class="rule" />
       </div>
-      <div class="why">
+      <div class="why" data-reveal>
         <a class="person" href="/bryn-swartz/">
           <img src="/images/photos/bryn.jpg" alt="" width="900" height="900" loading="lazy" />
           <h3>Bryn Swartz</h3>
@@ -128,11 +139,11 @@ const results = [
   <!-- Results -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <h2>Results For Our Clients</h2>
         <hr class="rule" />
       </div>
-      <div class="results-grid">
+      <div class="results-grid" data-reveal>
         {results.map((r) => (
           <article class="result">
             <p class="amount">{r.amount}</p>
@@ -151,7 +162,8 @@ const results = [
 
   <!-- Reviews -->
   <section class="section section-sage">
-    <div class="wrap review">
+    <div class="wrap review" data-reveal>
+      <img class="quote-mark" src="/images/quote.svg" width="46" height="34" alt="" />
       <h2>Our Clients Love Us</h2>
       <hr class="rule" style="margin-inline: auto" />
       <blockquote>
@@ -167,8 +179,8 @@ const results = [
   </section>
 
   <!-- Call to action -->
-  <section class="section section-dark cta on-dark">
-    <div class="wrap">
+  <section class="section cta contour on-dark">
+    <div class="wrap" data-reveal>
       <ul class="cta-points caps">
         <li>No Pressure</li>
         <li>No Hidden Fees</li>

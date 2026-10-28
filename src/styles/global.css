@@ -139,8 +139,8 @@ p {
   letter-spacing: 0.1em;
   font-size: 0.9rem;
   text-decoration: none;
-  padding: 0.95rem 1.6rem;
-  border-radius: var(--radius);
+  padding: 0.95rem 1.75rem;
+  border-radius: 999px;
   border: 2px solid transparent;
   line-height: 1.2;
   text-align: center;
@@ -306,11 +306,19 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(41, 70, 52, 0.88), rgba(41, 70, 52, 0.78));
+  background: linear-gradient(180deg, rgba(41, 70, 52, 0.72), rgba(41, 70, 52, 0.58) 60%, rgba(41, 70, 52, 0.82));
   z-index: -1;
 }
 .hero .wrap {
-  padding-block: clamp(3.5rem, 10vw, 7rem);
+  padding-block: clamp(5rem, 14vw, 9.5rem) clamp(6rem, 15vw, 11rem);
+}
+.torn {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: clamp(1.6rem, 3.4vw, 3rem);
+  display: block;
 }
 .hero-kicker {
   display: inline-flex;
@@ -411,8 +419,10 @@ p {
 .tile {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  min-height: 17rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 19rem;
   border-radius: var(--radius);
   overflow: hidden;
   isolation: isolate;
@@ -432,8 +442,12 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(41, 70, 52, 0.05) 30%, rgba(41, 70, 52, 0.92));
+  background: rgba(41, 70, 52, 0.55);
   z-index: -1;
+  transition: background 0.3s ease;
+}
+.tile:hover::before {
+  background: rgba(41, 70, 52, 0.35);
 }
 .tile:hover img {
   transform: scale(1.04);
@@ -441,28 +455,105 @@ p {
 .tile h3 {
   margin: 0;
   padding: 1.5rem;
-  font-size: 1.6rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
-.topic-list {
+
+/* Case-type circles */
+.topic-grid {
   list-style: none;
-  margin: 0;
+  margin: 3rem 0 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
+}
+@media (min-width: 46rem) {
+  .topic-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.topic-grid a {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.topic-list a {
-  display: block;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: center;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 999px;
-  padding: 0.6rem 1.2rem;
 }
-.topic-list a:hover {
+.topic-circle {
+  display: grid;
+  place-items: center;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
   background: var(--sun);
   color: var(--forest);
-  border-color: var(--sun);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.topic-icon {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+.topic-label {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+.topic-grid a:hover .topic-circle {
+  transform: translateY(-4px);
+  background: var(--white);
+}
+
+/* Topographic texture behind dark sections (the old site's signature look) */
+.contour {
+  position: relative;
+  isolation: isolate;
+  background: var(--forest);
+}
+.contour::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/contour-map.svg") center / cover no-repeat;
+  opacity: 0.07;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.lede-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1.15rem;
+}
+mark {
+  background: linear-gradient(transparent 55%, rgba(255, 208, 64, 0.85) 55%);
+  color: inherit;
+  padding: 0 0.15em;
+}
+.quote-mark {
+  margin: 0 auto 1rem;
+  width: 3rem;
+  height: auto;
+}
+
+/* Gentle fade-up as sections scroll into view. Without script, or with
+   reduced motion, everything just shows. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js [data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Why choose us */

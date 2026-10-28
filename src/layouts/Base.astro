@@ -112,5 +112,19 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      // Fade-up on scroll. If anything here fails, the page simply shows normally.
+      (function () {
+        var els = document.querySelectorAll('[data-reveal]');
+        if (!('IntersectionObserver' in window) || !els.length) return;
+        document.documentElement.classList.add('js');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        els.forEach(function (el) { io.observe(el); });
+      })();
+    </script>
   </body>
 </html>
