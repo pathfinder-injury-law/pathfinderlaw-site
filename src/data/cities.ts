@@ -36,7 +36,7 @@ const CODE = 'https://law.lis.virginia.gov/vacode/';
 // Reviewed wording reused from the Workers' Comp page.
 const EMPLOYER_THRESHOLD =
   'Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance.';
-const NOTICE = 'The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist.';
+const NOTICE = 'The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist.';
 const DEADLINE =
   'Your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply.';
 const COMPENSABLE =
@@ -226,7 +226,7 @@ export const cities: City[] = [
             list: [
               'Check to Make Sure You’re OK – Even injuries that appear minor can have an impact. If you’re bleeding, feel lightheaded, or have a broken bone, you may need immediate medical attention.',
               'Document Your Injuries and Surroundings – Take pictures of everything—it helps lend credibility to your claim.',
-              `[Notify Your Employer](${CODE}title65.2/chapter6/section65.2-600/) of Your Injuries – If you’ve been taken immediately to the hospital, odds are good that your supervisor is already aware. Regardless, the Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits.`,
+              `[Notify Your Employer](${CODE}title65.2/chapter6/section65.2-600/) of Your Injuries – If you’ve been taken immediately to the hospital, odds are good that your supervisor is already aware. Regardless, the Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits.`,
             ],
           },
         ],
@@ -332,7 +332,7 @@ export const cities: City[] = [
             list: [
               'Document Everything – Take pictures of the accident site before you leave the premises, and take pictures of your injuries.',
               'Receive Medical Attention – Going to see a trusted doctor can help get your injuries on file—an important piece of evidence that you’ll need for your Workers’ Compensation claim. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.',
-              'Inform Your Supervisor – The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist. Failing to do so could affect your ability to receive benefits.',
+              'Inform Your Supervisor – The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. Failing to do so could affect your ability to receive benefits.',
               'File Your Claim – Your Workers’ Compensation [claim form](https://workcomp.virginia.gov/forms/claim-form) can be submitted electronically, faxed, or mailed.',
             ],
           },

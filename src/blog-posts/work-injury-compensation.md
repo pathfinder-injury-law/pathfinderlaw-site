@@ -50,7 +50,7 @@ While knowing how much you can receive in compensation due to a surgery from a w
 
 However, most importantly, it all depends on whether the accident is legally compensable in the first place. A person could be left completely paralyzed by an accident, but they would get $0 for it if the accident does not meet Virginia’s legal standard for workers’ compensation claim compensability.
 
-Meeting these legal standards in Virginia all begins with the requirement that the accident must be “arising out of and in the course and scope of the employment” to be considered compensable, according to the [Code of Virginia](https://law.lis.virginia.gov/vacode/).
+Meeting these legal standards in Virginia all begins with the requirement that the accident must be arising out of and in the course and scope of the employment to be considered compensable, according to the [Code of Virginia](https://law.lis.virginia.gov/vacode/).
 
 As for how much you can receive, while you can conduct your own research online, understand any mention of an average workers’ comp settlement amount or range is not considered a standard. Every claim is different and, as such, must be treated differently. Also, keep in mind that any advice on workers’ comp amounts reported to you by family members and friends is not reliable. It does not matter if your cousin receives a million dollars for a toe injury in another state. Your workers’ comp case will be unique based on the specific circumstances and the fact that your accident took place in Virginia.
 
@@ -97,7 +97,7 @@ A workers’ comp lawyer will help you through the workers’ compensation proce
 
 Having an experienced advocate in your corner can help even the playing field against the insurance company.
 
-Pathfinder Injury Law can also help at mediation. Mediations are is settlement conferences with the insurance company and a judge (called a deputy commissioner) for the purpose of trying to reach a lump sum settlement. If this fails or settlement is not an option, our law firm may need to take your case to litigation.
+Pathfinder Injury Law can also help at mediation. Mediations are settlement conferences with the insurance company and a judge (called a deputy commissioner) for the purpose of trying to reach a lump sum settlement. If this fails or settlement is not an option, our law firm may need to take your case to litigation.
 
 While you cannot sue your employer in Virginia, there are legal actions we can take on your behalf to potentially gain compensation. You generally should not discuss settlement value with your employer and its insurance carrier without the advice and guidance of a seasoned workers’ comp attorney.
 

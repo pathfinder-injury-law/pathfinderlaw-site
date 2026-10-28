@@ -84,7 +84,7 @@ export const articlesB = {
         html: `
           <p>So you’ve been <a href="${WC}">injured at work</a>. Now what? First, don’t panic. There are several steps you can take in order to make things a little easier:</p>
           <ul>
-            <li><strong>Report Your Injury:</strong> As soon as you’re able, make sure you report your injury to your employer. The Virginia Workers’ Compensation Act requires you to give written notice to your employer within thirty days of the accident, although exceptions exist, and prompt reporting is important to try and avoid having your claim denied.</li>
+            <li><strong>Report Your Injury:</strong> As soon as you’re able, make sure you report your injury to your employer. The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the accident, although exceptions exist, and prompt reporting is important to try and avoid having your claim denied.</li>
             <li><strong>Keep Track of Everything:</strong> When getting treatment, it’s important to keep track of everything. Missed days, lost wages, out of pocket expenses—it’s better to have too much information than too little.</li>
             <li><strong>Contact a Work Injury Lawyer:</strong> Facing a worker’s comp case can be frightening, so it can be helpful to find an attorney for assistance. Pathfinder Injury Law is here to help explain the specifics of Virginia work injury law and guide you through your case.</li>
           </ul>`,
@@ -215,7 +215,7 @@ export const articlesB = {
         // company". That mixed up the thirty-day notice and the two-year filing deadline, and the
         // employer-notifies-insurer sentence has no reviewed equivalent, so it is rewritten.
         html: `
-          <p>The Virginia Workers’ Compensation Act requires written notice to your employer within <a href="https://workcomp.virginia.gov/content/injured-workers" rel="noopener">thirty days of the accident</a>, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Once you’ve done this, the insurance company is responsible for assessing your claim.</p>
+          <p>The Virginia Workers’ Compensation Act requires notice to your employer within <a href="https://workcomp.virginia.gov/content/injured-workers" rel="noopener">thirty days of the accident</a>, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Once you’ve done this, the insurance company is responsible for assessing your claim.</p>
           <p>This review is meant to determine whether you were seriously injured, whether your injuries happened on the job, and what funds you’re due for the injuries you suffered.</p>
           <p>Once the insurance company has reviewed your claim, you’ll then receive a notice about whether your claim was approved or denied.</p>`,
       },
@@ -271,7 +271,7 @@ export const articlesB = {
         // 30-45 days". Replaced with the reviewed deadlines. "Scheduled payments" (structured
         // settlements) removed from the last paragraph.
         html: `
-          <p>In most cases, you must give written notice to your employer within thirty days of the accident, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Missing these deadlines could affect your ability to receive benefits.</p>
+          <p>In most cases, you must give notice to your employer within thirty days of the accident, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Missing these deadlines could affect your ability to receive benefits.</p>
           <p>A request for review based on a change in condition generally must be made within 24 months from the last day for which compensation was paid, with longer periods for some claims. Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity. There are limits on consequences of your accident being covered.</p>`,
       },
       {
@@ -315,7 +315,7 @@ export const articlesB = {
         // thirty-day notice and two-year filing wording.
         html: `
           <p>Your first option is to speak with the insurance company and your employer about your Workers’ Comp claim. Your lawyer can request more information about the reason for your denial, determining why you didn’t receive compensation.</p>
-          <p>Once you know the reasons for your denial, you and your lawyer can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://workcomp.virginia.gov/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you and your lawyer may focus on proving you met those deadlines.</p>`,
+          <p>Once you know the reasons for your denial, you and your lawyer can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://workcomp.virginia.gov/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires notice to your employer within thirty days of the accident, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you and your lawyer may focus on proving you met those deadlines.</p>`,
       },
       {
         id: 'hearing',
@@ -323,7 +323,7 @@ export const articlesB = {
         // Live heading: "Take Your Claim to Court". The Commission is not a court, and the reviewed
         // wording is "hearing before the Commission". LIVE WORDING kept: mediation sentence.
         html: `
-          <p>Pathfinder Injury Law can also help at mediation. Mediations are is settlement conferences with the insurance company and a judge (called a deputy commissioner) for the purpose of trying to reach a lump sum settlement.</p>
+          <p>Pathfinder Injury Law can also help at mediation. Mediations are settlement conferences with the insurance company and a judge (called a deputy commissioner) for the purpose of trying to reach a lump sum settlement.</p>
           <p>But <a href="https://workcomp.virginia.gov/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. While your Workers’ Comp lawyer can help you provide evidence that you are <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
           <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://workcomp.virginia.gov/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, your lawyer can represent you and present evidence that you’re due Workers’ Comp benefits. Once all evidence has been presented, the commissioner will determine whether you’re due benefits.</p>`,
       },
@@ -472,7 +472,7 @@ export const articlesB = {
             <li>Going to hearing or settling your case</li>
             <li>Appealing the decision if not in your favor at hearing</li>
           </ul>
-          <p>If you don’t follow the correct procedure when you pursue your <a href="${WC}">Workers’ Compensation claim in Virginia</a>, you may lose your case on a technicality. For example, the Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits. Your claim must also be on file with the Commission within two years of your date of accident, although exceptions apply. It’s easy to miss these kinds of deadlines. That’s where we can help. <a href="/">Pathfinder Injury Law</a> has years of experience helping our clients pursue their claims. We can leverage that experience to help you pursue yours. Call ${phone} for your no-obligation consultation.</p>`,
+          <p>If you don’t follow the correct procedure when you pursue your <a href="${WC}">Workers’ Compensation claim in Virginia</a>, you may lose your case on a technicality. For example, the Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits. Your claim must also be on file with the Commission within two years of your date of accident, although exceptions apply. It’s easy to miss these kinds of deadlines. That’s where we can help. <a href="/">Pathfinder Injury Law</a> has years of experience helping our clients pursue their claims. We can leverage that experience to help you pursue yours. Call ${phone} for your no-obligation consultation.</p>`,
       },
     ],
     closing: {

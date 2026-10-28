@@ -29,7 +29,7 @@ Workers’ Comp benefits generally come through your employer’s insurance. In 
 ## What Should You Do After a Warehouse Injury?
 
 - **Get medical care.** See a doctor promptly, even if the injury seems minor. Your employer must offer a panel of three doctors, and you choose one.
-- **Report the injury in writing.** The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist. Give written notice if at all possible. Verbal notice is OK, but much harder to prove.
+- **Report the injury in writing.** The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. Give written notice if at all possible. Verbal notice is OK, but much harder to prove.
 - **Write down what happened.** Note the date, time, location, the equipment involved, and the names of any witnesses while the details are fresh.
 - **Keep your records.** Save medical records, work schedules, and pay stubs.
 - **Know your deadline.** Claims for benefits must generally be filed with the Virginia Workers’ Compensation Commission within two years of an accident, or else you can forever lose benefit entitlement. See our guide on [how to file a Workers’ Comp claim](/how-to-file-a-workers-comp-claim/).

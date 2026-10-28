@@ -36,7 +36,7 @@ export const ARTICLE_BASE = '/virginia-workers-comp-lawyer/';
 
 // ---- Reviewed wording, copied exactly from the Workers' Comp page ----
 const NOTICE =
-  'The Virginia Workers’ Compensation Act requires written notice to your employer within thirty days of the accident, although exceptions exist.';
+  'The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist.';
 const FILING =
   'A claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply.';
 const DISPUTE =

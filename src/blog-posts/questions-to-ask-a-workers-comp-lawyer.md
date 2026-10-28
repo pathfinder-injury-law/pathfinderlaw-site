@@ -13,7 +13,7 @@ Because of this, you may need to speak with a [Workers’ Comp lawyer](/virginia
 
 ## When will I receive my Workers’ Comp benefits?
 
-When you’re hurt in a work accident, you should receive your [benefits as soon as possible](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-605.1/). You must give your employer [written notice of the injury within thirty days](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/), and you generally have two years to file your claim, although exceptions apply. Unfortunately, you may have been denied, which can drag out your case even longer.
+When you’re hurt in a work accident, you should receive your [benefits as soon as possible](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-605.1/). You must give your employer [notice of the injury within thirty days](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/), and you generally have two years to file your claim, although exceptions apply. Unfortunately, you may have been denied, which can drag out your case even longer.
 
 Because of this, your Workers’ Comp lawyer can’t give you an exact date that you’ll receive your benefits. There’s no set answer for [how long Virginia Workers’ Comp settlements take](/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/). But a lawyer can represent you at a hearing before the Commission and help you get benefits as soon as possible.
 

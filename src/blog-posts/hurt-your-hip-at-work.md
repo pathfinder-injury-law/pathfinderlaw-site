@@ -15,7 +15,7 @@ One work-related injury that is particularly troubling is a hurt hip. Hip injuri
 
 Workplace injuries can be challenging to overcome in a short period of time, and you need to be aware of what to do when one happens to you. If you suffer an injury to your hip in the workplace in Virginia, there are certain steps you will need to take to better your chances at obtaining workers’ compensation benefits.
 
-Within thirty days of the incident that caused your personal injury, you must submit written notice to your employer. Simply telling your employer about the incident is not ideal; it should be written according to Virginia Code [§ 65.2-600](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/).
+Within thirty days of the incident that caused your personal injury, you must give notice to your employer. Written notice is best because it is easier to prove. See Virginia Code [§ 65.2-600](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/).
 
 Be sure to include the following in your written incident report:
 

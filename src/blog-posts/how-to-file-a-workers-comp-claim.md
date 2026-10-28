@@ -16,7 +16,7 @@ In Virginia, Workers’ Compensation claims are handled by the Virginia Workers�
 
 Your health comes first. See a doctor promptly, even if the injury seems minor, and tell the provider that your injury happened at work. Your employer must offer a panel of three doctors, and you choose one.
 
-The Virginia Workers’ Compensation Act requires [written notice to your employer within thirty days of the accident](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/), although exceptions exist. Give written notice if at all possible. Verbal notice is OK, but much harder to prove. Include not only that an accident happened, but also that you suffered an injury and how it occurred. Keep a copy of what you send.
+The Virginia Workers’ Compensation Act requires [notice to your employer within thirty days of the accident](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/), although exceptions exist. Give written notice if at all possible. Verbal notice is OK, but much harder to prove. Include not only that an accident happened, but also that you suffered an injury and how it occurred. Keep a copy of what you send.
 
 ## Step 2: Know Your Deadline
 
