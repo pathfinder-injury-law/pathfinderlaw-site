@@ -1,7 +1,7 @@
-Photo credits (all free to use under the Unsplash License, https://unsplash.com/license)
+Photo credits (Unsplash photos are free to use under the Unsplash License, https://unsplash.com/license)
 
-hero-hiker.jpg   "Adventure in the mountains" by Holly Mandarich, Unsplash
-                 https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls
+hero-trail.jpg   AI-generated image (Google Gemini), created by Bryn Swartz for the firm, Oct 28-29, 2026.
+                 Hiker seen from behind on a ridge trail at golden hour. Original 1264x848 JPEG, recompressed for the web.
 tile-a.jpg, tile-b.jpg, tile-c.jpg   Unsplash photos carried over from the previous site
                  (file names on the old site began with "photo-", the Unsplash pattern).
 
