@@ -415,12 +415,16 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
     align-items: center;
     gap: 0.75rem;
     min-width: 0;
+    flex: 1; /* takes the space beside the logo card ... */
+    margin-left: 0;
   }
   .desktop-nav > ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex: 1;
+    justify-content: space-between; /* ... and spreads the menu items across it */
     gap: 0.9rem;
     align-items: center;
   }
@@ -570,6 +574,9 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
   }
 }
 @media (min-width: 80rem) {
+  .desktop-nav {
+    margin-left: 1.5rem;
+  }
   .brand img {
     width: 15rem;
   }
@@ -587,7 +594,7 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
     padding-inline: 1.5rem;
   }
   .brand img {
-    width: 17.5rem;
+    width: 15.5rem; /* a little smaller than the old site's 280px so the menu can breathe */
   }
   .site-header.is-solid .brand img,
   body:not(.has-overlay) .site-header .brand img {
@@ -600,7 +607,7 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
     gap: 1.5rem;
   }
   .desktop-nav a {
-    font-size: 1.0625rem;
+    font-size: 1rem;
   }
 }
 
@@ -623,10 +630,13 @@ body:not(.has-overlay) main {
   --font-accent: "Fraunces Italic", Georgia, "Times New Roman", serif;
 }
 
-/* The hero is split in thirds on wide screens: words over the pale sky in the left two thirds, the
-   hiker in the right third. The photo is a 960 x 768 crop anchored bottom right at about its real
-   size; the sky to its left is a CSS gradient built from the photo's own left-edge colours, and
-   the photo's left edge is feathered so there is no seam. */
+/* The words sit over the sky and the hazy hills; the hiker and trail fill the right side. The ridge
+   photo (1264 x 848, shown at 0.9 of the hero height, so it is never enlarged) is anchored
+   bottom right. Above it the sky is a CSS gradient sampled from the photo's own top edge, and the
+   photo's top edge is feathered into it, so there is no seam. On screens wider than the photo, the
+   left side continues with a mirror image of the same photo (trees and sky are symmetrical enough
+   that it reads as more forest). A pale haze over the top lightens the blue sky so the green words
+   read clearly. */
 .hero {
   position: relative;
   color: var(--forest);
@@ -634,57 +644,68 @@ body:not(.has-overlay) main {
   isolation: isolate;
   overflow: hidden;
   min-height: clamp(45rem, 54vw, 53.75rem); /* 720px, growing to 860px on big screens */
-  background: linear-gradient(
-    to bottom,
-    #eef3f7 0%,
-    #f7faf7 10%,
-    #fbfbf7 20%,
-    #fdfdf7 35%,
-    #fff9ed 45%,
-    #fdeed4 50%,
-    #e3d6c5 55%,
-    #dbd1c3 60%,
-    #b1a47b 65%,
-    #7a7651 70%,
-    #5a5725 80%,
-    #353b19 90%,
-    #272912 100%
-  );
+  background: linear-gradient(to right, #5e85a3, #4f7c9c 50%, #43708a), #4f7c9c;
 }
 .hero-pic {
   position: absolute;
   inset: 0;
   z-index: -1;
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  container-type: size;
+  /* To the left of the photo: the photo's own left 460px and its mirror image, repeated. That strip is
+     all trees (no trail or hiker), so it reads as more forest. It starts a little under the photo's
+     soft left edge. */
+  background: url("/images/photos/hero-ridge-filler.jpg") right 1.127cqh bottom 0 / auto 90% repeat-x;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, transparent 8%, #000 22%);
+  mask-image: linear-gradient(to bottom, transparent 0, transparent 8%, #000 22%);
 }
 .hero-photo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100%;
+  flex: none;
+  height: 90%;
   width: auto;
   max-width: none;
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%);
-  mask-image: linear-gradient(to right, transparent 0, #000 22%);
+  display: block;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16%);
+  mask-image: linear-gradient(to right, transparent 0, #000 16%);
 }
-/* Phones: the tall photo fills the hero (sky on top, hiker lower right). */
+/* Phones: a taller crop of the same photo, 70 percent of the hero height, hiker lower right. */
 @media (max-width: 47.99rem) {
+  .hero-pic {
+    background: none;
+  }
   .hero-photo {
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 100%;
+    height: 70%;
     -webkit-mask-image: none;
     mask-image: none;
   }
+  .hero-pic {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, transparent 20%, #000 34%);
+    mask-image: linear-gradient(to bottom, transparent 0, transparent 20%, #000 34%);
+  }
+}
+/* Haze: lightens the blue sky behind the words. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(252, 249, 240, 0.8) 0%,
+    rgba(252, 249, 240, 0.76) 30%,
+    rgba(252, 249, 240, 0.5) 48%,
+    rgba(252, 249, 240, 0) 62%
+  );
+  pointer-events: none;
 }
 .hero .wrap {
   padding-block: 7.5rem 7rem; /* clears the 97px logo card on phones */
 }
 @media (min-width: 48rem) {
   .hero .wrap {
-    padding-block: calc(var(--header-h) + clamp(1.25rem, 4.5vw, 4.5rem)) 7rem;
+    padding-block: calc(var(--header-h) + clamp(1rem, 2.6vw, 3rem)) 7rem;
   }
   .hero .wrap > * {
     max-width: 64%; /* the right third belongs to the hiker */
