@@ -29,7 +29,10 @@ import { nav, site } from '../data/site';
 
     <!-- Phones and tablets: a Menu button that opens a stacked list. No script needed. -->
     <details class="nav-mobile">
-      <summary class="nav-toggle">Menu</summary>
+      <summary class="nav-toggle" aria-label="Menu">
+        <svg class="icon-open" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+      </summary>
       <nav class="main-nav main-nav-panel" aria-label="Main (mobile)">
         <ul>
           {nav.map((item) => (
