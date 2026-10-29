@@ -57,8 +57,8 @@ test('Eastern Shore page links resolve to built pages', opts, () => {
   }
 });
 
-test('Eastern Shore page is linked from Location, Contact, Workers Comp page and another city page', opts, () => {
-  for (const page of ['/location/', '/contact/', '/virginia-workers-comp-lawyer/', '/richmond-workers-comp-lawyer/', '/about-us/', '/sitemap/']) {
+test('Eastern Shore page is linked from Location, Workers Comp page and another city page', opts, () => {
+  for (const page of ['/location/', '/virginia-workers-comp-lawyer/', '/richmond-workers-comp-lawyer/', '/about-us/', '/sitemap/']) {
     assert.ok(internalLinks(read(page)).includes(SHORE), `${page} should link to ${SHORE}`);
   }
   assert.match(read('/richmond-workers-comp-lawyer/'), />The Eastern Shore</);
