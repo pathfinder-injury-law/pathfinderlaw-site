@@ -1,7 +1,0 @@
-# Launch version. Everything is open to search engines.
-# /wp-admin/ is a leftover from the old WordPress site; it no longer exists
-# here, but the rule is kept so crawlers do not probe it.
-User-agent: *
-Disallow: /wp-admin/
-
-Sitemap: https://pathfinderlaw.com/sitemap.xml

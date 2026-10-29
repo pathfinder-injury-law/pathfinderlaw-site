@@ -116,3 +116,30 @@ test('preview build keeps the new page noindex unless PUBLIC_SITE_LIVE=1', opts,
   if (process.env.PUBLIC_SITE_LIVE === '1') assert.doesNotMatch(robots, /noindex/);
   else assert.match(robots, /noindex/);
 });
+
+// Launch switches. Run the tests with the same PUBLIC_SITE_LIVE value the build used.
+test('robots.txt blocks all in preview builds and opens up only in a live build', opts, () => {
+  const text = readFileSync(new URL('robots.txt', dist), 'utf8');
+  if (process.env.PUBLIC_SITE_LIVE === '1') {
+    assert.match(text, /^Sitemap: https:\/\/pathfinderlaw\.com\/sitemap\.xml$/m);
+    assert.doesNotMatch(text, /^Disallow: \/\s*$/m);
+  } else {
+    assert.match(text, /^Disallow: \/\s*$/m);
+    assert.doesNotMatch(text, /Sitemap:/);
+  }
+});
+
+test('404 and thank-you stay noindex in every build; other pages follow the build', opts, () => {
+  const robotsOf = (path: string) => read(path).match(/<meta name="robots" content="([^"]*)"/)?.[1] ?? '';
+  assert.match(robotsOf('/404.html'), /noindex/);
+  assert.match(robotsOf('/thank-you/'), /noindex/);
+  if (process.env.PUBLIC_SITE_LIVE === '1') {
+    for (const page of ['/', '/contact/', '/privacy-policy/']) assert.doesNotMatch(robotsOf(page), /noindex/, page);
+  }
+});
+
+test('privacy policy has no date placeholder', opts, () => {
+  const html = read('/privacy-policy/');
+  assert.doesNotMatch(html, /TO BE SET/);
+  assert.match(html, /last updated on November 2, 2026/);
+});
