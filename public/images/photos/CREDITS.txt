@@ -1,9 +1,8 @@
 Photo credits (Unsplash photos are free to use under the Unsplash License, https://unsplash.com/license)
 
-hero-ridge-desktop.jpg, hero-ridge-phone.jpg, hero-ridge-filler.jpg   AI-generated image (Google Gemini), created by Bryn Swartz
-                 for the firm, Oct 29, 2026. Ridge trail with a hiker seen from behind at golden hour. Desktop file is the
-                 original 1264x848; phone file is a 700x848 crop of it; the filler strip is the photo's left 460px plus its
-                 mirror image (used only to continue the forest on wide screens).
+hero-trail2-desktop.webp, hero-trail2-phone.webp   AI-generated images (Google Gemini / AI Studio), created by Bryn Swartz for the firm,
+                 Oct 29, 2026. Ridge trail with a hiker seen from behind at golden hour. Desktop file is the original 1376x768;
+                 phone file is the original 1536x2752 resized to 1080x1935. Both re-saved as WebP for the web.
 tile-a.jpg, tile-b.jpg, tile-c.jpg   Unsplash photos carried over from the previous site
                  (file names on the old site began with "photo-", the Unsplash pattern).
 
