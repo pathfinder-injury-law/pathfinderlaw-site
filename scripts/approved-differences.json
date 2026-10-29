@@ -441,6 +441,13 @@
       "live": "Virginia Beach Workers' Comp Attorney | Pathfinder Law",
       "new": "Virginia Beach Workers' Comp Attorney | Pathfinder Injury Law",
       "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/",
+      "field": "h1",
+      "live": "Workers’ Comp Lawyer",
+      "new": "Virginia Workers’ Comp Lawyer",
+      "reason": "Owner decision Oct 29 (hero redesign, option 1): the small 'Virginia' line and the page heading are now one h1, 'Virginia Workers’ Comp Lawyer', styled small above the big words."
     }
   ]
 }

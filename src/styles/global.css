@@ -346,6 +346,17 @@ body.has-overlay .site-header:not(.is-solid)::before {
   z-index: -1;
 }
 
+/* Home page: the pale sky behind the header needs dark menu text and no dark fade. */
+body.hero-light.has-overlay .site-header:not(.is-solid)::before {
+  content: none;
+}
+body.hero-light .site-header:not(.is-solid) .nav-toggle {
+  color: var(--forest);
+}
+body.hero-light .site-header:not(.is-solid) .nav-toggle svg {
+  filter: none;
+}
+
 /* Solid bar: after scrolling, and always on pages without a photo behind the header. */
 .site-header.is-solid,
 body:not(.has-overlay) .site-header {
@@ -450,6 +461,10 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
     padding: 0.7rem 0.9rem;
     border-radius: 999px;
     white-space: nowrap;
+  }
+  body.hero-light .site-header .desktop-nav a:not(.header-phone) {
+    color: var(--forest);
+    text-shadow: none;
   }
   .site-header.is-solid .desktop-nav a:not(.header-phone),
   body:not(.has-overlay) .site-header .desktop-nav a:not(.header-phone) {
@@ -595,121 +610,164 @@ body:not(.has-overlay) main {
 }
 
 /* ---------- Hero ---------- */
+/* Fraunces italic (SIL Open Font License), served from this site; no outside font requests.
+   Only the Latin italic is used, for "Let's go." */
+@font-face {
+  font-family: "Fraunces Italic";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-wght-italic.woff2") format("woff2");
+}
+:root {
+  --font-accent: "Fraunces Italic", Georgia, "Times New Roman", serif;
+}
+
+/* The hero is split in thirds on wide screens: words over the pale sky in the left two thirds, the
+   hiker in the right third. The photo is a 960 x 768 crop anchored bottom right at about its real
+   size; the sky to its left is a CSS gradient built from the photo's own left-edge colours, and
+   the photo's left edge is feathered so there is no seam. */
 .hero {
   position: relative;
-  color: var(--white);
-  background: var(--forest);
-  text-align: center;
+  color: var(--forest);
+  text-align: left;
   isolation: isolate;
   overflow: hidden;
-  display: grid;
-  place-items: center;
-  min-height: 45rem; /* 720px, the same height as the old site's hero */
+  min-height: clamp(45rem, 54vw, 53.75rem); /* 720px, growing to 860px on big screens */
+  background: linear-gradient(
+    to bottom,
+    #eef3f7 0%,
+    #f7faf7 10%,
+    #fbfbf7 20%,
+    #fdfdf7 35%,
+    #fff9ed 45%,
+    #fdeed4 50%,
+    #e3d6c5 55%,
+    #dbd1c3 60%,
+    #b1a47b 65%,
+    #7a7651 70%,
+    #5a5725 80%,
+    #353b19 90%,
+    #272912 100%
+  );
+}
+.hero-pic {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
 }
 .hero-photo {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
   height: 100%;
-  object-fit: cover;
-  object-position: 62% 60%; /* keeps the hiker (about 57 to 65 percent across) in frame */
-  z-index: -2;
-  animation: drift 28s ease-out forwards;
+  width: auto;
+  max-width: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%);
+  mask-image: linear-gradient(to right, transparent 0, #000 22%);
 }
-/* Phones: the picture is made taller than the hero and pinned to the top, which lowers the hiker
-   below the button; the sideways position keeps him in view. */
-@media (max-width: 39.99rem) {
+/* Phones: the tall photo fills the hero (sky on top, hiker lower right). */
+@media (max-width: 47.99rem) {
   .hero-photo {
-    height: 124%;
-    object-position: 61% 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
-}
-/* The old site laid a light, even grey (about 33 percent) over a bright photo. The old pale green
-   "multiply" wash is switched off on the home hero so the photo keeps its natural colour; a soft,
-   slightly stronger fade keeps the white words above 4.5:1 contrast. */
-.hero::before {
-  content: none;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 48% at 50% 46%, rgba(20, 30, 24, 0.3), rgba(20, 30, 24, 0) 100%),
-    linear-gradient(180deg, rgba(24, 34, 28, 0.26) 0%, rgba(24, 34, 28, 0.14) 45%, rgba(24, 34, 28, 0.14) 100%);
-  z-index: -1;
 }
 .hero .wrap {
-  padding-block: calc(var(--header-h) + 1.5rem) clamp(5rem, 9vw, 6.5rem);
-  text-shadow: 0 2px 16px rgba(10, 25, 15, 0.55), 0 1px 3px rgba(10, 25, 15, 0.45);
+  padding-block: 7.5rem 7rem; /* clears the 97px logo card on phones */
 }
-/* "VIRGINIA" between two rules, 26.5px on phones and 30px from 960px, as on the old site. */
-.hero-kicker {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: min(100%, 18.75rem);
-  margin: 0 auto 1.25rem;
-  font-family: var(--font-head);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: 1.65rem;
-  line-height: 1.3;
-  justify-content: center;
-}
-.hero-kicker::before,
-.hero-kicker::after {
-  content: "";
-  flex: 1 1 0;
-  min-width: 1rem;
-  height: 2px;
-  background: var(--white);
-  opacity: 0.9;
-}
-@media (min-width: 60rem) {
-  .hero-kicker {
-    font-size: 1.875rem;
+@media (min-width: 48rem) {
+  .hero .wrap {
+    padding-block: calc(var(--header-h) + clamp(1.25rem, 4.5vw, 4.5rem)) 7rem;
+  }
+  .hero .wrap > * {
+    max-width: 64%; /* the right third belongs to the hiker */
   }
 }
-.hero h1 {
-  margin-bottom: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.06em; /* wider and lighter than before, like the old headline */
-  line-height: 1.1;
-  text-wrap: wrap; /* breaks "Workers’ Comp / Lawyer" on phones, as the old site does */
+/* The page heading, set small: "Virginia Workers' Comp Lawyer". */
+.hero-kicker {
+  margin: 0 0 0.6em;
+  font-family: var(--font-head);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: clamp(0.8125rem, 1.1vw, 1.125rem);
+  line-height: 1.3;
+  color: var(--forest);
+  text-wrap: wrap;
 }
-.hero-tag {
+.hero-l1,
+.hero-l2 {
+  margin: 0;
+}
+.hero-l1 {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: 2.23rem; /* 35.7px on phones, 45.7px from 700px up */
-  letter-spacing: 0.02em;
-  line-height: 1.2;
-  margin: 0 0 1.25rem;
+  font-size: clamp(2.75rem, 7.4vw, 7rem);
+  line-height: 1;
+  letter-spacing: -0.012em;
+  color: var(--forest);
 }
-@media (min-width: 43.75rem) {
-  .hero-tag {
-    font-size: 2.86rem;
-  }
-}
-/* On phones the old site stacks the tag as three centred lines: "Hurt?", "We’ll Show You", "The Way". */
-@media (max-width: 39.99rem) {
-  .hero-tag {
-    max-width: 8.4em;
-    margin-inline: auto;
-    text-wrap: wrap;
-  }
-  .hero-tag .accent {
-    display: block;
-  }
-}
-.hero-tag .accent {
+.hero-l2 {
+  margin-top: 0.04em;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  line-height: 1.04;
   color: var(--sun);
+  /* A dark green edge plus a soft glow keep the yellow readable over the pale sky. */
+  -webkit-text-stroke: 0.035em var(--forest);
+  paint-order: stroke fill;
+  text-shadow: 0 0.03em 0.18em rgba(20, 35, 25, 0.35);
 }
 .hero .btn-row {
-  justify-content: center;
-  text-shadow: none;
-  margin-top: 1.25rem;
+  margin-top: clamp(1.1rem, 2.6vw, 2.25rem);
+}
+.btn-hero {
+  gap: 0.75em;
+  padding: 0.5em 0.55em 0.5em 1.4em;
+  min-height: 3.5rem;
+  background: var(--sun);
+  color: var(--forest);
+  border: 2px solid var(--forest);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(0.875rem, 1.35vw, 1.2rem);
+  white-space: nowrap;
+}
+.btn-hero:hover {
+  background: #ffdc70;
+}
+.btn-hero:focus-visible {
+  outline-color: var(--forest); /* amber would be hard to see against the pale sky */
+}
+.btn-arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--sun);
+  flex: none;
+}
+.btn-arrow svg {
+  width: 55%;
+  height: 55%;
+}
+@media (max-width: 39.99rem) {
+  .btn-hero {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .torn {
   position: absolute;
@@ -1123,6 +1181,9 @@ mark {
   object-fit: cover;
   z-index: -2;
   opacity: 0.12;
+}
+.cta-grid > * {
+  min-width: 0; /* lets the form shrink on 320px screens instead of widening the page */
 }
 .cta-grid {
   display: grid;

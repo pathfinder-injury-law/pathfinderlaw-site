@@ -16,11 +16,13 @@ interface Props {
   datePublished?: string;
   // True when a full-width photo sits behind the header.
   overlay?: boolean;
+  // True when the photo behind the header is pale (a light sky), so the menu uses dark text.
+  heroLight?: boolean;
   // Practice-area and blog pages credit Bryn Swartz as author, as the old site did.
   author?: boolean;
 }
 
-const { title, description, path, crumbs = [], datePublished, overlay = false, author = false } = Astro.props;
+const { title, description, path, crumbs = [], datePublished, overlay = false, heroLight = false, author = false } = Astro.props;
 const origin = Astro.site!.origin;
 const url = new URL(path, origin).href;
 const image = new URL('/images/open-graph-card.jpg', origin).href;
@@ -162,9 +164,10 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
 
+    <slot name="head" />
     <script type="application/ld+json" set:html={jsonLd} />
   </head>
-  <body class:list={[overlay && 'has-overlay']}>
+  <body class:list={[overlay && 'has-overlay', heroLight && 'hero-light']}>
     <Header />
     <main id="main">
       <slot />

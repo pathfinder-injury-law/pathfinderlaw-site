@@ -48,16 +48,25 @@ const results = [
   path="/"
   datePublished="2022-02-25T23:07:43+00:00"
   overlay
+  heroLight
 >
-  <!-- Hero -->
-  <section class="hero on-dark">
-    <img class="hero-photo" src="/images/photos/hero-trail.jpg" alt="" width="1264" height="848" fetchpriority="high" />
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/images/photos/hero-sky-desktop.jpg" media="(min-width: 48rem)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/photos/hero-sky-phone.jpg" media="(max-width: 47.99rem)" fetchpriority="high" />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-wght-italic.woff2" crossorigin />
+  </Fragment>
+  <!-- Hero: words in the left two thirds over the sky, hiker in the right third. -->
+  <section class="hero hero-sky">
+    <picture class="hero-pic">
+      <source media="(max-width: 47.99rem)" srcset="/images/photos/hero-sky-phone.jpg" width="768" height="1376" />
+      <img class="hero-photo" src="/images/photos/hero-sky-desktop.jpg" alt="" width="960" height="768" fetchpriority="high" />
+    </picture>
     <div class="wrap">
-      <p class="hero-kicker">Virginia</p>
-      <h1>Workers’ Comp Lawyer</h1>
-      <p class="hero-tag"><span class="accent">Hurt?</span> We’ll Show You The Way</p>
+      <h1 class="hero-kicker">Virginia Workers’ Comp Lawyer</h1>
+      <p class="hero-l1">Hurt at work?</p>
+      <p class="hero-l2">Let’s go.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="#contact">Free Consultation</a>
+        <a class="btn btn-primary btn-hero" href="#contact">Free Consultation<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
       </div>
     </div>
     <TornEdge fill="var(--white)" />

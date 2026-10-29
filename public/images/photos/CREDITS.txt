@@ -1,7 +1,8 @@
 Photo credits (Unsplash photos are free to use under the Unsplash License, https://unsplash.com/license)
 
-hero-trail.jpg   AI-generated image (Google Gemini), created by Bryn Swartz for the firm, Oct 28-29, 2026.
-                 Hiker seen from behind on a ridge trail at golden hour. Original 1264x848 JPEG, recompressed for the web.
+hero-sky-desktop.jpg, hero-sky-phone.jpg   AI-generated images (Google Gemini), created by Bryn Swartz for the firm, Oct 29, 2026.
+                 Ridge trail with a hiker seen from behind at golden hour, pale sky. Desktop file is a 960x768 crop of a
+                 1376x768 original; phone file is 768x1376. Recompressed for the web.
 tile-a.jpg, tile-b.jpg, tile-c.jpg   Unsplash photos carried over from the previous site
                  (file names on the old site began with "photo-", the Unsplash pattern).
 
