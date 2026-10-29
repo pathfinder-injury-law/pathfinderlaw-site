@@ -1426,19 +1426,15 @@ mark {
   animation: none;
 }
 .page-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--wash);
-  mix-blend-mode: multiply;
-  opacity: 0.92;
-  z-index: -1;
+  content: none; /* the pale green multiply tint is off here too, as on the home hero */
 }
 .page-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(14, 32, 22, 0.55), rgba(14, 32, 22, 0.35) 60%, rgba(14, 32, 22, 0.55));
+  background:
+    radial-gradient(ellipse 80% 70% at 25% 75%, rgba(20, 32, 25, 0.38), rgba(20, 32, 25, 0) 100%),
+    linear-gradient(180deg, rgba(24, 38, 30, 0.4), rgba(24, 38, 30, 0.28) 55%, rgba(24, 38, 30, 0.4));
   z-index: -1;
 }
 .page-hero .wrap {
