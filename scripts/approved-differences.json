@@ -229,7 +229,7 @@
       "address": "/mandy-swartz/",
       "field": "description",
       "live": "Pathfinder Injury Law is a family business, and Mandy Truman Swartz serves as firm administrator and certified paralegal. Read more about her journey.",
-      "new": "Pathfinder Injury Law is a family business, and Mandy Truman Swartz serves as firm administrator. Read more about her journey.",
+      "new": "Pathfinder Injury Law is a family business, and Mandy Truman serves as firm administrator. Read more about her journey.",
       "reason": "Owner decision 10-28-26: Mandy is the firm administrator and is not presented as a paralegal; 'certified' removed."
     },
     {
@@ -441,6 +441,20 @@
       "live": "Virginia Beach Workers' Comp Attorney | Pathfinder Law",
       "new": "Virginia Beach Workers' Comp Attorney | Pathfinder Injury Law",
       "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/mandy-swartz/",
+      "field": "title",
+      "live": "Mandy Truman Swartz - Pathfinder Injury Law",
+      "new": "Mandy Truman - Pathfinder Injury Law",
+      "reason": "Owner decision 10-29-26: her name is Mandy Truman, not Mandy Truman Swartz."
+    },
+    {
+      "address": "/mandy-swartz/",
+      "field": "h1",
+      "live": "Mandy Truman Swartz",
+      "new": "Mandy Truman",
+      "reason": "Owner decision 10-29-26: her name is Mandy Truman, not Mandy Truman Swartz."
     }
   ]
 }

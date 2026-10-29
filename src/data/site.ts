@@ -48,7 +48,7 @@ export const nav: NavItem[] = [
     children: [
       { label: 'About Our Firm', href: '/about-us/' },
       { label: 'Bryn Swartz', href: '/bryn-swartz/' },
-      { label: 'Mandy Truman Swartz', href: '/mandy-swartz/' },
+      { label: 'Mandy Truman', href: '/mandy-swartz/' },
     ],
   },
   { label: 'Blog', href: '/blog/' },
