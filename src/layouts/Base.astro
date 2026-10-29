@@ -167,7 +167,7 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
     <slot name="head" />
     <script type="application/ld+json" set:html={jsonLd} />
   </head>
-  <body class:list={[overlay && 'has-overlay', heroLight && 'hero-light']}>
+  <body class:list={[overlay && 'has-overlay', (heroLight || overlay) && 'hero-light']}>
     <Header />
     <main id="main">
       <slot />

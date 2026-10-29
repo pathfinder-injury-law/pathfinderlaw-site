@@ -346,9 +346,6 @@ body.has-overlay .site-header:not(.is-solid)::before {
 body.hero-light.has-overlay .site-header:not(.is-solid)::before {
   content: none;
 }
-.site-header:not(.is-solid) .brand img {
-  filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.55)); /* a faint light glow, no box */
-}
 body.hero-light .site-header:not(.is-solid) .nav-toggle {
   color: var(--forest);
 }
@@ -620,14 +617,6 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
 }
 @media (min-width: 90rem) {
   :root { --logo-w: 19.5rem; }
-}
-/* Inner pages (dark photo behind the header): a tight white halo hugs the logo's letters so the dark
-   wordmark reads; the logo file itself is never changed. */
-body:not(.hero-light) .site-header:not(.is-solid) .brand img {
-  filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 1)) drop-shadow(0 0 4px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
-}
-body:not(.has-overlay) .site-header .brand img {
-  filter: none;
 }
 /* Logo with no card (all pages), a little larger than before, growing with the screen. */
 .site-header:not(.is-solid) .brand img {
@@ -1550,8 +1539,8 @@ mark {
 /* ---------- Inner pages ---------- */
 .page-hero {
   position: relative;
-  color: var(--white);
-  background: var(--forest);
+  color: var(--forest);
+  background: #f3f6f1;
   isolation: isolate;
   overflow: hidden;
   min-height: 20rem;
@@ -1568,28 +1557,26 @@ mark {
   z-index: -2;
   animation: none;
 }
+.page-hero .hero-photo {
+  opacity: 0.32; /* the photo stays faintly visible under the pale wash */
+}
 .page-hero::before {
-  /* With no card behind the logo, a soft pale glow behind just the logo keeps the dark wordmark
-     readable over the dark photo. It fades out by itself, has no edge, and stops before the menu. */
+  /* Pale wash (white with a little brand pine green), lightest at the top where the logo and menu sit. */
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(ellipse calc(var(--logo-w) * 0.5 + 2.8rem) 6.2rem at calc(max(var(--gutter), 50% - 41rem) + var(--logo-w) / 2) 3.5rem, rgba(250, 248, 241, 0.62) 0%, rgba(250, 248, 241, 0.58) 55%, rgba(250, 248, 241, 0.25) 82%, rgba(250, 248, 241, 0) 100%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.6) 100%),
+    rgba(64, 104, 60, 0.1);
   pointer-events: none;
 }
 .page-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 70% at 25% 75%, rgba(20, 32, 25, 0.38), rgba(20, 32, 25, 0) 100%),
-    linear-gradient(180deg, rgba(24, 38, 30, 0.4), rgba(24, 38, 30, 0.28) 55%, rgba(24, 38, 30, 0.4));
-  z-index: -2;
+  content: none;
 }
 .page-hero .wrap {
   padding-block: calc(var(--header-h) + 2.5rem) 5rem;
-  text-shadow: 0 2px 24px rgba(10, 25, 15, 0.5);
+  color: var(--forest);
   animation: rise 0.9s var(--ease) both;
 }
 /* Page titles: 28.7px on phones and 42px from 960px, as on the old site. */
