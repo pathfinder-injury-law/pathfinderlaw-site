@@ -61,10 +61,10 @@ export const articlesB = {
         html: `
           <p>Before you get your Workers’ Comp benefits, you need to know what benefits you’re eligible for. Below are some of the workers comp benefits you may receive after a work injury:</p>
           <ul>
-            <li><strong>Medical Cost Coverage</strong> – Your workers’ comp medical benefits should cover your medical bills and related costs for medical treatment that is reasonable, necessary, and causally related to your work accident, including the costs of travel and specialists.</li>
-            <li><strong>Temporary Partial Disability Benefits</strong> – You may receive benefits to help offset loss of income when your doctor only allows you to return to work with restrictions and you are earning less than you were before you got hurt. The amount paid is two-thirds of the difference between what you were earning before you got hurt, and what you are earning now.</li>
-            <li><strong>Temporary Total Disability Benefits</strong> – If a doctor says you <a href="https://workcomp.virginia.gov/documents/injured-workers-benefits-guide" rel="noopener">cannot return to work at all</a> for a temporary period because of your injuries, you may receive two-thirds of the pre-injury average weekly wage you received during the year immediately prior to your accident, up to a maximum weekly compensation rate.</li>
-            <li><strong>Permanent Partial Disability Benefits</strong> – When a doctor determines you have recovered from your injury as much as possible and assigns a permanent impairment rating greater than zero percent to a body part that is eligible for permanent partial disability benefits, you may be entitled to workers’ comp benefits for the permanent damage you have suffered in that body part.</li>
+            <li><strong>Medical Cost Coverage</strong>: Your workers’ comp medical benefits should cover your medical bills and related costs for medical treatment that is reasonable, necessary, and causally related to your work accident, including the costs of travel and specialists.</li>
+            <li><strong>Temporary Partial Disability Benefits</strong>: You may receive benefits to help offset loss of income when your doctor only allows you to return to work with restrictions and you are earning less than you were before you got hurt. The amount paid is two-thirds of the difference between what you were earning before you got hurt, and what you are earning now.</li>
+            <li><strong>Temporary Total Disability Benefits</strong>: If a doctor says you <a href="https://workcomp.virginia.gov/documents/injured-workers-benefits-guide" rel="noopener">cannot return to work at all</a> for a temporary period because of your injuries, you may receive two-thirds of the pre-injury average weekly wage you received during the year immediately prior to your accident, up to a maximum weekly compensation rate.</li>
+            <li><strong>Permanent Partial Disability Benefits</strong>: When a doctor determines you have recovered from your injury as much as possible and assigns a permanent impairment rating greater than zero percent to a body part that is eligible for permanent partial disability benefits, you may be entitled to workers’ comp benefits for the permanent damage you have suffered in that body part.</li>
           </ul>`,
       },
       {
@@ -72,7 +72,7 @@ export const articlesB = {
         h2: 'What if My Virginia Work Injury Claim Is Denied?',
         // Live said "appeal that denial"; reviewed wording is a hearing before the Commission.
         html: `
-          <p>If your Virginia worker injury claim is denied, don’t panic—you’re not out of options for your Workers’ Comp claim. You have the right to dispute that denial and take your claim to a hearing before the Virginia Workers’ Compensation Commission, and a work injury lawyer can help.</p>
+          <p>If your Virginia worker injury claim is denied, don’t panic. You’re not out of options for your Workers’ Comp claim. You have the right to dispute that denial and take your claim to a hearing before the Virginia Workers’ Compensation Commission, and a work injury lawyer can help.</p>
           <p>Your lawyer can gather evidence that shows you’re due Workers’ Comp. For example, if the insurance company claims there’s not enough evidence of your injuries, your lawyer may speak with your doctor about your injuries.</p>
           <p>Once they have the needed evidence, your lawyer can represent you in a hearing with the Virginia Workers’ Compensation Commission. During your hearing, they’ll present your evidence, which can be key to getting your claim approved.</p>`,
       },
@@ -85,7 +85,7 @@ export const articlesB = {
           <p>So you’ve been <a href="${WC}">injured at work</a>. Now what? First, don’t panic. There are several steps you can take in order to make things a little easier:</p>
           <ul>
             <li><strong>Report Your Injury:</strong> As soon as you’re able, make sure you report your injury to your employer. The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the accident, although exceptions exist, and prompt reporting is important to try and avoid having your claim denied.</li>
-            <li><strong>Keep Track of Everything:</strong> When getting treatment, it’s important to keep track of everything. Missed days, lost wages, out of pocket expenses—it’s better to have too much information than too little.</li>
+            <li><strong>Keep Track of Everything:</strong> When getting treatment, it’s important to keep track of everything. Missed days, lost wages, out of pocket expenses. It’s better to have too much information than too little.</li>
             <li><strong>Contact a Work Injury Lawyer:</strong> Facing a worker’s comp case can be frightening, so it can be helpful to find an attorney for assistance. Pathfinder Injury Law is here to help explain the specifics of Virginia work injury law and guide you through your case.</li>
           </ul>`,
       },
@@ -95,7 +95,7 @@ export const articlesB = {
       // Live: "putting in the hard work to help you achieve positive results. Our expertise—combined...".
       html: `
         <p>After a work injury, you need <a href="${WC}">Workers’ Comp benefits</a> that cover your needs. From your initial medical care to your disability benefits, you should receive the help you need for your injuries. But what if you have some trouble getting your benefits in Virginia?</p>
-        <p><a href="/">Pathfinder Injury Law</a> cares deeply about our clients and invests ourselves in your struggle, putting in the hard work for you. Our experience—combined with our care and our friendly approach—help not just to guide clients through their cases, but to put their minds at ease. Want to learn more? Give us a call at ${phone} today to get your free no-obligation consultation.</p>`,
+        <p><a href="/">Pathfinder Injury Law</a> cares deeply about our clients and invests ourselves in your struggle, putting in the hard work for you. Our experience, combined with our care and our friendly approach, help not just to guide clients through their cases, but to put their minds at ease. Want to learn more? Give us a call at ${phone} today to get your free no-obligation consultation.</p>`,
     },
   },
 
@@ -402,7 +402,7 @@ export const articlesB = {
         // LIVE WORDING: "employer's chosen doctor ... They get to choose the doctors they cover". No
         // reviewed equivalent; Commission link kept as on live. Needs Bryn's review.
         html: `
-          <p>If you’ve been injured on the job, your first step is to seek medical care. Yes, you need it, even if you feel fine—you may not notice a serious injury until it’s worsened, and the insurance company may doubt your claim if you don’t act immediately.</p>
+          <p>If you’ve been injured on the job, your first step is to seek medical care. Yes, you need it, even if you feel fine. You may not notice a serious injury until it’s worsened, and the insurance company may doubt your claim if you don’t act immediately.</p>
           <p>Your employer must offer a <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">panel of three doctors</a>, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.</p>`,
       },
       {
@@ -417,7 +417,7 @@ export const articlesB = {
         id: 'evidence',
         h2: 'Gather Evidence',
         html: `
-          <p>If the insurance company has any doubts about your claim, you may be denied Workers’ Comp benefits at first. But don’t panic—you’re not out of options to get compensated for your work injuries. Your Workers’ Comp lawyer in Virginia can gather evidence that supports your claim.</p>
+          <p>If the insurance company has any doubts about your claim, you may be denied Workers’ Comp benefits at first. But don’t panic. You’re not out of options to get compensated for your work injuries. Your Workers’ Comp lawyer in Virginia can gather evidence that supports your claim.</p>
           <p>For example, your work-related vision loss may be keeping you from returning to work, but the Workers’ Comp insurance company claims otherwise. Your lawyer can help compile doctor’s reports and expert medical testimony to support your claim.</p>`,
       },
     ],

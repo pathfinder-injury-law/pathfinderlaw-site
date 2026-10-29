@@ -19,7 +19,7 @@ Your injury wouldn’t have happened if the safety mechanisms in place had worke
 
 ## Improper Maintenance
 
-Sometimes, human error can make a big difference in your work equipment accident. For example, other workers or another branch of the business may have been responsible for the upkeep and maintenance of the equipment you were using. That’s not just meant to keep things running smoothly—it’s also meant to keep you safe.
+Sometimes, human error can make a big difference in your work equipment accident. For example, other workers or another branch of the business may have been responsible for the upkeep and maintenance of the equipment you were using. That’s not just meant to keep things running smoothly. It’s also meant to keep you safe.
 
 But if they failed to do their part of the job, you may have been seriously injured in a work accident due to faulty equipment. Because the accident happened in the scope of your job and because of your job, you may be eligible for financial benefits under your [employer’s work comp insurance policy](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide).
 

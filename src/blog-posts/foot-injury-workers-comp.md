@@ -121,7 +121,7 @@ It is important to note that foot injuries have the potential to cause you to mi
 
 ## What is Vocational Rehab?
 
-For workplace injuries, vocational rehabilitation is often a part of the process. This type of rehab has two goals — to return the employee to the workforce and to relieve the employer from the burden of paying future compensation. Providers of these rehab services are tasked with attempting to find alternative employment opportunities within the worker’s pre-injury position and achieved salary level.
+For workplace injuries, vocational rehabilitation is often a part of the process. This type of rehab has two goals: to return the employee to the workforce and to relieve the employer from the burden of paying future compensation. Providers of these rehab services are tasked with attempting to find alternative employment opportunities within the worker’s pre-injury position and achieved salary level.
 
 Particular services that fall under vocational rehab include:
 
