@@ -630,18 +630,20 @@ body:not(.has-overlay) main {
   --font-accent: "Fraunces Italic", Georgia, "Times New Roman", serif;
 }
 
-/* The photo already has its sky built in, so it simply fills the hero (cover). On wide and medium
-   screens it is pinned bottom right so the hiker (about 80 percent across) stays in frame; on
-   phones the tall photo is used and its sky holds the words. A light haze over the top keeps the
-   green words readable where they reach the hills. */
+/* The photo (a hiker seen over his shoulder, with the trail and crest behind him) fills the hero on
+   screens 1000px wide and up, pinned bottom right so the hiker stays in frame. On narrower screens
+   the photo sits along the bottom at full width and the sky above it is a CSS gradient sampled from
+   the photo's top edge, feathered in so there is no seam; that leaves room for the words above the
+   hiker. A light green wash behind the words, strongest on the left and fading out toward the
+   hiker, keeps the green words readable where they reach the hills. */
 .hero {
   position: relative;
   color: var(--forest);
   text-align: left;
   isolation: isolate;
   overflow: hidden;
-  min-height: clamp(45rem, 56vw, 62rem); /* 720px, growing with the screen so the whole photo (sky, trail, hiker) shows */
-  background: #cfe2f1;
+  min-height: clamp(45rem, 56vw, 62rem); /* 720px, growing with the screen so the whole photo shows */
+  background: linear-gradient(to right, #c4d6e6, #b7d0e4 25%, #b2cce5 50%, #abc7e4 75%, #a1c0dd);
 }
 .hero-pic {
   position: absolute;
@@ -653,31 +655,38 @@ body:not(.has-overlay) main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 84% 100%;
+  object-position: 100% 100%;
   max-width: none;
   display: block;
 }
-@media (max-width: 47.99rem) {
+@media (min-width: 62.5rem) {
   .hero {
-    min-height: clamp(40rem, calc(100svh - 4.5rem), 48.75rem); /* ends above the floating bottom bar */
-  }
-  .hero-photo {
-    object-position: 75% 100%;
+    background: linear-gradient(to right, #ebf3f6, #dae5ee 25%, #bfd4e5 50%, #b0cbe4 75%, #a1c0dd);
   }
 }
-/* Haze: a touch of pale light behind the words. */
+@media (max-width: 62.49rem) {
+  .hero-photo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    object-fit: initial;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
+  }
+}
+@media (max-width: 47.99rem) {
+  .hero {
+    min-height: clamp(37rem, calc(100svh - 7rem), 42rem); /* ends above the floating bottom bar */
+  }
+}
+/* Wash: light green, from the brand greens, behind the words (left) fading out toward the hiker. */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(
-    to bottom,
-    rgba(252, 249, 240, 0.6) 0%,
-    rgba(252, 249, 240, 0.52) 30%,
-    rgba(252, 249, 240, 0.34) 52%,
-    rgba(252, 249, 240, 0) 72%
-  );
+  background: radial-gradient(ellipse 85% 120% at 0% 38%, rgba(64, 104, 60, 0.3) 0%, rgba(64, 104, 60, 0.22) 45%, rgba(64, 104, 60, 0) 100%);
   pointer-events: none;
 }
 .hero .wrap {

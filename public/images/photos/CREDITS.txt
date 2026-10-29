@@ -1,8 +1,8 @@
 Photo credits (Unsplash photos are free to use under the Unsplash License, https://unsplash.com/license)
 
-hero-trail2-desktop.webp, hero-trail2-phone.webp   AI-generated images (Google Gemini / AI Studio), created by Bryn Swartz for the firm,
-                 Oct 29, 2026. Ridge trail with a hiker seen from behind at golden hour. Desktop file is the original 1376x768;
-                 phone file is the original 1536x2752 resized to 1080x1935. Both re-saved as WebP for the web.
+hero-over-shoulder-desktop.webp, hero-over-shoulder-phone.webp   AI-generated with Google Gemini (AI Studio), by Bryn Swartz for the
+                 firm. The background and the hiker were generated separately and composited on Oct 29, 2026. Desktop file is the
+                 1376x768 composite; the phone file is a 776x768 crop of it (right side). Both saved as WebP.
 tile-a.jpg, tile-b.jpg, tile-c.jpg   Unsplash photos carried over from the previous site
                  (file names on the old site began with "photo-", the Unsplash pattern).
 
