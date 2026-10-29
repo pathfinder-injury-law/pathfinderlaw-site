@@ -140,8 +140,26 @@ p {
 }
 
 :focus-visible {
-  outline: 3px solid var(--amber);
+  outline: 3px solid var(--forest); /* the green ring, one rule for every link, button, field and menu item */
   outline-offset: 3px;
+}
+/* On dark and green sections the green ring would vanish, so it turns white there (same width and offset).
+   Fields inside the white form card go back to green. */
+.on-dark :focus-visible,
+.contour :focus-visible,
+.site-footer :focus-visible,
+.cta :focus-visible {
+  outline-color: var(--white);
+}
+.form-card :focus-visible,
+.main-nav-panel :focus-visible {
+  outline-color: var(--forest);
+}
+/* The Turnstile check box is a third-party frame, so its holder shows the ring when something inside has focus. */
+.ts-widget:focus-within {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
 }
 
 /* Brand Book emphasis: ALL CAPS and bold. */
@@ -681,6 +699,10 @@ body:not(.has-overlay) main {
   overflow: hidden;
   min-height: clamp(45rem, 56vw, 62rem); /* 720px, growing with the screen so the whole photo shows */
   background: linear-gradient(to right, #c4d6e6, #b7d0e4 25%, #b2cce5 50%, #abc7e4 75%, #a1c0dd);
+  /* Spacing: the same visible gap above and below the rule (--g), built from the kicker and headline sizes. */
+  --k: clamp(0.8125rem, 1.1vw, 1.125rem);
+  --l1: clamp(2.75rem, 8.1vw, 8.1rem);
+  --g: clamp(1.1rem, 1.7vw, 1.7rem);
 }
 .hero-pic {
   position: absolute;
@@ -723,7 +745,9 @@ body:not(.has-overlay) main {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(ellipse 85% 120% at 0% 38%, rgba(64, 104, 60, 0.3) 0%, rgba(64, 104, 60, 0.22) 45%, rgba(64, 104, 60, 0) 100%);
+  background:
+    radial-gradient(ellipse 85% 120% at 0% 38%, rgba(64, 104, 60, 0.3) 0%, rgba(64, 104, 60, 0.22) 45%, rgba(64, 104, 60, 0) 100%),
+    linear-gradient(180deg, rgba(64, 104, 60, 0.02) 0%, rgba(64, 104, 60, 0.06) 38%, rgba(64, 104, 60, 0.18) 62%, rgba(64, 104, 60, 0.18) 100%); /* plus a light green wash over the photo (lightest behind the words), to tone it down a little */
   pointer-events: none;
 }
 .hero .wrap {
@@ -731,7 +755,7 @@ body:not(.has-overlay) main {
 }
 @media (min-width: 48rem) {
   .hero .wrap {
-    padding-block: calc(var(--header-h) + clamp(2.5rem, 6.5vw, 7.5rem)) 7rem;
+    padding-block: calc(var(--header-h) + clamp(1.5rem, 4.6vw, 5.5rem)) 7rem;
   }
   .hero .wrap > * {
     max-width: 74%; /* the words stay clear of the hiker's head by their size, not by wrapping */
@@ -739,12 +763,12 @@ body:not(.has-overlay) main {
 }
 /* The page heading, set small: "Virginia Workers' Comp Lawyer". */
 .hero-kicker {
-  margin: 0 0 0.7em;
+  margin: 0 0 max(0.2rem, calc(var(--g) - 0.3 * var(--k)));
   font-family: var(--font-head);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: clamp(0.8125rem, 1.1vw, 1.125rem);
+  font-size: var(--k);
   line-height: 1.3;
   color: var(--forest);
   text-wrap: wrap;
@@ -760,12 +784,12 @@ body:not(.has-overlay) main {
   }
 }
 .hero .rule {
-  margin: 0 0 clamp(0.9rem, 2vw, 1.75rem);
+  margin: 0 0 max(0.25rem, calc(var(--g) - 0.13 * var(--l1)));
 }
 .hero-l1 {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: clamp(2.75rem, 8.1vw, 8.1rem);
+  font-size: var(--l1);
   line-height: 1;
   letter-spacing: -0.012em;
   color: var(--forest);
