@@ -31,7 +31,7 @@ ${link('Virginia Workers\' Comp FAQ', '/virginia-workers-comp-faq/')}
 ${link('Blog', '/blog/')}
 ${link('About Pathfinder Injury Law', '/about-us/')}
 ${link('Bryn Swartz', '/bryn-swartz/')}
-${link('Mandy Truman', '/mandy-swartz/')}
+${link('Mandy Truman', '/mandy-truman/')}
 ${link('Results', '/results/')}
 ${link('Reviews', '/reviews/')}
 ${link('Office Location', '/location/')}
