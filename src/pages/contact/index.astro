@@ -25,10 +25,16 @@ const description =
   <section class="section contact-intro">
     <div class="wrap">
       <div class="section-head center">
-        <h2>Hurt? Let’s Talk About Your Options</h2>
+        <h2>Hurt? Let’s Talk</h2>
         <hr class="rule" />
-        <p>Video Consultations Available</p>
       </div>
+    </div>
+  </section>
+
+  <ContactSection />
+
+  <section class="section contact-cards-section">
+    <div class="wrap">
       <div class="contact-cards">
         <div class="contact-card">
           <h3>Call Us</h3>
@@ -45,19 +51,20 @@ const description =
             </address>
             <p class="appt">By appointment only</p>
             <a class="map-link" href={o.mapUrl} rel="noopener">View on Google Maps</a>
-            {o.page && <p class="office-page"><a href={o.page.href}>{o.page.label}</a></p>}
           </div>
         ))}
       </div>
     </div>
   </section>
-
-  <ContactSection />
 </Base>
 
 <style>
   .contact-intro {
     padding-top: clamp(2.5rem, 6vw, 4.5rem);
+    padding-bottom: 0;
+  }
+  .contact-intro .section-head {
+    margin-bottom: 0;
   }
   .contact-cards {
     display: grid;
@@ -81,15 +88,12 @@ const description =
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
   }
-  .office-page {
-    margin: 1rem 0 0;
-    font-weight: 600;
-  }
   .big-phone {
     display: block;
     font-family: var(--font-head);
     font-weight: 800;
-    font-size: 2rem;
+    font-size: clamp(1.1rem, 2.2vw, 2rem);
+    white-space: nowrap;
     text-decoration: none;
     margin-bottom: 1rem;
   }
