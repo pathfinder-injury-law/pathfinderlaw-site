@@ -6,10 +6,12 @@ interface Props {
   // Breadcrumb trail after "Home". The last item is the current page.
   crumbs?: { name: string; href?: string }[];
   image?: string;
+  // Contact page: the big "Hurt? / Let's talk." lockup under the small page heading.
+  lockup?: { line1: string; line2: string };
 }
-const { title, crumbs = [], image = '/images/photos/tile-b.jpg' } = Astro.props;
+const { title, crumbs = [], image = '/images/photos/tile-b.jpg', lockup } = Astro.props;
 ---
-<section class="page-hero on-dark">
+<section class:list={['page-hero', 'on-dark', lockup && 'page-hero-lockup']}>
   <img class="hero-photo" src={image} alt="" width="1400" height="886" fetchpriority="high" />
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
@@ -21,6 +23,12 @@ const { title, crumbs = [], image = '/images/photos/tile-b.jpg' } = Astro.props;
       </ol>
     </nav>
     <h1>{title}</h1>
+    {lockup && (
+      <div class="lockup">
+        <p class="hero-l1">{lockup.line1}</p>
+        <p class="hero-l2">{lockup.line2}</p>
+      </div>
+    )}
   </div>
   <TornEdge fill="var(--white)" />
 </section>

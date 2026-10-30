@@ -20,18 +20,11 @@ const description =
   crumbs={[{ name: 'Contact Us', path: '/contact/' }]}
   overlay
 >
-  <PageHero title="Contact Us" crumbs={[{ name: 'Contact Us' }]} />
+  <PageHero title="Contact Us" crumbs={[{ name: 'Contact Us' }]} lockup={{ line1: 'Hurt?', line2: 'Let’s talk.' }} />
 
-  <section class="section contact-intro">
-    <div class="wrap">
-      <h2 class="contact-lockup">
-        <span class="hero-l1">Hurt?</span>
-        <span class="hero-l2">Let’s talk.</span>
-      </h2>
-    </div>
-  </section>
+  <ContactSection variant="plain" />
 
-  <ContactSection />
+  <div class="contact-divider" aria-hidden="true"></div>
 
   <section class="section contact-cards-section">
     <div class="wrap">
@@ -59,29 +52,6 @@ const description =
 </Base>
 
 <style>
-  .contact-intro {
-    padding-top: clamp(2.5rem, 6vw, 4.5rem);
-    padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
-  }
-  /* Same lockup as the home hero: bold green line, then the yellow Fraunces italic with its green edge. */
-  .contact-lockup {
-    text-align: center;
-    margin: 0;
-    font-size: inherit;
-    line-height: 1;
-    letter-spacing: normal;
-    text-wrap: wrap;
-  }
-  .contact-lockup .hero-l1 {
-    display: block;
-    font-size: clamp(2.75rem, 9vw, 5.5rem);
-  }
-  .contact-lockup .hero-l2 {
-    display: block;
-    font-size: clamp(3rem, 9.8vw, 6rem);
-    padding-bottom: 0.15em;
-    text-shadow: none; /* on white the green edge alone keeps it crisp */
-  }
   .contact-cards-section {
     padding-top: clamp(3rem, 6vw, 5rem);
   }

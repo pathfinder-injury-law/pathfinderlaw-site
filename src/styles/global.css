@@ -1983,3 +1983,80 @@ mark {
     transform: none;
   }
 }
+
+/* ---------- Contact page: lockup banner, plain form, divider ---------- */
+.page-hero-lockup {
+  min-height: 0;
+}
+.page-hero-lockup .wrap {
+  padding-block: calc(var(--header-h) + clamp(2.25rem, 4vw, 3.5rem)) clamp(5.5rem, 9vw, 8rem);
+}
+/* The page heading "Contact Us" stays the h1, set small like the home hero's heading. */
+.page-hero-lockup h1 {
+  font-size: clamp(0.8125rem, 1.1vw, 1.125rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 clamp(0.9rem, 2vw, 1.5rem);
+}
+.lockup .hero-l1 {
+  font-size: clamp(3.25rem, 10vw, 8rem);
+  margin: 0;
+}
+.lockup .hero-l2 {
+  font-size: clamp(3.5rem, 11vw, 8.6rem);
+  margin: 0.02em 0 0;
+  padding-bottom: 0.1em;
+  text-shadow: none;
+}
+@media (min-width: 48rem) {
+  .page-hero-lockup .wrap > * {
+    max-width: none;
+  }
+}
+.cta-plain {
+  background: var(--white);
+  padding-block: 0 clamp(3rem, 6vw, 5rem);
+}
+.cta-plain-wrap {
+  width: min(100% - 2 * var(--gutter), 66rem);
+}
+.cta-plain .form-card {
+  background: linear-gradient(rgba(64, 104, 60, 0.05), rgba(64, 104, 60, 0.05)), var(--white);
+  border: 1px solid rgba(64, 104, 60, 0.2);
+  box-shadow: 0 1.25rem 3rem rgba(41, 70, 52, 0.1);
+  padding: clamp(1.5rem, 4.5vw, 3.25rem);
+}
+.cta-plain .form-card h3 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 1.5rem;
+}
+/* Name, Email and Phone side by side on wide screens; everything else full width. */
+@media (min-width: 52rem) {
+  .cta-plain .contact-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 1.25rem;
+  }
+  .cta-plain .field-pair {
+    display: contents;
+  }
+  .cta-plain .contact-form > :not(.field):not(.field-pair):not(.hp),
+  .cta-plain .contact-form > .field:nth-of-type(n + 2):not(:nth-child(1)) {
+    grid-column: 1 / -1;
+  }
+  .cta-plain .contact-form > .field:last-of-type {
+    grid-column: 1 / -1;
+  }
+}
+.cta-plain .btn-primary {
+  width: auto;
+  min-width: 14rem;
+}
+.cta-plain .contact-form > .btn {
+  justify-self: start;
+}
+.contact-divider {
+  height: clamp(2.5rem, 5vw, 4rem);
+  background: var(--forest);
+}
