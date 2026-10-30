@@ -40,19 +40,19 @@ export const site = {
 export type NavItem = { label: string; href: string; children?: NavItem[] };
 
 // Same targets as the current live menu (all addresses unchanged).
+// Main menu: five groups. "Home" is left out because the logo links home. Same targets as before.
 export const nav: NavItem[] = [
-  { label: 'Home', href: '/' },
   {
     label: 'About',
     href: '/about-us/',
     children: [
-      { label: 'About Our Firm', href: '/about-us/' },
+      { label: 'About Us', href: '/about-us/' },
       { label: 'Bryn Swartz', href: '/bryn-swartz/' },
       { label: 'Mandy Truman', href: '/mandy-truman/' },
+      { label: 'Reviews', href: '/reviews/' },
+      { label: 'Results', href: '/results/' },
     ],
   },
-  { label: 'Blog', href: '/blog/' },
-  { label: 'FAQ', href: '/virginia-workers-comp-faq/' },
   {
     label: 'Cases We Handle',
     href: '/virginia-workers-comp-lawyer/',
@@ -65,8 +65,14 @@ export const nav: NavItem[] = [
       { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/' },
     ],
   },
-  { label: 'Reviews', href: '/reviews/' },
-  { label: 'Results', href: '/results/' },
+  {
+    label: 'Resources',
+    href: '/virginia-workers-comp-faq/',
+    children: [
+      { label: 'FAQ', href: '/virginia-workers-comp-faq/' },
+      { label: 'Blog', href: '/blog/' },
+    ],
+  },
   { label: 'Contact', href: '/contact/' },
   { label: 'Client Portal', href: '/client-portal/' },
 ];
