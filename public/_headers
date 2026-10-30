@@ -1,3 +1,23 @@
+# Security headers for every page and file on the site.
+#  - Strict-Transport-Security: browsers always use the secure (https) address for a year, for this
+#    domain and its subdomains. Not on the browser "preload" list yet: that is a later, deliberate step.
+#  - Content-Security-Policy: the page may only load scripts, styles, images, fonts and frames from this
+#    site, plus Cloudflare Turnstile (challenges.cloudflare.com, the form check) and Cloudflare Web
+#    Analytics (static.cloudflareinsights.com loads it, cloudflareinsights.com receives it). The small
+#    scripts written into the pages are allowed by fingerprint; the build fills those in at the marker in
+#    the script-src list below (see scripts/csp-hashes.mjs). Inline styles stay allowed ('unsafe-inline'
+#    in style-src) because pages use style="" attributes; styles cannot run code.
+#    If the site ever adds a new outside service (a map, a video, a chat box), add its address here.
+#  - The other lines: no framing of the site by other sites, no guessing of file types, only the
+#    site's own address is sent on to other sites, and no camera, microphone, location or payment access.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' {{INLINE_SCRIPT_HASHES}} https://challenges.cloudflare.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-src https://challenges.cloudflare.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), browsing-topics=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), hid=(), magnetometer=(), microphone=(), midi=(), payment=(), serial=(), usb=()
+
 # Keep the form confirmation page out of search results (it is also left out of the sitemap).
 /thank-you/
   X-Robots-Tag: noindex, nofollow

@@ -70,8 +70,9 @@ test('valid lead: logged, emailed to both inboxes with Reply-To, no [Screened]',
   assert.match(head, /Reply-To: pat@example.com/);
   assert.doesNotMatch(head, /Screened/);
   assert.match(body, /my claim was denied/);
-  const footer = 'The sender confirmed that sending this form does not create an attorney-client relationship and that Pathfinder Injury Law has not agreed to represent them. Treat as confidential.';
-  assert.equal(body.split(footer).length - 1, 1);
+  // A clean lead holds only the four fields, nothing above or below.
+  assert.match(body, /^Name: .+\r?\nEmail: pat@example\.com\r?\nPhone: .+\r?\n\r?\nMessage:\r?\n/);
+  assert.doesNotMatch(body, /Form:|Screening:|Bot check|Reference:|Reply to this email|attorney-client/);
   assert.doesNotMatch(body, /conflict protections|written agreement/);
 });
 
@@ -139,11 +140,11 @@ test('ALLOWED_HOSTNAMES: default allows pathfinderlaw.com and www; the var can a
   assert.equal((await handleContact(post(goodInput({ email: 'x@example.com' })), env, no.deps)).status, 403);
 });
 
-test('lead email shows the Turnstile result "pass" (launch-day phone test)', async () => {
+test('clean lead email leaves out the Turnstile line; the subject is plain', async () => {
   const env = liveEnv(); const { deps, calls } = makeWorld();
   await handleContact(post(goodInput()), env, deps);
   const { head, body } = decodeRaw(gmail(calls)[0]);
-  assert.match(body, /^Bot check \(Turnstile\): pass$/m);
+  assert.doesNotMatch(body, /Bot check/);
   assert.match(head, /Subject: Website inquiry \(main form\)\r?\n/);
 });
 

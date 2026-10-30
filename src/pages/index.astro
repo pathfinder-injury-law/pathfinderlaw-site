@@ -1,8 +1,14 @@
 ---
+import Photo from '../components/Photo.astro';
 import Base from '../layouts/Base.astro';
 import TornEdge from '../components/TornEdge.astro';
 import TopicIcon from '../components/TopicIcon.astro';
 import ContactSection from '../components/ContactSection.astro';
+import variants from '../data/imageVariants.json';
+
+// Hero photo copies (scripts/make-image-variants.mjs), as srcset lists.
+const heroSet = (crop: 'desktop' | 'phone', fmt: 'avif' | 'webp') =>
+  (variants as any)[`/images/photos/hero-over-shoulder-${crop}.webp`][fmt].map((v: { url: string; width: number }) => `${v.url} ${v.width}w`).join(', ');
 
 // Title, description and wording match the current live homepage, except the
 // approved results wording (migration plan, Section VIII, fix 1).
@@ -15,6 +21,11 @@ const topics = [
   { label: 'Factory Accidents', href: '/virginia-factory-accident-lawyer/', icon: 'factory' },
   { label: 'Vehicle Accidents', href: '/car-accident-at-work-in-virginia/', icon: 'vehicle' },
   { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', icon: 'spine' },
+];
+
+const team = [
+  { name: 'Bryn Swartz', role: 'Owner and Attorney', href: '/bryn-swartz/', img: '/images/photos/bryn-round.webp' },
+  { name: 'Mandy Truman', role: 'Firm Administrator', href: '/mandy-truman/', img: '/images/photos/mandy-round.webp' },
 ];
 
 const traits = ['Local', 'Experienced', 'Focused', 'Fighting Spirit', 'Calming Presence'];
@@ -51,18 +62,23 @@ const results = [
   heroLight
 >
   <Fragment slot="head">
-    <link rel="preload" as="image" href="/images/photos/hero-over-shoulder-desktop.webp" media="(min-width: 48rem)" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/photos/hero-over-shoulder-phone.webp" media="(max-width: 47.99rem)" fetchpriority="high" />
+    <!-- Start the hero photo download right away, in the size and format the browser will pick below.
+         Browsers without AVIF skip these (type="image/avif") and find the WebP in the picture instead. -->
+    <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('desktop', 'avif')} imagesizes="100vw" media="(min-width: 48rem)" fetchpriority="high" />
+    <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('phone', 'avif')} imagesizes="100vw" media="(max-width: 47.99rem)" fetchpriority="high" />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-wght-italic.woff2" crossorigin />
   </Fragment>
   <!-- Hero: words in the left two thirds over the sky, hiker in the right third. -->
   <section class="hero hero-sky">
+    <!-- Art direction as before: the phone crop below 768px, the wide photo above. Each in AVIF, then WebP, in two sizes. -->
     <picture class="hero-pic">
-      <source media="(max-width: 47.99rem)" srcset="/images/photos/hero-over-shoulder-phone.webp" type="image/webp" width="776" height="768" />
-      <img class="hero-photo" src="/images/photos/hero-over-shoulder-desktop.webp" alt="" width="1376" height="768" fetchpriority="high" />
+      <source media="(max-width: 47.99rem)" type="image/avif" srcset={heroSet('phone', 'avif')} sizes="100vw" width="776" height="768" />
+      <source media="(max-width: 47.99rem)" type="image/webp" srcset={heroSet('phone', 'webp')} sizes="100vw" width="776" height="768" />
+      <source type="image/avif" srcset={heroSet('desktop', 'avif')} sizes="100vw" />
+      <img class="hero-photo" src="/images/photos/hero-over-shoulder-desktop.webp" srcset={heroSet('desktop', 'webp')} sizes="100vw" alt="" width="1376" height="768" fetchpriority="high" />
     </picture>
     <div class="wrap">
-      <h1 class="hero-kicker">Virginia Workers’ Comp Lawyer</h1>
+      <div class="hero-kicker"><h1>Virginia Workers’ Comp Lawyer</h1><span class="kicker-dot" aria-hidden="true">•</span><span class="kicker-more">A Family Firm</span></div>
       <span class="rule" aria-hidden="true"></span>
       <p class="hero-l1">Hurt at work?</p>
       <p class="hero-l2">Let’s go.</p>
@@ -71,6 +87,22 @@ const results = [
       </div>
     </div>
     <TornEdge fill="var(--white)" />
+  </section>
+
+  <!-- Team: two round portraits sitting on the torn edge of the hero. -->
+  <section class="team-peek" aria-label="Meet your team">
+    <div class="wrap">
+      <ul class="peek-list">
+        {team.map((p) => (
+          <li>
+            <a class="peek" href={p.href}>
+              <img src={p.img} alt="" width="360" height="360" />
+              <span class="peek-text"><strong>{p.name}</strong><span>{p.role}</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   </section>
 
   <!-- Intro -->
@@ -104,11 +136,11 @@ const results = [
       </div>
       <div class="tiles" data-stagger>
         <a class="tile" href="/virginia-workers-comp-lawyer/">
-          <img src="/images/photos/tile-b.jpg" alt="" width="1400" height="886" loading="lazy" />
+          <Photo src="/images/photos/tile-b.jpg" alt="" width="1400" height="886" sizes="(min-width: 75rem) 588px, (min-width: 48rem) 45vw, calc(100vw - 30px)" loading="lazy" />
           <h3>Workers’ Compensation</h3>
         </a>
         <a class="tile" href="/how-to-appeal-a-workers-comp-denial-in-virginia/">
-          <img src="/images/photos/tile-a.jpg" alt="" width="1400" height="1750" loading="lazy" />
+          <Photo src="/images/photos/tile-a.jpg" alt="" width="1400" height="1750" sizes="(min-width: 75rem) 588px, (min-width: 48rem) 45vw, calc(100vw - 30px)" loading="lazy" />
           <h3>Workers’ Comp Denials</h3>
         </a>
       </div>
@@ -134,7 +166,7 @@ const results = [
       </div>
       <div class="why" data-stagger>
         <a class="person" href="/bryn-swartz/">
-          <img src="/images/photos/bryn.jpg" alt="" width="900" height="900" loading="lazy" />
+          <Photo src="/images/photos/bryn.jpg" alt="" width="900" height="900" sizes="288px" loading="lazy" />
           <h3>Bryn Swartz</h3>
           <p>Founder &amp; Attorney</p>
         </a>
@@ -148,7 +180,7 @@ const results = [
           </ul>
         </div>
         <a class="person" href="/mandy-truman/">
-          <img src="/images/photos/mandy.jpg" alt="" width="900" height="900" loading="lazy" />
+          <Photo src="/images/photos/mandy.jpg" alt="" width="900" height="900" sizes="288px" loading="lazy" />
           <h3>Mandy Truman</h3>
           <p>Firm Administrator</p>
         </a>

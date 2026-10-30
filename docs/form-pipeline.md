@@ -43,7 +43,7 @@ How the website's contact forms work, what a person must do before launch, and h
 - Spam (rows marked screened) is deleted after 90 days by the daily job. Leads and unsure rows are kept.
 - Every submission, screened ones included, is treated as confidential.
 - The email footer repeats that no attorney-client relationship exists and that the sender acknowledged this.
-- Every lead email has a line "Bot check (Turnstile): ..." showing `pass`, `fail`, `spam check unavailable` or `TURNSTILE NOT CONFIGURED`. The launch-day test from a phone should show `pass`.
+- A clean lead email holds only Name, Email, Phone and Message. A note line goes on top only when something needs a second look: a screening result other than "lead", a bot check (Turnstile) result other than `pass` (`spam check unavailable` or `TURNSTILE NOT CONFIGURED`), or the form log being down. A phone test that arrives with no note line passed the bot check.
 - The once-an-hour limit on the "Turnstile not configured" alarm is a self-expiring key (`alert-sent:turnstile_not_configured`) in the same settings store as the rules. It needs no setup and can be ignored.
 - On a death claim or an incident that hurt more than one worker, run a conflict check on the names before reading further (plan rule).
 

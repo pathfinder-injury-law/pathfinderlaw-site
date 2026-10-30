@@ -20,6 +20,10 @@ const description =
   crumbs={[{ name: 'Contact Us', path: '/contact/' }]}
   overlay
 >
+  <Fragment slot="head">
+    <!-- "Let's talk." uses the accent font, near the top of the page. -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-wght-italic.woff2" crossorigin />
+  </Fragment>
   <PageHero title="Contact Us" crumbs={[{ name: 'Contact Us' }]} lockup={{ line1: 'Hurt?', line2: 'Let’s talk.' }} />
 
   <ContactSection variant="plain" />

@@ -1,4 +1,5 @@
 ---
+import Photo from '../../components/Photo.astro';
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import ContactSection from '../../components/ContactSection.astro';
@@ -160,7 +161,7 @@ const reasons = [
       </div>
       <div class="team">
         <a class="member" href="/bryn-swartz/">
-          <img src="/images/photos/bryn.jpg" alt="" width="900" height="900" loading="lazy" />
+          <Photo src="/images/photos/bryn.jpg" alt="" width="900" height="900" sizes="256px" loading="lazy" />
           <h3>Bryn Swartz</h3>
           <p class="role">Owner &amp; Attorney</p>
           <p>
@@ -170,7 +171,7 @@ const reasons = [
           <span class="more">View Profile</span>
         </a>
         <a class="member" href="/mandy-truman/">
-          <img src="/images/photos/mandy.jpg" alt="" width="900" height="900" loading="lazy" />
+          <Photo src="/images/photos/mandy.jpg" alt="" width="900" height="900" sizes="256px" loading="lazy" />
           <h3>Mandy Truman</h3>
           <p class="role">Firm Administrator</p>
           <p>
@@ -287,7 +288,7 @@ const reasons = [
     text-align: center;
     display: block;
   }
-  .member img {
+  .member :global(img) {
     width: min(100%, 16rem);
     aspect-ratio: 1;
     object-fit: cover;
@@ -297,7 +298,7 @@ const reasons = [
     box-shadow: var(--shadow);
     transition: transform 0.5s var(--ease);
   }
-  .member:hover img {
+  .member:hover :global(img) {
     transform: scale(1.03);
   }
   .member h3 {
