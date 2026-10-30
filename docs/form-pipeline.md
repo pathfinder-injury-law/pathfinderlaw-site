@@ -51,7 +51,7 @@ How the website's contact forms work, what a person must do before launch, and h
 | UTC time | Job |
 |---|---|
 | 12:15 | **Morning self-test.** Sends a message tagged `[Form Test xxxxxxxx]` through the same path to both inboxes. If Gmail accepts it, the Worker pings `HEARTBEAT_URL`. If not, no ping, and the outside service raises the alarm. |
-| 12:30 | **Daily digest** email (yesterday's lead count; every screened message with its reason; a check that every logged submission from the last 7 days was delivered; error counts; a note if two days passed with no submissions), then the 90-day spam purge. |
+| 12:30 | **Daily digest** email (yesterday's lead count; every screened message with its reason; a check that every logged submission from the last 7 days was delivered, listing the name, email, phone, time and id of any that were not so the person can be called back without opening the database; error counts; a note if two days passed with no submissions), then the 90-day spam purge. |
 
 Cron runs in UTC. 12:30 UTC is 7:30 a.m. Eastern standard time (now until March 14, 2027). **When daylight time starts, change only the hours in `wrangler.jsonc`, from 12 to 11 (`15 11 * * *` and `30 11 * * *`). Nothing else needs to change.** The Worker picks the job by the minute alone (15 = self-test, 30 = digest and purge), so keep the minutes at 15 and 30. Any other minute is logged as `cron_unrecognized` and does nothing.
 

@@ -312,6 +312,10 @@ test('digest: counts leads, lists screened with reasons, flags undelivered, excl
   assert.match(d.subject, /2 lead\(s\), 1 screened.*ATTENTION/);
   assert.match(d.body, /Spam Bot <s@bad.com>, main form: agency_phrase: virtual assistant/);
   assert.match(d.body, /PROBLEM\. 1 logged submission/);
+  // The undelivered lead's name, email, phone and time are in the digest; its message is not.
+  assert.match(d.body, /Pat Example, fail@example\.com, 804-555-0100, Nov 2, 2026, 11:00 AM Eastern/);
+  assert.match(d.body, /id id-\d+-xxxxxxxx, main form, failed: http_500/);
+  assert.doesNotMatch(d.body, /my claim was denied/);
   assert.match(d.body, /1 failed send/);
   assert.equal(await runDigest(env, w.deps), true);
   assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: Form digest/);
