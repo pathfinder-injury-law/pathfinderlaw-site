@@ -123,4 +123,4 @@ The insurance company knows the rules, and most injured workers are learning the
 
 ## Talk to Pathfinder Injury Law About Your Foot Injury
 
-A foot injury at work can mean a long recovery and a lot of paperwork. Pathfinder Injury Law handles only workers’ compensation, and we represent injured workers across Virginia. Call [804-505-0633](tel:+18045050633) or [contact us online](/contact/) to talk through your situation.
+A foot injury at work can mean a long recovery and a lot of paperwork. Pathfinder Injury Law handles only Virginia workers’ compensation claims, for injured workers across the state. Call [804-505-0633](tel:+18045050633) or [contact us online](/contact/) to talk through your situation.

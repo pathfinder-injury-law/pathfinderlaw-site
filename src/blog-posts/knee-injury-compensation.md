@@ -127,4 +127,4 @@ Insurance companies often try to pay as little as possible on knee claims, even 
 
 ## Talk to Pathfinder Injury Law About Your Knee Injury
 
-Pathfinder Injury Law handles only workers’ compensation, and we represent injured workers across Virginia. If you hurt your knee at work, [contact us](/contact/) or call [804-505-0633](tel:+18045050633) to talk through your situation.
+Pathfinder Injury Law handles only Virginia workers’ compensation claims, for injured workers across the state. If you hurt your knee at work, [contact us](/contact/) or call [804-505-0633](tel:+18045050633) to talk through your situation.
