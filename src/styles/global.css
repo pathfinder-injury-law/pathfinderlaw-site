@@ -9,6 +9,11 @@
   --sun: #ffd040; /* secondary, Pantone 122 C */
   --sky: #6fb1c8; /* secondary, Pantone 7458 C */
   --amber: #d77900; /* secondary, Pantone 1385 C */
+  /* Color Option E, "one job per color": orange for every action, yellow for brand touches,
+     a light Brand Book blue tint for small labels on dark green. */
+  --act: var(--amber); /* Brand Book orange #d77900: buttons, phone pill, phone numbers */
+  --act-hover: color-mix(in srgb, var(--amber) 82%, white);
+  --sky-tint: #7db9ce; /* lighter tint of Brand Book blue #6fb1c8, 4.80:1 on dark green */
   --wash: #a0b677; /* pale green tint the old site multiplied over its photos */
   --sage: #d6e1d1;
   --mist: #eaefe8;
@@ -213,11 +218,14 @@ p {
   transform: translateY(0);
 }
 .btn-primary {
-  background: var(--sun);
+  background: var(--act);
   color: var(--forest);
+  /* Dark green on orange is 3.3:1, so action labels are large text: at least 19px bold. */
+  font-size: max(1.1875rem, 1em);
+  font-weight: 700;
 }
 .btn-primary:hover {
-  background: #ffdc70;
+  background: var(--act-hover);
 }
 .btn-dark {
   background: var(--forest);
@@ -462,7 +470,7 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
     bottom: 0.2rem;
     height: 3px;
     border-radius: 2px;
-    background: var(--sun);
+    background: var(--sky);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s var(--ease);
@@ -473,8 +481,9 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
   }
   .desktop-nav .header-phone {
     font-weight: 800;
-    background: var(--sun);
+    background: var(--act);
     color: var(--forest);
+    font-size: 1.1875rem !important; /* large text, so dark green on orange passes */
     text-shadow: none;
     padding: 0.7rem 0.9rem;
     border-radius: 999px;
@@ -775,11 +784,8 @@ body:not(.has-overlay) main {
     --k: max(0.875rem, 1.1vw);
     --l1: calc(5.27vw + 2.28rem);
   }
-  .hero-l2 {
-    font-size: calc(5.76vw + 2.52rem) !important;
-  }
   .btn-hero {
-    font-size: calc(0.875vw + 0.58rem) !important;
+    font-size: max(1.1875rem, calc(0.875vw + 0.58rem)) !important;
   }
 }
 /* Wash: light green, from the brand greens, behind the words (left) fading out toward the hiker. */
@@ -842,8 +848,8 @@ body:not(.has-overlay) main {
   font-family: var(--font-accent);
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(3rem, 8.9vw, 8.9rem);
-  line-height: 1.04;
+  font-size: calc(var(--l1) * 0.8); /* a smaller answer to "Hurt at work?", about 80 percent of it */
+  line-height: 1.08;
   color: var(--sun);
   /* A dark green edge plus a soft glow keep the yellow readable over the pale sky. */
   -webkit-text-stroke: 0.035em var(--forest);
@@ -857,17 +863,17 @@ body:not(.has-overlay) main {
   gap: 0.75em;
   padding: 0.5em 0.55em 0.5em 1.4em;
   min-height: 3.5rem;
-  background: var(--sun);
+  background: var(--act);
   color: var(--forest);
   border: 2px solid var(--forest);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: clamp(0.875rem, 1.6vw, 1.5rem);
+  font-size: clamp(1.1875rem, 1.6vw, 1.5rem); /* never under 19px bold: dark green on orange is large text */
   white-space: nowrap;
 }
 .btn-hero:hover {
-  background: #ffdc70;
+  background: var(--act-hover);
 }
 .btn-hero:focus-visible {
   outline-color: var(--forest); /* amber would be hard to see against the pale sky */
@@ -1224,7 +1230,7 @@ mark {
   color: var(--forest);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
-  border-top: 0.4rem solid var(--sun);
+  border-top: 0.4rem solid var(--sky);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.22);
   transition: transform 0.35s var(--ease);
 }
@@ -1326,7 +1332,13 @@ mark {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
-  color: var(--sun);
+  color: var(--sky-tint);
+}
+/* Small labels on the dark green bands ("All We Do Is", "No Pressure"). */
+.focus-band .caps,
+.on-dark .caps,
+.contour .caps {
+  color: var(--sky-tint);
 }
 .cta h2 {
   margin-bottom: 0.3em;
@@ -1339,7 +1351,7 @@ mark {
   font-weight: 800;
   font-size: 1.6rem;
   text-decoration: none;
-  color: var(--sun);
+  color: var(--act); /* 3.3:1 on dark green, large bold text */
 }
 
 .form-card {
@@ -1465,7 +1477,7 @@ mark {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--sun);
+  color: var(--sky-tint);
   margin-bottom: 0.9rem;
 }
 .site-footer ul {
@@ -1561,12 +1573,12 @@ mark {
   font-family: var(--font-head);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  font-size: 1.1875rem; /* 19px bold: large text, so dark green on orange passes */
   padding: 0 0.5rem;
 }
 .call-bar a:first-child {
-  background: rgba(255, 208, 64, 0.94);
+  background: var(--act); /* solid: dark green on orange needs the full color to reach 3.3:1 */
   color: var(--forest);
 }
 .call-bar a:last-child {
@@ -1726,7 +1738,7 @@ mark {
   text-align: center;
 }
 .side-call h2 {
-  color: var(--sun);
+  color: var(--sky-tint);
 }
 .side-call .cta-phone {
   display: block;
