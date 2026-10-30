@@ -500,6 +500,7 @@ export const subArticles: SubArticle[] = [
           'But let’s say you injured your back at work. You may be unable to perform all your usual tasks at work, but you’re able to work to some degree. In these cases, you may receive wages for the work you’re able to do, as well as partial disability benefits. ' +
             TPD +
             ' Your Workers’ Comp lawyer can go through the details of your Workers’ Comp payments with you.',
+          'Wondering about taxes on these checks? Read [Are Workers’ Comp benefits taxable?](/are-workers-comp-benefits-taxable/)',
         ],
       },
     ],
