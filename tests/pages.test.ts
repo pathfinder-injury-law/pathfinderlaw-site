@@ -71,6 +71,11 @@ test('XML page sitemap lists the Eastern Shore page once, and arears_served does
   assert.ok(!areas.includes(SHORE));
 });
 
+test('XML page sitemap lists the accessibility page once', opts, () => {
+  const page = readFileSync(new URL('page-sitemap.xml', dist), 'utf8');
+  assert.equal(page.split('https://pathfinderlaw.com/accessibility/</loc>').length - 1, 1);
+});
+
 test('redirects: the occupational-diseases redirect stays and nothing redirects the Eastern Shore address', () => {
   const redirects = readFileSync(new URL('../public/_redirects', import.meta.url), 'utf8');
   assert.ok(/occupational-diseases/.test(redirects));
