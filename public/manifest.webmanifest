@@ -1,0 +1,12 @@
+{
+  "name": "Pathfinder Injury Law",
+  "short_name": "Pathfinder",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#294634",
+  "icons": [
+    { "src": "/images/brand/icon.png", "sizes": "626x626", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,4 +1,5 @@
 ---
+import Photo from './Photo.astro';
 import ContactForm from './ContactForm.astro';
 import { site } from '../data/site';
 
@@ -13,7 +14,7 @@ const { variant = 'band' } = Astro.props;
   </section>
 ) : (
 <section class="section cta contour on-dark" id="contact">
-  <img class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" loading="lazy" />
+  <Photo class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" sizes="100vw" loading="lazy" />
   <div class="wrap cta-grid">
     <div data-reveal>
       <ul class="cta-points caps">

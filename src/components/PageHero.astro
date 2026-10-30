@@ -1,4 +1,5 @@
 ---
+import Photo from './Photo.astro';
 import TornEdge from './TornEdge.astro';
 
 interface Props {
@@ -12,7 +13,7 @@ interface Props {
 const { title, crumbs = [], image = '/images/photos/tile-b.jpg', lockup } = Astro.props;
 ---
 <section class:list={['page-hero', 'on-dark', lockup && 'page-hero-lockup']}>
-  <img class="hero-photo" src={image} alt="" width="1400" height="886" fetchpriority="high" />
+  <Photo class="hero-photo" src={image} alt="" width="1400" height="886" sizes="100vw" fetchpriority="high" />
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
