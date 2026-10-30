@@ -19,11 +19,13 @@
   --font-head: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Figtree Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --wrap: 72rem;
-  --gutter: 1.25rem;
+  /* Layout widths and side padding follow the old site: 15px phone gutter, 30px from 640px, 40px from 960px. */
+  --wrap: 75rem; /* 1200px content column, as on the old home page */
+  --wrap-wide: 82rem; /* 1312px: header, hero and article pages, as on the old site */
+  --gutter: 0.9375rem;
   --radius: 0.75rem;
   --radius-lg: 1.5rem;
-  --header-h: 5.25rem;
+  --header-h: 5.25rem; /* height of the compact (solid) header on phones */
   --shadow: 0 1rem 2.5rem rgba(41, 70, 52, 0.16);
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -43,8 +45,8 @@ body {
   background: var(--white);
   color: var(--forest);
   font-family: var(--font-body);
-  font-size: 1.125rem;
-  line-height: 1.65;
+  font-size: 1.0625rem; /* 17px, same as the old site */
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -64,9 +66,9 @@ h2,
 h3 {
   font-family: var(--font-head);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.2;
   margin: 0 0 0.55em;
-  letter-spacing: -0.005em;
+  letter-spacing: 0.01em;
 }
 
 h1,
@@ -74,24 +76,53 @@ h2,
 .hero-tag {
   text-wrap: balance;
 }
+/* Sizes follow the old site: section headings 36px on phones and 46px from 960px, h3 23-24px. */
 h1 {
-  font-size: clamp(2.75rem, 7.5vw, 5.25rem);
-  letter-spacing: 0.01em;
+  font-size: 2.6rem;
+  letter-spacing: 0.06em;
 }
 h2 {
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: 2.23rem;
 }
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.4375rem;
+}
+@media (min-width: 40rem) {
+  :root {
+    --gutter: 1.875rem;
+  }
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 60rem) {
+  :root {
+    --gutter: 2.5rem;
+  }
+  h1 {
+    font-size: 4.25rem;
+  }
+  h2 {
+    font-size: 2.86rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 p {
-  margin: 0 0 1em;
+  margin: 0 0 1.25rem; /* 20px, as on the old site */
 }
 
 .wrap {
   width: min(100% - 2 * var(--gutter), var(--wrap));
   margin-inline: auto;
+}
+.header-bar.wrap,
+.hero .wrap,
+.page-hero .wrap,
+.page-body.wrap {
+  width: min(100% - 2 * var(--gutter), var(--wrap-wide));
 }
 
 .skip-link {
@@ -109,8 +140,26 @@ p {
 }
 
 :focus-visible {
-  outline: 3px solid var(--amber);
+  outline: 3px solid var(--forest); /* the green ring, one rule for every link, button, field and menu item */
   outline-offset: 3px;
+}
+/* On dark and green sections the green ring would vanish, so it turns white there (same width and offset).
+   Fields inside the white form card go back to green. */
+.on-dark :focus-visible,
+.contour :focus-visible,
+.site-footer :focus-visible,
+.cta :focus-visible {
+  outline-color: var(--white);
+}
+.form-card :focus-visible,
+.main-nav-panel :focus-visible {
+  outline-color: var(--forest);
+}
+/* The Turnstile check box is a third-party frame, so its holder shows the ring when something inside has focus. */
+.ts-widget:focus-within {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
 }
 
 /* Brand Book emphasis: ALL CAPS and bold. */
@@ -142,12 +191,12 @@ p {
   align-items: center;
   justify-content: center;
   font-family: var(--font-head);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em; /* 3px at 15px, as on the old site; title case is kept */
+  font-size: 0.9375rem;
   text-decoration: none;
-  padding: 1rem 1.9rem;
+  padding: 0 1.5rem;
+  min-height: 3.4375rem; /* 55px, as on the old site (also keeps a 44px+ tap target) */
   border-radius: 999px;
   border: 2px solid transparent;
   line-height: 1.2;
@@ -196,6 +245,12 @@ p {
   flex-wrap: wrap;
   gap: 0.9rem;
 }
+/* On phones the old site's buttons run the full width of the column. */
+@media (max-width: 39.99rem) {
+  .btn-row .btn {
+    width: 100%;
+  }
+}
 
 .on-dark {
   color: var(--white);
@@ -210,44 +265,55 @@ p {
 }
 .header-bar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-/* The logo hangs from the top edge in a light badge, as on the old site. */
+/* The logo hangs from the top edge on a frosted, slightly see-through card, as on the old site. */
 .brand {
   display: block;
-  background: var(--white);
-  padding: 0.7rem 1.1rem 0.95rem;
-  border-radius: 0 0 1.1rem 1.1rem;
-  box-shadow: 0 0.6rem 1.6rem rgba(20, 40, 28, 0.2);
-  transition: padding 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  align-self: flex-start;
+  background: transparent; /* no card behind the logo, as Bryn asked (all pages) */
+  padding: 1.1rem 0 1rem;
+  transition: padding 0.35s var(--ease);
 }
 .brand img {
-  width: 9.5rem; /* Brand Book minimum is 75px wide */
+  width: 12.5rem; /* 200px on phones; the Brand Book minimum is 75px wide */
   height: auto;
   transition: width 0.35s var(--ease);
 }
 
+/* Menu button on phones and tablets: a plain three-line icon (the name "Menu" is its aria-label).
+   The 3rem square is a 48px tap target. */
 .nav-toggle {
-  margin-top: 1.15rem;
-  border: 2px solid var(--white);
-  border-radius: 999px;
-  background: rgba(20, 40, 28, 0.25);
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-right: -0.5rem;
+  border-radius: 0.5rem;
   color: var(--white);
-  font-family: var(--font-head);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8rem;
-  padding: 0.6rem 1.1rem;
   cursor: pointer;
   list-style: none;
-  transition: color 0.3s, border-color 0.3s, background 0.3s;
+  transition: color 0.3s;
 }
 .nav-toggle::-webkit-details-marker {
   display: none;
+}
+.nav-toggle svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  filter: drop-shadow(0 1px 6px rgba(10, 25, 15, 0.6));
+}
+.nav-toggle .icon-close {
+  display: none;
+}
+.nav-mobile[open] .nav-toggle .icon-open {
+  display: none;
+}
+.nav-mobile[open] .nav-toggle .icon-close {
+  display: block;
 }
 .main-nav ul {
   list-style: none;
@@ -257,7 +323,7 @@ p {
 .main-nav a {
   display: block;
   text-decoration: none;
-  padding: 0.6rem 0;
+  padding: 0.7rem 0;
   color: var(--forest);
 }
 .main-nav .sub {
@@ -289,9 +355,20 @@ body.has-overlay .site-header:not(.is-solid)::before {
   position: absolute;
   inset: 0 0 auto;
   height: 9rem;
-  background: linear-gradient(180deg, rgba(14, 32, 22, 0.6), rgba(14, 32, 22, 0));
+  background: linear-gradient(180deg, rgba(14, 32, 22, 0.74), rgba(14, 32, 22, 0));
   pointer-events: none;
   z-index: -1;
+}
+
+/* Home page: the pale sky behind the header needs dark menu text and no dark fade. */
+body.hero-light.has-overlay .site-header:not(.is-solid)::before {
+  content: none;
+}
+body.hero-light .site-header:not(.is-solid) .nav-toggle {
+  color: var(--forest);
+}
+body.hero-light .site-header:not(.is-solid) .nav-toggle svg {
+  filter: none;
 }
 
 /* Solid bar: after scrolling, and always on pages without a photo behind the header. */
@@ -303,52 +380,66 @@ body:not(.has-overlay) .site-header {
 }
 .site-header.is-solid .brand,
 body:not(.has-overlay) .site-header .brand {
+  align-self: center;
   box-shadow: none;
   padding-block: 0.55rem 0.65rem;
   border-radius: 0;
   background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.site-header.is-solid .brand img,
+body:not(.has-overlay) .site-header .brand img {
+  width: 10.5rem;
 }
 .site-header.is-solid .nav-toggle,
 body:not(.has-overlay) .site-header .nav-toggle {
-  border-color: var(--forest);
-  background: transparent;
   color: var(--forest);
-  margin-top: 0.95rem;
+}
+.site-header.is-solid .nav-toggle svg,
+body:not(.has-overlay) .site-header .nav-toggle svg {
+  filter: none;
 }
 
 .desktop-nav {
   display: none;
 }
 
-/* Full menu from 72rem up; below that the Menu button is used so nine items never wrap. */
-@media (min-width: 72rem) {
+/* Full menu bar from 60rem (960px), the same width as the old site; below that the Menu button is used.
+   The old menu had 5 items; this one has 9 plus the phone number, so the type is smaller to fit. */
+@media (min-width: 60rem) {
+  :root {
+    --header-h: 6.25rem;
+  }
   .nav-mobile {
     display: none;
+  }
+  .brand {
+    padding: 1.1rem 0 1rem;
   }
   .brand img {
     width: 12.5rem;
   }
   .site-header.is-solid .brand img,
   body:not(.has-overlay) .site-header .brand img {
-    width: 10.5rem;
+    width: 11.5rem;
   }
   .desktop-nav {
     display: flex;
     align-items: center;
-    gap: 1.75rem;
-    margin-top: 1.75rem;
-    transition: margin 0.35s var(--ease);
-  }
-  .site-header.is-solid .desktop-nav,
-  body:not(.has-overlay) .site-header .desktop-nav {
-    margin-top: 1.4rem;
+    gap: 0.75rem;
+    min-width: 0;
+    flex: 1; /* takes the space beside the logo card ... */
+    margin-left: 0;
   }
   .desktop-nav > ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1.6rem;
+    flex: 1;
+    justify-content: space-between; /* ... and spreads the menu items across it */
+    gap: 0.9rem;
     align-items: center;
   }
   .desktop-nav a {
@@ -356,9 +447,11 @@ body:not(.has-overlay) .site-header .nav-toggle {
     text-decoration: none;
     color: var(--white);
     font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
     text-shadow: 0 1px 12px rgba(10, 25, 15, 0.55);
     position: relative;
-    padding-block: 0.35rem;
+    padding-block: 0.7rem; /* keeps each link a 44px-tall target */
     transition: color 0.25s;
   }
   .desktop-nav > ul > li > a::after {
@@ -366,7 +459,7 @@ body:not(.has-overlay) .site-header .nav-toggle {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -0.1rem;
+    bottom: 0.2rem;
     height: 3px;
     border-radius: 2px;
     background: var(--sun);
@@ -383,9 +476,13 @@ body:not(.has-overlay) .site-header .nav-toggle {
     background: var(--sun);
     color: var(--forest);
     text-shadow: none;
-    padding: 0.6rem 1.15rem;
+    padding: 0.7rem 0.9rem;
     border-radius: 999px;
     white-space: nowrap;
+  }
+  body.hero-light .site-header .desktop-nav a:not(.header-phone) {
+    color: var(--forest);
+    text-shadow: none;
   }
   .site-header.is-solid .desktop-nav a:not(.header-phone),
   body:not(.has-overlay) .site-header .desktop-nav a:not(.header-phone) {
@@ -425,9 +522,147 @@ body:not(.has-overlay) .site-header .nav-toggle {
     color: var(--forest);
     text-shadow: none;
     font-weight: 500;
+    font-size: 0.98rem;
   }
   .desktop-nav .sub a:hover {
     color: var(--pine);
+  }
+}
+@media (min-width: 60rem) and (max-width: 67.99rem) {
+  /* Tightest range (960 to 1087px): smaller logo card, 13px type and tighter gaps so all nine items
+     and the phone number fit on one line. */
+
+  .brand img {
+    width: 9.5rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 9.5rem;
+  }
+  .desktop-nav {
+    gap: 0.4rem;
+  }
+  .desktop-nav > ul {
+    gap: 0.5rem;
+  }
+  .desktop-nav a {
+    font-size: 0.8125rem;
+    letter-spacing: 0.01em;
+  }
+  .desktop-nav .header-phone {
+    padding-inline: 0.7rem;
+  }
+}
+@media (min-width: 68rem) {
+  .brand img {
+    width: 12.5rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 11rem;
+  }
+}
+@media (min-width: 72rem) {
+  .brand img {
+    width: 14rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 12rem;
+  }
+  .desktop-nav {
+    gap: 0.75rem;
+  }
+  .desktop-nav > ul {
+    gap: 0.8rem;
+  }
+  .desktop-nav a {
+    font-size: 0.9375rem;
+  }
+}
+@media (min-width: 76rem) {
+  .desktop-nav > ul {
+    gap: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .desktop-nav {
+    margin-left: 1.5rem;
+  }
+  .brand img {
+    width: 15rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 13rem;
+  }
+  .desktop-nav a {
+    font-size: 1rem;
+  }
+}
+/* From 1440px up the logo card and menu type reach the old site's size (logo 280px). */
+@media (min-width: 90rem) {
+
+  .brand img {
+    width: 15.5rem; /* a little smaller than the old site's 280px so the menu can breathe */
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 14rem;
+  }
+  .desktop-nav {
+    gap: 1rem;
+  }
+  .desktop-nav > ul {
+    gap: 1.5rem;
+  }
+  .desktop-nav a {
+    font-size: 1rem;
+  }
+}
+
+:root {
+  --logo-w: 13.5rem;
+}
+@media (min-width: 60rem) and (max-width: 67.99rem) {
+  :root { --logo-w: 11rem; }
+}
+@media (min-width: 72rem) {
+  :root { --logo-w: 15.5rem; }
+}
+@media (min-width: 80rem) {
+  :root { --logo-w: 17rem; }
+}
+@media (min-width: 90rem) {
+  :root { --logo-w: 19.5rem; }
+}
+/* Logo with no card (all pages), a little larger than before, growing with the screen. */
+.site-header:not(.is-solid) .brand img {
+  width: 13.5rem;
+}
+@media (min-width: 60rem) and (max-width: 67.99rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 11rem;
+  }
+}
+@media (min-width: 68rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 13.5rem;
+  }
+}
+@media (min-width: 72rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 15.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 17rem;
+  }
+}
+@media (min-width: 90rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 19.5rem;
   }
 }
 
@@ -437,88 +672,182 @@ body:not(.has-overlay) main {
 }
 
 /* ---------- Hero ---------- */
+/* Fraunces italic (SIL Open Font License), served from this site; no outside font requests.
+   Only the Latin italic is used, for "Let's go." */
+@font-face {
+  font-family: "Fraunces Italic";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-wght-italic.woff2") format("woff2");
+}
+:root {
+  --font-accent: "Fraunces Italic", Georgia, "Times New Roman", serif;
+}
+
+/* The photo (a hiker seen over his shoulder, with the trail and crest behind him) fills the hero on
+   screens 1000px wide and up, pinned bottom right so the hiker stays in frame. On narrower screens
+   the photo sits along the bottom at full width and the sky above it is a CSS gradient sampled from
+   the photo's top edge, feathered in so there is no seam; that leaves room for the words above the
+   hiker. A light green wash behind the words, strongest on the left and fading out toward the
+   hiker, keeps the green words readable where they reach the hills. */
 .hero {
   position: relative;
-  color: var(--white);
-  background: var(--forest);
-  text-align: center;
+  color: var(--forest);
+  text-align: left;
   isolation: isolate;
   overflow: hidden;
-  display: grid;
-  place-items: center;
-  min-height: min(100svh, 52rem);
+  min-height: clamp(45rem, 56vw, 62rem); /* 720px, growing with the screen so the whole photo shows */
+  background: linear-gradient(to right, #c4d6e6, #b7d0e4 25%, #b2cce5 50%, #abc7e4 75%, #a1c0dd);
+  /* Spacing: the same visible gap above and below the rule (--g), built from the kicker and headline sizes. */
+  --k: clamp(0.8125rem, 1.1vw, 1.125rem);
+  --l1: clamp(2.75rem, 8.1vw, 8.1rem);
+  --g: clamp(1.1rem, 1.7vw, 1.7rem);
 }
-.hero-photo {
+.hero-pic {
   position: absolute;
   inset: 0;
+  z-index: -1;
+  display: block;
+}
+.hero-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 45%;
-  z-index: -2;
-  animation: drift 28s ease-out forwards;
+  object-position: 100% 100%;
+  max-width: none;
+  display: block;
 }
-/* The old site's faded look: a pale green tint multiplied over the photo, then
-   a soft dark fade so the words stay easy to read. */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--wash);
-  mix-blend-mode: multiply;
-  opacity: 0.88;
-  z-index: -1;
+@media (min-width: 62.5rem) {
+  .hero {
+    background: linear-gradient(to right, #ebf3f6, #dae5ee 25%, #bfd4e5 50%, #b0cbe4 75%, #a1c0dd);
+  }
 }
+@media (max-width: 62.49rem) {
+  .hero-photo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    object-fit: initial;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
+  }
+}
+@media (max-width: 47.99rem) {
+  .hero {
+    min-height: clamp(37rem, calc(100svh - 7rem), 42rem); /* ends above the floating bottom bar */
+  }
+}
+/* Wash: light green, from the brand greens, behind the words (left) fading out toward the hiker. */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(14, 32, 22, 0.5) 0%, rgba(14, 32, 22, 0.18) 40%, rgba(14, 32, 22, 0.45) 100%);
   z-index: -1;
+  background:
+    radial-gradient(ellipse 85% 120% at 0% 38%, rgba(64, 104, 60, 0.3) 0%, rgba(64, 104, 60, 0.22) 45%, rgba(64, 104, 60, 0) 100%),
+    linear-gradient(180deg, rgba(64, 104, 60, 0.02) 0%, rgba(64, 104, 60, 0.06) 38%, rgba(64, 104, 60, 0.18) 62%, rgba(64, 104, 60, 0.18) 100%); /* plus a light green wash over the photo (lightest behind the words), to tone it down a little */
+  pointer-events: none;
 }
 .hero .wrap {
-  padding-block: calc(var(--header-h) + 3rem) clamp(6rem, 12vw, 9rem);
-  text-shadow: 0 2px 24px rgba(10, 25, 15, 0.5);
+  padding-block: 7.5rem 7rem; /* clears the 97px logo card on phones */
 }
+@media (min-width: 48rem) {
+  .hero .wrap {
+    padding-block: calc(var(--header-h) + clamp(1.5rem, 4.6vw, 5.5rem)) 7rem;
+  }
+  .hero .wrap > * {
+    max-width: 74%; /* the words stay clear of the hiker's head by their size, not by wrapping */
+  }
+}
+/* The page heading, set small: "Virginia Workers' Comp Lawyer". */
 .hero-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  font-family: var(--font-head);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 1.05rem;
-  margin-bottom: 0.9rem;
-}
-.hero-kicker::before,
-.hero-kicker::after {
-  content: "";
-  width: 3rem;
-  height: 2px;
-  background: var(--white);
-  opacity: 0.85;
-}
-.hero h1 {
-  margin-bottom: 0.25em;
-}
-.hero-tag {
+  margin: 0 0 max(0.2rem, calc(var(--g) - 0.3 * var(--k)));
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: clamp(1.7rem, 4.5vw, 2.75rem);
-  line-height: 1.2;
-  margin: 0 0 2.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: var(--k);
+  line-height: 1.3;
+  color: var(--forest);
+  text-wrap: wrap;
 }
-.hero-tag .accent {
+.hero-l1,
+.hero-l2 {
+  margin: 0;
+}
+@media (min-width: 48rem) {
+  .hero-l1,
+  .hero-l2 {
+    white-space: nowrap;
+  }
+}
+.hero .rule {
+  margin: 0 0 max(0.25rem, calc(var(--g) - 0.13 * var(--l1)));
+}
+.hero-l1 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: var(--l1);
+  line-height: 1;
+  letter-spacing: -0.012em;
+  color: var(--forest);
+}
+.hero-l2 {
+  margin-top: 0.04em;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(3rem, 8.9vw, 8.9rem);
+  line-height: 1.04;
   color: var(--sun);
+  /* A dark green edge plus a soft glow keep the yellow readable over the pale sky. */
+  -webkit-text-stroke: 0.035em var(--forest);
+  paint-order: stroke fill;
+  text-shadow: 0 0.03em 0.18em rgba(20, 35, 25, 0.35);
 }
 .hero .btn-row {
-  justify-content: center;
-  text-shadow: none;
+  margin-top: clamp(1.1rem, 2.6vw, 2.25rem);
 }
-.hero .btn {
-  padding: 1.1rem 2.4rem;
-  font-size: 1rem;
+.btn-hero {
+  gap: 0.75em;
+  padding: 0.5em 0.55em 0.5em 1.4em;
+  min-height: 3.5rem;
+  background: var(--sun);
+  color: var(--forest);
+  border: 2px solid var(--forest);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(0.875rem, 1.6vw, 1.5rem);
+  white-space: nowrap;
+}
+.btn-hero:hover {
+  background: #ffdc70;
+}
+.btn-hero:focus-visible {
+  outline-color: var(--forest); /* amber would be hard to see against the pale sky */
+}
+.btn-arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--sun);
+  flex: none;
+}
+.btn-arrow svg {
+  width: 55%;
+  height: 55%;
+}
+@media (max-width: 39.99rem) {
+  .btn-hero {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .torn {
   position: absolute;
@@ -561,7 +890,12 @@ body:not(.has-overlay) main {
 
 /* ---------- Generic sections ---------- */
 .section {
-  padding-block: clamp(3.5rem, 8vw, 6rem);
+  padding-block: 2.5rem; /* 40px on phones, 70px from 960px, as on the old site */
+}
+@media (min-width: 60rem) {
+  .section {
+    padding-block: 4.375rem;
+  }
 }
 .section-sage {
   background: var(--sage);
@@ -605,6 +939,10 @@ body:not(.has-overlay) main {
 }
 .intro h2 {
   margin-bottom: 0.2em;
+}
+/* The old home page sets its introduction in 21px type. */
+.intro p:not(.lede) {
+  font-size: 1.3125rem;
 }
 .lede {
   font-size: 1.3rem;
@@ -924,6 +1262,9 @@ mark {
   z-index: -2;
   opacity: 0.12;
 }
+.cta-grid > * {
+  min-width: 0; /* lets the form shrink on 320px screens instead of widening the page */
+}
 .cta-grid {
   display: grid;
   gap: 2.5rem;
@@ -1060,7 +1401,7 @@ mark {
 /* ---------- Footer ---------- */
 .site-footer {
   color: var(--white);
-  padding-block: 3.5rem 6rem; /* room for the mobile call bar */
+  padding-block: 2.5rem calc(5.5rem + env(safe-area-inset-bottom)); /* bottom room for the floating phone bar */
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 .footer-grid {
@@ -1135,36 +1476,85 @@ mark {
   font-size: 0.92rem;
 }
 
-/* Mobile call/message bar (the old site had one too) */
+/* Phone-only Call / Message bar: a small floating pill, 48px tall, with a 12px margin all round
+   (plus the iPhone home-bar inset). Without JavaScript it simply stays put. With JavaScript it slides
+   away while scrolling down, comes back on scrolling up, and steps aside over the contact form and
+   footer. Hidden from 1024px up. Colours are the site's yellow and green at 94 percent, so text
+   contrast stays above 4.5:1 over any page content. */
 .call-bar {
   position: fixed;
-  inset: auto 0 0 0;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: calc(0.75rem + env(safe-area-inset-bottom));
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 26rem;
+  margin-inline: auto;
   z-index: 40;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 0.35rem 1.1rem rgba(20, 40, 28, 0.28);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.call-bar.is-hidden {
+  transform: translateY(calc(100% + 1.5rem + env(safe-area-inset-bottom)));
+  opacity: 0;
+  pointer-events: none;
+}
+/* Keyboard focus always brings the bar back into view. */
+.call-bar.is-hidden:focus-within {
+  transform: none;
+  opacity: 1;
+  pointer-events: auto;
 }
 .call-bar a {
+  display: grid;
+  place-items: center;
+  min-height: 3rem;
   text-align: center;
   text-decoration: none;
   font-family: var(--font-head);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.9rem;
-  padding: 1rem 0.5rem;
+  letter-spacing: 0.08em;
+  font-size: 0.8125rem;
+  padding: 0 0.5rem;
 }
 .call-bar a:first-child {
-  background: var(--sun);
+  background: rgba(255, 208, 64, 0.94);
   color: var(--forest);
 }
 .call-bar a:last-child {
-  background: var(--pine);
+  background: rgba(64, 104, 60, 0.94);
   color: var(--white);
+}
+.call-bar a:focus-visible {
+  outline-offset: -6px; /* inside the pill, so the rounded edge does not clip it */
+}
+.call-bar a:first-child:focus-visible {
+  outline-color: var(--forest);
+}
+.call-bar a:last-child:focus-visible {
+  outline-color: var(--white);
+}
+@media (prefers-reduced-motion: reduce) {
+  .call-bar {
+    transition: none;
+  }
 }
 @media (min-width: 64rem) {
   .call-bar {
     display: none;
   }
+}
+@media (min-width: 60rem) {
+  .site-footer {
+    padding-top: 4.375rem;
+  }
+}
+@media (min-width: 64rem) {
   .site-footer {
     padding-bottom: 3rem;
   }
@@ -1173,42 +1563,57 @@ mark {
 /* ---------- Inner pages ---------- */
 .page-hero {
   position: relative;
-  color: var(--white);
-  background: var(--forest);
+  color: var(--forest);
+  background: #f3f6f1;
   isolation: isolate;
   overflow: hidden;
-  min-height: 24rem;
+  min-height: 20rem;
   display: grid;
   align-items: end;
 }
 .page-hero .hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  z-index: -2;
   animation: none;
 }
+.page-hero .hero-photo {
+  opacity: 0.32; /* the photo stays faintly visible under the pale wash */
+}
 .page-hero::before {
+  /* Pale wash (white with a little brand pine green), lightest at the top where the logo and menu sit. */
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--wash);
-  mix-blend-mode: multiply;
-  opacity: 0.92;
   z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.6) 100%),
+    rgba(64, 104, 60, 0.1);
+  pointer-events: none;
 }
 .page-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(14, 32, 22, 0.55), rgba(14, 32, 22, 0.35) 60%, rgba(14, 32, 22, 0.55));
-  z-index: -1;
+  content: none;
 }
 .page-hero .wrap {
-  padding-block: calc(var(--header-h) + 3.5rem) 6rem;
-  text-shadow: 0 2px 24px rgba(10, 25, 15, 0.5);
+  padding-block: calc(var(--header-h) + 2.5rem) 5rem;
+  color: var(--forest);
   animation: rise 0.9s var(--ease) both;
 }
+/* Page titles: 28.7px on phones and 42px from 960px, as on the old site. */
 .page-hero h1 {
-  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
   margin: 0;
-  max-width: 22ch;
+  max-width: 28ch;
+}
+@media (min-width: 60rem) {
+  .page-hero h1 {
+    font-size: 2.625rem;
+  }
 }
 .crumbs ol {
   list-style: none;
@@ -1237,11 +1642,16 @@ mark {
 .page-body {
   display: grid;
   gap: 3rem;
-  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 7vw, 5rem);
+  padding-block: 2.5rem;
+}
+@media (min-width: 60rem) {
+  .page-body {
+    padding-block: 4.375rem;
+  }
 }
 @media (min-width: 64rem) {
   .page-body {
-    grid-template-columns: minmax(0, 1fr) 20rem;
+    grid-template-columns: minmax(0, 1fr) 24.375rem; /* old site: 850px text column, 390px side column */
     gap: 4.5rem;
     align-items: start;
   }
@@ -1303,14 +1713,15 @@ mark {
 
 /* Long-form text */
 .prose {
-  max-width: 46rem;
+  max-width: 53.125rem; /* 850px, as on the old site */
 }
 .prose > :first-child {
   margin-top: 0;
 }
 .prose h2 {
-  font-size: clamp(1.7rem, 3.4vw, 2.2rem);
-  margin: 3rem 0 1rem;
+  font-size: 1.65rem; /* 26.5px on phones, 30px from 960px, as on the old site */
+  line-height: 1.3;
+  margin: 2.5rem 0 1.25rem;
   scroll-margin-top: calc(var(--header-h) + 1rem);
 }
 .prose h2::after {
@@ -1322,14 +1733,23 @@ mark {
   background: var(--moss);
   margin-top: 0.7rem;
 }
+.prose h2 {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+@media (min-width: 60rem) {
+  .prose h2 {
+    font-size: 1.875rem;
+  }
+}
 .prose h3 {
-  font-size: 1.35rem;
-  margin: 2rem 0 0.6rem;
+  font-size: 1.4375rem;
+  line-height: 1.5;
+  margin: 1.25rem 0 0.5rem;
   color: var(--pine);
 }
 .prose p,
 .prose li {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 .prose a {
   color: var(--pine);
@@ -1370,8 +1790,8 @@ mark {
   background: var(--moss);
 }
 .prose .lead {
-  font-size: 1.3rem;
-  line-height: 1.55;
+  font-size: 1.1875rem;
+  line-height: 1.5;
   font-weight: 500;
 }
 .prose .topic-grid {
@@ -1562,4 +1982,88 @@ mark {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ---------- Contact page: lockup banner, plain form, divider ---------- */
+.page-hero-lockup {
+  min-height: 0;
+}
+.page-hero-lockup .wrap {
+  padding-block: calc(var(--header-h) + clamp(2.5rem, 5vw, 4.5rem)) clamp(6.5rem, 10vw, 9.5rem);
+}
+/* The page heading "Contact Us" stays the h1 for search engines and screen readers; the big lockup is the visible headline. */
+.page-hero-lockup h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.lockup .hero-l1 {
+  font-size: clamp(3.75rem, 12vw, 9.75rem);
+  margin: 0;
+}
+.lockup .hero-l2 {
+  font-size: clamp(4rem, 13vw, 10.5rem);
+  margin: 0.04em 0 0;
+  padding-bottom: 0.14em;
+  text-shadow: none;
+}
+@media (min-width: 48rem) {
+  .page-hero-lockup .wrap > * {
+    max-width: none;
+  }
+}
+.cta-plain {
+  background: var(--white);
+  padding-block: 0 clamp(3rem, 6vw, 5rem);
+}
+.cta-plain-wrap {
+  width: min(100% - 2 * var(--gutter), 72rem);
+}
+.cta-plain .form-card {
+  background: linear-gradient(rgba(64, 104, 60, 0.05), rgba(64, 104, 60, 0.05)), var(--white);
+  border: 1px solid rgba(64, 104, 60, 0.2);
+  box-shadow: 0 0.75rem 2rem rgba(41, 70, 52, 0.07);
+  padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.5rem, 5vw, 3.5rem);
+}
+.cta-plain .form-card h3 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 1.5rem;
+}
+/* Name, Email and Phone side by side on wide screens; everything else full width. */
+@media (min-width: 52rem) {
+  .cta-plain .contact-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 1.25rem;
+  }
+  .cta-plain .field-pair {
+    display: contents;
+  }
+  .cta-plain .contact-form > :not(.field):not(.field-pair):not(.hp),
+  .cta-plain .contact-form > .field:nth-of-type(n + 2):not(:nth-child(1)) {
+    grid-column: 1 / -1;
+  }
+  .cta-plain .contact-form > .field:last-of-type {
+    grid-column: 1 / -1;
+  }
+}
+.cta-plain .btn-primary {
+  width: 100%;
+}
+/* Turnstile: no empty gap while its box is invisible; the space returns if a challenge frame appears. */
+.cta-plain .ts-widget:not(:has(iframe)) {
+  margin: 0;
+}
+.cta-plain .ts-widget > div:not(:has(iframe)) {
+  display: none;
+}
+.contact-divider {
+  height: clamp(2.5rem, 5vw, 4rem); /* uses the footer's contour pattern (.contour) */
 }

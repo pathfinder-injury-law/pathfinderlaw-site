@@ -455,6 +455,13 @@
       "live": "Mandy Truman Swartz",
       "new": "Mandy Truman",
       "reason": "Owner decision 10-29-26: her name is Mandy Truman, not Mandy Truman Swartz."
+    },
+    {
+      "address": "/",
+      "field": "h1",
+      "live": "Workers’ Comp Lawyer",
+      "new": "Virginia Workers’ Comp Lawyer",
+      "reason": "Owner decision Oct 29 (hero redesign, option 1): the small 'Virginia' line and the page heading are now one h1, 'Virginia Workers’ Comp Lawyer', styled small above the big words."
     }
   ]
 }
