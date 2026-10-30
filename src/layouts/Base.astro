@@ -1,5 +1,7 @@
 ---
 import '@fontsource-variable/figtree';
+// The main text font file (Latin letters, the only part most pages use), so it can be preloaded below.
+import figtreeLatin from '@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2?url';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -144,6 +146,24 @@ const graph = [
   },
 ];
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+
+// Instant page loads: when a visitor rests the pointer on a link to another page of this site (or
+// starts to tap it), the browser loads that page ahead of time (Speculation Rules). Never for the form
+// endpoint, the thank-you page, the feed or the sitemaps. Browsers without support ignore this.
+const speculationRules = JSON.stringify({
+  prerender: [
+    {
+      where: {
+        and: [
+          { href_matches: '/*' },
+          { not: { href_matches: ['/api/*', '/thank-you', '/thank-you/*', '/feed', '/feed/*', '/*.xml'] } },
+          { not: { selector_matches: '[rel~=nofollow], [target=_blank], [download]' } },
+        ],
+      },
+      eagerness: 'moderate',
+    },
+  ],
+});
 ---
 <!doctype html>
 <html lang="en">
@@ -157,6 +177,9 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
     <link rel="alternate" type="application/rss+xml" title={`${site.name} Feed`} href="/feed/" />
     <link rel="icon" href="/favicon.png" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#294634" />
+    <link rel="preload" as="font" type="font/woff2" href={figtreeLatin} crossorigin />
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content={site.name} />
@@ -174,6 +197,7 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
 
     <slot name="head" />
     <script type="application/ld+json" set:html={jsonLd} />
+    <script type="speculationrules" set:html={speculationRules} />
   </head>
   <body class:list={[overlay && 'has-overlay', (heroLight || overlay) && 'hero-light']}>
     <Header />
