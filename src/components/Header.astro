@@ -8,18 +8,24 @@ import { nav, site } from '../data/site';
       <img src="/images/brand/logo-horizontal.png" width="1703" height="522" alt={site.name} />
     </a>
 
-    <!-- Wide screens: inline menu with dropdowns. -->
+    <!-- Wide screens: a short menu; groups open on hover, keyboard focus or a tap on the arrow. -->
     <nav class="desktop-nav" aria-label="Main">
       <ul>
-        {nav.map((item) => (
+        {nav.map((item, i) => (
           <li class={item.children ? 'has-sub' : undefined}>
             <a href={item.href}>{item.label}</a>
             {item.children && (
-              <ul class="sub">
-                {item.children.map((c) => (
-                  <li><a href={c.href}>{c.label}</a></li>
-                ))}
-              </ul>
+              <>
+                <button class="sub-toggle" type="button" aria-expanded="false" aria-controls={`sub-${i}`}>
+                  <span class="visually-hidden">{item.label} menu</span>
+                  <svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </button>
+                <ul class="sub" id={`sub-${i}`}>
+                  {item.children.map((c) => (
+                    <li><a href={c.href}>{c.label}</a></li>
+                  ))}
+                </ul>
+              </>
             )}
           </li>
         ))}
@@ -27,7 +33,7 @@ import { nav, site } from '../data/site';
       <a class="header-phone" href={site.phoneHref}>{site.phoneHeader}</a>
     </nav>
 
-    <!-- Phones and tablets: a Menu button that opens a stacked list. No script needed. -->
+    <!-- Phones and tablets: a Menu button that opens a stacked list; each group opens on its own. No script needed. -->
     <details class="nav-mobile">
       <summary class="nav-toggle" aria-label="Menu">
         <svg class="icon-open" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
@@ -35,15 +41,20 @@ import { nav, site } from '../data/site';
       </summary>
       <nav class="main-nav main-nav-panel" aria-label="Main (mobile)">
         <ul>
+          <li><a href="/">Home</a></li>
           {nav.map((item) => (
             <li>
-              <a href={item.href}>{item.label}</a>
-              {item.children && (
-                <ul class="sub">
-                  {item.children.map((c) => (
-                    <li><a href={c.href}>{c.label}</a></li>
-                  ))}
-                </ul>
+              {item.children ? (
+                <details class="m-group">
+                  <summary>{item.label}</summary>
+                  <ul class="sub">
+                    {item.children.map((c) => (
+                      <li><a href={c.href}>{c.label}</a></li>
+                    ))}
+                  </ul>
+                </details>
+              ) : (
+                <a href={item.href}>{item.label}</a>
               )}
             </li>
           ))}
@@ -53,3 +64,33 @@ import { nav, site } from '../data/site';
     </details>
   </div>
 </header>
+
+<script>
+  // Desktop dropdowns: open on hover (with a short delay before closing, so moving the mouse into the
+  // panel does not close it), on keyboard focus, and on a click or tap of the arrow button. Esc closes.
+  document.querySelectorAll<HTMLLIElement>('.desktop-nav .has-sub').forEach((li) => {
+    const btn = li.querySelector<HTMLButtonElement>('.sub-toggle')!;
+    let timer: number | undefined;
+    let quiet = false;
+    const open = () => {
+      window.clearTimeout(timer);
+      document.querySelectorAll('.desktop-nav .has-sub.open').forEach((o) => {
+        if (o !== li) { o.classList.remove('open'); o.querySelector('.sub-toggle')?.setAttribute('aria-expanded', 'false'); }
+      });
+      li.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    };
+    const close = () => {
+      li.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+    li.addEventListener('mouseenter', open);
+    li.addEventListener('mouseleave', () => { timer = window.setTimeout(close, 250); });
+    li.addEventListener('focusin', () => { if (!quiet) open(); });
+    li.addEventListener('focusout', (e) => { if (!li.contains(e.relatedTarget as Node)) close(); });
+    btn.addEventListener('click', () => (li.classList.contains('open') ? close() : open()));
+    li.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && li.classList.contains('open')) { close(); quiet = true; btn.focus(); quiet = false; }
+    });
+  });
+</script>
