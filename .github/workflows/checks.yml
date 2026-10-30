@@ -1,0 +1,50 @@
+# Quality checks: run on every pull request and on every change to main.
+# A red X on a pull request means one of these failed; open "Details" to see which.
+# Runs on GitHub's free hosted runners (free for public repositories).
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      # Same Node version as the Cloudflare build (.node-version).
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install (exactly what package-lock.json says)
+        run: npm ci
+
+      - name: Build the live site
+        env:
+          PUBLIC_SITE_LIVE: '1'
+          # Turnstile's public site key. It is shown in every page, so it is not a secret.
+          PUBLIC_TURNSTILE_SITE_KEY: 0x4AAAAAAFqBlYabd5RzX4fP
+        run: npm run build
+
+      - name: Tests
+        env:
+          PUBLIC_SITE_LIVE: '1'
+        run: node --test "tests/**/*.test.ts"
+
+      - name: Links (every same-site link resolves to a page, file or redirect)
+        run: node scripts/check-links.mjs
+
+      - name: Pages (no em dashes, one h1 per page)
+        run: node scripts/check-html.mjs
