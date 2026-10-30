@@ -718,12 +718,15 @@ body:not(.has-overlay) main {
   max-width: none;
   display: block;
 }
-@media (min-width: 62.5rem) {
+@media (min-width: 80rem) {
   .hero {
     background: linear-gradient(to right, #ebf3f6, #dae5ee 25%, #bfd4e5 50%, #b0cbe4 75%, #a1c0dd);
   }
 }
-@media (max-width: 62.49rem) {
+/* Below 1280px the whole photo sits along the bottom at full width and its own pale sky (top left) plus a
+   matching CSS sky above hold the words, so they never land on the dark ridge. At 1280px the cover layout
+   shows the same full picture, so there is no jump. */
+@media (max-width: 79.99rem) {
   .hero-photo {
     position: absolute;
     left: 0;
@@ -737,6 +740,20 @@ body:not(.has-overlay) main {
 @media (max-width: 47.99rem) {
   .hero {
     min-height: clamp(37rem, calc(100svh - 7rem), 42rem); /* ends above the floating bottom bar */
+  }
+}
+/* 600 to 1279px: the words grow steadily with the width (about 60 to 70 percent of it) and meet the
+   desktop sizes exactly at 1280px. */
+@media (min-width: 37.5rem) and (max-width: 79.99rem) {
+  .hero {
+    --k: max(0.875rem, 1.1vw);
+    --l1: calc(5.27vw + 2.28rem);
+  }
+  .hero-l2 {
+    font-size: calc(5.76vw + 2.52rem) !important;
+  }
+  .btn-hero {
+    font-size: calc(0.875vw + 0.58rem) !important;
   }
 }
 /* Wash: light green, from the brand greens, behind the words (left) fading out toward the hiker. */

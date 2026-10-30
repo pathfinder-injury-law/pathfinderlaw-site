@@ -208,6 +208,10 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
               bySection = seen.size; apply();
             });
             document.querySelectorAll('#contact, form, .site-footer').forEach(function (el) { bio.observe(el); });
+            // Tablets: the home hero is taller than many tablet windows, so the bar waits until the hero
+            // has scrolled away instead of covering the hiker and the torn edge.
+            var heroEl = document.querySelector('.hero');
+            if (heroEl && window.matchMedia && window.matchMedia('(min-width: 48rem)').matches) bio.observe(heroEl);
           }
         }
 
