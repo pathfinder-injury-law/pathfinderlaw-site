@@ -157,5 +157,5 @@ test('404 and thank-you stay noindex in every build; other pages follow the buil
 test('privacy policy has no date placeholder', opts, () => {
   const html = read('/privacy-policy/');
   assert.doesNotMatch(html, /TO BE SET/);
-  assert.match(html, /last updated on November 2, 2026/);
+  assert.match(html, /last updated on October 30, 2026/);
 });
