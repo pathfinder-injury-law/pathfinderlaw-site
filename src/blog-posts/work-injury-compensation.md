@@ -42,7 +42,7 @@ To potentially receive compensation for permanent and total disability or incapa
 - Both eyes; or
 - Any two of these.
 
-Also, when looking at specific wording in these sections of the Code of Virginia, it is important to understand that workers’ comp case settlements are not actually “awarded” but instead are completely voluntary agreements between claimants and insurance companies. There is never a time where a judge tells either side how much they have to pay or accept — so there is no such thing as an injury settlement being awarded. It must first be negotiated.
+Also, when looking at specific wording in these sections of the Code of Virginia, it is important to understand that workers’ comp case settlements are not actually “awarded” but instead are completely voluntary agreements between claimants and insurance companies. There is never a time where a judge tells either side how much they have to pay or accept, so there is no such thing as an injury settlement being awarded. It must first be negotiated.
 
 ## How Much Are You Able to Receive in Compensation Due to a Surgery from a Workplace Accident?
 

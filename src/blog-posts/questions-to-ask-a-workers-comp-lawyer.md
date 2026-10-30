@@ -27,9 +27,9 @@ For example, you may have not looked both ways while crossing an area of the flo
 
 If you’re not sure what benefits you’re due, talk to your lawyer about seeking out the following Workers’ Comp benefits:
 
-- **Medical Benefits –** When you’re hurt in a work accident, benefits may include [reasonable and necessary medical care](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf). Talk to your lawyer about getting your bills covered.
-- **Wage Replacement –** You may be unable to work, but you still need an income. Your wage replacement benefits can cover a portion of your income until you’re able to return to your job.
-- **Death Benefits –** Losing a spouse or parent is already difficult emotionally. Death benefits can help with the financial side, paying a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.
+- **Medical Benefits:** When you’re hurt in a work accident, benefits may include [reasonable and necessary medical care](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf). Talk to your lawyer about getting your bills covered.
+- **Wage Replacement:** You may be unable to work, but you still need an income. Your wage replacement benefits can cover a portion of your income until you’re able to return to your job.
+- **Death Benefits:** Losing a spouse or parent is already difficult emotionally. Death benefits can help with the financial side, paying a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.
 
 ## Get Answers from a Workers’ Comp Lawyer
 

@@ -67,7 +67,7 @@ export const cities: City[] = [
         body: [
           'Workers’ compensation, whether in Richmond, Mechanicsville, Midlothian, or anywhere in Virginia, provides benefits to cover medical expenses (including medical bills and medical care) and lost wages after you suffer a work-related injury.',
           'In cases where a worker dies on the job, workers’ compensation can also provide death benefits to certain survivors or dependents who meet statutory criteria.',
-          'The goal of workers’ compensation is allegedly to help injured workers with their medical treatment and lost wages, but insurance companies look for reasons to get out of paying those benefits. It doesn’t matter the extent or nature of your injuries – whether you have partial disability or total disability or temporary disability or permanent disability. Insurance companies want to make money, and that doesn’t happen when they pay the injured worker. This is where a workers’ compensation attorney can be helpful.',
+          'The goal of workers’ compensation is allegedly to help injured workers with their medical treatment and lost wages, but insurance companies look for reasons to get out of paying those benefits. It doesn’t matter the extent or nature of your injuries, whether you have partial disability or total disability or temporary disability or permanent disability. Insurance companies want to make money, and that doesn’t happen when they pay the injured worker. This is where a workers’ compensation attorney can be helpful.',
         ],
       },
       {
@@ -197,7 +197,7 @@ export const cities: City[] = [
     description:
       'Pathfinder Injury Law is a proven choice when you need a Hanover County workers’ comp lawyer. Call our trusted law office at 804-505-0633.',
     intro: [
-      'An accident at work can have devastating consequences—but benefits could be available to you. Let a Workers’ Comp lawyer in Hanover County review your case.',
+      'An accident at work can have devastating consequences, but benefits could be available to you. Let a Workers’ Comp lawyer in Hanover County review your case.',
       'When you’ve been injured on the job, you know that taking action is the only way to protect your rights. A Hanover County Workers’ Comp lawyer can help fight for the compensation you need.',
     ],
     sections: [
@@ -224,9 +224,9 @@ export const cities: City[] = [
           'When you’re injured at work, it’s normal to feel overwhelmed, discombobulated, or just confused. If you haven’t lost consciousness, these are the steps you’ll want to take in the aftermath of your Hanover County workplace accident:',
           {
             list: [
-              'Check to Make Sure You’re OK – Even injuries that appear minor can have an impact. If you’re bleeding, feel lightheaded, or have a broken bone, you may need immediate medical attention.',
-              'Document Your Injuries and Surroundings – Take pictures of everything—it helps lend credibility to your claim.',
-              `[Notify Your Employer](${CODE}title65.2/chapter6/section65.2-600/) of Your Injuries – If you’ve been taken immediately to the hospital, odds are good that your supervisor is already aware. Regardless, the Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits.`,
+              'Check to Make Sure You’re OK: Even injuries that appear minor can have an impact. If you’re bleeding, feel lightheaded, or have a broken bone, you may need immediate medical attention.',
+              'Document Your Injuries and Surroundings: Take pictures of everything. It helps lend credibility to your claim.',
+              `[Notify Your Employer](${CODE}title65.2/chapter6/section65.2-600/) of Your Injuries: If you’ve been taken immediately to the hospital, odds are good that your supervisor is already aware. Regardless, the Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits.`,
             ],
           },
         ],
@@ -234,7 +234,7 @@ export const cities: City[] = [
       {
         h: 'Contact a Workers’ Comp Lawyer in Hanover County',
         body: [
-          'You’ve been injured at work—you may want an empathetic lawyer who’s familiar with the laws surrounding Workers’ Compensation to help with your claim. At Pathfinder Injury Law, we’re dedicated to standing up for injured workers, and can help you with your case, too.',
+          'You’ve been injured at work. You may want an empathetic lawyer who’s familiar with the laws surrounding Workers’ Compensation to help with your claim. At Pathfinder Injury Law, we’re dedicated to standing up for injured workers, and can help you with your case, too.',
           'Call {phone} if you’re ready to schedule a free, no-hassle case review with a Hanover County Workers’ Comp lawyer from Pathfinder Injury Law.',
         ],
       },
@@ -250,7 +250,7 @@ export const cities: City[] = [
     description:
       "Need help navigating a work injury in Chesterfield County? The passionate workers' comp team at Pathfinder Injury Law can help you.",
     intro: [
-      'Living with the aftermath of your workplace injury can be tough—you don’t have to go it alone. A Workers’ Comp lawyer in Chesterfield County can help you take on the insurance company.',
+      'Living with the aftermath of your workplace injury can be tough. You don’t have to go it alone. A Workers’ Comp lawyer in Chesterfield County can help you take on the insurance company.',
       'When you’re injured at work, both full and partial disability benefits could be on the table. Need some help getting started? Contact a Chesterfield County Workers’ Comp Lawyer.',
     ],
     sections: [
@@ -330,10 +330,10 @@ export const cities: City[] = [
           'When you’ve been injured on the job, it’s important that you take the following steps in order to increase your chance of receiving compensation.',
           {
             list: [
-              'Document Everything – Take pictures of the accident site before you leave the premises, and take pictures of your injuries.',
-              'Receive Medical Attention – Going to see a trusted doctor can help get your injuries on file—an important piece of evidence that you’ll need for your Workers’ Compensation claim. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.',
-              'Inform Your Supervisor – The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. Failing to do so could affect your ability to receive benefits.',
-              'File Your Claim – Your Workers’ Compensation [claim form](https://workcomp.virginia.gov/forms/claim-form) can be submitted electronically, faxed, or mailed.',
+              'Document Everything: Take pictures of the accident site before you leave the premises, and take pictures of your injuries.',
+              'Receive Medical Attention: Going to see a trusted doctor can help get your injuries on file, an important piece of evidence that you’ll need for your Workers’ Compensation claim. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.',
+              'Inform Your Supervisor: The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. Failing to do so could affect your ability to receive benefits.',
+              'File Your Claim: Your Workers’ Compensation [claim form](https://workcomp.virginia.gov/forms/claim-form) can be submitted electronically, faxed, or mailed.',
             ],
           },
           'Sometimes, your claim can be delayed or outright rejected. Many injury victims choose to retain the services of an experienced lawyer in those circumstances, due to the complexity of the process.',
@@ -457,7 +457,7 @@ export const cities: City[] = [
       {
         h: 'What Are the Common Types of Workplace Accidents?',
         body: [
-          `Workplace injuries are commonplace—that’s why [Virginia law](${WC}) requires most employers to carry Workers’ Compensation insurance, which includes virtually all employers with three or more employees regularly in service in Virginia. And although many people associate dangerous jobs with construction crews or other occupations involving the use of heavy machinery, we know from experience that a workplace accident can happen anywhere, anytime.`,
+          `Workplace injuries are commonplace. That’s why [Virginia law](${WC}) requires most employers to carry Workers’ Compensation insurance, which includes virtually all employers with three or more employees regularly in service in Virginia. And although many people associate dangerous jobs with construction crews or other occupations involving the use of heavy machinery, we know from experience that a workplace accident can happen anywhere, anytime.`,
           'Some of the common types of Harrisonburg workplace accident that occur include:',
           {
             list: [
@@ -595,7 +595,7 @@ export const cities: City[] = [
         body: [
           `After you’re hurt on the job in Portsmouth, your first step to [Workers’ Comp](${WC}) is to notify your employer of your injuries and seek medical care. Delaying your care could cause even more health problems, and it can cast doubt on your claim. The insurance company may claim you must not have been seriously injured if you waited to seek help.`,
           `Once you’ve notified your employer, you can file your claim with the Virginia Workers’ Compensation Commission. ${DEADLINE}`,
-          'If you’re denied, don’t panic—you still have a chance to get Workers’ Comp. Your Workers’ Comp lawyer in Portsmouth can review the reason for your denial and represent you in a hearing. They can present your evidence to the [Virginia Workers’ Compensation Commission](https://www.workcomp.virginia.gov/) to dispute the denial of your claim.',
+          'If you’re denied, don’t panic. You still have a chance to get Workers’ Comp. Your Workers’ Comp lawyer in Portsmouth can review the reason for your denial and represent you in a hearing. They can present your evidence to the [Virginia Workers’ Compensation Commission](https://www.workcomp.virginia.gov/) to dispute the denial of your claim.',
         ],
       },
       {
@@ -604,9 +604,9 @@ export const cities: City[] = [
           'Your work injury can be difficult and complex, but Workers’ Comp benefits may include reasonable and necessary medical care and part of your lost wages. If you’ve been hurt in a Portsmouth work accident, you may be eligible for some of the following Workers’ Comp benefits:',
           {
             list: [
-              'Medical Costs – Recovering physically can be expensive. Luckily, your Workers’ Comp should cover your [reasonable and necessary medical expenses](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf), including things like hospital bills, prostheses, and travel expenses.',
-              'Wage Replacement – When you’re unable to work, you may need disability benefits to cover part of the income you’re missing. Talk to your Workers’ Comp lawyer about the exact amount you may be eligible for.',
-              `Death Benefits – After losing a loved one to a work accident, you shouldn’t have to worry about how you’ll afford the things you need. ${DEATH}`,
+              'Medical Costs: Recovering physically can be expensive. Luckily, your Workers’ Comp should cover your [reasonable and necessary medical expenses](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf), including things like hospital bills, prostheses, and travel expenses.',
+              'Wage Replacement: When you’re unable to work, you may need disability benefits to cover part of the income you’re missing. Talk to your Workers’ Comp lawyer about the exact amount you may be eligible for.',
+              `Death Benefits: After losing a loved one to a work accident, you shouldn’t have to worry about how you’ll afford the things you need. ${DEATH}`,
             ],
           },
         ],
@@ -726,7 +726,7 @@ export const cities: City[] = [
       {
         h: 'Workers’ Comp Benefits for Hampton Workers',
         body: [
-          'Here’s the good news about your Hampton work accident—you may be due Workers’ Comp benefits for the injuries you’ve suffered at work. These benefits may include reasonable and necessary medical care and part of your lost wages.',
+          'Here’s the good news about your Hampton work accident. You may be due Workers’ Comp benefits for the injuries you’ve suffered at work. These benefits may include reasonable and necessary medical care and part of your lost wages.',
           'For example, benefits may include reasonable and necessary medical care. That’s not just your initial medical treatment, either. You may also be due funds for the costs of your traveling, as well as any specialists you need to see during your treatment.',
           'You may also need funds that replace your lost wages. Hampton workers may be eligible for disability benefits that cover their needs after a loss. The amount and length of time you’ll receive benefits depend on the type of injuries you’ve suffered and whether you’re able to work in any capacity.',
         ],
@@ -890,7 +890,7 @@ export const cities: City[] = [
       'Are you eligible for workers\' compensation? Find out with the help of your Virginia Beach workers’ comp lawyer at Pathfinder Injury Law.',
     intro: [
       `Hurt on the job? A [Workers’ Comp lawyer](${WC}) in Virginia Beach may be able to help you understand the care and benefits you may be eligible for after your injury.`,
-      'An accident can happen at any time, including when you’re on the clock. It doesn’t matter if you work in a busy factory or a quiet office—one wrong move can lead to a serious injury. You’re unable to work, but how are you supposed to support your family?',
+      'An accident can happen at any time, including when you’re on the clock. It doesn’t matter if you work in a busy factory or a quiet office. One wrong move can lead to a serious injury. You’re unable to work, but how are you supposed to support your family?',
       'Pathfinder Injury Law can help you get the Workers’ Comp benefits you’re due. If you’ve been denied, or if you’re just having trouble filing your claim, a Virginia Beach Workers’ Comp lawyer can help you get the benefits you need so you can focus on your recovery without added financial or mental strain.',
     ],
     sections: [

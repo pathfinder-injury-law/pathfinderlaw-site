@@ -67,7 +67,7 @@ Although amputation injuries are rare, they can happen. This type of injury can 
 
 ## What Steps Should You Take If You Injure Your Knee At Work?
 
-[Virginia workers’ compensation laws](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/) require that you give your employer notice of an injury within 30 days after it occurs. That means that unless it is an emergency, [your first step is to report the injury to your supervisor or manager](/how-to-file-a-workers-comp-claim/). In an emergency, address your health and safety first — get immediate medical attention if necessary.
+[Virginia workers’ compensation laws](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/) require that you give your employer notice of an injury within 30 days after it occurs. That means that unless it is an emergency, [your first step is to report the injury to your supervisor or manager](/how-to-file-a-workers-comp-claim/). In an emergency, address your health and safety first: get immediate medical attention if necessary.
 
 ### 1.  Provide Proper Notice to Your Employer
 
@@ -150,7 +150,7 @@ FCEs are often performed to assess work restrictions and also provide impairment
 
 ### Medical Benefits
 
-The employer must pay all medical expenses for reasonable, necessary, and causally-related medical treatment for the injured worker. That treatment can be broad — from simple office visits and prescription costs to knee replacement surgery or physical therapy. Medical benefits can also include braces, boots, mobility devices, injections, and even home or vehicle modifications in appropriate circumstances. 
+The employer must pay all medical expenses for reasonable, necessary, and causally-related medical treatment for the injured worker. That treatment can be broad: from simple office visits and prescription costs to knee replacement surgery or physical therapy. Medical benefits can also include braces, boots, mobility devices, injections, and even home or vehicle modifications in appropriate circumstances. 
 
 ### Lost Wages
 
@@ -197,13 +197,13 @@ By talking with Pathfinder Injury Law, you can get a better estimate of what you
 - Your job experience, training, and education
 - Your overall recovery time
 
-The best way to get a realistic estimate of the value of your workers’ compensation case is to set up an appointment with an attorney who has dealt with cases like yours before — like Pathfinder Injury Law.
+The best way to get a realistic estimate of the value of your workers’ compensation case is to set up an appointment with an attorney who has dealt with cases like yours before, like Pathfinder Injury Law.
 
 ## The Importance of Hiring a Virginia Workers’ Comp Attorney
 
 Although workers’ compensation benefits can provide significant value to employees, they can be tough to obtain in some situations. An attorney can help you assert your rights against your employer when you feel that your employer is not being fair to you.
 
-Unfortunately, both employers and their insurance companies often try to pay as little as possible for a knee injury — even if they agree to accept the claim at first. An attorney can work to force the insurance company to treat you fairly and seek the workers’ comp benefits you may be due.
+Unfortunately, both employers and their insurance companies often try to pay as little as possible for a knee injury, even if they agree to accept the claim at first. An attorney can work to force the insurance company to treat you fairly and seek the workers’ comp benefits you may be due.
 
 ## Talk to a Lawyer About Your Knee Injury
 
