@@ -848,7 +848,7 @@ body:not(.has-overlay) main {
   font-family: var(--font-accent);
   font-style: italic;
   font-weight: 600;
-  font-size: calc(var(--l1) * 0.8); /* a smaller answer to "Hurt at work?", about 80 percent of it */
+  font-size: calc(var(--l1) * 0.88); /* a slightly smaller answer to "Hurt at work?", about 88 percent of it */
   line-height: 1.08;
   color: var(--sun);
   /* A dark green edge plus a soft glow keep the yellow readable over the pale sky. */
@@ -896,6 +896,14 @@ body:not(.has-overlay) main {
   .btn-hero {
     width: 100%;
     justify-content: space-between;
+  }
+}
+/* Smallest phones: tighter letters and left padding so the arrow stays inside the button at 19px. */
+@media (max-width: 22rem) {
+  .btn-hero {
+    letter-spacing: 0.03em;
+    padding-left: 0.9em;
+    gap: 0.5em;
   }
 }
 .torn {
