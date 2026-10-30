@@ -1,0 +1,278 @@
+{
+  "/images/photos/hero-over-shoulder-desktop.webp": {
+    "width": 1376,
+    "height": 768,
+    "avif": [
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-desktop-1024.avif",
+        "width": 1024,
+        "bytes": 58671
+      },
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-desktop-1376.avif",
+        "width": 1376,
+        "bytes": 110763
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-desktop-1024.webp",
+        "width": 1024,
+        "bytes": 79750
+      },
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-desktop-1376.webp",
+        "width": 1376,
+        "bytes": 154532
+      }
+    ]
+  },
+  "/images/photos/hero-over-shoulder-phone.webp": {
+    "width": 776,
+    "height": 768,
+    "avif": [
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-phone-480.avif",
+        "width": 480,
+        "bytes": 28667
+      },
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-phone-776.avif",
+        "width": 776,
+        "bytes": 75827
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-phone-480.webp",
+        "width": 480,
+        "bytes": 39582
+      },
+      {
+        "url": "/images/photos/sized/hero-over-shoulder-phone-776.webp",
+        "width": 776,
+        "bytes": 104244
+      }
+    ]
+  },
+  "/images/photos/tile-a.jpg": {
+    "width": 1400,
+    "height": 1750,
+    "avif": [
+      {
+        "url": "/images/photos/sized/tile-a-480.avif",
+        "width": 480,
+        "bytes": 24805
+      },
+      {
+        "url": "/images/photos/sized/tile-a-800.avif",
+        "width": 800,
+        "bytes": 50596
+      },
+      {
+        "url": "/images/photos/sized/tile-a-1200.avif",
+        "width": 1200,
+        "bytes": 88684
+      },
+      {
+        "url": "/images/photos/sized/tile-a-1400.avif",
+        "width": 1400,
+        "bytes": 117587
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/tile-a-480.webp",
+        "width": 480,
+        "bytes": 34946
+      },
+      {
+        "url": "/images/photos/sized/tile-a-800.webp",
+        "width": 800,
+        "bytes": 73380
+      },
+      {
+        "url": "/images/photos/sized/tile-a-1200.webp",
+        "width": 1200,
+        "bytes": 128588
+      },
+      {
+        "url": "/images/photos/sized/tile-a-1400.webp",
+        "width": 1400,
+        "bytes": 162692
+      }
+    ]
+  },
+  "/images/photos/tile-b.jpg": {
+    "width": 1400,
+    "height": 886,
+    "avif": [
+      {
+        "url": "/images/photos/sized/tile-b-480.avif",
+        "width": 480,
+        "bytes": 21926
+      },
+      {
+        "url": "/images/photos/sized/tile-b-800.avif",
+        "width": 800,
+        "bytes": 55206
+      },
+      {
+        "url": "/images/photos/sized/tile-b-1200.avif",
+        "width": 1200,
+        "bytes": 111685
+      },
+      {
+        "url": "/images/photos/sized/tile-b-1400.avif",
+        "width": 1400,
+        "bytes": 152485
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/tile-b-480.webp",
+        "width": 480,
+        "bytes": 32344
+      },
+      {
+        "url": "/images/photos/sized/tile-b-800.webp",
+        "width": 800,
+        "bytes": 78496
+      },
+      {
+        "url": "/images/photos/sized/tile-b-1200.webp",
+        "width": 1200,
+        "bytes": 153894
+      },
+      {
+        "url": "/images/photos/sized/tile-b-1400.webp",
+        "width": 1400,
+        "bytes": 193856
+      }
+    ]
+  },
+  "/images/photos/tile-c.jpg": {
+    "width": 1400,
+    "height": 1050,
+    "avif": [
+      {
+        "url": "/images/photos/sized/tile-c-480.avif",
+        "width": 480,
+        "bytes": 22630
+      },
+      {
+        "url": "/images/photos/sized/tile-c-800.avif",
+        "width": 800,
+        "bytes": 54957
+      },
+      {
+        "url": "/images/photos/sized/tile-c-1200.avif",
+        "width": 1200,
+        "bytes": 106243
+      },
+      {
+        "url": "/images/photos/sized/tile-c-1400.avif",
+        "width": 1400,
+        "bytes": 146041
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/tile-c-480.webp",
+        "width": 480,
+        "bytes": 34126
+      },
+      {
+        "url": "/images/photos/sized/tile-c-800.webp",
+        "width": 800,
+        "bytes": 81798
+      },
+      {
+        "url": "/images/photos/sized/tile-c-1200.webp",
+        "width": 1200,
+        "bytes": 158782
+      },
+      {
+        "url": "/images/photos/sized/tile-c-1400.webp",
+        "width": 1400,
+        "bytes": 202416
+      }
+    ]
+  },
+  "/images/photos/bryn.jpg": {
+    "width": 900,
+    "height": 900,
+    "avif": [
+      {
+        "url": "/images/photos/sized/bryn-360.avif",
+        "width": 360,
+        "bytes": 12312
+      },
+      {
+        "url": "/images/photos/sized/bryn-600.avif",
+        "width": 600,
+        "bytes": 28805
+      },
+      {
+        "url": "/images/photos/sized/bryn-900.avif",
+        "width": 900,
+        "bytes": 60614
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/bryn-360.webp",
+        "width": 360,
+        "bytes": 16058
+      },
+      {
+        "url": "/images/photos/sized/bryn-600.webp",
+        "width": 600,
+        "bytes": 38428
+      },
+      {
+        "url": "/images/photos/sized/bryn-900.webp",
+        "width": 900,
+        "bytes": 80326
+      }
+    ]
+  },
+  "/images/photos/mandy.jpg": {
+    "width": 900,
+    "height": 900,
+    "avif": [
+      {
+        "url": "/images/photos/sized/mandy-360.avif",
+        "width": 360,
+        "bytes": 9053
+      },
+      {
+        "url": "/images/photos/sized/mandy-600.avif",
+        "width": 600,
+        "bytes": 20170
+      },
+      {
+        "url": "/images/photos/sized/mandy-900.avif",
+        "width": 900,
+        "bytes": 39681
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/mandy-360.webp",
+        "width": 360,
+        "bytes": 11166
+      },
+      {
+        "url": "/images/photos/sized/mandy-600.webp",
+        "width": 600,
+        "bytes": 23388
+      },
+      {
+        "url": "/images/photos/sized/mandy-900.webp",
+        "width": 900,
+        "bytes": 43120
+      }
+    ]
+  }
+}

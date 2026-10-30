@@ -1,4 +1,5 @@
 ---
+import Photo from './Photo.astro';
 // Team-member page: photo and quick facts beside the biography, then the contact form.
 import Base from '../layouts/Base.astro';
 import PageHero from './PageHero.astro';
@@ -31,7 +32,7 @@ const { title, description, path, name, role, photo, photoAlt, facts } = Astro.p
 
     <aside class="side" aria-label={`About ${name}`}>
       <figure class="bio-photo">
-        <img src={photo} alt={photoAlt} width="900" height="900" loading="eager" />
+        <Photo src={photo} alt={photoAlt} width="900" height="900" sizes="(min-width: 64rem) 390px, (min-width: 48rem) calc(100vw - 60px), calc(100vw - 30px)" loading="eager" />
       </figure>
       <div class="side-card bio-facts">
         {facts.map((f) => (
@@ -65,7 +66,7 @@ const { title, description, path, name, role, photo, photoAlt, facts } = Astro.p
   .bio-photo {
     margin: 0;
   }
-  .bio-photo img {
+  .bio-photo :global(img) {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
