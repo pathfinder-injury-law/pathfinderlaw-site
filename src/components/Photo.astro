@@ -1,0 +1,30 @@
+---
+// A photo with smaller copies in modern formats (AVIF, then WebP), so each screen downloads only
+// the size it needs. The original file stays the fallback, so the photo looks the same everywhere.
+// Copies come from scripts/make-image-variants.mjs; a photo without copies is shown as a plain <img>.
+// `sizes` says how wide the photo is shown on the page (see MDN "sizes"); it must match the CSS.
+import variants from '../data/imageVariants.json';
+
+interface Props {
+  src: string;
+  alt: string;
+  width: number | string;
+  height: number | string;
+  sizes: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+}
+const { src, alt, width, height, sizes, class: className, loading, fetchpriority } = Astro.props;
+const v = (variants as Record<string, { avif: { url: string; width: number }[]; webp: { url: string; width: number }[] }>)[src];
+const srcset = (list: { url: string; width: number }[]) => list.map((x) => `${x.url} ${x.width}w`).join(', ');
+---
+{v ? (
+  <picture class="photo">
+    <source type="image/avif" srcset={srcset(v.avif)} sizes={sizes} />
+    <source type="image/webp" srcset={srcset(v.webp)} sizes={sizes} />
+    <img class={className} src={src} alt={alt} width={width} height={height} loading={loading} fetchpriority={fetchpriority} decoding={loading === 'lazy' ? 'async' : undefined} />
+  </picture>
+) : (
+  <img class={className} src={src} alt={alt} width={width} height={height} loading={loading} fetchpriority={fetchpriority} />
+)}

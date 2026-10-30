@@ -56,6 +56,11 @@ img {
   height: auto;
   display: block;
 }
+/* Photos with smaller copies (src/components/Photo.astro) are wrapped in <picture>. The wrapper takes
+   no space of its own, so the photo lays out exactly as a plain <img> would. */
+picture.photo {
+  display: contents;
+}
 
 a {
   color: inherit;
@@ -2223,4 +2228,83 @@ mark {
 }
 .main-nav .m-group[open] > summary::after {
   transform: rotate(225deg) translate(-2px, -2px);
+}
+
+/* ---------- Page-to-page transitions ---------- */
+/* Moving between pages of the site cross-fades instead of flashing white (View Transitions, CSS only).
+   Browsers without support simply load the page as before. Off for visitors who prefer less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+/* ---------- Printing ---------- */
+/* Printed pages keep the logo and the words, and drop the menu, the phone bar, the Back to top button
+   and the forms (they cannot be used on paper). Links in the page text print their address after them. */
+@media print {
+  .skip-link,
+  .desktop-nav,
+  .nav-mobile,
+  .call-bar,
+  .to-top,
+  .form-card,
+  .contact-form,
+  .torn,
+  .cta-bg,
+  .hero-photo,
+  .hero-pic {
+    display: none !important;
+  }
+  .site-header {
+    position: static !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  body:not(.has-overlay) main {
+    padding-top: 0;
+  }
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+  /* Browsers leave background colours off paper, so light text on the green sections turns black. */
+  .on-dark,
+  .on-dark *,
+  .contour,
+  .contour *,
+  .site-footer,
+  .site-footer * {
+    color: #000000 !important;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+  }
+  /* Content that fades in on scroll prints whether or not it has been scrolled to. */
+  .js [data-reveal],
+  .js [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  main a[href^="http"]:not(.btn)::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+  main a[href^="/"]:not(.btn)::after {
+    content: " (https://pathfinderlaw.com" attr(href) ")";
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+  main .crumbs a::after {
+    content: none !important; /* the breadcrumb trail does not need addresses */
+  }
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+  img,
+  figure {
+    break-inside: avoid;
+  }
 }
