@@ -4,7 +4,7 @@ How the website's contact forms work, what a person must do before launch, and h
 
 ## How it works, in plain words
 
-1. A visitor fills in the form (the main Contact form, or the sidebar form on bio, practice-area and city pages; both are the same component, `src/components/ContactForm.astro`). The page checks the fields, shows Cloudflare's bot check (Turnstile), and sends the entry to `/api/contact`.
+1. A visitor fills in the form (the main Contact form, or the sidebar form on bio, practice-area and city pages; both are the same component, `src/components/ContactForm.astro`). The page checks the fields, loads Cloudflare's bot check (Turnstile) the first time the visitor uses the form (not on page load), and sends the entry to `/api/contact`.
 2. A small Cloudflare Worker (`src/worker/`) answers only `/api/*`. Every other page is still a plain static file.
 3. The Worker checks the entry again on the server (including the required acknowledgement checkbox; an entry without it is refused and never stored).
 4. **It saves the entry to the database first** (Cloudflare D1, database `pathfinder-forms`), before any screening or emailing.
