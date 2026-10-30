@@ -47,7 +47,7 @@ export interface Calls { url: string; method: string; body: string; auth?: strin
 
 // Routes every outside call the Worker makes to a scripted stand-in.
 let counter = 0;
-export function makeWorld(opts: { gmail?: number; token?: number; turnstile?: 'pass' | 'fail' | 'down'; now?: string } = {}) {
+export function makeWorld(opts: { gmail?: number; token?: number; turnstile?: 'pass' | 'fail' | 'down'; hostname?: string; now?: string } = {}) {
   const calls: Calls[] = [];
   const deps: Deps = {
     now: () => new Date(opts.now ?? '2026-11-03T15:00:00Z'),
@@ -64,7 +64,7 @@ export function makeWorld(opts: { gmail?: number; token?: number; turnstile?: 'p
       if (u.includes('gmail.googleapis.com')) return new Response('{}', { status: opts.gmail ?? 200 });
       if (u.includes('siteverify')) {
         if (opts.turnstile === 'down') throw new Error('network');
-        return Response.json({ success: opts.turnstile !== 'fail' });
+        return Response.json({ success: opts.turnstile !== 'fail', hostname: opts.hostname ?? 'pathfinderlaw.com' });
       }
       return new Response('ok'); // heartbeat / alert pings
     }) as typeof fetch,

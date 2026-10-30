@@ -21,6 +21,7 @@ How the website's contact forms work, what a person must do before launch, and h
 | Sent in under 3 seconds | yes | yes, with "[Screened]" | Thank-you page |
 | Hidden trap field filled in (a bot) | yes, as screened | no | Looks like success (so the bot learns nothing) |
 | Turnstile says "not human" | yes, as screened | no | Failure message with the phone number |
+| Turnstile token issued for a hostname not in `ALLOWED_HOSTNAMES` | yes, as screened | no | Failure message with the phone number |
 | Rules store missing or broken | yes, as unsure | yes, as a normal lead | Thank-you page |
 | Turnstile service unreachable | yes | yes (a Cloudflare outage must not cost a lead), subject ends "- spam check unavailable" | Thank-you page |
 | `TURNSTILE_SECRET` missing (setup mistake) | yes | yes, subject ends "- TURNSTILE NOT CONFIGURED"; `ALERT_URL` pinged (at most once an hour) and the code `turnstile_not_configured` logged | Thank-you page |
@@ -65,6 +66,7 @@ The Gmail filters from the plan should match only the exact "[Screened]" tag and
 | `HEARTBEAT_URL` | Worker secret | The check-in service's "I am alive" address | Bryn (after the vendor is chosen) |
 | `ALERT_URL` | Worker secret | The check-in service's "failure" address | Bryn |
 | `PUBLIC_TURNSTILE_SITE_KEY` | Build variable (not secret; it is public on the page) | Turnstile's public site key | Set in the live Worker's Build variables |
+| `ALLOWED_HOSTNAMES` | Plain variable in `wrangler.jsonc` (not secret) | Comma-separated hostnames a Turnstile token may be issued for. Default `pathfinderlaw.com,www.pathfinderlaw.com` (also used if unset). A token from any other hostname is stored as screened (`turnstile_wrong_hostname`), not emailed, and the visitor sees the phone number, the same as a failed check. For the launch test, add the locked test hostname to the list in `wrangler.jsonc`, deploy, test, then remove it. Edit it in the file, not the dashboard: every deploy resets plain variables to the file. | Claude or Bryn, by a commit |
 
 Previews need none of these. The previews build uses Cloudflare's published always-pass Turnstile test key automatically. A **live** build (`PUBLIC_SITE_LIVE=1`) with no `PUBLIC_TURNSTILE_SITE_KEY` fails on purpose, so the test key can never go live by accident.
 

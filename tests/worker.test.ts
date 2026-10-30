@@ -115,6 +115,29 @@ test('Turnstile outage does not block a real person: delivered, marked spam chec
   assert.match(body, /my claim was denied/);
 });
 
+test('Turnstile token for another hostname: stored as screened, not emailed, refused', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld({ hostname: 'evil.example' });
+  const res = await handleContact(post(goodInput()), env, deps);
+  assert.equal(res.status, 403);
+  const [row] = rows(env);
+  assert.equal(row.outcome, 'screened'); assert.equal(row.reason, 'turnstile_wrong_hostname');
+  assert.equal(row.turnstile, 'wrong_hostname'); assert.equal(row.delivery_status, 'skipped');
+  assert.equal(gmail(calls).length, 0);
+});
+
+test('ALLOWED_HOSTNAMES: default allows pathfinderlaw.com and www; the var can add a test hostname', async () => {
+  for (const host of ['pathfinderlaw.com', 'WWW.pathfinderlaw.com']) {
+    const env = liveEnv(); const { deps, calls } = makeWorld({ hostname: host });
+    assert.equal((await handleContact(post(goodInput()), env, deps)).status, 200, host);
+    assert.equal(gmail(calls).length, 1);
+  }
+  const env = liveEnv({ ALLOWED_HOSTNAMES: 'pathfinderlaw.com, www.pathfinderlaw.com, launch-test.example.workers.dev' });
+  const ok = makeWorld({ hostname: 'launch-test.example.workers.dev' });
+  assert.equal((await handleContact(post(goodInput()), env, ok.deps)).status, 200);
+  const no = makeWorld({ hostname: 'other.example.workers.dev' });
+  assert.equal((await handleContact(post(goodInput({ email: 'x@example.com' })), env, no.deps)).status, 403);
+});
+
 test('lead email shows the Turnstile result "pass" (launch-day phone test)', async () => {
   const env = liveEnv(); const { deps, calls } = makeWorld();
   await handleContact(post(goodInput()), env, deps);
