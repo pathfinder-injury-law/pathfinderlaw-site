@@ -2206,19 +2206,27 @@ mark {
   transform: rotate(225deg) translate(-2px, -2px);
 }
 
-/* ---------- Home: team portraits sitting on the hero's torn edge ---------- */
+/* ---------- Home: team portraits peeking up from the hero's torn edge ---------- */
+/* The hero fills the first screen minus a sliver, so only the tops of our heads show at the bottom
+   when the page opens, inviting a scroll. --team-peek is how much of the photos shows above the fold;
+   --team-overlap is how far they reach up into the hero. */
+:root {
+  --team-peek: 4.5rem;
+  --team-overlap: 4.9rem;
+}
 .team-peek {
   position: relative;
   z-index: 3;
-  margin-top: -5.5rem;
+  margin-top: calc(-1 * var(--team-overlap));
 }
 .peek-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  gap: clamp(1.5rem, 4vw, 3.5rem);
+  justify-content: flex-start;
+  padding-left: clamp(0rem, 6.3vw, 6rem);
+  gap: clamp(1.25rem, 2.2vw, 2rem);
 }
 .peek {
   display: flex;
@@ -2231,21 +2239,21 @@ mark {
 }
 .peek img {
   display: block;
-  width: 11rem;
-  height: 11rem;
+  width: clamp(13rem, 20vw, 18rem);
+  height: clamp(13rem, 20vw, 18rem);
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid var(--white);
+  border: 7px solid var(--white);
   box-shadow: 0 0.75rem 1.75rem rgba(41, 70, 52, 0.25);
 }
 .peek-text strong {
   display: block;
   font-family: var(--font-head);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 .peek-text span {
   display: block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--pine);
 }
 .peek:hover strong {
@@ -2254,24 +2262,45 @@ mark {
   text-decoration-thickness: 3px;
   text-underline-offset: 0.2em;
 }
+@media (min-width: 48rem) {
+  .hero {
+    min-height: clamp(40rem, calc(100svh - var(--team-peek) + var(--team-overlap)), 100rem);
+  }
+}
+/* Portrait tablets: the taller hero would leave a band of empty sky, so the photo grows up to fill it
+   (trimming a little from the left, never the hiker). */
+@media (min-width: 48rem) and (max-width: 79.99rem) and (orientation: portrait) {
+  .hero-photo {
+    width: 100%;
+    height: calc(100% - 24rem);
+    object-fit: cover;
+    object-position: 100% 100%;
+  }
+}
+/* Phones: the floating Call/Message bar covers the bottom 4.75rem, so the peek sits above it. The hero
+   never drops below its usual 37rem, so the button never lands on the hiker. */
 @media (max-width: 47.99rem) {
-  .team-peek {
-    margin-top: -2.4rem; /* peeks less on phones, where the hiker fills the bottom right */
+  :root {
+    --team-peek: 2.25rem;
+    --team-overlap: 2rem;
+  }
+  .hero {
+    min-height: max(37rem, calc(100svh - 4.75rem - var(--team-peek) + var(--team-overlap)));
   }
   .peek-list {
-    justify-content: flex-start;
-    gap: 0.75rem;
-  }
-  .peek {
-    align-items: flex-start;
-    text-align: left;
+    justify-content: center;
+    padding-left: 0;
+    gap: 1rem;
   }
   .peek img {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: min(9rem, 40vw);
+    height: min(9rem, 40vw);
     border-width: 4px;
   }
+  .peek-text strong {
+    font-size: 1.05rem;
+  }
   .peek-text span {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
