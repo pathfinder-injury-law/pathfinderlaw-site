@@ -27,7 +27,7 @@ During the deposition, the lawyer present may ask you questions about your medic
 
 Answer each question truthfully, and answer only the question asked. While you are under oath, meaning you can’t lie during the deposition, you’re not obligated to share all the details of your discussions with your lawyer, for example. Client-attorney privilege still applies to your case, even in the courtroom.
 
-Because of this, you and your lawyer may need to discuss what to avoid during your deposition. The details of this will depend on your case, but one thing is certain—your lawyer can help you decide what to share and when to object to the questions.
+Because of this, you and your lawyer may need to discuss what to avoid during your deposition. The details of this will depend on your case, but one thing is certain: your lawyer can help you decide what to share and when to object to the questions.
 
 ## Make Your Plan with a Workers’ Comp Lawyer
 

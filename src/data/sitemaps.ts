@@ -45,7 +45,7 @@ export const sitemaps: Record<string, SitemapUrl[]> = {
     '/how-to-appeal-a-workers-comp-denial-in-virginia/',
     ...subArticles.map((a) => `${ARTICLE_BASE}${a.slug}/`),
   ]),
-  attorneys: urls(['/bryn-swartz/', '/mandy-swartz/']),
+  attorneys: urls(['/bryn-swartz/', '/mandy-truman/']),
   arears_served: urls(cities.map((c) => c.path).filter((p) => p !== EASTERN_SHORE)),
 };
 

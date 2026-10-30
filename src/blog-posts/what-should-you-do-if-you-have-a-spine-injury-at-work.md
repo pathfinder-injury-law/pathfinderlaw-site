@@ -91,7 +91,7 @@ Injuries to the lumbar spine can result in loss of hip, leg, thigh, and foot fun
 
 ### Herniated Disc
 
-The three main sections of the spine — cervical, thoracic, and lumbar — all consist of bones known as vertebrae separated by spinal discs. Each disc consists of an outer annulus that surrounds a nucleus. The discs are essentially shock absorbers for the vertebrae. These components surround and protect the spinal canal, through which the bundle of nerves known as the spinal cord runs.
+The three main sections of the spine (cervical, thoracic, and lumbar) all consist of bones known as vertebrae separated by spinal discs. Each disc consists of an outer annulus that surrounds a nucleus. The discs are essentially shock absorbers for the vertebrae. These components surround and protect the spinal canal, through which the bundle of nerves known as the spinal cord runs.
 
 A herniated disc injury, also known as a slipped, ruptured, or bulging disc, can occur in any section of the spine. It can happen when something pushes part of a disc into the spinal canal. Causes may include:
 

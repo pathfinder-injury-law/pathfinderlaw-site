@@ -7,7 +7,7 @@ updated: 2022-09-01T14:35:49Z
 tags: ["firm-news"]
 ---
 
-OK, so we’re a law firm, and law firms can’t eat cake. Plus, nobody’s having birthday parties these days anyway—or at least they shouldn’t be. But on this occasion of Pathfinder’s first birthday, we thought it would be cool to share our origin story and reflect on what the past year has brought. 
+OK, so we’re a law firm, and law firms can’t eat cake. Plus, nobody’s having birthday parties these days anyway, or at least they shouldn’t be. But on this occasion of Pathfinder’s first birthday, we thought it would be cool to share our origin story and reflect on what the past year has brought. 
 
 The interesting thing about Pathfinder’s birthday is that it’s also the birthday of our son, James Kenneth Swartz (aka “Spud”). If you read between the lines there, you might ask yourself, “Why would anybody in their right mind start a law firm the same day their first child is born?” 
 
@@ -15,7 +15,7 @@ It’s a totally valid question, and the answer is “Nobody.” But starting Pa
 
 ## Pathfinder Injury Law’s Origin Story
 
-This day last year, Bryn was working for one of the biggest Workers’ Compensation law firms in the state. You know the type—suits, ties, a bunch of stuffy offices, all that noise. If you’ve turned on the TV anytime in the last few years, you’ve probably had the guilty pleasure of cringing at their TV ads. 
+This day last year, Bryn was working for one of the biggest Workers’ Compensation law firms in the state. You know the type: suits, ties, a bunch of stuffy offices, all that noise. If you’ve turned on the TV anytime in the last few years, you’ve probably had the guilty pleasure of cringing at their TV ads. 
 
 Spud’s birth had been planned for Aug. 30. Bryn went out on paternity leave. But then, three minutes before being due to go back for the C-section, as Bryn and Mandy sat in the pre-op room in surgical gowns awaiting the imminent arrival of their firstborn, Bryn got an email from the firm’s administrator. 
 
@@ -41,7 +41,7 @@ That’s how we started. But what has our first year held? This year has been in
 
 We have accomplished more than we thought we were capable of. We have grown as people; we have faced off with our doubts and wrestled with our shortcomings. We have had to learn how to be new business owners and new parents at the same time. 
 
-We’d both had ties to the workers’ comp world for years, but running a law firm? That was uncharted territory. But somehow, through serendipity, fortitude, hard work, tenacity, help from the grandparents, and probably a lot of luck, we’ve not only survived—we’ve succeeded. We’ve thrived. 
+We’d both had ties to the workers’ comp world for years, but running a law firm? That was uncharted territory. But somehow, through serendipity, fortitude, hard work, tenacity, help from the grandparents, and probably a lot of luck, we’ve not only survived, we’ve succeeded. We’ve thrived. 
 
 ## Measuring Pathfinder’s Success
 
@@ -49,7 +49,7 @@ Now we should say here that success can mean a lot of things. It can be measured
 
 If you want to measure success in strict terms of dollars and cents, we’ve been incredibly successful this year. We’ve had the privilege of delivering our clients life-altering sums of money, peace of mind, and most importantly, a sense that somebody finally has their back after they got hurt.
 
-But success is more than money. It’s purpose, it’s self-determination, it’s autonomy, it’s lifestyle. It’s getting to raise your son with his parents around, teaching him cool things, bringing him to depositions and mediations (well, before the pandemic at least), showing him what struggle and grit and toughness and resourcefulness looks like—not just in words, but in actions. It’s getting to take bike rides in the middle of a weekday. There’s no dollar value to those things. That’s because they’re actually priceless. 
+But success is more than money. It’s purpose, it’s self-determination, it’s autonomy, it’s lifestyle. It’s getting to raise your son with his parents around, teaching him cool things, bringing him to depositions and mediations (well, before the pandemic at least), showing him what struggle and grit and toughness and resourcefulness looks like, not just in words, but in actions. It’s getting to take bike rides in the middle of a weekday. There’s no dollar value to those things. That’s because they’re actually priceless. 
 
 And success is also professional achievement. We’ve opened up an avenue to transparency in discovering what insurance companies are paying their doctors to say against Workers’ Compensation claimants. We’ve faced down international behemoths and their multinational legal teams. 
 

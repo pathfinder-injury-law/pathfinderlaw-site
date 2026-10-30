@@ -1,7 +1,17 @@
 ---
 import ContactForm from './ContactForm.astro';
 import { site } from '../data/site';
+
+// variant "plain": the Contact page version, the form alone on a light background (no dark band).
+const { variant = 'band' } = Astro.props;
 ---
+{variant === 'plain' ? (
+  <section class="section cta-plain" id="contact">
+    <div class="wrap cta-plain-wrap">
+      <ContactForm />
+    </div>
+  </section>
+) : (
 <section class="section cta contour on-dark" id="contact">
   <img class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" loading="lazy" />
   <div class="wrap cta-grid">
@@ -19,3 +29,4 @@ import { site } from '../data/site';
     </div>
   </div>
 </section>
+)}

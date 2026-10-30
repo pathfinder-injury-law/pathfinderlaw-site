@@ -276,7 +276,7 @@ export const subArticles: SubArticle[] = [
       h2: 'Talk to a Lawyer About Maximum Medical Improvement',
       blocks: [
         'If you’re concerned about your Workers’ Comp benefits, you need to understand all the factors that can impact your claim. For example, what is maximum medical improvement in Virginia Workers’ Comp claims, and how can it impact the funds you receive?',
-        'You don’t have to have all the answers—that’s where Pathfinder Injury Law can help. We can pursue Workers’ Comp benefits that cover the losses you’ve suffered from your work accident. When you’re ready to seek compensation for your injuries, reach out for a free consultation by calling {phone} or completing the online contact form below.',
+        'You don’t have to have all the answers. That’s where Pathfinder Injury Law can help. We can pursue Workers’ Comp benefits that cover the losses you’ve suffered from your work accident. When you’re ready to seek compensation for your injuries, reach out for a free consultation by calling {phone} or completing the online contact form below.',
       ],
     },
   },
@@ -339,7 +339,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'What’s an IME For?',
         blocks: [
-          'An IME is a chance for the defense to review your medical condition with a doctor of their choosing. During the exam, the doctor will ask you questions about your health, your medical history, and how the injury happened. Unfortunately, these questions are more than a health test—they want to show you don’t need Workers’ Comp benefits.',
+          'An IME is a chance for the defense to review your medical condition with a doctor of their choosing. During the exam, the doctor will ask you questions about your health, your medical history, and how the injury happened. Unfortunately, these questions are more than a health test. They want to show you don’t need Workers’ Comp benefits.',
           'Because of this, you need to come prepared. Your [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) in Virginia can discuss the questions you’ll be asked and how you can prepare for a Workers’ Comp IME.',
         ],
       },
@@ -594,7 +594,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'How Long Settlements Take',
     intro: [
       'After a serious injury at work, it can be tough to wait for your Workers’ Comp benefits to arrive. You may be worried about how long your Virginia Workers’ Comp settlement will take, especially as your medical bills and other debts pile up.',
-      'Here’s the good news—a lawyer from Pathfinder Injury Law may be able to help you understand the process. If you’re struggling to overcome your injuries following a work accident, take a look at how you can get your benefits as soon as possible and how a [Workers’ Comp lawyer in Virginia](/virginia-workers-comp-lawyer/) can help.',
+      'Here’s the good news: a lawyer from Pathfinder Injury Law may be able to help you understand the process. If you’re struggling to overcome your injuries following a work accident, take a look at how you can get your benefits as soon as possible and how a [Workers’ Comp lawyer in Virginia](/virginia-workers-comp-lawyer/) can help.',
       'A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.',
     ],
     sections: [
