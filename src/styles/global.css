@@ -822,6 +822,27 @@ body:not(.has-overlay) main {
   color: var(--forest);
   text-wrap: wrap;
 }
+/* "Virginia Workers' Comp Lawyer" stays the only text in the h1; "A Family Firm" sits beside it. */
+.hero-kicker h1 {
+  display: inline;
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+.kicker-dot {
+  margin: 0 0.55em 0 0.35em;
+  color: var(--moss);
+}
+/* Phones: "A Family Firm" drops to its own line, without the dot. */
+@media (max-width: 47.99rem) {
+  .kicker-dot {
+    display: none;
+  }
+  .kicker-more {
+    display: block;
+  }
+}
 .hero-l1,
 .hero-l2 {
   margin: 0;
@@ -2233,12 +2254,6 @@ mark {
   text-decoration-thickness: 3px;
   text-underline-offset: 0.2em;
 }
-.peek-line {
-  font-size: 0.95rem;
-  color: var(--pine);
-  margin: 0.75rem 0 0;
-  text-align: center;
-}
 @media (max-width: 47.99rem) {
   .team-peek {
     margin-top: -2.4rem; /* peeks less on phones, where the hiker fills the bottom right */
@@ -2258,8 +2273,5 @@ mark {
   }
   .peek-text span {
     font-size: 0.8rem;
-  }
-  .peek-line {
-    text-align: left;
   }
 }
