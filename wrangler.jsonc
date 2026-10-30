@@ -34,8 +34,10 @@
   // may come from, comma-separated. For the launch test, add the locked test
   // hostname here, deploy, test, then remove it. Change it here, not in the
   // dashboard: each deploy resets plain variables to what this file says.
+  // TEMPORARY (Oct 30, 2026): formtest.pathfinderlaw.com is the launch-test
+  // hostname. Remove it after the form test passes.
   "vars": {
-    "ALLOWED_HOSTNAMES": "pathfinderlaw.com,www.pathfinderlaw.com"
+    "ALLOWED_HOSTNAMES": "pathfinderlaw.com,www.pathfinderlaw.com,formtest.pathfinderlaw.com"
   },
   // Cron runs in UTC. 12:15 and 12:30 UTC are 7:15 and 7:30 a.m. Eastern
   // standard time (winter). In daylight time (from March 14, 2027) change
