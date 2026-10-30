@@ -1,0 +1,189 @@
+---
+import Base from '../layouts/Base.astro';
+import BlogHero from '../components/BlogHero.astro';
+import BlogCard from '../components/BlogCard.astro';
+import BlogPostingLd from '../components/BlogPostingLd.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { posts, relatedPosts, longDate } from '../data/blogPosts';
+import { site } from '../data/site';
+
+// One template for every blog post. Posts are the Markdown files in src/blog-posts/.
+// Wording is carried over from the live posts (content rework comes later).
+export function getStaticPaths() {
+  return posts.map((post) => ({ params: { blogPost: post.slug }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = post;
+const toc = post.headings.filter((h) => h.depth === 2);
+const related = relatedPosts(post);
+const minutes = Math.max(1, Math.round(post.words / 220));
+---
+<Base
+  title={post.metaTitle}
+  description={post.description}
+  path={post.path}
+  crumbs={[{ name: 'Blog', path: '/blog/' }, { name: post.title, path: post.path }]}
+  datePublished={post.date.toISOString()}
+  overlay
+  author
+>
+  <BlogHero title={post.title} crumbs={[{ name: 'Blog', href: '/blog/' }, { name: post.title }]}>
+    <p class="byline">
+      <span>By Bryn Swartz</span>
+      <span><time datetime={post.date.toISOString()}>{longDate(post.date)}</time></span>
+      <span>{minutes} min read</span>
+    </p>
+  </BlogHero>
+
+  <div class="wrap page-body">
+    <div class="bp-main">
+      <article class="prose bp-article">
+        <Content />
+      </article>
+
+      <section class="bp-related" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related Posts</h2>
+        <div class="bp-related-grid">
+          {related.map((p) => <BlogCard post={p} />)}
+        </div>
+        <p class="bp-all"><a class="btn btn-outline" href="/blog/">All Blog Posts</a></p>
+      </section>
+    </div>
+
+    <aside class="side" aria-label="Page navigation and contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+      {toc.length > 2 && (
+        <nav class="side-card" aria-label="On this page">
+          <h2>On This Page</h2>
+          <ul class="toc">
+            {toc.map((t) => <li><a href={`#${t.slug}`}>{t.text}</a></li>)}
+          </ul>
+        </nav>
+      )}
+    </aside>
+  </div>
+
+  <BlogPostingLd post={post} />
+  <ContactSection />
+</Base>
+
+<style is:global>
+  .bp-main {
+    min-width: 0;
+  }
+  .bp-article {
+    max-width: 44rem;
+  }
+  .bp-article h2 {
+    font-size: clamp(1.55rem, 3vw, 2rem);
+  }
+  .bp-article h3 {
+    font-size: 1.25rem;
+  }
+  .bp-article h4 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.4rem;
+    color: var(--pine);
+  }
+  .bp-article h3 + h4,
+  .bp-article h4 + p {
+    margin-top: 0.4rem;
+  }
+  /* The "not legal advice" note that opens most posts. */
+  .bp-article > p:first-child:has(> em:only-child) {
+    background: var(--mist);
+    border-left: 0.3rem solid var(--moss);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1rem 1.25rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+  .bp-article > p:last-child:has(> em:only-child) {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+  .bp-article p,
+  .bp-article li {
+    font-size: 1.1rem;
+  }
+  .bp-article ul {
+    margin-bottom: 1.5rem;
+  }
+  /* Credited free photos inside posts. */
+  .bp-photo {
+    margin: 2rem 0;
+  }
+  .bp-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+  }
+  .bp-photo-portrait {
+    max-width: 20rem;
+  }
+  .bp-photo figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(41, 70, 52, 0.75);
+  }
+  /* Photo gallery used by the birthday post. */
+  .bp-gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  @media (min-width: 40rem) {
+    .bp-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+    }
+  }
+  .bp-gallery figure {
+    margin: 0;
+  }
+  .bp-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 0.4rem 1.2rem rgba(41, 70, 52, 0.14);
+  }
+  .bp-gallery figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(41, 70, 52, 0.85);
+  }
+  .bp-related {
+    margin-top: 4rem;
+    padding-top: 1rem;
+  }
+  .bp-related h2 {
+    font-size: clamp(1.55rem, 3vw, 2rem);
+    margin: 0 0 1.5rem;
+  }
+  .bp-related h2::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 0.28rem;
+    border-radius: 99px;
+    background: var(--moss);
+    margin-top: 0.7rem;
+  }
+  .bp-related-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .bp-related-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .bp-all {
+    margin: 2rem 0 0;
+  }
+</style>

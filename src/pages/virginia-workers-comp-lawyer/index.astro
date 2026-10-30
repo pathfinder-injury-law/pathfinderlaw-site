@@ -1,0 +1,519 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import TopicIcon from '../../components/TopicIcon.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { site } from '../../data/site';
+
+// Wording is carried over from the current live page. Changes from the live page:
+//  - Work illness removed everywhere (owner's instruction, Oct 28).
+//  - "our legal experts" in the description becomes "our team" (plan Section VIII, fix 6).
+// Statements of Virginia law below are the live site's, unchanged, and still need Bryn's review.
+const title = "Virginia Workers' Comp Claims Attorney | Pathfinder Injury Law";
+const description =
+  "Pathfinder Injury Law is your trusted Virginia workers' comp lawyer. Call 804-505-0633 for a 100% free consultation with our team.";
+const h1 = 'Workers’ Compensation Lawyer Serving Virginia';
+
+const cases = [
+  { label: 'Workers’ Comp Denials', href: '/how-to-appeal-a-workers-comp-denial-in-virginia/', icon: 'denial' },
+  { label: 'Construction Accidents', href: '/virginia-construction-accident-lawyer/', icon: 'construction' },
+  { label: 'Factory Accidents', href: '/virginia-factory-accident-lawyer/', icon: 'factory' },
+  { label: 'Work Vehicle Accidents', href: '/car-accident-at-work-in-virginia/', icon: 'vehicle' },
+  { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', icon: 'spine' },
+];
+
+const toc = [
+  { id: 'cases', label: 'Cases We Handle' },
+  { id: 'eligible', label: 'Who Is Eligible for a Workers’ Comp Claim in Virginia?' },
+  { id: 'pi-vs-wc', label: 'Personal Injury Claims vs. Workers’ Comp Claims in Virginia' },
+  { id: 'benefits', label: 'What Are the Benefits for Virginia Workers?' },
+  { id: 'filing', label: 'What is the Process for Filing a Workers’ Compensation Claim in Virginia?' },
+  { id: 'disputes', label: 'What to Do When Insurers Dispute Your Virginia Workers’ Comp Claim' },
+  { id: 'settlement', label: 'Settlement Options for Virginia Workers' },
+  { id: 'prepare', label: 'How to Prepare for a Worker’s Comp Consultation' },
+  { id: 'why-hire', label: 'Why Hire a Virginia Worker’s Comp Law Firm?' },
+  { id: 'faq', label: 'Frequently Asked Questions' },
+];
+---
+<Base
+  title={title}
+  description={description}
+  path="/virginia-workers-comp-lawyer/"
+  crumbs={[{ name: h1, path: '/virginia-workers-comp-lawyer/' }]}
+  overlay
+  author
+>
+  <PageHero title={h1} crumbs={[{ name: h1 }]} />
+
+  <div class="wrap page-body">
+    <article class="prose">
+      <p class="lead">
+        If you have suffered an on-the-job injury in Virginia, you may be unable to work, leaving you
+        and your family in need. The last thing you might be thinking about is how to apply for
+        <a href="/virginia-workers-comp-lawyer/virginia-workers-compensation/">workers’ compensation</a>
+        (“workers’ comp” or “work comp”) benefits, or if you even qualify for them. Applying for
+        benefits while recovering from injuries is draining. Pathfinder Injury Law is here to help. A Virginia workers’ compensation attorney can help guide you through the workers’ comp application process. Let us handle your case so you can focus on getting better.
+      </p>
+
+      <h2 id="cases">Cases We Handle</h2>
+      <ul class="topic-grid">
+        {cases.map((c) => (
+          <li>
+            <a href={c.href}>
+              <span class="topic-circle"><TopicIcon name={c.icon} /></span>
+              <span class="topic-label">{c.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p>
+        Workers’ compensation lawyers like Pathfinder Injury Law can help you with your work-related
+        injury at any stage of the process of obtaining benefits, from the initial application to
+        hearings before the Virginia Workers’ Compensation Commission (VWC).
+      </p>
+
+      <h3>Workers’ Comp Denials</h3>
+      <p>
+        Applying for workers’ comp benefits can be frustrating without guidance from a knowledgeable
+        workers’ compensation lawyer. Many workers’ compensation claims receive denials before
+        eventually getting approved or settled. Understanding the reasons for a denial is key to
+        making a successful claim. Reasons for an initial denial often include:
+      </p>
+      <ul>
+        <li>Lack of sufficient evidence regarding your injuries;</li>
+        <li>No medical treatment after the injury; or</li>
+        <li>Failing to provide notice to your employer within the appropriate amount of time</li>
+        <li>An insurance adjuster just not paying attention to your claim</li>
+        <li>Filing after the two-year deadline.</li>
+      </ul>
+      <p>
+        Depending on the reason for your claim being denied, you may still be able to obtain benefits
+        after a denial. We can help by looking at your situation and giving you a candid assessment of
+        how best to move forward.
+      </p>
+
+      <h3>Construction Accidents</h3>
+      <p>
+        Construction sites present many potential hazards for workers. Accidents may lead to traumatic
+        brain injuries, neck and spine injuries, broken bones, joint injuries, and more. A successful
+        workers’ comp claim requires evidence that your accident arose out of and in the course of your
+        employment and that it resulted in a sudden, identifiable, structural or mechanical change to
+        your body.
+      </p>
+
+      <h3>Factory Accidents</h3>
+      <p>
+        Factory accidents can cause severe and debilitating injuries, including paralysis,
+        amputations, bone or muscle injuries, joint injuries, spinal injuries, and more. They can leave
+        a worker unable to perform their job, and therefore unable to support themselves or their
+        family. Workers’ compensation benefits help to ensure that workers in this situation are not
+        left destitute.
+      </p>
+
+      <h3>Work Vehicle Accidents</h3>
+      <p>
+        Work-related accidents involving vehicles are unfortunately common. They can involve ordinary
+        motor vehicles, such as a delivery van or company car, or specialized vehicles used in
+        warehouses or construction sites like forklifts, bulldozers, or cranes. Even highly-experienced
+        workers can suffer injuries in work vehicle accidents. Thanks to the Virginia workers’
+        compensation system, injured employees do not have to prove who was to blame for work vehicle
+        accidents. They must instead show that the accident arose out of and in the course of their
+        employment and that it resulted in a sudden, identifiable, structural or mechanical change to
+        the body.
+      </p>
+
+      <h3>Back Injuries</h3>
+      <p>
+        A back injury can make it impossible for a worker to do much of anything, let alone perform
+        their usual job duties. Back injuries can result from sudden accidents like falling equipment
+        or debris, or from physical exertion like a lifting accident. Workers’ comp can cover the cost
+        of medical treatment and provide benefits for temporary or permanent disability, assuming the
+        accident meets the compensability criteria for coverage under the Virginia Workers’
+        Compensation Act.
+      </p>
+
+      <h2 id="eligible">Who Is Eligible for a Workers’ Comp Claim in Virginia?</h2>
+      <p>
+        The
+        <a href="https://law.lis.virginia.gov/vacodefull/title65.2/" rel="noopener">Virginia Workers’ Compensation Act</a>
+        requires virtually all Virginia employers with three or more employees regularly in service to have workers’ compensation insurance which provides workers’ compensation benefits in the event of an accident. A person
+        must meet the legal definition of an “employee” in order to
+        <a href="/how-to-qualify-for-workers-comp-in-virginia/">qualify for benefits</a>, but a
+        workers’ comp lawyer can help with your claim if you have any doubts about your employment
+        status. Employers sometimes try to classify a worker as an independent contractor (1099) when
+        they should actually be classified as an employee. The Virginia Workers’ Compensation
+        Commission may ultimately hold a hearing to determine whether you have the same functions or
+        attributes as an employee, regardless of how your employer described you, and therefore are
+        eligible for work comp benefits.
+      </p>
+
+      <h2 id="pi-vs-wc">Personal Injury Claims vs. Workers’ Comp Claims in Virginia</h2>
+      <p>
+        When you have been hurt in a work accident, you could qualify for Virginia Workers’ Comp
+        benefits. However, filing a workers’ compensation claim may not be the best option for you in
+        some cases, or it may not be an option for you at all. That does not necessarily mean that you
+        are stuck paying out of pocket for your injuries. Here’s why.
+      </p>
+      <p>
+        Workers’ comp provides a way for injured workers to recover compensation for work-related
+        injuries, including medical, disability, and death benefits, without regard to who was at fault
+        for the accident or their injuries. You do not have to prove that your or anyone else was to
+        blame in order to obtain workers’ comp benefits, like you would have to in a normal civil
+        lawsuit such as that arising from a car accident or defective product. However, you do have to
+        meet a rather stringent set of criteria to show that your accident arose out of and in the
+        course of your employment and that it resulted in a sudden, identifiable, structural or
+        mechanical change to your body.
+      </p>
+      <p>
+        The trade-off for not having to prove negligence or fault on the part of your employer is that
+        the types of compensation available through a workers’ comp claim are more limited than what
+        you could recover through a personal injury claim. You can recover compensation for medical
+        expenses, lost wages, and permanent damage to certain ratable body parts through the workers’
+        compensation system. You cannot, however, recover noneconomic damages for losses that are not
+        as easy to measure or quantify, such as pain and suffering or mental anguish.
+      </p>
+      <p>
+        These types of damages are common in personal injury claims but off the table in a workers’
+        comp case. A workers’ compensation attorney can assist you with the claim process. Pathfinder Injury Law handles Virginia Workers’ Compensation claims. We do not handle personal injury claims.
+      </p>
+      <p>
+        In some cases, you may be eligible for a personal injury claim instead of a workers’ comp claim
+        or in addition to your workers’ comp claim. If the Virginia Workers’ Compensation Commission holds a hearing and determines your accident did not arise out of and in the course of your employment, you could potentially file a lawsuit against the employer. This is a rare and unusual outcome. If your accident does
+        qualify under the workers’ comp laws, you will be barred from suing your employer or any
+        coworkers for the accident. However, you can still potentially file a personal injury case to
+        recover damages against a third party (such as a negligent driver on the road) so long as they
+        are not a coworker or in the same trade, business, or occupation as your employer.
+      </p>
+      <p>
+        If you are not sure whether you can or should pursue a workers’ comp claim, a personal injury
+        lawsuit, or potentially both, you may need to review your situation with a work injury lawyer.
+        A lawyer can help you choose the best path to obtain compensation when you have suffered a
+        workplace injury.
+      </p>
+
+      <h2 id="benefits">What Are the Benefits for Virginia Workers?</h2>
+      <p>
+        Workers’ compensation is a form of no-fault insurance coverage. Employers fund the system by paying insurance premiums and claims, along with some of the Commission’s administrative costs, and the Virginia Workers’ Compensation Commission administers claims and
+        adjudicates disputes over benefit entitlement. The Virginia workers’ compensation system can
+        help employees who have been incapacitated by an injury related to their job. The benefits may
+        help pay for a worker’s medical recovery and rehabilitation. The system may provide ongoing
+        benefits to workers whose injuries are so severe they prevent them from returning to work. In
+        the event of a fatal workplace accident, it may compensate a worker’s family members for
+        funeral expenses related to the loss of their loved one as well as potentially paying wage loss
+        benefits to certain survivors or dependents.
+      </p>
+
+      <h3>Death Benefits</h3>
+      <p>
+        Workers’ comp can provide death benefits to the family of a worker who loses their life because
+        of a workplace injury. These benefits can pay for a limited amount of funeral expenses, medical
+        bills incurred before the death, and lost wages for certain periods of time for certain
+        survivors or dependents who meet statutory criteria.
+      </p>
+
+      <h3>Disability Benefits</h3>
+      <p>
+        Your injury may have left you unable to work. Unfortunately, you still have bills to pay.
+        Workers’ comp can provide you with disability benefits that can cover at least part of your
+        original wages.
+      </p>
+      <p>
+        The amount of disability benefits you can receive depends on whether your injuries have left
+        you completely unable to work or only partially disabled, and whether this condition is
+        permanent or not. The Virginia workers’ compensation system provides four types of disability
+        benefits:
+      </p>
+      <div class="type-grid">
+        <div class="type-card">
+          <h4><abbr title="Temporary Partial Disability">TPD</abbr>Temporary Partial Disability</h4>
+          <p>
+            You may receive benefits to help offset loss of income when your doctor only allows you to
+            return to work with restrictions (often called “light duty”) and you are earning less than
+            you were before you got hurt. The amount paid in these situations is two-thirds of the
+            difference between what you were earning before you got hurt, and what you are earning now
+            that you are injured and working light duty.
+          </p>
+        </div>
+        <div class="type-card">
+          <h4><abbr title="Temporary Total Disability">TTD</abbr>Temporary Total Disability</h4>
+          <p>
+            If a doctor says you cannot return to work at all for a temporary period because of your
+            injuries, you may receive two-thirds of the pre-injury average weekly wage you received
+            during the year immediately prior to your accident, up to a maximum weekly compensation
+            rate.
+          </p>
+        </div>
+        <div class="type-card">
+          <h4><abbr title="Permanent Partial Disability">PPD</abbr>Permanent Partial Disability</h4>
+          <p>
+            When a doctor determines you have recovered from your injury as much as possible, you may
+            be sent for a battery of physical tests to assess a permanent impairment rating for the
+            affected body parts. If this rating comes back at greater than zero percent and pertains to
+            a body part that is eligible for permanent partial disability benefits, you may be entitled
+            to workers’ comp benefits for the permanent damage you have suffered in that body part.
+            There is a complex statutory formula that determines how much you will be paid for damage to
+            a body part.
+          </p>
+        </div>
+        <div class="type-card">
+          <h4><abbr title="Permanent Total Disability">PTD</abbr>Permanent Total Disability</h4>
+          <p>
+            When your injuries remain so severe that you are unable to use two or more injured body
+            parts at all in any sort of gainful employment,
+            <a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/" rel="noopener">as defined by Virginia law</a>,
+            you may be eligible for permanent total disability benefits. These benefits can also be
+            available for severe permanent loss of sight or hearing in both eyes or ears, and for brain
+            injuries that render you permanently unable to engage in gainful employment.
+          </p>
+        </div>
+      </div>
+
+      <h3>Medical Expenses</h3>
+      <p>
+        A work-related injury can cause you to incur substantial medical expenses. This can quickly
+        begin to put a strain on your finances, especially when you are unable to work. Your workers’
+        comp medical benefits should cover all of your medical bills and related costs for medical
+        treatment that is reasonable, necessary, and causally related to your work accident. These
+        expenses can include:
+      </p>
+      <ul>
+        <li>Hospitalization or other medical care</li>
+        <li>Doctor visits, including specialists</li>
+        <li>Physical therapy and rehabilitation</li>
+        <li>Prescription medications</li>
+        <li>Orthopedic and prosthetic equipment</li>
+        <li>Mileage reimbursement for travel to and from medical appointments</li>
+      </ul>
+
+      <h3>Wage Loss</h3>
+      <p>
+        Many workplace injuries can leave you unable to work for some time. Workers’ comp can provide
+        wage loss benefits if you cannot return to work right away. These benefits can provide you with
+        support while you are receiving treatment and recovering from your injuries.
+      </p>
+
+      <h2 id="filing">What is the Process for Filing a Workers’ Compensation Claim in Virginia?</h2>
+      <p>
+        The first step in filing a Workers’ compensation claim is to notify your employer of the
+        accident or injury as soon as possible. The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. You will need to provide
+        documentation showing that you gave the required notice. Give written notice if at all possible. Verbal notice is OK, but much harder to prove. Include not only that an accident happened, but also that you suffered an injury and how it occurred.
+      </p>
+      <p>
+        After you have completed the first step, you have several options for how to send a claim to
+        the VWC. Regardless how you do it, it must be on file with the Virginia Workers’ Compensation
+        Commission within two years of your date of accident, although exceptions apply. You may file the application:
+      </p>
+      <ul>
+        <li>Online using the VWC’s electronic filing system (called “WebFile”),</li>
+        <li>In person by delivering the paperwork to a VWC office,</li>
+        <li>By mail to the VWC’s headquarters, or</li>
+        <li>By fax to a number provided by the VWC.</li>
+      </ul>
+
+      <h2 id="disputes">What to Do When Insurers Dispute Your Virginia Workers’ Comp Claim</h2>
+      <p>
+        You need Workers’ Compensation benefits to help you recover from your injuries, but it is
+        possible that your employer’s insurance company will deny your claim. Do not give up on your
+        case if this happens to you. If you have received a denial of your workers’ comp claim, you
+        have the right to dispute that decision and take your claim to a hearing before the Virginia
+        Workers’ Compensation Commission.
+      </p>
+      <p>
+        Workers’ compensation attorneys can help you request a hearing where you can dispute the denial
+        of your claim. Before you attend this hearing, your lawyer will prepare evidence showing you
+        were injured, and you are due workers’ comp benefits.
+      </p>
+      <p>
+        Your lawyer can also advocate for your rights at the hearing. When you are hurt, it can be
+        tough to go before the Virginia Workers’ Compensation Commission, especially when you do not
+        have courtroom experience. Your lawyer has the necessary experience. They can make the
+        arguments and present the evidence that can help your claim have the best prospects of success,
+        giving you a chance to get the benefits you need.
+      </p>
+
+      <h2 id="settlement">Settlement Options for Virginia Workers</h2>
+      <p>
+        When your workers’ comp claim is successful, you may receive weekly payments to help offset
+        your wage loss. This may not be what you want out of your case, though. You may want more
+        control over your finances, you may be tired of the workers’ compensation system, or you may be
+        concerned about getting the coverage you need if you are stuck using the insurance company’s
+        doctors. You have several options besides being stuck in the workers’ comp system. You should
+        always consult with a lawyer before accepting a settlement. Your settlement options in a
+        Virginia workers’ comp claim may include the following:
+      </p>
+
+      <h3>Lump Sum Settlement With Open Medical Payments</h3>
+      <p>
+        It is exceedingly rare to settle a case for a lump sum with open medicals. Typically, cases
+        settle top to bottom.
+      </p>
+
+      <h3>Full and Final Settlement</h3>
+      <p>
+        You may also choose to receive a one-time payment to resolve your workers’ comp claim, with the
+        understanding that you may not bring any future claims in relation to your injury. A full and
+        final settlement is an arrangement in which you agree to take a lump sum of money to close out
+        your entire case, top to bottom, with no future benefit entitlement of any kind whatsoever,
+        whether for wage loss, medical bills, vocational rehab, permanent partial disability benefits,
+        or any other benefits. Settling your case closes everything and ends benefits.
+      </p>
+
+      <h2 id="prepare">How to Prepare for a Worker’s Comp Consultation</h2>
+      <p>
+        When you are preparing to speak with a Workers’ Comp attorney to obtain a case evaluation, you
+        will need to prepare some materials for the attorney to review. You may receive a list of
+        documents and other items to bring, but at a minimum, you should gather the following:
+      </p>
+      <ul>
+        <li>Medical records relating to your injuries</li>
+        <li>Messages between you and your employer, including the injury report if you have already submitted it</li>
+        <li>Messages between you and the insurer</li>
+        <li>Documents to or from the Virginia Workers’ Compensation Commission</li>
+        <li>Pay stubs or other documents showing your usual income</li>
+        <li>Photographs, notes, and other materials related to the work accident and your injuries</li>
+      </ul>
+
+      <h2 id="why-hire">Why Hire a Virginia Worker’s Comp Law Firm?</h2>
+      <p>
+        Injured workers can face significant difficulties when trying to deal with insurance and their
+        employers after a work-related injury. You may be at a disadvantage compared to your employer,
+        who has almost certainly handled more workers’ comp claims than you. A work comp lawyer can
+        level the playing field and help you navigate this difficult and confusing process. Their advice
+        and assistance will cost you nothing up front and can potentially give you a better chance at
+        seeking the benefits that you may be due.
+      </p>
+
+      <div class="pull">
+        <h2>Injured in Virginia? Find Out How We Can Help.</h2>
+        <p>
+          Virginia workers’ compensation lawyers understand how difficult it can be to try to navigate
+          the Virginia workers’ comp system while also dealing with your injuries. Pathfinder Injury
+          Law is here to guide you through the process of applying for benefits and, if necessary,
+          appealing a denial of your claim. We offer a free consultation to answer your questions and
+          discuss your options. We are located in Richmond, Virginia but we practice throughout the
+          state in areas such as
+          <a href="/hanover-county-workers-comp-lawyer/">Hanover</a>,
+          <a href="/suffolk-workers-comp-lawyer/">Suffolk</a>,
+          <a href="/norfolk-workers-comp-lawyer/">Norfolk</a>,
+          <a href="/virginia-beach-workers-comp-lawyer/">Virginia Beach</a>, and
+          <a href="/eastern-shore-workers-comp-lawyer/">the Eastern Shore</a>. You may contact us by
+          calling <a href={site.phoneHref}>804-505-0633</a> or completing our
+          <a href="#contact">online contact form</a>.
+        </p>
+      </div>
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Can I receive Workers’ Comp benefits if my work accident was my fault?</summary>
+          <div class="answer">
+            <p>
+              This is a common misconception about Workers’ Comp. Fault generally doesn’t matter in Virginia Workers’ Compensation claims. Even if your own mistake or negligence caused your work injury, you can usually still recover benefits. However, a willful failure to use a safety appliance or perform a statutory duty, or a willful breach of a known, reasonable rule of the employer, can bar recovery. The employer has the burden of proof.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>How long do I have to file my Workers’ Comp claim in Virginia?</summary>
+          <div class="answer">
+            <p>
+              The time limit on your Workers’ Compensation claim is extremely important. If you miss
+              this deadline, you could sacrifice your right to compensation and other benefits.
+              Typically, you have two years from the date of your accident to file a claim.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Can my employer retaliate against me for filing a Workers’ Comp claim?</summary>
+          <div class="answer">
+            <p>
+              Virginia law explicitly forbids an employer from firing an employee for filing a
+              Workers’ Comp claim. Virginia law prohibits an employer from discharging an employee solely because the employee has filed or intends to file a Workers’ Comp claim, or has testified or is about to testify in a proceeding under the Act. Other actions, such as a demotion or discipline, may or may not be covered, so speak with a lawyer promptly. If you believe your
+              employer is violating these rules, an experienced Virginia Workers’ Comp attorney can help
+              you move forward.
+            </p>
+            <p><a href="/employer-retaliation-and-your-workers-comp-rights/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>How do lawyer fees work in Virginia Workers’ Compensation claims?</summary>
+          <div class="answer">
+            <p>
+              The Virginia Workers’ Compensation Commission must approve all attorney fees in Workers’ Comp cases. We are generally paid on contingency, meaning we collect attorney fees from the benefits we obtain for our clients. Costs we advance are subject to reimbursement from the client.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What locations do you serve?</summary>
+          <div class="answer">
+            <p>
+              Pathfinder Injury Law takes clients from all corners of the state of Virginia.
+            </p>
+            <p><a href="/about-us/#areas-served">Areas Served</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>Where can I get help with my Virginia Workers’ Compensation claim?</summary>
+          <div class="answer">
+            <p>
+              You aren’t required to have a lawyer to file a Workers’ comp claim in Virginia, but an experienced
+              Workers’ Comp attorney can provide help for every step of the process. Call Pathfinder Injury Law at <a href={site.phoneHref}>804-505-0633</a> or
+              <a href="#contact">contact us now</a>.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>What’s the Workers’ Comp Process in Virginia?</summary>
+          <div class="answer">
+            <p>
+              Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance. If an employee receives an injury while completing their job-related duties, they can file a claim with the Virginia Workers’ Compensation Commission to seek benefits including reimbursement of costs. Employees can use the
+              Workers’ Comp process to apply for several financial benefits.
+            </p>
+            <p><a href="/workers-comp-process-in-virginia/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>How long do Virginia Workers’ Comp settlements take?</summary>
+          <div class="answer">
+            <p>
+              After a serious injury at work, it can be tough to wait for your Workers’ Comp benefits to
+              arrive. You may be worried about how long your Virginia Workers’ Comp settlement will
+              take, especially as your medical bills and other debts pile up.
+            </p>
+            <p>
+              Here’s the good news: a lawyer from Pathfinder Injury Law may be able to help you understand the process.
+            </p>
+            <p><a href="/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/">Learn More</a></p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I receive Workers’ Comp and Social Security Disability at the same time?</summary>
+          <div class="answer">
+            <p>
+              Workers’ Comp benefits are offered to support injured workers when their injuries leave
+              them unable to work. SSDI benefits are meant to support those who have suffered a severe,
+              disabling injury, regardless of whether it happened at work. So how do they work together?
+            </p>
+            <p>Some people may receive both types of benefits, but caution is advised because one can affect the other. Talk with a lawyer about your situation.</p>
+            <p><a href="/virginia-workers-comp-lawyer/can-i-receive-workers-comp-and-social-security-disability-at-the-same-time/">Learn More</a></p>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <aside class="side" aria-label="Page navigation and contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+      <nav class="side-card" aria-label="On this page">
+        <h2>On This Page</h2>
+        <ul class="toc">
+          {toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <ContactSection />
+</Base>

@@ -1,0 +1,100 @@
+---
+// Team-member page: photo and quick facts beside the biography, then the contact form.
+import Base from '../layouts/Base.astro';
+import PageHero from './PageHero.astro';
+import ContactSection from './ContactSection.astro';
+import { site } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  name: string;
+  role: string;
+  photo: string;
+  photoAlt: string;
+  facts: { heading: string; items: string[] }[];
+}
+const { title, description, path, name, role, photo, photoAlt, facts } = Astro.props;
+---
+<Base title={title} description={description} path={path} crumbs={[{ name, path }]} overlay>
+  <PageHero title={name} crumbs={[{ name }]} />
+
+  <div class="wrap page-body bio-body">
+    <article class="prose">
+      <p class="bio-role caps">{role}</p>
+      <slot />
+      <p class="bio-cta">
+        <a class="btn btn-primary" href="#contact">Request A Consultation</a>
+      </p>
+    </article>
+
+    <aside class="side" aria-label={`About ${name}`}>
+      <figure class="bio-photo">
+        <img src={photo} alt={photoAlt} width="900" height="900" loading="eager" />
+      </figure>
+      <div class="side-card bio-facts">
+        {facts.map((f) => (
+          <section>
+            <h2>{f.heading}</h2>
+            <ul>
+              {f.items.map((i) => <li>{i}</li>)}
+            </ul>
+          </section>
+        ))}
+      </div>
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+    </aside>
+  </div>
+
+  <ContactSection />
+</Base>
+
+<style>
+  .bio-role {
+    color: var(--pine);
+    margin: 0 0 1rem;
+  }
+  .bio-cta {
+    margin-top: 2.5rem;
+  }
+  .bio-photo {
+    margin: 0;
+  }
+  .bio-photo img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 6px solid var(--forest);
+    box-shadow: var(--shadow);
+  }
+  .bio-facts {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .bio-facts h2 {
+    margin-bottom: 0.6rem;
+  }
+  .bio-facts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+  .bio-facts li {
+    padding-left: 1rem;
+    border-left: 3px solid var(--moss);
+  }
+  /* The sidebar here is taller than a phone or laptop screen, so it scrolls with the page. */
+  .bio-body :global(.side) {
+    position: static;
+  }
+</style>

@@ -1,0 +1,22 @@
+Photo credits (Unsplash photos are free to use under the Unsplash License, https://unsplash.com/license)
+
+hero-over-shoulder-desktop.webp, hero-over-shoulder-phone.webp   AI-generated with Google Gemini (AI Studio), by Bryn Swartz for the
+                 firm. The background and the hiker were generated separately and composited on Oct 29, 2026. Desktop file is the
+                 1376x768 composite; the phone file is a 776x768 crop of it (right side). Both saved as WebP.
+tile-a.jpg, tile-b.jpg, tile-c.jpg   AI-generated with Google AI Studio (gemini-3-pro-image), 10-30-26. Replace earlier photos whose license could not be confirmed. Prompts: Active/Hero Image Notes - 10-29-26.md, Round 6.
+                 (file names on the old site began with "photo-", the Unsplash pattern).
+
+No paid stock photos or paid fonts belong in this public repository.
+
+public/images/blog/birthday/   23 photos in the "Happy Birthday to Pathfinder Injury Law!" post.
+                 The firm's own photos (owner-approved for use, Oct 28, 2026), copied from the
+                 old site's uploads folder. Not stock photos; no license needed.
+
+public/images/blog/   Free photos from Unsplash (Unsplash License, https://unsplash.com/license),
+                 each confirmed "Free Photo" (not Unsplash+) on its page. Downloaded Oct 28, 2026 with the owner's OK.
+  phone-call.jpg      @silverkblack  https://unsplash.com/photos/woman-talking-on-phone-at-desk-with-laptop-QzY81G7dbOo
+  colleagues.jpg      @silverkblack  https://unsplash.com/photos/two-colleagues-collaborating-on-a-project-at-a-desk-UUcgVSq2m3g
+  signing-papers.jpg  @gabriellefaithhenderson  https://unsplash.com/photos/woman-signing-on-white-printer-paper-beside-woman-about-to-touch-the-documents-HJckKnwCXxQ
+  sore-back.jpg       @sasun1990     https://unsplash.com/photos/woman-holding-her-sore-lower-back-bNdiJ1FEbV4
+  neck-pain.jpg       @kkalerry      https://unsplash.com/photos/person-touching-neck-with-blonde-hair-TcUfF24fUMY
+  broken-leg.jpg      @tomspentys    https://unsplash.com/photos/a-person-with-a-broken-leg-wearing-a-pair-of-blue-boots-AtWb4spCKHI

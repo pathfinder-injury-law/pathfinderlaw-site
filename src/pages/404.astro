@@ -1,15 +1,41 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Page not found | Pathfinder Injury Law</title>
-  </head>
-  <body>
-    <main>
-      <h1>Page not found</h1>
-      <p><a href="/">Return home</a></p>
-    </main>
-  </body>
-</html>
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+
+// Error pages should not be canonical to the missing address, so the canonical points to the home page.
+// noindex keeps this page out of search results on the live site too; previews are noindex, nofollow anyway.
+const title = 'Page Not Found - Pathfinder Injury Law';
+const description = 'This page could not be found. Return to the Pathfinder Injury Law home page or call the firm.';
+
+const mainPages = [
+  { label: "Workers' Comp", href: '/virginia-workers-comp-lawyer/' },
+  { label: 'FAQ', href: '/virginia-workers-comp-faq/' },
+  { label: 'Results', href: '/results/' },
+  { label: 'Reviews', href: '/reviews/' },
+  { label: 'Contact', href: '/contact/' },
+  { label: 'Blog', href: '/blog/' },
+];
+---
+<Base title={title} description={description} path="/" overlay noindex>
+  <PageHero title="We could not find that page" />
+  <div class="wrap info-body">
+    <article class="prose">
+      <p class="lead">The page you are looking for may have moved or no longer exists.</p>
+      <p><a class="btn btn-primary" href="/">Go to the Home Page</a></p>
+      <p>To speak with the firm directly, call <a href={site.phoneHref}>{site.phoneDisplay.replace(' ', '\u00a0')}</a>.</p>
+      <p>Or visit one of these main pages:</p>
+      <ul>
+        {mainPages.map((p) => (
+          <li><a href={p.href}>{p.label}</a></li>
+        ))}
+      </ul>
+    </article>
+  </div>
+</Base>
+
+<style>
+  .info-body {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 7vw, 5rem);
+  }
+</style>

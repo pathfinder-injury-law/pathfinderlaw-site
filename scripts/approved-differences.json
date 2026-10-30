@@ -1,0 +1,467 @@
+{
+  "_about": "Known, approved differences between the live site and the new build. An entry only matches when the address, the field, the live value and the new value are all exactly as written, so a changed wording fails again. Fields: title, description, h1, canonical, robots, schema.",
+  "approved": [
+    {
+      "address": "/virginia-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is your trusted Virginia workers' comp lawyer. Call 804-505-0633 for a 100% free consultation with our legal experts.",
+      "new": "Pathfinder Injury Law is your trusted Virginia workers' comp lawyer. Call 804-505-0633 for a 100% free consultation with our team.",
+      "reason": "Migration plan Section VIII, fix 6: 'our legal experts' became 'our team'."
+    },
+    {
+      "address": "/virginia-construction-accident-lawyer/",
+      "field": "description",
+      "live": "Hurt in a construction accident? Speak to Virginia workers' comp lawyers at Pathfinder Injury Law today. Call 804-505-0633 to get started.",
+      "new": "Hurt in a construction accident? Speak to a Virginia workers' comp lawyer at Pathfinder Injury Law today. Call 804-505-0633 to get started.",
+      "reason": "Plural 'lawyers' changed to singular, the approved type of change listed for this build."
+    },
+    {
+      "address": "/reviews/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is here to help win your Virginia workers' compensation case. Check out recent client testimonials or give us a call.",
+      "new": "Pathfinder Injury Law is here to help with your Virginia workers' compensation case. Check out recent client testimonials or give us a call.",
+      "reason": "Owner decision Oct 28: reword outcome-promise ('win') language to factual wording."
+    },
+    {
+      "address": "/virginia-work-injury-lawyer/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is led by experienced workers' compensation lawyers. Explore your eligibility for Virginia work injury comp today.",
+      "new": "Pathfinder Injury Law is led by an experienced workers' compensation lawyer. Explore your eligibility for Virginia work injury comp today.",
+      "reason": "Plural 'lawyers' changed to singular, the approved type of change listed for this build."
+    },
+    {
+      "address": "/location/",
+      "field": "title",
+      "live": "location - Pathfinder Injury Law",
+      "new": "Location - Pathfinder Injury Law",
+      "reason": "Location page rewrite for the new office listing; capitalized to match the rest of the site."
+    },
+    {
+      "address": "/location/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is a trusted workers' compensation law firm in Richmond, VA. Get in touch with us for a 100% free case consultation.",
+      "new": "Pathfinder Injury Law has offices in Richmond and Chincoteague, VA, by appointment only. Get in touch with us for a 100% free case consultation.",
+      "reason": "Owner decision: new office wording (Richmond and Chincoteague, by appointment only)."
+    },
+    {
+      "address": "/location/",
+      "field": "h1",
+      "live": "Richmond",
+      "new": "Our Locations",
+      "reason": "Owner decision: new office wording on the location page."
+    },
+    {
+      "address": "/how-long-can-a-workers-comp-claim-stay-open/",
+      "field": "description",
+      "live": "How long can a Virginia workers' comp claim stay open? Here's what you need to know from the legal experts at Pathfinder Injury Law.",
+      "new": "How long can a Virginia workers' comp claim stay open? Here's what you need to know from our team at Pathfinder Injury Law.",
+      "reason": "Migration plan Section VIII, fix 6: 'legal experts' became 'our team'."
+    },
+    {
+      "address": "/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/",
+      "field": "description",
+      "live": "Pathfinder Injury Law helps employees get compensation after a work injury or illness. Here's how to settle Virginia workers’ comp disputes.",
+      "new": "Pathfinder Injury Law helps employees get compensation after a work injury. Here's how to settle Virginia workers’ comp disputes.",
+      "reason": "Owner decision: work-illness content removed; 'or illness' dropped."
+    },
+    {
+      "address": "/how-to-win-a-virginia-workers-comp-case/",
+      "field": "title",
+      "live": "Guide to Winning Your First Workers' Compensation Case",
+      "new": "Guide to Strengthening Your First Workers' Compensation Case",
+      "reason": "Owner decision: outcome/win language reworded to factual wording."
+    },
+    {
+      "address": "/how-to-win-a-virginia-workers-comp-case/",
+      "field": "description",
+      "live": "Win your Virginia workers' compensation case with Pathfinder Injury Law. Let's discuss the benefits you're entitled to - call 804-505-0633.",
+      "new": "Learn the steps that can help your Virginia workers' compensation claim with Pathfinder Injury Law. Discuss your benefits - call 804-505-0633.",
+      "reason": "Owner decision: outcome/win language reworded to factual wording."
+    },
+    {
+      "address": "/how-to-win-a-virginia-workers-comp-case/",
+      "field": "h1",
+      "live": "How to Win Your Virginia Workers’ Comp Case",
+      "new": "How to Strengthen Your Virginia Workers’ Comp Case",
+      "reason": "Owner decision: outcome/win language reworded to factual wording."
+    },
+    {
+      "address": "/causes-of-on-the-job-shoulder-injuries/",
+      "field": "description",
+      "live": "Did you hurt your shoulder at work? Virginia workers' comp lawyers can help your case. Get in touch with Pathfinder Injury Law today.",
+      "new": "Did you hurt your shoulder at work? A Virginia workers' comp lawyer can help your case. Get in touch with Pathfinder Injury Law today.",
+      "reason": "Plural 'lawyers' changed to singular, the approved type of change listed for this build."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/",
+      "field": "description",
+      "live": "The dedicated lawyers at Pathfinder Injury Law can help you win your back injury case. Let's talk about Virginia workers’ compensation.",
+      "new": "A dedicated lawyer at Pathfinder Injury Law can help you with your back injury case. Let’s talk about Virginia workers’ compensation.",
+      "reason": "Owner decision: outcome/win language reworded, plus singular 'lawyer'."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/",
+      "field": "description",
+      "live": "How is workers’ comp calculated in Virginia? Pathfinder Injury Law has everything you need to know for a successful work injury case.",
+      "new": "How is workers’ comp calculated in Virginia? Pathfinder Injury Law has what you need to know for your work injury case.",
+      "reason": "Owner decision: outcome language ('successful case') removed."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/",
+      "field": "description",
+      "live": "When does Virginia workers’ comp start paying? Find out with the help of experienced work compensation lawyers at Pathfinder Injury Law,",
+      "new": "When does Virginia workers’ comp start paying? Find out with the help of an experienced work compensation lawyer at Pathfinder Injury Law.",
+      "reason": "Plural 'lawyers' changed to singular, the approved type of change listed for this build; trailing comma fixed."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/",
+      "field": "description",
+      "live": "Get ready for a Virginia workers' comp hearing with the help of Pathfinder Injury Law. Call our Richmond law office today at 804-505-0633.",
+      "new": "Get ready for a Virginia workers' comp hearing with the help of Pathfinder Injury Law. Call us today at 804-505-0633.",
+      "reason": "Owner decision: new office/phone wording (Richmond office line removed)."
+    },
+    {
+      "address": "/prince-william-county-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Win your case with a strategic Prince William County workers’ comp lawyer. Call Pathfinder Injury Law at 804-505-0633 to get started today.",
+      "new": "Pathfinder Injury Law represents injured workers in Prince William County. Call 804-505-0633 to talk with a workers’ comp lawyer and get started today.",
+      "reason": "Owner decision: outcome/win language reworded to factual wording."
+    },
+    {
+      "address": "/harrisonburg-workers-comp-worker/",
+      "field": "description",
+      "live": "Need a Harrisonburg workers’ compensation lawyer? Call Pathfinder Injury Law at 804-505-0633 to discuss your work-related injury or illness.",
+      "new": "Need a Harrisonburg workers’ compensation lawyer? Call Pathfinder Injury Law at 804-505-0633 to discuss your work-related injury.",
+      "reason": "Owner decision: work-illness content removed; 'or illness' dropped."
+    },
+    {
+      "address": "/lynchburg-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Need a Lynchburg workers' comp lawyer? Trust the team at Pathfinder Injury Law with your Virginia work injury or illness case.",
+      "new": "Need a Lynchburg workers' comp lawyer? Trust the team at Pathfinder Injury Law with your Virginia work injury case.",
+      "reason": "Owner decision: work-illness content removed; 'or illness' dropped."
+    },
+    {
+      "address": "/suffolk-workers-comp-lawyer/",
+      "field": "description",
+      "live": "An efficient Suffolk work comp lawyer can help you prepare a successful claim after a work injury or illness. Call Pathfinder Injury Law.",
+      "new": "An efficient Suffolk work comp lawyer can help you prepare a successful claim after a work injury. Call Pathfinder Injury Law.",
+      "reason": "Owner decision: work-illness content removed; 'or illness' dropped."
+    },
+    {
+      "address": "/norfolk-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Virginia workers' comp benefits can help you recover from a work injury or illness. Connect with the Pathfinder Injury Law team in Norfolk.",
+      "new": "Virginia workers' comp benefits can help you recover from a work injury. Connect with the Pathfinder Injury Law team about your Norfolk case.",
+      "reason": "Owner decision: work-illness content removed; 'or illness' dropped."
+    },
+    {
+      "address": "/privacy-policy/",
+      "field": "description",
+      "live": "Pathfinder Injury Law helps in Virginia work accident and illness cases. View our privacy policy or contact us for a consultation.",
+      "new": "Pathfinder Injury Law helps in Virginia work accident cases. View our privacy policy or contact us for a consultation.",
+      "reason": "Owner decision: work-illness content removed; 'and illness' dropped."
+    },
+    {
+      "address": "/loudoun-county-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Need a Loudoun County workers’ comp lawyer? Pathfinder Injury Law has you covered. Let's discuss your Virginia work injury or illness case.",
+      "new": "Need a Loudoun County workers’ comp lawyer? Pathfinder Injury Law has you covered. Let's discuss your Virginia work injury case.",
+      "reason": "Owner decision: work-illness content removed; 'or illness' dropped."
+    },
+    {
+      "address": "/what-happens-when-you-file-a-workers-comp-claim/",
+      "field": "description",
+      "live": "What happens when you file a Virginia workers' comp claim? Here's what you need to know from the trusted lawyers at Pathfinder Injury Law.",
+      "new": "What happens when you file a Virginia workers' comp claim? Here's what you need to know from the trusted team at Pathfinder Injury Law.",
+      "reason": "Owner decision 10-28-26: 'trusted lawyers' became 'trusted team'."
+    },
+    {
+      "address": "/about-us/",
+      "field": "description",
+      "live": "¿Necesita ayuda de los abogados de compensación de trabajadores de Richmond? Llame a Pathfinder Injury Law al 804-505-0633 para discutir.",
+      "new": "Need help from a Richmond workers’ compensation law firm? Call Pathfinder Injury Law at 804-505-0633 to discuss your case.",
+      "reason": "The live description was Spanish by mistake; the new one is English."
+    },
+    {
+      "address": "/contact/",
+      "field": "description",
+      "live": "Hurt at work and don't know where to turn? Make Pathfinder Injury Law your first call. Contact VA workers' comp lawyers at 804-505-0633.",
+      "new": "Hurt at work and don't know where to turn? Make Pathfinder Injury Law your first call. Contact our VA workers' comp team at 804-505-0633.",
+      "reason": "Owner decision 10-28-26: 'lawyers' became 'our team'."
+    },
+    {
+      "address": "/blog/",
+      "field": "title",
+      "live": "Blog - Pathfinder Injury Law",
+      "new": "Workers’ Comp Blog | Pathfinder Injury Law",
+      "reason": "Blog title and description rewritten for launch; the wider content rework comes later."
+    },
+    {
+      "address": "/blog/",
+      "field": "description",
+      "live": "Injured at work? Pathfinder Injury Law is here to guide you on the path to compensation. Read our blog or call us at 804-505-0633 today.",
+      "new": "Articles from Pathfinder Injury Law about Virginia workers’ compensation: how to file a claim, how adjusters work, and what to expect after a work injury.",
+      "reason": "Blog title and description rewritten for launch; the wider content rework comes later."
+    },
+    {
+      "address": "/virginia-factory-accident-lawyer/",
+      "field": "description",
+      "live": "After a factory accident, you need a Virginia workers' compensation lawyer you can trust. Call Pathfinder Injury Law in Richmond today.",
+      "new": "After a factory accident, you need a Virginia workers’ compensation lawyer you can trust. Call Pathfinder Injury Law in Richmond today.",
+      "reason": "Typography only: straight apostrophe became curly."
+    },
+    {
+      "address": "/car-accident-at-work-in-virginia/",
+      "field": "description",
+      "live": "Pathfinder Injury helps with Virginia work vehicle accidents. Get assistance now - call 804-505-0633 for your consultation.",
+      "new": "Pathfinder Injury Law helps with Virginia work vehicle accidents. Get assistance now - call 804-505-0633 for your consultation.",
+      "reason": "Firm name completed: 'Pathfinder Injury' became 'Pathfinder Injury Law'."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation/",
+      "field": "description",
+      "live": "Are you eligible for vocational rehabilitation after a Virginia work accident? Explore your options with Pathfinder Injury Law attorneys.",
+      "new": "Are you eligible for vocational rehabilitation after a Virginia work accident? Explore your options with Pathfinder Injury Law.",
+      "reason": "Word 'attorneys' removed; the plan limits who-is-a-lawyer wording."
+    },
+    {
+      "address": "/mandy-swartz/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is a family business, and Mandy Truman Swartz serves as firm administrator and certified paralegal. Read more about her journey.",
+      "new": "Pathfinder Injury Law is a family business, and Mandy Truman serves as firm administrator. Read more about her journey.",
+      "reason": "Owner decision 10-28-26: Mandy is the firm administrator and is not presented as a paralegal; 'certified' removed."
+    },
+    {
+      "address": "/richmond-workers-comp-lawyer/",
+      "field": "description",
+      "live": "A richmond workers’ comp lawyer help you recover after a work accident with the benefits you're entitled to. Call Pathfinder Injury Law now.",
+      "new": "A Richmond workers’ comp lawyer can help you recover after a work accident with the benefits you're entitled to. Call Pathfinder Injury Law now.",
+      "reason": "Grammar and capitalization fix."
+    },
+    {
+      "address": "/loudoun-county-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Loudon County Worker's Compensation Claims & Attorney",
+      "new": "Loudoun County Workers' Compensation Claims & Attorney",
+      "reason": "Title typo fix: 'Loudon' became 'Loudoun'."
+    },
+    {
+      "address": "/roanoke-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Hurt at work in Roanoke? Hire a trusted workers’ comp lawyer who offer sound advice. Visit the Pathfinder Injury Law website to learn more.",
+      "new": "Hurt at work in Roanoke? Hire a trusted workers’ comp lawyer who offers sound advice. Visit the Pathfinder Injury Law website to learn more.",
+      "reason": "Grammar fix: 'offer' became 'offers'."
+    },
+    {
+      "address": "/norfolk-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Norfolk Workers' Compensation Claims & Lawyer |",
+      "new": "Norfolk Workers' Compensation Claims & Lawyer",
+      "reason": "Stray trailing pipe removed from title."
+    },
+    {
+      "address": "/blog/page/2/",
+      "field": "description",
+      "live": "Injured at work? Pathfinder Injury Law is here to guide you on the path to compensation. Read our blog or call us at 804-505-0633 today. - Page 2",
+      "new": "More articles from Pathfinder Injury Law about Virginia workers’ compensation and what to expect after a work injury. Page 2 of our blog.",
+      "reason": "Blog page 2 given its own description (was a duplicate of /blog/); length kept under 160."
+    },
+    {
+      "address": "/blog/page/2/",
+      "field": "title",
+      "live": "Blog - Pathfinder Injury Law - Page 2",
+      "new": "Workers’ Comp Blog, Page 2 | Pathfinder Injury Law",
+      "reason": "Blog title rewritten for launch, same as /blog/."
+    },
+    {
+      "address": "/results/",
+      "field": "description",
+      "live": "Want to know how Pathfinder will fight to get you maximum compensation for your work comp case? View our recent success stories online.",
+      "new": "Want to know how Pathfinder may be able to help with your work comp case? View some of our past results online.",
+      "reason": "Ethics review 10-28-26: outcome wording made neutral"
+    },
+    {
+      "address": "/fairfax-county-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is your trusted Fairfax County workers’ comp lawyer. Let's get you the compensation you deserve after a work accident.",
+      "new": "Pathfinder Injury Law is your trusted Fairfax County workers’ comp lawyer. Let's talk about your options after a work accident.",
+      "reason": "Ethics review 10-28-26: outcome wording made neutral"
+    },
+    {
+      "address": "/chesapeake-workers-comp-lawyer/",
+      "field": "description",
+      "live": "Need a dedicated Chesapeake workers’ comp lawyer? Trust Pathfinder Injury Law to help you get the benefits you deserve.",
+      "new": "Need a dedicated Chesapeake workers’ comp lawyer? Contact Pathfinder Injury Law to seek the benefits you may be due.",
+      "reason": "Ethics review 10-28-26: outcome wording made neutral"
+    },
+    {
+      "address": "/thank-you/",
+      "field": "description",
+      "live": "Pathfinder Injury Law offers a 100% free consultation with no pressure and no hidden fees. Let's discuss your Virginia workers' comp case.",
+      "new": "Pathfinder Injury Law offers a free consultation with no pressure. Let's discuss your Virginia workers' comp case.",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 56."
+    },
+    {
+      "address": "/workers-comp-settlement-in-virginia/",
+      "field": "description",
+      "live": "Pathfinder Injury Law is a reputable law firm specializing in Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
+      "new": "Pathfinder Injury Law is a law firm exclusively handling Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 50. (Replaces earlier approval: Ethics review 10-28-26: outcome wording made neutral)"
+    },
+    {
+      "address": "/results/",
+      "field": "h1",
+      "live": "Recent Case Results",
+      "new": "Case Results",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 124."
+    },
+    {
+      "address": "/work-injury-compensation/",
+      "field": "description",
+      "live": "Have you suffered a workplace injury and expect to receive compensation? Read here on how much you should expect to receive for your injury.",
+      "new": "Have you suffered a workplace injury and expect to receive compensation? Read here about what can affect the value of a workers’ comp claim.",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 112."
+    },
+    {
+      "address": "/knee-injury-compensation/",
+      "field": "description",
+      "live": "Read our guide on the average compensation for a knee injury workers' compensation claim in Virginia. Contact us online for additional information!",
+      "new": "Read our guide to what can affect a knee injury workers' compensation claim in Virginia. Contact us online for additional information!",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 111."
+    },
+    {
+      "address": "/hurt-your-hip-at-work/",
+      "field": "h1",
+      "live": "Here’s How Our Team Can Help If You Hurt Your Hip At Work",
+      "new": "Here’s How We Can Help If You Hurt Your Hip At Work",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 131."
+    },
+    {
+      "address": "/how-to-prepare-for-a-workers-comp-deposition/",
+      "field": "description",
+      "live": "Pathfinder Injury Law can help you prepare for a Virginia workers' comp deposition. Call our trusted lawyers for a 100% free consultation.",
+      "new": "Pathfinder Injury Law can help you prepare for a Virginia workers' comp deposition. Call us for a 100% free consultation.",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 132. (Replaces earlier approval: Owner decision 10-28-26: 'trusted lawyers' became 'trusted team'.)"
+    },
+    {
+      "address": "/employer-retaliation-and-your-workers-comp-rights/",
+      "field": "description",
+      "live": "Worried about employer retaliation? Know your workers' comp rights with Pathfinder Injury Law in Richmond, Virginia. Call 804-505-0633.",
+      "new": "Worried about employer retaliation? Call Pathfinder Injury Law in Richmond, Virginia, at 804-505-0633 to talk about your options.",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 6."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Virginia Workers' Comp Claims Attorney | Pathfinder Law",
+      "new": "Virginia Workers' Comp Claims Attorney | Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/virginia-construction-accident-lawyer/",
+      "field": "title",
+      "live": "Virginia Construction Accident Attorney | Pathfinder Law",
+      "new": "Virginia Construction Accident Attorney | Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/car-accident-at-work-in-virginia/",
+      "field": "title",
+      "live": "Virginia Work-Related Car Accident Attorney | Pathfinder Law",
+      "new": "Virginia Work-Related Car Accident Attorney | Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/average-workers-comp-settlement-in-virginia/",
+      "field": "title",
+      "live": "Average Virginia Workers' Compensation Settlement Amount",
+      "new": "What Affects Workers' Comp Settlement Value in Virginia",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 108."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/average-workers-comp-settlement-in-virginia/",
+      "field": "h1",
+      "live": "Average Workers’ Comp Settlement in Virginia",
+      "new": "What Affects Workers’ Comp Settlement Value in Virginia",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 108."
+    },
+    {
+      "address": "/richmond-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Richmond Workers' Compensation Attorney | Pathfinder Law",
+      "new": "Richmond Workers' Compensation Attorney | Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/hanover-county-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Hanover County Workers' Compensation Lawyer | Pathfinder Law",
+      "new": "Hanover County Workers' Compensation Lawyer | Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/fairfax-county-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Fairfax County Workers Comp Claims & Lawyer - Pathfinder Law",
+      "new": "Fairfax County Workers Comp Claims & Lawyer - Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/lynchburg-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Lynchburg Workers' Comp Claims & Attorney | Pathfinder Law",
+      "new": "Lynchburg Workers' Comp Claims & Attorney | Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/suffolk-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Suffolk Workers' Comp Claims & Lawyer - Pathfinder Law",
+      "new": "Suffolk Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/portsmouth-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Portsmouth Workers' Comp Claims & Lawyer - Pathfinder Law",
+      "new": "Portsmouth Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/chesapeake-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Chesapeake Workers' Comp Claims & Lawyer - Pathfinder Law",
+      "new": "Chesapeake Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/virginia-beach-workers-comp-lawyer/",
+      "field": "title",
+      "live": "Virginia Beach Workers' Comp Attorney | Pathfinder Law",
+      "new": "Virginia Beach Workers' Comp Attorney | Pathfinder Injury Law",
+      "reason": "Round 3 checklist (Bryn, 10-28-26), row 83."
+    },
+    {
+      "address": "/mandy-swartz/",
+      "field": "title",
+      "live": "Mandy Truman Swartz - Pathfinder Injury Law",
+      "new": "Mandy Truman - Pathfinder Injury Law",
+      "reason": "Owner decision 10-29-26: her name is Mandy Truman, not Mandy Truman Swartz."
+    },
+    {
+      "address": "/mandy-swartz/",
+      "field": "h1",
+      "live": "Mandy Truman Swartz",
+      "new": "Mandy Truman",
+      "reason": "Owner decision 10-29-26: her name is Mandy Truman, not Mandy Truman Swartz."
+    },
+    {
+      "address": "/",
+      "field": "h1",
+      "live": "Workers’ Comp Lawyer",
+      "new": "Virginia Workers’ Comp Lawyer",
+      "reason": "Owner decision Oct 29 (hero redesign, option 1): the small 'Virginia' line and the page heading are now one h1, 'Virginia Workers’ Comp Lawyer', styled small above the big words."
+    }
+  ]
+}

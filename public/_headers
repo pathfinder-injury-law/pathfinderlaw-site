@@ -1,0 +1,7 @@
+# Keep the form confirmation page out of search results (it is also left out of the sitemap).
+/thank-you/
+  X-Robots-Tag: noindex, nofollow
+
+# The feed is written to feed/index.html so /feed/ resolves; this says it is RSS.
+/feed/
+  Content-Type: application/rss+xml; charset=utf-8

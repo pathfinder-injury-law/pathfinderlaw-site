@@ -1,0 +1,72 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import ContactSection from '../../components/ContactSection.astro';
+
+// All 15 results from the live page, wording unchanged. The caption under each amount and the
+// "Every case is different" note are the plan's approved wording (same as the homepage).
+// Owner decision (Oct 28): all results stay; the retainer agreement covers client consent.
+// No client is named. Some descriptions give case details (for example "public school teacher",
+// "gunshot wound"); Bryn may want to confirm those cannot identify anyone.
+const title = 'Results - Pathfinder Injury Law';
+const description =
+  'Want to know how Pathfinder may be able to help with your work comp case? View some of our past results online.';
+
+const results = [
+  { amount: '$1,200,000', count: 1200000, text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$360,000', count: 360000, text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.' },
+  { amount: '$250,000', count: 250000, text: 'Settlement obtained in a contested concussion/brain injury Workers’ Compensation case with psychosomatic issues following mediation before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$240,000', count: 240000, text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$240,000', count: 240000, text: 'Settlement obtained in a 20-year-old back injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$195,000', count: 195000, text: 'Settlement obtained in a contested multi-body-part case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$195,000', count: 195000, text: 'Full and final settlement obtained in a slip and fall hip injury case involving a public school teacher following mediation before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$175,000', count: 175000, text: 'Settlement obtained in a gunshot wound spinal injury workers’ compensation case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$170,000', count: 170000, text: 'Settlement obtained in a back injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$170,000', count: 170000, text: 'Settlement obtained in a concussion/brain injury case before the Virginia Workers’ Compensation Commission' },
+  { amount: '$150,000', count: 150000, text: 'Settlement in a concussion/brain injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$150,000', count: 150000, text: 'Settlement obtained in a broken ankle case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$140,000', count: 140000, text: 'Settlement obtained in a spinal injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$135,000', count: 135000, text: 'Settlement obtained in a contested femur fracture case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$130,000', count: 130000, text: 'Settlement obtained in a disputed neck injury case before the Virginia Workers’ Compensation Commission.' },
+];
+---
+<Base
+  title={title}
+  description={description}
+  path="/results/"
+  crumbs={[{ name: 'Case Results', path: '/results/' }]}
+  overlay
+>
+  <PageHero title="Case Results" crumbs={[{ name: 'Case Results' }]} />
+
+  <section class="section results contour on-dark results-page">
+    <div class="wrap">
+      <div class="results-grid" data-stagger>
+        {results.map((r) => (
+          <article class="result">
+            <p class="amount" data-count={r.count}>{r.amount}</p>
+            <p>{r.text}</p>
+          </article>
+        ))}
+      </div>
+      <p class="disclaimer" data-reveal>
+        Amounts shown are gross, before attorney’s fees, costs, and liens. Every case is different. These results depended on facts unique to each case and do not
+        predict or guarantee the result in yours.
+      </p>
+    </div>
+  </section>
+
+  <ContactSection />
+</Base>
+
+<style>
+  .results-page {
+    padding-top: clamp(3rem, 7vw, 5rem);
+  }
+  /* Fifteen cards: three across on desktop reads better than four. */
+  @media (min-width: 62rem) {
+    .results-page :global(.results-grid) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

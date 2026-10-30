@@ -1,0 +1,67 @@
+---
+// Article-style inner page: photo header, readable column with the old site's wording, a closing
+// call-to-action block, a sidebar (phone and "On This Page"), and the contact form at the bottom.
+// Used by the plain "page" articles (work injury, claim process, settlement and similar).
+// All wording lives in src/data/articlesB.ts so each page's changes from the live site are in one place.
+import Base from '../layouts/Base.astro';
+import PageHero from './PageHero.astro';
+import ContactSection from './ContactSection.astro';
+import { site } from '../data/site';
+import { articlesB } from '../data/articlesB';
+
+interface Props {
+  slug: keyof typeof articlesB;
+}
+const page = articlesB[Astro.props.slug];
+const parents = page.parents ?? [];
+const toc = [
+  ...page.sections.map((s) => ({ id: s.id, label: s.h2 })),
+  { id: 'help', label: page.closing.h2 },
+];
+---
+<Base
+  title={page.title}
+  description={page.description}
+  path={page.path}
+  crumbs={[...parents, { name: page.h1, path: page.path }]}
+  overlay
+  author
+>
+  <PageHero
+    title={page.h1}
+    crumbs={[...parents.map((p) => ({ name: p.name, href: p.path })), { name: page.crumb ?? page.h1 }]}
+  />
+
+  <div class="wrap page-body">
+    <article class="prose">
+      <Fragment set:html={page.lead} />
+      {page.sections.map((s) => (
+        <>
+          <h2 id={s.id}>{s.h2}</h2>
+          <Fragment set:html={s.html} />
+        </>
+      ))}
+      <div class="pull" id="help">
+        <h2>{page.closing.h2}</h2>
+        <Fragment set:html={page.closing.html} />
+      </div>
+    </article>
+
+    <aside class="side" aria-label="Page navigation and contact">
+      <div class="side-card side-call">
+        <h2>Free Consultation</h2>
+        <a class="cta-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+        <a class="btn btn-primary" href="#contact">Get Help Now</a>
+      </div>
+      <nav class="side-card" aria-label="On this page">
+        <h2>On This Page</h2>
+        <ul class="toc">
+          {toc.map((t) => <li><a href={`#${t.id}`}>{t.label}</a></li>)}
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <ContactSection />
+</Base>
+

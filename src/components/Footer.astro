@@ -1,0 +1,58 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer contour">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <!-- The logo's dark outline needs a light background, so it sits on a light panel. -->
+        <img src="/images/brand/logo-vertical.png" width="753" height="626" alt={site.name} />
+      </div>
+      <div>
+        <h2>Get In Touch</h2>
+        <p><a href={site.phoneHref}>{site.phoneDisplay}</a></p>
+        {site.offices.map((o) => (
+          <address>
+            <strong>{o.name}</strong><br />
+            {o.mapUrl ? (
+              <a href={o.mapUrl}>{o.lines[0]}<br />{o.lines[1]}</a>
+            ) : (
+              <>{o.lines[0]}<br />{o.lines[1]}</>
+            )}
+          </address>
+        ))}
+        <p class="appt">Both offices by appointment only.</p>
+      </div>
+      <div>
+        <h2>Office Hours</h2>
+        <ul>
+          {site.hours.map((h) => <li>{h}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h2>Follow Us</h2>
+        <ul>
+          {site.social.map((s) => <li><a href={s.url} rel="noopener">{s.name}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/disclaimer/">Disclaimer</a></li>
+          <li><a href="/accessibility/">Accessibility</a></li>
+          <li><a href="/sitemap/">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal-note">This site, and all content it contains, is attorney advertising and is for general informational purposes only. It is not legal advice, and nothing herein creates an attorney-client relationship. Facts and deadlines vary, case results depend on the facts of each case, and past results do not guarantee future outcomes. See our <a href="/disclaimer/">Disclaimer</a>.</p>
+    <p class="copyright">&copy; {year} {site.name}. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Phone-only bar, as on the current site. Hidden on wide screens. -->
+<div class="call-bar">
+  <a href={site.phoneHref}>Call Us</a>
+  <a href="/contact/">Message Us</a>
+</div>

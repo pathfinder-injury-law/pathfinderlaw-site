@@ -1,0 +1,55 @@
+---
+import { nav, site } from '../data/site';
+---
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="/" aria-label={`${site.name}, home`}>
+      <img src="/images/brand/logo-horizontal.png" width="1703" height="522" alt={site.name} />
+    </a>
+
+    <!-- Wide screens: inline menu with dropdowns. -->
+    <nav class="desktop-nav" aria-label="Main">
+      <ul>
+        {nav.map((item) => (
+          <li class={item.children ? 'has-sub' : undefined}>
+            <a href={item.href}>{item.label}</a>
+            {item.children && (
+              <ul class="sub">
+                {item.children.map((c) => (
+                  <li><a href={c.href}>{c.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+      <a class="header-phone" href={site.phoneHref}>{site.phoneHeader}</a>
+    </nav>
+
+    <!-- Phones and tablets: a Menu button that opens a stacked list. No script needed. -->
+    <details class="nav-mobile">
+      <summary class="nav-toggle" aria-label="Menu">
+        <svg class="icon-open" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+      </summary>
+      <nav class="main-nav main-nav-panel" aria-label="Main (mobile)">
+        <ul>
+          {nav.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+              {item.children && (
+                <ul class="sub">
+                  {item.children.map((c) => (
+                    <li><a href={c.href}>{c.label}</a></li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+          <li><a href={site.phoneHref}>{site.phoneHeader}</a></li>
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>

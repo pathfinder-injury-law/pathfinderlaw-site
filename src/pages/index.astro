@@ -1,18 +1,204 @@
 ---
-// Placeholder page. Replaced during the migration build-out.
+import Base from '../layouts/Base.astro';
+import TornEdge from '../components/TornEdge.astro';
+import TopicIcon from '../components/TopicIcon.astro';
+import ContactSection from '../components/ContactSection.astro';
+
+// Title, description and wording match the current live homepage, except the
+// approved results wording (migration plan, Section VIII, fix 1).
+const title = "Pathfinder Injury Law - Virginia Workers' Comp Lawyer";
+const description =
+  "At Pathfinder Injury Law, all we do is workers' comp cases. Call our dedicated law office in Richmond, Virginia at 804-505-0633 today.";
+
+const topics = [
+  { label: 'Construction Accidents', href: '/virginia-construction-accident-lawyer/', icon: 'construction' },
+  { label: 'Factory Accidents', href: '/virginia-factory-accident-lawyer/', icon: 'factory' },
+  { label: 'Vehicle Accidents', href: '/car-accident-at-work-in-virginia/', icon: 'vehicle' },
+  { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', icon: 'spine' },
+];
+
+const traits = ['Local', 'Experienced', 'Focused', 'Fighting Spirit', 'Calming Presence'];
+
+const results = [
+  {
+    amount: '$1,200,000',
+    count: 1200000,
+    text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.',
+  },
+  {
+    amount: '$360,000',
+    count: 360000,
+    text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.',
+  },
+  {
+    amount: '$250,000',
+    count: 250000,
+    text: 'Settlement obtained in a contested concussion/brain injury Workers’ Compensation case with psychosomatic issues following mediation before the Virginia Workers’ Compensation Commission.',
+  },
+  {
+    amount: '$240,000',
+    count: 240000,
+    text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.',
+  },
+];
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Pathfinder Injury Law</title>
-  </head>
-  <body>
-    <main>
-      <h1>Pathfinder Injury Law</h1>
-      <p>Site under construction.</p>
-    </main>
-  </body>
-</html>
+<Base
+  title={title}
+  description={description}
+  path="/"
+  datePublished="2022-02-25T23:07:43+00:00"
+  overlay
+  heroLight
+>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/images/photos/hero-over-shoulder-desktop.webp" media="(min-width: 48rem)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/photos/hero-over-shoulder-phone.webp" media="(max-width: 47.99rem)" fetchpriority="high" />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-wght-italic.woff2" crossorigin />
+  </Fragment>
+  <!-- Hero: words in the left two thirds over the sky, hiker in the right third. -->
+  <section class="hero hero-sky">
+    <picture class="hero-pic">
+      <source media="(max-width: 47.99rem)" srcset="/images/photos/hero-over-shoulder-phone.webp" type="image/webp" width="776" height="768" />
+      <img class="hero-photo" src="/images/photos/hero-over-shoulder-desktop.webp" alt="" width="1376" height="768" fetchpriority="high" />
+    </picture>
+    <div class="wrap">
+      <h1 class="hero-kicker">Virginia Workers’ Comp Lawyer</h1>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="hero-l1">Hurt at work?</p>
+      <p class="hero-l2">Let’s go.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-hero" href="#contact">Free Consultation<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+      </div>
+    </div>
+    <TornEdge fill="var(--white)" />
+  </section>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="wrap intro" data-reveal>
+      <img class="intro-icon" src="/images/brand/icon.png" width="626" height="626" alt="" />
+      <div>
+        <h2>Injured At Work?</h2>
+        <hr class="rule" />
+        <p class="lede lede-caps">We’ll guide you on the path to <mark>compensation.</mark></p>
+        <p>
+          <strong>Pathfinder Injury Law</strong> is a Worker’s Compensation law firm nestled in the
+          outskirts of Richmond, Virginia, exclusively representing people who get injured in their
+          workplaces. Pathfinder Injury Law takes clients from all corners of the state of Virginia.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-dark" href="/about-us/">Learn About Our Firm</a>
+          <a class="btn btn-primary" href="#contact">Get Help Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All we do -->
+  <section class="section focus-band contour on-dark">
+    <div class="wrap">
+      <div class="section-head center" data-reveal>
+        <p class="caps">All We Do Is</p>
+        <h2>Workers’ Comp Law</h2>
+        <hr class="rule" />
+      </div>
+      <div class="tiles" data-stagger>
+        <a class="tile" href="/virginia-workers-comp-lawyer/">
+          <img src="/images/photos/tile-b.jpg" alt="" width="1400" height="886" loading="lazy" />
+          <h3>Workers’ Compensation</h3>
+        </a>
+        <a class="tile" href="/how-to-appeal-a-workers-comp-denial-in-virginia/">
+          <img src="/images/photos/tile-a.jpg" alt="" width="1400" height="1750" loading="lazy" />
+          <h3>Workers’ Comp Denials</h3>
+        </a>
+      </div>
+      <ul class="topic-grid" data-stagger>
+        {topics.map((t) => (
+          <li>
+            <a href={t.href}>
+              <span class="topic-circle"><TopicIcon name={t.icon} /></span>
+              <span class="topic-label">{t.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center" data-reveal>
+        <h2>Why Choose Us?</h2>
+        <hr class="rule" />
+      </div>
+      <div class="why" data-stagger>
+        <a class="person" href="/bryn-swartz/">
+          <img src="/images/photos/bryn.jpg" alt="" width="900" height="900" loading="lazy" />
+          <h3>Bryn Swartz</h3>
+          <p>Founder &amp; Attorney</p>
+        </a>
+        <div class="traits-wrap">
+          <svg class="traits-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M19 42l3-26h4l3 26z" /><path d="M20 28h8M20.8 22h6.4" /><rect x="20" y="10" width="8" height="6" rx="1" /><path d="M24 4v3M12 8l4 3M36 8l-4 3" /><path d="M15 42h18" />
+          </svg>
+          <hr class="rule" style="margin-inline: auto" />
+          <ul class="traits">
+            {traits.map((t) => <li>{t}</li>)}
+          </ul>
+        </div>
+        <a class="person" href="/mandy-truman/">
+          <img src="/images/photos/mandy.jpg" alt="" width="900" height="900" loading="lazy" />
+          <h3>Mandy Truman</h3>
+          <p>Firm Administrator</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section results contour on-dark">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2>Results For Our Clients</h2>
+        <hr class="rule" />
+      </div>
+      <div class="results-grid" data-stagger>
+        {results.map((r) => (
+          <article class="result">
+            <p class="amount" data-count={r.count}>{r.amount}</p>
+            <p>{r.text}</p>
+          </article>
+        ))}
+      </div>
+      <p class="disclaimer" data-reveal>
+        Amounts shown are gross, before attorney’s fees, costs, and liens. Every case is different. These results depended on facts unique to each case and do not
+        predict or guarantee the result in yours.
+      </p>
+      <p class="more-link"><a class="btn btn-primary" href="/results/">View More Case Results</a></p>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section-sage">
+    <div class="wrap review" data-reveal>
+      <img class="quote-mark" src="/images/quote.svg" width="46" height="34" alt="" />
+      <h2>What Our Clients Say</h2>
+      <hr class="rule" />
+      <p class="review-note">These comments are from past clients. Each case is different, and these comments do not promise or predict a result in yours.</p>
+      <blockquote>
+        <p>
+          Could not ask for a better group of people to work with! Very knowledgeable and on top of
+          your case. Kept me informed every step of the way and answered all of questions and
+          concerns did not feel like a number very personal touch.
+        </p>
+      </blockquote>
+      <cite>&ndash; R.A.</cite>
+      <a class="btn btn-dark" href="/reviews/">Read More Reviews</a>
+    </div>
+  </section>
+
+  <!-- Call to action with contact form -->
+  <ContactSection />
+</Base>
+

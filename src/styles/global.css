@@ -1,0 +1,2069 @@
+/* Pathfinder Injury Law: shared styles.
+   Colors are from the Brand Book (Color Palette page). The two sage
+   backgrounds are matched by eye to the Brand Book pages, not official values. */
+
+:root {
+  --forest: #294634; /* primary, Pantone 553 C */
+  --pine: #40683c; /* primary, Pantone 7743 C */
+  --moss: #638c1c; /* primary, Pantone 370 C */
+  --sun: #ffd040; /* secondary, Pantone 122 C */
+  --sky: #6fb1c8; /* secondary, Pantone 7458 C */
+  --amber: #d77900; /* secondary, Pantone 1385 C */
+  --wash: #a0b677; /* pale green tint the old site multiplied over its photos */
+  --sage: #d6e1d1;
+  --mist: #eaefe8;
+  --white: #ffffff;
+
+  /* The Brand Book font, Nexa, is a paid font, so it is not used on the site.
+     Figtree is a free font (SIL Open Font License), served from this site. */
+  --font-head: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Figtree Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Layout widths and side padding follow the old site: 15px phone gutter, 30px from 640px, 40px from 960px. */
+  --wrap: 75rem; /* 1200px content column, as on the old home page */
+  --wrap-wide: 82rem; /* 1312px: header, hero and article pages, as on the old site */
+  --gutter: 0.9375rem;
+  --radius: 0.75rem;
+  --radius-lg: 1.5rem;
+  --header-h: 5.25rem; /* height of the compact (solid) header on phones */
+  --shadow: 0 1rem 2.5rem rgba(41, 70, 52, 0.16);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--forest);
+  font-family: var(--font-body);
+  font-size: 1.0625rem; /* 17px, same as the old site */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.55em;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+.hero-tag {
+  text-wrap: balance;
+}
+/* Sizes follow the old site: section headings 36px on phones and 46px from 960px, h3 23-24px. */
+h1 {
+  font-size: 2.6rem;
+  letter-spacing: 0.06em;
+}
+h2 {
+  font-size: 2.23rem;
+}
+h3 {
+  font-size: 1.4375rem;
+}
+@media (min-width: 40rem) {
+  :root {
+    --gutter: 1.875rem;
+  }
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 60rem) {
+  :root {
+    --gutter: 2.5rem;
+  }
+  h1 {
+    font-size: 4.25rem;
+  }
+  h2 {
+    font-size: 2.86rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin: 0 0 1.25rem; /* 20px, as on the old site */
+}
+
+.wrap {
+  width: min(100% - 2 * var(--gutter), var(--wrap));
+  margin-inline: auto;
+}
+.header-bar.wrap,
+.hero .wrap,
+.page-hero .wrap,
+.page-body.wrap {
+  width: min(100% - 2 * var(--gutter), var(--wrap-wide));
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background: var(--sun);
+  color: var(--forest);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0.5rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--forest); /* the green ring, one rule for every link, button, field and menu item */
+  outline-offset: 3px;
+}
+/* On dark and green sections the green ring would vanish, so it turns white there (same width and offset).
+   Fields inside the white form card go back to green. */
+.on-dark :focus-visible,
+.contour :focus-visible,
+.site-footer :focus-visible,
+.cta :focus-visible {
+  outline-color: var(--white);
+}
+.form-card :focus-visible,
+.main-nav-panel :focus-visible {
+  outline-color: var(--forest);
+}
+/* The Turnstile check box is a third-party frame, so its holder shows the ring when something inside has focus. */
+.ts-widget:focus-within {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+/* Brand Book emphasis: ALL CAPS and bold. */
+.caps {
+  font-family: var(--font-head);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.85rem;
+}
+
+/* Short moss rule used under headings throughout the Brand Book. */
+.rule {
+  display: block;
+  width: 4.5rem;
+  height: 0.3rem;
+  background: var(--moss);
+  border: 0;
+  border-radius: 99px;
+  margin: 0 0 1.4rem;
+}
+.on-dark .rule {
+  background: var(--sun);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 600;
+  letter-spacing: 0.2em; /* 3px at 15px, as on the old site; title case is kept */
+  font-size: 0.9375rem;
+  text-decoration: none;
+  padding: 0 1.5rem;
+  min-height: 3.4375rem; /* 55px, as on the old site (also keeps a 44px+ tap target) */
+  border-radius: 999px;
+  border: 2px solid transparent;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease), box-shadow 0.25s var(--ease),
+    color 0.25s var(--ease);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.6rem 1.2rem rgba(41, 70, 52, 0.22);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn-primary {
+  background: var(--sun);
+  color: var(--forest);
+}
+.btn-primary:hover {
+  background: #ffdc70;
+}
+.btn-dark {
+  background: var(--forest);
+  color: var(--white);
+}
+.btn-dark:hover {
+  background: var(--pine);
+}
+.btn-outline {
+  border-color: currentColor;
+  color: inherit;
+}
+.btn-outline:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--white);
+}
+.on-dark .btn-outline:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--forest);
+}
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+/* On phones the old site's buttons run the full width of the column. */
+@media (max-width: 39.99rem) {
+  .btn-row .btn {
+    width: 100%;
+  }
+}
+
+.on-dark {
+  color: var(--white);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* The logo hangs from the top edge on a frosted, slightly see-through card, as on the old site. */
+.brand {
+  display: block;
+  align-self: flex-start;
+  background: transparent; /* no card behind the logo, as Bryn asked (all pages) */
+  padding: 1.1rem 0 1rem;
+  transition: padding 0.35s var(--ease);
+}
+.brand img {
+  width: 12.5rem; /* 200px on phones; the Brand Book minimum is 75px wide */
+  height: auto;
+  transition: width 0.35s var(--ease);
+}
+
+/* Menu button on phones and tablets: a plain three-line icon (the name "Menu" is its aria-label).
+   The 3rem square is a 48px tap target. */
+.nav-toggle {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-right: -0.5rem;
+  border-radius: 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.3s;
+}
+.nav-toggle::-webkit-details-marker {
+  display: none;
+}
+.nav-toggle svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  filter: drop-shadow(0 1px 6px rgba(10, 25, 15, 0.6));
+}
+.nav-toggle .icon-close {
+  display: none;
+}
+.nav-mobile[open] .nav-toggle .icon-open {
+  display: none;
+}
+.nav-mobile[open] .nav-toggle .icon-close {
+  display: block;
+}
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem 0;
+  color: var(--forest);
+}
+.main-nav .sub {
+  padding-left: 1rem;
+  font-size: 0.98rem;
+}
+.main-nav-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  max-height: calc(100svh - var(--header-h));
+  overflow: auto;
+  padding: 0.5rem var(--gutter) 1.25rem;
+  background: var(--white);
+  box-shadow: 0 1rem 1.5rem rgba(41, 70, 52, 0.18);
+}
+.nav-mobile {
+  position: static;
+}
+
+/* Over a photo, a dark fade behind the top of the header keeps the menu text readable.
+   It stops showing once the header turns solid. */
+body.has-overlay .site-header:not(.is-solid) {
+  isolation: isolate;
+}
+body.has-overlay .site-header:not(.is-solid)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 9rem;
+  background: linear-gradient(180deg, rgba(14, 32, 22, 0.74), rgba(14, 32, 22, 0));
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Home page: the pale sky behind the header needs dark menu text and no dark fade. */
+body.hero-light.has-overlay .site-header:not(.is-solid)::before {
+  content: none;
+}
+body.hero-light .site-header:not(.is-solid) .nav-toggle {
+  color: var(--forest);
+}
+body.hero-light .site-header:not(.is-solid) .nav-toggle svg {
+  filter: none;
+}
+
+/* Solid bar: after scrolling, and always on pages without a photo behind the header. */
+.site-header.is-solid,
+body:not(.has-overlay) .site-header {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0.25rem 1.5rem rgba(41, 70, 52, 0.12);
+}
+.site-header.is-solid .brand,
+body:not(.has-overlay) .site-header .brand {
+  align-self: center;
+  box-shadow: none;
+  padding-block: 0.55rem 0.65rem;
+  border-radius: 0;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.site-header.is-solid .brand img,
+body:not(.has-overlay) .site-header .brand img {
+  width: 10.5rem;
+}
+.site-header.is-solid .nav-toggle,
+body:not(.has-overlay) .site-header .nav-toggle {
+  color: var(--forest);
+}
+.site-header.is-solid .nav-toggle svg,
+body:not(.has-overlay) .site-header .nav-toggle svg {
+  filter: none;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+/* Full menu bar from 60rem (960px), the same width as the old site; below that the Menu button is used.
+   The old menu had 5 items; this one has 9 plus the phone number, so the type is smaller to fit. */
+@media (min-width: 60rem) {
+  :root {
+    --header-h: 6.25rem;
+  }
+  .nav-mobile {
+    display: none;
+  }
+  .brand {
+    padding: 1.1rem 0 1rem;
+  }
+  .brand img {
+    width: 12.5rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 11.5rem;
+  }
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    flex: 1; /* takes the space beside the logo card ... */
+    margin-left: 0;
+  }
+  .desktop-nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-between; /* ... and spreads the menu items across it */
+    gap: 0.9rem;
+    align-items: center;
+  }
+  .desktop-nav a {
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 12px rgba(10, 25, 15, 0.55);
+    position: relative;
+    padding-block: 0.7rem; /* keeps each link a 44px-tall target */
+    transition: color 0.25s;
+  }
+  .desktop-nav > ul > li > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.2rem;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--sun);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease);
+  }
+  .desktop-nav > ul > li > a:hover::after,
+  .desktop-nav > ul > li:focus-within > a::after {
+    transform: scaleX(1);
+  }
+  .desktop-nav .header-phone {
+    font-weight: 800;
+    background: var(--sun);
+    color: var(--forest);
+    text-shadow: none;
+    padding: 0.7rem 0.9rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  body.hero-light .site-header .desktop-nav a:not(.header-phone) {
+    color: var(--forest);
+    text-shadow: none;
+  }
+  .site-header.is-solid .desktop-nav a:not(.header-phone),
+  body:not(.has-overlay) .site-header .desktop-nav a:not(.header-phone) {
+    color: var(--forest);
+    text-shadow: none;
+  }
+  .desktop-nav .has-sub {
+    position: relative;
+  }
+  .desktop-nav .sub {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(8px);
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    min-width: 16rem;
+    margin: 0;
+    list-style: none;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 0.6rem 1.1rem;
+    box-shadow: var(--shadow);
+    font-size: 0.98rem;
+    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0.25s;
+  }
+  .desktop-nav .has-sub:hover .sub,
+  .desktop-nav .has-sub:focus-within .sub {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+  .desktop-nav .sub a {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--forest);
+    text-shadow: none;
+    font-weight: 500;
+    font-size: 0.98rem;
+  }
+  .desktop-nav .sub a:hover {
+    color: var(--pine);
+  }
+}
+@media (min-width: 60rem) and (max-width: 67.99rem) {
+  /* Tightest range (960 to 1087px): smaller logo card, 13px type and tighter gaps so all nine items
+     and the phone number fit on one line. */
+
+  .brand img {
+    width: 9.5rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 9.5rem;
+  }
+  .desktop-nav {
+    gap: 0.4rem;
+  }
+  .desktop-nav > ul {
+    gap: 0.5rem;
+  }
+  .desktop-nav a {
+    font-size: 0.8125rem;
+    letter-spacing: 0.01em;
+  }
+  .desktop-nav .header-phone {
+    padding-inline: 0.7rem;
+  }
+}
+@media (min-width: 68rem) {
+  .brand img {
+    width: 12.5rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 11rem;
+  }
+}
+@media (min-width: 72rem) {
+  .brand img {
+    width: 14rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 12rem;
+  }
+  .desktop-nav {
+    gap: 0.75rem;
+  }
+  .desktop-nav > ul {
+    gap: 0.8rem;
+  }
+  .desktop-nav a {
+    font-size: 0.9375rem;
+  }
+}
+@media (min-width: 76rem) {
+  .desktop-nav > ul {
+    gap: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .desktop-nav {
+    margin-left: 1.5rem;
+  }
+  .brand img {
+    width: 15rem;
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 13rem;
+  }
+  .desktop-nav a {
+    font-size: 1rem;
+  }
+}
+/* From 1440px up the logo card and menu type reach the old site's size (logo 280px). */
+@media (min-width: 90rem) {
+
+  .brand img {
+    width: 15.5rem; /* a little smaller than the old site's 280px so the menu can breathe */
+  }
+  .site-header.is-solid .brand img,
+  body:not(.has-overlay) .site-header .brand img {
+    width: 14rem;
+  }
+  .desktop-nav {
+    gap: 1rem;
+  }
+  .desktop-nav > ul {
+    gap: 1.5rem;
+  }
+  .desktop-nav a {
+    font-size: 1rem;
+  }
+}
+
+:root {
+  --logo-w: 13.5rem;
+}
+@media (min-width: 60rem) and (max-width: 67.99rem) {
+  :root { --logo-w: 11rem; }
+}
+@media (min-width: 72rem) {
+  :root { --logo-w: 15.5rem; }
+}
+@media (min-width: 80rem) {
+  :root { --logo-w: 17rem; }
+}
+@media (min-width: 90rem) {
+  :root { --logo-w: 19.5rem; }
+}
+/* Logo with no card (all pages), a little larger than before, growing with the screen. */
+.site-header:not(.is-solid) .brand img {
+  width: 13.5rem;
+}
+@media (min-width: 60rem) and (max-width: 67.99rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 11rem;
+  }
+}
+@media (min-width: 68rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 13.5rem;
+  }
+}
+@media (min-width: 72rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 15.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 17rem;
+  }
+}
+@media (min-width: 90rem) {
+  .site-header:not(.is-solid) .brand img {
+    width: 19.5rem;
+  }
+}
+
+/* Pages with no photo behind the header start below it. */
+body:not(.has-overlay) main {
+  padding-top: var(--header-h);
+}
+
+/* ---------- Hero ---------- */
+/* Fraunces italic (SIL Open Font License), served from this site; no outside font requests.
+   Only the Latin italic is used, for "Let's go." */
+@font-face {
+  font-family: "Fraunces Italic";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-wght-italic.woff2") format("woff2");
+}
+:root {
+  --font-accent: "Fraunces Italic", Georgia, "Times New Roman", serif;
+}
+
+/* The photo (a hiker seen over his shoulder, with the trail and crest behind him) fills the hero on
+   screens 1000px wide and up, pinned bottom right so the hiker stays in frame. On narrower screens
+   the photo sits along the bottom at full width and the sky above it is a CSS gradient sampled from
+   the photo's top edge, feathered in so there is no seam; that leaves room for the words above the
+   hiker. A light green wash behind the words, strongest on the left and fading out toward the
+   hiker, keeps the green words readable where they reach the hills. */
+.hero {
+  position: relative;
+  color: var(--forest);
+  text-align: left;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(45rem, 56vw, 62rem); /* 720px, growing with the screen so the whole photo shows */
+  background: linear-gradient(to right, #c4d6e6, #b7d0e4 25%, #b2cce5 50%, #abc7e4 75%, #a1c0dd);
+  /* Spacing: the same visible gap above and below the rule (--g), built from the kicker and headline sizes. */
+  --k: clamp(0.8125rem, 1.1vw, 1.125rem);
+  --l1: clamp(2.75rem, 8.1vw, 8.1rem);
+  --g: clamp(1.1rem, 1.7vw, 1.7rem);
+}
+.hero-pic {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+}
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 100%;
+  max-width: none;
+  display: block;
+}
+@media (min-width: 62.5rem) {
+  .hero {
+    background: linear-gradient(to right, #ebf3f6, #dae5ee 25%, #bfd4e5 50%, #b0cbe4 75%, #a1c0dd);
+  }
+}
+@media (max-width: 62.49rem) {
+  .hero-photo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    object-fit: initial;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
+  }
+}
+@media (max-width: 47.99rem) {
+  .hero {
+    min-height: clamp(37rem, calc(100svh - 7rem), 42rem); /* ends above the floating bottom bar */
+  }
+}
+/* Wash: light green, from the brand greens, behind the words (left) fading out toward the hiker. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 85% 120% at 0% 38%, rgba(64, 104, 60, 0.3) 0%, rgba(64, 104, 60, 0.22) 45%, rgba(64, 104, 60, 0) 100%),
+    linear-gradient(180deg, rgba(64, 104, 60, 0.02) 0%, rgba(64, 104, 60, 0.06) 38%, rgba(64, 104, 60, 0.18) 62%, rgba(64, 104, 60, 0.18) 100%); /* plus a light green wash over the photo (lightest behind the words), to tone it down a little */
+  pointer-events: none;
+}
+.hero .wrap {
+  padding-block: 7.5rem 7rem; /* clears the 97px logo card on phones */
+}
+@media (min-width: 48rem) {
+  .hero .wrap {
+    padding-block: calc(var(--header-h) + clamp(1.5rem, 4.6vw, 5.5rem)) 7rem;
+  }
+  .hero .wrap > * {
+    max-width: 74%; /* the words stay clear of the hiker's head by their size, not by wrapping */
+  }
+}
+/* The page heading, set small: "Virginia Workers' Comp Lawyer". */
+.hero-kicker {
+  margin: 0 0 max(0.2rem, calc(var(--g) - 0.3 * var(--k)));
+  font-family: var(--font-head);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: var(--k);
+  line-height: 1.3;
+  color: var(--forest);
+  text-wrap: wrap;
+}
+.hero-l1,
+.hero-l2 {
+  margin: 0;
+}
+@media (min-width: 48rem) {
+  .hero-l1,
+  .hero-l2 {
+    white-space: nowrap;
+  }
+}
+.hero .rule {
+  margin: 0 0 max(0.25rem, calc(var(--g) - 0.13 * var(--l1)));
+}
+.hero-l1 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: var(--l1);
+  line-height: 1;
+  letter-spacing: -0.012em;
+  color: var(--forest);
+}
+.hero-l2 {
+  margin-top: 0.04em;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(3rem, 8.9vw, 8.9rem);
+  line-height: 1.04;
+  color: var(--sun);
+  /* A dark green edge plus a soft glow keep the yellow readable over the pale sky. */
+  -webkit-text-stroke: 0.035em var(--forest);
+  paint-order: stroke fill;
+  text-shadow: 0 0.03em 0.18em rgba(20, 35, 25, 0.35);
+}
+.hero .btn-row {
+  margin-top: clamp(1.1rem, 2.6vw, 2.25rem);
+}
+.btn-hero {
+  gap: 0.75em;
+  padding: 0.5em 0.55em 0.5em 1.4em;
+  min-height: 3.5rem;
+  background: var(--sun);
+  color: var(--forest);
+  border: 2px solid var(--forest);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(0.875rem, 1.6vw, 1.5rem);
+  white-space: nowrap;
+}
+.btn-hero:hover {
+  background: #ffdc70;
+}
+.btn-hero:focus-visible {
+  outline-color: var(--forest); /* amber would be hard to see against the pale sky */
+}
+.btn-arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--sun);
+  flex: none;
+}
+.btn-arrow svg {
+  width: 55%;
+  height: 55%;
+}
+@media (max-width: 39.99rem) {
+  .btn-hero {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.torn {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3.75rem;
+  background: var(--torn-fill, var(--white));
+  -webkit-mask: url("/images/edge.svg") repeat-x left bottom / auto 100%;
+  mask: url("/images/edge.svg") repeat-x left bottom / auto 100%;
+}
+
+/* Hero text rises in one line at a time. */
+.hero .wrap > * {
+  animation: rise 0.9s var(--ease) both;
+}
+.hero .wrap > :nth-child(2) {
+  animation-delay: 0.12s;
+}
+.hero .wrap > :nth-child(3) {
+  animation-delay: 0.28s;
+}
+.hero .wrap > :nth-child(4) {
+  animation-delay: 0.44s;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+}
+@keyframes drift {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* ---------- Generic sections ---------- */
+.section {
+  padding-block: 2.5rem; /* 40px on phones, 70px from 960px, as on the old site */
+}
+@media (min-width: 60rem) {
+  .section {
+    padding-block: 4.375rem;
+  }
+}
+.section-sage {
+  background: var(--sage);
+}
+.section-head {
+  margin-bottom: 2.25rem;
+}
+.section-head.center {
+  text-align: center;
+}
+.section-head.center .rule {
+  margin-inline: auto;
+}
+
+/* Topographic texture behind dark sections (the old site's signature look) */
+.contour {
+  position: relative;
+  isolation: isolate;
+  background: var(--forest);
+}
+.contour::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/contour-map.svg") center / cover no-repeat;
+  opacity: 0.07;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Intro */
+.intro {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+.intro-icon {
+  width: 8rem;
+  justify-self: center;
+  filter: drop-shadow(0 1rem 1.25rem rgba(41, 70, 52, 0.18));
+}
+.intro h2 {
+  margin-bottom: 0.2em;
+}
+/* The old home page sets its introduction in 21px type. */
+.intro p:not(.lede) {
+  font-size: 1.3125rem;
+}
+.lede {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  max-width: 40rem;
+}
+.lede-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+mark {
+  background: linear-gradient(transparent 55%, rgba(255, 208, 64, 0.9) 55%);
+  color: inherit;
+  padding: 0 0.15em;
+}
+@media (min-width: 52rem) {
+  .intro {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+  }
+  .intro-icon {
+    width: min(100%, 22rem);
+    order: 2;
+  }
+}
+
+/* "All we do" band and tiles */
+.focus-band {
+  color: var(--white);
+}
+.tiles {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 46rem) {
+  .tiles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 20rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  isolation: isolate;
+  text-decoration: none;
+  color: var(--white);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.25);
+}
+.tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 0.8s var(--ease);
+}
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--wash);
+  mix-blend-mode: multiply;
+  opacity: 0.95;
+  z-index: -1;
+  transition: opacity 0.5s var(--ease);
+}
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 42, 30, 0.3);
+  z-index: -1;
+}
+.tile:hover img {
+  transform: scale(1.07);
+}
+.tile:hover::before {
+  opacity: 0.7;
+}
+.tile h3 {
+  margin: 0;
+  padding: 1.5rem;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+.tile h3::after {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 0.3rem;
+  border-radius: 99px;
+  background: var(--sun);
+  margin: 0.9rem auto 0;
+  transition: width 0.4s var(--ease);
+}
+.tile:hover h3::after {
+  width: 6rem;
+}
+
+/* Case-type circles */
+.topic-grid {
+  list-style: none;
+  margin: 3.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem 1rem;
+}
+@media (min-width: 46rem) {
+  .topic-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.topic-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+.topic-circle {
+  display: grid;
+  place-items: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: var(--sun);
+  color: var(--forest);
+  box-shadow: 0 0 0 0.5rem rgba(255, 208, 64, 0.22);
+  transition: transform 0.35s var(--ease), background 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.topic-icon {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+.topic-label {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+.topic-grid a:hover .topic-circle {
+  transform: translateY(-6px) scale(1.04);
+  background: var(--white);
+  box-shadow: 0 0 0 0.8rem rgba(255, 255, 255, 0.18);
+}
+
+/* Why choose us */
+.why {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 62rem) {
+  .why {
+    grid-template-columns: 1fr 0.9fr 1fr;
+    align-items: center;
+  }
+}
+.person {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.person img {
+  width: min(100%, 18rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  border: 6px solid var(--forest);
+  box-shadow: var(--shadow);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.person:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 1.4rem 3rem rgba(41, 70, 52, 0.28);
+}
+.person h3 {
+  display: inline;
+  font-size: 1.35rem;
+  background: linear-gradient(transparent 62%, rgba(255, 208, 64, 0.9) 62%);
+  padding: 0 0.2em;
+}
+.person p {
+  margin: 0.6rem 0 0;
+}
+.traits-wrap {
+  text-align: center;
+}
+.traits-icon {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: 0 auto 0.5rem;
+  color: var(--forest);
+}
+.traits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.35rem;
+  line-height: 1.9;
+}
+
+/* Results */
+.results {
+  color: var(--white);
+}
+.results-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 46rem) {
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 62rem) {
+  .results-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.result {
+  background: var(--white);
+  color: var(--forest);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  border-top: 0.4rem solid var(--sun);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.22);
+  transition: transform 0.35s var(--ease);
+}
+.result:hover {
+  transform: translateY(-6px);
+}
+.result .amount {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+  line-height: 1.05;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.result .gross {
+  display: block;
+  margin: 0.4rem 0 1rem;
+  color: var(--pine);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+.result p:last-child {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.disclaimer {
+  margin-top: 1.75rem;
+  font-size: 0.98rem;
+  max-width: 50rem;
+  opacity: 0.92;
+}
+.more-link {
+  margin: 1.75rem 0 0;
+}
+
+/* Reviews */
+.review {
+  max-width: 50rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.quote-mark {
+  margin: 0 auto 1rem;
+  width: 3.25rem;
+  height: auto;
+}
+.review .rule {
+  margin-inline: auto;
+}
+.review blockquote {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  line-height: 1.55;
+  font-weight: 500;
+}
+.review .review-note {
+  font-size: 0.95rem;
+  margin: 0 auto 1.5rem;
+  max-width: 38rem;
+}
+.review cite {
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* Call to action with the contact form */
+.cta {
+  color: var(--white);
+}
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.12;
+}
+.cta-grid > * {
+  min-width: 0; /* lets the form shrink on 320px screens instead of widening the page */
+}
+.cta-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 62rem) {
+  .cta-grid {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 4.5rem;
+  }
+}
+.cta-points {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  color: var(--sun);
+}
+.cta h2 {
+  margin-bottom: 0.3em;
+}
+.cta .lede {
+  margin-bottom: 1.5rem;
+}
+.cta-phone {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--sun);
+}
+
+.form-card {
+  background: var(--white);
+  color: var(--forest);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.3);
+}
+.form-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+}
+.field {
+  margin-bottom: 1rem;
+}
+.field label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 1.05rem;
+  color: var(--forest);
+  background: var(--mist);
+  border: 2px solid #7a8c7e; /* 3:1 against the white page, so the field edge is visible */
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.field textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+.field input:focus,
+.field textarea:focus {
+  background: var(--white);
+  border-color: var(--moss);
+  box-shadow: 0 0 0 4px rgba(99, 140, 28, 0.2);
+}
+.field-pair {
+  display: grid;
+  gap: 0 1rem;
+}
+@media (min-width: 40rem) {
+  .field-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.field-hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  margin: 0.25rem 0 1.25rem;
+  padding: 0.9rem 1rem;
+  background: var(--mist);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.consent input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  accent-color: var(--forest);
+}
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.ts-widget {
+  max-width: 100%;
+  overflow: hidden;
+}
+.ts-widget:not(:empty) {
+  margin: 0 0 1rem;
+}
+.form-card .btn {
+  width: 100%;
+  padding-block: 1.1rem;
+  border: 0;
+}
+.form-status {
+  margin: 1rem 0 0;
+  font-weight: 600;
+  min-height: 1.5em;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  color: var(--white);
+  padding-block: 2.5rem calc(5.5rem + env(safe-area-inset-bottom)); /* bottom room for the floating phone bar */
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.footer-grid {
+  display: grid;
+  gap: 2.25rem;
+}
+@media (min-width: 46rem) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 62rem) {
+  .footer-grid {
+    grid-template-columns: 1.1fr 1.3fr 1fr 0.8fr 0.9fr;
+  }
+}
+.site-footer h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--sun);
+  margin-bottom: 0.9rem;
+}
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer address {
+  font-style: normal;
+  margin-bottom: 0.9rem;
+}
+.site-footer .appt {
+  font-size: 0.92rem;
+  margin: 0;
+  opacity: 0.9;
+}
+.site-footer a {
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.footer-logo {
+  align-self: start;
+  background: var(--mist);
+  border-radius: var(--radius);
+  padding: 1rem;
+  max-width: 11rem;
+}
+.footer-logo img {
+  width: 100%;
+}
+.legal-note {
+  margin: 2.75rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  max-width: 60rem;
+}
+.legal-note + .copyright {
+  margin-top: 1.25rem;
+  border-top: 0;
+  padding-top: 0;
+}
+.copyright {
+  margin: 2.75rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 0.92rem;
+}
+
+/* Phone-only Call / Message bar: a small floating pill, 48px tall, with a 12px margin all round
+   (plus the iPhone home-bar inset). Without JavaScript it simply stays put. With JavaScript it slides
+   away while scrolling down, comes back on scrolling up, and steps aside over the contact form and
+   footer. Hidden from 1024px up. Colours are the site's yellow and green at 94 percent, so text
+   contrast stays above 4.5:1 over any page content. */
+.call-bar {
+  position: fixed;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 26rem;
+  margin-inline: auto;
+  z-index: 40;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 0.35rem 1.1rem rgba(20, 40, 28, 0.28);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.call-bar.is-hidden {
+  transform: translateY(calc(100% + 1.5rem + env(safe-area-inset-bottom)));
+  opacity: 0;
+  pointer-events: none;
+}
+/* Keyboard focus always brings the bar back into view. */
+.call-bar.is-hidden:focus-within {
+  transform: none;
+  opacity: 1;
+  pointer-events: auto;
+}
+.call-bar a {
+  display: grid;
+  place-items: center;
+  min-height: 3rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-head);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8125rem;
+  padding: 0 0.5rem;
+}
+.call-bar a:first-child {
+  background: rgba(255, 208, 64, 0.94);
+  color: var(--forest);
+}
+.call-bar a:last-child {
+  background: rgba(64, 104, 60, 0.94);
+  color: var(--white);
+}
+.call-bar a:focus-visible {
+  outline-offset: -6px; /* inside the pill, so the rounded edge does not clip it */
+}
+.call-bar a:first-child:focus-visible {
+  outline-color: var(--forest);
+}
+.call-bar a:last-child:focus-visible {
+  outline-color: var(--white);
+}
+@media (prefers-reduced-motion: reduce) {
+  .call-bar {
+    transition: none;
+  }
+}
+@media (min-width: 64rem) {
+  .call-bar {
+    display: none;
+  }
+}
+@media (min-width: 60rem) {
+  .site-footer {
+    padding-top: 4.375rem;
+  }
+}
+@media (min-width: 64rem) {
+  .site-footer {
+    padding-bottom: 3rem;
+  }
+}
+
+/* ---------- Inner pages ---------- */
+.page-hero {
+  position: relative;
+  color: var(--forest);
+  background: #f3f6f1;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 20rem;
+  display: grid;
+  align-items: end;
+}
+.page-hero .hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  z-index: -2;
+  animation: none;
+}
+.page-hero .hero-photo {
+  opacity: 0.32; /* the photo stays faintly visible under the pale wash */
+}
+.page-hero::before {
+  /* Pale wash (white with a little brand pine green), lightest at the top where the logo and menu sit. */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.6) 100%),
+    rgba(64, 104, 60, 0.1);
+  pointer-events: none;
+}
+.page-hero::after {
+  content: none;
+}
+.page-hero .wrap {
+  padding-block: calc(var(--header-h) + 2.5rem) 5rem;
+  color: var(--forest);
+  animation: rise 0.9s var(--ease) both;
+}
+/* Page titles: 28.7px on phones and 42px from 960px, as on the old site. */
+.page-hero h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+  margin: 0;
+  max-width: 28ch;
+}
+@media (min-width: 60rem) {
+  .page-hero h1 {
+    font-size: 2.625rem;
+  }
+}
+.crumbs ol {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.crumbs li + li::before {
+  content: "/";
+  margin-right: 0.6rem;
+  opacity: 0.7;
+}
+.crumbs a {
+  text-decoration: none;
+  opacity: 0.9;
+}
+.crumbs a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.page-body {
+  display: grid;
+  gap: 3rem;
+  padding-block: 2.5rem;
+}
+@media (min-width: 60rem) {
+  .page-body {
+    padding-block: 4.375rem;
+  }
+}
+@media (min-width: 64rem) {
+  .page-body {
+    grid-template-columns: minmax(0, 1fr) 24.375rem; /* old site: 850px text column, 390px side column */
+    gap: 4.5rem;
+    align-items: start;
+  }
+}
+.side {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 64rem) {
+  .side {
+    position: sticky;
+    top: calc(var(--header-h) + 1rem);
+  }
+}
+.side-card {
+  background: var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.side-card h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.9rem;
+}
+.side-call {
+  background: var(--forest);
+  color: var(--white);
+  text-align: center;
+}
+.side-call h2 {
+  color: var(--sun);
+}
+.side-call .cta-phone {
+  display: block;
+  margin-bottom: 1rem;
+}
+.toc {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.98rem;
+}
+.toc a {
+  display: block;
+  text-decoration: none;
+  padding: 0.4rem 0 0.4rem 0.9rem;
+  border-left: 3px solid transparent;
+  line-height: 1.35;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.toc a:hover {
+  border-left-color: var(--moss);
+  color: var(--pine);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Long-form text */
+.prose {
+  max-width: 53.125rem; /* 850px, as on the old site */
+}
+.prose > :first-child {
+  margin-top: 0;
+}
+.prose h2 {
+  font-size: 1.65rem; /* 26.5px on phones, 30px from 960px, as on the old site */
+  line-height: 1.3;
+  margin: 2.5rem 0 1.25rem;
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+.prose h2::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 0.28rem;
+  border-radius: 99px;
+  background: var(--moss);
+  margin-top: 0.7rem;
+}
+.prose h2 {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+@media (min-width: 60rem) {
+  .prose h2 {
+    font-size: 1.875rem;
+  }
+}
+.prose h3 {
+  font-size: 1.4375rem;
+  line-height: 1.5;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--pine);
+}
+.prose p,
+.prose li {
+  line-height: 1.5;
+}
+.prose a {
+  color: var(--pine);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: rgba(99, 140, 28, 0.55);
+}
+.prose a:hover {
+  text-decoration-color: var(--moss);
+}
+/* Buttons inside prose keep their own text color (the .prose a rule above would
+   turn sun-yellow button text pine, which fails contrast). */
+.prose .btn-primary {
+  color: var(--forest);
+}
+.prose .btn-dark {
+  color: var(--white);
+}
+.prose ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: grid;
+  gap: 0.55rem;
+}
+.prose ul li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+.prose ul li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.62em;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--moss);
+}
+.prose .lead {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.prose .topic-grid {
+  margin: 1.75rem 0 2.25rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.prose .topic-grid li {
+  padding-left: 0;
+}
+.prose .topic-grid li::before {
+  display: none;
+}
+@media (min-width: 40rem) {
+  .prose .topic-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem 0.5rem;
+  }
+}
+.prose .topic-circle {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.prose .topic-icon {
+  width: 2.9rem;
+  height: 2.9rem;
+}
+.prose .topic-label {
+  font-size: 0.98rem;
+}
+.prose .topic-grid a:hover .topic-circle {
+  background: var(--forest);
+  color: var(--sun);
+}
+
+/* The four disability types as cards */
+.type-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 1.75rem;
+}
+@media (min-width: 40rem) {
+  .type-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.type-card {
+  background: var(--mist);
+  border-radius: var(--radius);
+  border-top: 0.3rem solid var(--moss);
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+.type-card h4 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+.type-card h4 abbr {
+  display: inline-block;
+  background: var(--forest);
+  color: var(--sun);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 0.15rem 0.55rem;
+  border-radius: 99px;
+  margin-right: 0.5rem;
+  vertical-align: 0.1em;
+}
+.type-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pull {
+  background: var(--sage);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  margin: 2.5rem 0;
+}
+.pull h2 {
+  margin-top: 0;
+}
+.pull > :last-child {
+  margin-bottom: 0;
+}
+
+/* Questions that open and close */
+.faq {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.faq details {
+  background: var(--mist);
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+.faq details[open] {
+  background: var(--sage);
+}
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.1rem 3.25rem 1.1rem 1.35rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  position: relative;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--sun);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: transform 0.25s var(--ease);
+}
+.faq details[open] summary::after {
+  content: "\2212";
+}
+.faq .answer {
+  padding: 0 1.35rem 1.1rem;
+}
+.faq .answer p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Motion ---------- */
+/* Sections fade up as they scroll into view. Without script, or with reduced
+   motion, everything just shows. Children of a group arrive one after another. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(1.75rem);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.js [data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+.js [data-stagger] > * {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.js [data-stagger].in > * {
+  opacity: 1;
+  transform: none;
+}
+.js [data-stagger].in > :nth-child(2) {
+  transition-delay: 0.1s;
+}
+.js [data-stagger].in > :nth-child(3) {
+  transition-delay: 0.2s;
+}
+.js [data-stagger].in > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+.js [data-stagger].in > :nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .js [data-reveal],
+  .js [data-stagger] > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Contact page: lockup banner, plain form, divider ---------- */
+.page-hero-lockup {
+  min-height: 0;
+}
+.page-hero-lockup .wrap {
+  padding-block: calc(var(--header-h) + clamp(2.5rem, 5vw, 4.5rem)) clamp(6.5rem, 10vw, 9.5rem);
+}
+/* The page heading "Contact Us" stays the h1 for search engines and screen readers; the big lockup is the visible headline. */
+.page-hero-lockup h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.lockup .hero-l1 {
+  font-size: clamp(3.75rem, 12vw, 9.75rem);
+  margin: 0;
+}
+.lockup .hero-l2 {
+  font-size: clamp(4rem, 13vw, 10.5rem);
+  margin: 0.04em 0 0;
+  padding-bottom: 0.14em;
+  text-shadow: none;
+}
+@media (min-width: 48rem) {
+  .page-hero-lockup .wrap > * {
+    max-width: none;
+  }
+}
+.cta-plain {
+  background: var(--white);
+  padding-block: 0 clamp(3rem, 6vw, 5rem);
+}
+.cta-plain-wrap {
+  width: min(100% - 2 * var(--gutter), 72rem);
+}
+.cta-plain .form-card {
+  background: linear-gradient(rgba(64, 104, 60, 0.05), rgba(64, 104, 60, 0.05)), var(--white);
+  border: 1px solid rgba(64, 104, 60, 0.2);
+  box-shadow: 0 0.75rem 2rem rgba(41, 70, 52, 0.07);
+  padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.5rem, 5vw, 3.5rem);
+}
+.cta-plain .form-card h3 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 1.5rem;
+}
+/* Name, Email and Phone side by side on wide screens; everything else full width. */
+@media (min-width: 52rem) {
+  .cta-plain .contact-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 1.25rem;
+  }
+  .cta-plain .field-pair {
+    display: contents;
+  }
+  .cta-plain .contact-form > :not(.field):not(.field-pair):not(.hp),
+  .cta-plain .contact-form > .field:nth-of-type(n + 2):not(:nth-child(1)) {
+    grid-column: 1 / -1;
+  }
+  .cta-plain .contact-form > .field:last-of-type {
+    grid-column: 1 / -1;
+  }
+}
+.cta-plain .btn-primary {
+  width: 100%;
+}
+/* Turnstile: no empty gap while its box is invisible; the space returns if a challenge frame appears. */
+.cta-plain .ts-widget:not(:has(iframe)) {
+  margin: 0;
+}
+.cta-plain .ts-widget > div:not(:has(iframe)) {
+  display: none;
+}
+.contact-divider {
+  height: clamp(2.5rem, 5vw, 4rem); /* uses the footer's contour pattern (.contour) */
+}

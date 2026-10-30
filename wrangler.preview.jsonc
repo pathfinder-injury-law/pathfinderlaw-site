@@ -8,9 +8,16 @@
   // Previews are reached at *.workers.dev addresses (behind Cloudflare Access).
   "workers_dev": true,
   "preview_urls": true,
+  // The form endpoint runs in preview mode: it checks the input exactly as the
+  // live one does, then sends and stores nothing. No database, no email key,
+  // no cron triggers, no Google access in this account.
+  "main": "src/worker/index.ts",
+  "vars": { "PREVIEW_MODE": "1" },
   // No account_id: Cloudflare's build supplies the Previews account.
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
   }
 }

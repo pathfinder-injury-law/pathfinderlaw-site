@@ -1,0 +1,36 @@
+---
+import InfoPage from '../../components/InfoPage.astro';
+import { site } from '../../data/site';
+
+// Clio's public client sign-in address, from Clio's own help article "Set Up Clio for Clients".
+// It asks only for an email address and then sends a passwordless sign-in link.
+// Confirmed in Clio on Oct 28; the firm has no separate branded portal address.
+const clioPortalUrl = 'https://clients.clio.com/login';
+
+const title = 'Client Portal - Pathfinder Injury Law';
+const description =
+  'Client portal for current clients of Pathfinder Injury Law.';
+---
+<InfoPage title={title} description={description} path="/client-portal/" h1="Client Portal" showContact={false}>
+  <p class="lead">Current clients can sign in to the firm’s client portal.</p>
+  {
+    clioPortalUrl ? (
+      <p><a class="btn btn-primary" href={clioPortalUrl} rel="noopener">Sign In To The Client Portal</a></p>
+    ) : (
+      <p class="portal-note">
+        <strong>Placeholder:</strong> the client portal link has not been added yet. Until it is,
+        please call us at <a href={site.phoneHref}>{site.phoneDisplay}</a>.
+      </p>
+    )
+  }
+  <p>Not a client yet? Please <a href="/contact/">contact us</a>.</p>
+</InfoPage>
+
+<style>
+  .portal-note {
+    background: var(--mist);
+    border-left: 0.35rem solid var(--amber);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+  }
+</style>

@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { posts } from '../../data/blogPosts';
+
+// Blog index: /blog/, then /blog/page/2/ and so on. The old site showed 15 posts per page.
+export function getStaticPaths() {
+  const pageSize = 15;
+  const total = Math.max(1, Math.ceil(posts.length / pageSize));
+  return Array.from({ length: total }, (_, i) => {
+    const n = i + 1;
+    return {
+      // Page 1 is /blog/ (no extra path); later pages are /blog/page/2/, /blog/page/3/ ...
+      params: { page: n === 1 ? undefined : `page/${n}` },
+      props: {
+        page: {
+          currentPage: n,
+          data: posts.slice(i * pageSize, (i + 1) * pageSize),
+          url: {
+            prev: n === 1 ? undefined : n === 2 ? '/blog/' : `/blog/page/${n - 1}/`,
+            next: n === total ? undefined : `/blog/page/${n + 1}/`,
+          },
+        },
+      },
+    };
+  });
+}
+const { page } = Astro.props;
+const path = page.currentPage === 1 ? '/blog/' : `/blog/page/${page.currentPage}/`;
+const title = "Workers’ Comp Blog";
+const description =
+  page.currentPage === 1
+    ? "Articles from Pathfinder Injury Law about Virginia workers’ compensation: how to file a claim, how adjusters work, and what to expect after a work injury."
+    : "More articles from Pathfinder Injury Law about Virginia workers’ compensation and what to expect after a work injury. Page 2 of our blog.";
+---
+<Base
+  title={page.currentPage === 1 ? "Workers’ Comp Blog | Pathfinder Injury Law" : `Workers’ Comp Blog, Page ${page.currentPage} | Pathfinder Injury Law`}
+  description={description}
+  path={path}
+  crumbs={page.currentPage === 1 ? [{ name: 'Blog', path: '/blog/' }] : [{ name: 'Blog', path: '/blog/' }, { name: `Page ${page.currentPage}`, path }]}
+  overlay
+>
+  <PageHero title={title} crumbs={page.currentPage === 1 ? [{ name: 'Blog' }] : [{ name: 'Blog', href: '/blog/' }, { name: `Page ${page.currentPage}` }]} />
+
+  <div class="wrap blog-index">
+    <h2 class="blog-index-title">Recent Posts</h2>
+    <div class="blog-grid">
+      {page.data.map((post) => <BlogCard post={post} />)}
+    </div>
+
+    {(page.url.prev || page.url.next) && (
+      <nav class="blog-pager" aria-label="Blog pages">
+        {page.url.prev ? <a class="btn btn-outline" href={page.url.prev}>← Newer Posts</a> : <span></span>}
+        {page.url.next ? <a class="btn btn-outline" href={page.url.next}>Older Posts →</a> : <span></span>}
+      </nav>
+    )}
+  </div>
+
+  <ContactSection />
+</Base>
+
+<style is:global>
+  .blog-index {
+    padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(3rem, 7vw, 5rem);
+  }
+  .blog-index-title {
+    font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+    margin: 0 0 2rem;
+  }
+  .blog-index-title::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 0.28rem;
+    border-radius: 99px;
+    background: var(--moss);
+    margin-top: 0.7rem;
+  }
+  .blog-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 40rem) {
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 64rem) {
+    .blog-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .blog-pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+</style>

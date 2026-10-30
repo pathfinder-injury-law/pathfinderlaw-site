@@ -1,0 +1,7 @@
+---
+// Torn, splattered edge along the bottom of a dark section. "fill" is the color
+// of the section below it. The shape is a seamless tile (public/images/edge.svg)
+// used as a mask, so any color works.
+const { fill = 'var(--white)' } = Astro.props;
+---
+<div class="torn" style={`--torn-fill: ${fill}`} aria-hidden="true"></div>

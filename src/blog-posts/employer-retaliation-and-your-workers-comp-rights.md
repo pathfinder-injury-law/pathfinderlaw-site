@@ -1,0 +1,36 @@
+---
+title: "Employer Retaliation and Your Workers’ Comp Rights"
+metaTitle: "Your Work Comp Rights If Injured From Employer Retaliation"
+description: "Worried about employer retaliation? Call Pathfinder Injury Law in Richmond, Virginia, at 804-505-0633 to talk about your options."
+date: 2021-02-12T21:53:20Z
+updated: 2022-10-24T10:41:52Z
+tags: ["rights"]
+---
+
+When you’re hurt in a work accident, you may just want to [get your Workers’ Comp benefits](/virginia-workers-comp-lawyer/) and focus on your health. But that may not be so easy to do when your employer tries to retaliate against you.
+
+If you believe your employer has retaliated against you for [filing a Workers’ Comp claim](/how-to-file-a-workers-comp-claim/), you may need to speak with a [lawyer](/virginia-work-injury-lawyer/) about your Workers’ Comp rights. Retaliation is never ok, and you may have grounds for a claim to get the Workers’ Comp benefits you’re due.
+
+## Is Employer Retaliation Legal?
+
+Many employees worry about reporting a work accident out of fear that their employer will retaliate against them. You may be worried about being blamed for the accident, refused Workers’ Comp benefits, or even fired from your job. Virginia law limits when an employer may discharge an employee for filing a claim, so speak with a lawyer promptly about your situation. [Employer retaliation is illegal](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/), and an employer that retaliates against you for seeking Workers’ Comp benefits may face legal consequences.
+
+## Your Rights as an Injured Worker
+
+As a worker, your rights are protected by Virginia law. If you’re injured in the scope of your job, you may be [entitled to certain benefits](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf). For example, you shouldn’t have to pay out of pocket for any medical expenses related to the work accident. You may also be due compensation for the lost wages you suffered while unable to work.
+
+If an employer discharges an employee solely because the employee filed or intends to file a claim, or testified, the Act allows the employee to bring an action in circuit court. As a worker, you should be protected by state law from these acts of retaliation.
+
+## How Your Workers’ Comp Lawyer Can Help
+
+Of course, it’s not easy to fight back against employer retaliation without help. You may need a Workers’ Comp lawyer to step in and represent you. You may also need their help to prove your employer fired you, for example, out of retaliation, not for legitimate reasons.
+
+If you’ve never filed a lawsuit before, it can be difficult to get started. If you believe your employer discharged you because you filed or intended to file a Workers’ Comp claim, you may want to speak with a lawyer about your options. Acting within [Virginia time limits](https://law.lis.virginia.gov/vacode/title8.01/chapter4/section8.01-243/) to file a lawsuit may also be difficult, but acting too late may lead to a dismissal of your claim.
+
+You may also simply not have the time and energy to represent yourself. Even if you had the right tools, you’re hurt, and you may be struggling to focus on your everyday concerns. Luckily, a lawyer can help you file, no matter how difficult your situation is.
+
+## Talk to a Lawyer if Your Employer Retaliated Against You
+
+When you’re hurt on the job, you shouldn’t have to worry about losing your job or facing other penalties for the accident. Unfortunately, many Virginia workers face this difficult situation, and many are worried they won’t receive Workers’ Comp benefits when they need them.
+
+If you’re concerned that your benefits may be denied or that your employer may retaliate against you, reach out to Pathfinder Injury Law. We don’t handle these kinds of retaliatory discharge cases. We would refer out the discharge claim and keep the comp case. To get started with a free consultation, call [804-505-0633](tel:+18045050633) or fill out the online contact form below.
