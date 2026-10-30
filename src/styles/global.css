@@ -1592,6 +1592,69 @@ mark {
     transition: none;
   }
 }
+
+/* Back to top: a forest-green circle with a white arrow, 48px (touch targets need 44px or more).
+   It shows once the page has scrolled about one screen. On phones and tablets it sits 12px above
+   the Call / Message bar (bar: 12px margin + 48px tall), so it never covers it; from 1024px up,
+   where there is no bar, it sits 24px from the corner. Without JavaScript it stays hidden. */
+.to-top {
+  position: fixed;
+  right: 0.75rem;
+  bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  z-index: 39; /* just under the Call / Message bar */
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 0.35rem 1.1rem rgba(20, 40, 28, 0.28);
+  opacity: 0;
+  visibility: hidden; /* also keeps it out of the keyboard order and away from screen readers while hidden */
+  transform: translateY(0.75rem);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0s linear 0.25s, background-color 0.2s;
+}
+.to-top.is-shown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0s, background-color 0.2s;
+}
+.to-top:hover {
+  background: var(--pine);
+}
+/* The global green ring, plus a white halo so it still shows over the dark green footer. */
+.to-top:focus-visible {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--white);
+}
+#top:focus {
+  outline: none; /* the header only receives focus from the Back to top button; it is not a control */
+}
+@media (prefers-reduced-motion: reduce) {
+  .to-top,
+  .to-top.is-shown {
+    transform: none;
+    transition: none;
+  }
+}
+@media (min-width: 64rem) {
+  .to-top {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+@media print {
+  .to-top {
+    display: none !important;
+  }
+}
+
 @media (min-width: 64rem) {
   .call-bar {
     display: none;

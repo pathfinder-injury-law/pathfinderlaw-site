@@ -5,6 +5,7 @@ import figtreeLatin from '@fontsource-variable/figtree/files/figtree-latin-wght-
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
 import { site } from '../data/site';
 import { cities } from '../data/cities';
 
@@ -204,6 +205,7 @@ const speculationRules = JSON.stringify({
       <slot />
     </main>
     <Footer />
+    <BackToTop />
     <script is:inline>
       // Motion helpers. If anything here fails, the page simply shows normally.
       (function () {
