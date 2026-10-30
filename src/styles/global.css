@@ -56,6 +56,11 @@ img {
   height: auto;
   display: block;
 }
+/* Photos with smaller copies (src/components/Photo.astro) are wrapped in <picture>. The wrapper takes
+   no space of its own, so the photo lays out exactly as a plain <img> would. */
+picture.photo {
+  display: contents;
+}
 
 a {
   color: inherit;
@@ -1587,6 +1592,69 @@ mark {
     transition: none;
   }
 }
+
+/* Back to top: a forest-green circle with a white arrow, 48px (touch targets need 44px or more).
+   It shows once the page has scrolled about one screen. On phones and tablets it sits 12px above
+   the Call / Message bar (bar: 12px margin + 48px tall), so it never covers it; from 1024px up,
+   where there is no bar, it sits 24px from the corner. Without JavaScript it stays hidden. */
+.to-top {
+  position: fixed;
+  right: 0.75rem;
+  bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  z-index: 39; /* just under the Call / Message bar */
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 0.35rem 1.1rem rgba(20, 40, 28, 0.28);
+  opacity: 0;
+  visibility: hidden; /* also keeps it out of the keyboard order and away from screen readers while hidden */
+  transform: translateY(0.75rem);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0s linear 0.25s, background-color 0.2s;
+}
+.to-top.is-shown {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0s, background-color 0.2s;
+}
+.to-top:hover {
+  background: var(--pine);
+}
+/* The global green ring, plus a white halo so it still shows over the dark green footer. */
+.to-top:focus-visible {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--white);
+}
+#top:focus {
+  outline: none; /* the header only receives focus from the Back to top button; it is not a control */
+}
+@media (prefers-reduced-motion: reduce) {
+  .to-top,
+  .to-top.is-shown {
+    transform: none;
+    transition: none;
+  }
+}
+@media (min-width: 64rem) {
+  .to-top {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+@media print {
+  .to-top {
+    display: none !important;
+  }
+}
+
 @media (min-width: 64rem) {
   .call-bar {
     display: none;
@@ -2160,4 +2228,83 @@ mark {
 }
 .main-nav .m-group[open] > summary::after {
   transform: rotate(225deg) translate(-2px, -2px);
+}
+
+/* ---------- Page-to-page transitions ---------- */
+/* Moving between pages of the site cross-fades instead of flashing white (View Transitions, CSS only).
+   Browsers without support simply load the page as before. Off for visitors who prefer less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+/* ---------- Printing ---------- */
+/* Printed pages keep the logo and the words, and drop the menu, the phone bar, the Back to top button
+   and the forms (they cannot be used on paper). Links in the page text print their address after them. */
+@media print {
+  .skip-link,
+  .desktop-nav,
+  .nav-mobile,
+  .call-bar,
+  .to-top,
+  .form-card,
+  .contact-form,
+  .torn,
+  .cta-bg,
+  .hero-photo,
+  .hero-pic {
+    display: none !important;
+  }
+  .site-header {
+    position: static !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  body:not(.has-overlay) main {
+    padding-top: 0;
+  }
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+  /* Browsers leave background colours off paper, so light text on the green sections turns black. */
+  .on-dark,
+  .on-dark *,
+  .contour,
+  .contour *,
+  .site-footer,
+  .site-footer * {
+    color: #000000 !important;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+  }
+  /* Content that fades in on scroll prints whether or not it has been scrolled to. */
+  .js [data-reveal],
+  .js [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  main a[href^="http"]:not(.btn)::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+  main a[href^="/"]:not(.btn)::after {
+    content: " (https://pathfinderlaw.com" attr(href) ")";
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+  main .crumbs a::after {
+    content: none !important; /* the breadcrumb trail does not need addresses */
+  }
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+  img,
+  figure {
+    break-inside: avoid;
+  }
 }
