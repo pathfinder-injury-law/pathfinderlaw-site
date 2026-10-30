@@ -48,7 +48,7 @@ export function emailBody(sub: Submission, o: { id: string; outcome: string; rea
     sub.message,
     '',
     '---',
-    'Treat as confidential. Sending the form does not create an attorney-client relationship. The sender acknowledged that no confidentiality or conflict protections apply until a written agreement is signed.',
+    'The sender confirmed that sending this form does not create an attorney-client relationship and that Pathfinder Injury Law has not agreed to represent them. Treat as confidential.',
     `Reference: ${o.id}`,
     'Reply to this email to reach the sender.',
   ].join('\n');

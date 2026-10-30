@@ -69,6 +69,9 @@ test('valid lead: logged, emailed to both inboxes with Reply-To, no [Screened]',
   assert.match(head, /Reply-To: pat@example.com/);
   assert.doesNotMatch(head, /Screened/);
   assert.match(body, /my claim was denied/);
+  const footer = 'The sender confirmed that sending this form does not create an attorney-client relationship and that Pathfinder Injury Law has not agreed to represent them. Treat as confidential.';
+  assert.equal(body.split(footer).length - 1, 1);
+  assert.doesNotMatch(body, /conflict protections|written agreement/);
 });
 
 test('sidebar form is recorded as sidebar', async () => {
