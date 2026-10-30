@@ -2315,15 +2315,15 @@ mark {
     object-position: 100% 100%;
   }
 }
-/* Phones: the floating Call/Message bar covers the bottom 4.75rem, so the peek sits above it. The hero
-   never drops below its usual 37rem, so the button never lands on the hiker. */
+/* Phones: the Call/Message bar stays hidden while the hero is on screen, so the peek sits at the bottom
+   edge. The hero never drops below its usual 37rem, so the button never lands on the hiker. */
 @media (max-width: 47.99rem) {
   :root {
     --team-peek: 2.25rem;
     --team-overlap: 2rem;
   }
   .hero {
-    min-height: max(37rem, calc(100svh - 4.75rem - var(--team-peek) + var(--team-overlap)));
+    min-height: max(37rem, calc(100svh - var(--team-peek) + var(--team-overlap)));
   }
   .peek-list {
     justify-content: center;

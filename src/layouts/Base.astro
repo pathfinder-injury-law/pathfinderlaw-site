@@ -217,29 +217,23 @@ const speculationRules = JSON.stringify({
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
 
-        // Phone Call / Message bar: tucks away while scrolling down, returns on scrolling up,
-        // and steps aside over the contact form and footer. Without script it stays visible.
+        // Phone Call / Message bar: stays put while scrolling, and steps aside where it would cover
+        // something: the home page hero (which has its own Free Consultation button and the team photos
+        // peeking up at its bottom edge), the contact form and the footer. Without script it stays visible.
         var bar = document.querySelector('.call-bar');
-        if (bar) {
-          var lastY = window.scrollY, byScroll = false, bySection = 0;
-          var apply = function () { bar.classList.toggle('is-hidden', byScroll || bySection > 0); };
-          window.addEventListener('scroll', function () {
-            var y = window.scrollY, dy = y - lastY;
-            if (y < 80 || dy < -6) byScroll = false;
-            else if (dy > 6) byScroll = true;
-            lastY = y; apply();
-          }, { passive: true });
-          if ('IntersectionObserver' in window) {
-            var seen = new Set();
-            var bio = new IntersectionObserver(function (entries) {
-              entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
-              bySection = seen.size; apply();
-            });
-            document.querySelectorAll('#contact, form, .site-footer').forEach(function (el) { bio.observe(el); });
-            // Tablets: the home hero is taller than many tablet windows, so the bar waits until the hero
-            // has scrolled away instead of covering the hiker and the torn edge.
-            var heroEl = document.querySelector('.hero');
-            if (heroEl && window.matchMedia && window.matchMedia('(min-width: 48rem)').matches) bio.observe(heroEl);
+        if (bar && 'IntersectionObserver' in window) {
+          var seen = new Set();
+          var apply = function () { bar.classList.toggle('is-hidden', seen.size > 0); };
+          var bio = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+            apply();
+          });
+          document.querySelectorAll('#contact, form, .site-footer').forEach(function (el) { bio.observe(el); });
+          var heroEl = document.querySelector('.hero');
+          if (heroEl) {
+            seen.add(heroEl); // hidden from the first paint, so it never flashes over the hero
+            apply();
+            bio.observe(heroEl);
           }
         }
 
