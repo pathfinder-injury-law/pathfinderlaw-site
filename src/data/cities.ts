@@ -145,7 +145,7 @@ export const cities: City[] = [
     description:
       "Pathfinder Injury Law is your trusted Powhatan County workers’ comp lawyer. Let's discuss your eligibility and evidence - call 804-505-0633.",
     intro: [
-      `When you’re injured on the job, you reserve the right to pursue compensation. A [Workers’ Comp lawyer](${WC}) in Powhatan County can help.`,
+      `When you’re injured on the job, you have the right to pursue compensation. A [Workers’ Comp lawyer](${WC}) in Powhatan County can help.`,
       'Injured workers can be entitled to disability benefits, reimbursement for medical expenses, and more. A Powhatan County Workers’ Comp lawyer can help ensure your rights are upheld.',
     ],
     sections: [
@@ -154,7 +154,7 @@ export const cities: City[] = [
         body: [
           'Suffering an injury at work could be more common than most people realize. If you’ve sustained an injury at work in Powhatan County, then you’re surely familiar with the worries about how you’ll pay for medical treatment and how you’ll support yourself and your family while you’re away from work.',
           'Workplace injuries can range from mild, to severe, to fatal. Some, such as a broken bone, are able to recover with time. Others, such as traumatic brain injury, could leave you permanently unable to work. Sadly, on other occasions, a family could lose their main source of income when their loved one dies while performing a job-related function.',
-          'For that reason, a wide variety of [benefits](https://workcomp.virginia.gov/forms/claim-form) are available to workplace accident victims and their families. Among these include:',
+          'For that reason, a wide variety of [benefits](https://workcomp.virginia.gov/forms/claim-form) are available to workplace accident victims and their families. These include:',
           {
             list: [
               'Medical benefits',
@@ -257,7 +257,7 @@ export const cities: City[] = [
       {
         h: 'Investigating Your Workplace Accident in Chesterfield County',
         body: [
-          `Workers’ Compensation benefits help injured workers get support following an accident at their place of employment. Due to the relative frequency of these types of accidents, ${EMPLOYER_THRESHOLD}`,
+          `Workers’ Compensation benefits help injured workers get support following an accident at their place of employment. Due to the relative frequency of these types of accidents, ${EMPLOYER_THRESHOLD.replace(/^V/, 'v')}`,
           `[Workers’ Compensation benefits](${CODE}title65.2/chapter5/) aren’t dependent on proving fault in order to be awarded. ${COMPENSABLE.charAt(0).toUpperCase()}${COMPENSABLE.slice(1)}.`,
           'Unfortunately, many Chesterfield County Workers’ Compensation insurance companies will still seek to avoid paying injured workers fair compensation. Insurance companies are businesses like any other. They are motivated by a desire to protect the company’s bottom line. In order to receive the benefits you need, then, you’ll have to clearly establish the facts of your case.',
           'Taking pictures of any injuries and the site of the work accident in question can help build your case. Going to a doctor to officially get your injuries on file can also strengthen your argument. Finally, ensuring that all forms have been properly filed by the respective deadlines will also be vital. If you’re unsure how to proceed, a workers comp lawyer in Chesterfield County could help.',
@@ -379,7 +379,7 @@ export const cities: City[] = [
         ],
       },
       {
-        h: 'Speak to a Worker Comp Lawyer in Fairfax County Today',
+        h: 'Speak to a Workers’ Comp Lawyer in Fairfax County Today',
         body: [
           'You’ve been injured, and you may be due compensation. Don’t let the clock run out on your hopes of seeking the benefits you need. At [Pathfinder Injury Law](/), we’re dedicated to helping injury victims get the help they need.',
           'Call {phone} or fill out the form below to schedule your free consultation with a Fairfax County workers comp lawyer from Pathfinder Injury Law.',
@@ -450,7 +450,7 @@ export const cities: City[] = [
     description:
       'Need a Harrisonburg workers’ compensation lawyer? Call Pathfinder Injury Law at 804-505-0633 to discuss your work-related injury.',
     intro: [
-      'Getting injured on the job can be a frightening experience. When you’re unsure of to whom to turn, you can trust an experienced Workers’ Comp lawyer in Harrisonburg.',
+      'Getting injured on the job can be a frightening experience. When you’re unsure whom to turn to, you can trust an experienced Workers’ Comp lawyer in Harrisonburg.',
       `Workers can be frustrated to discover that injury claims are [often denied](${DENIALS}) or delayed. If you’re struggling to get the benefits you need, let a Harrisonburg Workers’ Comp lawyer review your case.`,
     ],
     sections: [
@@ -458,7 +458,7 @@ export const cities: City[] = [
         h: 'What Are the Common Types of Workplace Accidents?',
         body: [
           `Workplace injuries are commonplace. That’s why [Virginia law](${WC}) requires most employers to carry Workers’ Compensation insurance, which includes virtually all employers with three or more employees regularly in service in Virginia. And although many people associate dangerous jobs with construction crews or other occupations involving the use of heavy machinery, we know from experience that a workplace accident can happen anywhere, anytime.`,
-          'Some of the common types of Harrisonburg workplace accident that occur include:',
+          'Some of the common types of Harrisonburg workplace accidents that occur include:',
           {
             list: [
               'Slips-and-falls or falls from great heights',

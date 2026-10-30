@@ -25,8 +25,7 @@ You may be nervous waiting to hear from the insurance company, and it may help t
 
 You can expect them to ask you questions regarding your workplace injury, many of which may seem overly personal and invasive and can concern the following:
 
-Work history, including past employers, any disciplinary actions against you, firings, or other issues
-
+- Work history, including past employers, any disciplinary actions against you, firings, or other issues
 - Length of employment with current employer
 - Specific job duties
 - How your injury occurred (e.g., car accident, slip and fall, etc.)
