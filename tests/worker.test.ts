@@ -5,6 +5,7 @@ import { resetTokenCache } from '../src/worker/google.ts';
 import { decide, findLinkHosts } from '../src/worker/screen.ts';
 import { buildDigest, etDayRange, runDigest, runPurge, runSelfTest } from '../src/worker/scheduled.ts';
 import { validate } from '../src/worker/validate.ts';
+import { cronJob, runScheduled } from '../src/worker/index.ts';
 import { STARTER_RULES, decodeRaw, goodInput, liveEnv, makeKv, makeWorld, post } from './helpers.ts';
 
 beforeEach(() => resetTokenCache());
@@ -314,6 +315,24 @@ test('digest: counts leads, lists screened with reasons, flags undelivered, excl
   assert.match(d.body, /1 failed send/);
   assert.equal(await runDigest(env, w.deps), true);
   assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: Form digest/);
+});
+
+test('cron routing is by minute: hours can change for daylight saving', async () => {
+  assert.equal(cronJob('15 12 * * *'), 'self_test');
+  assert.equal(cronJob('30 12 * * *'), 'digest');
+  assert.equal(cronJob('0 9 * * *'), 'none');
+  let env = liveEnv(); let w = makeWorld({ now: '2027-03-15T11:15:00Z' });
+  assert.equal(await runScheduled('15 11 * * *', env, w.deps), 'self_test');
+  assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: \[Form Test /);
+  assert.ok(w.calls.some((c) => c.url === 'https://hb.example/ping'));
+  resetTokenCache(); env = liveEnv(); w = makeWorld({ now: '2027-03-15T11:30:00Z' });
+  assert.equal(await runScheduled('30 11 * * *', env, w.deps), 'digest');
+  assert.equal(gmail(w.calls).length, 1);
+  assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: Form digest/);
+  w = makeWorld();
+  const orig = console.error; console.error = () => {};
+  try { assert.equal(await runScheduled('45 11 * * *', liveEnv(), w.deps), 'none'); } finally { console.error = orig; }
+  assert.equal(w.calls.length, 0);
 });
 
 test('digest flags a two-day stretch with no submissions', async () => {
