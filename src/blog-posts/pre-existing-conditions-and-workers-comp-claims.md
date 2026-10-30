@@ -19,7 +19,7 @@ Because of this, your Workers’ Comp can be impacted if you have a pre-existing
 
 ## Calculating Your Claim’s Value
 
-Because of this, calculating your Workers’ Comp claim’s [value with a pre-existing condition](https://www.workcomp.virginia.gov/sites/default/files/documents/Employers-Obligation-To-Provide-Medical-Treatment.pdf) can be tough. Determining how severe your suffering would be can be complex and may require plenty of medical exams. But what Workers’ Comp benefits can you expect?
+Because of this, calculating your Workers’ Comp claim’s [value with a pre-existing condition](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/) can be tough. Determining how severe your suffering would be can be complex and may require plenty of medical exams. But what Workers’ Comp benefits can you expect?
 
 You should first receive [medical benefits](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf), which cover the costs of care for your work injury. You shouldn’t have the threat of hospital liens over you while you’re recovering from your work injury.
 
