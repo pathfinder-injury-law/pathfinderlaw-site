@@ -2067,12 +2067,15 @@ mark {
   white-space: nowrap;
   border: 0;
 }
+.lockup {
+  --lk1: clamp(3.75rem, 12vw, 9.75rem);
+}
 .lockup .hero-l1 {
-  font-size: clamp(3.75rem, 12vw, 9.75rem);
+  font-size: var(--lk1);
   margin: 0;
 }
 .lockup .hero-l2 {
-  font-size: clamp(4rem, 13vw, 10.5rem);
+  font-size: calc(var(--lk1) * 0.88); /* same as the home page: about 88 percent of the line above */
   margin: 0.04em 0 0;
   padding-bottom: 0.14em;
   text-shadow: none;
