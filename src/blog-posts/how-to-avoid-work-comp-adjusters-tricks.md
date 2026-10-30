@@ -45,7 +45,7 @@ Any benefits you receive will come from the insurance agency of your employer, n
 
 ### Offer an Insufficient Settlement
 
-The adjuster may offer you an insufficient settlement quickly, so you have less time to consider your rights and options. Many offers involve scare tactics, such as telling you how long the process takes and how benefits can be delayed. They may tell you that the volume of information needed to review a worker’s compensation claim is massive, and you can alleviate yourself of this burden by accepting the generous settlement they are now offering now.
+The adjuster may offer you an insufficient settlement quickly, so you have less time to consider your rights and options. Many offers involve scare tactics, such as telling you how long the process takes and how benefits can be delayed. They may tell you that the volume of information needed to review a workers’ compensation claim is massive, and you can alleviate yourself of this burden by accepting the generous settlement they are now offering.
 
 In addition, the adjuster may send you an agreement form that leaves out important information. For instance, the form may calculate the amount using a lower average weekly wage or fail to provide enough wage loss benefits for the time you, the injured employee, are already out of work. In other instances, the adjuster fails to list all injured body parts from the work-related accident, potentially limiting coverage for many medical bills.
 
@@ -57,7 +57,7 @@ The reason behind this tactic may be that they are attempting to get you to admi
 
 In other words, signing a statement immediately or giving a recorded statement on the phone can come back to haunt you and your claim, potentially leading to a denial of coverage, medical treatment, or wage loss benefits.
 
-So, what should you do if asked to sign or provide a recorded statement? Contact a lawyer. If the adjuster says you must give a statement to receive benefits, reach out to a worker’s comp attorney for legal advice and guidance.
+So, what should you do if asked to sign or provide a recorded statement? Contact a lawyer. If the adjuster says you must give a statement to receive benefits, reach out to a workers’ comp attorney for legal advice and guidance.
 
 ### Have You Sign Consent for Medical Records
 

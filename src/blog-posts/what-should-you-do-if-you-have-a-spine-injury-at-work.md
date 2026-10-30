@@ -159,7 +159,7 @@ How extensive will your future medical needs be? Will you need ongoing medical t
 
 ### Will You Need Surgery?
 
-Surgery can be very expensive. Insurance companies tend not to want to pay for surgical procedures unless they are absolutely necessary, and they will often fight you overpaying for surgery after a work accident. However, a surgical indication in a workers’ compensation case is often the number one driver of increased settlement value. A seasoned workers’ compensation lawyer can help you gather the evidence you need to support your claim for surgical treatment related to your work accident.
+Surgery can be very expensive. Insurance companies tend not to want to pay for surgical procedures unless they are absolutely necessary, and they will often fight you over paying for surgery after a work accident. However, a surgical indication in a workers’ compensation case is often the number one driver of increased settlement value. A seasoned workers’ compensation lawyer can help you gather the evidence you need to support your claim for surgical treatment related to your work accident.
 
 ### Is Your Accident Even Compensable in the First Place?
 

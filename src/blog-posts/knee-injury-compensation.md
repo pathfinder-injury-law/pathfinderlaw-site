@@ -7,7 +7,7 @@ updated: 2022-10-11T10:46:25Z
 tags: ["body-parts","settlement"]
 ---
 
-*\* Nothing in this article should be taken as* *legal advice**. Every case is different, and you should consult with an attorney before taking legal action on your case.*
+*Nothing in this article should be taken as legal advice. Every case is different, and you should consult with an attorney before taking legal action on your case.*
 
 Like most of us, you’re a hard worker. When you head off to your job in the morning, you expect that your employer has all of the safety precautions in place to protect you from injury. Unfortunately, severe accidents happen even to the most conscientious employees, and they can affect you for the rest of your life. The work injury could impact whether you can work in the same field in the future. In those situations, having a knowledgeable [workers’ compensation attorney](/virginia-workers-comp-lawyer/) is critical.
 
@@ -43,13 +43,13 @@ The other two ligaments are inside the knee joint. They cross each other to stab
 
 #### Can I Have a Knee Injury Case For Gradual Injuries?
 
-**Because Virginia workers’ comp only covers sudden structural or mechanical injuries in the knee. In other words, you cannot get benefits for injuries that happen due to degeneration over time.** Accordingly, it is important to determine whether an acute or chronic problem exists.
+**Virginia workers’ comp only covers sudden structural or mechanical injuries in the knee. In other words, you cannot get benefits for injuries that happen due to degeneration over time.** Accordingly, it is important to determine whether an acute or chronic problem exists.
 
 In general, an MRI can show the specific type of tear. Often you can tell a tear is traumatic if it is deep and jagged on an MRI image. Chronic problems are more likely to be smooth and round. Newer injuries will often appear whiter on an MRI as well. Older injuries (which signal a chronic issue) are usually darker in color.
 
 ### Broken or Fractured Bone
 
-Two bones (the femur and tibia) meet to form the knee joint. The kneecap (patella) is another bone that sits on the front of the joint to provide some additional stability and protection. The femur sits just behind the larger joint.
+Two bones (the femur and tibia) meet to form the knee joint. The kneecap (patella) is another bone that sits on the front of the joint to provide some additional stability and protection.
 
 Broken or fractured bones are one of the few knee injuries that can appear on an x-ray. The most common broken bone associated with the knee is the patella (kneecap). The ends of the femur and tibia are common locations for broken bones. Falls or blunt trauma (such as from a car accident) will often cause these broken bones.
 
@@ -126,7 +126,7 @@ Because workers’ compensation is designed to pay for your medical bills and re
 
 ### Future Medical Needs
 
-**Workers’ compensation benefits include medical care****.** Your employer is required to provide you with the medical treatment you need to address your injury, so long as that medical treatment is reasonable, necessary, and causally related to the work accident. When employers consider how much they will pay in a settlement, they often also think about how much money they might have to pay for your medical care in the future.
+**Workers’ compensation benefits include medical care.** Your employer is required to provide you with the medical treatment you need to address your injury, so long as that medical treatment is reasonable, necessary, and causally related to the work accident. When employers consider how much they will pay in a settlement, they often also think about how much money they might have to pay for your medical care in the future.
 
 If you are expected to have ongoing medical needs for your knee, your settlement amount might be higher than someone who does not need long-term treatment or surgeries. Your overall recovery time can also affect your workers’ compensation benefit entitlement.
 
@@ -144,7 +144,7 @@ The whole FCE testing process can take several hours in a typical knee injury ca
 
 FCEs are often performed to assess work restrictions and also provide impairment ratings. Impairment ratings are numerical representations of how much permanent damage you have suffered in a given body part as a result of a work accident. Impairment ratings are assessed in terms of a percentage. If your knee is functioning completely normally, for example, there will be a 0% impairment. If you are not quite where you need to be, you might have somewhere between 1% and 10% impairment. Severe knee injuries, or injuries causing knee replacements, might see impairment ratings over 50%. The larger your impairment rating, the higher your settlement value for your injury is likely to be because the more permanent partial disability benefits you could potentially be entitled to.
 
-## What Benefits Can Your Receive From Your Knee Injury in Virginia?
+## What Benefits Can You Receive From Your Knee Injury in Virginia?
 
 **The Virginia Workers’ Compensation Act provides several different types of benefits. These benefits are designed to help workers get back on their feet after a work injury.** However, in a workers’ comp case, you cannot recover for pain and suffering like in a regular personal injury case. But even though you cannot recover for pain and suffering in a workers’ comp case, there are still other benefits you can and should pursue.
 

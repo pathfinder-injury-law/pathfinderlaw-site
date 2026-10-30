@@ -26,7 +26,7 @@ Be sure to include the following in your written incident report:
 
 As the injured worker, you, the claimant, will need to also file a claim with the Virginia Workers’ Compensation Commission no later than two years after the incident, although exceptions apply. Otherwise, you may give up your right to file such a workers’ comp claim for your injured hip and miss out on any deserved workers’ comp or disability benefits, including those for medical expenses and lost wages.
 
-Once the filing of the [injury claim](/what-happens-when-you-file-a-workers-comp-claim/) occurs, the Virginia Workers’ Compensation (VWC) Commission will issue a 30-day order to the employer or their insurance company to force them to indicate whether they are accepting or denying the claim.
+Once the filing of the [injury claim](/what-happens-when-you-file-a-workers-comp-claim/) occurs, the Virginia Workers’ Compensation Commission (VWC) will issue a 30-day order to the employer or their insurance company to force them to indicate whether they are accepting or denying the claim.
 
 Your employer or their insurance carrier must make you aware of their intent toward your workers’ compensation claim. They can either accept, deny, or say they are investigating your claim. If they say their intent is to investigate, it means they are stating that they have a lack of sufficient evidence from the employee or another third party to make a determination and will identify what is missing. This is outlined in Virginia Code § 65.2-701. A workers’ comp attorney can review what is missing and work toward proving your claim and potentially seeking workers’ comp benefits and potentially a lump sum payment settlement down the road.
 

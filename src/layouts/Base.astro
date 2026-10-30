@@ -93,6 +93,8 @@ const graph = [
       '@id': new URL(c.path, origin).href + (i === trail.length - 1 ? '#listItem' : ''),
       position: i + 1,
       name: c.name,
+      // Google needs the crumb's page address in `item`, not only in `@id`.
+      item: new URL(c.path, origin).href,
     })),
   },
   {

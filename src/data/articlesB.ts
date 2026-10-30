@@ -86,7 +86,7 @@ export const articlesB = {
           <ul>
             <li><strong>Report Your Injury:</strong> As soon as you’re able, make sure you report your injury to your employer. The Virginia Workers’ Compensation Act requires you to give notice to your employer within thirty days of the accident, although exceptions exist, and prompt reporting is important to try and avoid having your claim denied.</li>
             <li><strong>Keep Track of Everything:</strong> When getting treatment, it’s important to keep track of everything. Missed days, lost wages, out of pocket expenses. It’s better to have too much information than too little.</li>
-            <li><strong>Contact a Work Injury Lawyer:</strong> Facing a worker’s comp case can be frightening, so it can be helpful to find an attorney for assistance. Pathfinder Injury Law is here to help explain the specifics of Virginia work injury law and guide you through your case.</li>
+            <li><strong>Contact a Work Injury Lawyer:</strong> Facing a workers’ comp case can be frightening, so it can be helpful to find an attorney for assistance. Pathfinder Injury Law is here to help explain the specifics of Virginia work injury law and guide you through your case.</li>
           </ul>`,
       },
     ],
@@ -367,7 +367,7 @@ export const articlesB = {
         id: 'should-i',
         h2: 'Should I Accept a Lump Sum Settlement?',
         html: `
-          <p>On-the-job injuries can be complex and difficult to judge. That traumatic head injury may feel fine now, but you may suffer health complications shortly hereafter. Because you may need future benefits, keep in mind that settling your case closes everything and ends benefits. You should always consult with a lawyer before accepting a settlement.</p>
+          <p>On-the-job injuries can be complex and difficult to judge. That traumatic head injury may feel fine now, but you may suffer health complications shortly thereafter. Because you may need future benefits, keep in mind that settling your case closes everything and ends benefits. You should always consult with a lawyer before accepting a settlement.</p>
           <p>That’s where your lawyer can step in. They have the tools to determine what benefits you may be due based on the severity of your injuries. They can also represent you in a <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Claims-and-Hearings-Flow-Chart.pdf" rel="noopener">Virginia Workers’ Comp hearing</a> if you’re struggling to get compensated fairly. A Virginia work comp lawyer can help those without the right tools for their claim recover from their losses.</p>`,
       },
     ],

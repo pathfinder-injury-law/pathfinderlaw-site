@@ -462,6 +462,20 @@
       "live": "Workers’ Comp Lawyer",
       "new": "Virginia Workers’ Comp Lawyer",
       "reason": "Owner decision Oct 29 (hero redesign, option 1): the small 'Virginia' line and the page heading are now one h1, 'Virginia Workers’ Comp Lawyer', styled small above the big words."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/",
+      "field": "title",
+      "live": "How Is Workers’ Comp Benefits Calculated in Virginia?",
+      "new": "How Are Workers’ Comp Benefits Calculated in Virginia?",
+      "reason": "SEO audit 10-30-26 safe fixes: grammar ('Is' to 'Are'), flagged in audit part 1."
+    },
+    {
+      "address": "/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/",
+      "field": "h1",
+      "live": "How Is Workers’ Comp Benefits Calculated in Virginia?",
+      "new": "How Are Workers’ Comp Benefits Calculated in Virginia?",
+      "reason": "SEO audit 10-30-26 safe fixes: grammar ('Is' to 'Are'), flagged in audit part 1."
     }
   ]
 }

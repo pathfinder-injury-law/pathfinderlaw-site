@@ -97,7 +97,7 @@ export const cities: City[] = [
               `Death Benefits: If a loved one is lost to a work-related injury, workers’ compensation can also provide death benefits. ${DEATH}`,
             ],
           },
-          `Determining [what type of benefits you may be eligible to receive](/employer-retaliation-and-your-workers-comp-rights/) or how to go about getting those benefits can be confusing.`,
+          `Determining [what type of benefits you may be eligible to receive](/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/) or how to go about getting those benefits can be confusing.`,
           'If the insurance company denies your workers’ comp claim or doesn’t respond, you will need to file a claim for benefits. Claims for benefits must generally be filed within two years of an accident or else you can forever lose benefit entitlement. It is important to call an injured workers’ law firm for a free consultation and case evaluation. To learn more about how to file a workers’ compensation claim in Richmond, Virginia, or anywhere in the state, contact Pathfinder Injury Law at {phone} or use our online form. We look forward to speaking with you.',
         ],
       },
@@ -145,7 +145,7 @@ export const cities: City[] = [
     description:
       "Pathfinder Injury Law is your trusted Powhatan County workers’ comp lawyer. Let's discuss your eligibility and evidence - call 804-505-0633.",
     intro: [
-      `When you’re injured on the job, you reserve the right to pursue compensation. A [Workers’ Comp lawyer](${WC}) in Powhatan County can help.`,
+      `When you’re injured on the job, you have the right to pursue compensation. A [Workers’ Comp lawyer](${WC}) in Powhatan County can help.`,
       'Injured workers can be entitled to disability benefits, reimbursement for medical expenses, and more. A Powhatan County Workers’ Comp lawyer can help ensure your rights are upheld.',
     ],
     sections: [
@@ -154,7 +154,7 @@ export const cities: City[] = [
         body: [
           'Suffering an injury at work could be more common than most people realize. If you’ve sustained an injury at work in Powhatan County, then you’re surely familiar with the worries about how you’ll pay for medical treatment and how you’ll support yourself and your family while you’re away from work.',
           'Workplace injuries can range from mild, to severe, to fatal. Some, such as a broken bone, are able to recover with time. Others, such as traumatic brain injury, could leave you permanently unable to work. Sadly, on other occasions, a family could lose their main source of income when their loved one dies while performing a job-related function.',
-          'For that reason, a wide variety of [benefits](https://workcomp.virginia.gov/forms/claim-form) are available to workplace accident victims and their families. Among these include:',
+          'For that reason, a wide variety of [benefits](/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/) are available to workplace accident victims and their families. These include:',
           {
             list: [
               'Medical benefits',
@@ -182,7 +182,7 @@ export const cities: City[] = [
         h: 'Contact a Workers’ Comp Lawyer in Powhatan County',
         body: [
           'You’ve been injured at work, and you may be due compensation. At [Pathfinder Injury Law](/), we help clients like yourself every day seek the Workers’ Compensation benefits they may be due.',
-          'Call {phone} or [fill out the form below](/contact/) to schedule your free case overview with a Powhatan County Workers’ Comp lawyer from Pathfinder Injury Law.',
+          'Call {phone} or [fill out the form below](#contact) to schedule your free case overview with a Powhatan County Workers’ Comp lawyer from Pathfinder Injury Law.',
         ],
       },
     ],
@@ -257,7 +257,7 @@ export const cities: City[] = [
       {
         h: 'Investigating Your Workplace Accident in Chesterfield County',
         body: [
-          `Workers’ Compensation benefits help injured workers get support following an accident at their place of employment. Due to the relative frequency of these types of accidents, ${EMPLOYER_THRESHOLD}`,
+          `Workers’ Compensation benefits help injured workers get support following an accident at their place of employment. Due to the relative frequency of these types of accidents, ${EMPLOYER_THRESHOLD.replace(/^V/, 'v')}`,
           `[Workers’ Compensation benefits](${CODE}title65.2/chapter5/) aren’t dependent on proving fault in order to be awarded. ${COMPENSABLE.charAt(0).toUpperCase()}${COMPENSABLE.slice(1)}.`,
           'Unfortunately, many Chesterfield County Workers’ Compensation insurance companies will still seek to avoid paying injured workers fair compensation. Insurance companies are businesses like any other. They are motivated by a desire to protect the company’s bottom line. In order to receive the benefits you need, then, you’ll have to clearly establish the facts of your case.',
           'Taking pictures of any injuries and the site of the work accident in question can help build your case. Going to a doctor to officially get your injuries on file can also strengthen your argument. Finally, ensuring that all forms have been properly filed by the respective deadlines will also be vital. If you’re unsure how to proceed, a workers comp lawyer in Chesterfield County could help.',
@@ -289,7 +289,7 @@ export const cities: City[] = [
         h: 'Contact a Workers’ Comp Lawyer in Chesterfield County Today',
         body: [
           'When it comes to seeking the benefits you may be due following your accident at work, we can review your situation and explain your options. At [Pathfinder Injury Law](/), we work with injured workers of all types to help them seek the compensation they may be due.',
-          'Call {phone} or [fill out the form below](/contact/) in order to schedule your free consultation with a Chesterfield County Workers’ Comp Lawyer.',
+          'Call {phone} or [fill out the form below](#contact) in order to schedule your free consultation with a Chesterfield County Workers’ Comp Lawyer.',
         ],
       },
     ],
@@ -343,7 +343,7 @@ export const cities: City[] = [
         h: 'Reach Out to a Workers’ Comp Lawyer in Prince William County',
         body: [
           'If your Workers’ Comp claim has been rejected, it’s understandable to feel like you’re out of options. But before you decide to call it quits, consider the ways a Workers’ Comp lawyer can help. At [Pathfinder Injury Law](/), we’re motivated by our passion for defending the rights of work-injury victims in Prince William County.',
-          'Call {phone} or [fill out the form below](/contact/) to schedule your free consultation with a Prince William County Workers’ Comp lawyer from our firm.',
+          'Call {phone} or [fill out the form below](#contact) to schedule your free consultation with a Prince William County Workers’ Comp lawyer from our firm.',
         ],
       },
     ],
@@ -379,7 +379,7 @@ export const cities: City[] = [
         ],
       },
       {
-        h: 'Speak to a Worker Comp Lawyer in Fairfax County Today',
+        h: 'Speak to a Workers’ Comp Lawyer in Fairfax County Today',
         body: [
           'You’ve been injured, and you may be due compensation. Don’t let the clock run out on your hopes of seeking the benefits you need. At [Pathfinder Injury Law](/), we’re dedicated to helping injury victims get the help they need.',
           'Call {phone} or fill out the form below to schedule your free consultation with a Fairfax County workers comp lawyer from Pathfinder Injury Law.',
@@ -450,7 +450,7 @@ export const cities: City[] = [
     description:
       'Need a Harrisonburg workers’ compensation lawyer? Call Pathfinder Injury Law at 804-505-0633 to discuss your work-related injury.',
     intro: [
-      'Getting injured on the job can be a frightening experience. When you’re unsure of to whom to turn, you can trust an experienced Workers’ Comp lawyer in Harrisonburg.',
+      'Getting injured on the job can be a frightening experience. When you’re unsure whom to turn to, you can trust an experienced Workers’ Comp lawyer in Harrisonburg.',
       `Workers can be frustrated to discover that injury claims are [often denied](${DENIALS}) or delayed. If you’re struggling to get the benefits you need, let a Harrisonburg Workers’ Comp lawyer review your case.`,
     ],
     sections: [
@@ -458,7 +458,7 @@ export const cities: City[] = [
         h: 'What Are the Common Types of Workplace Accidents?',
         body: [
           `Workplace injuries are commonplace. That’s why [Virginia law](${WC}) requires most employers to carry Workers’ Compensation insurance, which includes virtually all employers with three or more employees regularly in service in Virginia. And although many people associate dangerous jobs with construction crews or other occupations involving the use of heavy machinery, we know from experience that a workplace accident can happen anywhere, anytime.`,
-          'Some of the common types of Harrisonburg workplace accident that occur include:',
+          'Some of the common types of Harrisonburg workplace accidents that occur include:',
           {
             list: [
               'Slips-and-falls or falls from great heights',
@@ -483,7 +483,7 @@ export const cities: City[] = [
         h: 'Contact a Workers’ Comp Lawyer in Harrisonburg Today',
         body: [
           'At Pathfinder Injury Law, we’re motivated by a genuine desire to defend the rights of injured Harrisonburg workers. We help clients take denied Workers’ Compensation claims to a hearing before the Virginia Workers’ Compensation Commission, and we can talk with you about whether that is an option in your case.',
-          'Call {phone} or [fill out the below form](/contact/) to set up your free case consult with a Harrisonburg Workers’ Comp lawyer from our firm.',
+          'Call {phone} or [fill out the below form](#contact) to set up your free case consult with a Harrisonburg Workers’ Comp lawyer from our firm.',
         ],
       },
     ],
@@ -529,7 +529,7 @@ export const cities: City[] = [
         h: 'Talk to a Workers’ Comp Lawyer in Lynchburg Today',
         body: [
           'If your Workers’ Compensation claim has been delayed or denied, you may want to take action to [seek the benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/) you may be due. At [Pathfinder Injury Law](/), we take pride in advocating on behalf of injured Virginia workers, and we may be able to help with your claim.',
-          'Ready to speak to a Lynchburg Workers’ Comp lawyer with our firm today? Call {phone} or [fill out the form below](/contact/) to schedule your no-hassle, free consultation.',
+          'Ready to speak to a Lynchburg Workers’ Comp lawyer with our firm today? Call {phone} or [fill out the form below](#contact) to schedule your no-hassle, free consultation.',
         ],
       },
     ],
@@ -570,7 +570,7 @@ export const cities: City[] = [
         h: 'Connect with a Workers’ Comp Lawyer in Suffolk, Virginia',
         body: [
           'When you’re hurt in a Suffolk work accident, your financial recovery isn’t always easy. You may have some trouble proving you were injured, and your employer’s insurance company may have already denied you your Workers’ Comp.',
-          'Luckily, a lawyer at [Pathfinder Injury Law](/) can help in these situations. Your Suffolk Workers’ Comp lawyer can help you fight for and even appeal your claim. To take advantage of our free consultations with a lawyer, call {phone} or complete the [online contact form](/contact/) below.',
+          'Luckily, a lawyer at [Pathfinder Injury Law](/) can help in these situations. Your Suffolk Workers’ Comp lawyer can help you fight for and even appeal your claim. To take advantage of our free consultations with a lawyer, call {phone} or complete the [online contact form](#contact) below.',
         ],
       },
     ],
@@ -615,7 +615,7 @@ export const cities: City[] = [
         h: 'Contact a Workers’ Comp Lawyer in Portsmouth',
         body: [
           `When you’re hurt in a serious work accident, it can be tough to recover from the injuries you’ve suffered. Worse, your employer’s insurance company may have already [denied your claim](${DENIALS}), putting you in a worse financial position.`,
-          'Luckily, you don’t have to seek Workers’ Comp benefits without help. At [Pathfinder Injury Law](/), we’re here to help you seek out benefits that meet all your needs. Your journey to compensation starts with a Portsmouth Workers’ Comp lawyer. To learn more during a free consultation, reach out by calling {phone} or by completing the [online contact form](/contact/) below.',
+          'Luckily, you don’t have to seek Workers’ Comp benefits without help. At [Pathfinder Injury Law](/), we’re here to help you seek out benefits that meet all your needs. Your journey to compensation starts with a Portsmouth Workers’ Comp lawyer. To learn more during a free consultation, reach out by calling {phone} or by completing the [online contact form](#contact) below.',
         ],
       },
     ],
@@ -655,7 +655,7 @@ export const cities: City[] = [
         h: 'Seek Help from a Workers’ Comp Lawyer in Newport News',
         body: [
           'Injured in a Newport News work accident? You may already be struggling to prove you’re due Workers’ Comp benefits for your injuries. Worse, you may have already been denied that compensation. But you don’t have to seek your benefits alone; Pathfinder Injury Law is here to help.',
-          'When you’re hurt on the job, you may need a guide to get the Workers’ Comp benefits you’re due. Your Newport News Workers’ Comp lawyer can be that guide, and they can get you started with a free consultation. To work with a lawyer, reach out to us by calling {phone}. You can also contact us through the [online contact form](/contact/) below.',
+          'When you’re hurt on the job, you may need a guide to get the Workers’ Comp benefits you’re due. Your Newport News Workers’ Comp lawyer can be that guide, and they can get you started with a free consultation. To work with a lawyer, reach out to us by calling {phone}. You can also contact us through the [online contact form](#contact) below.',
         ],
       },
     ],
@@ -703,7 +703,7 @@ export const cities: City[] = [
         h: 'Contact a Workers’ Comp Lawyer in Roanoke',
         body: [
           'When you’re hurt in a Roanoke work accident, you have opportunities to seek compensation and overcome the injuries you’ve suffered. Unfortunately, you may have trouble getting your Workers’ Comp, especially if your employer has already denied you before.',
-          'But you don’t have to accept a denial and handle your losses on your own. A lawyer at Pathfinder Injury Law can guide you through the tough parts of getting your Workers’ Comp settled. When you’re ready to seek compensation, start with a free consultation with a Roanoke Workers’ Comp lawyer by calling {phone} or by completing the [online contact form](/contact/) below.',
+          'But you don’t have to accept a denial and handle your losses on your own. A lawyer at Pathfinder Injury Law can guide you through the tough parts of getting your Workers’ Comp settled. When you’re ready to seek compensation, start with a free consultation with a Roanoke Workers’ Comp lawyer by calling {phone} or by completing the [online contact form](#contact) below.',
         ],
       },
     ],
@@ -734,7 +734,7 @@ export const cities: City[] = [
       {
         h: 'What if My Workers’ Comp Claim Is Denied?',
         body: [
-          `When you were hurt in a [Hampton work accident](/how-faulty-equipment-causes-workplace-injuries/), you may at least have been relieved to think your Workers’ Comp benefits would arrive soon. Then, you received a denial letter in the mail.`,
+          `When you were hurt in a Hampton work accident, you may at least have been relieved to think your Workers’ Comp benefits would arrive soon. Then, you received a denial letter in the mail.`,
           `When this happens, you’re not out of options. Your denial letter should explain the reason for the denial, which may be your first step toward your benefits. Once you know why you were denied, you and your Workers’ Comp lawyer can gather stronger evidence that you were injured and [are due compensation](${HOW_TO_FILE}).`,
           'If the insurance company still refuses to settle with you, your Workers’ Comp lawyer is prepared to take your claim to a hearing with the Virginia Workers’ Compensation Commission. The Commission will hear your claim and decide the case.',
         ],
@@ -742,7 +742,7 @@ export const cities: City[] = [
       {
         h: 'Call a Workers’ Comp Lawyer in Hampton, Virginia',
         body: [
-          'After you’re hurt in a work accident, you may have trouble getting the benefits you’re due as an injured Hampton worker. Luckily, you don’t have to deal with your work injury alone. Your lawyer from Pathfinder Injury Law can guide you to the benefits you need, starting your journey to Workers’ Comp benefits with a free consultation. Work with a Hampton Workers’ Comp lawyer by calling {phone} or by completing the [online contact form](/contact/) below.',
+          'After you’re hurt in a work accident, you may have trouble getting the benefits you’re due as an injured Hampton worker. Luckily, you don’t have to deal with your work injury alone. Your lawyer from Pathfinder Injury Law can guide you to the benefits you need, starting your journey to Workers’ Comp benefits with a free consultation. Work with a Hampton Workers’ Comp lawyer by calling {phone} or by completing the [online contact form](#contact) below.',
         ],
       },
     ],
@@ -819,7 +819,7 @@ export const cities: City[] = [
         h: 'Why Was My Workers’ Comp Claim Denied?',
         body: [
           'If something goes wrong with your Workers’ Comp claim, you may be denied benefits. Luckily, this isn’t the end of your claim. You may need a Workers’ Comp lawyer in Chesapeake to help you review the denial and seek Workers’ Comp benefits for your work-related injuries.',
-          `For example, your [denial letter](https://workcomp.virginia.gov/forms/rejection-coverage-form-16a) may have listed that you didn’t act in time for your Workers’ Comp benefits. ${DEADLINE} If you believe you did act on time, your Workers’ Comp lawyer can seek evidence based on when you filed. They can then help you take your claim to a hearing with the Virginia Workers’ Compensation Commission.`,
+          `For example, your [denial letter](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) may have listed that you didn’t act in time for your Workers’ Comp benefits. ${DEADLINE} If you believe you did act on time, your Workers’ Comp lawyer can seek evidence based on when you filed. They can then help you take your claim to a hearing with the Virginia Workers’ Compensation Commission.`,
         ],
       },
       {
@@ -833,7 +833,7 @@ export const cities: City[] = [
       {
         h: 'Talk to a Workers’ Comp Lawyer in Chesapeake',
         body: [
-          'If you’ve been hurt on the job, you may need help getting the Workers’ Comp benefits you’re due for your injuries. [Pathfinder Injury Law](/) can help you file a claim, seek your Workers’ Comp benefits, and get compensated fairly for your injuries. You can even speak to a Chesapeake Workers’ Comp lawyer during a free consultation when you call {phone} or fill out the [online contact form](/contact/) below.',
+          'If you’ve been hurt on the job, you may need help getting the Workers’ Comp benefits you’re due for your injuries. [Pathfinder Injury Law](/) can help you file a claim, seek your Workers’ Comp benefits, and get compensated fairly for your injuries. You can even speak to a Chesapeake Workers’ Comp lawyer during a free consultation when you call {phone} or fill out the [online contact form](#contact) below.',
         ],
       },
     ],
@@ -852,7 +852,7 @@ export const cities: City[] = [
     intro: [
       'If you’ve been hurt at work, you may be eligible for Workers’ Comp benefits that can help you recover from your injuries. Contact a workers comp lawyer in Norfolk for help getting compensated for those losses.',
       'When something goes wrong at work, you could suffer some harsh consequences for it. Your injuries may be devastating, and worse, you may be denied Workers’ Comp benefits. Those benefits would have helped you recover, so now what can you do?',
-      `Now is the time to rely on a Norfolk Workers’ Comp lawyer. A qualified and experienced lawyer at [Pathfinder Injury Law](${WC}) can help you get your Workers’ Comp benefits covered, so you can spend time on your health, not on your Workers’ Comp claim.`,
+      `Now is the time to rely on a Norfolk Workers’ Comp lawyer. A qualified and experienced lawyer at [Pathfinder Injury Law](/) can help you get your Workers’ Comp benefits covered, so you can spend time on your health, not on your Workers’ Comp claim.`,
     ],
     sections: [
       {
@@ -898,7 +898,7 @@ export const cities: City[] = [
         h: 'Am I Eligible for Workers’ Comp?',
         body: [
           'When you’re hurt in a serious Virginia Beach work accident, you may be worried about whether you’re eligible for benefits at all. But you can’t afford recovery time away from work or long-term treatment for your injuries. What can you do?',
-          `Luckily, most Virginia Beach workers are [eligible for Workers’ Comp benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/). ${EMPLOYER_THRESHOLD} If your employer still denies your claim, your workers comp lawyer can help you prove you’re due Workers’ Comp benefits.`,
+          `Luckily, most Virginia Beach workers are [eligible for Workers’ Comp benefits](/how-to-qualify-for-workers-comp-in-virginia/). ${EMPLOYER_THRESHOLD} If your employer still denies your claim, your workers comp lawyer can help you prove you’re due Workers’ Comp benefits.`,
         ],
       },
       {
@@ -920,7 +920,7 @@ export const cities: City[] = [
         h: 'Seek Out a Workers’ Comp Lawyer in Virginia Beach',
         body: [
           'Your Virginia Beach work accident may have devastated you and your family. You can’t work, you’re in debt, and you’re struggling to deal with the losses you’re facing. Luckily, you don’t have to face this difficult, confusing time alone.',
-          'You can instead work with our team at Pathfinder Injury Law. Your Virginia Beach Workers’ Comp lawyer can be your guide when you’re struggling to get compensated. To take advantage of your free consultation, reach out by calling {phone} or by completing the [online contact form](/contact/) below.',
+          'You can instead work with our team at Pathfinder Injury Law. Your Virginia Beach Workers’ Comp lawyer can be your guide when you’re struggling to get compensated. To take advantage of your free consultation, reach out by calling {phone} or by completing the [online contact form](#contact) below.',
         ],
       },
     ],

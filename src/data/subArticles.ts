@@ -500,6 +500,7 @@ export const subArticles: SubArticle[] = [
           'But let’s say you injured your back at work. You may be unable to perform all your usual tasks at work, but you’re able to work to some degree. In these cases, you may receive wages for the work you’re able to do, as well as partial disability benefits. ' +
             TPD +
             ' Your Workers’ Comp lawyer can go through the details of your Workers’ Comp payments with you.',
+          'Wondering about taxes on these checks? Read [Are Workers’ Comp benefits taxable?](/are-workers-comp-benefits-taxable/)',
         ],
       },
     ],
@@ -551,10 +552,10 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'how-is-workers-comp-calculated-in-virginia',
-    title: "How Is Workers’ Comp Benefits Calculated in Virginia?",
+    title: "How Are Workers’ Comp Benefits Calculated in Virginia?",
     description:
       "How is workers’ comp calculated in Virginia? Pathfinder Injury Law has what you need to know for your work injury case.",
-    h1: 'How Is Workers’ Comp Benefits Calculated in Virginia?',
+    h1: 'How Are Workers’ Comp Benefits Calculated in Virginia?',
     crumb: 'How Benefits Are Calculated',
     intro: [
       'After a serious work accident, you may need Workers’ Comp to cover your expenses. But how is Workers’ Comp calculated in Virginia? That can be tough to answer without the right tools.',
@@ -677,7 +678,7 @@ export const subArticles: SubArticle[] = [
         ],
       },
       {
-        h2: 'Virginia’s Worker Comp Claim Process',
+        h2: 'Virginia’s Workers’ Comp Claim Process',
         blocks: [
           'Getting Workers’ Comp coverage isn’t always easy. You need to take the right steps to protect your claim and get the funds you’re due.',
           'For example, you’ll first need to act fast and [report your injury](https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf) as soon as possible. ' + NOTICE + ' ' + FILING + ' Once you report your Virginia work accident, your employer must contact the insurance company about coverage and your benefits.',

@@ -5,3 +5,16 @@
 # The feed is written to feed/index.html so /feed/ resolves; this says it is RSS.
 /feed/
   Content-Type: application/rss+xml; charset=utf-8
+
+# Browser caching. Pages (HTML) keep the default and are re-checked on every visit.
+# Files under /_astro/ have a content fingerprint in their names, so a changed file
+# gets a new name: they can be kept for a year.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images and fonts keep their names when replaced, so keep them for one day only.
+/images/*
+  Cache-Control: public, max-age=86400
+
+/fonts/*
+  Cache-Control: public, max-age=86400
