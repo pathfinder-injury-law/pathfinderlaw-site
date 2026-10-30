@@ -17,6 +17,11 @@ const topics = [
   { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', icon: 'spine' },
 ];
 
+const team = [
+  { name: 'Bryn Swartz', role: 'Owner and Attorney', href: '/bryn-swartz/', img: '/images/photos/bryn-round.webp' },
+  { name: 'Mandy Truman', role: 'Firm Administrator', href: '/mandy-truman/', img: '/images/photos/mandy-round.webp' },
+];
+
 const traits = ['Local', 'Experienced', 'Focused', 'Fighting Spirit', 'Calming Presence'];
 
 const results = [
@@ -71,6 +76,23 @@ const results = [
       </div>
     </div>
     <TornEdge fill="var(--white)" />
+  </section>
+
+  <!-- Team: two round portraits sitting on the torn edge of the hero. -->
+  <section class="team-peek" aria-label="Meet your team">
+    <div class="wrap">
+      <ul class="peek-list">
+        {team.map((p) => (
+          <li>
+            <a class="peek" href={p.href}>
+              <img src={p.img} alt="" width="360" height="360" />
+              <span class="peek-text"><strong>{p.name}</strong><span>{p.role}</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="peek-line">A family firm. You talk to us, not a call center.</p>
+    </div>
   </section>
 
   <!-- Intro -->
