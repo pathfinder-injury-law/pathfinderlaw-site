@@ -1,0 +1,29 @@
+# Dependabot: once a week GitHub checks for newer versions of the site's building blocks
+# (npm packages such as Astro and Wrangler) and of the GitHub Actions the checks use.
+# Each update arrives as a pull request. Small updates (minor and patch versions) are grouped
+# into one pull request per week. Security fixes arrive as soon as they are published.
+# Approve and merge one when its checks are green, the same as any other change.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '06:00'
+      timezone: America/New_York
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-and-patch:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '06:00'
+      timezone: America/New_York
+    groups:
+      actions-minor-and-patch:
+        update-types: [minor, patch]
