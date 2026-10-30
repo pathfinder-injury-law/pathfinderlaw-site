@@ -5,8 +5,3 @@
 # The feed is written to feed/index.html so /feed/ resolves; this says it is RSS.
 /feed/
   Content-Type: application/rss+xml; charset=utf-8
-
-# TEMPORARY (Oct 30, 2026): the launch-test hostname must never appear in search results.
-# Remove this block with the test hostname after the form test.
-https://formtest.pathfinderlaw.com/*
-  X-Robots-Tag: noindex, nofollow
