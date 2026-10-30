@@ -63,24 +63,23 @@ const SUBJECT_MARK: Record<string, string> = {
   not_configured: ' - TURNSTILE NOT CONFIGURED',
 };
 
+// A clean lead email holds only the four things the person typed. A note line goes on top
+// only when something needs a second look (screening, the spam check, or the form log).
 export function emailBody(sub: Submission, o: { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string }) {
-  return [
-    `Form: ${sub.form === 'sidebar' ? 'sidebar' : 'main contact'} form`,
-    `Screening: ${o.outcome} (${o.reason})`,
-    `Bot check (Turnstile): ${TURNSTILE_LINE[o.turnstile ?? 'skipped'] ?? o.turnstile}`,
+  const ts = o.turnstile ?? 'skipped';
+  const notes = [
+    ...(o.outcome === 'lead' ? [] : [`Screening: ${o.outcome} (${o.reason})`]),
+    ...(ts === 'pass' || ts === 'skipped' ? [] : [`Bot check (Turnstile): ${TURNSTILE_LINE[ts] ?? ts}`]),
     ...(o.logged ? [] : ['WARNING: the form log was unavailable, so this submission was NOT saved to the database. This email is the only record.']),
-    '',
+  ];
+  return [
+    ...(notes.length ? [...notes, ''] : []),
     `Name: ${sub.name}`,
     `Email: ${sub.email}`,
     `Phone: ${sub.phone}`,
     '',
     'Message:',
     sub.message,
-    '',
-    '---',
-    'The sender confirmed that sending this form does not create an attorney-client relationship and that Pathfinder Injury Law has not agreed to represent them. Treat as confidential.',
-    `Reference: ${o.id}`,
-    'Reply to this email to reach the sender.',
   ].join('\n');
 }
 
