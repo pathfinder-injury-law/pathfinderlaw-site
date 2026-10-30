@@ -11,6 +11,7 @@ export interface D1Database {
 }
 export interface KVNamespace {
   get(key: string): Promise<string | null>;
+  put?(key: string, value: string, opts?: { expirationTtl?: number }): Promise<void>;
 }
 
 export interface Env {

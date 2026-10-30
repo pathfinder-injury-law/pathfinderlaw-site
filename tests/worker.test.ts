@@ -104,11 +104,54 @@ test('Turnstile failure: logged, not emailed, refused', async () => {
   assert.equal(row.reason, 'turnstile_failed'); assert.equal(row.turnstile, 'fail'); assert.equal(gmail(calls).length, 0);
 });
 
-test('Turnstile outage does not block a real person', async () => {
+test('Turnstile outage does not block a real person: delivered, marked spam check unavailable', async () => {
   const env = liveEnv(); const { deps, calls } = makeWorld({ turnstile: 'down' });
   const res = await handleContact(post(goodInput()), env, deps);
   assert.equal(res.status, 200);
   assert.equal(rows(env)[0].turnstile, 'error'); assert.equal(gmail(calls).length, 1);
+  const { head, body } = decodeRaw(gmail(calls)[0]);
+  assert.match(head, /Subject: Website inquiry \(main form\) - spam check unavailable/);
+  assert.match(body, /Bot check \(Turnstile\): spam check unavailable/);
+  assert.match(body, /my claim was denied/);
+});
+
+test('lead email shows the Turnstile result "pass" (launch-day phone test)', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld();
+  await handleContact(post(goodInput()), env, deps);
+  const { head, body } = decodeRaw(gmail(calls)[0]);
+  assert.match(body, /^Bot check \(Turnstile\): pass$/m);
+  assert.match(head, /Subject: Website inquiry \(main form\)\r?\n/);
+});
+
+test('missing TURNSTILE_SECRET: lead still delivered, marked, alarm pinged at most once an hour', async () => {
+  const logged: string[] = [];
+  const orig = console.error; console.error = (...a) => void logged.push(a.join(' '));
+  try {
+    const kv = makeKv(JSON.stringify(STARTER_RULES));
+    const env = liveEnv({ TURNSTILE_SECRET: undefined, SETTINGS: kv }); const { deps, calls } = makeWorld();
+    const res = await handleContact(post(goodInput()), env, deps);
+    assert.equal(res.status, 200);
+    const [row] = rows(env);
+    assert.equal(row.turnstile, 'not_configured'); assert.equal(row.delivery_status, 'sent'); assert.equal(row.outcome, 'lead');
+    const { head, body } = decodeRaw(gmail(calls)[0]);
+    assert.match(head, /Subject: Website inquiry \(main form\) - TURNSTILE NOT CONFIGURED/);
+    assert.match(body, /Bot check \(Turnstile\): TURNSTILE NOT CONFIGURED/);
+    assert.ok(!calls.some((c) => c.url.includes('siteverify')));
+    const alerts = () => calls.filter((c) => c.url === 'https://hb.example/fail').length;
+    assert.equal(alerts(), 1);
+    assert.deepEqual(kv.puts, [{ key: 'alert-sent:turnstile_not_configured', ttl: 3600 }]);
+    assert.match(logged.join('\n'), /"event":"turnstile_not_configured"/);
+    // A second lead within the hour is delivered too, without a second alarm.
+    await handleContact(post(goodInput({ email: 'second@example.com' })), env, deps);
+    assert.equal(gmail(calls).length, 2); assert.equal(alerts(), 1);
+  } finally { console.error = orig; }
+});
+
+test('missing TURNSTILE_SECRET with the settings store down: still delivered and alarm still pinged', async () => {
+  const env = liveEnv({ TURNSTILE_SECRET: undefined, SETTINGS: makeKv('throw') }); const { deps, calls } = makeWorld();
+  assert.equal((await handleContact(post(goodInput()), env, deps)).status, 200);
+  assert.equal(gmail(calls).length, 1);
+  assert.ok(calls.some((c) => c.url === 'https://hb.example/fail'));
 });
 
 test('too fast: emailed with [Screened]', async () => {

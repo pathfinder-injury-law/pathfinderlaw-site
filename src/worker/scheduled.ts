@@ -105,6 +105,7 @@ export async function buildDigest(env: Env, deps: Deps): Promise<{ subject: stri
   const errors = {
     sendFailures: yesterday.filter((r) => r.delivery_status === 'failed').length,
     turnstileErrors: yesterday.filter((r) => r.turnstile === 'error').length,
+    turnstileNotConfigured: yesterday.filter((r) => r.turnstile === 'not_configured').length,
     rulesErrors: yesterday.filter((r) => r.reason === 'rules_error').length,
   };
 
@@ -130,10 +131,13 @@ export async function buildDigest(env: Env, deps: Deps): Promise<{ subject: stri
   lines.push(`- Morning self-test rows yesterday: ${testRows.length} (${testRows.filter((r) => r.delivery_status === 'sent').length} delivered)`);
   lines.push('');
   lines.push(`Errors yesterday: ${errors.sendFailures} failed send(s), ${errors.turnstileErrors} bot-check error(s), ${errors.rulesErrors} rules error(s).`);
+  if (errors.turnstileNotConfigured) {
+    lines.push(`TURNSTILE NOT CONFIGURED on ${errors.turnstileNotConfigured} submission(s): the TURNSTILE_SECRET secret is missing, so no bot check ran. Add it in the Cloudflare dashboard.`);
+  }
   if ((twoDayCount?.n ?? 0) === 0) {
     lines.push('', 'NOTE: no submissions at all in the last two days. If that is unusual, test the form from a phone.');
   }
-  const flag = undelivered.length || errors.sendFailures ? ' (ATTENTION)' : '';
+  const flag = undelivered.length || errors.sendFailures || errors.turnstileNotConfigured ? ' (ATTENTION)' : '';
   return { subject: `Form digest: ${leads.length} lead(s), ${screened.length} screened${flag}`, body: lines.join('\n') };
 }
 

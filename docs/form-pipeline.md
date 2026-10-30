@@ -22,7 +22,8 @@ How the website's contact forms work, what a person must do before launch, and h
 | Hidden trap field filled in (a bot) | yes, as screened | no | Looks like success (so the bot learns nothing) |
 | Turnstile says "not human" | yes, as screened | no | Failure message with the phone number |
 | Rules store missing or broken | yes, as unsure | yes, as a normal lead | Thank-you page |
-| Turnstile service unreachable | yes | yes (a Cloudflare outage must not cost a lead) | Thank-you page |
+| Turnstile service unreachable | yes | yes (a Cloudflare outage must not cost a lead), subject ends "- spam check unavailable" | Thank-you page |
+| `TURNSTILE_SECRET` missing (setup mistake) | yes | yes, subject ends "- TURNSTILE NOT CONFIGURED"; `ALERT_URL` pinged (at most once an hour) and the code `turnstile_not_configured` logged | Thank-you page |
 | Database down | no (email only, flagged "NOT saved") | yes | Thank-you page, and the alarm fires |
 | Gmail refuses or is down | yes, marked failed | no | Failure message with the phone number, alarm fires |
 | Missing acknowledgement or bad field | no | no | "Please check the fields" |
@@ -41,6 +42,8 @@ How the website's contact forms work, what a person must do before launch, and h
 - Spam (rows marked screened) is deleted after 90 days by the daily job. Leads and unsure rows are kept.
 - Every submission, screened ones included, is treated as confidential.
 - The email footer repeats that no attorney-client relationship exists and that the sender acknowledged this.
+- Every lead email has a line "Bot check (Turnstile): ..." showing `pass`, `fail`, `spam check unavailable` or `TURNSTILE NOT CONFIGURED`. The launch-day test from a phone should show `pass`.
+- The once-an-hour limit on the "Turnstile not configured" alarm is a self-expiring key (`alert-sent:turnstile_not_configured`) in the same settings store as the rules. It needs no setup and can be ignored.
 - On a death claim or an incident that hurt more than one worker, run a conflict check on the names before reading further (plan rule).
 
 ### Daily jobs (cron)

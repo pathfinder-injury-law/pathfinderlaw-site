@@ -18,8 +18,21 @@ export function makeDb() {
 
 export const STARTER_RULES = JSON.parse(readFileSync(new URL('../docs/starter-rules.json', import.meta.url), 'utf8'));
 
+// The settings store: key "rules" holds `value`; any other key (alert markers) is kept in memory.
 export function makeKv(value: string | null | 'throw') {
-  return { get: async () => { if (value === 'throw') throw new Error('kv down'); return value; } };
+  const other = new Map<string, string>();
+  const puts: { key: string; ttl?: number }[] = [];
+  return {
+    puts,
+    get: async (key: string) => {
+      if (value === 'throw') throw new Error('kv down');
+      return key === 'rules' ? value : other.get(key) ?? null;
+    },
+    put: async (key: string, v: string, o?: { expirationTtl?: number }) => {
+      if (value === 'throw') throw new Error('kv down');
+      other.set(key, v); puts.push({ key, ttl: o?.expirationTtl });
+    },
+  };
 }
 
 export function fakeServiceAccountKey() {
