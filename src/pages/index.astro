@@ -23,6 +23,11 @@ const topics = [
   { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', icon: 'spine' },
 ];
 
+const team = [
+  { name: 'Bryn Swartz', role: 'Owner and Attorney', href: '/bryn-swartz/', img: '/images/photos/bryn-round.webp' },
+  { name: 'Mandy Truman', role: 'Firm Administrator', href: '/mandy-truman/', img: '/images/photos/mandy-round.webp' },
+];
+
 const traits = ['Local', 'Experienced', 'Focused', 'Fighting Spirit', 'Calming Presence'];
 
 const results = [
@@ -73,7 +78,7 @@ const results = [
       <img class="hero-photo" src="/images/photos/hero-over-shoulder-desktop.webp" srcset={heroSet('desktop', 'webp')} sizes="100vw" alt="" width="1376" height="768" fetchpriority="high" />
     </picture>
     <div class="wrap">
-      <h1 class="hero-kicker">Virginia Workers’ Comp Lawyer</h1>
+      <div class="hero-kicker"><h1>Virginia Workers’ Comp Lawyer</h1><span class="kicker-dot" aria-hidden="true">•</span><span class="kicker-more">A Family Firm</span></div>
       <span class="rule" aria-hidden="true"></span>
       <p class="hero-l1">Hurt at work?</p>
       <p class="hero-l2">Let’s go.</p>
@@ -82,6 +87,22 @@ const results = [
       </div>
     </div>
     <TornEdge fill="var(--white)" />
+  </section>
+
+  <!-- Team: two round portraits sitting on the torn edge of the hero. -->
+  <section class="team-peek" aria-label="Meet your team">
+    <div class="wrap">
+      <ul class="peek-list">
+        {team.map((p) => (
+          <li>
+            <a class="peek" href={p.href}>
+              <img src={p.img} alt="" width="360" height="360" />
+              <span class="peek-text"><strong>{p.name}</strong><span>{p.role}</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   </section>
 
   <!-- Intro -->

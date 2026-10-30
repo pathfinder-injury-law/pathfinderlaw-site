@@ -827,6 +827,27 @@ body:not(.has-overlay) main {
   color: var(--forest);
   text-wrap: wrap;
 }
+/* "Virginia Workers' Comp Lawyer" stays the only text in the h1; "A Family Firm" sits beside it. */
+.hero-kicker h1 {
+  display: inline;
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+.kicker-dot {
+  margin: 0 0.55em 0 0.35em;
+  color: var(--moss);
+}
+/* Phones: "A Family Firm" drops to its own line, without the dot. */
+@media (max-width: 47.99rem) {
+  .kicker-dot {
+    display: none;
+  }
+  .kicker-more {
+    display: block;
+  }
+}
 .hero-l1,
 .hero-l2 {
   margin: 0;
@@ -2251,6 +2272,105 @@ mark {
 }
 .main-nav .m-group[open] > summary::after {
   transform: rotate(225deg) translate(-2px, -2px);
+}
+
+/* ---------- Home: team portraits peeking up from the hero's torn edge ---------- */
+/* The hero fills the first screen minus a sliver, so only the tops of our heads show at the bottom
+   when the page opens, inviting a scroll. --team-peek is how much of the photos shows above the fold;
+   --team-overlap is how far they reach up into the hero. */
+:root {
+  --team-peek: 4.5rem;
+  --team-overlap: 4.9rem;
+}
+.team-peek {
+  position: relative;
+  z-index: 3;
+  margin-top: calc(-1 * var(--team-overlap));
+}
+.peek-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: clamp(0rem, 6.3vw, 6rem);
+  gap: clamp(1.25rem, 2.2vw, 2rem);
+}
+.peek {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--forest);
+}
+.peek img {
+  display: block;
+  width: clamp(13rem, 20vw, 18rem);
+  height: clamp(13rem, 20vw, 18rem);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 7px solid var(--white);
+  box-shadow: 0 0.75rem 1.75rem rgba(41, 70, 52, 0.25);
+}
+.peek-text strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+}
+.peek-text span {
+  display: block;
+  font-size: 1rem;
+  color: var(--pine);
+}
+.peek:hover strong {
+  text-decoration: underline;
+  text-decoration-color: var(--sun);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.2em;
+}
+@media (min-width: 48rem) {
+  .hero {
+    min-height: clamp(40rem, calc(100svh - var(--team-peek) + var(--team-overlap)), 100rem);
+  }
+}
+/* Portrait tablets: the taller hero would leave a band of empty sky, so the photo grows up to fill it
+   (trimming a little from the left, never the hiker). */
+@media (min-width: 48rem) and (max-width: 79.99rem) and (orientation: portrait) {
+  .hero-photo {
+    width: 100%;
+    height: calc(100% - 24rem);
+    object-fit: cover;
+    object-position: 100% 100%;
+  }
+}
+/* Phones: the floating Call/Message bar covers the bottom 4.75rem, so the peek sits above it. The hero
+   never drops below its usual 37rem, so the button never lands on the hiker. */
+@media (max-width: 47.99rem) {
+  :root {
+    --team-peek: 2.25rem;
+    --team-overlap: 2rem;
+  }
+  .hero {
+    min-height: max(37rem, calc(100svh - 4.75rem - var(--team-peek) + var(--team-overlap)));
+  }
+  .peek-list {
+    justify-content: center;
+    padding-left: 0;
+    gap: 1rem;
+  }
+  .peek img {
+    width: min(9rem, 40vw);
+    height: min(9rem, 40vw);
+    border-width: 4px;
+  }
+  .peek-text strong {
+    font-size: 1.05rem;
+  }
+  .peek-text span {
+    font-size: 0.85rem;
+  }
 }
 
 /* ---------- Page-to-page transitions ---------- */
