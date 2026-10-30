@@ -1,0 +1,49 @@
+---
+// "Back to top" button. Hidden until the visitor has scrolled about one screen down.
+// It sits bottom right: on phones and tablets just above the Call / Message bar, and it
+// steps aside whenever it would cover a form's Send button. Hidden when printing.
+// Without JavaScript it never shows (the page works the same without it).
+---
+<button class="to-top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+</button>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.to-top');
+  if (btn) {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const sendButtons = Array.from(document.querySelectorAll<HTMLElement>('form button[type="submit"]'));
+    let queued = false;
+
+    // True when the button's spot on screen overlaps a Send button (with a little room to spare).
+    const coversSend = () => {
+      const b = btn.getBoundingClientRect();
+      const pad = 12;
+      return sendButtons.some((s) => {
+        const r = s.getBoundingClientRect();
+        return r.width > 0 && r.left < b.right + pad && r.right > b.left - pad && r.top < b.bottom + pad && r.bottom > b.top - pad;
+      });
+    };
+
+    const update = () => {
+      queued = false;
+      const far = window.scrollY > window.innerHeight * 0.9;
+      // Keep showing it while it has keyboard focus, so focus is never lost into a hidden button.
+      const show = (far && !coversSend()) || (far && document.activeElement === btn);
+      btn.classList.toggle('is-shown', show);
+    };
+    const queue = () => {
+      if (!queued) { queued = true; requestAnimationFrame(update); }
+    };
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue, { passive: true });
+    update();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduce.matches ? 'instant' : 'smooth' });
+      // Screen reader and keyboard users land at the top too: the header is the first thing on the page.
+      const top = document.getElementById('top');
+      top?.focus({ preventScroll: true });
+    });
+  }
+</script>
