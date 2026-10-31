@@ -12,10 +12,22 @@ import BioPage from '../../components/BioPage.astro';
 //    reworded to checkable facts.
 //  - The sidebar said "Cum Laude" for Randolph-Macon while the biography says "magna cum laude";
 //    the sidebar now matches the biography. Bryn to confirm.
-const title = 'Bryn Swartz - Pathfinder Injury Law';
+//  - Oct 31 SEO rewrite: career facts from Bryn (licensed 2011; former prosecutor with the Virginia
+//    Office of the Attorney General; claimant and defense firms; Pathfinder since 2019; thousands of
+//    comp cases; hundreds of mediations). No hearing count: Bryn doesn't have one.
+const title = 'Bryn Swartz, Virginia Workers’ Comp Lawyer | Pathfinder';
 const description =
-  "Don't worry about work injuries all on your own. Call Bryn Swartz of Pathfinder Injury Law to discuss your Virginia workers' comp case.";
+  'Bryn Swartz, licensed in Virginia since 2011, has handled thousands of workers’ comp cases on both sides before founding Pathfinder Injury Law.';
 const facts = [
+  {
+    heading: 'Experience',
+    items: [
+      'Licensed in Virginia, 2011',
+      'Former prosecutor, Virginia Office of the Attorney General',
+      'Workers’ comp for injured workers and for employers and insurers',
+      'Founded Pathfinder Injury Law, 2019',
+    ],
+  },
   {
     heading: 'Education',
     items: [
@@ -37,41 +49,58 @@ const facts = [
   facts={facts}
 >
   <p class="lead">
-    Bryn founded Pathfinder Injury Law to pursue his goal to give every client the diligent,
-    attentive service they need in the midst of a work-related injury.
+    Bryn Swartz is a Virginia workers’ compensation lawyer and the owner of Pathfinder Injury Law in
+    Richmond. He has been licensed in Virginia since 2011 and has handled thousands of workers’ comp
+    cases, first at firms on both the injured worker’s side and the insurance company’s side, and
+    since 2019 at Pathfinder, where he represents only people hurt at work in Virginia.
   </p>
 
-  <h2 id="about">About Bryn Swartz</h2>
+  <h2 id="experience">Experience</h2>
   <p>
-    Bryn Swartz is the owner of Pathfinder Injury Law, a conscientiously small, boutique Workers’
-    Compensation law firm in Richmond. Bryn’s entire practice consists of helping people hurt at work
-    in Virginia. He was born and raised in Richmond, Virginia, the son of two musicians and
-    schoolteachers. After dropping out of college to go on tour and make albums with his punk band,
-    he resumed his education at Randolph-Macon College. He graduated in 2008 magna cum laude, in the
-    top seven percent of his class, and with membership in the Phi Beta Kappa honor society. He then
-    attended law school at the University of Richmond School of Law, from which he graduated magna
-    cum laude, in the top eleven percent of his class, and with membership in the Walter Scott McNeill
-    Law Honor Society.
+    Bryn started his career as a prosecutor with the Virginia Office of the Attorney General,
+    prosecuting online crimes against children. He then moved into workers’ compensation, working at
+    firms that represented injured workers and at firms that defended employers and their insurance
+    companies.
   </p>
   <p>
-    Bryn has handled
-    <a href="/virginia-workers-comp-lawyer/">Workers’ Compensation</a> cases through the process of
-    filing claims, conducting discovery, litigating hearings, and pursuing review appeals. He has
-    worked on both claimant- and defense-side of the Virginia Workers’ Compensation system. The
-    genesis of Pathfinder Injury Law began when Bryn was laid off from a claimant-side law firm the
-    day his son was born in 2019. He and his wife Mandy Truman founded Pathfinder sitting in
-    the hospital room while Mandy was recovering from a C-section with a brand new baby boy, nothing
-    to lose, and the whole world to gain. Bryn does his work wearing shorts and a NORML
-    or mountain biking tee shirt. He firmly disavows the fallacy that one must wear a suit or
-    uncomfortable shoes or have a dumb, self-serious office to be a great lawyer and a fierce client
-    advocate. He is well known amongst his peers as a diligent, resourceful, and…unconventional
-    lawyer. He prefers to do his job while riding his beloved Yeti SB130 mountain bike lost in the
-    woods on the side of a mountain somewhere.
+    He has handled thousands of
+    <a href="/virginia-workers-comp-lawyer/">Virginia workers’ compensation</a> cases through every
+    stage: filing claims, discovery, hearings before the Commission, and review appeals. He has taken
+    part in hundreds of mediations to settle them. His years on the defense side mean he has seen from
+    the inside how insurance companies and their lawyers evaluate a claim, from the first
+    <a href="/insurance-recorded-statement/">recorded statement</a> to the
+    <a href="/workers-comp-settlement-in-virginia/">settlement</a> offer.
+  </p>
+
+  <h2 id="pathfinder">Why He Started Pathfinder</h2>
+  <p>
+    Bryn was laid off from a claimant-side law firm the day his son was born in 2019. He and his wife
+    Mandy Truman founded Pathfinder sitting in the hospital room while Mandy was recovering from a
+    C-section with a brand new baby boy, nothing to lose, and the whole world to gain. Pathfinder is a
+    conscientiously small firm that handles only Virginia workers’ compensation, so every client gets
+    diligent, attentive service in the middle of a work injury.
   </p>
   <p>
-    He is a member of various professional associations, including the Virginia State Bar and the
-    Virginia Trial Lawyers Association. Outside of law, Bryn
-    loves mountain biking, traveling, eating great food, hanging out with his family and dogs, being
-    a coffee snob, playing drums, and listening to podcasts, audiobooks, and music.
+    Bryn does his work wearing shorts and a NORML or mountain biking tee shirt. He firmly disavows the
+    fallacy that one must wear a suit or uncomfortable shoes or have a dumb, self-serious office to be
+    a great lawyer and a fierce client advocate. He is well known amongst his peers as a diligent,
+    resourceful, and…unconventional lawyer. He prefers to do his job while riding his beloved Yeti
+    SB130 mountain bike lost in the woods on the side of a mountain somewhere.
+  </p>
+
+  <h2 id="about">About Bryn</h2>
+  <p>
+    Bryn was born and raised in Richmond, Virginia, the son of two musicians and schoolteachers. After
+    dropping out of college to go on tour and make albums with his punk band, he resumed his education
+    at Randolph-Macon College. He graduated in 2008 magna cum laude, in the top seven percent of his
+    class, and with membership in the Phi Beta Kappa honor society. He then attended the University of
+    Richmond School of Law, from which he graduated magna cum laude, in the top eleven percent of his
+    class, and with membership in the Walter Scott McNeill Law Honor Society.
+  </p>
+  <p>
+    He is a member of the Virginia State Bar and the Virginia Trial Lawyers Association. Outside of
+    law, Bryn loves mountain biking, traveling, eating great food, hanging out with his family and
+    dogs, being a coffee snob, playing drums, and listening to podcasts, audiobooks, and music. Meet
+    the rest of the <a href="/about-us/">Pathfinder team</a>.
   </p>
 </BioPage>
