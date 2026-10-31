@@ -625,35 +625,70 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'when-does-virginia-workers-comp-start-paying',
-    title: "Virginia Workers Compensation Pay Waiting Period",
+    title: "When Does Workers’ Comp Start Paying? Virginia’s 7-Day Rule",
     description:
-      "When does Virginia workers’ comp start paying? Find out with the help of an experienced work compensation lawyer at Pathfinder Injury Law.",
+      "Virginia workers’ comp wage checks start on day 8 of missed work, and the first 7 days are paid back if you’re out more than 3 weeks. Here’s the timeline.",
     h1: 'When Does Virginia Workers’ Comp Start Paying?',
     crumb: 'When Benefits Start',
     intro: [
-      'After a serious Virginia work accident, you may need Workers’ Comp benefits to cover the expenses you’re not currently able to pay. But when does Virginia Workers’ Comp start paying? You may be worried that your expenses can’t wait.',
-      'Pathfinder Injury Law can help you understand when payments may begin so you can plan for your costs. Your [work compensation lawyer](/virginia-workers-comp-lawyer/) can help you find the quickest path to recovery.',
+      'In Virginia, workers’ comp wage checks do not cover the first seven days you are out of work. Pay starts on the eighth day. If you are out more than three weeks, the insurance company must go back and pay those first seven days too ([Va. Code § 65.2-509](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/)). Medical treatment is different: it is covered from the first day.',
+      'When the first check actually arrives depends on whether the insurance company accepts your claim. Here is how the timing works, what the checks pay, and what to do if they are late or never come.',
     ],
     sections: [
       {
-        h2: 'As Soon as You’re Approved',
+        h2: 'Virginia’s 7-Day Waiting Period, Day by Day',
         blocks: [
-          'If you’ve filed for Workers’ Comp, you may already be on your way to the [benefits you’re due](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide). Once you’ve reported your accident to your employer, they should notify the insurance company. The adjuster should then review your accident and determine whether you’re eligible for compensation. Be careful what you say to the adjuster, and do not assume they are looking out for you.',
-          'If you’re approved, your Workers’ Comp benefits should start coming soon. Your Workers’ Comp should cover your losses as soon as possible so you don’t have to worry about missing bill payments or not being able to cover your necessities. However, there is a seven-day waiting period in Virginia before wage loss benefits begin. Then, if you’re out of work for more than 21 days, the insurance company should go back and pay those first seven days.',
+          {
+            ul: [
+              'Days 1 to 7 out of work: no wage checks. Your medical treatment is still covered.',
+              'Day 8 on: wage checks start.',
+              'Out more than three weeks: wage checks are paid back to day 1.',
+            ],
+          },
+          'The count is calendar days you are unable to work because of the injury, not just workdays ([Va. Code § 65.2-509](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/)).',
         ],
       },
       {
-        h2: 'What if I’m Denied Virginia Workers’ Comp?',
+        h2: 'How Much Do the Checks Pay?',
         blocks: [
-          'Not everyone receives an approval for their Virginia Workers’ Comp right away. You may have first received a denial letter, for example, which means you’ll be waiting longer for your Workers’ Comp payments.',
-          'Luckily, your Workers’ Comp lawyer in Virginia can help you seek Workers’ Comp even if you’ve been denied. They can help you determine why your claim was denied. Then, they can guide you through [disputing the denial](https://www.workcomp.virginia.gov/sites/default/files/documents/Claims-and-Hearings-Flow-Chart.pdf) at a hearing so you can still go after the Workers’ Comp you’re due.',
+          TTD + ' The maximum is tied by law to Virginia’s average weekly wage and changes every July 1, so the one that applies to you depends on your date of injury. For injuries on or after July 1, 2026, the maximum is $1,507.01 a week and the minimum is $376.75 ([Commission rates](https://www.workcomp.virginia.gov/documents/rates-min-max-benefits-cola-mileage); [Va. Code § 65.2-500](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/)). Here’s [how Virginia workers’ comp benefits are calculated](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).',
+          TPD,
+        ],
+      },
+      {
+        h2: 'What Has to Happen Before the First Check',
+        blocks: [
+          {
+            ul: [
+              'Tell your employer about the accident in writing. ' + NOTICE,
+              'Your employer or its insurance company must report the injury to the Commission within 10 days after learning of it ([Va. Code § 65.2-900](https://law.lis.virginia.gov/vacode/title65.2/chapter9/section65.2-900/)).',
+              'File a claim with the Commission, even if the insurance company accepts your injury and starts paying. ' + FILING + ' A filed claim protects that deadline if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).',
+              'After you file, the Commission will order the insurance company to respond to your claim within 30 days. It may accept the claim or deny it.',
+              'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8.',
+            ],
+          },
+          'Be careful what you say to the insurance adjuster, and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/).',
+        ],
+      },
+      {
+        h2: 'What If a Check Is Late?',
+        blocks: [
+          'Virginia law adds a penalty when the insurance company is late. If a payment is not made within two weeks after it becomes due, the law adds 20 percent to the unpaid amount, unless the Commission finds the delay had good cause outside the employer’s control ([Va. Code § 65.2-524](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/)).',
+          'If your checks have stopped or are slow, here’s [what to do when the insurance company delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/).',
+        ],
+      },
+      {
+        h2: 'What If Your Claim Is Denied?',
+        blocks: [
+          'If the insurance company denies your claim, it will not pay wage checks unless the Commission orders it to or the claim is resolved another way. ' + DISPUTE + ' You can ask the Commission for a hearing no matter what the insurance company decides.',
+          'Here’s [what happens if your workers’ comp claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).',
         ],
       },
     ],
     closing: {
-      h2: 'Talk to a Workers’ Comp Lawyer in Virginia About Your Payments',
+      h2: 'Checks Late, Stopped, or Never Started?',
       blocks: [
-        'Your Virginia Workers’ Comp benefits should cover the losses you’ve suffered because of your injuries. But when does Virginia Workers’ Comp start paying? It can take time before you see results. But you don’t have to wait around. Take the first step by contacting [Pathfinder Injury Law](/) for a free consultation. Call {phone} or fill out the online contact form on this page to get help seeking your payments.',
+        'Late or missing checks usually mean a dispute is building: over whether the injury is covered, what your average weekly wage really was, or whether you can do light duty. Each of those turns on medical records, pay records, and deadlines that keep running while you wait. [Pathfinder Injury Law](/) handles only Virginia workers’ compensation claims. Call {phone} or use the {contact} on this page.',
       ],
     },
   },
