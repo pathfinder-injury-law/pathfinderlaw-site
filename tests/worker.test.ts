@@ -5,6 +5,7 @@ import { resetTokenCache } from '../src/worker/google.ts';
 import { decide, findLinkHosts } from '../src/worker/screen.ts';
 import { buildDailyCheck, etDayRange, runDailyCheck, runPurge, runSelfTest } from '../src/worker/scheduled.ts';
 import { validate } from '../src/worker/validate.ts';
+import { route } from '../src/worker/intake.ts';
 import { cronJob, runScheduled } from '../src/worker/index.ts';
 import { STARTER_RULES, decodeRaw, goodInput, liveEnv, makeKv, makeWorld, post } from './helpers.ts';
 
@@ -326,7 +327,7 @@ test('daily check: an undelivered message says who to call back, in plain Englis
   assert.ok(d);
   assert.match(d.subject, /did not reach you/);
   assert.match(d.body, /Someone filled out the website form yesterday, but the email never reached your inbox/);
-  assert.match(d.body, /Pat Example, 804-555-0100, fail@example\.com \(sent Nov 2, 2026, 11:00 AM\)/);
+  assert.match(d.body, /Pat Example, \(804\) 555-0100, fail@example\.com \(sent Nov 2, 2026, 11:00 AM\)/);
   assert.match(d.body, /What to do:/);
   // No codes, ids or message text.
   assert.doesNotMatch(d.body, /id-\d|http_500|my claim was denied|digest/i);
@@ -393,4 +394,101 @@ test('purge removes screened rows older than 90 days and keeps leads', async () 
   ins.run('new-spam', '2026-10-25T00:00:00Z', 'screened');
   await runPurge(env, makeWorld({ now: '2026-11-03T12:30:00Z' }).deps);
   assert.deepEqual(rows(env).map((r) => r.id).sort(), ['new-spam', 'old-lead', 'old-unsure']);
+});
+
+// ---------- step-by-step intake form ----------
+const caseIntake = { how: 'accident', work: 'virginia', surgery: 'yes', missedWork: 'yes' };
+const intakeInput = (intake: unknown, o: Record<string, unknown> = {}) => goodInput({ intake, message: 'I fell off a ladder on March 3.', ...o });
+
+test('intake validation: answers must be ones the form offers, on the path the form asks', () => {
+  assert.equal(validate(intakeInput(caseIntake)).ok, true);
+  assert.equal(validate(intakeInput({ how: 'sick' })).ok, true); // refer out by "how": nothing else asked
+  assert.equal(validate(intakeInput({ how: 'accident', work: 'railroad' })).ok, true); // refer out by "work"
+  for (const bad of [
+    { how: 'hacked' },
+    { how: 'accident' },
+    { how: 'accident', work: 'virginia', surgery: 'yes' },
+    { how: 'accident', work: 'virginia', surgery: 'maybe', missedWork: 'yes' },
+    { how: 'accident', work: 'toString', surgery: 'yes', missedWork: 'yes' },
+    { how: 'sick', work: 'virginia' },
+    { how: 'accident', work: 'railroad', surgery: 'yes' },
+    'accident',
+  ]) {
+    assert.deepEqual(validate(intakeInput(bad)), { ok: false, error: 'invalid_intake' }, JSON.stringify(bad));
+  }
+});
+
+test('intake: "what happened" is optional, still capped', () => {
+  assert.equal(validate(intakeInput(caseIntake, { message: '' })).ok, true);
+  assert.equal((validate(intakeInput(caseIntake, { message: 'x'.repeat(5001) })) as any).error, 'invalid_message');
+  assert.equal((validate(goodInput({ message: '' })) as any).error, 'invalid_message'); // plain message still required
+});
+
+test('phone: US 10 digits, formatted (xxx) xxx-xxxx; email pattern enforced', () => {
+  for (const p of ['8045550100', '804.555.0100', '+1 804 555 0100', '1-804-555-0100', '(804) 555-0100']) {
+    assert.equal((validate(goodInput({ phone: p })) as any).value.phone, '(804) 555-0100', p);
+  }
+  for (const p of ['555-0100', '0045550100', '+44 20 7946 0958', '804-555-01000', '1'.repeat(41)]) {
+    assert.equal((validate(goodInput({ phone: p })) as any).error, 'invalid_phone', p);
+  }
+  for (const e of ['pat@example', 'pat example@x.com', '@example.com', 'pat@@example.com']) {
+    assert.equal((validate(goodInput({ email: e })) as any).error, 'invalid_email', e);
+  }
+});
+
+test('intake sorting: refer beats likely-not-a-case beats a case; "Not sure" stays with the firm', () => {
+  assert.equal(route({ how: 'accident', work: 'virginia', surgery: 'yes', missedWork: 'yes' }), 'priority');
+  assert.equal(route({ how: 'other', work: 'unsure', surgery: 'yes', missedWork: 'yes' }), 'priority');
+  assert.equal(route({ how: 'accident', work: 'virginia', surgery: 'yes', missedWork: 'unsure' }), 'possible');
+  assert.equal(route({ how: 'accident', work: 'virginia', surgery: 'no', missedWork: 'yes' }), 'possible');
+  assert.equal(route({ how: 'sick' }), 'refer');
+  assert.equal(route({ how: 'disability' }), 'refer');
+  for (const work of ['state', 'federal', 'railroad', 'shipyard', 'outside'] as const) assert.equal(route({ how: 'accident', work }), 'refer');
+  assert.equal(route({ how: 'overtime', work: 'virginia', surgery: 'yes', missedWork: 'yes' }), 'unlikely');
+  assert.equal(route({ how: 'overtime', work: 'federal' }), 'refer');
+});
+
+for (const [label, intake, subject, routeName] of [
+  ['PRIORITY', caseIntake, 'Website inquiry - PRIORITY case', 'priority'],
+  ['possible case', { ...caseIntake, surgery: 'no' }, 'Website inquiry - Possible case', 'possible'],
+  ['refer out', { how: 'accident', work: 'federal' }, 'Website inquiry - Refer out', 'refer'],
+  ['likely not a case', { ...caseIntake, how: 'overtime' }, 'Website inquiry - Likely not a case', 'unlikely'],
+] as const) {
+  test(`intake ${label}: delivered to both inboxes, tag in the subject only, plain answer lines`, async () => {
+    const env = liveEnv(); const { deps, calls } = makeWorld();
+    const res = await handleContact(post(intakeInput(intake)), env, deps);
+    assert.equal(res.status, 200);
+    assert.deepEqual(await res.json(), { ok: true, route: routeName });
+    const [row] = rows(env);
+    assert.equal(row.outcome, 'lead'); assert.equal(row.delivery_status, 'sent');
+    assert.equal(row.phone, '(804) 555-0100');
+    assert.match(row.message, /^How hurt: .+\n[\s\S]*What happened and when:\nI fell off a ladder on March 3\.$/);
+    const { head, body } = decodeRaw(gmail(calls)[0]);
+    assert.match(head, /To: bswartz@pathfinderlaw.com, mtruman@pathfinderlaw.com/);
+    assert.match(head, new RegExp(`Subject: ${subject}\\r?\\n`));
+    assert.match(body, /^Name: Pat Example\r?\nEmail: pat@example\.com\r?\nPhone: \(804\) 555-0100\r?\n\r?\nHow hurt: /);
+    assert.match(body, /\r?\n\r?\nWhat happened and when:\r?\nI fell off a ladder on March 3\.$/);
+    assert.doesNotMatch(body, /PRIORITY|Refer out|Likely not|Form:|Screening:|Bot check|Reference:|attorney-client|route|priority|unlikely/);
+  });
+}
+
+test('intake email: refer-out by "how" lists only what was asked; blank story says so', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld();
+  await handleContact(post(intakeInput({ how: 'disability' }, { message: '' })), env, deps);
+  const { body } = decodeRaw(gmail(calls)[0]);
+  assert.match(body, /How hurt: I need help with Social Security disability\r?\n\r?\nWhat happened and when:\r?\n\(left blank\)$/);
+  assert.doesNotMatch(body, /Where they work|Surgery|Missed work/);
+});
+
+test('intake screened by a rule keeps the [Screened] prefix before the tag', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld();
+  await handleContact(post(intakeInput(caseIntake, { fillMs: 100 })), env, deps);
+  assert.match(decodeRaw(gmail(calls)[0]).head, /Subject: \[Screened\] Website inquiry - PRIORITY case/);
+});
+
+test('intake in preview mode reports the sorting, stores and sends nothing', async () => {
+  const env = liveEnv({ PREVIEW_MODE: '1', TURNSTILE_SECRET: undefined }); const { deps, calls } = makeWorld();
+  const res = await handleContact(post(intakeInput({ how: 'sick' })), env, deps);
+  assert.deepEqual(await res.json(), { ok: true, preview: true, message: 'Preview: nothing was sent.', route: 'refer' });
+  assert.equal(rows(env).length, 0); assert.equal(gmail(calls).length, 0);
 });

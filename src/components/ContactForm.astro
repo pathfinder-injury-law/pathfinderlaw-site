@@ -1,8 +1,11 @@
 ---
-// The contact form, used by the homepage, the Contact page and the section
-// forms on every other page. It posts JSON to /api/contact (the Worker in
-// src/worker/). See docs/form-pipeline.md.
+// The step-by-step intake form, used by the homepage, the Contact page and the section
+// forms on every other page. One question per screen; the answers sort the inquiry
+// (PRIORITY, possible case, refer out, likely not a case) and the firm's email says which.
+// The questions and the sorting rule live in src/worker/intake.ts, shared with the Worker.
+// It posts JSON to /api/contact (the Worker in src/worker/). See docs/form-pipeline.md.
 import { site } from '../data/site';
+import { HOW, WORK, YES_NO } from '../worker/intake.ts';
 
 const { id = 'contact-form' } = Astro.props;
 
@@ -14,53 +17,105 @@ const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
   throw new Error('PUBLIC_TURNSTILE_SITE_KEY must be set for a live build (see docs/form-pipeline.md).');
 }
+
+const choices = (answer: string, options: Record<string, string>) =>
+  Object.entries(options).map(([value, label]) => ({ answer, value, label }));
+const questions = [
+  { step: 'how', q: 'How did you get hurt?', options: choices('how', HOW) },
+  { step: 'work', q: 'Where do you work?', options: choices('work', WORK) },
+  { step: 'surgery', q: 'Have you had surgery, or has a doctor said you need it?', options: choices('surgery', YES_NO) },
+  { step: 'missedWork', q: 'Have you missed work or earned less because of the injury?', options: choices('missedWork', YES_NO) },
+];
 ---
 <div class="form-card">
   <h3>Talk With Us</h3>
-  <form class="contact-form" id={id} method="post" action="/contact/" novalidate data-sitekey={siteKey || TEST_SITE_KEY} data-phone={site.phoneHeader} data-phone-href={site.phoneHref}>
-    <div class="field">
-      <label for={`${id}-name`}>Name<span aria-hidden="true">*</span></label>
-      <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />
+  <form class="contact-form intake" id={id} method="post" action="/contact/" novalidate data-sitekey={siteKey || TEST_SITE_KEY} data-phone={site.phoneHeader} data-phone-href={site.phoneHref}>
+    <div class="intake-top">
+      <button class="intake-back" type="button" hidden>Back</button>
+      <p class="intake-progress" aria-live="polite">Step 1 of 7</p>
     </div>
-    <div class="field-pair">
+
+    <fieldset class="step" data-step="name">
+      <legend><span class="step-q" tabindex="-1">Let’s start with your name</span></legend>
       <div class="field">
-        <label for={`${id}-email`}>Email<span aria-hidden="true">*</span></label>
-        <input id={`${id}-email`} name="email" type="email" autocomplete="email" required />
+        <label class="visually-hidden" for={`${id}-name`}>Your name</label>
+        <input id={`${id}-name`} name="name" type="text" autocomplete="name" maxlength="200" placeholder="Your name" required aria-describedby={`${id}-name-err`} />
+        <p class="field-error" id={`${id}-name-err`}></p>
       </div>
+      <button class="btn btn-primary" type="button" data-next>Next</button>
+    </fieldset>
+
+    {questions.map(({ step, q, options }) => (
+      <fieldset class="step" data-step={step} hidden>
+        <legend><span class="step-q" tabindex="-1" data-q={q}>{q}</span></legend>
+        <div class="choices">
+          {options.map((o) => (
+            <button class="choice" type="button" data-answer={o.answer} value={o.value}>{o.label}</button>
+          ))}
+        </div>
+      </fieldset>
+    ))}
+
+    <fieldset class="step" data-step="what" hidden>
+      <legend><span class="step-q" tabindex="-1">What happened, and when?</span></legend>
       <div class="field">
-        <label for={`${id}-phone`}>Phone Number<span aria-hidden="true">*</span></label>
-        <input id={`${id}-phone`} name="phone" type="tel" autocomplete="tel" required />
+        <label class="visually-hidden" for={`${id}-message`}>What happened, and when? (optional)</label>
+        <textarea id={`${id}-message`} name="message" maxlength="5000" placeholder="Example: I fell off a ladder at work on March 3 and hurt my back." aria-describedby={`${id}-message-hint`}></textarea>
+        <p class="field-hint" id={`${id}-message-hint`}>A sentence or two is plenty. No need for details yet. (Optional)</p>
       </div>
+      <button class="btn btn-primary" type="button" data-next>Next</button>
+    </fieldset>
+
+    <fieldset class="step" data-step="contact" hidden>
+      <legend><span class="step-q" tabindex="-1">How can we reach you?</span></legend>
+      <p class="intake-note" data-refer-note hidden>Thanks for telling us. This sounds like a kind of claim we don’t handle ourselves, but we know lawyers who do. Leave your info and we’ll point you to one.</p>
+      <div class="field-pair">
+        <div class="field">
+          <label for={`${id}-phone`}>Phone Number<span aria-hidden="true">*</span></label>
+          <input id={`${id}-phone`} name="phone" type="tel" inputmode="tel" autocomplete="tel-national" maxlength="20" placeholder="(804) 555-0100" required aria-describedby={`${id}-phone-err`} />
+          <p class="field-error" id={`${id}-phone-err`}></p>
+        </div>
+        <div class="field">
+          <label for={`${id}-email`}>Email<span aria-hidden="true">*</span></label>
+          <input id={`${id}-email`} name="email" type="email" autocomplete="email" maxlength="254" placeholder="name@example.com" required aria-describedby={`${id}-email-err`} />
+          <p class="field-error" id={`${id}-email-err`}></p>
+        </div>
+      </div>
+      <!-- Required acknowledgement. First sentence: ethics review (LEO 1842), approved by the owner.
+           The call-and-text consent was added at the owner's direction on Oct 31, 2026 (TCPA and the
+           Virginia Telephone Privacy Protection Act); it covers contact about the inquiry only, not marketing. -->
+      <div class="consent">
+        <input id={`${id}-consent`} name="acknowledged" type="checkbox" required />
+        <label for={`${id}-consent`}>
+          I understand sending this form does not make me a client or create an attorney-client relationship, and Pathfinder Injury Law has not agreed to represent me. Pathfinder may call or text me about my inquiry at the number above. Message and data rates may apply. Reply STOP to opt out.<span aria-hidden="true">*</span>
+        </label>
+      </div>
+      <!-- Spam trap: people never see this field, bots fill it in. -->
+      <div class="hp" aria-hidden="true">
+        <label for={`${id}-company`}>Company</label>
+        <input id={`${id}-company`} name="company" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <div class="ts-widget"></div>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </fieldset>
+
+    <div class="step intake-done" data-step="done" hidden>
+      <p class="step-q" tabindex="-1">Message sent</p>
+      <p class="intake-done-text"></p>
     </div>
-    <div class="field">
-      <label for={`${id}-message`}>Message<span aria-hidden="true">*</span></label>
-      <textarea id={`${id}-message`} name="message" required></textarea>
-      <p class="field-hint">Please keep this short. Do not include confidential or sensitive details yet.</p>
-    </div>
-    <!-- Required acknowledgement (ethics review, LEO 1842). Wording drafted with the owner and approved by him. -->
-    <div class="consent">
-      <input id={`${id}-consent`} name="acknowledged" type="checkbox" required />
-      <label for={`${id}-consent`}>
-        I understand sending this form does not make me a client or create an attorney-client relationship, and Pathfinder Injury Law has not agreed to represent me.<span aria-hidden="true">*</span>
-      </label>
-    </div>
-    <!-- Spam trap: people never see this field, bots fill it in. -->
-    <div class="hp" aria-hidden="true">
-      <label for={`${id}-company`}>Company</label>
-      <input id={`${id}-company`} name="company" type="text" tabindex="-1" autocomplete="off" />
-    </div>
-    <div class="ts-widget"></div>
-    <button class="btn btn-primary" type="submit">Send Inquiry</button>
+
     <p class="form-status" role="status" aria-live="polite"></p>
   </form>
 </div>
 
 <script>
   // Loaded only on pages that contain the form (Astro includes this script only
-  // where the component is used). Cloudflare's Turnstile script is NOT loaded
-  // with the page: it loads the first time the visitor interacts with a form
-  // (focus, tap or typing), or when they press Send. This keeps the privacy
+  // where the component is used). One question shows at a time. Cloudflare's Turnstile
+  // script is NOT loaded with the page: it loads when the visitor reaches the last step
+  // (phone and email), so its single-use token is fresh at Send. This keeps the privacy
   // policy true ("runs in the background when You use the form").
+  import { EMAIL, formatPhone, phoneDigits, refersOut, route, type Intake, type Route } from '../worker/intake.ts';
+
   type TurnstileApi = { render(el: Element, opts: Record<string, unknown>): string; reset(id?: string): void };
   const forms = document.querySelectorAll<HTMLFormElement>('.contact-form');
   const pageLoaded = Date.now();
@@ -82,10 +137,109 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
       document.head.appendChild(s);
     }));
 
+  // Shows the number as (804) 555-0100 while it is typed. A leading 1 is dropped.
+  const partialPhone = (raw: string) => {
+    const d = raw.replace(/\D/g, '').replace(/^1/, '').slice(0, 10);
+    if (d.length <= 3) return d ? `(${d}` : '';
+    if (d.length <= 6) return `(${d.slice(0, 3)}) ${d.slice(3)}`;
+    return `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
+  };
+
   forms.forEach((form) => {
     const status = form.querySelector('.form-status') as HTMLElement;
     const button = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     const widget = form.querySelector('.ts-widget') as HTMLElement;
+    const back = form.querySelector('.intake-back') as HTMLButtonElement;
+    const progress = form.querySelector('.intake-progress') as HTMLElement;
+    const field = (name: string) => form.elements.namedItem(name) as HTMLInputElement;
+    const steps = new Map([...form.querySelectorAll<HTMLElement>('.step')].map((el) => [el.dataset.step!, el]));
+    const answers: Partial<Intake> = {};
+    const history: string[] = [];
+    let current = 'name';
+
+    // The questions this person is asked, given their answers so far.
+    const path = () => {
+      const p = ['name', 'how'];
+      if (!answers.how || !refersOut({ how: answers.how })) {
+        p.push('work');
+        if (!answers.work || !refersOut({ how: answers.how, work: answers.work })) p.push('surgery', 'missedWork');
+      }
+      return [...p, 'what', 'contact'];
+    };
+    // Only the answers on the current path go to the Worker.
+    const intake = (): Intake => {
+      const p = path();
+      const i: Intake = { how: answers.how! };
+      for (const k of ['work', 'surgery', 'missedWork'] as const) if (p.includes(k) && answers[k]) (i as any)[k] = answers[k];
+      return i;
+    };
+    const firstName = () => field('name').value.trim().split(/\s+/)[0] ?? '';
+
+    const show = (step: string, focus = true) => {
+      steps.forEach((el, name) => (el.hidden = name !== step));
+      current = step;
+      status.textContent = '';
+      const p = path();
+      const done = step === 'done';
+      back.hidden = done || history.length === 0;
+      progress.hidden = done;
+      progress.textContent = `Step ${p.indexOf(step) + 1} of ${p.length}`;
+      if (step === 'how') {
+        const q = steps.get('how')!.querySelector('.step-q') as HTMLElement;
+        q.textContent = firstName() ? `Thanks, ${firstName()}. ${q.dataset.q}` : (q.dataset.q ?? '');
+      }
+      if (step === 'contact') {
+        (form.querySelector('[data-refer-note]') as HTMLElement).hidden = !refersOut(answers);
+        start();
+      }
+      if (focus) (steps.get(step)!.querySelector('.step-q') as HTMLElement).focus();
+    };
+    const advance = () => {
+      const p = path();
+      history.push(current);
+      show(p[p.indexOf(current) + 1]);
+    };
+    back.addEventListener('click', () => show(history.pop() ?? 'name'));
+
+    const setError = (name: string, msg: string) => {
+      const input = field(name);
+      (form.querySelector(`#${input.id}-err`) as HTMLElement).textContent = msg;
+      input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+      return !msg;
+    };
+    const checkName = () => setError('name', field('name').value.trim() ? '' : 'Enter your name first.');
+    const checkPhone = () => setError('phone', phoneDigits(field('phone').value) ? '' : 'Enter a 10-digit phone number.');
+    const checkEmail = () => setError('email', EMAIL.test(field('email').value.trim()) ? '' : 'Check your email address.');
+
+    form.addEventListener('click', (e) => {
+      const t = (e.target as HTMLElement).closest('button');
+      if (!t || !form.contains(t)) return;
+      if (t.dataset.answer) {
+        (answers as any)[t.dataset.answer] = t.value;
+        t.parentElement!.querySelectorAll('.choice').forEach((c) => c.setAttribute('aria-pressed', String(c === t)));
+        advance();
+      } else if (t.hasAttribute('data-next')) {
+        if (current === 'name' && !checkName()) return field('name').focus();
+        advance();
+      }
+    });
+
+    const phone = field('phone');
+    phone.addEventListener('input', () => {
+      const caret = phone.selectionStart ?? phone.value.length;
+      const before = phone.value.slice(0, caret).replace(/\D/g, '').replace(/^1/, '').length;
+      phone.value = partialPhone(phone.value);
+      let pos = 0;
+      for (let seen = 0; pos < phone.value.length && seen < before; pos++) if (/\d/.test(phone.value[pos])) seen++;
+      phone.setSelectionRange(pos, pos);
+      if (phone.getAttribute('aria-invalid') === 'true') checkPhone();
+    });
+    phone.addEventListener('blur', () => phone.value && checkPhone());
+    const email = field('email');
+    email.addEventListener('blur', () => email.value && checkEmail());
+    email.addEventListener('input', () => email.getAttribute('aria-invalid') === 'true' && checkEmail());
+    field('name').addEventListener('input', () => field('name').getAttribute('aria-invalid') === 'true' && checkName());
+
     let token = '';
     let failed = false;
     let sending = false;
@@ -121,13 +275,6 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
         });
       }));
 
-    // First interaction with this form starts the check.
-    const onFirst = () => {
-      start();
-      for (const ev of ['focusin', 'pointerdown', 'input']) form.removeEventListener(ev, onFirst);
-    };
-    for (const ev of ['focusin', 'pointerdown', 'input']) form.addEventListener(ev, onFirst);
-
     // Resolves true once a token is ready, false if the check failed or took too long.
     const waitForToken = (): Promise<boolean> => {
       if (token) return Promise.resolve(true);
@@ -154,13 +301,37 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
       status.append(a, ' and we will help you right away.');
     };
 
+    // Refer-out and "likely not a case" inquiries end here in the form; the rest go to the thank-you page.
+    const finish = (r: Route) => {
+      const name = firstName() ? `Thanks, ${firstName()}. ` : 'Thanks. ';
+      const text = (form.querySelector('.intake-done-text') as HTMLElement);
+      text.textContent =
+        r === 'refer'
+          ? `${name}We got your message. Someone from our office will reach out with the name of a lawyer who handles this kind of claim. Want to talk sooner? Call us at `
+          : `${name}We got your message. We’ll review it and get back to you. Want to talk sooner? Call us at `;
+      const a = document.createElement('a');
+      a.href = form.dataset.phoneHref || '';
+      a.textContent = form.dataset.phone || '';
+      text.append(a, '.');
+      history.length = 0;
+      show('done');
+    };
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (current !== 'contact') {
+        // Enter in the name box or the "what happened" box moves on, like Next.
+        if (current === 'name' && !checkName()) return;
+        if (current === 'name' || current === 'what') advance();
+        return;
+      }
       if (sending) return; // no double submission
-      if (!form.checkValidity()) {
-        status.textContent = 'Please fill in every field marked with a star, including the acknowledgement.';
-        form.reportValidity();
-        start();
+      const okPhone = checkPhone();
+      const okEmail = checkEmail();
+      const acknowledged = (field('acknowledged') as HTMLInputElement).checked;
+      if (!okPhone || !okEmail || !acknowledged) {
+        status.textContent = acknowledged ? 'Please fix the fields above.' : 'Please check the box above to send.';
+        (!okPhone ? phone : !okEmail ? email : field('acknowledged')).focus();
         return;
       }
       sending = true;
@@ -172,7 +343,7 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
           const ok = await waitForToken();
           if (!ok) {
             if (failed) showFailure();
-            else status.textContent = 'Please complete the check above, then press Send Inquiry again.';
+            else status.textContent = 'Please complete the check above, then press Send again.';
             return;
           }
         }
@@ -190,7 +361,8 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
               email: data.get('email'),
               phone: data.get('phone'),
               message: data.get('message'),
-              acknowledged: data.get('acknowledged') === 'on',
+              intake: intake(),
+              acknowledged: true,
               company: data.get('company'),
               form: kind,
               fillMs: Date.now() - pageLoaded,
@@ -204,17 +376,19 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
         }
         const result = await res.json().catch(() => ({}));
         if (res.ok && result.ok) {
+          const r: Route = result.route ?? route(intake());
           if (result.preview) {
-            status.textContent = result.message || 'Preview: nothing was sent.';
+            status.textContent = `${result.message || 'Preview: nothing was sent.'} (Sorted as: ${r})`;
             (window as any).turnstile?.reset(widgetId);
             return;
           }
+          if (r === 'refer' || r === 'unlikely') return finish(r);
           leaving = true; // keep the button off while the thank-you page loads
           location.href = '/thank-you/';
           return;
         }
         if (res.status === 400) {
-          status.textContent = 'Please check that every field is filled in correctly and the acknowledgement is checked.';
+          status.textContent = 'Please check that every field is filled in correctly and the box is checked.';
         } else {
           showFailure();
         }
@@ -226,5 +400,7 @@ if (!siteKey && import.meta.env.PUBLIC_SITE_LIVE === '1') {
         }
       }
     });
+
+    show('name', false);
   });
 </script>

@@ -2,6 +2,7 @@ import { DEFAULT_ALLOWED_HOSTNAMES, FIRM_PHONE, MIN_FILL_MS, SELF_TEST_RECIPIENT
 import { alertThrottled, logCode, ping } from './alerts.ts';
 import { SendError, sendMail } from './google.ts';
 import { decide, loadRules } from './screen.ts';
+import { ROUTE_SUBJECT, intakeLines, route } from './intake.ts';
 import type { Deps, Env } from './types.ts';
 import { realDeps } from './types.ts';
 import { validate, type Submission } from './validate.ts';
@@ -78,10 +79,19 @@ export function emailBody(sub: Submission, o: { id: string; outcome: string; rea
     `Email: ${sub.email}`,
     `Phone: ${sub.phone}`,
     '',
-    'Message:',
-    sub.message,
+    ...(sub.intake
+      ? [...intakeLines(sub.intake), '', 'What happened and when:', sub.message || '(left blank)']
+      : ['Message:', sub.message]),
   ].join('\n');
 }
+
+// What the form log keeps in its message column: the answers, then what the person typed.
+export const loggedMessage = (sub: Submission) =>
+  sub.intake ? [...intakeLines(sub.intake), '', 'What happened and when:', sub.message].join('\n') : sub.message;
+
+// The end of the subject: the intake form's sorting tag, or which form a plain message came from.
+const subjectTopic = (sub: Submission) =>
+  sub.intake ? ` - ${ROUTE_SUBJECT[route(sub.intake)]}` : ` (${sub.form === 'sidebar' ? 'sidebar form' : 'main form'})`;
 
 // The one path every submission takes: log, bot checks, screen, email, update log.
 export async function processSubmission(
@@ -104,7 +114,7 @@ export async function processSubmission(
         `INSERT INTO submissions (id, created_at, form, outcome, reason, is_test, turnstile, delivery_status, name, email, phone, message)
          VALUES (?, ?, ?, 'unsure', 'pending', ?, 'skipped', 'pending', ?, ?, ?, ?)`,
       )
-      .bind(id, created, sub.form, isTest, sub.name, sub.email, sub.phone, sub.message)
+      .bind(id, created, sub.form, isTest, sub.name, sub.email, sub.phone, loggedMessage(sub))
       .run();
     logged = true;
   } catch {
@@ -186,7 +196,7 @@ export async function processSubmission(
     const prefix = opts.test ? `[Form Test ${opts.test.tag}] ` : outcome === 'screened' ? '[Screened] ' : '';
     try {
       await sendMail(env, deps, {
-        subject: `${prefix}Website inquiry (${sub.form === 'sidebar' ? 'sidebar form' : 'main form'})${SUBJECT_MARK[turnstile] ?? ''}`,
+        subject: `${prefix}Website inquiry${subjectTopic(sub)}${SUBJECT_MARK[turnstile] ?? ''}`,
         body: emailBody(sub, { id, outcome, reason, logged, turnstile }),
         replyTo: sub.email,
         ...(opts.test ? { to: SELF_TEST_RECIPIENTS } : {}),
@@ -236,11 +246,14 @@ export async function handleContact(request: Request, env: Env, deps: Deps = rea
     const t = await verifyTurnstile(env, deps, sub.turnstileToken, null);
     logCode('preview_submission', { form: sub.form, trap: sub.company !== '', turnstile: t });
     if (t === 'fail') return json({ ok: false, error: 'verification_failed' }, 403);
-    return json({ ok: true, preview: true, message: 'Preview: nothing was sent.' });
+    return json({ ok: true, preview: true, message: 'Preview: nothing was sent.', ...routeField(sub) });
   }
 
   const result = await processSubmission(env, deps, sub, { ip: request.headers.get('CF-Connecting-IP') });
   if (result.status === 'verification_failed') return json({ ok: false, error: 'verification_failed' }, 403);
   if (result.status === 'delivery_failed') return json({ ok: false, error: 'delivery_failed', phone: FIRM_PHONE }, 502);
-  return json({ ok: true });
+  return json({ ok: true, ...routeField(sub) });
 }
+
+// Tells the page which ending to show. The Worker's own sorting wins over the page's.
+const routeField = (sub: Submission) => (sub.intake ? { route: route(sub.intake) } : {});
