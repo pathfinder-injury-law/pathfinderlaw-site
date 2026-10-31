@@ -1,149 +1,124 @@
 ---
-title: "Work Comp Settlement for Foot Injury"
-metaTitle: "Do I Receive Workers Compensation For A Foot Injury?"
-description: "Have you suffered a foot injury while working and are now unable to work? Read here about workers' compensation and benefits."
+title: "Foot Injury at Work in Virginia: Workers’ Comp Benefits and Settlements"
+metaTitle: "Foot Injury at Work in Virginia: Workers’ Comp Guide"
+description: "Broke or injured your foot at work in Virginia? What workers’ comp covers, what you need to prove, and what affects the value of a foot injury claim."
 date: 2022-11-23T00:06:35Z
-updated: 2022-11-28T18:35:25Z
+updated: 2026-10-31T12:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
-*Disclaimer: Please note nothing in this article is to be considered legal advice. You should always consult with an attorney about the specific facts of your situation before making any legal decisions. No attorney/client relationship or representation relationship is created by the dissemination of this content or your consumption thereof.*
+*Nothing in this article should be taken as legal advice. Every case is different, and you should talk with an attorney about your own situation. Reading this article does not create an attorney-client relationship.*
 
-In 2021, [48,201 major workplace injuries](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) were reported to the Virginia Workers’ Compensation Commission, and these included various types of foot injuries. A foot injury received while at work can severely impact your quality of life and your ability to perform well at your job. If this happens to you, [Pathfinder Injury Law](/virginia-workers-comp-lawyer/) is here to help guide you through the confusing process of workers’ compensation in Virginia and seek the benefits you may be due.
+A foot injury can take you off your feet and off the job. If you stand, walk, climb, drive, or carry loads for a living, even a single broken bone in your foot can mean weeks or months without a paycheck. If you hurt your foot at work in Virginia, workers’ compensation can pay for your medical care and part of your lost wages, as long as the claim meets Virginia’s rules.
 
-## Are You Eligible for Workers’ Comp Due to a Foot Injury?
+This guide covers who qualifies, what to gather, the foot injuries we see most, and what affects the value of a foot injury claim.
 
-Eligibility requirements to receive workers’ comp for a foot injury can quickly become complicated. While this guide is meant to be helpful, it should not be taken as legal advice, and we recommend you seek the assistance of an experienced workers’ compensation lawyer to help with your claim.
+## Does Workers’ Comp Cover Your Foot Injury?
 
-To get started, consider how you will answer the following. Keep in mind, though, that even if you can answer these questions, it does not mean you automatically qualify for a workers’ compensation settlement to pay all your medical bills and more. You often still must go through the entire process before any offer for a payout occurs.
+Whether a foot injury is covered can get complicated quickly. Start with these three questions. A “yes” to all three does not guarantee benefits, but a “no” to any of them is a warning sign worth talking through with a lawyer.
 
-### Did it Occur at Work or During a Work-Related Function?
+### Did It Happen Because of Your Job?
 
-To be eligible for benefits under workers’ comp, you must have sustained your injuries “arising out of and during the course of your employment.” This requirement is a specific legal term that means there must have been an “actual risk” of the employment that led to the accident. It cannot be a risk common to the community that any person could have suffered anywhere, even independent from employment.
+**The injury must arise out of and in the course of your employment.** That is a legal phrase with a specific meaning: an actual risk of your job must have caused the accident. A risk that anyone could face anywhere, apart from work, usually does not count.
 
-The injury had to have occurred at work or during some work-related function. If it occurred outside the course and scope of your employment, due to horseplay in the workplace, or as the result of a willful violation of a known safety rule, the personal injury will likely not be eligible for workers’ comp.
+An injury that happens outside the scope of your job, while you were taking part in horseplay, or because you willfully broke a known safety rule will likely not be covered. If a coworker’s horseplay hurt you and you were not part of it, you may still be covered.
 
-### Was it Caused by a Specific Work Activity?
+### Can You Point to What You Were Doing?
 
-In order for an accident to be covered, it must be the result of a specific work activity. You will need to define exactly what you were doing at the time of the injury-causing accident to answer this question and how it relates to your work.
+You need to be able to say exactly what you were doing when you got hurt and how it relates to your job. For example: “I was unloading a pallet from the truck and it slid off the lift onto my foot.”
 
-### Did It Happen Suddenly at a Specific Time?
+### Did It Happen Suddenly, at a Specific Time?
 
-Determine the exact occurrence and timing of the injury. It is important to note that only sudden mechanical changes are compensable in Virginia. Workers’ compensation insurance will not cover injuries that occur gradually or may be attributable to repetitive trauma.
+**Virginia workers’ comp covers injuries from a specific accident that causes a sudden structural or mechanical change.** It generally does not cover injuries that build up over time from repetitive stress or everyday standing and walking. Pain that develops gradually is much harder to bring under workers’ comp in Virginia.
 
 <figure class="bp-photo"><img src="/images/blog/broken-leg.jpg" alt="A person with a broken leg in a blue walking boot" width="1400" height="933" loading="lazy" /></figure>
 
-## What Do I Need to Prove for My Workers’ Comp Claim?
+## What You Need to Prove, and What to Gather
 
-Once you severely injure your foot in the workplace, you need to begin collecting evidence. The burden of proof for your workers’ compensation claim lies with you, and the sooner you start preparing, the better.
+**You have the burden of proving your claim,** so start collecting evidence early.
 
-Make sure you report your accident in writing to your employer within 30 days of its occurrence. Be specific and state how it happened and what injuries you developed as a result. You will need to show proof of that reporting and that it occurred in a timely manner.
+1. **Give your employer written notice within 30 days of the accident.** Say how it happened and what you hurt. Keep a copy. Late notice can limit or bar your benefits.
+2. **File a claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply. File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
+3. **Gather your evidence:**
+   - **Pay records.** Your wage benefits are based on your average weekly wage over the year before the accident, so keep your pay stubs.
+   - **Medical records.** Keep x-rays, MRIs, and other test results, prescriptions, and treatment plans, including physical therapy or surgery. Tell every doctor the injury happened at work. If surgery is recommended, ask your doctor to explain in writing why it is needed and how it connects to the work accident.
+   - **Video and photos.** Find out whether cameras covered the area, and ask whoever controls the footage to preserve it. Take photos of the location, your injury, and any equipment or hazard involved.
+   - **Witnesses.** Write down who saw the accident or was nearby, and how to reach them. We can help you get statements.
 
-Your report is also good to have on hand when you file a claim for workers’ compensation or temporary disability benefits because it can be used as evidence.
+The insurance company will also look for any [pre-existing conditions](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Workers-Guide.pdf) in your foot or ankle. They can affect your claim, so be sure to go over any earlier injuries with your attorney.
 
-### Wages Prior to Accident
+## Common Foot Injuries at Work
 
-Compile documentation showing your wages prior to the injury-causing accident. One way to show this is by compiling pay stubs for the past six months.
+### Broken Bones (Fractures)
 
-### Medical Records
+Each foot has 26 bones, and any of them can break when something heavy lands on your foot, you fall from a height, or your foot gets caught or crushed. Common work fractures include breaks in the metatarsals (the long bones between your toes and your ankle that carry your weight), the heel bone, and the toes. Symptoms include intense or throbbing pain, swelling, bruising, tenderness, and trouble putting weight on the foot.
 
-Gather all medical care records relating to your foot injury, including any x-rays or other diagnostics. Also include any prescriptions, as well as any future medical treatment required, such as physical therapy sessions or surgery. If you need surgery, be sure to request documentation from your doctor showing why the surgery is necessary and how it links to the workplace injury. The insurance carrier will also be looking for any [pre-existing conditions](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Workers-Guide.pdf) you may have. This can impact your claim, so be sure to review these with your attorney.
+### Lisfranc and Other Midfoot Injuries
 
-### Video Footage or Photographic Evidence
+A Lisfranc injury damages the bones or ligaments in the middle of the foot. It often happens when the foot is twisted while flexed, or when something heavy falls on the top of the foot. Midfoot injuries are easy to mistake for a sprain at first, but a serious one can need surgery and a long recovery.
 
-Determine if cameras were located in the areas of the accident that can show how the injury occurred. Obtain footage to add to your workers’ comp case. Ask the custodian of the photos or videos to preserve them unaltered. Take photos of the location, your injury, and any equipment or dangerous conditions.
+### Dislocations
 
-### Witness Statements from Co-workers
-
-Were there any nearby witnesses to the injury? Where were your co-workers at the time it occurred? You will need witness statements and also the contact information for these people. If you need help obtaining these, our workers’ comp attorney may be able to assist you.
-
-## What Are Common Foot Injuries Sustained in the Workplace?
-
-If the injury is due to “everyday pressure,” it will not be covered by workers’ compensation. However, there are several common foot injuries that a worker might sustain in the workplace that can be eligible. These include the following.
-
-### Achilles Tendon Injuries
-
-Achilles tendon injuries occur when the fibrous tissue band linking the muscles in the calf to the heel either tears or ruptures. You may feel or hear a sudden pop from this area of the foot. Symptoms include stiffness, swelling, and pain.
-
-### Fractured or Dislocated Foot Injuries
-
-Bones in the feet can fracture or become dislocated. Particular injuries include a Lisfranc fracture in the midfoot, a stress fracture resulting in tiny cracks in the bones, and metatarsal fractures occurring in the weight-bearing bones between the toes and ankle. Symptoms often include bruising, swelling, pain, deformity, and weight-bearing difficulties.
-
-Dislocated foot injuries occur when the bones within a joint separate as a result of some trauma. With this, you can experience the same or similar symptoms of a fractured injury.
-
-### Broken Bone
-
-The foot is mechanical in nature and includes 26 different bones. Any of these bones can break and cause difficulty standing and walking. With a broken foot, you may experience an intense throbbing or pain, swelling, tenderness, and bruising.
+A dislocation happens when trauma pushes the bones in a joint out of place. The symptoms are often the same as a fracture, and the two can happen together.
 
 ### Sprains
 
-A foot sprain involves a stretching or tearing of the ligaments, tough fibrous tissue bands that attach bones to each other. These sprains occur mainly in the ankle and midfoot regions and can cause instability, muscle spasms, swelling, bruising, and pain with movement, making them more than just minor injuries.
+A foot sprain stretches or tears the ligaments that hold the bones together, usually in the ankle or midfoot. Sprains can cause swelling, bruising, muscle spasms, instability, and pain when you move. They are not always minor.
 
-### Tarsal Tunnel Syndrome
+### Achilles Tendon Tears
 
-The tarsal tunnel of the foot is a narrow space situated inside the ankle and covered by a ligament to protect its contents (nerves, tendons, arteries, and veins). Tarsal Tunnel Syndrome involves a squeezing or compression of one of those nerves, the posterior tibial nerve, that resides in the tunnel. Symptoms pointing to this condition include a burning or tingling sensation in the heel, numbness, and pain.
+The Achilles tendon connects your calf muscles to your heel. It can tear or rupture during a sudden push-off, a jump, or a missed step. Many people feel or hear a pop, followed by pain, swelling, and stiffness.
 
-### Foot Drop
+### Nerve Injuries and Foot Drop
 
-Foot drop refers to difficulty lifting the front part of the foot and can be a sign of some muscular or neurological issue. Due to this, your foot may drag as you walk. If caused by a nerve injury, you may encounter high medical costs.
+Foot drop means you have trouble lifting the front of your foot, so it may drag when you walk. It can come from a nerve injury and can require costly treatment.
 
 ### Amputation
 
-Foot amputations are less common than the others but can occur, such as in a car accident, a crushing incident, or another industrial accident.
+Foot amputations are less common but can happen in crush injuries, vehicle crashes, and other industrial accidents.
 
-Any of these foot injuries and resulting impairment can limit your abilities and may even require you to enter sedentary work going forward. Permanent disability can occur, and if so, you might need to re-evaluate your career altogether.
+Serious foot injuries can leave a permanent impairment. Some workers can no longer do jobs that keep them on their feet and have to move to seated work or a new line of work altogether.
 
-## How Common Are Lower Extremity Injuries in the Workplace?
+## What If Your Foot Injury Needs Surgery?
 
-Workplace injuries can affect any part of the body, but certain areas are more common than others, and that includes the feet. According to a 2021 [annual report](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) of the Virginia Workers’ Compensation Commission, 21% of reports involve some part of the injured workers lower extremities, which include a hip, foot, or knee injury.
+Some foot injuries do not heal with medication, injections, a boot, or physical therapy, and need surgery by an orthopedic or foot and ankle surgeon. If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it as part of your medical benefits. That does not mean it will. If the insurance company refuses to approve the surgery, you can ask the Commission for a hearing, and a lawyer can help you challenge that decision.
 
-The specific anatomy of the foot makes it highly susceptible to injury in a variety of circumstances. Along with its 26 bones, each foot contains 33 joints and over 100 different muscles, tendons, and ligaments. Nerves also run through the feet, as well as arteries and veins.
+## What Benefits Can You Receive for a Foot Injury?
 
-## What If My Foot Injury Requires Surgery Due to a Work-Related Injury?
+- **Medical care** that is reasonable, necessary, and causally related to the accident.
+- **Wage loss benefits** while your doctor keeps you out of work, or while you earn less on light duty. Here’s [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/).
+- **Permanent partial disability benefits** if you are left with a permanent loss of use of the foot once you reach maximum medical improvement.
 
-Sometimes, a foot injury cannot be healed through medicine, injections, or physical therapy and needs surgery by an orthopedic specialist or foot and ankle injury doctor. This surgery should be considered part of your medical benefits if your injury case is covered under workers’ compensation. However, if there is a denial of treatment, you may need to contact an experienced attorney who can help work to overturn this denial and potentially obtain the workers’ compensation benefits you need.
+For a full overview, see [what workers’ comp covers in Virginia](/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/).
 
-## How Much is a Workers’ Comp Foot Injury Worth in Virginia?
+## How Much Is a Workers’ Comp Foot Injury Worth in Virginia?
 
-Determining how much a workers’ comp foot injury will be worth in Virginia requires looking at several different factors. The answer will depend on the type of injury, the manner in which you sustained it, future medical needs, future lost wages, permanent damage, and other factors.
+There is no average settlement for a foot injury. The value depends on:
 
-Since cases are rarely the same, a dollar value cannot be put on a workers’ compensation case before evaluating medical records and all the facts surrounding the claim itself. You will need to prove the causal relationship between the foot injury and your employment, identify complications, symptoms, and future medical expenses, and identify whether permanent disability is a possibility.
+- The type of injury and how it happened
+- Your average weekly wage before the accident
+- How long you are out of work or earning less
+- Future medical needs, including surgery
+- Any permanent impairment
+- Whether you can go back to your old job
+- The insurance company’s defenses
 
-So, to sum it up, there is no average workers’ settlement amount when it comes to workers’ compensation. Foot injury settlements are voluntary agreements between the claimant and your employer’s insurance company. No one can force anyone to accept or pay a settlement. For these reasons, working with an attorney experienced in workers’ compensation law can help you understand your options and communicate with the insurance company on your behalf.
+No one can put a fair number on a foot injury claim without reviewing the medical records and the facts. You will need to show the connection between the injury and your job, along with your symptoms, complications, and future medical needs.
 
-In addition, there are [different types of workers’ comp settlements](/workers-comp-settlement-in-virginia/) to seek in different circumstances. These include:
+**A settlement is optional. Nobody can force you to settle, and nobody can force the insurance company to offer one.** There are a few kinds of settlements, and the right one depends on your situation. See [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/) and [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 
-- Full and final settlement
-- Lump sum settlement (with open medical benefits)
-- Full and final settlement with Medicare set-asides
+A foot injury can cost you time at work, leave a lasting disability, or force a change of jobs. Any settlement needs to account for all of that.
 
-It is important to note that foot injuries have the potential to cause you to miss work, develop a disability, or even need to switch occupations. Taking all this into account, your settlement needs to fit your circumstances so you can maintain a good quality of life and be productive.
+## What Is Vocational Rehabilitation?
 
-## What is Vocational Rehab?
+After a serious injury, the insurance company may send you to vocational rehabilitation. On paper, it is meant to help you get back to work, ideally in a job that pays close to what you earned before. Services can include job counseling, job search help, job placement, training, and education.
 
-For workplace injuries, vocational rehabilitation is often a part of the process. This type of rehab has two goals: to return the employee to the workforce and to relieve the employer from the burden of paying future compensation. Providers of these rehab services are tasked with attempting to find alternative employment opportunities within the worker’s pre-injury position and achieved salary level.
+In practice, the insurance company may also use vocational rehabilitation to try to stop your wage checks. If you refuse or do not cooperate with vocational rehabilitation when required, your wage benefits can be suspended. If you are referred to vocational rehabilitation, talk with a workers’ comp lawyer before you start. Here’s more on [whether you are eligible for vocational rehabilitation](/virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation/).
 
-Particular services that fall under vocational rehab include:
+## Why Talk to a Virginia Workers’ Comp Lawyer?
 
-- Vocational evaluation
-- Counseling
-- Job coaching
-- Job placement
-- Job development
-- On-the-job training
-- Education
-- Retraining
+The insurance company knows the rules, and most injured workers are learning them for the first time. A lawyer can gather the evidence, deal with the insurance company for you, explain your options, and ask the Commission for a hearing if the insurance company will not pay what it should.
 
-Keep in mind, however, that vocational rehab is not something you want to end up in because often the insurance company uses it as a tool to cut off your benefits. When this happens, they will find a way to cut off your wage loss checks. If you refuse or fail to comply with vocational rehab requirements, you run the risk of losing entitlement to wage loss benefits.
+## Talk to Pathfinder Injury Law About Your Foot Injury
 
-The Virginia Workers’ Compensation Commission set up [guidelines for vocational rehabilitation](https://workcomp.virginia.gov/documents/vocational-rehabilitation-guidelines) with the hopes of creating less conflict. Yet, vocational rehab is still a fraught endeavor. Once you end up here, we advise you to talk to a workers’ comp lawyer because you are going to need help tiptoeing through this minefield.
-
-## Why You Should Consider Hiring a Virginia Workers’ Compensation Attorney
-
-As a claimant, you probably have a greater potential for increasing your final outcome under the guidance of a workers’ comp lawyer. Insurance companies tend to take advantage of a claimant’s lack of knowledge and will use this for lower settlement offers and to pay less than they should for cases. With legal representation, your injury lawyer can communicate with them on your behalf and explain your options.
-
-A workers’ comp attorney may be able to assist you in collecting evidence and talking with both the insurance company and the Commission on your behalf. They can even take your workers’ compensation case to litigation if need be.
-
-## Walk with Pathfinder Injury Law Toward a Solution
-
-Sustaining a foot injury at work can lead to long healing periods and challenging paperwork to fill out for workers’ compensation benefits. It can quickly become overwhelming, and you may or may not receive the help you need. Pathfinder Injury Law understands how workers’ compensation law works in Virginia and is here to help you find a potential solution. We value the attorney-client relationship and will walk this path with you. Give our law firm a call today at [804-505-0633](tel:+18045050633) or fill out our [online contact form](/contact/) at our website and schedule your free consultation.
+A foot injury at work can mean a long recovery and a lot of paperwork. Pathfinder Injury Law handles only Virginia workers’ compensation claims, for injured workers across the state. Call [804-505-0633](tel:+18045050633) or [contact us online](/contact/) to talk through your situation.

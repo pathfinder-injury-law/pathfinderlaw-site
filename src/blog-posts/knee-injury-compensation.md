@@ -1,210 +1,130 @@
 ---
-title: "Here’s What You Can Expect After Hurting Your Knee At Work"
-metaTitle: "Average Compensation Payout for Knee Injury in Virginia"
-description: "Read our guide to what can affect a knee injury workers' compensation claim in Virginia. Contact us online for additional information!"
+title: "Hurt Your Knee at Work in Virginia? Here’s What Workers’ Comp Covers"
+metaTitle: "Knee Injury at Work in Virginia: Workers’ Comp Payouts"
+description: "Hurt your knee at work in Virginia? Learn what workers’ comp pays for, what affects the value of a knee claim, and why there is no average payout."
 date: 2022-10-04T19:15:50Z
-updated: 2022-10-11T10:46:25Z
+updated: 2026-10-31T12:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
-*Nothing in this article should be taken as legal advice. Every case is different, and you should consult with an attorney before taking legal action on your case.*
+*Nothing in this article should be taken as legal advice. Every case is different, and you should talk with an attorney about your own situation.*
 
-Like most of us, you’re a hard worker. When you head off to your job in the morning, you expect that your employer has all of the safety precautions in place to protect you from injury. Unfortunately, severe accidents happen even to the most conscientious employees, and they can affect you for the rest of your life. The work injury could impact whether you can work in the same field in the future. In those situations, having a knowledgeable [workers’ compensation attorney](/virginia-workers-comp-lawyer/) is critical.
+Knees take a beating at work. Bending, kneeling, climbing, lifting, and twisting all run through one joint, and a single bad step can keep you off the job for months. If you hurt your knee at work in Virginia, workers’ compensation can pay for your medical care and part of your lost wages. Whether it does, and how much it pays, depends on how the injury happened and what it does to your ability to work.
 
-Severe injuries and accidents affect workers regularly. In fact, in 2021, the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/sites/default/files/annual-reports/VWC-Annual-Report-2021.pdf) reported there were 48,201 major injuries and 69,080 minor injuries. Richmond City alone saw more than 5,000 injuries. As a result, you need to be prepared in case of a work injury.
+This guide covers the knee injuries we see most, what Virginia law requires before workers’ comp pays, what you can receive, and what drives the value of a knee claim.
 
-**Pathfinder Injury Law is here to help with many types of knee injury claims, from start to finish. Our law firm will be right by your side after a work accident to help you seek the compensation you may be due.**  That money can help you address medical bills and provide critical funds for partial income replacement while you recover.
+## Common Knee Injuries at Work
 
-## What Are Common Types of Knee Injuries?
+The knee is one of the largest and most complex joints in your body. Many knee injuries do not show up on an x-ray. Torn cartilage and ligaments usually need an MRI to diagnose, but that does not make them any less serious.
 
-Your knee is one of the largest joints in your body. It is also extremely complex, which makes it especially vulnerable to injury. In addition, workers often regularly use their knees at work by bending, twisting, and lifting. 
+### Torn Meniscus and Cartilage Damage
 
-Below are some of the most common knee injuries leading to workers’ compensation claims. Remember that much of the damage that affects knees will not show up on an x-ray and instead will require more advanced imaging, but that does not mean it is any less severe.
+Cartilage covers the ends of the thighbone (femur) and shinbone (tibia) and the back of the kneecap (patella). Two C-shaped pieces of cartilage, the menisci, sit between the femur and tibia. Together they let the joint glide smoothly when you bend and straighten your leg.
 
-### Cartilage Damage
+A meniscus tear is one of the most common knee injuries in workers’ comp claims. It often happens when you twist while your foot is planted, or when you get up quickly from a squat or kneel. Damaged cartilage can cause pain, swelling, locking, and loss of motion.
 
-The knee has articular cartilage at the ends of the femur and tibia. You can also find cartilage at the back of the patella. Further, two pieces of meniscal cartilage are also between your femur and tibia. Cartilage is critical for the knee to function properly. It helps the bones that connect in the knee glide smoothly over another as you bend and straighten your leg.
+### Ligament Tears (ACL, MCL, PCL, and LCL)
 
-If you damage the cartilage in your knee, it can cause severe pain. If the bones rub together, it can also decrease your range of motion. A meniscus tear (or torn meniscus) is one of the most common cartilage damages an injured worker will experience.
+Four main ligaments hold the knee together:
 
-#### Can I Get Workers’ Compensation for Arthritis?
+- The **medial collateral ligament (MCL)** on the inside and the **lateral collateral ligament (LCL)** on the outside control side-to-side movement.
+- The **anterior cruciate ligament (ACL)** and **posterior cruciate ligament (PCL)** cross inside the joint and control front-to-back movement.
 
-Cartilage damage can be the result of arthritis. Purely degenerative arthritis, even if the symptoms are made worse by working, is generally not compensable as a work-related injury by itself in Virginia. Instead, there must be a structural or mechanical change in the knee to receive workers’ compensation for a knee injury.
+Any of these can tear partly or completely. ACL tears often come from a sudden stop, a pivot, or a bad landing. A complete tear often needs surgery.
 
-However, if you had a serious knee injury at work that later caused you to develop arthritis in that joint, that damage is more likely to be compensable.
+### Broken Kneecap and Other Fractures
 
-### Partial or Complete Tear of a Ligament
+Fractures are one of the few knee injuries an x-ray usually shows. The kneecap is the bone most often broken, usually in a fall onto the knee or a direct blow. The ends of the femur and tibia can also break, often in falls from height or vehicle crashes.
 
-There are several ligaments in the knee, each serving a vital function to ensure the knee works properly. Each ligament connects the bones to one another. They provide stability to your knee and hold the entire joint together. Tears can occur in any of these ligaments.
+### Tendon Injuries and Other Soft Tissue Damage
 
-There are two ligaments on the sides of the knee. These are the medial collateral ligament (inside) and the lateral collateral ligament (outside). They are commonly known as the MCL and the LCL. They control the side-to-side movement of the knee.
-
-The other two ligaments are inside the knee joint. They cross each other to stabilize the front and back of the knee. They are the anterior cruciate ligament (ACL) and the posterior cruciate ligament (PCL).
-
-#### Can I Have a Knee Injury Case For Gradual Injuries?
-
-**Virginia workers’ comp only covers sudden structural or mechanical injuries in the knee. In other words, you cannot get benefits for injuries that happen due to degeneration over time.** Accordingly, it is important to determine whether an acute or chronic problem exists.
-
-In general, an MRI can show the specific type of tear. Often you can tell a tear is traumatic if it is deep and jagged on an MRI image. Chronic problems are more likely to be smooth and round. Newer injuries will often appear whiter on an MRI as well. Older injuries (which signal a chronic issue) are usually darker in color.
-
-### Broken or Fractured Bone
-
-Two bones (the femur and tibia) meet to form the knee joint. The kneecap (patella) is another bone that sits on the front of the joint to provide some additional stability and protection.
-
-Broken or fractured bones are one of the few knee injuries that can appear on an x-ray. The most common broken bone associated with the knee is the patella (kneecap). The ends of the femur and tibia are common locations for broken bones. Falls or blunt trauma (such as from a car accident) will often cause these broken bones.
-
-### Soft Tissue Damage
-
-A soft tissue injury is any damage to a non-bone, including damage to the tendons or torn ligaments. Soft tissue injuries include muscle damage, sprains, bursitis, dislocation, contusions, and other seemingly minor injuries.
-
-Soft tissue injuries may seem minor, but in reality they can be very painful and significantly limit movement. The knee has two tendons that connect the bones together. If these tendons get stretched and torn, it can lead to severe pain and instability. Falls and landing awkwardly from a jump can lead to tendon injuries.
-
-The hamstrings run at the back of the thigh muscle. Although they do not run through the knee, damage to your knee can also lead to problems with your hamstrings.
+Two large tendons run across the front of the knee: the quadriceps tendon above the kneecap and the patellar tendon below it. A fall or an awkward landing can tear either one, and a full tear usually needs surgery. Other soft tissue injuries include sprains, bursitis, dislocations, and deep bruises. They can sound minor but can still limit how you walk, kneel, and climb.
 
 ### Amputation
 
-Although amputation injuries are rare, they can happen. This type of injury can occur because of a fall into equipment, a crush incident, or another severe lower leg injury.
+Amputations are rare. They can happen in crush injuries, falls into machinery, and other severe accidents.
 
-## What Steps Should You Take If You Injure Your Knee At Work?
+## What Virginia Workers’ Comp Requires for a Knee Injury
 
-[Virginia workers’ compensation laws](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/) require that you give your employer notice of an injury within 30 days after it occurs. That means that unless it is an emergency, [your first step is to report the injury to your supervisor or manager](/how-to-file-a-workers-comp-claim/). In an emergency, address your health and safety first: get immediate medical attention if necessary.
+### Most Knee Claims Need a Specific Accident
 
-### 1.  Provide Proper Notice to Your Employer
+**Virginia workers’ comp covers a knee injury caused by a specific accident at work that produces a sudden structural or mechanical change in the knee.** It generally does not cover knee problems that develop slowly from wear and tear, repetitive kneeling, or years of hard work. That is why it matters whether your knee problem is new (acute) or long-standing (chronic). Your MRI and your doctor’s notes often decide that question.
 
-**Your notice of the injury should occur no later than 30 days after the accident.** Ideally, you should provide notice in writing. This deadline is important because reporting the accident later can limit or even bar your right to workers’ compensation benefits. Your written notice of the injury should include the following information:
+### Arthritis and Other Pre-Existing Knee Problems
 
-- Your name and address
-- The date and time of the accident
-- The location of the injury
-- The nature and cause of the injury
+Purely degenerative arthritis, even when work makes it hurt more, is generally not covered by itself. But a pre-existing condition does not automatically end your claim. If a work accident caused a new structural or mechanical change, or a structural aggravation of the old condition, that injury can still be covered. And if a serious knee injury at work later leads to arthritis in that joint, the arthritis is more likely to be covered.
 
-You might want to include whether you verbally reported the injury to anyone. Include who that person is and when the report occurred.
+Here is an example. A construction worker has arthritis in one knee. If the knee keeps getting worse on the job until the ACL gives out with no specific accident, workers’ comp likely will not cover the tear. If the worker falls from a ladder and tears the ACL, the claim may be covered even though the arthritis was already there.
 
-### 2.  Meet Virginia Claim Filing Deadlines
+These cases turn on the medical details, so talk with a lawyer about the facts of yours.
 
-In addition to your initial reporting deadlines, you also have a separate period in which you can file a legal claim. This claim must be on file with the Virginia Workers’ Compensation Commission (VWC) no later than two years after the incident, although exceptions apply.
+## Steps to Take After a Knee Injury at Work
 
-### 3.  Receive a Response From Your Employer
+1. **Get medical care.** In an emergency, your health comes first. Tell every doctor that you hurt your knee at work and how it happened, so your records say so from the start.
+2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/) requires you to notify your employer within 30 days of the accident. Do it in writing. Late notice can limit or even bar your benefits. Include your name and address, the date and time of the accident, where it happened, what you were doing, and what part of your body you hurt. If you also told someone in person, note who and when.
+3. **File your claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply. File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
+4. **Watch for the insurance company’s answer.** After you file, the Commission will order your employer’s insurance company to respond to your claim within 30 days. It may accept the claim or deny it. Whatever it decides, you can ask the Commission for a hearing, including if it [delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/) or [denies your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).
 
-**Once you file your claim with the Virginia Workers’ Compensation Commission, the VWC will contact your employer about the claim.** They will require your employer or its insurance company to respond to the claim within 30 days. They must indicate whether they are either accepting or denying the claim.
+## What Benefits Can You Receive for a Knee Injury in Virginia?
 
-Regardless of how your employer or their [workers’ compensation insurance carrier treats the claim](/what-if-a-workers-comp-insurer-delays-my-benefits/), they must make you aware of whether they are accepting or denying it. They can accept, deny, or state that they are still investigating the claim.
+Workers’ comp does not pay for pain and suffering. It pays for specific things: medical care, part of your lost wages, and permanent loss of use of your leg. For a full overview, see [what workers’ comp covers in Virginia](/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/).
 
-## What Impacts How Much You Can Receive from Workers’ Comp for a Knee Injury?
+### Medical Care
 
-Like every personal injury, the severity of the damage will impact how much you can receive in workers’ compensation benefits. Many factors can affect your knee injury settlement and whether a settlement will even be available to you at all.
-
-### Preexisting Conditions
-
-Workers’ compensation generally will not give you benefits for preexisting conditions related to your knee. Workers’ comp in Virginia only covers an “[injury by accident](https://www.vacourts.gov/opinions/opnscvwp/1190957.pdf),” which means there must be a sudden structural or mechanical change to the joint.
-
-There must be an identifiable accident to prove that a change occurred, so if your injury was present before the accident and was not structurally changed by it, you could not receive compensation for it. Specifically, the damage cannot arise from repeated use or regular exertions of your job, and it cannot arise from a gradual deterioration of a pre-existing condition. However, a structural or mechanical aggravation or exacerbation of a pre-existing condition can potentially be awarded. 
-
-Consider an example. Imagine you are a construction worker with arthritis in your knee. If your knee continues to get worse until it causes an ACL tear, workers’ comp would likely not cover the ACL tear. There was no specific accident, so there is nothing to cover, even if your normal day-to-day job caused the resulting pain. On the other hand, if the tear was due to an accident, you might still get a payout even if you had arthritis before the accident. You should speak with a lawyer about the specific facts of your situation.
-
-### How Much You Made Prior to the Injury
-
-**In workers’ compensation, the [benefits](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/) you receive for wage replacement (indemnity) are based on how much you made before the accident.** The benefits calculation uses your “average weekly wage” or “AWW” to determine how much you should receive. Your benefits are generally calculated at 2/3 of your average weekly wage for the 52 weeks before your accident, although there are exceptions and variations to this rule.
-
-### The Employer’s Defenses
-
-**The amount you can potentially receive in a workers’ compensation settlement often depends on whether the employer has any viable defenses to the claim.** In workers’ compensation, you do not have to prove that the employer was at fault for the accident. This is in direct contrast to a typical personal injury case that results in a verdict, like you would have if you suffered a non-work related car accident.
-
-Nonetheless, the employer might still have some defenses available that could limit or bar your recovery. **Examples of defenses might include:**
-
-- The accident did not occur within the course and scope of your employment, or did not “arise out of” an actual risk of your employment.
-- There were willful safety rule violations that led to your accident.
-- Drug or alcohol use took place before or during the accident and caused the accident.
-- Your medical records indicate that the care you received was not causally related to the accident.
-- Your employer does not believe the injuries were as severe as you have claimed, and medical treatment was not reasonable or necessary in relation to the accident.
-
-Every situation is unique, so your employer might have several of these defenses or others. It is best to get tailored legal advice for your specific situation.
-
-### The Severity of the Injury
-
-Because workers’ compensation is designed to pay for your medical bills and replace part of your lost wages while a doctor is keeping you out of work, the amount of benefits you receive to address those losses may vary based on how severe your injury may be. For example, if you have soft tissue injuries that only last a few months, your settlement amount could be lower than someone who breaks their kneecap and is out of work for months on end. 
-
-### Future Medical Needs
-
-**Workers’ compensation benefits include medical care.** Your employer is required to provide you with the medical treatment you need to address your injury, so long as that medical treatment is reasonable, necessary, and causally related to the work accident. When employers consider how much they will pay in a settlement, they often also think about how much money they might have to pay for your medical care in the future.
-
-If you are expected to have ongoing medical needs for your knee, your settlement amount might be higher than someone who does not need long-term treatment or surgeries. Your overall recovery time can also affect your workers’ compensation benefit entitlement.
-
-### Third-Party Lawsuits
-
-In Virginia, if a third party caused your work injury (i.e., not someone you work with or work for), you might also be able to sue that third party separately for your accident. This type of lawsuit is simply referred to as a “third-party lawsuit.” It is a normal personal injury case that occurs alongside your workers’ comp case. This could be for personal injuries, defective products, premises liability, medical malpractice, or other civil causes of action. These third-party cases do not involve your employer directly, but instead are filed against the individual or entity that caused your injury.
-
-You should note you cannot bring this type of case against your employer. In almost all situations, the only remedy you have against your employer is through Virginia’s workers’ compensation laws.
-
-### Functional Capacity Evaluation or FCE
-
-Your doctor can do an evaluation of your knee to determine how well it functions after your work injury compared to a “normal” knee. This testing looks at how well your knee can support weight, whether it moves with the full range of motion, how well you walk, and other factors.
-
-The whole FCE testing process can take several hours in a typical knee injury case. Then, the medical professional will compare the information gathered in this testing to “normal” ranges. This process is called a “functional capacity evaluation” or FCE.
-
-FCEs are often performed to assess work restrictions and also provide impairment ratings. Impairment ratings are numerical representations of how much permanent damage you have suffered in a given body part as a result of a work accident. Impairment ratings are assessed in terms of a percentage. If your knee is functioning completely normally, for example, there will be a 0% impairment. If you are not quite where you need to be, you might have somewhere between 1% and 10% impairment. Severe knee injuries, or injuries causing knee replacements, might see impairment ratings over 50%. The larger your impairment rating, the higher your settlement value for your injury is likely to be because the more permanent partial disability benefits you could potentially be entitled to.
-
-## What Benefits Can You Receive From Your Knee Injury in Virginia?
-
-**The Virginia Workers’ Compensation Act provides several different types of benefits. These benefits are designed to help workers get back on their feet after a work injury.** However, in a workers’ comp case, you cannot recover for pain and suffering like in a regular personal injury case. But even though you cannot recover for pain and suffering in a workers’ comp case, there are still other benefits you can and should pursue.
-
-### Medical Benefits
-
-The employer must pay all medical expenses for reasonable, necessary, and causally-related medical treatment for the injured worker. That treatment can be broad: from simple office visits and prescription costs to knee replacement surgery or physical therapy. Medical benefits can also include braces, boots, mobility devices, injections, and even home or vehicle modifications in appropriate circumstances. 
+**Your employer’s insurance company must pay for medical treatment that is reasonable, necessary, and causally related to the work accident.** For a knee, that can include office visits, prescriptions, MRIs, injections, braces, physical therapy, and surgery, including knee replacement when the work injury causes the need for it. In the right circumstances, it can also include changes to your home or vehicle.
 
 ### Lost Wages
 
-**Lost wage benefits are often called indemnity benefits.** Virginia’s workers’ comp laws further break these benefits into “temporary total disability benefits” (TTD) and “temporary partial disability benefits” (TPD). These benefits allow workers to support themselves and loved ones when they cannot earn wages.
+**Wage loss benefits, also called indemnity benefits, are generally two-thirds of your average weekly wage over the 52 weeks before the accident,** with exceptions and variations. See [how workers’ comp benefits are calculated in Virginia](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).
 
-Temporary total disability benefits apply when the injured worker cannot work whatsoever per a doctor’s orders. Temporary partial disability benefits apply when the worker is back at work, generally in a light duty capacity, and not being paid as much as they were before the accident. The decrease in pay could result from working fewer hours or working in a job that pays less. Getting temporary partial disability benefits often requires a worker to look for work to offset their wage loss, even if they are back working at the job they had before they were injured. You should speak with a lawyer about this particularly complex area of the law if you find yourself on light duty and earning less than you did before you got hurt. 
+- **Temporary total disability (TTD)** applies when your doctor says you cannot work at all.
+- **Temporary partial disability (TPD)** applies when you are back at work on light duty but earning less than before, because of fewer hours or a lower-paying job. Getting TPD can require you to look for other work to make up the difference. This is a tricky area, so talk with a lawyer if you are on light duty and earning less.
 
-### Permanent Partial Disability Benefits (PPD)
+There is also a short waiting period before wage checks start. Here’s [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/).
 
-PPD benefits can be available when you have reached maximum medical improvement (MMI) and have a permanent loss of use in a ratable body part. Reaching MMI essentially means a medical professional has concluded you are as healed as you will ever be under the circumstances and have plateaued in your recovery. The body parts for which you can obtain PPD benefits include arms/hands/fingers, legs/feet/toes, eyes, and ears. You can also get PPD benefits if a spinal injury causes loss of use in one of these ratable body parts, although spinal injuries are not themselves entitled to PPD benefits in Virginia. There are also potentially PPD benefits available for severe scarring or disfigurement, and for amputation, whether whole or partial.
+### Permanent Partial Disability (PPD)
 
-PPD benefits are designed to compensate you for partial, permanent loss of function. These benefits are based on your AWW and are expressed as a percentage. There is a statutory formula that a lawyer can help you calculate to determine how much you could be entitled to in PPD benefits. 
+Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/) (MMI), meaning your doctor says you are as healed as you are going to get, you may have a permanent loss of use of your leg. A doctor gives that loss a rating, stated as a percentage. Virginia pays PPD benefits for the permanent loss of use of certain body parts, including the legs, arms, hands, feet, fingers, and toes, and for loss of vision or hearing. The amount comes from a formula based on your average weekly wage and your rating. Because a knee injury is rated as loss of use of the leg, the rating has a big effect on what a knee claim is worth.
 
-### Permanent Total Disability Benefits (PTD)
+### Permanent Total Disability (PTD)
 
-In some serious work injuries, you may lose the ability to use two or more extremities in any sort of gainful employment. In those cases, you can receive permanent total disability benefits to account for that loss. Permanent total disability benefits mean the insurance company has to pay you ⅔ of your pre-injury average weekly wage for your entire life. The circumstances where you can obtain permanent total disability benefits are extremely rare, and you should speak with a lawyer about this complex area of law.
+In rare, very serious cases, an injured worker loses the use of two or more of these body parts for any kind of gainful employment. Permanent total disability benefits then pay two-thirds of the pre-injury average weekly wage for life. These cases are uncommon and complicated, so talk with a lawyer if you think yours may qualify.
 
-## What Happens If I Need Surgery for My Knee After a Workplace Accident?
+## What If You Need Knee Surgery?
 
-Unfortunately, there are situations where a knee injury cannot heal with medication, injections, physical therapy, and other conservative measures. In those situations, surgery may be necessary. For example, you might need to repair a torn ACL or undergo knee replacement surgery. Any surgery should be recommended and performed by an experienced orthopedic specialist and is likely to trigger considerable pushback from the workers’ comp insurance company.
+Some knee injuries do not heal with rest, medication, injections, or therapy. A torn ACL, a large meniscus tear, or a ruptured tendon may need surgery, and a severe injury may lead to a knee replacement. Expect pushback: surgery is one of the most common points of dispute with the insurance company.
 
-If your doctor says your surgery is the result of your work injury, your employer or its insurance company should be on the hook to pay those medical bills. They should also provide follow-up care, including physical therapy, after your knee surgery.
+If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it, along with follow-up care such as physical therapy. That does not mean it will. Insurance companies often fight surgery requests. If it refuses, or your claim has been denied, you can ask the Commission for a hearing, and a workers’ comp lawyer can help.
 
-However, if your employer has denied your claim, you need to speak with an experienced workers’ compensation attorney about your legal options.
+## What Is the Average Payout for a Knee Injury at Work in Virginia?
 
-## Can I File For Workers’ Comp Benefits If I Have Osteoarthritis or Another Joint Condition?
+There is no reliable average. Knee claims range from a few weeks of wage checks for a sprain to years of benefits and surgery for a torn ACL or a knee replacement, and the numbers do not average out into anything useful for your case. These are the things that drive what a knee claim is worth:
 
-You might be able to file for work comp benefits if you have osteoarthritis or another joint condition, but these cases are extremely difficult because causation can be very difficult to pin down. Keep in mind that there must always be a structural or mechanical injury caused by the work accident to trigger workers’ compensation benefits. This same requirement applies when you have a prior knee condition you are claiming was exacerbated by a work accident.
+- **The injury and how it happened.** A clear accident with a structural injury on the MRI is a stronger claim than a gradual problem.
+- **Your average weekly wage.** Wage benefits are based on what you earned before the accident.
+- **How long you are out of work** or earning less on light duty.
+- **Future medical care.** If you will need more treatment or surgery, the insurance company will factor that cost into any settlement.
+- **Your permanent impairment rating** for the leg.
+- **The insurance company’s defenses.** Insurance companies raise many defenses. A few common ones: the accident did not happen at work, a safety rule was willfully broken, drugs or alcohol caused the accident, or your treatment is not related to the accident.
+- **Pre-existing conditions** and how the insurance company’s doctors view them.
+- **Your age, training, and the kind of work you can still do.**
 
-## What is the Average Settlement for a Knee Injury in Virginia?
+You do not have to prove your employer did anything wrong. Your employer’s fault does not matter in workers’ comp. Your own conduct can: willful misconduct, such as knowingly breaking a safety rule, can bar your recovery. That is why the insurance company looks hard at how the accident happened.
 
-Knee injury settlements vary a great deal because a variety of factors must be considered. Every case is different, so it is important to get tailored legal advice for your situation from an experienced workers’ compensation lawyer.
+### A Note on Functional Capacity Evaluations
 
-By talking with Pathfinder Injury Law, you can get a better estimate of what your settlement might be. We will often consider the following information as part of our analysis.
+Your doctor may send you for a functional capacity evaluation (FCE). It is a test, often several hours long, that measures what you can do: how much weight your knee can support, your range of motion, how you walk, and how long you can stand or kneel. FCE results are often used to set permanent work restrictions and can play a part in the impairment rating.
 
-- Future medical needs
-- Permanent physical damage
-- Future lost wages
-- The type of knee injury you have
-- How you injured your knee
-- Whether the employer has any defenses that might apply
-- Whether you have any preexisting conditions
-- Your physical attributes, such as age and weight
-- Your job experience, training, and education
-- Your overall recovery time
+### Can You Sue Someone Other Than Your Employer?
 
-The best way to get a realistic estimate of the value of your workers’ compensation case is to set up an appointment with an attorney who has dealt with cases like yours before, like Pathfinder Injury Law.
+In almost every case, workers’ comp is your only remedy against your employer. But if someone outside your company caused the injury, such as another driver or the maker of a defective machine, you may also have a separate personal injury case against that person or company. This does not apply to coworkers: you generally cannot sue a coworker who caused your injury. That case runs alongside your workers’ comp claim.
 
-## The Importance of Hiring a Virginia Workers’ Comp Attorney
+The best way to get a realistic picture of your knee claim is to talk with a lawyer who handles these cases. Here’s more on [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 
-Although workers’ compensation benefits can provide significant value to employees, they can be tough to obtain in some situations. An attorney can help you assert your rights against your employer when you feel that your employer is not being fair to you.
+## Why Talk to a Virginia Workers’ Comp Lawyer?
 
-Unfortunately, both employers and their insurance companies often try to pay as little as possible for a knee injury, even if they agree to accept the claim at first. An attorney can work to force the insurance company to treat you fairly and seek the workers’ comp benefits you may be due.
+Insurance companies often try to pay as little as possible on knee claims, even after accepting them. Common fights include whether the injury is new or degenerative, whether surgery is needed, and what the impairment rating should be. A lawyer can deal with the insurance company for you, push for the treatment your doctor recommends, and make sure the claim is valued on the full picture.
 
-## Talk to a Lawyer About Your Knee Injury
+## Talk to Pathfinder Injury Law About Your Knee Injury
 
-An attorney can help you pursue the benefits you are due. Have questions about your knee injury? [Contact Pathfinder Injury Law](/contact/) to schedule an appointment and get more information.
+Pathfinder Injury Law handles only Virginia workers’ compensation claims, for injured workers across the state. If you hurt your knee at work, [contact us](/contact/) or call [804-505-0633](tel:+18045050633) to talk through your situation.
