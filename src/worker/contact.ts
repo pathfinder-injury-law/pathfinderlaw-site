@@ -2,7 +2,7 @@ import { DEFAULT_ALLOWED_HOSTNAMES, FIRM_PHONE, MIN_FILL_MS, SELF_TEST_RECIPIENT
 import { alertThrottled, logCode, ping } from './alerts.ts';
 import { SendError, sendMail } from './google.ts';
 import { decide, loadRules } from './screen.ts';
-import { ROUTE_SUBJECT, intakeLines, intakeRows, route, type Route } from './intake.ts';
+import { ROUTE_SUBJECT, deadlineNote, intakeLines, intakeRows, route, type Route } from './intake.ts';
 import type { Deps, Env } from './types.ts';
 import { realDeps } from './types.ts';
 import { validate, type Submission } from './validate.ts';
@@ -57,8 +57,9 @@ const SUBJECT_MARK: Record<string, string> = {
 
 type EmailFacts = { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string };
 
-// Why a message needs a second look, in plain words. Empty for a clean lead.
-export function leadNotes(o: EmailFacts): string[] {
+// Why a message needs a second look, in plain words: a filing-deadline warning, screening, or a
+// problem on our side. Empty for a clean, recent lead.
+export function leadNotes(o: EmailFacts, sub?: Submission): string[] {
   const why = (reason: string) => {
     if (reason.startsWith('repeat_sender')) return 'This person has sent the form more than once recently. It may be a follow-up or a duplicate.';
     if (reason.startsWith('agency_phrase')) return 'This reads like a sales pitch, not someone who was hurt.';
@@ -69,7 +70,9 @@ export function leadNotes(o: EmailFacts): string[] {
     return 'The spam filter flagged this one. Look it over before calling.';
   };
   const ts = o.turnstile ?? 'skipped';
+  const deadline = sub?.intake ? deadlineNote(sub.intake) : null;
   return [
+    ...(deadline ? [deadline] : []),
     ...(o.outcome === 'lead' || o.reason === 'self_test' ? [] : [why(o.reason)]),
     ...(ts === 'error' ? ['The spam check was down when this was sent, so it was let through.'] : []),
     ...(ts === 'not_configured' ? ['The spam check is not set up on the website. Tell Claude: "The website spam check is not set up."'] : []),
@@ -79,7 +82,7 @@ export function leadNotes(o: EmailFacts): string[] {
 
 // The plain-text copy. Mail apps show the styled copy (emailHtml) when they can.
 export function emailBody(sub: Submission, o: EmailFacts) {
-  const notes = leadNotes(o);
+  const notes = leadNotes(o, sub);
   return [
     ...(notes.length ? ['Check this one:', ...notes.map((n) => `- ${n}`), ''] : []),
     `Name: ${sub.name}`,
@@ -107,7 +110,7 @@ const FONT = "Nexa, Aptos, 'Segoe UI', Helvetica, Arial, sans-serif";
 // then every answer (what happened last) in the same style.
 // Everything the visitor typed is escaped. Brand colors only (Pathfinder Brand Book).
 export function emailHtml(sub: Submission, o: EmailFacts) {
-  const notes = leadNotes(o);
+  const notes = leadNotes(o, sub);
   const badge = BADGE[sub.intake ? route(sub.intake) : 'message'];
   const digits = sub.phone.replace(/\D/g, '');
   const dial = digits.length === 10 ? `+1${digits}` : digits;

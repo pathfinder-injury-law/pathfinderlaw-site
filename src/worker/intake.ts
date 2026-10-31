@@ -21,14 +21,25 @@ export const WORK = {
   unsure: 'Not sure',
 } as const;
 
+export const WHEN = {
+  month: 'In the last month',
+  sixMonths: '1 to 6 months ago',
+  year: '6 months to a year ago',
+  twoYears: '1 to 2 years ago',
+  older: 'More than 2 years ago',
+  unsure: 'Not sure',
+} as const;
+
 export const YES_NO = { yes: 'Yes', no: 'No', unsure: 'Not sure' } as const;
 
 export type How = keyof typeof HOW;
 export type Work = keyof typeof WORK;
+export type When = keyof typeof WHEN;
 export type YesNo = keyof typeof YES_NO;
 
 export interface Intake {
   how: How;
+  when?: When; // asked on every path; optional only so a page loaded before the question existed still sends
   work?: Work; // not asked when "how" already sends the person elsewhere
   surgery?: YesNo; // not asked on the refer-out path
   missedWork?: YesNo; // not asked on the refer-out path
@@ -44,9 +55,10 @@ export const refersOut = (i: Partial<Intake>) =>
   (i.how !== undefined && REFER_HOW.includes(i.how)) || (i.work !== undefined && REFER_WORK.includes(i.work));
 
 // Refer out beats "likely not a case", which beats a possible case. Every "Not sure" stays with the firm.
+// More than 2 years ago is likely past Virginia's 2-year filing deadline (rule approved by Bryn, Oct 31, 2026).
 export function route(i: Partial<Intake>): Route {
   if (refersOut(i)) return 'refer';
-  if (i.how === 'overtime') return 'unlikely';
+  if (i.how === 'overtime' || i.when === 'older') return 'unlikely';
   if (i.surgery === 'yes' && i.missedWork === 'yes') return 'priority';
   return 'possible';
 }
@@ -63,10 +75,18 @@ export const ROUTE_SUBJECT: Record<Route, string> = {
 export function intakeRows(i: Intake): [string, string][] {
   return [
     ['How hurt', HOW[i.how]],
+    ...(i.when ? [['When it happened', WHEN[i.when]] as [string, string]] : []),
     ...(i.work ? [['Where they work', WORK[i.work]] as [string, string]] : []),
     ...(i.surgery ? [['Surgery had or recommended', YES_NO[i.surgery]] as [string, string]] : []),
     ...(i.missedWork ? [['Missed work or earned less', YES_NO[i.missedWork]] as [string, string]] : []),
   ];
+}
+
+// A deadline warning for the firm's email, in plain words, or nothing.
+export function deadlineNote(i: Intake): string | null {
+  if (i.when === 'older') return 'This happened more than 2 years ago. The filing deadline may have passed.';
+  if (i.when === 'twoYears') return 'This happened 1 to 2 years ago. The 2-year filing deadline may be close. Call soon.';
+  return null;
 }
 
 export const intakeLines = (i: Intake): string[] => intakeRows(i).map(([q, a]) => `${q}: ${a}`);

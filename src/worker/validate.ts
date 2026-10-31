@@ -1,4 +1,4 @@
-import { EMAIL, HOW, WORK, YES_NO, formatPhone, phoneDigits, refersOut, type Intake } from './intake.ts';
+import { EMAIL, HOW, WHEN, WORK, YES_NO, formatPhone, phoneDigits, refersOut, type Intake } from './intake.ts';
 
 export interface Submission {
   name: string;
@@ -25,6 +25,10 @@ function readIntake(v: unknown): Intake | null {
   const how = pick(HOW, d.how);
   if (!how) return null;
   const intake: Intake = { how };
+  if (d.when !== undefined) {
+    intake.when = pick(WHEN, d.when);
+    if (!intake.when) return null;
+  }
   if (refersOut(intake)) return d.work === undefined && d.surgery === undefined && d.missedWork === undefined ? intake : null;
   intake.work = pick(WORK, d.work);
   if (!intake.work) return null;
