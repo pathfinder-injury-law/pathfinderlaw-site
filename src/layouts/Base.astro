@@ -218,8 +218,9 @@ const speculationRules = JSON.stringify({
         window.addEventListener('scroll', onScroll, { passive: true });
 
         // Phone Call / Message bar: stays put while scrolling, and steps aside where it would cover
-        // something: the home page hero (which has its own Free Consultation button and the team photos
-        // peeking up at its bottom edge), the contact form and the footer. Without script it stays visible.
+        // something. On the home page (form in the hero) it shows from the first screen and hides only
+        // over the team photos, the bottom Free Consultation band and the footer. On other pages it hides
+        // over the page hero, the contact form and the footer. Without script it stays visible.
         var bar = document.querySelector('.call-bar');
         if (bar && 'IntersectionObserver' in window) {
           var seen = new Set();
@@ -228,12 +229,22 @@ const speculationRules = JSON.stringify({
             entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
             apply();
           });
-          document.querySelectorAll('#contact, form, .site-footer').forEach(function (el) { bio.observe(el); });
-          var heroEl = document.querySelector('.hero');
-          if (heroEl) {
-            seen.add(heroEl); // hidden from the first paint, so it never flashes over the hero
-            apply();
-            bio.observe(heroEl);
+          var heroForm = document.querySelector('.hero-form');
+          if (heroForm) {
+            document.querySelectorAll('.team-peek, #free-consultation, .site-footer').forEach(function (el) { bio.observe(el); });
+            // Short phones: once the visitor starts the form, its later steps grow down to where the bar
+            // sits, so the bar steps aside while the form is on screen. Before that it stays visible.
+            if (window.matchMedia('(max-height: 700px)').matches) {
+              heroForm.addEventListener('focusin', function () { bio.observe(heroForm); }, { once: true });
+            }
+          } else {
+            document.querySelectorAll('#contact, form, .site-footer').forEach(function (el) { bio.observe(el); });
+            var heroEl = document.querySelector('.hero');
+            if (heroEl) {
+              seen.add(heroEl); // hidden from the first paint, so it never flashes over the hero
+              apply();
+              bio.observe(heroEl);
+            }
           }
         }
 

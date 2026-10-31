@@ -129,6 +129,13 @@ const results = [
           return out;
         }
         function draw() {
+          try {
+            shape();
+          } catch (e) {
+            svg.style.display = 'none'; // the trail is decoration: if anything goes wrong, just leave it out
+          }
+        }
+        function shape() {
           var a = textEnd(l1), b = textEnd(l2), c = textEnd(q);
           if (!a || !b) { line.removeAttribute('d'); reveal.removeAttribute('d'); return; }
           // After step 1 the question is hidden; the path then ends at the top of the form's panel.
