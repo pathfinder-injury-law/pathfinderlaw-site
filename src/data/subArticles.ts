@@ -651,7 +651,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'How Much Do the Checks Pay?',
         blocks: [
-          TTD + ' The Commission sets that maximum each year. Here’s [how Virginia workers’ comp benefits are calculated](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).',
+          TTD + ' The maximum is tied by law to Virginia’s average weekly wage and changes every July 1, so the one that applies to you depends on your date of injury. For injuries on or after July 1, 2026, the maximum is $1,507.01 a week and the minimum is $376.75 ([Commission rates](https://www.workcomp.virginia.gov/documents/rates-min-max-benefits-cola-mileage); [Va. Code § 65.2-500](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/)). Here’s [how Virginia workers’ comp benefits are calculated](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).',
           TPD,
         ],
       },
@@ -661,10 +661,10 @@ export const subArticles: SubArticle[] = [
           {
             ul: [
               'Tell your employer about the accident in writing. ' + NOTICE,
-              'Your employer reports the injury to its insurance company.',
+              'Your employer or its insurance company must report the injury to the Commission within 10 days after learning of it ([Va. Code § 65.2-900](https://law.lis.virginia.gov/vacode/title65.2/chapter9/section65.2-900/)).',
               'File a claim with the Commission, even if the insurance company accepts your injury and starts paying. ' + FILING + ' A filed claim protects that deadline if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).',
               'After you file, the Commission will order the insurance company to respond to your claim within 30 days. It may accept the claim or deny it.',
-              'If the insurance company accepts, wage checks begin for the time your doctor keeps you out of work, starting on day 8.',
+              'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8.',
             ],
           },
           'Be careful what you say to the insurance adjuster, and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/).',
