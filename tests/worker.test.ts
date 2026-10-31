@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { handleContact } from '../src/worker/contact.ts';
 import { resetTokenCache } from '../src/worker/google.ts';
 import { decide, findLinkHosts } from '../src/worker/screen.ts';
-import { buildDigest, etDayRange, runDigest, runPurge, runSelfTest } from '../src/worker/scheduled.ts';
+import { buildDailyCheck, etDayRange, runDailyCheck, runPurge, runSelfTest } from '../src/worker/scheduled.ts';
 import { validate } from '../src/worker/validate.ts';
 import { cronJob, runScheduled } from '../src/worker/index.ts';
 import { STARTER_RULES, decodeRaw, goodInput, liveEnv, makeKv, makeWorld, post } from './helpers.ts';
@@ -290,7 +290,10 @@ test('Eastern day ranges handle standard and daylight time', () => {
 test('self-test sends a tagged message and pings the heartbeat only when delivered', async () => {
   const env = liveEnv(); let w = makeWorld();
   assert.equal(await runSelfTest(env, w.deps), true);
-  assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: \[Form Test [a-z0-9-]+\]/);
+  const { head } = decodeRaw(gmail(w.calls)[0]);
+  assert.match(head, /Subject: \[Form Test [a-z0-9-]+\]/);
+  // Only the sending mailbox gets it, not the people who watch the inboxes.
+  assert.match(head, /To: admin@pathfinderlaw\.com\r?\n/);
   assert.ok(w.calls.some((c) => c.url === 'https://hb.example/ping'));
   assert.equal(rows(env)[0].is_test, 1);
 
@@ -299,55 +302,85 @@ test('self-test sends a tagged message and pings the heartbeat only when deliver
   assert.ok(!w.calls.some((c) => c.url === 'https://hb.example/ping'));
 });
 
-test('digest: counts leads, lists screened with reasons, flags undelivered, excludes tests', async () => {
+test('daily check: a normal day sends no email at all', async () => {
   const env = liveEnv();
-  let w = makeWorld({ now: '2026-11-02T15:00:00Z' }); // a Monday afternoon
+  let w = makeWorld({ now: '2026-11-02T15:00:00Z' });
   await handleContact(post(goodInput()), env, w.deps);
   await handleContact(post(goodInput({ name: 'Spam Bot', email: 's@bad.com', message: 'virtual assistant services' })), env, w.deps);
+  await runSelfTest(env, makeWorld({ now: '2026-11-02T12:15:00Z' }).deps);
+  resetTokenCache(); w = makeWorld({ now: '2026-11-03T12:30:00Z' });
+  assert.equal(await buildDailyCheck(env, w.deps), null);
+  assert.equal(await runDailyCheck(env, w.deps), true);
+  assert.equal(gmail(w.calls).length, 0);
+});
+
+test('daily check: an undelivered message says who to call back, in plain English, to Bryn only', async () => {
+  const env = liveEnv();
+  let w = makeWorld({ now: '2026-11-02T15:00:00Z' });
+  await handleContact(post(goodInput()), env, w.deps);
   resetTokenCache(); w = makeWorld({ now: '2026-11-02T16:00:00Z', gmail: 500 });
   await handleContact(post(goodInput({ email: 'fail@example.com' })), env, w.deps);
-  await runSelfTest(env, makeWorld({ now: '2026-11-02T12:15:00Z' }).deps);
 
   resetTokenCache(); w = makeWorld({ now: '2026-11-03T12:30:00Z' });
-  const d = await buildDigest(env, w.deps);
-  assert.match(d.subject, /2 lead\(s\), 1 screened.*ATTENTION/);
-  assert.match(d.body, /Spam Bot <s@bad.com>, main form: agency_phrase: virtual assistant/);
-  assert.match(d.body, /PROBLEM\. 1 logged submission/);
-  // The undelivered lead's name, email, phone and time are in the digest; its message is not.
-  assert.match(d.body, /Pat Example, fail@example\.com, 804-555-0100, Nov 2, 2026, 11:00 AM Eastern/);
-  assert.match(d.body, /id id-\d+-xxxxxxxx, main form, failed: http_500/);
-  assert.doesNotMatch(d.body, /my claim was denied/);
-  assert.match(d.body, /1 failed send/);
-  assert.equal(await runDigest(env, w.deps), true);
-  assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: Form digest/);
+  const d = await buildDailyCheck(env, w.deps);
+  assert.ok(d);
+  assert.match(d.subject, /did not reach you/);
+  assert.match(d.body, /Someone filled out the website form yesterday, but the email never reached your inbox/);
+  assert.match(d.body, /Pat Example, 804-555-0100, fail@example\.com \(sent Nov 2, 2026, 11:00 AM\)/);
+  assert.match(d.body, /What to do:/);
+  // No codes, ids or message text.
+  assert.doesNotMatch(d.body, /id-\d|http_500|my claim was denied|digest/i);
+  assert.equal(await runDailyCheck(env, w.deps), true);
+  const { head } = decodeRaw(gmail(w.calls)[0]);
+  assert.match(head, /To: bswartz@pathfinderlaw\.com\r?\n/);
+  // Reported once: the next day is quiet again.
+  resetTokenCache(); w = makeWorld({ now: '2026-11-04T12:30:00Z' });
+  assert.equal(await buildDailyCheck(env, w.deps), null);
+});
+
+test('daily check: spam filter down is reported calmly', async () => {
+  const env = liveEnv(); let w = makeWorld({ now: '2026-11-02T15:00:00Z', turnstile: 'down' });
+  await handleContact(post(goodInput()), env, w.deps);
+  resetTokenCache(); w = makeWorld({ now: '2026-11-03T12:30:00Z' });
+  const d = await buildDailyCheck(env, w.deps);
+  assert.ok(d);
+  assert.match(d.subject, /spam filter/);
+  assert.match(d.body, /spam filter was not working yesterday/);
 });
 
 test('cron routing is by minute: hours can change for daylight saving', async () => {
   assert.equal(cronJob('15 12 * * *'), 'self_test');
-  assert.equal(cronJob('30 12 * * *'), 'digest');
+  assert.equal(cronJob('30 12 * * *'), 'daily_check');
   assert.equal(cronJob('0 9 * * *'), 'none');
   let env = liveEnv(); let w = makeWorld({ now: '2027-03-15T11:15:00Z' });
   assert.equal(await runScheduled('15 11 * * *', env, w.deps), 'self_test');
   assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: \[Form Test /);
   assert.ok(w.calls.some((c) => c.url === 'https://hb.example/ping'));
   resetTokenCache(); env = liveEnv(); w = makeWorld({ now: '2027-03-15T11:30:00Z' });
-  assert.equal(await runScheduled('30 11 * * *', env, w.deps), 'digest');
-  assert.equal(gmail(w.calls).length, 1);
-  assert.match(decodeRaw(gmail(w.calls)[0]).head, /Subject: Form digest/);
+  assert.equal(await runScheduled('30 11 * * *', env, w.deps), 'daily_check');
+  assert.equal(gmail(w.calls).length, 0); // nothing wrong, so no email
   w = makeWorld();
   const orig = console.error; console.error = () => {};
   try { assert.equal(await runScheduled('45 11 * * *', liveEnv(), w.deps), 'none'); } finally { console.error = orig; }
   assert.equal(w.calls.length, 0);
 });
 
-test('digest flags a two-day stretch with no submissions', async () => {
-  const env = liveEnv(); const { deps } = makeWorld({ now: '2026-11-10T12:30:00Z' });
-  assert.match((await buildDigest(env, deps)).body, /no submissions at all in the last two days/);
+test('daily check: a 3-day quiet stretch is reported once, the day it starts', async () => {
+  const env = liveEnv();
+  await handleContact(post(goodInput()), env, makeWorld({ now: '2026-11-06T15:00:00Z' }).deps); // a Friday
+  resetTokenCache();
+  const d = await buildDailyCheck(env, makeWorld({ now: '2026-11-10T12:30:00Z' }).deps); // Sat, Sun, Mon empty
+  assert.ok(d);
+  assert.match(d.body, /Nobody has sent a message through the website form in 3 days/);
+  assert.equal(await buildDailyCheck(env, makeWorld({ now: '2026-11-11T12:30:00Z' }).deps), null);
+  assert.equal(await buildDailyCheck(env, makeWorld({ now: '2026-11-09T12:30:00Z' }).deps), null);
 });
 
-test('digest failure to send pings the alert', async () => {
-  const env = liveEnv(); const w = makeWorld({ gmail: 403, now: '2026-11-10T12:30:00Z' });
-  assert.equal(await runDigest(env, w.deps), false);
+test('daily check failure to send pings the alert', async () => {
+  const env = liveEnv();
+  await handleContact(post(goodInput()), env, makeWorld({ now: '2026-11-09T15:00:00Z', turnstile: 'down' }).deps);
+  resetTokenCache(); const w = makeWorld({ gmail: 403, now: '2026-11-10T12:30:00Z' });
+  assert.equal(await runDailyCheck(env, w.deps), false);
   assert.ok(w.calls.some((c) => c.url === 'https://hb.example/fail'));
 });
 

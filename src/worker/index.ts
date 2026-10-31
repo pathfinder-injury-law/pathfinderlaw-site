@@ -1,24 +1,24 @@
 import { logCode } from './alerts.ts';
 import { handleContact } from './contact.ts';
-import { runDigest, runPurge, runSelfTest } from './scheduled.ts';
+import { runDailyCheck, runPurge, runSelfTest } from './scheduled.ts';
 import { realDeps, type Deps, type Env } from './types.ts';
 
 // Cron triggers (UTC) are set only in wrangler.jsonc. Jobs are chosen by the
 // MINUTE alone, so the hours can change there (daylight saving) with no code change:
 //   minute 15  morning self-test
-//   minute 30  daily digest, then spam purge
+//   minute 30  daily check (emails Bryn only if something is wrong), then spam purge
 //   anything else: logged and ignored
-export function cronJob(cron: string): 'self_test' | 'digest' | 'none' {
+export function cronJob(cron: string): 'self_test' | 'daily_check' | 'none' {
   const minute = cron.trim().split(/\s+/)[0];
   if (minute === '15') return 'self_test';
-  if (minute === '30') return 'digest';
+  if (minute === '30') return 'daily_check';
   return 'none';
 }
 
 export async function runScheduled(cron: string, env: Env, deps: Deps): Promise<string> {
   const job = cronJob(cron);
   if (job === 'self_test') await runSelfTest(env, deps);
-  else if (job === 'digest') await runDigest(env, deps).then(() => runPurge(env, deps));
+  else if (job === 'daily_check') await runDailyCheck(env, deps).then(() => runPurge(env, deps));
   else logCode('cron_unrecognized', { minute: cron.trim().split(/\s+/)[0] ?? '' });
   return job;
 }

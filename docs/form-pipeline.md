@@ -50,10 +50,10 @@ How the website's contact forms work, what a person must do before launch, and h
 ### Daily jobs (cron)
 | UTC time | Job |
 |---|---|
-| 12:15 | **Morning self-test.** Sends a message tagged `[Form Test xxxxxxxx]` through the same path to both inboxes. If Gmail accepts it, the Worker pings `HEARTBEAT_URL`. If not, no ping, and the outside service raises the alarm. |
-| 12:30 | **Daily digest** email (yesterday's lead count; every screened message with its reason; a check that every logged submission from the last 7 days was delivered, listing the name, email, phone, time and id of any that were not so the person can be called back without opening the database; error counts; a note if two days passed with no submissions), then the 90-day spam purge. |
+| 12:15 | **Morning self-test.** Sends a message tagged `[Form Test xxxxxxxx]` through the same path, but only to the admin@ mailbox (the sender), so nobody's inbox fills up. If Gmail accepts it, the Worker pings `HEARTBEAT_URL`. If not, no ping, and the outside service raises the alarm. |
+| 12:30 | **Daily check**, then the 90-day spam purge. The check emails Bryn only (`ALERT_RECIPIENTS`) and only when something needs attention: a message from yesterday that never reached the inboxes (with the person's name, phone, email and time so they can be called back), the spam filter (Turnstile) down or not configured, the spam rules not loading, or the first day of a 3-day stretch with no submissions. Each problem is written in plain English with what to do. A normal day sends nothing. Each problem is reported once (yesterday's rows only). |
 
-Cron runs in UTC. 12:30 UTC is 7:30 a.m. Eastern standard time (now until March 14, 2027). **When daylight time starts, change only the hours in `wrangler.jsonc`, from 12 to 11 (`15 11 * * *` and `30 11 * * *`). Nothing else needs to change.** The Worker picks the job by the minute alone (15 = self-test, 30 = digest and purge), so keep the minutes at 15 and 30. Any other minute is logged as `cron_unrecognized` and does nothing.
+Cron runs in UTC. 12:30 UTC is 7:30 a.m. Eastern standard time (now until March 14, 2027). **When daylight time starts, change only the hours in `wrangler.jsonc`, from 12 to 11 (`15 11 * * *` and `30 11 * * *`). Nothing else needs to change.** The Worker picks the job by the minute alone (15 = self-test, 30 = daily check and purge), so keep the minutes at 15 and 30. Any other minute is logged as `cron_unrecognized` and does nothing.
 
 The Gmail filters from the plan should match only the exact "[Screened]" tag and the "[Form Test" tag, so no filter can bury a real lead.
 
@@ -100,7 +100,7 @@ Previews need none of these. The previews build uses Cloudflare's published alwa
 - [ ] Test the acknowledgement: the form must refuse to send with the box unchecked
 - [ ] Test the alarm path: open the `ALERT_URL` address once by hand and confirm both phones are alerted
 - [ ] Confirm the morning test arrives and the heartbeat shows green the next morning
-- [ ] Confirm the next morning's digest arrives at 7:30
+- [ ] Confirm no daily-check email arrives on a normal morning
 - [ ] Confirm the privacy policy mentions Turnstile, Web Analytics, and the retention schedule
 - [ ] Confirm the old Gravity Forms and Mailgun stop being used at cutover; Seventh Wall confirms deletion in writing
 - [ ] Put a reminder on the calendar for March 2027 to change the cron hours in `wrangler.jsonc` from 12 to 11 (daylight time; hours only)
@@ -109,7 +109,7 @@ Previews need none of these. The previews build uses Cloudflare's published alwa
 ```bash
 node --test tests/
 ```
-The tests use Node's built-in SQLite as a stand-in for D1 and mock Google, Turnstile and the check-in service. They cover: validation, every screening rule, all outcomes in the table above, the Google sign-in (RS256) and its scope, no personal data in logs, preview mode, the morning test, the digest and the purge.
+The tests use Node's built-in SQLite as a stand-in for D1 and mock Google, Turnstile and the check-in service. They cover: validation, every screening rule, all outcomes in the table above, the Google sign-in (RS256) and its scope, no personal data in logs, preview mode, the morning test, the daily check and the purge.
 
 To run the Worker locally with a local database (nothing remote, nothing real is sent), create a file `.dev.vars` (it is git-ignored) with fake values and these three override variables pointing at a local stand-in server: `GOOGLE_TOKEN_URL`, `GMAIL_SEND_URL`, `TURNSTILE_VERIFY_URL`. Then:
 ```bash
@@ -122,7 +122,7 @@ Trigger a cron by hand with `curl "localhost:8787/cdn-cgi/handler/scheduled?cron
 
 ## Known limits and decisions
 - **Admin@ sends all mail.** A flood could hit admin@'s daily Gmail limit; the rate-limit rule and Turnstile guard against that. Changing admin@'s password is a planned event (see the plan), not automatic.
-- **Bot-check failures are not emailed.** A Turnstile "not human" result and a filled trap field are saved but not emailed, to keep floods out of the inboxes. A real person who fails Turnstile sees the phone number. Both are listed in the digest.
-- **Digest check window.** The delivery check ignores rows less than 10 minutes old so a message being processed is not reported as lost.
+- **Bot-check failures are not emailed.** A Turnstile "not human" result and a filled trap field are saved but not emailed, to keep floods out of the inboxes. A real person who fails Turnstile sees the phone number. Both stay in the database for 90 days; they are not emailed or reported.
+- **Daily check window.** The delivery check looks at yesterday's rows only, so a message still being processed is never reported as lost, and each problem is reported once.
 - **Logs.** Cloudflare may record the request path and time for the Worker; the Worker itself never writes message content. Do not add `console.log` of any submission field.
 - **Preview mode** (`PREVIEW_MODE` in `wrangler.preview.jsonc`) validates exactly as live, then sends and stores nothing and answers "Preview: nothing was sent."

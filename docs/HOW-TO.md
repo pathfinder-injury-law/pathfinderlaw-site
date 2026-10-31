@@ -51,8 +51,10 @@ One more setting that is **not** secret: `PUBLIC_TURNSTILE_SITE_KEY` (the bot ch
 ## Chores by the calendar
 
 **Every morning (a glance):**
-- The **morning self-test** email (subject starts `[Form Test`) arrives at about 7:15 a.m. If it does not come, the form may not be sending. Send a test from the website and call for help if that fails too.
-- The **daily digest** arrives at about 7:30 a.m. It lists yesterday's messages, anything screened as spam, and any message that was saved but not delivered (call those people back).
+- On a normal day you get **no** emails about the form. The morning self-test (about 7:15 a.m.) goes only to the admin@ mailbox, and the outside check-in service (Healthchecks.io) quietly records that it worked.
+- You get an email only when something needs attention, and it says in plain words what to do:
+  - From the website (about 7:30 a.m.): a message that never reached the inbox (it lists who to call back), the spam filter being down, or three days with no messages at all.
+  - From Healthchecks.io: the morning self-test did not run or could not send email. Send a test from the website on your phone, and get help if it does not arrive.
 
 **Each week:**
 - **Dependabot pull requests.** Every Monday GitHub checks for newer versions of the building blocks the site uses and opens a pull request for any it finds (small updates come grouped together). If its checks are green, approve and merge it as usual. If the checks are red, leave it and ask for help; nothing is broken on the live site, since nothing changes until a merge.
