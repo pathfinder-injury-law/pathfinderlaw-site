@@ -12,9 +12,12 @@ import ContactSection from '../../components/ContactSection.astro';
 //  - Oct 28, per Bryn: marketing claims removed or reworded to facts ("great results", "excellent results",
 //    "leading modern firm", "We know how to win", "more than nine years", "hundreds of claims").
 //    Bryn did not confirm the years or case-count numbers, so they are gone.
-const title = 'About Pathfinder Injury Law - Pathfinder Injury Law';
+//  - Oct 31 SEO rewrite: Bryn supplied the facts (licensed 2011; thousands of comp cases; hundreds of
+//    mediations; claimant and defense firms; Pathfinder founded 2019). Title, description, lead, and the
+//    "We’re experienced" reason now use them.
+const title = 'About Pathfinder Injury Law | Virginia Workers’ Comp Firm';
 const description =
-  'Need help from a Richmond workers’ compensation law firm? Call Pathfinder Injury Law at 804-505-0633 to discuss your case.';
+  'Pathfinder Injury Law is a family-owned Richmond firm that handles only Virginia workers’ comp. Founded in 2019 by Bryn Swartz, licensed since 2011.';
 
 const areas = [
   ['Alexandria', '/alexandria-workers-comp-lawyer/'],
@@ -68,7 +71,7 @@ const reasons = [
   {
     h: 'We’re experienced.',
     body: [
-      'Our founding attorney has worked on both the claimant and defense sides of the Virginia Workers’ Compensation system. We love putting our experience to use for injured workers in need.',
+      'Our founder, <a href="/bryn-swartz/">Bryn Swartz</a>, has been licensed in Virginia since 2011 and has handled thousands of workers’ comp cases and hundreds of mediations. Before Pathfinder, he worked at firms on both the claimant and defense sides of Virginia workers’ comp, so he has seen from the inside how insurance companies evaluate and defend claims. We put that experience to use for injured workers.',
     ],
   },
   {
@@ -91,14 +94,18 @@ const reasons = [
   <section class="section about-intro">
     <div class="wrap narrow prose">
       <p class="lead">
-        PATHFINDER INJURY LAW is a
-        <a href="/virginia-workers-comp-lawyer/">Worker’s Compensation law firm</a> nestled in the
-        outskirts of Richmond, Virginia, exclusively representing people who get injured in their
-        workplaces. By focusing on one area of legal practice, we’ve become intimately familiar with
-        this niche and complex area of law.
+        PATHFINDER INJURY LAW is a family-owned
+        <a href="/virginia-workers-comp-lawyer/">workers’ compensation law firm</a> in Richmond,
+        Virginia. We represent only people who get injured in their workplaces in Virginia, and we take
+        cases across the state. <a href="/bryn-swartz/">Bryn Swartz</a> founded the firm in 2019 after
+        years on both the injured worker’s side and the insurance company’s side of Virginia workers’ comp.
       </p>
       <p>
-        Pathfinder Injury Law consists of two professionals with many years of experience in various aspects of the workers’ comp world. We understand that the Worker’s Compensation
+        By focusing on one area of legal practice, we’ve become intimately familiar with this niche and
+        complex area of law.
+      </p>
+      <p>
+        Pathfinder Injury Law consists of two professionals with many years of experience in various aspects of the workers’ comp world. We understand that the workers’ compensation
         process can be very complex, frustrating, and intimidating. With Pathfinder, clients can
         expect efficient representation in a modernized, approachable
         setting, unlike the typical perception that law firms are intimidating, impersonal, and rigid.

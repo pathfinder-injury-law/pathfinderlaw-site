@@ -326,37 +326,80 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'what-happens-after-a-workers-comp-ime-in-virginia',
-    title: "What Comes After a Workers' Comp IME in Virginia?",
+    title: "What Happens After a Workers’ Comp IME in Virginia?",
     description:
-      "What happens after a workers' comp independent medical exam? Here's everything you need to know from Pathfinder Injury Law in Virginia.",
+      "After a Virginia workers’ comp IME, the insurer’s doctor writes a report it may use to stop checks or deny treatment. Here’s what happens next.",
     h1: 'What Happens After a Workers’ Comp IME in Virginia?',
     crumb: 'What Happens After an IME',
     intro: [
-      'An independent medical exam, or IME, may be part of getting your Workers’ Comp benefits. You may have already scheduled your IME and you’re getting ready to attend. But then what? What happens after a Workers’ Comp IME in Virginia?',
-      'The results of your IME can impact your Workers’ Comp benefits. Because of this, you may need to speak to a dedicated lawyer from Pathfinder Injury Law. We can talk through the aftermath of your exam and what you can do to protect your Workers’ Comp benefits.',
+      'After a workers’ comp IME in Virginia, the doctor the insurance company chose writes a report, and the insurance company uses it to decide what to do next: keep paying, try to stop or reduce your wage checks, deny treatment your own doctor recommended, or argue for a lower impairment rating. The IME doctor does not become your doctor and does not treat you. The report also does not decide anything on its own. If you disagree with it, the Commission decides.',
+      'Here is what the report usually covers, what the insurance company can and can’t do with it, and what happens when your doctor disagrees.',
     ],
     sections: [
       {
-        h2: 'What’s an IME For?',
+        h2: 'What Is an IME in Virginia Workers’ Comp?',
         blocks: [
-          'An IME is a chance for the defense to review your medical condition with a doctor of their choosing. During the exam, the doctor will ask you questions about your health, your medical history, and how the injury happened. Unfortunately, these questions are more than a health test. They want to show you don’t need Workers’ Comp benefits.',
-          'Because of this, you need to come prepared. Your [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) in Virginia can discuss the questions you’ll be asked and how you can prepare for a Workers’ Comp IME.',
+          'An independent medical examination, or IME, is an exam by a doctor the insurance company picks and pays. Virginia law requires you to attend one when your employer asks, at a reasonable time and place. If you refuse to go or get in the way of the exam, your benefits can be suspended until you cooperate, and you may not be paid for that time unless the Commission finds you had a good reason ([Va. Code § 65.2-607](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-607/)). You may bring a qualified doctor of your own to the exam, at your own expense.',
+          'The word “independent” is the insurance company’s. Here’s [how to prepare for an IME in Virginia](/virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia/).',
         ],
       },
       {
-        h2: 'Decisions After a Workers’ Comp IME in Virginia',
+        h2: 'What the IME Report Usually Says',
         blocks: [
-          'After your Workers’ Comp IME, the doctor’s report will be reviewed, and you can receive either a positive or negative report. In some cases, the doctor may be on your side and say your injuries warrant Workers’ Comp benefits.',
-          'But that’s not always the case. The IME doctor may have claimed you weren’t that seriously injured, and that can impact your [Virginia Workers’ Comp benefits](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf). Because of this, you may need to dispute their findings at a hearing before the Virginia Workers’ Compensation Commission.',
-          'Luckily, you don’t have to do this alone. Your Workers’ Comp lawyer can help you prepare, gather evidence, and talk to witnesses before you attend a hearing.',
+          'The IME doctor answers the insurance company’s questions. The report usually gives opinions on:',
+          {
+            ul: [
+              'Whether your condition was caused by the work accident, or is degenerative or pre-existing',
+              'Whether you can work, and with what restrictions',
+              'Whether treatment your doctor recommends, such as surgery, injections, or therapy, is reasonable and necessary',
+              'Whether you have reached [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/)',
+              'An impairment rating for any permanent loss of use',
+            ],
+          },
+          'The report usually goes to the insurance company first. Commission rules require the insurance company to send you a copy promptly (Rules of the Virginia Workers’ Compensation Commission, Rule 4.2).',
+        ],
+      },
+      {
+        h2: 'What the Insurance Company Can Do With the Report',
+        blocks: [
+          {
+            ul: [
+              'Try to stop or reduce your wage checks. Once you have an award, the insurance company can’t just stop paying on its own. It has to file a sworn application with the Commission, backed by the medical reports it relies on, such as the IME report. It generally must pay you through the date it files. If the Commission rejects the application, your checks start again right away. If the Commission accepts it, your checks can stay stopped until the case is decided, and you have 15 days to respond ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/); Commission Rules 1.4 and 1.5).',
+              'Refuse to authorize treatment your doctor recommends. You can ask the Commission to order it.',
+              'Argue for a lower impairment rating, which means fewer weeks of pay for permanent damage. Here’s [how permanent partial disability is paid](/work-injury-compensation/).',
+              'Deny a claim it hasn’t accepted yet. A denial is not the final word. ' + DISPUTE,
+              'Use the report to argue for a lower number in settlement talks.',
+            ],
+          },
+        ],
+      },
+      {
+        h2: 'When Your Doctor and the IME Doctor Disagree',
+        blocks: [
+          'When the doctors disagree, the Commission weighs the medical evidence. In Virginia, the opinion of your treating physician is generally given great weight, because that doctor has seen you over time (Vital Link, Inc. v. Hope, 69 Va. App. 43, 64 (2018)). That is not automatic. The Commission can accept the IME doctor’s opinion if it finds it more persuasive, and a short or unexplained note from your own doctor can lose to a detailed IME report.',
+          'That is why what your treating doctor writes after an IME often matters more than the IME itself. A response that deals with the IME doctor’s reasons point by point carries more weight than a one-line disagreement, and doctors rarely write one unless someone asks the right questions.',
+        ],
+      },
+      {
+        h2: 'What to Do After the IME',
+        blocks: [
+          {
+            ul: [
+              'Write down, the same day, how long the exam lasted, what the doctor examined and asked, and anything said that you disagree with.',
+              'Ask for a copy of the report.',
+              'Keep going to your own doctor and follow your treatment plan and work restrictions.',
+              'Show the IME report to your treating doctor.',
+              'Watch your mail for a letter from the insurance company or a notice that it filed an application with the Commission. Deadlines run from those.',
+            ],
+          },
+          'If the insurance company denies treatment or stops checks, here’s [what to do when the insurer delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/) and [how to prepare for a Virginia workers’ comp hearing](/virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/).',
         ],
       },
     ],
     closing: {
-      h2: 'Get Help with Your Workers’ Comp IME in Virginia',
+      h2: 'Is an IME Being Used Against You?',
       blocks: [
-        'After a work injury, it can be tough to show you were actually hurt and need Workers’ Comp benefits.',
-        '[Pathfinder Injury Law](/) is focused on your recovery and on helping you seek the Virginia Workers’ Comp coverage you need. If you’re ready to learn more about what happens after a Workers’ Comp IME in Virginia, reach out for a free consultation. Call {phone} or fill out the {contact} below.',
+        'An IME report is often the first step toward stopped checks, a denied surgery, or a lower rating. What happens next turns on medical evidence, Commission procedure, and deadlines that start running when the insurance company acts. [Pathfinder Injury Law](/) handles only Virginia workers’ compensation claims. Call {phone} or use the {contact} on this page.',
       ],
     },
   },
@@ -695,36 +738,69 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'if-i-get-injured-at-work-in-virginia-do-i-get-paid',
-    title: "Are You Eligible For Compensation If Hurt At Work in VA?",
+    title: "Do You Get Paid If You’re Hurt at Work in Virginia?",
     description:
-      "Can you get paid after a work accident? Here's what you should know about Virginia workers' comp cases, according to Pathfinder Injury Law.",
+      "Yes, if the injury is covered. Virginia workers’ comp pays two-thirds of your average weekly wage, up to $1,507.01 a week, starting on day 8.",
     h1: 'If I Get Injured at Work in Virginia, Do I Get Paid?',
     crumb: 'Do I Get Paid If Injured at Work?',
     intro: [
-      'After a serious work injury, working may be out of the question. When you’re injured at work in Virginia, you need to get paid, but you can’t get your usual paycheck. So how do you pay for your needs after an accident?',
-      'Your lawyer at Pathfinder Injury Law can talk with you about the benefits that may be available when you’re struggling to overcome your work injuries.',
+      'Yes, if your injury is covered by Virginia workers’ compensation, but not your regular paycheck. While a doctor says you can’t work, workers’ comp pays two-thirds of your average weekly wage, up to a weekly maximum: $1,507.01 for injuries on or after July 1, 2026 ([Va. Code § 65.2-500](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/)). Checks start on the eighth day out of work, and the first seven days are paid back if you are out more than three weeks ([Va. Code § 65.2-509](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/)). Your employer’s workers’ comp insurance company pays (or your employer pays directly, if it is self-insured) ([Va. Code § 65.2-801](https://law.lis.virginia.gov/vacode/title65.2/chapter8/section65.2-801/)), and treatment for the injury is covered too.',
+      'Whether you actually get paid, and when, depends on whether the accident qualifies, whether the insurance company accepts the claim, and how your wage is figured. Here’s how each works.',
     ],
     sections: [
       {
-        h2: 'Your Workers’ Comp Benefits',
+        h2: 'What Workers’ Comp Pays',
         blocks: [
-          'If you’re injured at work in Virginia, you may be due benefits for your injury. ' + NO_FAULT + ' ' + FAULT,
-          MEDICAL + ' Your benefits may also cover the wages you’ve lost because you’re unable to work. Your Workers’ Comp lawyer can review the details of your benefits and what funds you could receive because of your injury.',
+          {
+            ul: [
+              'Out of work completely (temporary total disability): two-thirds of your average weekly wage, up to the weekly maximum ([Va. Code § 65.2-500](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/)).',
+              'Back at work on light duty for less pay (temporary partial disability): two-thirds of the difference between what you earned before and what you earn now ([Va. Code § 65.2-502](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-502/)).',
+              'Permanent damage (permanent partial disability): a set number of weeks of pay for permanent loss of use of certain body parts ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). Here’s [what a work injury is worth in Virginia](/work-injury-compensation/).',
+              'Medical treatment: care that is reasonable, necessary, and causally related to the accident, from the first day ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)).',
+            ],
+          },
+          'Your average weekly wage is generally your total earnings, including overtime pay, from the job where you got hurt during the 52 weeks before the injury, divided by 52 ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)). Mistakes in that number shrink every check. Here’s [how Virginia workers’ comp benefits are calculated](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).',
         ],
       },
       {
-        h2: 'Virginia’s Workers’ Comp Claim Process',
+        h2: 'Does My Employer Have to Keep Paying My Salary?',
         blocks: [
-          'Getting Workers’ Comp coverage isn’t always easy. You need to take the right steps to protect your claim and get the funds you’re due.',
-          'For example, you’ll first need to act fast and [report your injury](https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf) as soon as possible. ' + NOTICE + ' ' + FILING + ' Once you report your Virginia work accident, your employer must contact the insurance company about coverage and your benefits.',
-          'The insurance adjuster will then review your accident and determine what benefits you’re due. Then, you’ll get a notification approving or denying those benefits. Be careful what you say to the adjuster, and do not assume they are looking out for you. If you’re denied, don’t panic. ' + DISPUTE + ' Your lawyer can help you [seek the Workers’ Comp benefits](/virginia-workers-comp-lawyer/) you’re due.',
+          'No. Virginia workers’ comp replaces part of your wages through the insurance company’s checks; it does not require your employer to keep paying your regular salary while you are out. Some employers keep paying for a while or let you use sick leave or vacation. Keep a record of every payment you get from your employer while you are out. If your employer paid you money that workers’ comp did not owe yet, the Commission can let the insurance company take it back, but usually only by holding back up to one-fourth of each weekly check ([Va. Code § 65.2-520](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-520/)).',
+        ],
+      },
+      {
+        h2: 'Does My Injury Qualify?',
+        blocks: [
+          'Getting paid starts with whether the accident is covered. The injury must arise out of and in the course of your job, and it must be caused by an accident: an identifiable incident at a reasonably definite time that causes a sudden mechanical or structural change in your body. You must also be an employee, not a true independent contractor. Here’s [how to qualify for workers’ comp in Virginia](/how-to-qualify-for-workers-comp-in-virginia/) and [what to do if your employer calls you an independent contractor](/what-to-do-when-your-employer-lists-you-as-an-independent-contractor/).',
+          FAULT,
+        ],
+      },
+      {
+        h2: 'What Has to Happen Before You Get Paid',
+        blocks: [
+          {
+            ul: [
+              'Tell your employer about the accident in writing. ' + NOTICE,
+              'File a claim with the Commission, even if the insurance company accepts your injury and starts paying. ' + FILING + ' A filed claim protects that deadline if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).',
+              'After you file, the Commission will order the insurance company to respond to your claim within 30 days. It may accept the claim or deny it.',
+              'If it accepts, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you can’t work because of the injury.',
+            ],
+          },
+          'Be careful what you say to the insurance adjuster, and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/) and [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/).',
+        ],
+      },
+      {
+        h2: 'What If the Insurance Company Won’t Pay?',
+        blocks: [
+          'The insurance company is required to pay a covered claim, but that doesn’t mean it will. ' + DISPUTE + ' You can ask the Commission for a hearing no matter what the insurance company decides. If a payment is not made within two weeks after it becomes due, the law adds 20 percent to the unpaid amount, unless the Commission finds the delay had good cause ([Va. Code § 65.2-524](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/)).',
+          'Here’s [what happens if your claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) and [what to do when the insurer delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/).',
         ],
       },
     ],
     closing: {
-      h2: 'Speak with a Workers’ Comp Lawyer in Virginia',
+      h2: 'Hurt at Work and Not Getting Paid?',
       blocks: [
-        'After a work-related accident, you need help recovering from your injuries. But if you get injured at work in Virginia, how do you get paid? You can learn more with help from [Pathfinder Injury Law](/). If you’re hurt and need Workers’ Comp benefits, reach out to a lawyer by calling {phone} or by completing the online contact form below.',
+        'Most payment problems come down to whether the accident qualifies, what your average weekly wage really was, or whether you can do light duty. Each one turns on medical records, pay records, and deadlines that keep running while you wait. [Pathfinder Injury Law](/) handles only Virginia workers’ compensation claims. Call {phone} or use the {contact} on this page.',
       ],
     },
   },
