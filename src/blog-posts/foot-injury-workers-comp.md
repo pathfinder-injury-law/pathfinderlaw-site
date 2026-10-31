@@ -21,7 +21,7 @@ Whether a foot injury is covered can get complicated quickly. Start with these t
 
 **The injury must arise out of and in the course of your employment.** That is a legal phrase with a specific meaning: an actual risk of your job must have caused the accident. A risk that anyone could face anywhere, apart from work, usually does not count.
 
-An injury that happens outside the scope of your job, during horseplay, or because you willfully broke a known safety rule will likely not be covered.
+An injury that happens outside the scope of your job, while you were taking part in horseplay, or because you willfully broke a known safety rule will likely not be covered. If a coworker’s horseplay hurt you and you were not part of it, you may still be covered.
 
 ### Can You Point to What You Were Doing?
 
@@ -38,7 +38,7 @@ You need to be able to say exactly what you were doing when you got hurt and how
 **You have the burden of proving your claim,** so start collecting evidence early.
 
 1. **Give your employer written notice within 30 days of the accident.** Say how it happened and what you hurt. Keep a copy. Late notice can limit or bar your benefits.
-2. **File a claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
+2. **File a claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply. File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 3. **Gather your evidence:**
    - **Pay records.** Your wage benefits are based on your average weekly wage over the year before the accident, so keep your pay stubs.
    - **Medical records.** Keep x-rays, MRIs, and other test results, prescriptions, and treatment plans, including physical therapy or surgery. Tell every doctor the injury happened at work. If surgery is recommended, ask your doctor to explain in writing why it is needed and how it connects to the work accident.
@@ -69,11 +69,9 @@ A foot sprain stretches or tears the ligaments that hold the bones together, usu
 
 The Achilles tendon connects your calf muscles to your heel. It can tear or rupture during a sudden push-off, a jump, or a missed step. Many people feel or hear a pop, followed by pain, swelling, and stiffness.
 
-### Nerve Injuries, Foot Drop, and Tarsal Tunnel Syndrome
+### Nerve Injuries and Foot Drop
 
-Foot drop means you have trouble lifting the front of your foot, so it may drag when you walk. It can come from a nerve injury and can require costly treatment. Tarsal tunnel syndrome is pressure on a nerve inside the ankle that causes burning, tingling, or numbness in the heel and sole.
-
-A caution: stress fractures and tarsal tunnel syndrome often develop gradually. When they do, Virginia workers’ comp usually will not cover them. If one of these followed a specific accident at work, talk with a lawyer about whether your claim can still go forward.
+Foot drop means you have trouble lifting the front of your foot, so it may drag when you walk. It can come from a nerve injury and can require costly treatment.
 
 ### Amputation
 
@@ -83,7 +81,7 @@ Serious foot injuries can leave a permanent impairment. Some workers can no long
 
 ## What If Your Foot Injury Needs Surgery?
 
-Some foot injuries do not heal with medication, injections, a boot, or physical therapy, and need surgery by an orthopedic or foot and ankle surgeon. If your claim is covered, the surgery should be paid as part of your medical benefits. If the insurance company refuses to approve the surgery, a lawyer can help you challenge that decision before the Commission.
+Some foot injuries do not heal with medication, injections, a boot, or physical therapy, and need surgery by an orthopedic or foot and ankle surgeon. If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it as part of your medical benefits. That does not mean it will. If the insurance company refuses to approve the surgery, you can ask the Commission for a hearing, and a lawyer can help you challenge that decision.
 
 ## What Benefits Can You Receive for a Foot Injury?
 

@@ -46,7 +46,7 @@ Amputations are rare. They can happen in crush injuries, falls into machinery, a
 
 ## What Virginia Workers’ Comp Requires for a Knee Injury
 
-### The Injury Has to Come From a Specific Accident
+### Most Knee Claims Need a Specific Accident
 
 **Virginia workers’ comp covers a knee injury caused by a specific accident at work that produces a sudden structural or mechanical change in the knee.** It generally does not cover knee problems that develop slowly from wear and tear, repetitive kneeling, or years of hard work. That is why it matters whether your knee problem is new (acute) or long-standing (chronic). Your MRI and your doctor’s notes often decide that question.
 
@@ -62,8 +62,8 @@ These cases turn on the medical details, so talk with a lawyer about the facts o
 
 1. **Get medical care.** In an emergency, your health comes first. Tell every doctor that you hurt your knee at work and how it happened, so your records say so from the start.
 2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacodefull/title65.2/chapter6/) requires you to notify your employer within 30 days of the accident. Do it in writing. Late notice can limit or even bar your benefits. Include your name and address, the date and time of the accident, where it happened, what you were doing, and what part of your body you hurt. If you also told someone in person, note who and when.
-3. **File your claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
-4. **Watch for the insurance company’s answer.** After you file, the Commission will ask your employer’s insurance company to respond. It can accept the claim, deny it, or say it is still investigating. If it [delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/) or [denies your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/), you can ask the Commission for a hearing.
+3. **File your claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply. File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
+4. **Watch for the insurance company’s answer.** After you file, the Commission will order your employer’s insurance company to respond to your claim within 30 days. It may accept the claim or deny it. Whatever it decides, you can ask the Commission for a hearing, including if it [delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/) or [denies your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).
 
 ## What Benefits Can You Receive for a Knee Injury in Virginia?
 
@@ -71,7 +71,7 @@ Workers’ comp does not pay for pain and suffering. It pays for specific things
 
 ### Medical Care
 
-**Your employer’s insurance company must pay for medical treatment that is reasonable, necessary, and causally related to the work accident.** For a knee, that can include office visits, prescriptions, MRIs, injections, braces, physical therapy, and surgery, including knee replacement when the work injury causes the need for it.
+**Your employer’s insurance company must pay for medical treatment that is reasonable, necessary, and causally related to the work accident.** For a knee, that can include office visits, prescriptions, MRIs, injections, braces, physical therapy, and surgery, including knee replacement when the work injury causes the need for it. In the right circumstances, it can also include changes to your home or vehicle.
 
 ### Lost Wages
 
@@ -84,7 +84,7 @@ There is also a short waiting period before wage checks start. Here’s [when Vi
 
 ### Permanent Partial Disability (PPD)
 
-Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/) (MMI), meaning your doctor says you are as healed as you are going to get, you may have a permanent loss of use of your leg. A doctor gives that loss a rating, stated as a percentage. Virginia pays PPD benefits for the loss of use of certain body parts, including the legs, arms, hands, feet, fingers, toes, eyes, and ears. The amount comes from a formula based on your average weekly wage and your rating. Because a knee injury is rated as loss of use of the leg, the rating has a big effect on what a knee claim is worth.
+Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/) (MMI), meaning your doctor says you are as healed as you are going to get, you may have a permanent loss of use of your leg. A doctor gives that loss a rating, stated as a percentage. Virginia pays PPD benefits for the permanent loss of use of certain body parts, including the legs, arms, hands, feet, fingers, and toes, and for loss of vision or hearing. The amount comes from a formula based on your average weekly wage and your rating. Because a knee injury is rated as loss of use of the leg, the rating has a big effect on what a knee claim is worth.
 
 ### Permanent Total Disability (PTD)
 
@@ -94,7 +94,7 @@ In rare, very serious cases, an injured worker loses the use of two or more of t
 
 Some knee injuries do not heal with rest, medication, injections, or therapy. A torn ACL, a large meniscus tear, or a ruptured tendon may need surgery, and a severe injury may lead to a knee replacement. Expect pushback: surgery is one of the most common points of dispute with the insurance company.
 
-If your doctor says the surgery is needed because of your work injury, the insurance company should pay for it, along with follow-up care such as physical therapy. If it refuses, or your claim has been denied, talk with a workers’ comp lawyer about your options.
+If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it, along with follow-up care such as physical therapy. That does not mean it will. Insurance companies often fight surgery requests. If it refuses, or your claim has been denied, you can ask the Commission for a hearing, and a workers’ comp lawyer can help.
 
 ## What Is the Average Payout for a Knee Injury at Work in Virginia?
 
@@ -105,11 +105,11 @@ There is no reliable average. Knee claims range from a few weeks of wage checks 
 - **How long you are out of work** or earning less on light duty.
 - **Future medical care.** If you will need more treatment or surgery, the insurance company will factor that cost into any settlement.
 - **Your permanent impairment rating** for the leg.
-- **The insurance company’s defenses,** such as saying the accident did not happen at work, that a safety rule was willfully broken, that drugs or alcohol caused the accident, or that your treatment is not related to the accident.
+- **The insurance company’s defenses.** Insurance companies raise many defenses. A few common ones: the accident did not happen at work, a safety rule was willfully broken, drugs or alcohol caused the accident, or your treatment is not related to the accident.
 - **Pre-existing conditions** and how the insurance company’s doctors view them.
 - **Your age, training, and the kind of work you can still do.**
 
-You do not have to prove your employer was at fault to get workers’ comp. But breaking safety rules or the law can bar your recovery, which is why the insurance company looks hard at how the accident happened.
+You do not have to prove your employer did anything wrong. Your employer’s fault does not matter in workers’ comp. Your own conduct can: willful misconduct, such as knowingly breaking a safety rule, can bar your recovery. That is why the insurance company looks hard at how the accident happened.
 
 ### A Note on Functional Capacity Evaluations
 
@@ -117,7 +117,7 @@ Your doctor may send you for a functional capacity evaluation (FCE). It is a tes
 
 ### Can You Sue Someone Other Than Your Employer?
 
-In almost every case, workers’ comp is your only remedy against your employer. But if someone outside your company caused the injury, such as another driver or the maker of a defective machine, you may also have a separate personal injury case against that person or company. That case runs alongside your workers’ comp claim.
+In almost every case, workers’ comp is your only remedy against your employer. But if someone outside your company caused the injury, such as another driver or the maker of a defective machine, you may also have a separate personal injury case against that person or company. This does not apply to coworkers: you generally cannot sue a coworker who caused your injury. That case runs alongside your workers’ comp claim.
 
 The best way to get a realistic picture of your knee claim is to talk with a lawyer who handles these cases. Here’s more on [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 
