@@ -686,9 +686,9 @@ export const subArticles: SubArticle[] = [
       },
     ],
     closing: {
-      h2: 'Talk to a Virginia Workers’ Comp Lawyer About Your Payments',
+      h2: 'Checks Late, Stopped, or Never Started?',
       blocks: [
-        'If your checks have not started, are late, or have stopped, talk with a lawyer. [Pathfinder Injury Law](/) handles only Virginia workers’ compensation claims. Call {phone} or use the {contact} on this page.',
+        'Late or missing checks usually mean a dispute is building: over whether the injury is covered, what your average weekly wage really was, or whether you can do light duty. Each of those turns on medical records, pay records, and deadlines that keep running while you wait. [Pathfinder Injury Law](/) handles only Virginia workers’ compensation claims. Call {phone} or use the {contact} on this page.',
       ],
     },
   },
