@@ -1,5 +1,9 @@
 export const SENDER = 'admin@pathfinderlaw.com'; // Gmail user the service account acts as
 export const RECIPIENTS = ['bswartz@pathfinderlaw.com', 'mtruman@pathfinderlaw.com'];
+// Where a "something is broken" email goes. Only Bryn watches the site.
+export const ALERT_RECIPIENTS = ['bswartz@pathfinderlaw.com'];
+// The morning self-test goes only to the sending mailbox, so it proves Gmail works without filling anyone's inbox.
+export const SELF_TEST_RECIPIENTS = [SENDER];
 export const FIRM_PHONE = '804-505-0633';
 export const GMAIL_SCOPE = 'https://www.googleapis.com/auth/gmail.send';
 export const GOOGLE_TOKEN_URL = 'https://oauth2.googleapis.com/token';

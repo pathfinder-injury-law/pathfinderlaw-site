@@ -1,4 +1,4 @@
-import { SPAM_RETENTION_DAYS } from './config.ts';
+import { ALERT_RECIPIENTS, SPAM_RETENTION_DAYS } from './config.ts';
 import { logCode, ping } from './alerts.ts';
 import { processSubmission } from './contact.ts';
 import { SendError, sendMail } from './google.ts';
@@ -46,7 +46,7 @@ export async function runSelfTest(env: Env, deps: Deps) {
       name: 'Morning self-test',
       email: 'admin@pathfinderlaw.com',
       phone: '804-505-0633',
-      message: `Automated morning test ${tag}. No action needed.`,
+      message: `Automated morning test ${tag}. This goes only to the admin@ mailbox to prove the form can send email.`,
       form: 'main',
       company: '',
       fillMs: 60_000,
@@ -73,11 +73,14 @@ interface Row {
   is_test: number;
 }
 
-export async function buildDigest(env: Env, deps: Deps): Promise<{ subject: string; body: string }> {
+// The daily check. Returns null on a normal day (no email at all). Otherwise returns one
+// plain-English email that says what broke and what to do about it.
+// (The morning self-test failing is not covered here: if Gmail is down this email cannot
+// go out either, so the outside check-in service raises that alarm.)
+export async function buildDailyCheck(env: Env, deps: Deps): Promise<{ subject: string; body: string } | null> {
   if (!env.DB) throw new Error('no_db');
   const now = deps.now();
   const day = etDayRange(now, 1);
-  const prior = etDayRange(now, 2);
   const cols = 'id, created_at, form, outcome, reason, turnstile, delivery_status, delivery_detail, name, email, phone, is_test';
 
   const yesterday = (
@@ -86,79 +89,85 @@ export async function buildDigest(env: Env, deps: Deps): Promise<{ subject: stri
       .all<Row>()
   ).results;
   const real = yesterday.filter((r) => !isTest(r));
-  const leads = real.filter((r) => r.outcome !== 'screened');
-  const screened = real.filter((r) => r.outcome === 'screened');
+  // Only yesterday's rows, so the same problem is reported once, not every day for a week.
+  const undelivered = real.filter((r) => r.delivery_status === 'pending' || r.delivery_status === 'failed');
+  const spamCheckDown = real.filter((r) => r.turnstile === 'error' || r.turnstile === 'not_configured').length;
+  const rulesErrors = real.filter((r) => r.reason === 'rules_error').length;
 
-  // Anything from the last 7 days that never reached the inboxes (not counting deliberate skips).
-  const weekAgo = new Date(now.getTime() - 7 * 86400_000).toISOString();
-  const undelivered = (
-    await env.DB.prepare(
-      `SELECT ${cols} FROM submissions WHERE created_at >= ? AND created_at < ? AND delivery_status IN ('pending','failed') ORDER BY created_at`,
-    )
-      .bind(weekAgo, new Date(now.getTime() - 10 * 60_000).toISOString()) // ignore ones still being processed
-      .all<Row>()
-  ).results;
+  // A quiet stretch can mean the form is broken for visitors (something the server cannot see).
+  // Say so once, on the day the stretch reaches QUIET_DAYS, not every day after.
+  const quietStart = etDayRange(now, QUIET_DAYS).start;
+  const dayBefore = etDayRange(now, QUIET_DAYS + 1);
+  const count = async (from: string, to: string) =>
+    (await env.DB!.prepare('SELECT COUNT(*) AS n FROM submissions WHERE created_at >= ? AND created_at < ? AND is_test = 0').bind(from, to).first<{ n: number }>())?.n ?? 0;
+  const quiet = (await count(quietStart, day.end)) === 0 && (await count(dayBefore.start, dayBefore.end)) > 0;
 
-  const testRows = yesterday.filter(isTest);
-  const twoDayCount = await env.DB.prepare('SELECT COUNT(*) AS n FROM submissions WHERE created_at >= ? AND created_at < ? AND is_test = 0')
-    .bind(prior.start, day.end)
-    .first<{ n: number }>();
-
-  const errors = {
-    sendFailures: yesterday.filter((r) => r.delivery_status === 'failed').length,
-    turnstileErrors: yesterday.filter((r) => r.turnstile === 'error').length,
-    turnstileNotConfigured: yesterday.filter((r) => r.turnstile === 'not_configured').length,
-    rulesErrors: yesterday.filter((r) => r.reason === 'rules_error').length,
-  };
-
-  const lines: string[] = [`Daily website form digest for ${day.label}`, ''];
-  lines.push(`Leads (including "unsure"): ${leads.length}`);
-  lines.push(`Screened: ${screened.length}`);
-  lines.push('');
-  if (screened.length) {
-    lines.push('Screened messages (check each; a real person would be a mistake):');
-    for (const r of screened) {
-      const note = r.delivery_status === 'skipped' ? 'not emailed' : 'emailed with [Screened]';
-      lines.push(`- ${r.name} <${r.email}>, ${r.form} form: ${r.reason} (${note})`);
-    }
-    lines.push('');
-  }
-  lines.push('Delivery check:');
-  if (undelivered.length === 0) {
-    lines.push(`- OK. Every logged submission from the last 7 days that should have been emailed was delivered.`);
-  } else {
-    // Contact details are listed so nobody has to open the database to call the person back.
-    // Message text is left out (it can be long); it is in the database under the id.
-    lines.push(`- PROBLEM. ${undelivered.length} logged submission(s) were not delivered. Contact these people (the message text is in the database under the id):`);
-    for (const r of undelivered) {
+  const problems: string[] = [];
+  if (undelivered.length) {
+    const people = undelivered.map((r) => {
       const when = new Date(r.created_at).toLocaleString('en-US', { timeZone: ET, dateStyle: 'medium', timeStyle: 'short' });
-      const tag = isTest(r) ? ' [morning self-test, no action needed]' : '';
-      lines.push(`  ${r.name}, ${r.email}, ${r.phone}, ${when} Eastern${tag}`);
-      lines.push(`    id ${r.id}, ${r.form} form, ${r.delivery_status}${r.delivery_detail ? `: ${r.delivery_detail}` : ''}`);
-    }
+      return `  - ${r.name}, ${r.phone}, ${r.email} (sent ${when})`;
+    });
+    problems.push(
+      [
+        `${undelivered.length === 1 ? 'Someone' : `${undelivered.length} people`} filled out the website form yesterday, but the email never reached your inbox.`,
+        '',
+        'What to do:',
+        '1. Call them back today:',
+        ...people,
+        '2. Send yourself a test message from the website contact page on your phone.',
+        '3. If your test does not arrive within a few minutes, tell Claude: "Website form emails are not arriving."',
+      ].join('\n'),
+    );
   }
-  lines.push(`- Morning self-test rows yesterday: ${testRows.length} (${testRows.filter((r) => r.delivery_status === 'sent').length} delivered)`);
-  lines.push('');
-  lines.push(`Errors yesterday: ${errors.sendFailures} failed send(s), ${errors.turnstileErrors} bot-check error(s), ${errors.rulesErrors} rules error(s).`);
-  if (errors.turnstileNotConfigured) {
-    lines.push(`TURNSTILE NOT CONFIGURED on ${errors.turnstileNotConfigured} submission(s): the TURNSTILE_SECRET secret is missing, so no bot check ran. Add it in the Cloudflare dashboard.`);
+  if (spamCheckDown) {
+    problems.push(
+      [
+        "The website form's spam filter was not working yesterday. Messages from real people still reached you, but some spam may have too.",
+        '',
+        'What to do: tell Claude: "The website form spam filter is down." Nothing is urgent.',
+      ].join('\n'),
+    );
   }
-  if ((twoDayCount?.n ?? 0) === 0) {
-    lines.push('', 'NOTE: no submissions at all in the last two days. If that is unusual, test the form from a phone.');
+  if (rulesErrors) {
+    problems.push(
+      [
+        "The website form's spam rules could not be read yesterday. Messages still reached you.",
+        '',
+        'What to do: tell Claude: "The website form spam rules are not loading." Nothing is urgent.',
+      ].join('\n'),
+    );
   }
-  const flag = undelivered.length || errors.sendFailures || errors.turnstileNotConfigured ? ' (ATTENTION)' : '';
-  return { subject: `Form digest: ${leads.length} lead(s), ${screened.length} screened${flag}`, body: lines.join('\n') };
+  if (quiet) {
+    problems.push(
+      [
+        `Nobody has sent a message through the website form in ${QUIET_DAYS} days. That is unusual, and it can mean the form is broken for visitors.`,
+        '',
+        'What to do: send yourself a test message from the website contact page on your phone. If it does not arrive within a few minutes, tell Claude: "The website form is not working."',
+      ].join('\n'),
+    );
+  }
+  if (!problems.length) return null;
+
+  const subject = undelivered.length
+    ? `Website form: ${undelivered.length === 1 ? 'a message' : 'messages'} did not reach you. Please call back`
+    : quiet
+      ? 'Website form: no messages in 3 days. Please test it'
+      : 'Website form: spam filter needs attention';
+  const body = [...problems.flatMap((p, i) => (i ? ['', '---', '', p] : [p])), '', `(Daily website form check for ${day.label}. You only get this email when something needs attention.)`].join('\n');
+  return { subject, body };
 }
 
+const QUIET_DAYS = 3;
 const isTest = (r: Row) => r.reason === 'self_test';
 
-export async function runDigest(env: Env, deps: Deps) {
+export async function runDailyCheck(env: Env, deps: Deps) {
   try {
-    const { subject, body } = await buildDigest(env, deps);
-    await sendMail(env, deps, { subject, body });
+    const email = await buildDailyCheck(env, deps);
+    if (email) await sendMail(env, deps, { ...email, to: ALERT_RECIPIENTS });
     return true;
   } catch (e) {
-    logCode('digest_failed', { detail: e instanceof SendError ? e.code : 'unknown' });
+    logCode('daily_check_failed', { detail: e instanceof SendError ? e.code : 'unknown' });
     await ping(env.ALERT_URL, deps);
     return false;
   }

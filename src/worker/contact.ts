@@ -1,4 +1,4 @@
-import { DEFAULT_ALLOWED_HOSTNAMES, FIRM_PHONE, MIN_FILL_MS, TURNSTILE_TEST_SECRET, TURNSTILE_VERIFY_URL } from './config.ts';
+import { DEFAULT_ALLOWED_HOSTNAMES, FIRM_PHONE, MIN_FILL_MS, SELF_TEST_RECIPIENTS, TURNSTILE_TEST_SECRET, TURNSTILE_VERIFY_URL } from './config.ts';
 import { alertThrottled, logCode, ping } from './alerts.ts';
 import { SendError, sendMail } from './google.ts';
 import { decide, loadRules } from './screen.ts';
@@ -189,6 +189,7 @@ export async function processSubmission(
         subject: `${prefix}Website inquiry (${sub.form === 'sidebar' ? 'sidebar form' : 'main form'})${SUBJECT_MARK[turnstile] ?? ''}`,
         body: emailBody(sub, { id, outcome, reason, logged, turnstile }),
         replyTo: sub.email,
+        ...(opts.test ? { to: SELF_TEST_RECIPIENTS } : {}),
       });
       delivery = 'sent';
     } catch (e) {

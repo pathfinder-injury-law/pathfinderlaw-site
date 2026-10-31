@@ -74,10 +74,10 @@ async function accessToken(env: Env, deps: Deps): Promise<string> {
 const wrap76 = (s: string) => s.match(/.{1,76}/g)?.join('\r\n') ?? '';
 const header = (s: string) => (/^[\x20-\x7e]*$/.test(s) ? s : `=?UTF-8?B?${btoa(String.fromCharCode(...utf8(s)))}?=`);
 
-export function buildRawMessage(opts: { subject: string; body: string; replyTo?: string }): string {
+export function buildRawMessage(opts: { subject: string; body: string; replyTo?: string; to?: string[] }): string {
   const lines = [
     `From: Pathfinder Website <${SENDER}>`,
-    `To: ${RECIPIENTS.join(', ')}`,
+    `To: ${(opts.to ?? RECIPIENTS).join(', ')}`,
     ...(opts.replyTo ? [`Reply-To: ${opts.replyTo}`] : []),
     `Subject: ${header(opts.subject.replace(/[\r\n]+/g, ' '))}`,
     'MIME-Version: 1.0',
@@ -89,8 +89,8 @@ export function buildRawMessage(opts: { subject: string; body: string; replyTo?:
   return lines.join('\r\n');
 }
 
-// Sends one email to the two firm inboxes. Throws SendError on any failure.
-export async function sendMail(env: Env, deps: Deps, opts: { subject: string; body: string; replyTo?: string }) {
+// Sends one email, to the two firm inboxes unless `to` says otherwise. Throws SendError on any failure.
+export async function sendMail(env: Env, deps: Deps, opts: { subject: string; body: string; replyTo?: string; to?: string[] }) {
   const token = await accessToken(env, deps);
   let res: Response;
   try {
