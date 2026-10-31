@@ -13,6 +13,21 @@ How the website's contact forms work, what a person must do before launch, and h
 7. It emails both inboxes (`bswartz@` and `mtruman@pathfinderlaw.com`, nobody else) through Gmail, sent as `admin@pathfinderlaw.com`, with Reply-To set to the visitor. Screened messages get "[Screened]" at the start of the subject.
 8. It records in the database whether the email was delivered. If sending fails, the visitor sees the firm's phone number (804-505-0633) instead of a success message, and the outside alarm is pinged.
 
+### The step-by-step questions (added Oct 31, 2026)
+The form asks one question per screen. Questions, answers and the sorting rule are in `src/worker/intake.ts` (shared by the page and the Worker; the Worker re-sorts on its own and never trusts the page).
+
+1. Name. 2. How did you get hurt? 3. Where do you work? 4. Surgery had or recommended? 5. Missed work or earned less? 6. What happened, and when? (optional) 7. Phone, email and the required checkbox (the attorney-client acknowledgement plus consent to calls and texts about the inquiry).
+
+Every inquiry is emailed to both inboxes. The subject ends with the sorting:
+| Subject ends | When | Visitor sees |
+|---|---|---|
+| PRIORITY case | Surgery had or recommended AND missed work or earned less (Bryn's rule, from the firm's settled-case data) | Thank-you page |
+| Possible case | Everything else that is not below, including every "Not sure" | Thank-you page |
+| Refer out | Sick from something at work, Social Security disability, or works for a Virginia state agency, the federal government, a railroad, a shipyard or port, or outside Virginia. Questions 3 to 5 are skipped once this is known. | "We'll reach out with the name of a lawyer who handles this kind of claim" |
+| Likely not a case | Injury built up over time | "We'll review it and get back to you" |
+
+The email lists each answer as a plain line ("How hurt: An accident at work") under Name, Email and Phone. Phone numbers must be 10-digit US numbers and are stored and emailed as (804) 555-0100.
+
 ### What each outcome does
 | Case | Saved | Emailed | Visitor sees |
 |---|---|---|---|
