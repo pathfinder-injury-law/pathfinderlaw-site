@@ -12,4 +12,12 @@ export default defineConfig({
   compressHTML: false,
   // Fills in the security policy's list of allowed inline scripts in dist/_headers (see the script).
   integrations: [cspHashes()],
+  // Astro builds CSS for the newest browsers only, so the minifier strips the -webkit- prefixes
+  // (no blur on iPhones before iOS 18) and rewrites max-width/min-width media queries into a
+  // newer form iOS 16.3 and older ignore. Naming older browsers here keeps both working.
+  vite: {
+    build: {
+      cssTarget: ['chrome111', 'edge111', 'firefox114', 'safari15', 'ios15'],
+    },
+  },
 });
