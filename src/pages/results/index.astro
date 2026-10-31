@@ -8,9 +8,11 @@ import ContactSection from '../../components/ContactSection.astro';
 // Owner decision (Oct 28): all results stay; the retainer agreement covers client consent.
 // No client is named. Some descriptions give case details (for example "public school teacher",
 // "gunshot wound"); Bryn may want to confirm those cannot identify anyone.
-const title = 'Results - Pathfinder Injury Law';
+// Oct 31 SEO: search title and description, and a short intro above the cards. Results, captions,
+// and the disclaimer are unchanged.
+const title = 'Virginia Workers’ Comp Case Results | Pathfinder Injury Law';
 const description =
-  'Want to know how Pathfinder may be able to help with your work comp case? View some of our past results online.';
+  'Past Virginia workers’ compensation settlements in back, brain, ankle, spine, and other injury cases, most reached at mediation before the Commission.';
 
 const results = [
   { amount: '$1,200,000', count: 1200000, text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.' },
@@ -38,6 +40,22 @@ const results = [
   overlay
 >
   <PageHero title="Case Results" crumbs={[{ name: 'Case Results' }]} />
+
+  <section class="section results-intro">
+    <div class="wrap narrow prose">
+      <p class="lead">
+        These are past results in Virginia workers’ compensation cases, from back and spine injuries to
+        brain injuries and broken bones. Many were heavily contested and settled at mediation before the
+        Virginia Workers’ Compensation Commission. Every settlement had to be approved by the Commission.
+      </p>
+      <p>
+        What a case settles for depends on the injury, the wages, the medical evidence, and how hard the
+        insurance company fights. Here’s
+        <a href="/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/">how a Virginia settlement is calculated</a>
+        and <a href="/work-injury-compensation/">what a work injury can be worth</a>.
+      </p>
+    </div>
+  </section>
 
   <section class="section results contour on-dark results-page">
     <div class="wrap">
