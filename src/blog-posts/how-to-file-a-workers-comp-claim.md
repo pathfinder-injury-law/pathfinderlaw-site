@@ -43,7 +43,7 @@ The Commission provides a claim for benefits form on its website, [workcomp.virg
 
 ## Step 5: Send It to the Commission
 
-You can mail a completed claim form to the Virginia Workers’ Compensation Commission, 333 E. Franklin St., Richmond, VA 23219, or fax it to 804-823-6957. The Commission’s website explains other ways to file. Confirm the current address, fax number, and filing options with the Commission before you send anything, and keep a copy of everything you file along with proof of when you sent it.
+You can mail a completed claim form to the Virginia Workers’ Compensation Commission, 333 E. Franklin St., Richmond, VA 23219, or fax it to 804-823-6956. The Commission’s website explains other ways to file. Confirm the current address, fax number, and filing options with the Commission before you send anything, and keep a copy of everything you file along with proof of when you sent it.
 
 ## What Happens After You File?
 
