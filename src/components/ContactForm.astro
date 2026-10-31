@@ -5,7 +5,7 @@
 // The questions and the sorting rule live in src/worker/intake.ts, shared with the Worker.
 // It posts JSON to /api/contact (the Worker in src/worker/). See docs/form-pipeline.md.
 import { site } from '../data/site';
-import { HOW, WORK, YES_NO } from '../worker/intake.ts';
+import { HOW, WHEN, WORK, YES_NO } from '../worker/intake.ts';
 
 const { id = 'contact-form' } = Astro.props;
 
@@ -22,6 +22,7 @@ const choices = (answer: string, options: Record<string, string>) =>
   Object.entries(options).map(([value, label]) => ({ answer, value, label }));
 const questions = [
   { step: 'how', q: 'How did you get hurt?', options: choices('how', HOW) },
+  { step: 'when', q: 'When did it happen?', options: choices('when', WHEN) },
   { step: 'work', q: 'Where do you work?', options: choices('work', WORK) },
   { step: 'surgery', q: 'Have you had surgery, or has a doctor said you need it?', options: choices('surgery', YES_NO) },
   { step: 'missedWork', q: 'Have you missed work or earned less because of the injury?', options: choices('missedWork', YES_NO) },
@@ -32,7 +33,7 @@ const questions = [
   <form class="contact-form intake" id={id} method="post" action="/contact/" novalidate data-sitekey={siteKey || TEST_SITE_KEY} data-phone={site.phoneHeader} data-phone-href={site.phoneHref}>
     <div class="intake-top">
       <button class="intake-back" type="button" hidden>Back</button>
-      <p class="intake-progress" aria-live="polite">Step 1 of 7</p>
+      <p class="intake-progress" aria-live="polite">Step 1 of 8</p>
     </div>
 
     <fieldset class="step" data-step="name">
@@ -159,7 +160,7 @@ const questions = [
 
     // The questions this person is asked, given their answers so far.
     const path = () => {
-      const p = ['name', 'how'];
+      const p = ['name', 'how', 'when'];
       if (!answers.how || !refersOut({ how: answers.how })) {
         p.push('work');
         if (!answers.work || !refersOut({ how: answers.how, work: answers.work })) p.push('surgery', 'missedWork');
@@ -170,7 +171,7 @@ const questions = [
     const intake = (): Intake => {
       const p = path();
       const i: Intake = { how: answers.how! };
-      for (const k of ['work', 'surgery', 'missedWork'] as const) if (p.includes(k) && answers[k]) (i as any)[k] = answers[k];
+      for (const k of ['when', 'work', 'surgery', 'missedWork'] as const) if (p.includes(k) && answers[k]) (i as any)[k] = answers[k];
       return i;
     };
     const firstName = () => field('name').value.trim().split(/\s+/)[0] ?? '';

@@ -431,7 +431,7 @@ test('purge removes screened rows older than 90 days and keeps leads', async () 
 });
 
 // ---------- step-by-step intake form ----------
-const caseIntake = { how: 'accident', work: 'virginia', surgery: 'yes', missedWork: 'yes' };
+const caseIntake = { how: 'accident', when: 'sixMonths', work: 'virginia', surgery: 'yes', missedWork: 'yes' };
 const intakeInput = (intake: unknown, o: Record<string, unknown> = {}) => goodInput({ intake, message: 'I fell off a ladder on March 3.', ...o });
 
 test('intake validation: answers must be ones the form offers, on the path the form asks', () => {
@@ -468,6 +468,28 @@ test('phone: US 10 digits, formatted (xxx) xxx-xxxx; email pattern enforced', ()
   for (const e of ['pat@example', 'pat example@x.com', '@example.com', 'pat@@example.com']) {
     assert.equal((validate(goodInput({ email: e })) as any).error, 'invalid_email', e);
   }
+});
+
+test('intake "when": more than 2 years is likely not a case; 1 to 2 years warns; missing is tolerated', async () => {
+  assert.equal(route({ ...caseIntake, when: 'older' } as any), 'unlikely');
+  assert.equal(route({ ...caseIntake, when: 'twoYears' } as any), 'priority');
+  assert.equal(route({ how: 'accident', when: 'older', work: 'federal' }), 'refer'); // refer still wins
+  assert.equal(validate(intakeInput({ ...caseIntake, when: 'yesterday' })).ok, false);
+  const { when: _w, ...noWhen } = caseIntake;
+  assert.equal(validate(intakeInput(noWhen)).ok, true); // a page loaded before the question existed
+
+  let env = liveEnv(); let w = makeWorld();
+  await handleContact(post(intakeInput({ ...caseIntake, when: 'older' })), env, w.deps);
+  let mail = decodeRaw(gmail(w.calls)[0]);
+  assert.match(mail.head, /Subject: Website inquiry - Likely not a case/);
+  assert.match(mail.body, /When it happened: More than 2 years ago/);
+  assert.match(mail.html, /The filing deadline may have passed/);
+
+  resetTokenCache(); env = liveEnv(); w = makeWorld();
+  await handleContact(post(intakeInput({ ...caseIntake, when: 'twoYears' })), env, w.deps);
+  mail = decodeRaw(gmail(w.calls)[0]);
+  assert.match(mail.head, /Subject: Website inquiry - PRIORITY case/);
+  assert.match(mail.html, /deadline may be close\. Call soon/);
 });
 
 test('intake sorting: refer beats likely-not-a-case beats a case; "Not sure" stays with the firm', () => {
