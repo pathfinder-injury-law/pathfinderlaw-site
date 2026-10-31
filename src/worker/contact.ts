@@ -2,7 +2,7 @@ import { DEFAULT_ALLOWED_HOSTNAMES, FIRM_PHONE, MIN_FILL_MS, SELF_TEST_RECIPIENT
 import { alertThrottled, logCode, ping } from './alerts.ts';
 import { SendError, sendMail } from './google.ts';
 import { decide, loadRules } from './screen.ts';
-import { ROUTE_SUBJECT, intakeLines, route } from './intake.ts';
+import { ROUTE_SUBJECT, intakeLines, intakeRows, route, type Route } from './intake.ts';
 import type { Deps, Env } from './types.ts';
 import { realDeps } from './types.ts';
 import { validate, type Submission } from './validate.ts';
@@ -49,32 +49,39 @@ export interface Processed {
   delivery: 'sent' | 'failed' | 'skipped';
 }
 
-const TURNSTILE_LINE: Record<string, string> = {
-  pass: 'pass',
-  fail: 'fail',
-  wrong_hostname: 'fail (token issued for a hostname not in ALLOWED_HOSTNAMES)',
-  error: 'spam check unavailable (Cloudflare could not be reached; delivered anyway)',
-  not_configured: 'TURNSTILE NOT CONFIGURED (the TURNSTILE_SECRET secret is missing; fix it in the Cloudflare dashboard)',
-  skipped: 'skipped (automated self-test)',
-};
-
 // Added to the end of the subject so the "[Screened]" and "[Form Test" filters still match.
 const SUBJECT_MARK: Record<string, string> = {
   error: ' - spam check unavailable',
   not_configured: ' - TURNSTILE NOT CONFIGURED',
 };
 
-// A clean lead email holds only the four things the person typed. A note line goes on top
-// only when something needs a second look (screening, the spam check, or the form log).
-export function emailBody(sub: Submission, o: { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string }) {
+type EmailFacts = { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string };
+
+// Why a message needs a second look, in plain words. Empty for a clean lead.
+export function leadNotes(o: EmailFacts): string[] {
+  const why = (reason: string) => {
+    if (reason.startsWith('repeat_sender')) return 'This person has sent the form more than once recently. It may be a follow-up or a duplicate.';
+    if (reason.startsWith('agency_phrase')) return 'This reads like a sales pitch, not someone who was hurt.';
+    if (reason === 'agency_domain') return 'This came from an address used by a marketing company.';
+    if (reason.startsWith('many_links') || reason === 'has_link') return 'The message has web links in it, which spam often does.';
+    if (reason === 'too_fast') return 'The form was filled out faster than a person usually can, so this may be a bot.';
+    if (reason === 'rules_error') return 'The spam filter could not check this one, so it was let through.';
+    return 'The spam filter flagged this one. Look it over before calling.';
+  };
   const ts = o.turnstile ?? 'skipped';
-  const notes = [
-    ...(o.outcome === 'lead' ? [] : [`Screening: ${o.outcome} (${o.reason})`]),
-    ...(ts === 'pass' || ts === 'skipped' ? [] : [`Bot check (Turnstile): ${TURNSTILE_LINE[ts] ?? ts}`]),
-    ...(o.logged ? [] : ['WARNING: the form log was unavailable, so this submission was NOT saved to the database. This email is the only record.']),
-  ];
   return [
-    ...(notes.length ? [...notes, ''] : []),
+    ...(o.outcome === 'lead' || o.reason === 'self_test' ? [] : [why(o.reason)]),
+    ...(ts === 'error' ? ['The spam check was down when this was sent, so it was let through.'] : []),
+    ...(ts === 'not_configured' ? ['The spam check is not set up on the website. Tell Claude: "The website spam check is not set up."'] : []),
+    ...(o.logged ? [] : ['This message was not saved in the form log. This email is the only copy, so keep it.']),
+  ];
+}
+
+// The plain-text copy. Mail apps show the styled copy (emailHtml) when they can.
+export function emailBody(sub: Submission, o: EmailFacts) {
+  const notes = leadNotes(o);
+  return [
+    ...(notes.length ? ['Check this one:', ...notes.map((n) => `- ${n}`), ''] : []),
     `Name: ${sub.name}`,
     `Email: ${sub.email}`,
     `Phone: ${sub.phone}`,
@@ -83,6 +90,44 @@ export function emailBody(sub: Submission, o: { id: string; outcome: string; rea
       ? [...intakeLines(sub.intake), '', 'What happened and when:', sub.message || '(left blank)']
       : ['Message:', sub.message]),
   ].join('\n');
+}
+
+const BADGE: Record<Route | 'message', { label: string; bg: string; fg: string }> = {
+  priority: { label: 'PRIORITY CASE', bg: '#d77900', fg: '#ffffff' },
+  possible: { label: 'POSSIBLE CASE', bg: '#638c1c', fg: '#ffffff' },
+  refer: { label: 'REFER OUT', bg: '#6fb1c8', fg: '#294634' },
+  unlikely: { label: 'LIKELY NOT A CASE', bg: '#666666', fg: '#ffffff' },
+  message: { label: 'WEBSITE MESSAGE', bg: '#40683c', fg: '#ffffff' },
+};
+
+const html = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const FONT = "Nexa, Aptos, 'Segoe UI', Helvetica, Arial, sans-serif";
+
+// The styled copy: a colored tag, any notes, big tap-to-call and tap-to-email links, then the answers.
+// Everything the visitor typed is escaped. Brand colors only (Pathfinder Brand Book).
+export function emailHtml(sub: Submission, o: EmailFacts) {
+  const notes = leadNotes(o);
+  const badge = BADGE[sub.intake ? route(sub.intake) : 'message'];
+  const tel = sub.phone.replace(/[^\d+]/g, '');
+  const label = (t: string) => `<div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#40683c;margin:0 0 4px">${t}</div>`;
+  // One answer per block, question above answer, so it reads well on a phone.
+  const rows = sub.intake
+    ? intakeRows(sub.intake)
+        .map(([q, a]) => `<div style="padding:8px 0;border-top:1px solid #e3e3e3"><div style="color:#555555;font-size:13px">${html(q)}</div><div style="color:#294634;font-size:16px;font-weight:700">${html(a)}</div></div>`)
+        .join('')
+    : '';
+  const story = sub.message ? html(sub.message).replace(/\n/g, '<br>') : '<span style="color:#777777">(left blank)</span>';
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body style="margin:0;padding:0;background:#ffffff">
+<div style="max-width:560px;margin:0 auto;padding:20px 16px;font-family:${FONT};color:#294634;line-height:1.45">
+<div style="display:inline-block;background:${badge.bg};color:${badge.fg};font-weight:700;font-size:13px;letter-spacing:.08em;padding:6px 12px;border-radius:4px">${badge.label}</div>
+${notes.length ? `<div style="margin:16px 0 0;padding:12px 14px;border-left:4px solid #ffd040;background:#ffffff;border-top:1px solid #e3e3e3;border-right:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3"><div style="font-weight:700;margin:0 0 4px">Check this one:</div>${notes.map((n) => `<div style="margin:2px 0">${html(n)}</div>`).join('')}</div>` : ''}
+<div style="font-size:24px;font-weight:700;margin:18px 0 10px">${html(sub.name)}</div>
+<div style="margin:0 0 6px;font-size:17px"><a href="tel:${html(tel)}" style="color:#294634;font-weight:700;text-decoration:none">&#9742;&nbsp; ${html(sub.phone)}</a></div>
+<div style="margin:0 0 18px;font-size:17px"><a href="mailto:${html(sub.email)}" style="color:#40683c;text-decoration:underline">${html(sub.email)}</a></div>
+${rows ? `${label('Their answers')}<div style="margin:0 0 18px">${rows}</div>` : ''}
+${label(sub.intake ? 'What happened and when' : 'Message')}
+<div style="font-size:16px;margin:0 0 8px;white-space:normal">${story}</div>
+</div></body></html>`;
 }
 
 // What the form log keeps in its message column: the answers, then what the person typed.
@@ -198,6 +243,7 @@ export async function processSubmission(
       await sendMail(env, deps, {
         subject: `${prefix}Website inquiry${subjectTopic(sub)}${SUBJECT_MARK[turnstile] ?? ''}`,
         body: emailBody(sub, { id, outcome, reason, logged, turnstile }),
+        html: emailHtml(sub, { id, outcome, reason, logged, turnstile }),
         replyTo: sub.email,
         ...(opts.test ? { to: SELF_TEST_RECIPIENTS } : {}),
       });

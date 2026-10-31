@@ -114,7 +114,7 @@ test('Turnstile outage does not block a real person: delivered, marked spam chec
   assert.equal(rows(env)[0].turnstile, 'error'); assert.equal(gmail(calls).length, 1);
   const { head, body } = decodeRaw(gmail(calls)[0]);
   assert.match(head, /Subject: Website inquiry \(main form\) - spam check unavailable/);
-  assert.match(body, /Bot check \(Turnstile\): spam check unavailable/);
+  assert.match(body, /The spam check was down when this was sent/);
   assert.match(body, /my claim was denied/);
 });
 
@@ -161,7 +161,7 @@ test('missing TURNSTILE_SECRET: lead still delivered, marked, alarm pinged at mo
     assert.equal(row.turnstile, 'not_configured'); assert.equal(row.delivery_status, 'sent'); assert.equal(row.outcome, 'lead');
     const { head, body } = decodeRaw(gmail(calls)[0]);
     assert.match(head, /Subject: Website inquiry \(main form\) - TURNSTILE NOT CONFIGURED/);
-    assert.match(body, /Bot check \(Turnstile\): TURNSTILE NOT CONFIGURED/);
+    assert.match(body, /The spam check is not set up on the website/);
     assert.ok(!calls.some((c) => c.url.includes('siteverify')));
     const alerts = () => calls.filter((c) => c.url === 'https://hb.example/fail').length;
     assert.equal(alerts(), 1);
@@ -228,7 +228,7 @@ test('database down: lead is still emailed (flagged not saved) and the alarm fir
   const env = liveEnv({ DB: undefined }); const { deps, calls } = makeWorld();
   const res = await handleContact(post(goodInput()), env, deps);
   assert.equal(res.status, 200);
-  assert.match(decodeRaw(gmail(calls)[0]).body, /NOT saved to the database/);
+  assert.match(decodeRaw(gmail(calls)[0]).body, /not saved in the form log\. This email is the only copy/);
   assert.ok(calls.some((c) => c.url === 'https://hb.example/fail'));
 });
 
@@ -301,6 +301,38 @@ test('self-test sends a tagged message and pings the heartbeat only when deliver
   resetTokenCache(); w = makeWorld({ gmail: 500 });
   assert.equal(await runSelfTest(liveEnv(), w.deps), false);
   assert.ok(!w.calls.some((c) => c.url === 'https://hb.example/ping'));
+});
+
+test('lead email: a styled copy with the sorting tag, tap-to-call, answers, and everything typed escaped', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld();
+  const intake = { how: 'accident', work: 'virginia', surgery: 'yes', missedWork: 'yes' };
+  await handleContact(post(goodInput({ name: 'Pat <b>Example</b>', intake, message: 'Fell <script>x</script>' })), env, deps);
+  const { head, html } = decodeRaw(gmail(calls)[0]);
+  assert.match(head, /multipart\/alternative/);
+  assert.match(html, /PRIORITY CASE/);
+  assert.match(html, /href="tel:8045550100"/);
+  assert.match(html, /href="mailto:pat@example\.com"/);
+  assert.match(html, /Surgery had or recommended/);
+  assert.match(html, /Pat &lt;b&gt;Example&lt;\/b&gt;/);
+  assert.doesNotMatch(html, /<script>|<b>Example/);
+  assert.doesNotMatch(html, /Check this one/); // a clean lead has no notes
+});
+
+test('repeat sender who answered the questions is not screened, and the note is plain English', async () => {
+  const env = liveEnv();
+  const intake = { how: 'accident', work: 'virginia', surgery: 'no', missedWork: 'yes' };
+  for (let i = 0; i < 4; i++) {
+    resetTokenCache();
+    const w = makeWorld({ now: `2026-11-02T15:0${i}:00Z` });
+    await handleContact(post(goodInput({ intake, message: 'Banana wagon' })), env, w.deps);
+    if (i === 3) {
+      const { head, body, html } = decodeRaw(gmail(w.calls)[0]);
+      assert.doesNotMatch(head, /Screened/);
+      assert.match(body, /sent the form more than once recently/);
+      assert.match(html, /Check this one/);
+      assert.doesNotMatch(body + html, /repeat_sender|Screening:/);
+    }
+  }
 });
 
 test('daily check: a normal day sends no email at all', async () => {
