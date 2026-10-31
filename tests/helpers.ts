@@ -75,8 +75,14 @@ export function makeWorld(opts: { gmail?: number; token?: number; turnstile?: 'p
 export function decodeRaw(call: Calls) {
   const raw = JSON.parse(call.body).raw as string;
   const text = Buffer.from(raw.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf8');
-  const [head, b64] = text.split('\r\n\r\n');
-  return { head, body: Buffer.from(b64.replace(/\r\n/g, ''), 'base64').toString('utf8') };
+  const [head] = text.split('\r\n\r\n');
+  // Plain-text part (and the styled HTML part, when there is one).
+  const parts = [...text.matchAll(/Content-Type: text\/(plain|html); charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n([A-Za-z0-9+\/=\r\n]+)/g)];
+  const decode = (kind: string) => {
+    const m = parts.find((x) => x[1] === kind);
+    return m ? Buffer.from(m[2].replace(/\r\n/g, ''), 'base64').toString('utf8') : '';
+  };
+  return { head, body: decode('plain'), html: decode('html') };
 }
 
 export const goodInput = (o: Record<string, unknown> = {}) => ({

@@ -67,7 +67,8 @@ export function decide(sub: Submission, rules: Rules, earlierFromSameEmail: numb
   const emailHost = sub.email.toLowerCase().split('@')[1] ?? '';
   const links = findLinkHosts(sub.message);
 
-  const hasCaseWords = rules.caseWords.some((w) => new RegExp(`\\b${esc(w)}`).test(msg));
+  // Answering the step-by-step questions counts as describing a real case.
+  const hasCaseWords = sub.intake !== undefined || rules.caseWords.some((w) => new RegExp(`\\b${esc(w)}`).test(msg));
 
   // A known agency domain, as the sender or as a link, is screened even with case words.
   if (onDomain(emailHost, rules.agencyDomains) || links.some((h) => onDomain(h, rules.agencyDomains))) {

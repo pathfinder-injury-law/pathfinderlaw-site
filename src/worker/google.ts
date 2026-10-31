@@ -74,23 +74,41 @@ async function accessToken(env: Env, deps: Deps): Promise<string> {
 const wrap76 = (s: string) => s.match(/.{1,76}/g)?.join('\r\n') ?? '';
 const header = (s: string) => (/^[\x20-\x7e]*$/.test(s) ? s : `=?UTF-8?B?${btoa(String.fromCharCode(...utf8(s)))}?=`);
 
-export function buildRawMessage(opts: { subject: string; body: string; replyTo?: string; to?: string[] }): string {
-  const lines = [
+// Base64 in chunks, so a long body never overflows the argument list.
+const b64 = (s: string) => {
+  const bytes = utf8(s);
+  let bin = '';
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return wrap76(btoa(bin));
+};
+
+// Plain text always; with `html`, a styled copy too (mail apps show the styled one).
+export function buildRawMessage(opts: { subject: string; body: string; html?: string; replyTo?: string; to?: string[] }): string {
+  const head = [
     `From: Pathfinder Website <${SENDER}>`,
     `To: ${(opts.to ?? RECIPIENTS).join(', ')}`,
     ...(opts.replyTo ? [`Reply-To: ${opts.replyTo}`] : []),
     `Subject: ${header(opts.subject.replace(/[\r\n]+/g, ' '))}`,
     'MIME-Version: 1.0',
-    'Content-Type: text/plain; charset=UTF-8',
-    'Content-Transfer-Encoding: base64',
-    '',
-    wrap76(btoa(String.fromCharCode(...utf8(opts.body)))),
   ];
-  return lines.join('\r\n');
+  const part = (type: string, content: string) => [`Content-Type: ${type}; charset=UTF-8`, 'Content-Transfer-Encoding: base64', '', b64(content)];
+  if (!opts.html) return [...head, ...part('text/plain', opts.body)].join('\r\n');
+  const boundary = 'pathfinder-alt-boundary';
+  return [
+    ...head,
+    `Content-Type: multipart/alternative; boundary="${boundary}"`,
+    '',
+    `--${boundary}`,
+    ...part('text/plain', opts.body),
+    `--${boundary}`,
+    ...part('text/html', opts.html),
+    `--${boundary}--`,
+    '',
+  ].join('\r\n');
 }
 
 // Sends one email, to the two firm inboxes unless `to` says otherwise. Throws SendError on any failure.
-export async function sendMail(env: Env, deps: Deps, opts: { subject: string; body: string; replyTo?: string; to?: string[] }) {
+export async function sendMail(env: Env, deps: Deps, opts: { subject: string; body: string; html?: string; replyTo?: string; to?: string[] }) {
   const token = await accessToken(env, deps);
   let res: Response;
   try {

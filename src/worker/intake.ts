@@ -59,15 +59,17 @@ export const ROUTE_SUBJECT: Record<Route, string> = {
   unlikely: 'Likely not a case',
 };
 
-// The answer lines in the firm's email, plain words only.
-export function intakeLines(i: Intake): string[] {
+// The answers in the firm's email, plain words only, as [question, answer] pairs.
+export function intakeRows(i: Intake): [string, string][] {
   return [
-    `How hurt: ${HOW[i.how]}`,
-    ...(i.work ? [`Where they work: ${WORK[i.work]}`] : []),
-    ...(i.surgery ? [`Surgery had or recommended: ${YES_NO[i.surgery]}`] : []),
-    ...(i.missedWork ? [`Missed work or earned less: ${YES_NO[i.missedWork]}`] : []),
+    ['How hurt', HOW[i.how]],
+    ...(i.work ? [['Where they work', WORK[i.work]] as [string, string]] : []),
+    ...(i.surgery ? [['Surgery had or recommended', YES_NO[i.surgery]] as [string, string]] : []),
+    ...(i.missedWork ? [['Missed work or earned less', YES_NO[i.missedWork]] as [string, string]] : []),
   ];
 }
+
+export const intakeLines = (i: Intake): string[] => intakeRows(i).map(([q, a]) => `${q}: ${a}`);
 
 // US phone numbers only: 10 digits (a leading 1 is dropped), area code not starting with 0 or 1.
 export function phoneDigits(raw: string): string | null {
