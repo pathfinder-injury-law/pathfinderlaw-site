@@ -79,7 +79,7 @@ The Commission’s website has benefit calculators, but none of them is a settle
 
 ### Settlements When Medicare Is Involved
 
-If you are on Medicare, have applied for Social Security Disability, or are likely to need it, a settlement may need a **Workers’ Compensation Medicare Set-Aside**: a portion of the settlement set aside to pay for future medical care for the work injury. Under federal Medicare rules, that money must be used up, and used properly, before Medicare will pay for treatment related to the work injury. Getting this wrong can leave you paying for care yourself. More on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/) and [how a settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
+If you are on Medicare, have applied for Social Security Disability, or are likely to need it, a settlement may need a **Workers’ Compensation Medicare Set-Aside**. Part of the settlement is paid into a separate account that can be used only for future medical care for the work injury. The insurance company funds it as part of the settlement, and you are usually the one who has to manage it: paying the bills from it, keeping records, and reporting how it was spent. Under federal Medicare rules, that money must be used up, and used properly, before Medicare will pay for treatment related to the work injury. Getting this wrong can leave you paying for care yourself. More on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/) and [how a settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 
 ## Where Settlement Talks Happen
 
