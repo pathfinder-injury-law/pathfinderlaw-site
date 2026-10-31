@@ -3,11 +3,11 @@ title: "Foot Injury at Work in Virginia: Workers’ Comp Benefits and Settlement
 metaTitle: "Foot Injury at Work in Virginia: Workers’ Comp Guide"
 description: "Broke or injured your foot at work in Virginia? What workers’ comp covers, what you need to prove, and what affects the value of a foot injury claim."
 date: 2022-11-23T00:06:35Z
-updated: 2026-10-31T12:00:00Z
+updated: 2026-10-31T18:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
-*Nothing in this article should be taken as legal advice. Every case is different, and you should talk with an attorney about your own situation. Reading this article does not create an attorney-client relationship.*
+*Nothing in this article should be taken as legal advice. Every case is different. Reading this article does not create an attorney-client relationship.*
 
 A foot injury can take you off your feet and off the job. If you stand, walk, climb, drive, or carry loads for a living, even a single broken bone in your foot can mean weeks or months without a paycheck. If you hurt your foot at work in Virginia, workers’ compensation can pay for your medical care and part of your lost wages, as long as the claim meets Virginia’s rules.
 
@@ -15,7 +15,7 @@ This guide covers who qualifies, what to gather, the foot injuries we see most, 
 
 ## Does Workers’ Comp Cover Your Foot Injury?
 
-Whether a foot injury is covered can get complicated quickly. Start with these three questions. A “yes” to all three does not guarantee benefits, but a “no” to any of them is a warning sign worth talking through with a lawyer.
+Whether a foot injury is covered can get complicated quickly. Start with these three questions. A “yes” to all three does not guarantee benefits, but a “no” to any of them is usually how the insurance company builds its denial.
 
 ### Did It Happen Because of Your Job?
 
@@ -38,7 +38,7 @@ You need to be able to say exactly what you were doing when you got hurt and how
 **You have the burden of proving your claim,** so start collecting evidence early.
 
 1. **Give your employer written notice within 30 days of the accident.** Say how it happened and what you hurt. Keep a copy. Late notice can limit or bar your benefits.
-2. **File a claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply. File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
+2. **File a claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 3. **Gather your evidence:**
    - **Pay records.** Your wage benefits are based on your average weekly wage over the year before the accident, so keep your pay stubs.
    - **Medical records.** Keep x-rays, MRIs, and other test results, prescriptions, and treatment plans, including physical therapy or surgery. Tell every doctor the injury happened at work. If surgery is recommended, ask your doctor to explain in writing why it is needed and how it connects to the work accident.
@@ -81,7 +81,7 @@ Serious foot injuries can leave a permanent impairment. Some workers can no long
 
 ## What If Your Foot Injury Needs Surgery?
 
-Some foot injuries do not heal with medication, injections, a boot, or physical therapy, and need surgery by an orthopedic or foot and ankle surgeon. If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it as part of your medical benefits. That does not mean it will. If the insurance company refuses to approve the surgery, you can ask the Commission for a hearing, and a lawyer can help you challenge that decision.
+Some foot injuries do not heal with medication, injections, a boot, or physical therapy, and need surgery by an orthopedic or foot and ankle surgeon. If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it as part of your medical benefits. That does not mean it will. If the insurance company refuses to approve the surgery, you can ask the Commission for a hearing to challenge that decision.
 
 ## What Benefits Can You Receive for a Foot Injury?
 
@@ -113,11 +113,11 @@ A foot injury can cost you time at work, leave a lasting disability, or force a 
 
 After a serious injury, the insurance company may send you to vocational rehabilitation. On paper, it is meant to help you get back to work, ideally in a job that pays close to what you earned before. Services can include job counseling, job search help, job placement, training, and education.
 
-In practice, the insurance company may also use vocational rehabilitation to try to stop your wage checks. If you refuse or do not cooperate with vocational rehabilitation when required, your wage benefits can be suspended. If you are referred to vocational rehabilitation, talk with a workers’ comp lawyer before you start. Here’s more on [whether you are eligible for vocational rehabilitation](/virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation/).
+In practice, the insurance company may also use vocational rehabilitation to try to stop your wage checks. If you refuse or do not cooperate with vocational rehabilitation when required, your wage benefits can be suspended ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). What counts as cooperating, and which jobs you have to apply for, are frequent points of dispute. Here’s more on [whether you are eligible for vocational rehabilitation](/virginia-workers-comp-lawyer/am-i-eligible-for-vocational-rehabilitation/).
 
-## Why Talk to a Virginia Workers’ Comp Lawyer?
+## Where Foot Claims Get Fought
 
-The insurance company knows the rules, and most injured workers are learning them for the first time. A lawyer can gather the evidence, deal with the insurance company for you, explain your options, and ask the Commission for a hearing if the insurance company will not pay what it should.
+The insurance company knows the rules, and most injured workers are learning them for the first time, often while hurt and out of work. The usual fights are whether the injury came from a specific accident, whether surgery is needed, how much permanent impairment remains, and whether you can go back to a job on your feet.
 
 ## Talk to Pathfinder Injury Law About Your Foot Injury
 
