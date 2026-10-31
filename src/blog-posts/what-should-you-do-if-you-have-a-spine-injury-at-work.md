@@ -1,17 +1,21 @@
 ---
-title: "What Should You Do If You Have A Spine Injury at Work"
-metaTitle: "If I Injured My Spine At Work What Should I Do?"
-description: "Have you recently suffered an injury to your spine while at work? Read our informative guide here to find out what you could do."
+title: "What to Do After a Spine Injury at Work in Virginia"
+metaTitle: "Spine Injury at Work in Virginia: What to Do Next"
+description: "Hurt your back or neck at work in Virginia? The steps to take, the deadlines, how spine claims get denied, and what drives their value."
 date: 2022-11-29T06:00:10Z
-updated: 2022-11-29T17:15:24Z
+updated: 2026-10-31T20:00:00Z
 tags: ["body-parts","claim-process"]
 ---
 
-Getting hurt on the job can be both discouraging and painful, especially if it is a spinal cord or back injury. You may face an uphill battle in your fight for workers’ compensation (“workers’ comp”) benefits for an on-the-job injury. Dealing with the bureaucracy of a workers’ comp claim is probably the last thing you want to think about when you are recovering from a back injury. Help is available, though, so you do not have to go through this process by yourself. A [Virginia workers’ compensation attorney](/virginia-workers-comp-lawyer/) who focuses their practice exclusively on these types of claims can help you understand your rights and options. Workers’ comp attorneys will deal with the insurance companies for you and help relieve some of the stress of a legal battle after you get hurt at work.
+*Nothing in this article should be taken as legal advice. Every case is different.*
+
+If you hurt your back or neck at work in Virginia, three things protect your claim: get medical care and make sure the first records say the injury happened at work, give your employer written notice within 30 days, and file a claim with the Virginia Workers’ Compensation Commission within two years of the accident, although exceptions apply. File it even if the insurance company is paying.
+
+Spine claims are some of the most fought-over claims in [Virginia workers’ compensation](/virginia-workers-comp-lawyer/). Insurance companies often argue that a herniated disc or back injury is degenerative, not caused by the accident, and spine surgery is expensive. Here is what to do, and what to expect.
 
 ## What Steps Should You Take Following a Spine Injury at Work?
 
-If you suffer a spinal cord injury in an accident at work, you must act quickly to preserve your rights. Do note, however, that a workers’ compensation claim and a personal injury claim are not the same. If you were hurt on the job, you would be well served to consult with a workers’ compensation attorney, rather than a personal injury attorney, and complete the following steps.
+If you hurt your spine in an accident at work, act quickly to protect your rights. A workers’ compensation claim and a personal injury claim are not the same thing, and they follow different rules. Here are the steps, in order.
 
 ### Seek Medical Treatment
 
@@ -43,9 +47,9 @@ Once you’ve filed a claim through any of the above methods, the VWC will issue
 
 ### Receive a Response
 
-After you file a claim, the Virginia Workers’ Compensation Commission will issue an order to the insurance company requiring them to respond to your claim within 30 days either approving or denying it. An initial denial of an accident victim’s workers’ compensation claim is fairly common, so there is no cause for despair just yet. The denial simply means that your employer or their insurance company will not voluntarily pay you benefits. Yet the process is far from over. 
+After you file a claim, the Virginia Workers’ Compensation Commission will issue an order to the insurance company requiring them to respond to your claim within 30 days either approving or denying it. An initial denial of an accident victim’s workers’ compensation claim is fairly common, so there is no cause for despair just yet. The denial simply means that your employer or their insurance company will not voluntarily pay you benefits. Yet the process is far from over.
 
-But let’s be real here: If you get to this point and the insurance company says they’re denying your claim, you need to talk with a lawyer. The insurance company is required to have an attorney when your case goes to hearing. If you don’t, you’ll be going up in court against the insurance company’s lawyer. So, do yourself a favor and talk to an experienced Virginia workers’ compensation attorney if the insurance company denies your claim. 
+But let’s be real here: If you get to this point and the insurance company says they’re denying your claim, you need to talk with a lawyer. The insurance company is required to have an attorney when your case goes to hearing. If you don’t, you’ll be going up in court against the insurance company’s lawyer. So, do yourself a favor and talk to an experienced Virginia workers’ compensation attorney if the insurance company denies your claim.
 
 ### Request and Attend an Evidentiary Hearing
 
@@ -63,7 +67,7 @@ If the VWC denies your claim after an evidentiary hearing, you are not necessari
 - If the Full Commission then denies your claim or issues an adverse ruling against you on review, you can appeal the full Commission’s decision to the Court of Appeals of Virginia. Most of the time, the Court of Appeals is the end of the line for your workers’ compensation case.
 - If the Court of Appeals also finds against you or issues a ruling to which you object, you may request a review of the Court of Appeals’ decision by the Supreme Court of Virginia. There is no absolute right to have your case taken up by the Supreme Court though, and in fact it is very rare that the Supreme Court takes up workers’ compensation cases.
 
-As you can see, the litigation process for a Virginia workers’ compensation claim can be long, complex, and difficult. Do yourself a favor and talk with an experienced Virginia workers’ compensation claimant attorney early in the process. 
+As you can see, the litigation process for a Virginia workers’ compensation claim can be long, complex, and difficult, and each step has its own deadline.
 
 ## What Are Common Types of Spine Injuries in the Workplace?
 
@@ -73,7 +77,7 @@ Many types of spinal injuries are possible in different workplaces. Some of the 
 
 ### Cervical Spine Injuries
 
-The cervical spine is located directly below the skull and throughout the neck. Injuries to this area tend to be the most severe spinal cord injuries. The higher up the spine an injury occurs, the greater and longer-term the damage is likely to be, including paralysis. A cervical fracture, more commonly known as a broken neck, can be fatal. The extent to which a cervical spine injury causes nerve damage or impairment into the arms, hands, and fingers depends on the location of the injury in the spine and the degree to which the nerves coming out of the spine are damaged or impinged by the spinal injury. 
+The cervical spine is located directly below the skull and throughout the neck. Injuries to this area tend to be the most severe spinal cord injuries. The higher up the spine an injury occurs, the greater and longer-term the damage is likely to be, including paralysis. A cervical fracture, more commonly known as a broken neck, can be fatal. The extent to which a cervical spine injury causes nerve damage or impairment into the arms, hands, and fingers depends on the location of the injury in the spine and the degree to which the nerves coming out of the spine are damaged or impinged by the spinal injury.
 
 Injuries to the cervical spine are common in sports like football and gymnastics. In work-related settings, cervical spine injuries may occur as the result of falls, falling objects, lifting or pulling movements, or car accidents.
 
@@ -85,7 +89,7 @@ Thoracic spine fractures are also known as vertebral compression fractures. Seve
 
 ### Lumbar Spine Injuries
 
-The lumbar spine is the lowest major section of the spinal cord. It is in the lower back, below the thoracic spine, and above the sacrum or S.I. joint. It is the lowest section with spinal discs separating the vertebrae.
+The lumbar spine is the lowest major section of the spine. It is in the lower back, below the thoracic spine, and above the sacrum. It is the lowest section with discs separating the vertebrae.
 
 Injuries to the lumbar spine can result in loss of hip, leg, thigh, and foot function. An accident victim who suffers a lumbar spine injury may need braces or a wheelchair.
 
@@ -125,7 +129,7 @@ Work-related injuries can cause strains to the muscles and tendons in the back t
 
 ## What Factors Drive Spine Injury Compensation in Virginia?
 
-There may come a time in your workers’ compensation case where you and the insurance company want to discuss closing out your claim in exchange for a lump sum of compensation. This is called “settlement.” Insurance companies take multiple variables into consideration for work injury settlements. 
+There may come a time in your workers’ compensation case where you and the insurance company want to discuss closing out your claim in exchange for a lump sum of compensation. This is called “settlement.” Insurance companies take multiple variables into consideration for work injury settlements.
 
 ### First, a Word of Caution
 
@@ -137,21 +141,21 @@ Injured workers commonly receive accident compensation in three areas:
 - Medical bills, possibly including the present value of future medical expenses; and
 - [Permanent partial disability (PPD)](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/), although this might not be available in spinal injury claims unless the injury causes loss of use in extremity like a leg or an arm.
 
-It is relatively common for workers to receive lost wage payments in a workers’ comp case, assuming a doctor takes the claimant out of work or restricts them to light duty. Generally, this compensation is temporary, while the claimant is out of work per a doctor’s note. Most cases are capped at 500 weeks of wage loss benefits a claimant can receive.
+It is relatively common for workers to receive lost wage payments in a workers’ comp case, assuming a doctor takes the claimant out of work or restricts them to light duty. Generally, this compensation is temporary, while the claimant is out of work per a doctor’s note. Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity ([Va. Code § 65.2-518](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/)). Wage checks start on the eighth day out of work; here’s [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/).
 
 Permanent total disability compensation, on the other hand, is much less common than temporary disability benefits in Virginia workers’ compensation claims. In certain exceptionally severe instances, permanent total benefits may be available if the claimant can prove they suffered damage to two or more extremities or eyes in a work accident that is so severe the body part can no longer be used in gainful employment. Permanent total disability benefits can also be available if the claimant suffered a brain injury so severe as to render them permanently unable to engage in gainful employment. The facts needed to prove that someone is entitled to perm total benefits, however, could be present in cases involving spinal cord injuries or serious back injuries that involve two or more appendages, eyes, or a brain injury.
 
 ### What Were Your Wages Before Your Injury?
 
-Workers’ comp benefits can compensate for your loss of earning capacity. The amount of money you earned at your job before your injury will play a major role in determining how much you might be able to receive in workers’ comp benefits or a settlement. Generally, the law calculates your workers’ compensation rate by taking the average of your earnings in the 52 weeks prior to your accident and paying you two thirds of this figure on a weekly basis while a doctor has you totally out of work. This may be impacted by numerous other factors, though, so speak with an attorney before agreeing to any kind of compensation awards with the insurance company.
+Workers’ comp benefits can compensate for your loss of earning capacity. The amount of money you earned at your job before your injury will play a major role in determining how much you might be able to receive in workers’ comp benefits or a settlement. Generally, the law calculates your workers’ compensation rate by taking the average of your earnings in the 52 weeks prior to your accident and paying you two thirds of this figure on a weekly basis while a doctor has you totally out of work. Overtime, second jobs, and how long you worked there can all change the number, and a mistake in it shrinks every check.
 
 ### Did Your Injuries Cause Permanent Damage?
 
-If your injury causes permanent loss of use in one or more eyes, ears, or appendages (such as arms/hands/fingers or legs/feet/toes), you may be able to recover “permanent partial disability” compensation. This benefit is meant to compensate for damage to certain body parts that result from a work accident. A permanent injury to a ratable body part may give rise to permanent partial disability benefits. A Virginia workers’ comp lawyer can help you figure out if this benefit may apply to you.
+If your injury causes permanent loss of use in one or more eyes, ears, or appendages (such as arms/hands/fingers or legs/feet/toes), you may be able to recover “permanent partial disability” compensation. This benefit is meant to compensate for damage to certain body parts that result from a work accident. A permanent injury to a ratable body part may give rise to permanent partial disability benefits. The back and neck themselves are not on Virginia’s schedule of body parts, so for a spine injury this benefit usually depends on a rated loss of use in an arm or leg.
 
 ### How Much Has Your Insurance Company Paid for Medical Treatment?
 
-If your existing health insurance coverage has already paid some or all of your medical expenses so far, you may or may not be the one entitled to reimbursement for those costs. However, a skilled workers’ compensation attorney can potentially help you structure your settlement in a way that puts the most money in your pocket. This is why you should speak with an attorney straightaway if the insurance company starts asking you about settling your case!
+If your existing health insurance coverage has already paid some or all of your medical expenses so far, you may or may not be the one entitled to reimbursement for those costs. Health insurers that paid for work-injury treatment often want to be repaid out of a settlement, and how that is handled can change how much of a settlement you actually keep.
 
 ### What Kind of Treatment Will You Need in the Future?
 
@@ -159,11 +163,11 @@ How extensive will your future medical needs be? Will you need ongoing medical t
 
 ### Will You Need Surgery?
 
-Surgery can be very expensive. Insurance companies tend not to want to pay for surgical procedures unless they are absolutely necessary, and they will often fight you over paying for surgery after a work accident. However, a surgical indication in a workers’ compensation case is often the number one driver of increased settlement value. A seasoned workers’ compensation lawyer can help you gather the evidence you need to support your claim for surgical treatment related to your work accident.
+Surgery can be very expensive. Insurance companies tend not to want to pay for surgical procedures unless they are absolutely necessary, and they will often fight you over paying for surgery after a work accident. However, a surgical indication in a workers’ compensation case is often the number one driver of increased settlement value. The evidence that usually decides these fights is the treating surgeon’s written opinion on why surgery is needed and how it connects to the accident.
 
 ### Is Your Accident Even Compensable in the First Place?
 
-To be eligible for workers’ comp benefits, you must have sustained your injuries arising out of and in the course of your employment. One of the first things an insurance adjuster or defense attorney will likely do is challenge whether your injury fits within the legal criteria to receive workers’ comp benefits. You will probably be surprised to learn that just because an accident happens at work, this does not necessarily mean it qualifies for workers’ comp benefits. For example, the insurance company might deny a herniated disc claim on the grounds that the injury was the result of long-term degeneration and not the work accident. Or they might contend that even if the injury was directly related to your accident, your accident was nonetheless not compensable in the first place, meaning it doesn’t matter what injuries you suffered. An experienced Virginia workers’ compensation lawyer can help you navigate these challenges. 
+To be eligible for workers’ comp benefits, you must have sustained your injuries arising out of and in the course of your employment. One of the first things an insurance adjuster or defense attorney will likely do is challenge whether your injury fits within the legal criteria to receive workers’ comp benefits. You will probably be surprised to learn that just because an accident happens at work, this does not necessarily mean it qualifies for workers’ comp benefits. For example, the insurance company might deny a herniated disc claim on the grounds that the injury was the result of long-term degeneration and not the work accident. Or they might contend that even if the injury was directly related to your accident, your accident was nonetheless not compensable in the first place, meaning it doesn’t matter what injuries you suffered. Both arguments turn on how the accident happened and what the first medical records say.
 
 ## Can I File a Workers’ Comp Claim If I Was Injured Driving in Virginia?
 
@@ -181,28 +185,24 @@ Even if you were driving your own vehicle, the injury could be deemed compensabl
 
 ### If You Were Engaged in an Activity in Furtherance of the Employment
 
-If you were doing something work-related while driving, even in a personal vehicle, you might be able to get workers’ compensation benefits. 
+If you were doing something work-related while driving, even in a personal vehicle, you might be able to get workers’ compensation benefits.
 
 ## What Is the Difference Between Short-Term Disability and Workers’ Comp Benefits?
 
 Workers’ comp provides benefits for on-the-job injuries. Short-term disability covers injuries and conditions that are not work-related.
 
-The two types of benefits have a somewhat complicated relationship. If your [workers’ comp claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/), you may be able to file for short-term disability benefits while your workers’ comp case is in litigation. You should talk to an attorney first, though. If you receive short-term disability when you should have been receiving workers’ comp, you may have to pay the short-term disability benefits back. This is a complex and nuanced area of law you should not try to navigate yourself without the assistance of a Virginia workers’ compensation lawyer.
+The two types of benefits have a somewhat complicated relationship. If your [workers’ comp claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/), you may be able to file for short-term disability benefits while your workers’ comp case is in litigation. But if you receive short-term disability when you should have been receiving workers’ comp, you may have to pay the short-term disability benefits back, depending on the plan’s terms and on how the comp claim turns out.
 
-## Why Should You Hire an Attorney For a Work-Related Spinal Injury in Virginia?
-
-Legal advice from a workers’ compensation attorney with experience in the Virginia workers’ compensation system may be indispensable for your work accident case.
+## Where Spine Claims Get Fought
 
 ### The Legal Process
 
-Workers’ comp is supposed to make the process of claiming benefits easier, but unfortunately it often makes the process harder for injured workers. You must meet strict deadlines and procedures to protect your rights. You have the burden of making sure the Virginia Workers’ Compensation Commission knows about the accident and your injuries, that you timely file a claim for benefits, and of proving the accident caused the injuries you are claiming. There are countless nuances and pitfalls to which you can easily fall prey if you are not intimately familiar with the workers’ compensation process. 
-
-A lawyer can help you with this. Workers’ comp attorneys have experience preparing claims, assembling evidence, and advocating for their clients before the Virginia Workers’ Compensation Commission. They can help put your claim in the best possible light and advocate for you. While your attorney represents you, you can focus on healing from your injuries.
+Workers’ comp is supposed to make the process of claiming benefits easier, but unfortunately it often makes the process harder for injured workers. You must meet strict deadlines and procedures to protect your rights. You have the burden of making sure the Virginia Workers’ Compensation Commission knows about the accident and your injuries, that you timely file a claim for benefits, and of proving the accident caused the injuries you are claiming. There are countless nuances and pitfalls to which you can easily fall prey if you are not intimately familiar with the workers’ compensation process.
 
 ### Dealing With Insurance Companies
 
 Insurance companies know a wide variety of tricks that allow them to deny your claim or minimize the amount of money they must pay you. Insurance adjusters will try to get you to admit facts that would harm your case without telling you about your right to have a lawyer help you out with your case. Workers’ comp lawyers know the insurance companies’ tricks and know how best to respond to them. If the insurance company denies your claim, your lawyer will know how to present your case to the Virginia Workers’ Compensation Commission at an evidentiary hearing or posture your case for a pre- or post-hearing settlement to optimize the outcome for you.
 
-## Speak with an Attorney Before Talking with the Insurance Company
+## Talk to Pathfinder Injury Law About Your Spine Injury
 
-If you suffered a [back injury in a work accident](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/) in Virginia, Pathfinder Injury Law is here to help. Our law firm can discuss your case with you in a free consultation. Get started today by calling [804-505-0633](tel:+18045050633) or filling out the [online contact form](/contact/).
+If you suffered a [back injury in a work accident](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/) in Virginia, Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/). Before you give the insurance company a statement, read [what to know about recorded statements](/insurance-recorded-statement/).
