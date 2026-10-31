@@ -4,6 +4,7 @@ import Base from '../layouts/Base.astro';
 import TornEdge from '../components/TornEdge.astro';
 import TopicIcon from '../components/TopicIcon.astro';
 import ContactSection from '../components/ContactSection.astro';
+import ContactForm from '../components/ContactForm.astro';
 import variants from '../data/imageVariants.json';
 
 // Hero photo copies (scripts/make-image-variants.mjs), as srcset lists.
@@ -105,10 +106,13 @@ const results = [
     </div>
   </section>
 
-  <!-- Intro -->
-  <section class="section">
+  <!-- Intro, with the intake form beside it (first on phones, right after the team photos) -->
+  <section class="section home-intro" id="contact">
     <div class="wrap intro" data-reveal>
-      <div>
+      <div class="intro-form">
+        <ContactForm />
+      </div>
+      <div class="intro-text">
         <h2>Injured At Work?</h2>
         <hr class="rule" />
         <p class="lede lede-caps">We’ll guide you on the path to <mark>compensation.</mark></p>
@@ -119,7 +123,6 @@ const results = [
         </p>
         <div class="btn-row">
           <a class="btn btn-dark" href="/about-us/">Learn About Our Firm</a>
-          <a class="btn btn-primary" href="#contact">Get Help Now</a>
         </div>
       </div>
     </div>
@@ -230,6 +233,6 @@ const results = [
   </section>
 
   <!-- Call to action with contact form -->
-  <ContactSection />
+  <ContactSection variant="link" />
 </Base>
 
