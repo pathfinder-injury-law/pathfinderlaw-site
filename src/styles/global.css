@@ -866,8 +866,9 @@ body:not(.has-overlay) main {
   paint-order: stroke fill;
   text-shadow: 0 0.03em 0.18em rgba(20, 35, 25, 0.35);
 }
-/* The first step of the intake form sits in the hero, where the Free Consultation button was: a light
-   card with the same dark green edge the button had, so it reads as the next step on the trail. */
+/* The intake form sits in the hero, where the Free Consultation button was. Step 1 has no card at all:
+   a label, a white name field and the orange Next button, right on the photo. The later questions get a
+   light, see-through panel so the scenery still shows through. */
 .hero .wrap {
   position: relative;
 }
@@ -877,18 +878,57 @@ body:not(.has-overlay) main {
   width: 100%;
   max-width: 30rem !important;
   margin-top: clamp(1.25rem, 2.8vw, 2.5rem);
-  scroll-margin-top: calc(var(--header-h) + 1rem); /* "#contact" links land with the card clear of the header */
+  scroll-margin-top: calc(var(--header-h) + 1rem); /* "#contact" links land with the form clear of the header */
 }
 .hero-form .form-card {
-  background: rgba(255, 255, 255, 0.95);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border: 2px solid var(--forest);
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: var(--radius-lg);
-  box-shadow: 0 1rem 2.5rem rgba(20, 40, 28, 0.25);
-  padding: clamp(1.1rem, 2.5vw, 1.6rem) clamp(1.1rem, 2.8vw, 1.75rem) clamp(1.25rem, 2.8vw, 1.75rem);
+  box-shadow: 0 0.75rem 2rem rgba(20, 40, 28, 0.14);
+  padding: clamp(1rem, 2.5vw, 1.5rem) clamp(1rem, 2.6vw, 1.6rem) clamp(1.1rem, 2.6vw, 1.6rem);
+  transition: background 0.3s var(--ease), box-shadow 0.3s var(--ease), padding 0.3s var(--ease);
 }
-/* The card's "Talk With Us" title stays for screen readers; the trail and "Let's go." already say it. */
+/* Step 1: no panel, no step counter; the field and the button share one line. */
+.hero-form .form-card:has(.step[data-step="name"]:not([hidden])) {
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.hero-form .form-card:has(.step[data-step="name"]:not([hidden])) .intake-top {
+  display: none;
+}
+.hero-form .step[data-step="name"]:not([hidden]) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.6rem;
+  align-items: start;
+}
+.hero-form .step[data-step="name"] .field {
+  margin: 0;
+}
+.hero-form .step[data-step="name"] .step-q {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  color: var(--forest);
+  text-shadow: 0 0 0.6em rgba(255, 255, 255, 0.95), 0 0 0.25em rgba(255, 255, 255, 0.9); /* readable over the hills */
+}
+.hero-form .step[data-step="name"] input {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 999px;
+  padding-inline: 1.25rem;
+  min-height: 3.4375rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(20, 40, 28, 0.12);
+}
+.hero-form .step[data-step="name"] .btn-primary {
+  width: auto;
+  padding-inline: 1.6rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(20, 40, 28, 0.14);
+}
+/* The card's "Talk With Us" title stays for screen readers; "Let's go." already says it. */
 .hero-form .form-card h3 {
   position: absolute;
   width: 1px;
@@ -931,8 +971,9 @@ body:not(.has-overlay) main {
 .hero-form .ts-widget > div:not(:has(iframe)) {
   display: none;
 }
-/* The trail: dashed Brand Book orange (the color of every action on the site), with a faint white edge
-   so it stays visible where it crosses the hills. The script in index.astro shapes it to the words. */
+/* The trail: a dotted footpath, like the trails on a hiking map, in the dark Brand Book green with a soft
+   light edge so it reads over the sky and the hills. The script in index.astro shapes it to the words and
+   gives it a slight hand-drawn wobble. */
 .hero .wrap > .hero-trail {
   position: absolute;
   inset: 0;
@@ -943,14 +984,14 @@ body:not(.has-overlay) main {
   pointer-events: none;
   animation: none;
   fill: none;
-  stroke: var(--act);
-  stroke-width: 3;
+  stroke: var(--trail-color, rgba(41, 70, 52, 0.75));
+  stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
-  filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.9));
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.75));
 }
 .trail-line {
-  stroke-dasharray: 8 9;
+  stroke-dasharray: 0.1 11;
 }
 .trail-reveal {
   stroke: #ffffff;
@@ -959,28 +1000,15 @@ body:not(.has-overlay) main {
   stroke-dashoffset: var(--trail-len, 0);
   animation: trail-draw 1.4s 0.9s var(--ease) forwards;
 }
-.trail-tip {
-  opacity: 0;
-  animation: trail-tip 0.3s 2.2s forwards;
-}
 @keyframes trail-draw {
   to {
     stroke-dashoffset: 0;
-  }
-}
-@keyframes trail-tip {
-  to {
-    opacity: 1;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   .trail-reveal {
     animation: none;
     stroke-dashoffset: 0;
-  }
-  .trail-tip {
-    animation: none;
-    opacity: 1;
   }
 }
 .torn {
