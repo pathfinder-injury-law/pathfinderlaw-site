@@ -83,10 +83,58 @@ const results = [
       <span class="rule" aria-hidden="true"></span>
       <p class="hero-l1">Hurt at work?</p>
       <p class="hero-l2">Let’s go.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary btn-hero" href="#contact">Free Consultation<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg></span></a>
+      <div class="hero-form" id="contact">
+        <ContactForm />
       </div>
+      <!-- A dashed trail from "Hurt at work?" to "Let's go." to the form, drawn by the script below. -->
+      <svg class="hero-trail" aria-hidden="true" focusable="false">
+        <mask id="trail-mask" maskUnits="userSpaceOnUse"><path class="trail-reveal" /></mask>
+        <path class="trail-line" mask="url(#trail-mask)" />
+        <path class="trail-tip" />
+      </svg>
     </div>
+    <script is:inline>
+      // Shapes the trail to the words: a loop from the end of "Hurt at work?" back to "Let's go.", then on
+      // down to the top of the form card, with an arrowhead. Redrawn when the size or the fonts change.
+      // Measured with offsets, so the words' rise-in animation does not throw it off.
+      (function () {
+        var wrap = document.querySelector('.hero .wrap');
+        var svg = wrap && wrap.querySelector('.hero-trail');
+        var l1 = wrap && wrap.querySelector('.hero-l1');
+        var l2 = wrap && wrap.querySelector('.hero-l2');
+        var card = wrap && wrap.querySelector('.hero-form');
+        if (!svg || !l1 || !l2 || !card) return;
+        var line = svg.querySelector('.trail-line'), reveal = svg.querySelector('.trail-reveal'), tip = svg.querySelector('.trail-tip');
+        // End of the text's last line, in the wrap's own coordinates.
+        function textEnd(el) {
+          var r = document.createRange();
+          r.selectNodeContents(el);
+          var rects = r.getClientRects(), last = rects[rects.length - 1], box = el.getBoundingClientRect();
+          return { x: el.offsetLeft + last.right - box.left, top: el.offsetTop + last.top - box.top, h: last.height };
+        }
+        function draw() {
+          var a = textEnd(l1), b = textEnd(l2), w = wrap.clientWidth;
+          var gap = Math.max(6, a.h * 0.08);
+          var ax = a.x + gap, ay = a.top + a.h * 0.55;
+          var bx = b.x + gap * 0.8, by = b.top + b.h * 0.5;
+          var d = '';
+          var room = Math.min(a.h * 0.9, w - ax - 4); // how far the loop can swing out to the right
+          if (room >= 26) d += 'M' + ax + ' ' + ay + 'C' + (ax + room) + ' ' + (ay - a.h * 0.15) + ' ' + (ax + room) + ' ' + by + ' ' + bx + ' ' + by;
+          var sy = by + b.h * 0.22;
+          var ct = card.offsetTop, cl = card.offsetLeft, cw = card.offsetWidth;
+          var cx = Math.min(Math.max(cl + cw * 0.62, bx + 40), cl + cw - 28), cy = ct - 7;
+          d += 'M' + bx + ' ' + sy + 'C' + cx + ' ' + sy + ' ' + cx + ' ' + (sy + (cy - sy) * 0.35) + ' ' + cx + ' ' + cy;
+          line.setAttribute('d', d);
+          reveal.setAttribute('d', d);
+          tip.setAttribute('d', 'M' + (cx - 7) + ' ' + (cy - 9) + 'L' + cx + ' ' + cy + 'L' + (cx + 7) + ' ' + (cy - 9));
+          reveal.style.setProperty('--trail-len', Math.ceil(line.getTotalLength()) + 1);
+        }
+        draw();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+        if ('ResizeObserver' in window) new ResizeObserver(draw).observe(wrap);
+        else window.addEventListener('resize', draw);
+      })();
+    </script>
     <TornEdge fill="var(--white)" />
   </section>
 
@@ -106,12 +154,9 @@ const results = [
     </div>
   </section>
 
-  <!-- Intro, with the intake form beside it (first on phones, right after the team photos) -->
-  <section class="section home-intro" id="contact">
+  <!-- Intro -->
+  <section class="section">
     <div class="wrap intro" data-reveal>
-      <div class="intro-form">
-        <ContactForm />
-      </div>
       <div class="intro-text">
         <h2>Injured At Work?</h2>
         <hr class="rule" />

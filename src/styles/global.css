@@ -789,9 +789,6 @@ body:not(.has-overlay) main {
     --k: max(0.875rem, 1.1vw);
     --l1: calc(5.27vw + 2.28rem);
   }
-  .btn-hero {
-    font-size: max(1.1875rem, calc(0.875vw + 0.58rem)) !important;
-  }
 }
 /* Wash: light green, from the brand greens, behind the words (left) fading out toward the hiker. */
 .hero::after {
@@ -869,54 +866,121 @@ body:not(.has-overlay) main {
   paint-order: stroke fill;
   text-shadow: 0 0.03em 0.18em rgba(20, 35, 25, 0.35);
 }
-.hero .btn-row {
-  margin-top: clamp(1.1rem, 2.6vw, 2.25rem);
+/* The first step of the intake form sits in the hero, where the Free Consultation button was: a light
+   card with the same dark green edge the button had, so it reads as the next step on the trail. */
+.hero .wrap {
+  position: relative;
 }
-.btn-hero {
-  gap: 0.75em;
-  padding: 0.5em 0.55em 0.5em 1.4em;
-  min-height: 3.5rem;
-  background: var(--act);
-  color: var(--forest);
+.hero-form {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 30rem !important;
+  margin-top: clamp(1.25rem, 2.8vw, 2.5rem);
+  scroll-margin-top: calc(var(--header-h) + 1rem); /* "#contact" links land with the card clear of the header */
+}
+.hero-form .form-card {
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border: 2px solid var(--forest);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: clamp(1.1875rem, 1.6vw, 1.5rem); /* never under 19px bold: dark green on orange is large text */
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1rem 2.5rem rgba(20, 40, 28, 0.25);
+  padding: clamp(1.1rem, 2.5vw, 1.6rem) clamp(1.1rem, 2.8vw, 1.75rem) clamp(1.25rem, 2.8vw, 1.75rem);
+}
+/* The card's "Talk With Us" title stays for screen readers; the trail and "Let's go." already say it. */
+.hero-form .form-card h3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
   white-space: nowrap;
+  margin: 0;
 }
-.btn-hero:hover {
-  background: var(--act-hover);
+.hero-form .btn-primary {
+  width: 100%;
 }
-.btn-hero:focus-visible {
-  outline-color: var(--forest); /* amber would be hard to see against the pale sky */
+/* Compact in the hero: no reserved blank line under the button until there is a message to show. */
+.hero-form .form-status:empty {
+  min-height: 0;
+  margin: 0;
 }
-.btn-arrow {
-  display: inline-grid;
-  place-items: center;
-  width: 2.2em;
-  height: 2.2em;
-  border-radius: 50%;
-  background: var(--forest);
-  color: var(--sun);
-  flex: none;
+.hero-form .intake-top {
+  min-height: 1.5rem;
+  margin-bottom: 0.25rem;
 }
-.btn-arrow svg {
-  width: 55%;
-  height: 55%;
+.hero-form .intake legend {
+  margin-bottom: 0.75rem;
 }
-@media (max-width: 39.99rem) {
-  .btn-hero {
-    width: 100%;
-    justify-content: space-between;
+/* Room for the card: a little less space above and below the words on wider screens, and on phones
+   enough space under the card that the hiker's head stays clear of it. */
+@media (min-width: 48rem) {
+  .hero .wrap {
+    padding-block: calc(var(--header-h) + clamp(1.25rem, 3.4vw, 4rem)) calc(var(--team-overlap) + 1.25rem); /* the photos never touch the card */
   }
 }
-/* Smallest phones: tighter letters and left padding so the arrow stays inside the button at 19px. */
-@media (max-width: 22rem) {
-  .btn-hero {
-    letter-spacing: 0.03em;
-    padding-left: 0.9em;
-    gap: 0.5em;
+@media (max-width: 47.99rem) {
+  .hero .wrap {
+    padding-bottom: 12.5rem;
+  }
+}
+.hero-form .ts-widget:not(:has(iframe)) {
+  margin: 0;
+}
+.hero-form .ts-widget > div:not(:has(iframe)) {
+  display: none;
+}
+/* The trail: dashed Brand Book orange (the color of every action on the site), with a faint white edge
+   so it stays visible where it crosses the hills. The script in index.astro shapes it to the words. */
+.hero .wrap > .hero-trail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  overflow: visible;
+  pointer-events: none;
+  animation: none;
+  fill: none;
+  stroke: var(--act);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.9));
+}
+.trail-line {
+  stroke-dasharray: 8 9;
+}
+.trail-reveal {
+  stroke: #ffffff;
+  stroke-width: 14;
+  stroke-dasharray: var(--trail-len, 0);
+  stroke-dashoffset: var(--trail-len, 0);
+  animation: trail-draw 1.4s 0.9s var(--ease) forwards;
+}
+.trail-tip {
+  opacity: 0;
+  animation: trail-tip 0.3s 2.2s forwards;
+}
+@keyframes trail-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes trail-tip {
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trail-reveal {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .trail-tip {
+    animation: none;
+    opacity: 1;
   }
 }
 .torn {
@@ -996,44 +1060,9 @@ body:not(.has-overlay) main {
   pointer-events: none;
 }
 
-/* Intro, with the intake form. Phones: the form comes first, right under the team photos, then the
-   words. Wider screens: words on the left, form on the right, both starting at the top. */
-.home-intro {
-  scroll-margin-top: var(--header-h); /* "Free Consultation" links land with the form clear of the header */
-}
-.intro {
-  display: grid;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: start;
-}
-.intro > * {
-  min-width: 0; /* lets the form shrink on 320px screens instead of widening the page */
-}
-.intro-text {
-  max-width: 48rem; /* a comfortable line length */
-}
-@media (min-width: 62rem) {
-  .intro {
-    grid-template-columns: 1fr 1fr;
-  }
-  .intro-form {
-    order: 2;
-  }
-}
-/* The form on white: the same light card as the Contact page. */
-.intro-form .form-card {
-  background: linear-gradient(rgba(64, 104, 60, 0.05), rgba(64, 104, 60, 0.05)), var(--white);
-  border: 1px solid rgba(64, 104, 60, 0.2);
-  box-shadow: 0 0.75rem 2rem rgba(41, 70, 52, 0.07);
-}
-.intro-form .btn-primary {
-  width: 100%;
-}
-.intro-form .ts-widget:not(:has(iframe)) {
-  margin: 0;
-}
-.intro-form .ts-widget > div:not(:has(iframe)) {
-  display: none;
+/* Intro */
+.intro > div {
+  max-width: 48rem; /* one column, kept to a comfortable line length */
 }
 .intro h2 {
   margin-bottom: 0.2em;
