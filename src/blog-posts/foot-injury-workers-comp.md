@@ -3,7 +3,7 @@ title: "Foot Injury at Work in Virginia: Workers’ Comp Benefits and Settlement
 metaTitle: "Foot Injury at Work in Virginia: Workers’ Comp Guide"
 description: "Broke or injured your foot at work in Virginia? What workers’ comp covers, what you need to prove, and what affects the value of a foot injury claim."
 date: 2022-11-23T00:06:35Z
-updated: 2022-11-28T18:35:25Z
+updated: 2026-10-31T12:00:00Z
 tags: ["body-parts","settlement"]
 ---
 

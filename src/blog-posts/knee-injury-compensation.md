@@ -3,7 +3,7 @@ title: "Hurt Your Knee at Work in Virginia? Here’s What Workers’ Comp Covers
 metaTitle: "Knee Injury at Work in Virginia: Workers’ Comp Payouts"
 description: "Hurt your knee at work in Virginia? Learn what workers’ comp pays for, what affects the value of a knee claim, and why there is no average payout."
 date: 2022-10-04T19:15:50Z
-updated: 2022-10-11T10:46:25Z
+updated: 2026-10-31T12:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
