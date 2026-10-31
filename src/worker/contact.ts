@@ -103,30 +103,31 @@ const BADGE: Record<Route | 'message', { label: string; bg: string; fg: string }
 const html = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const FONT = "Nexa, Aptos, 'Segoe UI', Helvetica, Arial, sans-serif";
 
-// The styled copy: a colored tag, any notes, big tap-to-call and tap-to-email links, then the answers.
+// The styled copy: a colored tag, any notes, the name, Call and Text buttons, the email,
+// then every answer (what happened last) in the same style.
 // Everything the visitor typed is escaped. Brand colors only (Pathfinder Brand Book).
 export function emailHtml(sub: Submission, o: EmailFacts) {
   const notes = leadNotes(o);
   const badge = BADGE[sub.intake ? route(sub.intake) : 'message'];
-  const tel = sub.phone.replace(/[^\d+]/g, '');
+  const digits = sub.phone.replace(/\D/g, '');
+  const dial = digits.length === 10 ? `+1${digits}` : digits;
   const label = (t: string) => `<div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#40683c;margin:0 0 4px">${t}</div>`;
-  // One answer per block, question above answer, so it reads well on a phone.
-  const rows = sub.intake
-    ? intakeRows(sub.intake)
-        .map(([q, a]) => `<div style="padding:8px 0;border-top:1px solid #e3e3e3"><div style="color:#555555;font-size:13px">${html(q)}</div><div style="color:#294634;font-size:16px;font-weight:700">${html(a)}</div></div>`)
-        .join('')
-    : '';
-  const story = sub.message ? html(sub.message).replace(/\n/g, '<br>') : '<span style="color:#777777">(left blank)</span>';
+  const button = (href: string, text: string, bg: string) =>
+    `<a href="${href}" style="display:inline-block;background:${bg};color:#ffffff;font-weight:700;font-size:16px;text-decoration:none;padding:10px 20px;border-radius:6px;margin:0 8px 8px 0">${text}</a>`;
+  const story = sub.message ? html(sub.message).replace(/\n/g, '<br>') : '<span style="color:#777777;font-weight:400">(left blank)</span>';
+  // One answer per block, question above answer, so it reads well on a phone. What happened comes last.
+  const rows = [...(sub.intake ? intakeRows(sub.intake).map(([q, a]) => [html(q), html(a)]) : []), [sub.intake ? 'What happened and when' : 'Message', story]]
+    .map(([q, a]) => `<div style="padding:8px 0;border-top:1px solid #e3e3e3"><div style="color:#555555;font-size:13px">${q}</div><div style="color:#294634;font-size:16px;font-weight:700">${a}</div></div>`)
+    .join('');
   return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body style="margin:0;padding:0;background:#ffffff">
 <div style="max-width:560px;margin:0 auto;padding:20px 16px;font-family:${FONT};color:#294634;line-height:1.45">
 <div style="display:inline-block;background:${badge.bg};color:${badge.fg};font-weight:700;font-size:13px;letter-spacing:.08em;padding:6px 12px;border-radius:4px">${badge.label}</div>
 ${notes.length ? `<div style="margin:16px 0 0;padding:12px 14px;border-left:4px solid #ffd040;background:#ffffff;border-top:1px solid #e3e3e3;border-right:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3"><div style="font-weight:700;margin:0 0 4px">Check this one:</div>${notes.map((n) => `<div style="margin:2px 0">${html(n)}</div>`).join('')}</div>` : ''}
-<div style="font-size:24px;font-weight:700;margin:18px 0 10px">${html(sub.name)}</div>
-<div style="margin:0 0 6px;font-size:17px"><a href="tel:${html(tel)}" style="color:#294634;font-weight:700;text-decoration:none">&#9742;&nbsp; ${html(sub.phone)}</a></div>
+<div style="font-size:24px;font-weight:700;margin:18px 0 6px">${html(sub.name)}</div>
+<div style="font-size:18px;font-weight:700;margin:0 0 10px">${html(sub.phone)}</div>
+<div style="margin:0 0 6px">${button(`tel:${html(dial)}`, 'Call', '#294634')}${button(`sms:${html(dial)}`, 'Text', '#638c1c')}</div>
 <div style="margin:0 0 18px;font-size:17px"><a href="mailto:${html(sub.email)}" style="color:#40683c;text-decoration:underline">${html(sub.email)}</a></div>
-${rows ? `${label('Their answers')}<div style="margin:0 0 18px">${rows}</div>` : ''}
-${label(sub.intake ? 'What happened and when' : 'Message')}
-<div style="font-size:16px;margin:0 0 8px;white-space:normal">${story}</div>
+${label(sub.intake ? 'Their answers' : 'Their message')}<div style="margin:0 0 8px">${rows}</div>
 </div></body></html>`;
 }
 

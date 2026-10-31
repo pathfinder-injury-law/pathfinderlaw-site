@@ -310,7 +310,9 @@ test('lead email: a styled copy with the sorting tag, tap-to-call, answers, and 
   const { head, html } = decodeRaw(gmail(calls)[0]);
   assert.match(head, /multipart\/alternative/);
   assert.match(html, /PRIORITY CASE/);
-  assert.match(html, /href="tel:8045550100"/);
+  assert.match(html, /href="tel:\+18045550100"[^>]*>Call</);
+  assert.match(html, /href="sms:\+18045550100"[^>]*>Text</);
+  assert.match(html, /What happened and when<\/div><div style="color:#294634;font-size:16px;font-weight:700">Fell &lt;script&gt;/);
   assert.match(html, /href="mailto:pat@example\.com"/);
   assert.match(html, /Surgery had or recommended/);
   assert.match(html, /Pat &lt;b&gt;Example&lt;\/b&gt;/);
