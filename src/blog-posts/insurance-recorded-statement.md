@@ -1,142 +1,87 @@
 ---
-title: "What to Do If Insurance Asks for a Recorded Statement"
-metaTitle: "Should I Give A Recorded Statement To An Insurance Agent?"
-description: "A workers’ compensation claim may involve a request by the adjuster to provide a recorded statement. If so, know what and what not to do."
+title: "Should You Give the Insurance Adjuster a Recorded Statement?"
+metaTitle: "Should I Give the Adjuster a Recorded Statement? (VA)"
+description: "The adjuster on your Virginia workers’ comp claim wants a recorded statement. What they ask, how answers get used, and what to do before you say yes."
 date: 2022-12-08T22:16:54Z
-updated: 2022-12-09T20:38:12Z
+updated: 2026-10-31T20:00:00Z
 tags: ["insurance","claim-process"]
 ---
 
-*Disclaimer: Please note nothing in this article is to be considered legal advice. You should always consult with an attorney about the specific facts of your situation before making any legal decisions. No attorney-client relationship or representation relationship is created by the dissemination of this content or your consumption thereof.*
+*Nothing in this article should be taken as legal advice. Every case is different.*
 
-Involvement in a work-related accident with injuries can be overwhelming, and seeking workers’ compensation can quickly become complicated. A claims adjuster may reach out to you to request more information and specific details about the accident.
+Soon after you report a work injury in Virginia, an adjuster for your employer’s insurance company will usually call and ask for a recorded statement. You can ask to schedule it for later. Before you agree, it helps to know what the statement is for: the adjuster uses it to decide whether to accept or deny your claim, and anything you say, or forget to say, can be used against you for the rest of the case.
 
-It is important to remember, however, that the adjuster works for the insurance company. Even if they come off as helpful and sympathetic, they know tricks that can reduce the amount of money they are required to pay you. Hiring an experienced [Virginia workers’ compensation lawyer](/virginia-workers-comp-lawyer/) may help you avoid being taken advantage of by insurance adjusters who seek to limit your benefits.
+## Who Is Calling, and When
 
-## When Should I Expect a Call from an Insurance Adjuster?
+The call usually comes within days of reporting the accident to your employer. The adjuster may work for the insurance company itself or for a third-party claims administrator hired by your employer or its insurer. Many adjusters talk to your employer first to get its version of what happened.
 
-Shortly after reporting the accident to your employer, you can often expect a call from an adjuster. Sometimes they will go to your employer first to gain their version of events. Afterward, they will call you directly for your information and details surrounding the accident and any resulting injuries.
-
-This adjuster call will either be from someone who works directly for the insurance company or for an authorized third party. That third party, many times, will be a claims processor or administrator for your employer’s workers’ compensation insurance company.
-
-## What Happens During the Initial Call with Insurance?
-
-You may be nervous waiting to hear from the insurance company, and it may help to know ahead of time what usually happens during that initial phone call.
-
-You can expect them to ask you questions regarding your workplace injury, many of which may seem overly personal and invasive and can concern the following:
-
-- Work history, including past employers, any disciplinary actions against you, firings, or other issues
-- Length of employment with current employer
-- Specific job duties
-- How your injury occurred (e.g., car accident, slip and fall, etc.)
-- Body parts affected by the accident and injury
-- Who has provided medical treatment
-- Any treatments scheduled in the future
-- Pre-existing injuries or conditions
-- When and to whom you reported the accident and injury (e.g., is there a police report, particularly if there was an auto accident)
-- Your financial situation
-- Current work status
-
-Your answers, no matter how honest and trusting you want to be, can negatively impact your personal injury claim if the adjuster can find a way to use them against you. The adjuster may also ask for a recorded statement during this call.
-
-## What Should I Do If Insurance Asks for a Recorded Statement?
+However friendly they are, the adjuster works for the insurance company. Their job is to decide whether the company pays, and how much.
 
 <figure class="bp-photo"><img src="/images/blog/phone-call.jpg" alt="A woman at a desk talking on the phone with a laptop open" width="1400" height="788" loading="lazy" /></figure>
 
-During the call, the insurance claims adjuster often tells you they are going to record the call or asks you to provide a recorded statement. Generally, however, it is recommended that you avoid doing so without representation and instead seek legal advice before proceeding.
+## What the Adjuster Will Ask
 
-It is easy in the aftermath of a work-related accident and personal injury to temporarily forget or leave out important details of the accident in your statement. The adjuster may not ask for any other input when making the decision on whether to accept or deny your accident claim. You may also end up providing information that can hurt your claim and any final payout.
+Expect questions about:
 
-It is important to note here that Virginia is a one-party consent state, which means the adjuster CAN record you without your consent, at least assuming you and the adjuster are both in Virginia.
+- Your work history, including past employers, discipline, and firings
+- How long you have worked for this employer and what your job duties are
+- Exactly how the injury happened
+- Every body part that hurts
+- Who has treated you and what treatment is scheduled
+- Earlier injuries or conditions in the same body parts
+- When, and to whom, you reported the accident
+- Whether you are working now, and your finances
 
-## Preparing for Your Recorded Statement
+Each answer is checked against your medical records, your employer’s report, and later testimony. Small differences are where denials come from.
 
-If you do give a recorded statement, keep in mind the following tips.
+## How Recorded Statements Hurt Claims
 
-### Schedule the Statement for a Later Date
+- **Missing body parts.** If you mention your back but not your neck, the insurance company may later argue the neck injury didn’t come from the accident.
+- **Vague timing.** Virginia comp requires an identifiable incident at a reasonably definite time. “It’s been hurting for a while” can sink a claim that was really a specific lifting accident.
+- **Earlier injuries.** A passing mention of an old injury becomes the insurance company’s “this is degenerative, not new” defense.
+- **Minimizing.** Saying you are “doing okay” in the first week can be quoted back to you months later when you need surgery.
+- **Guessing.** Answers you aren’t sure about get treated as facts.
 
-Inform your insurance claims adjuster that you are unable to provide a recorded statement at the time of the call. Schedule it for a later date.
+Virginia allows a call to be recorded if one party to it consents ([Va. Code § 19.2-62](https://law.lis.virginia.gov/vacode/title19.2/chapter6/section19.2-62/)), so assume every call with the adjuster is being recorded, whether or not they say so.
 
-### Contact a Virginia Attorney Immediately
+## If You Decide to Give a Statement
 
-As soon as possible, contact a Virginia attorney with experience in handling workers’ compensation claims. Attend an initial consultation to understand the claims process, as well as how to prepare for the recorded statement.
+- **Schedule it.** You don’t have to answer on the first call. Ask for a time that works for you, and use that time to get your dates, doctors, and notes in order.
+- **Offer a written statement instead.** Writing gives you time to be complete and accurate.
+- **Answer only what is asked.** Short, factual answers. Don’t guess, don’t speculate about cause, and don’t add opinions.
+- **It is fine to say “I don’t remember”** or “I’d need to check my records.”
+- **List every body part that hurts,** even the ones that seem minor right now.
 
-### Offer a Written Statement Instead
+## Other Adjuster Tactics to Watch For
 
-Offer to provide the adjuster with a written statement instead. You can then take your time when writing this out. Your personal injury lawyer can also help you prepare this and review it before submission.
+### The Medical Authorization Form
 
-### Do Not Volunteer Information
+The adjuster may ask you to sign a form releasing all of your medical records. You don’t have to sign it. Virginia law already requires the doctors treating your work injury to give the insurance company copies of their reports on request ([Va. Code § 65.2-604](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-604/)). A blanket release mostly gives the insurance company your other medical history, which it can search for pre-existing conditions to [deny or limit your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). Once a claim is filed, the insurance company can still get relevant records through the Commission’s discovery process.
 
-Whether written or recorded, keep your answers short and to the point. Do not volunteer more information than needed and only answer questions the adjuster asks. If you do not know an answer or feel unsure of what response to give, let the adjuster know that you need to review your records and notes and respond at a later date. If you do not remember something, it is OK to say you do not remember.
+### “You Don’t Need a Lawyer”
 
-## What Other Techniques Should I Watch Out for From Insurance Adjusters?
+Some adjusters say a lawyer will only slow things down. The adjuster is the person deciding what the insurance company pays you.
 
-<figure class="bp-photo"><img src="/images/blog/signing-papers.jpg" alt="Two women at a table, one signing a document" width="1400" height="933" loading="lazy" /></figure>
+### Delays and Requests for More Information
 
-Insurance adjusters have plenty of tricks up their sleeves to obtain their goals of paying less or denying your claim altogether. Here are some of the techniques they might use that you need to watch out for when speaking with them.
+An adjuster can stretch out a claim by asking for the same documents again and again, by sending you to different people, or by not returning calls. The longer it goes, the more pressure there is to accept less. Here’s [what to do when the insurer delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/).
 
-### Building Rapport
+## Deadlines the Insurance Company Has to Meet
 
-The insurance claims adjuster may try to come off as friendly and trustworthy to get you to let your guard down and admit something they can use against you. Building rapport with you is one of their tactics to get you to open up and speak freely and even convince you that you do not need to hire a workplace accident attorney. Always keep in mind that they are working for the insurance company, not you, and they are not there to help you.
+The insurance company is on a clock too:
 
-### Telling You to NOT Hire a Lawyer
+- Your employer or its insurance company must report your injury to the Commission within 10 days after learning of it ([Va. Code § 65.2-900](https://law.lis.virginia.gov/vacode/title65.2/chapter9/section65.2-900/)).
+- After you file a claim with the Commission, the Commission will order the insurance company to respond within 30 days. It may accept the claim or deny it.
+- If a payment is not made within two weeks after it becomes due, the law adds 20 percent to the unpaid amount, unless the Commission finds the delay had good cause ([Va. Code § 65.2-524](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/)).
 
-The adjuster may say a workers’ comp or personal injury attorney is not necessary, and with one, your claim will take longer to complete and settle. They may follow this up with the claim that they are able to help you obtain the compensation you need for medical bills and other benefits if these apply to your injury case.
+Your own deadlines matter more. You must give your employer written notice within 30 days of the accident, and your claim must be filed with the Commission within two years, although exceptions apply. File it even if the insurance company is paying. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 
-### Asking You to Sign a Medical Authorization Form
+## Keep a Paper Trail
 
-The adjuster may ask you to sign a medical authorization form. This voluntary form authorizes your attending physician and healthcare team to release all your medical records to the adjuster. Such records will be evaluated for any pre-existing injuries or conditions that they can use to [deny or limit your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). You are not required to sign this form.
+- Write down every call: date, time, who you spoke with, and what was said.
+- Ask for anything important in writing, and keep copies of everything you send.
+- Keep the claim number, the adjuster’s name, and the insurance company’s address in one place.
 
-### Delaying Payments
+## Talk to Pathfinder Injury Law
 
-Another tactic used by insurance adjusters is to delay payments. They understand you and your family may be desperate for money or waiting on payments, and anxiety can force you to accept lower compensation amounts or unfair agreements.
-
-### Stating They Need More Information
-
-The adjuster can also string out your claim for as long as possible by stating they need more information. Every time you send some type of documentation, they can ask for more. You may even be asked to provide the same information again and again or to different people throughout the insurance company.
-
-### Ignoring Phone Calls and Emails
-
-In many instances, the adjuster will ignore or not return phone calls and emails from accident victims. While this may sound unprofessional, the hope is that your frustration with them will build up to a point that you will drop your claim or accept a lower settlement offer.
-
-## Other Tips for Dealing with Insurance Adjusters
-
-<figure class="bp-photo"><img src="/images/blog/colleagues.jpg" alt="Two colleagues working together at a desk" width="1400" height="788" loading="lazy" /></figure>
-
-Preparing for your interactions with adjusters can help your claim. Here are a few more tips for dealing with those working on your Virginia workers’ comp claim.
-
-### Stick to the Facts
-
-When it comes to how to talk to insurance claims adjusters, one key tip is to always stick to the facts. Provide what happened, tell how you were injured, and give succinct answers to the questions they ask. Avoid inserting your opinions, observations, complaints, or anything else that is not fact-based and could point the finger at you as the at-fault party.
-
-### Document Everything
-
-Immediately start a [file for your claim](/how-to-file-a-workers-comp-claim/) and document everything. Include the name of the insurance company and its business address for starters, and keep track of all communications, including names, dates, times, and details.
-
-How you communicate with the insurer will be crucial to your claim. Keep notes on everything. Also, be sure to communicate with the insurance company in writing whenever possible and maintain an organized paper trail.
-
-As a consumer in Virginia, you have rights, and the insurer has to follow all state laws when assessing your claim. By documenting everything, you can better monitor this and collect the benefits you deserve.
-
-### Give Limited Personal Information
-
-If you decide you must talk with the adjuster, avoid providing too much personal information. It is generally OK to give your full name and contact information (e.g., address and phone number) and what type of work you do for your employer. However, it is wise to avoid discussing anything further, especially your health history or finances.
-
-### Be Persistent
-
-Be persistent in your pursuit of workers’ comp benefits to which you may be entitled. You can also request to speak to a supervisor if necessary. Adjusters usually carry heavy caseloads, and you must remain proactive to stay on their radar.
-
-Inform the adjuster that you will call again in a week or a set number of days to check up on the status of the claim. Doing so confidently will let them know you are persistent and not afraid to keep the pressure on.
-
-### Ask for a Specific Timetable
-
-Let the insurance adjustor know that you are aware that Virginia has specific turnaround timeframes and deadlines for claims. These timeframes include requirements for processing your claim, investigating your claim, accepting or denying your claim, and paying benefits once awards are entered. Ask them for a specific timetable so you know what to expect going forward.
-
-### Be Careful When Discussing Injuries
-
-You can expect the adjuster to ask about the nature and extent of your injuries. Be careful when discussing these injuries, and avoid giving out too many details early in the process. Injuries can worsen over time, or a new complication or personal injury relating to the accident may arise at a later date. Adjusters will often try to hold you to what you say early on in a case, so if you discuss injuries with them, you can be bound later by something you say now.
-
-## Let Us Deal with Insurance for You
-
-Dealing with the aftermath of a work-related accident and injury can be stressful. Add to that the necessary communications with an insurance company, and you may be tempted to settle too early or for too little, or give up on your claim altogether.
-
-While some insurance adjusters are friendly, others will try to bully and intimidate you. A Virginia workers’ compensation lawyer at Pathfinder Injury Law can take care of correspondence and negotiations with the insurance companies so you can focus on recovering from your injuries. Contact our law firm today for a free consultation by calling [804-505-0633](tel:+18045050633) or by submitting our [online contact form](/contact/).
+Pathfinder Injury Law handles only Virginia workers’ compensation claims. If an adjuster has called you, call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/).
