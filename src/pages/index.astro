@@ -110,10 +110,19 @@ const results = [
           var r = document.createRange();
           r.selectNodeContents(el);
           var rects = r.getClientRects(), last = rects[rects.length - 1], box = el.getBoundingClientRect();
+          if (!last) return null; // not laid out yet (a hidden tab, say): skip this draw
           return { x: el.offsetLeft + last.right - box.left, top: el.offsetTop + last.top - box.top, h: last.height };
         }
         function draw() {
+          try {
+            shape();
+          } catch (e) {
+            svg.style.display = 'none'; // the trail is decoration: if anything goes wrong, just leave it out
+          }
+        }
+        function shape() {
           var a = textEnd(l1), b = textEnd(l2), w = wrap.clientWidth;
+          if (!a || !b) return;
           var gap = Math.max(6, a.h * 0.08);
           var ax = a.x + gap, ay = a.top + a.h * 0.55;
           var bx = b.x + gap * 0.8, by = b.top + b.h * 0.5;
