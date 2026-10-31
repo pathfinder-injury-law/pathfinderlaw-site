@@ -729,8 +729,8 @@ body:not(.has-overlay) main {
    screens 1000px wide and up, pinned bottom right so the hiker stays in frame. On narrower screens
    the photo sits along the bottom at full width and the sky above it is a CSS gradient sampled from
    the photo's top edge, feathered in so there is no seam; that leaves room for the words above the
-   hiker. A light green wash behind the words, strongest on the left and fading out toward the
-   hiker, keeps the green words readable where they reach the hills. */
+   hiker. A soft blur behind the words, strongest on the left and fading out toward the hiker, keeps
+   the green words readable where they reach the hills. */
 .hero {
   position: relative;
   color: var(--forest);
@@ -790,15 +790,17 @@ body:not(.has-overlay) main {
     --l1: calc(5.27vw + 2.28rem);
   }
 }
-/* Wash: light green, from the brand greens, behind the words (left) fading out toward the hiker. */
+/* Soft focus: the photo goes slightly out of focus behind the words (left), fading back to sharp toward
+   the hiker, like a camera focused on him. No tint, so the photo keeps its own colors. */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(ellipse 85% 120% at 0% 38%, rgba(64, 104, 60, 0.3) 0%, rgba(64, 104, 60, 0.22) 45%, rgba(64, 104, 60, 0) 100%),
-    linear-gradient(180deg, rgba(64, 104, 60, 0.02) 0%, rgba(64, 104, 60, 0.06) 38%, rgba(64, 104, 60, 0.18) 62%, rgba(64, 104, 60, 0.18) 100%); /* plus a light green wash over the photo (lightest behind the words), to tone it down a little */
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-mask-image: radial-gradient(ellipse 85% 120% at 0% 38%, #000 0%, rgba(0, 0, 0, 0.85) 40%, transparent 85%);
+  mask-image: radial-gradient(ellipse 85% 120% at 0% 38%, #000 0%, rgba(0, 0, 0, 0.85) 40%, transparent 85%);
   pointer-events: none;
 }
 .hero .wrap {
@@ -913,8 +915,8 @@ body:not(.has-overlay) main {
 }
 .hero-form .step[data-step="name"] .step-q {
   font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-weight: 700; /* bold, so it reads over the hills */
   color: var(--forest);
-  text-shadow: 0 0 0.6em rgba(255, 255, 255, 0.95), 0 0 0.25em rgba(255, 255, 255, 0.9); /* readable over the hills */
 }
 .hero-form .step[data-step="name"] input {
   background: rgba(255, 255, 255, 0.94);
@@ -970,46 +972,6 @@ body:not(.has-overlay) main {
 }
 .hero-form .ts-widget > div:not(:has(iframe)) {
   display: none;
-}
-/* The trail: a dotted footpath, like the trails on a hiking map, in the dark Brand Book green with a soft
-   light edge so it reads over the sky and the hills. The script in index.astro shapes it to the words and
-   gives it a slight hand-drawn wobble. */
-.hero .wrap > .hero-trail {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  overflow: visible;
-  pointer-events: none;
-  animation: none;
-  fill: none;
-  stroke: var(--trail-color, rgba(41, 70, 52, 0.75));
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.75));
-}
-.trail-line {
-  stroke-dasharray: 0.1 11;
-}
-.trail-reveal {
-  stroke: #ffffff;
-  stroke-width: 14;
-  stroke-dasharray: var(--trail-len, 0);
-  stroke-dashoffset: var(--trail-len, 0);
-  animation: trail-draw 1.4s 0.9s var(--ease) forwards;
-}
-@keyframes trail-draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .trail-reveal {
-    animation: none;
-    stroke-dashoffset: 0;
-  }
 }
 .torn {
   position: absolute;
@@ -2496,6 +2458,16 @@ mark {
 }
 /* Phones: the Call/Message bar stays hidden while the hero is on screen, so the peek sits at the bottom
    edge. The hero never drops below its usual 37rem, so the button never lands on the hiker. */
+/* Phones: the hero fills the screen, so the photo grows up to just under the name box instead of leaving a
+   band of empty sky (trimming from the left, never the hiker). */
+@media (max-width: 47.99rem) {
+  .hero-photo {
+    width: 100%;
+    height: calc(100% - 22rem);
+    object-fit: cover;
+    object-position: 100% 100%;
+  }
+}
 @media (max-width: 47.99rem) {
   :root {
     --team-peek: 2.25rem;
