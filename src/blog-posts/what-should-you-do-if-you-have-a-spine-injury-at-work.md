@@ -35,7 +35,7 @@ You may complete a claim form and mail it to the VWC at the following address: V
 
 #### By Fax
 
-You may fax the benefits claim form to 804-823-6957.
+You may fax the claim form to 804-823-6956.
 
 #### In Person
 
@@ -43,7 +43,7 @@ You may deliver your claim form in person to the VWC’s main office in Richmond
 
 #### WebFile
 
-Once you’ve filed a claim through any of the above methods, the VWC will issue a Jurisdiction Claim Number (JCN) for your claim as well as a personal identification number (PIN). You may use these numbers to create an account with the VWC’s [WebFile online portal](https://workcomp.virginia.gov/webfile). Once you have set up the account, you may file paperwork and claims online.
+When the Commission learns of your injury, often from your employer’s report, it mails you a Jurisdiction Claim Number (JCN) and, separately, a personal identification number (PIN). You can use them to create an account on the Commission’s [WebFile online portal](https://workcomp.virginia.gov/webfile), where you can file your claim form and other paperwork online.
 
 ### Receive a Response
 
@@ -53,9 +53,9 @@ But let’s be real here: If you get to this point and the insurance company say
 
 ### Request and Attend an Evidentiary Hearing
 
-If you receive a denial of your claim from the insurance company, you will have the opportunity to “appeal” this decision by requesting the hearing be docketed with the Virginia Workers’ Compensation Commission. You must submit this request for an evidentiary hearing in writing to the VWC.
+If you receive a denial of your claim from the insurance company, you will have the opportunity to “appeal” this decision by requesting the hearing be docketed with the Virginia Workers’ Compensation Commission. Your claim must be on file with the Commission in writing before you can ask for a hearing. You or your lawyer can then ask the Commission to send the claim to a hearing, including through WebFile.
 
-At the hearing, you must demonstrate to a preponderance of the evidence that your injuries arose out of and in the course of your employment. A work accident lawyer can guide you through the process of preparing for the hearing, assembling medical evidence, interviewing witnesses, conducting discovery, and other important pretrial steps. They can also then represent you and advocate on your behalf at hearing. You may present evidence at hearing, including testimony from witnesses and opinions from doctors and medical experts. Bear in mind, there are evidentiary rules and procedures you will have to follow. Failing to do so can have serious consequences for your case.
+At the hearing, you must demonstrate to a preponderance of the evidence that your injuries arose out of and in the course of your employment. A work accident lawyer can guide you through the process of preparing for the hearing, assembling medical evidence, interviewing witnesses, conducting discovery, and other important pretrial steps. They can also then represent you and advocate on your behalf at hearing. You may present evidence at hearing, including testimony from witnesses and opinions from doctors and medical experts. The Commission doesn’t follow every courtroom rule of evidence, but it has its own rules and deadlines, such as filing your medical records and exhibits before the hearing. Missing them can keep important evidence out of your case.
 
 The evidentiary hearing can be the most important part of a work-related injury case. You might feel discouraged because of the amount of time that it often takes to get to this point. It might not seem like it would be worth the effort to attend the hearing. However, this is your chance to make your case in front of the decision-makers, called “deputy commissioners.” You and your lawyer can potentially turn a denial into an approval, but only if you show up and comply with your lawyer’s instructions and requests as the case proceeds toward trial.
 
@@ -143,7 +143,7 @@ Injured workers commonly receive accident compensation in three areas:
 
 It is relatively common for workers to receive lost wage payments in a workers’ comp case, assuming a doctor takes the claimant out of work or restricts them to light duty. Generally, this compensation is temporary, while the claimant is out of work per a doctor’s note. Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity ([Va. Code § 65.2-518](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/)). Wage checks start on the eighth day out of work; here’s [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/).
 
-Permanent total disability compensation, on the other hand, is much less common than temporary disability benefits in Virginia workers’ compensation claims. In certain exceptionally severe instances, permanent total benefits may be available if the claimant can prove they suffered damage to two or more extremities or eyes in a work accident that is so severe the body part can no longer be used in gainful employment. Permanent total disability benefits can also be available if the claimant suffered a brain injury so severe as to render them permanently unable to engage in gainful employment. The facts needed to prove that someone is entitled to perm total benefits, however, could be present in cases involving spinal cord injuries or serious back injuries that involve two or more appendages, eyes, or a brain injury.
+Permanent total disability compensation, on the other hand, is much less common than temporary disability benefits in Virginia workers’ compensation claims. In rare, very severe cases, the law treats the injury as permanent and total: loss of use of both hands, both arms, both feet, both legs, both eyes, or any two of them; injury resulting in total paralysis for all practical purposes; or a brain injury so severe the worker is permanently unemployable ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). A spinal cord injury that causes paralysis, or a back injury that takes away the use of both legs, can meet that test.
 
 ### What Were Your Wages Before Your Injury?
 
@@ -173,19 +173,19 @@ To be eligible for workers’ comp benefits, you must have sustained your injuri
 
 <figure class="bp-photo bp-photo-portrait"><img src="/images/blog/neck-pain.jpg" alt="A person holding the back of their neck with both hands" width="800" height="1200" loading="lazy" /></figure>
 
-If your spinal or back injury occurred in a car accident, you may be able to qualify for workers’ comp according to the Virginia Workers’ Compensation Act and its interpretive case law. Commuting to work generally does not qualify under the workers’ compensation system unless one of the following applies:
+If your spinal or back injury occurred in a car accident, you may be able to qualify for workers’ comp according to the Virginia Workers’ Compensation Act and its interpretive case law. An accident while commuting to or from work is generally not covered. Virginia courts recognize three exceptions:
 
-### Driving a Company Vehicle
+### Your Employer Provided the Transportation
 
-If you were driving a company-owned vehicle and performing job-related duties when the accident occurred, your injury could be deemed work-related.
+If your employer provided your transportation as part of the job, such as a company vehicle, or paid you for your travel time or included it in your wages, the accident may be covered. Simply being reimbursed for mileage, on its own, usually isn’t enough.
 
-### If the Employer Reimburses You for Mileage
+### The Only Way In or Out
 
-Even if you were driving your own vehicle, the injury could be deemed compensable if your employer pays you for mileage.
+If the accident happened on the only route into or out of the workplace, or on a route your employer built, it may be covered.
 
-### If You Were Engaged in an Activity in Furtherance of the Employment
+### A Work Errand on the Way
 
-If you were doing something work-related while driving, even in a personal vehicle, you might be able to get workers’ compensation benefits.
+If your employer had you doing a work duty or errand on your way to or from work, even in your own car, the accident may be covered.
 
 ## What Is the Difference Between Short-Term Disability and Workers’ Comp Benefits?
 

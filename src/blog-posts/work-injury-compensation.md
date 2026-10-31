@@ -44,7 +44,7 @@ Most injured workers don’t lose a body part entirely. They are left with a par
 
 That is why the impairment rating matters so much, and why insurance companies often send injured workers to their own doctors for a second rating. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
 
-The back and neck are not on the schedule. A spine injury can still lead to permanent partial disability benefits if it causes a permanent loss of use in an arm or leg.
+The back and neck are not on the schedule. A spine injury can still lead to permanent partial disability benefits if it causes a permanent loss of use in an arm or leg, or leaves severe scarring.
 
 ### Permanent Total Disability
 
@@ -75,15 +75,15 @@ A settlement is optional. Nobody can force you to settle, and nobody can force t
 
 Most Virginia cases settle with a **full and final settlement**: one lump sum that closes the entire case, top to bottom, including future medical care for the injury. Settling your case closes everything and ends benefits. Settlements that leave medical benefits open are exceedingly rare. So the lump sum has to account for every future doctor visit, prescription, and surgery related to the injury, because after it is approved you cannot come back for more.
 
-The Commission’s website has a calculator for back wage benefits, but it is not a settlement calculator. Settlement value comes from all of the factors above at once.
+The Commission’s website has benefit calculators, but none of them is a settlement calculator. Settlement value comes from all of the factors above at once.
 
 ### Settlements When Medicare Is Involved
 
-If you are on Medicare, have applied for Social Security Disability, or are likely to need it, a settlement may need a **Workers’ Compensation Medicare Set-Aside**: a separate account, funded by the insurance company, that must be used for future medical care for the work injury. If the account is used up and was handled properly, Medicare generally pays after that. Getting this wrong can leave you paying for care yourself. More on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/) and [how a settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
+If you are on Medicare, have applied for Social Security Disability, or are likely to need it, a settlement may need a **Workers’ Compensation Medicare Set-Aside**: a portion of the settlement set aside to pay for future medical care for the work injury. Under federal Medicare rules, that money must be used up, and used properly, before Medicare will pay for treatment related to the work injury. Getting this wrong can leave you paying for care yourself. More on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/) and [how a settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 
 ## Where Settlement Talks Happen
 
-Many cases settle through direct negotiation. Others settle at a mediation held through the Commission, where a mediator helps both sides try to reach a lump sum. If the case doesn’t settle, the dispute goes to a hearing before a deputy commissioner. The insurance company has handled thousands of these. Most injured workers have never been through one.
+Many cases settle through direct negotiation. Others settle at a free mediation held through the Commission, where a mediator helps both sides try to reach a lump sum. For a full and final settlement mediation, the Commission requires every party to have a lawyer. If the case doesn’t settle, the dispute goes to a hearing before a deputy commissioner. The insurance company has handled thousands of these. Most injured workers have never been through one.
 
 ## Talk to Pathfinder Injury Law About Your Claim
 

@@ -56,7 +56,7 @@ Virginia allows a call to be recorded if one party to it consents ([Va. Code § 
 
 ### The Medical Authorization Form
 
-The adjuster may ask you to sign a form releasing all of your medical records. You don’t have to sign it. Virginia law already requires the doctors treating your work injury to give the insurance company copies of their reports on request ([Va. Code § 65.2-604](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-604/)). A blanket release mostly gives the insurance company your other medical history, which it can search for pre-existing conditions to [deny or limit your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).
+The adjuster may ask you to sign a form releasing all of your medical records. You don’t have to sign it. Virginia law already requires the doctors treating your work injury to give the insurance company copies of their reports on request ([Va. Code § 65.2-604](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-604/)). A blanket release mostly gives the insurance company your other medical history, which it can search for pre-existing conditions to [deny or limit your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). Once a claim is filed, the insurance company can still get relevant records through the Commission’s discovery process.
 
 ### “You Don’t Need a Lawyer”
 
