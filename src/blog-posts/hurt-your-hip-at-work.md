@@ -99,7 +99,7 @@ The things that move the value of a hip claim:
 
 - **Whether the accident qualifies at all,** and whether the insurance company can blame arthritis
 - **Surgery,** especially a recommended hip replacement
-- **Future medical care,** since most Virginia settlements close medical benefits for good
+- **Future medical care,** since a full and final settlement closes your medical benefits for good
 - **Time out of work** and whether you can go back to your old job
 - **The impairment rating** to the leg
 - **Your average weekly wage**

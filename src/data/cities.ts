@@ -68,7 +68,7 @@ export const cities: City[] = [
           'A Richmond claim follows the same Virginia Workers’ Compensation Act as a claim anywhere else in the state. The first few rules decide whether you get anything at all:',
           {
             list: [
-              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters is how the work is actually controlled.`,
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
               'What you have to show: that your accident arose out of and in the course of your employment, and that it resulted in a sudden, identifiable, structural or mechanical change to your body.',
               'Notice: give your employer written notice of the accident within 30 days, although exceptions exist.',
               `Filing: ${DEADLINE} File it even if the insurance company is already paying you.`,
