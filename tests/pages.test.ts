@@ -127,6 +127,8 @@ test('LegalService data: both offices, phone, appointment hours, areas, nothing 
   const text = JSON.stringify([ls, ...offices]);
   assert.doesNotMatch(text, /geo|latitude|longitude|aggregateRating|reviewCount|ratingValue|sameAs|knowsLanguage|availableLanguage|Spanish/i);
   assert.match(text, /by appointment only/i);
+  // By appointment only, so no opening hours.
+  assert.doesNotMatch(text, /openingHours/);
 });
 
 test('Bryn’s Person data is on his bio page and on posts he wrote, with his career facts', opts, () => {
