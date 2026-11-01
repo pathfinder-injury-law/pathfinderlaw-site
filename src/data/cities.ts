@@ -66,7 +66,7 @@ export const cities: City[] = [
       {
         h: 'Workers’ Comp in Richmond: The Rules That Matter First',
         body: [
-          'A Richmond claim follows the same Virginia Workers’ Compensation Act as a claim anywhere else in the state. The first few rules decide whether you get anything at all:',
+          'A Virginia workers’ comp claim from Richmond follows the same rules as a claim anywhere else in the state. The first few rules decide whether you get anything at all:',
           {
             list: [
               `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
@@ -140,309 +140,762 @@ export const cities: City[] = [
   },
 
   // ------------------------------------------------------------ Powhatan County
+  // Rewritten Nov 1, 2026 (city page batch D, #16). Kept shorter: 65 impressions in 16 months. Research and sources:
+  // "SEO Audit - 10-30-26/35d - Powhatan County Page Research.md" (move into "SEO Audit - 10-30-26" as needed).
+  // Near the Ridge Road office, so no "we do not have an office" line (brief, item 1). No drive time given.
+  // Legal wording: shared constants (EMPLOYER_THRESHOLD, COMPENSABLE, NOTICE, DEADLINE, HEARING, TWO_THIRDS, DEATH)
+  // and reworded checked lines. One new legal sentence, marked // VERIFY below (state employees, § 65.2-101).
+  // Audit fixes: "trusted" description, "reserve the right," "Among these include," and the "benefits" link that
+  // opened the claim form are gone. The coverage link now says what it opens.
   {
     path: '/powhatan-county-workers-comp-lawyer/',
     name: 'Powhatan County',
-    h1: 'Powhatan County Workers’ Compensation Attorney',
-    title: "Powhatan County Workers' Comp Claims & Lawyer",
+    h1: 'Powhatan County Workers’ Comp Lawyer',
+    title: "Powhatan County, VA Workers' Comp Lawyer | Pathfinder",
     description:
-      "Pathfinder Injury Law is your trusted Powhatan County workers’ comp lawyer. Let's discuss your eligibility and evidence - call 804-505-0633.",
+      'Hurt on the job in Powhatan County? We represent only injured workers in Virginia comp claims. Meet in Richmond or by phone or video. Free consult.',
     intro: [
-      `When you’re injured on the job, you have the right to pursue compensation. A [Workers’ Comp lawyer](${WC}) in Powhatan County can help.`,
-      'Injured workers can be entitled to disability benefits, reimbursement for medical expenses, and more. A Powhatan County Workers’ Comp lawyer can help ensure your rights are upheld.',
+      'Hurt on the job in Powhatan County, or at a job in Chesterfield, Henrico, or Richmond that you drive to from home? Virginia workers’ comp can pay for your medical care and part of your lost pay if your accident meets the legal test and your claim is filed in time. Pathfinder Injury Law represents only injured workers, and only in Virginia workers’ compensation claims.',
+      'We are nearby. Our office is at 8010 Ridge Road, Suite A, in Richmond, and we meet by appointment. If you’d rather not make the trip while you heal, we can talk by phone or video instead. The first consultation is free: call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Common Workplace Injuries in Powhatan County',
+        h: 'Which Rules Decide a Claim?',
         body: [
-          'Suffering an injury at work could be more common than most people realize. If you’ve sustained an injury at work in Powhatan County, then you’re surely familiar with the worries about how you’ll pay for medical treatment and how you’ll support yourself and your family while you’re away from work.',
-          'Workplace injuries can range from mild, to severe, to fatal. Some, such as a broken bone, are able to recover with time. Others, such as traumatic brain injury, could leave you permanently unable to work. Sadly, on other occasions, a family could lose their main source of income when their loved one dies while performing a job-related function.',
-          'For that reason, a wide variety of [benefits](/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/) are available to workplace accident victims and their families. These include:',
+          'Four rules come up in almost every case:',
           {
             list: [
-              'Medical benefits',
-              'Temporary total disability',
-              'Temporary partial disability',
-              'Permanent partial disability',
-              'Death benefits',
-              'And others, including vocational rehabilitation (which can be a benefit, but an employer can also use it against you, so talk to a lawyer first)',
+              EMPLOYER_THRESHOLD,
+              `You don’t have to prove your employer was at fault, but ${COMPENSABLE}.`,
+              NOTICE,
+              DEADLINE,
             ],
           },
-          `Regardless of the [type of accident you suffer](/causes-of-on-the-job-shoulder-injuries/) and/or the benefits for which you apply, ${COMPENSABLE}.`,
+          `Our guide to [filing a workers’ comp claim](${HOW_TO_FILE}) walks through each step.`,
         ],
       },
       {
-        h: 'Filing a Workers’ Comp Claim in Powhatan County',
+        h: 'Which Jobs Lead to Injuries Here?',
         body: [
-          'Some basic steps will need to be taken after your injury in order to increase your chances of being awarded Workers’ Compensation benefits. For starters, notifying your supervisor or employer as soon as possible is advisable.',
-          `${NOTICE} Failing to do so could affect your ability to recover benefits.`,
-          'Before sending off your official claim form, you’ll also need to make sure that the claims you’re making in the form are well substantiated by the evidence. Sadly, many Workers’ Compensation insurance companies put the company’s bottom line ahead of the needs of accident victims.',
-          'One way to ensure that the claims in your Workers’ Compensation application are backed up by solid evidence is to take photographs of the accident site and your injuries. If possible, make sure to take pictures of faulty or broken equipment at the site before you leave the premises so that evidence isn’t later covered up by your employer.',
-          'Finally, consulting a trusted doctor and a Workers’ Comp lawyer in Powhatan County can help you get your injuries on file.',
+          `Construction employs more people in the county than any other industry, more than one job in five, according to the state’s Virginia Works community profile. Two steel erection companies, Mid Atlantic Steel Erectors and Trinity Steel Erection, are on the profile’s list of the county’s 50 largest employers, along with Colony Construction, Layman Brothers Insulation, and tree companies such as Arbor Pro of Virginia. That work brings falls from steel, ladders, and roofs, loads dropped from overhead, and saw and chipper injuries. More on [construction accidents](/virginia-construction-accident-lawyer/).`,
+          // VERIFY: new legal sentence ("State employees are covered ..."), based on Va. Code § 65.2-101 (definition of
+          //   "Employee," subdivision 1 f: "all officers and employees of the Commonwealth"). Send to the authority check.
+          `Deep Meadow Correctional Center is second on the same list, behind only the school board. Most state employees are covered by Virginia workers’ comp too: the Act’s definition of “employee” includes officers and employees of the Commonwealth ([Va. Code § 65.2-101](${CODE}title65.2/chapter1/section65.2-101/)). Corrections officers can be hurt restraining an inmate, breaking up a fight, or falling on stairs or wet floors.`,
+          'Most people who live in Powhatan work somewhere else. Census commuting figures in the same profile show Chesterfield, Henrico, and Richmond as the top destinations. We handle claims from those jobs too; see our [Chesterfield County page](/chesterfield-county-workers-comp-lawyer/).',
         ],
       },
       {
-        h: 'Contact a Workers’ Comp Lawyer in Powhatan County',
+        h: 'Who Decides If the Insurance Company Says No?',
         body: [
-          'You’ve been injured at work, and you may be due compensation. At [Pathfinder Injury Law](/), we help clients like yourself every day seek the Workers’ Compensation benefits they may be due.',
-          'Call {phone} or [fill out the form below](#contact) to schedule your free case overview with a Powhatan County Workers’ Comp lawyer from Pathfinder Injury Law.',
+          `${HEARING} The Commission’s headquarters, at 333 E. Franklin St. in Richmond, is on its list of hearing and mediation locations. The list names no location in Powhatan and does not say which cases are heard where ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)). The Commission’s rules provide for hearings by video over Webex too ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). Read [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Benefits Can You Get?',
+        body: [
+          {
+            list: [
+              `Lost wages: ${TWO_THIRDS}`,
+              'Medical care that is reasonable, necessary, and causally related to the accident.',
+              'Permanent partial disability for a lasting loss of use of certain body parts, based on a doctor’s rating.',
+              `For a family after a death on the job: ${DEATH}`,
+            ],
+          },
+          `Pain and suffering is not part of workers’ comp. See [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What to Bring',
+        body: [
+          'Medical records and bills, anything your employer gave you (the accident report, the list of doctors), and any letters from the insurance company or the Commission. If we meet by video, you can send them ahead. Nothing is required before you call.',
+        ],
+      },
+      {
+        h: 'Call About Your Claim',
+        body: [
+          'We handle only Virginia workers’ compensation claims. Call {phone} or use the [form on this page](#contact). For the wider area, see our [Richmond workers’ comp page](/richmond-workers-comp-lawyer/).',
         ],
       },
     ],
   },
-
   // ------------------------------------------------------------- Hanover County
+  // Rewritten Nov 1, 2026 (City Page Rewrite Brief, file 30, batch B #7; model: the Harrisonburg / Shenandoah Valley entry).
+  // Research and sources: "SEO Audit - 10-30-26/33c - Hanover County Page Research.md" (move into "SEO Audit - 10-30-26" with the batch).
+  // Legal wording: shared constants, the Harrisonburg model's checked wording (25a), and the "other benefits"
+  // bullet from the Richmond page. The old hearing-loss example is gone (audit item 8: it read as occupational disease).
+  //
+  // Near the Ridge Road office, so no "We do not have an office" line. The intro gives the office address and the
+  // roads into the Richmond area in general terms. No drive time is stated (none checked).
+  //
+  // No federal line: the Virginia Works profile shows federal government at 177 jobs of 58,422, and no federal
+  // or railroad employer in the 50 largest. (CSX runs through Ashland, but it is not on the list.)
+  //
+  // VERIFY (new wording; send to the authority check before Bryn sees it):
+  //  H1. Employer groupings: "Construction and utility work: Overland Contracting, MasTec Utility Services, and
+  //      Penn Line." The Virginia Works list gives names only ("Penn Line Corporation" as printed). Penn Line's
+  //      line and utility work is from company job listings; Overland and MasTec are grouped by their names.
+  //  H2. "Electrical shocks and burns" in the injury list: sudden injuries, but confirm Bryn wants electrical injury named.
+  //  H3. Proof paragraph (new wording, same point as the model's): "the insurance company may argue there was no
+  //      single identifiable incident, or that the problem is wear and tear."
   {
     path: '/hanover-county-workers-comp-lawyer/',
     name: 'Hanover County',
-    h1: 'Hanover County Workers’ Compensation Attorney',
-    title: "Hanover County Workers' Compensation Lawyer | Pathfinder Injury Law",
+    h1: 'Hanover County Workers’ Comp Lawyer',
+    title: "Hanover County, VA Workers' Comp Lawyer | Pathfinder",
     description:
-      'Pathfinder Injury Law is a proven choice when you need a Hanover County workers’ comp lawyer. Call our trusted law office at 804-505-0633.',
+      'Hurt at work in Hanover County, Mechanicsville, or Ashland? We handle only Virginia workers’ comp. Meet at our Ridge Road office or by phone or video.',
     intro: [
-      'An accident at work can have devastating consequences, but benefits could be available to you. Let a Workers’ Comp lawyer in Hanover County review your case.',
-      'When you’ve been injured on the job, you know that taking action is the only way to protect your rights. A Hanover County Workers’ Comp lawyer can help fight for the compensation you need.',
+      'Hurt at work in Mechanicsville, Ashland, or anywhere else in Hanover County? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
+      'You don’t have to go far to meet with us. Our main office is at 8010 Ridge Road, Suite A, in Richmond. From most of the county, that’s a drive south on I-95, I-295, or one of the U.S. routes into the Richmond area, not a trip across the state. We meet there by appointment, and we can meet by phone or video if driving is hard while you recover. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'What Are Some Causes of Workplace Accidents in Hanover County?',
+        h: 'Which Workers’ Comp Rules Matter First?',
         body: [
-          'Contrary to popular belief, [workplace accidents](/how-faulty-equipment-causes-workplace-injuries/) can occur in any industry, or at any type of job. Some examples include:',
+          'A Virginia workers’ comp claim from Mechanicsville or Ashland follows the same rules as a claim from anywhere else in the state. These rules decide whether you get anything at all:',
           {
             list: [
-              'A grocery store shelf stocker slips on a wet floor and breaks a bone',
-              'A construction worker’s foot is crushed by a falling pallet of bricks',
-              'An airport runway worker accidentally loses their hearing due to a freak accident',
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
             ],
           },
-          'Workplace accidents aren’t always caused by the negligence of a fellow colleague or a person’s employer; sometimes, accidents just happen. In this sense, Workers’ Compensation is a benefit to both employee and employer.',
-          `An injured employee won’t be required to prove that someone else is at fault in order to receive Workers’ Compensation benefits. They do have to show that the injury [arose out of and in the course of their employment](${CODE}title65.2/chapter1/section65.2-105/) and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to the body. Similarly, the Workers’ Compensation system also insulates employers from the negative impact of a costly personal injury lawsuit.`,
-          'That being said, Workers’ Compensation doesn’t always work how it should. Sadly, many of the insurance companies offering Workers’ Compensation benefits are motivated more strongly by the desire to protect their own profit margins than to help direct benefits into the hands of workers that most deserve them.',
-          'That’s why many injured workers feel compelled to retain the services of an experienced Workers’ Compensation lawyer in Hanover County to handle their case for them.',
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'Steps to Follow If You’ve Been Injured at Work in Hanover County',
+        h: 'What Jobs and Injuries Are Common in Hanover County?',
         body: [
-          'When you’re injured at work, it’s normal to feel overwhelmed, discombobulated, or just confused. If you haven’t lost consciousness, these are the steps you’ll want to take in the aftermath of your Hanover County workplace accident:',
+          'Retail employs more people in the county than any other industry, followed by health care and construction, according to the state’s Virginia Works community profile. The county’s public schools and Bon Secours top the state’s list of the largest employers. Others on that list include:',
           {
             list: [
-              'Check to Make Sure You’re OK: Even injuries that appear minor can have an impact. If you’re bleeding, feel lightheaded, or have a broken bone, you may need immediate medical attention.',
-              'Document Your Injuries and Surroundings: Take pictures of everything. It helps lend credibility to your claim.',
-              `[Notify Your Employer](${CODE}title65.2/chapter6/section65.2-600/) of Your Injuries: If you’ve been taken immediately to the hospital, odds are good that your supervisor is already aware. Regardless, the Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist, and failing to do so could affect your ability to receive benefits.`,
+              'Warehouse and delivery work: Amazon Fulfillment Services and Amazon Logistics, Federal Express, Supervalu Wholesale Operations, and Owens & Minor Distribution',
+              'Stores: Walmart, Wegmans, Food Lion, Kroger, and The Home Depot',
+              'Kings Dominion, the amusement park in Doswell',
+              // VERIFY H1
+              'Construction and utility work: Overland Contracting, MasTec Utility Services, and Penn Line',
+              'Public employers: the county government and Randolph-Macon College in Ashland',
+            ],
+          },
+          'Work like this leads to sudden injuries, for example:',
+          {
+            list: [
+              'Forklift, pallet jack, and conveyor accidents in warehouses and distribution centers',
+              'Falls from loading docks, ladders, and stockroom shelving',
+              'Falls from roofs, scaffolds, and bucket trucks on construction and utility jobs',
+              // VERIFY H2
+              'Electrical shocks and burns',
+              'Broken bones from a fall or a falling load',
+              'Slips and falls on wet floors in stores, kitchens, and hospitals',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Crashes while driving a delivery route or a work truck',
+            ],
+          },
+          // VERIFY H3
+          'The kind of injury changes how hard the claim is to prove. A broken wrist from a fall off a loading dock happens at one moment, and the emergency room records it that day. A shoulder or back injury from lifting is harder: the insurance company may argue there was no single identifiable incident, or that the problem is wear and tear. If you can, write down the exact task, the time, and the name of the supervisor you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
+        ],
+      },
+      {
+        h: 'Where Would a Dispute Over My Claim Be Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its headquarters is at 333 E. Franklin St. in downtown Richmond, and the Commission lists it as both a hearing location and a mediation location. To the north, it also lists a hearing location at 9113 Courthouse Rd. in Spotsylvania ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              'Other benefits in some cases, including vocational rehabilitation and home or vehicle modifications.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/) and [how benefits are calculated](${WC}how-is-workers-comp-calculated-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to Our Office?',
+        body: [
+          'Bring what you have to Ridge Road, or send it ahead if we meet by phone or video. Nothing here is required to call us.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
             ],
           },
         ],
       },
       {
-        h: 'Contact a Workers’ Comp Lawyer in Hanover County',
+        h: 'Do You Take Cases From Ashland, Mechanicsville, and the Rest of the County?',
         body: [
-          'You’ve been injured at work. You may want an empathetic lawyer who’s familiar with the laws surrounding Workers’ Compensation to help with your claim. At Pathfinder Injury Law, we’re dedicated to standing up for injured workers, and can help you with your case, too.',
-          'Call {phone} if you’re ready to schedule a free, no-hassle case review with a Hanover County Workers’ Comp lawyer from Pathfinder Injury Law.',
+          'Yes. We take cases from Ashland, Mechanicsville, Atlee, Doswell, Montpelier, Beaverdam, and every other part of the county, and from across Virginia. Nearby, see our [Richmond](/richmond-workers-comp-lawyer/), [Chesterfield County](/chesterfield-county-workers-comp-lawyer/), and [Powhatan County](/powhatan-county-workers-comp-lawyer/) pages.',
+          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We’ll point you to a lawyer who does.',
+        ],
+      },
+      {
+        h: 'Talk to Us About Your Workers’ Comp Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // -------------------------------------------------------- Chesterfield County
+  // Rewritten Nov 1, 2026 (city page batch C, #10). Research and sources:
+  // "SEO Audit - 10-30-26/34b - Chesterfield County Page Research.md" (move into "SEO Audit - 10-30-26" as needed).
+  // Near the Ridge Road office, so no "we do not have an office" line (brief, item 1). No drive time given.
+  // Legal wording: the Harrisonburg model's checked wording (25a), shared constants, and the doctor-panel
+  // sentence checked in 17a. No new legal sentences on this page, so no // VERIFY lines in the text.
+  // The Defense Department is third on the county's largest-employer list, so the file 9 federal line was added.
+  // Audit fixes: the "Virtually" typo, "passionate", and "Chesterfield County ... insurance companies" are gone.
   {
     path: '/chesterfield-county-workers-comp-lawyer/',
     name: 'Chesterfield County',
     h1: 'Chesterfield County Workers’ Comp Lawyer',
-    title: "Chesterfield County Workers' Compensation Claims & Attorney",
+    title: "Chesterfield County, VA Workers' Comp Lawyer | Pathfinder",
     description:
-      "Need help navigating a work injury in Chesterfield County? The passionate workers' comp team at Pathfinder Injury Law can help you.",
+      'Hurt at work in Chester, Midlothian, or Chesterfield County? We handle only Virginia workers’ comp. Meet in Richmond or by video. Free consultation.',
     intro: [
-      'Living with the aftermath of your workplace injury can be tough. You don’t have to go it alone. A Workers’ Comp lawyer in Chesterfield County can help you take on the insurance company.',
-      'When you’re injured at work, both full and partial disability benefits could be on the table. Need some help getting started? Contact a Chesterfield County Workers’ Comp Lawyer.',
+      'Hurt at work in Chester, Midlothian, or anywhere else in Chesterfield County? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
+      'Our office is close: 8010 Ridge Road, Suite A, in Richmond. We meet there by appointment, and we can meet by phone or video if the trip is hard while you recover. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Investigating Your Workplace Accident in Chesterfield County',
+        h: 'What Are the First Rules for a Workers’ Comp Claim?',
         body: [
-          `Workers’ Compensation benefits help injured workers get support following an accident at their place of employment. Due to the relative frequency of these types of accidents, ${EMPLOYER_THRESHOLD.replace(/^V/, 'v')}`,
-          `[Workers’ Compensation benefits](${CODE}title65.2/chapter5/) aren’t dependent on proving fault in order to be awarded. ${COMPENSABLE.charAt(0).toUpperCase()}${COMPENSABLE.slice(1)}.`,
-          'Unfortunately, many Chesterfield County Workers’ Compensation insurance companies will still seek to avoid paying injured workers fair compensation. Insurance companies are businesses like any other. They are motivated by a desire to protect the company’s bottom line. In order to receive the benefits you need, then, you’ll have to clearly establish the facts of your case.',
-          'Taking pictures of any injuries and the site of the work accident in question can help build your case. Going to a doctor to officially get your injuries on file can also strengthen your argument. Finally, ensuring that all forms have been properly filed by the respective deadlines will also be vital. If you’re unsure how to proceed, a workers comp lawyer in Chesterfield County could help.',
+          'A Virginia workers’ comp claim from Chester, Midlothian, or Bon Air follows the same rules as a claim from anywhere else in the state. These rules decide whether you get anything at all:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'The Workers’ Comp Benefits Available to You in Chesterfield County, Virginia',
+        h: 'What Jobs and Injuries Are Common in Chesterfield?',
         body: [
-          'In the state of Virginia, various types of Workers’ Compensation benefits can be available to injured workers. Depending on the nature of your accident, these could include:',
+          'Retail and health care are the county’s two largest industries, with close to 20,000 workers each, and transportation and warehousing comes third, according to the state’s Virginia Works community profile. The profile’s list of the 50 largest employers includes:',
           {
             list: [
-              'Medical benefits',
-              'Temporary partial or total disability',
-              'Permanent partial disability',
-              'Death benefits',
+              'Warehouse and delivery: Amazon Fulfillment Services, Amazon Logistics, UPS, and Federal Express',
+              'Health care: Bon Secours, HCA Virginia, and West End Orthopaedic Clinic',
+              'Stores: Walmart, Kroger, Food Lion, The Home Depot, and Lowe’s',
+              'Construction and industrial contractors: Atlantic Constructors, Whiting-Turner, and Industrial Turnaround Corp',
+              'Manufacturing: DuPont Specialty Products, Hill Phoenix, and LEGO Manufacturing Richmond',
+            ],
+          },
+          'Sudden injuries we see from work like this include:',
+          {
+            list: [
+              'Back and shoulder injuries from one specific lift: a heavy box off a conveyor, a tote into a van, a patient in a bed',
+              'Falls from loading docks, ladders, and the back of delivery trucks',
+              'Forklift and pallet jack accidents',
+              'Crashes while driving a delivery van or truck for work',
+              'Slips on wet floors in stores, kitchens, and hospital hallways',
+              'Falls and crush injuries on construction and plant shutdown jobs',
+            ],
+          },
+          'Warehouse back injuries are among the hardest to prove. The insurance company may say the pain built up over weeks of lifting, or that your spine was already worn. Note the package or patient you were moving, the time, and the person you told, and give the first doctor you see the same account.',
+          'More on [car crashes while working](/car-accident-at-work-in-virginia/), [construction accidents](/virginia-construction-accident-lawyer/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
+        ],
+      },
+      {
+        h: 'Where Are Workers’ Comp Disputes Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its headquarters is across the river in Richmond at 333 E. Franklin St., and the Commission lists that address as both a hearing location and a mediation location. It lists no hearing location in the county itself ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will. Your employer must offer a panel of at least three doctors, and you choose one.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring whatever you have. None of it is required before you call.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
             ],
           },
         ],
       },
       {
-        h: 'Deadline for Taking Workers’ Comp Action in Chesterfield County',
+        h: 'Do You Take Cases From the Rest of the County?',
         body: [
-          `${NOTICE} Keep in mind that if you’ve been injured and immediately taken to the hospital by your employer, they may already be informed.`,
-          'Otherwise, failing to formally notify your supervisor of your injuries within thirty days could put your claim at risk.',
-          `Similarly, [your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident](${CODE}title65.2/chapter6/section65.2-601/), although exceptions apply. If you’re worried about the impact of the deadline on your case, an experienced Workers’ Compensation lawyer can help.`,
+          'Yes. We take cases from Chester, Midlothian, Bon Air, Ettrick, Chesterfield Court House, Brandermill, Enon, and the rest of the county. Nearby, see our pages for [Richmond](/richmond-workers-comp-lawyer/), [Powhatan County](/powhatan-county-workers-comp-lawyer/), and [Hanover County](/hanover-county-workers-comp-lawyer/).',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026. Added because the Defense Department is on the county's largest-employer list.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
         ],
       },
       {
-        h: 'Contact a Workers’ Comp Lawyer in Chesterfield County Today',
+        h: 'Talk to Us About Your Claim',
         body: [
-          'When it comes to seeking the benefits you may be due following your accident at work, we can review your situation and explain your options. At [Pathfinder Injury Law](/), we work with injured workers of all types to help them seek the compensation they may be due.',
-          'Call {phone} or [fill out the form below](#contact) in order to schedule your free consultation with a Chesterfield County Workers’ Comp Lawyer.',
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // ----------------------------------------------------- Prince William County
+  // Rewritten Nov 1, 2026 (City Page Rewrite Brief, file 30; model: the Harrisonburg / Shenandoah Valley entry).
+  // Research and sources: "SEO Audit - 10-30-26/34a - Prince William County Page Research.md"
+  // (to be filed as "SEO Audit - 10-30-26/3x - Prince William County Page Research.md").
+  // Dropped from the live page (audit flags): "standing by", "Accidents without fault" as a "common factor",
+  // "trusted doctor", "passion for defending". The doctor-panel sentence is not carried over (the bring list
+  // mentions "the list of doctors you were given"; the hub covers the panel).
+  //
+  // VERIFY items (go to the authority check before Bryn sees the page):
+  //  1. Federal section: "On a military base, jobs at exchange stores and in morale, welfare, and recreation
+  //     programs can fall under a different system too." New legal sentence. Basis: 5 U.S.C. § 8171 (Longshore Act coverage for employees of
+  //     nonappropriated fund instrumentalities described in 5 U.S.C. § 2105(c), which names the exchanges and
+  //     armed-forces MWR-type instrumentalities). Federal law is not named on the page, per file 9.
+  //  2. Jobs list: "Building trades and paving" is our label, read from the employer names (F. H. Furr Plumbing,
+  //     Heating & Air Conditioning; Superior Paving Corporation; Helix Electric). The profile gives no industries.
+  //  3. Jobs list: "Utilities" label for Northern Virginia Electric Cooperative and the Prince William County Service
+  //     Authority is read from the names; the profile gives no industries.
+  //  4. Proof paragraph: the model's checked sentence with a new example ("A fall from a ladder or a cut from a
+  //     saw ..." replaces "A knife cut ...").
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
   {
     path: '/prince-william-county-workers-comp-lawyer/',
     name: 'Prince William County',
     h1: 'Prince William County Workers’ Comp Lawyer',
-    title: 'Prince William Workers Compensation Attorney | Work Claims',
+    title: "Prince William County, VA Workers' Comp Lawyer | Pathfinder",
     description:
-      'Pathfinder Injury Law represents injured workers in Prince William County. Call 804-505-0633 to talk with a workers’ comp lawyer and get started today.',
+      'Hurt on the job in Woodbridge, Manassas, or Gainesville? We handle only Virginia workers’ comp for injured workers. Phone, video, or Richmond. Free consult.',
     intro: [
-      'When you’re injured at work, you may not be aware of the full range of benefits available. When in doubt, a Workers’ Comp lawyer in Prince William County can help you out.',
-      'From documenting your injuries to filing your claim, these are the steps you’ll want to take after a workplace accident. And if you need some additional help, a Prince William County Workers’ Comp lawyer is standing by.',
+      'Injured on the job in Woodbridge, Dale City, Gainesville, or anywhere else along the I-95 and I-66 corridors? Virginia workers’ comp can cover your medical care and replace part of your paycheck, but only when the accident fits the law’s definition and the claim gets filed in time. Pathfinder Injury Law represents injured workers, never employers or insurance companies, and handles nothing but Virginia workers’ compensation.',
+      'We do not have an office in Prince William County. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or send us a message through the contact form.',
     ],
     sections: [
       {
-        h: 'Common Factors in Prince William County Workplace Accidents',
+        h: 'What Rules Decide a Prince William Workers’ Comp Claim?',
         body: [
-          'Workplace accidents aren’t limited to any one industry or profession. Although we associate workplace injuries with occupations using heavy machinery or hazardous materials, an accident can occur in any variety of occupations that happen every day in Prince William County. That being said, some common factors that impact workplace accidents include:',
+          'Every Virginia workers’ comp claim runs under one law, the Virginia Workers’ Compensation Act, whether you were hurt at a store in Woodbridge or on a job site near Haymarket. These are the rules that come up first:',
           {
             list: [
-              'Wet or slippery floors',
-              'Outdated or poorly maintained equipment',
-              'Lack of employee knowledge of proper use of equipment',
-              'Accidents without fault',
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
             ],
           },
-          `The last point highlights the fact that, though sometimes workplace accidents are directly related to another colleague’s or employer’s negligence, freak accidents can happen for which no one is really responsible. This is a distinguishing factor in [Workers’ Compensation law](${CODE}title65.2/): no fault needs to be proven in order for benefits to be awarded.`,
-          'Instead, you do have to show that your injury arose out of and in the course of your employment and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+          `For the paperwork itself, see [how to file a workers’ comp claim](${HOW_TO_FILE}).`,
         ],
       },
       {
-        h: 'What to Do After You’ve Been Injured on the Job in Prince William County',
+        h: 'Where Do People Get Hurt at Work Here?',
         body: [
-          'When you’ve been injured on the job, it’s important that you take the following steps in order to increase your chance of receiving compensation.',
+          'Retail is the largest private industry in the county, with about 20,000 jobs, according to the state’s Virginia Works community profile. Health care (about 19,000 jobs), construction (about 17,000), and restaurants and hotels (about 14,000) come next. Among the 50 largest employers on the state’s list:',
           {
             list: [
-              'Document Everything: Take pictures of the accident site before you leave the premises, and take pictures of your injuries.',
-              'Receive Medical Attention: Going to see a trusted doctor can help get your injuries on file, an important piece of evidence that you’ll need for your Workers’ Compensation claim. Your employer must offer a panel of at least three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.',
-              'Inform Your Supervisor: The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. Failing to do so could affect your ability to receive benefits.',
-              'File Your Claim: Your Workers’ Compensation [claim form](https://workcomp.virginia.gov/forms/claim-form) can be submitted electronically, faxed, or mailed.',
+              'Big stores and groceries: Walmart, Wegmans, Target, Giant Food, The Home Depot, Costco, Food Lion, and Lowe’s',
+              'Health care: Sentara Healthcare',
+              // VERIFY 2: "building trades and paving" is our label, read from the names; the profile gives no industries.
+              'Building trades and paving: F. H. Furr Plumbing, Heating & Air Conditioning, Superior Paving Corporation, and Helix Electric',
+              'Warehouses and food distribution: Amazon Fulfillment Services, Amazon Logistics, and US Foodservice',
+              'Buses: Keolis Transit Services',
+              // VERIFY 3: "utilities" label read from the names; the profile gives no industries.
+              'Utilities: Northern Virginia Electric Cooperative and the Prince William County Service Authority',
             ],
           },
-          'Sometimes, your claim can be delayed or outright rejected. Many injury victims choose to retain the services of an experienced lawyer in those circumstances, due to the complexity of the process.',
+          'Work like this leads to sudden injuries such as:',
+          {
+            list: [
+              'A stocker or cashier who slips on a spill or is hit by merchandise falling from a top shelf',
+              'A plumber, electrician, or HVAC tech who falls from a ladder or through an attic ceiling',
+              'A paving or road crew member struck by a truck or a piece of equipment',
+              'A warehouse worker hurt by a forklift, a pallet jack, or a load that shifts',
+              'A line worker hurt in a fall from a pole or bucket truck, or burned by an electrical arc',
+              'A nursing aide who hurts a back or shoulder catching a falling patient',
+              'A bus driver or delivery driver hurt in a crash on I-95, Route 1, or I-66',
+            ],
+          },
+          // VERIFY 4: the model's checked middle sentence kept; new example; first and last sentences reworded (non-legal).
+          'Not every one of these is equally easy to prove. A fall from a ladder or a cut from a saw happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Make a note of the date, the time, what you were moving, and the name of the person you reported it to.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. See [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
       {
-        h: 'Reach Out to a Workers’ Comp Lawyer in Prince William County',
+        h: 'What If You Work at Quantico or for the Military?',
         body: [
-          'If your Workers’ Comp claim has been rejected, it’s understandable to feel like you’re out of options. But before you decide to call it quits, consider the ways a Workers’ Comp lawyer can help. At [Pathfinder Injury Law](/), we’re motivated by our passion for defending the rights of work-injury victims in Prince William County.',
-          'Call {phone} or [fill out the form below](#contact) to schedule your free consultation with a Prince William County Workers’ Comp lawyer from our firm.',
+          'Part of the county is federal land, including Marine Corps Base Quantico. The U.S. Department of Defense is the third-largest employer on the state’s list, and the profile counts about 7,000 federal government jobs here.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+        ],
+      },
+      {
+        h: 'Where Are Disputes Heard?',
+        body: [
+          `When the parties can’t settle a dispute over a claim, the Virginia Workers’ Compensation Commission decides it ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission has a regional office in Manassas at Sudley Tower, 7900 Sudley Rd., Suite 500, and lists it as an office, a hearing location, and a mediation location. Its Fairfax regional office, at 3020 Hamaker Court, Suite 200, is listed the same way ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission doesn’t publish which cases go to which location. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. If your claim was turned down, start with [what to do after a denial](${DENIALS}) and [how to prepare for a hearing](${WC}how-to-prepare-for-a-virginia-workers-comp-hearing/).`,
+        ],
+      },
+      {
+        h: 'What Can Workers’ Comp Pay For?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Pain and suffering is not part of a workers’ comp claim. Here’s [what Virginia workers’ comp covers](${WC}what-does-workers-comp-cover-in-virginia/), item by item.`,
+        ],
+      },
+      {
+        h: 'What Helps at a First Meeting?',
+        body: [
+          'None of this is needed before you call. If we meet by phone or video, you can email or text us copies afterward.',
+          {
+            list: [
+              'Any papers from the doctor or hospital, including notes that keep you out of work',
+              'Bills you have received for treatment',
+              'The panel of doctors your employer gave you, and any accident report you signed',
+              'Texts or emails with your supervisor about the injury',
+              'Letters from the insurance adjuster or the Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Woodbridge, Manassas, and Gainesville?',
+        body: [
+          'Yes. We take cases from Woodbridge, Dale City, Lake Ridge, Montclair, Dumfries, Triangle, Occoquan, Gainesville, Haymarket, Linton Hall, Nokesville, and the rest of the county, and from the cities of Manassas and Manassas Park. Nearby, see our pages for [Fairfax County](/fairfax-county-workers-comp-lawyer/), [Loudoun County](/loudoun-county-workers-comp-lawyer/), and [Alexandria](/alexandria-workers-comp-lawyer/).',
+        ],
+      },
+      {
+        h: 'Call About Your Prince William Claim',
+        body: [
+          'We handle Virginia workers’ comp claims for injured workers, and nothing else. To talk it through, call {phone} or [send us your questions](#contact).',
         ],
       },
     ],
   },
-
   // ------------------------------------------------------------- Fairfax County
+  // Rewritten Nov 1, 2026 (City Page Rewrite Brief, file 30; model: the Harrisonburg / Shenandoah Valley entry).
+  // Research and sources: "SEO Audit - 10-30-26/32c - Fairfax County Page Research.md" (draft at "SEO Audit - 10-30-26/32c - Fairfax County Page Research.md").
+  // Legal check: not yet run. Send the // VERIFY lines below to the authority check before Bryn sees the page.
+  //
+  // VERIFY list:
+  //  1. "If you work for a private company, including one that holds a government contract, an injury on the job is
+  //     generally a Virginia workers’ comp claim." New legal sentence (section "What If You Work for the Federal
+  //     Government or a Contractor?"). Bryn may prefer to cut it and leave only the file 9 line.
+  //  2. Hitt Contracting called "a construction contractor": the Virginia Works list gives only the name, not the industry.
+  //  3. "Tysons" (the county's 2010 Census map labels it "Tysons Corner"); the other place names match that map.
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+  //
+  // Not used: data centers. The Virginia Works profile does not mention them, so the page does not either.
   {
     path: '/fairfax-county-workers-comp-lawyer/',
     name: 'Fairfax County',
-    h1: 'Fairfax County Workers’ Compensation Attorney',
-    title: 'Fairfax County Workers Comp Claims & Lawyer - Pathfinder Injury Law',
+    h1: 'Fairfax County Workers’ Comp Lawyer',
+    title: "Fairfax County, VA Workers' Comp Lawyer | Pathfinder",
     description:
-      "Pathfinder Injury Law is your trusted Fairfax County workers’ comp lawyer. Let's talk about your options after a work accident.",
+      'Hurt at work in Fairfax County? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond. Free consultation.',
     intro: [
-      `A workplace injury can really set you back. Fortunately, a [Workers’ Comp attorney](${WC}) in Fairfax County can walk you through the steps needed to secure your benefits.`,
-      'Workers’ Comp insurance is required of most employers. That doesn’t mean unlocking your benefits will be easy. Consulting a Fairfax County Workers’ Comp lawyer could help you understand your options.',
+      'Hurt at work in Fairfax County, whether in Tysons, Reston, Springfield, or Centreville? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from every part of Virginia.',
+      'We do not have an office in Fairfax County. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Investigating the Circumstances of Your Fairfax County Work Accident',
+        h: 'What Are the First Rules for a Northern Virginia Workers’ Comp Claim?',
         body: [
-          `When you’ve been hurt on the job, you should know the rights available to you. ${EMPLOYER_THRESHOLD}`,
-          'Workers’ Compensation can help workers that have sustained injuries on the job in Fairfax County receive the benefits they need: compensation for medical bills or specialized treatment, temporary or partial disability, and even death benefits for certain survivors or dependents of workers who die on the job.',
-          'In theory, these benefits should be open to all who need them. Workers’ Compensation law functions differently than personal injury claims, which require proof of fault or negligence to win damages. In order for your accident to qualify for Workers’ Compensation benefits, you do have to show that your injury arose out of and in the course of your employment and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
-          'Unfortunately, Workers’ Comp insurance companies often look out for their own self interests ahead of those of injured workers, and claims that have no business being denied can be rejected. The process can be complicated, however, which is why injured workers often choose to work with an experienced Workers’ Comp lawyer.',
+          'A Virginia workers’ comp claim from Reston or Annandale follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'Deadlines and Appeals for Your Fairfax County Workers’ Comp Decision',
+        h: 'What Jobs and Injuries Are Common Here?',
         body: [
-          `Following your injury, it’s important to make your supervisor aware of your accident as soon as possible. ${NOTICE} Failing to report your injuries within that period could affect your ability to receive benefits.`,
-          `${DEADLINE} If you’re worried about the timeline, a Workers’ Compensation lawyer can help prepare your claim.`,
+          'Professional, scientific, and technical services employ more people than any other industry in the county, according to the state’s Virginia Works community profile. Many of the jobs where sudden injuries happen are in health care (about 76,000 jobs), retail (about 49,000), construction (about 27,000), and transportation and warehousing (about 11,000). The state’s list of the 50 largest employers includes:',
+          {
+            list: [
+              'Health care: Inova Health System and HCA Virginia Health System',
+              'Stores and groceries: Giant Food, Walmart, Wegmans, Target, The Home Depot, Safeway, and Costco',
+              // VERIFY: the profile lists Hitt Contracting by name only; "construction contractor" is not stated there.
+              'Warehouse and construction work: Amazon Fulfillment Services and Hitt Contracting, a construction contractor',
+            ],
+          },
+          'Jobs like these produce sudden injuries, for example:',
+          {
+            list: [
+              'Falls from ladders, scaffolds, and roofs on construction sites',
+              'Being struck by falling tools or materials, or caught in equipment',
+              'Forklift and pallet jack accidents, and falls from loading docks',
+              'Back, shoulder, and knee injuries from a specific lift, such as stocking shelves or moving freight',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Slips and falls on wet floors in stores and kitchens',
+              'Crashes while driving for work, including delivery drivers and technicians traveling to job sites',
+            ],
+          },
+          'Some of these claims are easier to prove than others. A fall from a ladder happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down what you were lifting, when it happened, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
       {
-        h: 'Speak to a Workers’ Comp Lawyer in Fairfax County Today',
+        h: 'What If You Work for the Federal Government or a Contractor?',
         body: [
-          'You’ve been injured, and you may be due compensation. Don’t let the clock run out on your hopes of seeking the benefits you need. At [Pathfinder Injury Law](/), we’re dedicated to helping injury victims get the help they need.',
-          'Call {phone} or fill out the form below to schedule your free consultation with a Fairfax County workers comp lawyer from Pathfinder Injury Law.',
+          'The U.S. Department of Defense is on the state’s list of the county’s largest employers, and the same profile counts about 26,000 federal government jobs here. Many more people work for private companies that do government work.',
+          // VERIFY: new legal sentence (private employers, including government contractors, generally under Virginia comp).
+          'If you work for a private company, including one that holds a government contract, an injury on the job is generally a Virginia workers’ comp claim.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+        ],
+      },
+      {
+        h: 'Where Are Northern Virginia Workers’ Comp Disputes Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Fairfax at Prosperity Plaza, 3020 Hamaker Court, Suite 200, and another in Manassas at Sudley Tower, 7900 Sudley Rd., Suite 500. It lists each of them as an office, a hearing location, and a mediation location ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring what you have. Nothing here is required to call us, and you can send it to us if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Tysons, Reston, and the Rest of the County?',
+        body: [
+          'Yes. We take cases from Tysons, Reston, Herndon, Vienna, Annandale, Springfield, Centreville, Chantilly, Burke, Lorton, the City of Fairfax, and the rest of the county. Nearby, see our pages for [Alexandria](/alexandria-workers-comp-lawyer/), [Loudoun County](/loudoun-county-workers-comp-lawyer/), and [Prince William County](/prince-william-county-workers-comp-lawyer/).',
+        ],
+      },
+      {
+        h: 'Talk to a Workers’ Comp Lawyer About Your Northern Virginia Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // ------------------------------------------------------------- Loudoun County
+  // Rewritten Nov 1, 2026 (City Page Rewrite Brief, file 30; model: the Harrisonburg / Shenandoah Valley entry).
+  // Research and sources: "SEO Audit - 10-30-26/34d - Loudoun County Page Research.md"
+  // (to be filed as "SEO Audit - 10-30-26/3x - Loudoun County Page Research.md").
+  // Dropped from the live page (audit flags): "has you covered", "When a workplace accident gets you down",
+  // the photo/treatment list, and the vocational rehabilitation line (not checked wording).
+  //
+  // VERIFY items (go to the authority check before Bryn sees the page):
+  //  1. Data center section: "If you work for a subcontractor, the company above it on the job can be responsible
+  //     for your workers' comp benefits in some cases (Va. Code § 65.2-302)." New legal sentence (statutory employer).
+  //  2. Jobs list: "Electrical and mechanical contractors" is our label for M.C. Dean, Dynalectric, Rosendin Electric,
+  //     J.E. Richards, Southland Industries, and The Poole & Kent Washington. The profile gives names only.
+  //  3. Jobs list: "Airline and airport work" is our label for United Airlines, Swissport, and Gate Gourmet. The
+  //     profile gives names only. Metro Washington Airports (#23) left out on purpose (interstate-authority coverage
+  //     questions, same reasoning as WMATA on the Fairfax page).
+  //  4. Proof paragraph: the model's checked sentence with a new example ("An electrical burn or a fall from a lift
+  //     ..." replaces "A knife cut ...").
+  //
+  // Data centers: supported by Loudoun County's official page "Data Centers: The Loudoun Story"
+  // (https://www.loudoun.gov/6408/Data-Centers-The-Loudoun-Story, figures "as of March 1, 2026"). The Virginia Works
+  // profile does not mention data centers, so the page cites the county, not the profile, for them.
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
   {
     path: '/loudoun-county-workers-comp-lawyer/',
     name: 'Loudoun County',
     h1: 'Loudoun County Workers’ Comp Lawyer',
-    title: "Loudoun County Workers' Compensation Claims & Attorney",
+    title: "Loudoun County, VA Workers' Comp Lawyer | Pathfinder",
     description:
-      "Need a Loudoun County workers’ comp lawyer? Pathfinder Injury Law has you covered. Let's discuss your Virginia work injury case.",
+      'Hurt at work in Ashburn, Sterling, or Leesburg? We handle only Virginia workers’ comp, for injured workers only. Meet by phone, video, or in Richmond. Free.',
     intro: [
-      'When a workplace accident gets you down, a Workers’ Comp lawyer in Loudoun County can help you get back on your feet.',
-      'After an accident, many workers are unaware of the benefits that may be available to them. A Loudoun County Workers’ Comp lawyer can fight for your right to fair compensation.',
+      'Hurt at work in Ashburn, Sterling, Leesburg, or out toward Purcellville? Virginia workers’ comp can pay your medical bills and part of the wages you lose, but the accident has to meet the law’s test and the claim has to be filed on time. Pathfinder Injury Law handles Virginia workers’ comp claims and nothing else, and we work only for the injured worker.',
+      'We do not have an office in Loudoun County. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone}, or reach us through the contact form.',
     ],
     sections: [
       {
-        h: 'Common Workplace Injuries to Consider',
+        h: 'What Rules Apply to a Loudoun Workers’ Comp Claim?',
         body: [
-          'Workplace injuries can be debilitating, discouraging, and life changing. Seemingly overnight, you could go from enjoying the life you’re accustomed to, to struggling with the basic aspects of getting around and going to work.',
-          'Work injuries are common enough that Virginia requires most employers to purchase Workers’ Compensation insurance. Some of the more frequent work injuries could include:',
+          'A data center electrician in Ashburn and a cook in Leesburg are under the same state law, the Virginia Workers’ Compensation Act. These rules decide most claims before anything else does:',
           {
             list: [
-              'Broken bones from a slip- or trip-and-fall',
-              'Amputation of fingers or limbs from heavy equipment',
-              'Injuries related to the operation of workplace vehicles, including traumatic brain injury',
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
             ],
           },
-          'Sometimes, Loudoun County workplace injuries can even result in the death of your loved one. For this reason, death benefits are just one of the range of benefits that could potentially be available to you as the family member or dependent of a deceased worker. In other cases, benefits such as medical payments, disability benefits, or even vocational rehabilitation could be awarded. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first.',
+          `Ready to start? Read [how to file a workers’ comp claim](${HOW_TO_FILE}).`,
         ],
       },
       {
-        h: 'What to Do If You’ve Been Injured on the Job in Loudoun County',
+        h: 'What Is Data Center Work Like Here?',
         body: [
-          'The nature of your accident will impact the steps you take following your accident. Perhaps you’ve suffered a blow to the head and you’ve passed out. In such a case, it’s likely that your supervisor will already be informed of your injuries.',
-          'If you’ve been injured and are able, try to capture as many images as possible of the details of your injury. This could include taking pictures of your injuries, seeking medical treatment as soon as possible, and getting the testimony of a colleague who witnessed your accident.',
+          'As of March 2026, the county counts about 233 data center buildings, either built or under construction, and it issued building permits for more than 10 million square feet of new data center space in 2025 alone ([county figures](https://www.loudoun.gov/6408/Data-Centers-The-Loudoun-Story)). Every one of those buildings is a construction site before it is a data center.',
+          'The injuries on those sites tend to be sudden and serious:',
+          {
+            list: [
+              'Falls from scissor lifts, ladders, and steel',
+              'Electrical shocks and arc flash burns',
+              'Being struck by a crane load, a falling tool, or a backing truck',
+              'Hands and fingers crushed while setting heavy equipment',
+              'Back and shoulder injuries from one specific pull on a cable or one specific lift',
+            ],
+          },
+          'Big projects often have several layers of contractors, and it isn’t always clear which company’s insurance should pay.',
+          // VERIFY 1: new legal sentence (statutory employer, Va. Code § 65.2-302).
+          `If you work for a subcontractor, the company above it on the job can be responsible for your workers’ comp benefits in some cases ([Va. Code § 65.2-302](${CODE}title65.2/chapter3/section65.2-302/)). More on [construction accidents](/virginia-construction-accident-lawyer/).`,
         ],
       },
       {
-        h: 'What Can I Do If My Loudoun County Workers’ Comp Claim Has Been Rejected?',
+        h: 'What Other Jobs Lead to Injuries?',
         body: [
-          'Just because your claim has been rejected doesn’t mean you’re out of options. Workers’ Compensation insurance companies operate like any other business: they’re looking to protect their bottom line.',
-          `${HEARING} Keep in mind that your claim must be on file with the Commission within two years of your date of accident, although exceptions apply.`,
+          'Professional and technical services and construction are the two largest private industries in the county, each with about 25,000 jobs, according to the state’s Virginia Works community profile. Health care, restaurants and hotels, and retail each have 17,000 to 19,000 more, and transportation and warehousing about 13,500. Washington Dulles International Airport sits in the southeast corner of the county ([county visitor bureau](https://www.visitloudoun.org/plan-your-visit/getting-here-and-around/airports/)). The 50 largest employers on the state’s list include:',
+          {
+            list: [
+              // VERIFY 2: "electrical and mechanical contractors" is our label; the profile gives names only.
+              'Electrical and mechanical contractors: M.C. Dean, Dynalectric, Rosendin Electric, J.E. Richards, Southland Industries, and The Poole & Kent Washington',
+              // VERIFY 3: "airline and airport work" is our label; the profile gives names only.
+              'Airline and airport work: United Airlines, Swissport, and Gate Gourmet',
+              'Health care: Inova Health System and Loudoun Medical Group',
+              'Stores and groceries: Walmart, Harris Teeter, Costco, Wegmans, Giant Food, Target, and The Home Depot',
+              'Warehouses and moving: Amazon Fulfillment Services, Amazon Logistics, and J. K. Moving & Storage',
+            ],
+          },
+          'Off the construction site, common sudden injuries include:',
+          {
+            list: [
+              'Ramp workers and baggage handlers hurt by a tug, a belt loader, or a heavy bag',
+              'Airline caterers and kitchen staff burned, cut, or hurt in a fall on a wet floor',
+              'Movers hurt carrying furniture down stairs or when a load slips',
+              'Warehouse workers struck by a forklift or a falling pallet',
+              'Nurses and aides hurt moving a patient',
+              'Crashes while driving for work on Route 7, Route 28, or the Greenway',
+            ],
+          },
+          // VERIFY 4: the model's checked middle sentence kept; new example; first and last sentences reworded (non-legal).
+          'Some injuries are harder to prove than others. An electrical burn or a fall from a lift happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Keep a record of what you lifted, the time it happened, and who you reported it to.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. See [car accidents at work](/car-accident-at-work-in-virginia/) and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
       {
-        h: 'Consult a Workers’ Comp Lawyer in Loudoun County',
+        h: 'Where Would a Dispute Be Heard?',
         body: [
-          'When it comes to receiving fair compensation for your workplace injuries, don’t let an insurance company refuse you the coverage you may be due. At our firm, we take pride in the work we do on behalf of injured Virginia workers.',
-          'If you need help with your case, a dedicated Loudoun County Workers’ Comp lawyer from [Pathfinder Injury Law](/) can help. Call {phone} or fill out the form on this page to schedule a free consultation.',
+          `Disputes over a claim that the parties don’t settle are decided by the Virginia Workers’ Compensation Commission ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission has no location in this county. Its two nearest regional offices are in Fairfax (Prosperity Plaza, 3020 Hamaker Court, Suite 200) and Manassas (Sudley Tower, 7900 Sudley Rd., Suite 500), and it lists both as hearing and mediation locations ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `That list doesn’t say how cases are assigned to locations. The Commission’s rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do after a denial](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Benefits Are Available?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `There is no payment for pain and suffering in a workers’ comp claim. The full rundown is in [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should You Gather Before We Talk?',
+        body: [
+          'You can call without any of it. Whatever you have, you can send later by email or text.',
+          {
+            list: [
+              'Discharge papers, doctors’ notes, and work restrictions',
+              'Any medical bills or collection letters',
+              'Your employer’s accident report and the panel of doctors it gave you',
+              'The name of the general contractor and your own employer, if you worked on a construction site',
+              'Mail or email from the insurance company or the Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Ashburn, Sterling, and the Western Towns?',
+        body: [
+          'Yes. We take cases from Ashburn, Sterling, Leesburg, South Riding, Brambleton, Lansdowne, Purcellville, Round Hill, Hamilton, Lovettsville, Hillsboro, Middleburg, Aldie, and the rest of the county. Nearby, see our pages for [Fairfax County](/fairfax-county-workers-comp-lawyer/) and [Prince William County](/prince-william-county-workers-comp-lawyer/).',
+          'The state’s profile counts about 6,400 federal government jobs in the county, and its commuting figures show thousands of residents working in Washington, D.C., and Maryland.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+        ],
+      },
+      {
+        h: 'Get Answers About Your Loudoun Claim',
+        body: [
+          'We represent injured workers in Virginia workers’ comp claims and take no other kind of case. Call {phone}, or [tell us what happened](#contact) and we’ll get back to you.',
         ],
       },
     ],
   },
-
   // ---------------------------------------------------------------- Harrisonburg
   // Rewritten Nov 1, 2026 as the firm's Shenandoah Valley page. Research and sources:
   // "SEO Audit - 10-30-26/25 - Shenandoah Valley Page Research.md"; legal check: "25a - Valley Page Authority Check.md".
@@ -462,7 +915,7 @@ export const cities: City[] = [
       {
         h: 'What Are the First Rules for a Valley Workers’ Comp Claim?',
         body: [
-          'A claim from Harrisonburg or Staunton follows the same Virginia Workers’ Compensation Act as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
+          'A Virginia workers’ comp claim from Harrisonburg or Staunton follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
           {
             list: [
               `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
@@ -564,437 +1017,1334 @@ export const cities: City[] = [
   },
 
   // ------------------------------------------------------------------ Lynchburg
+  // Rewritten Nov 1, 2026 (city page batch D, #13). Research and sources:
+  // "SEO Audit - 10-30-26/35a - Lynchburg Page Research.md" (move into "SEO Audit - 10-30-26" as needed).
+  // Legal wording: shared constants, the Harrisonburg model's checked wording (25a), the doctor-panel
+  // sentence checked in 17a (Nov 1 addendum), and the federal line below.
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+  // VERIFY: Option A's "may fall under a different system" (file 9, question 3) should go to the authority
+  //   check with the rest of file 9 before this page ships.
+  // VERIFY: the mediation sentence in "Where Are Central Virginia Workers' Comp Disputes Decided?" is new
+  //   to the site (source: the Commission's Mediation Services page).
+  // Dropped from the live page (audit file 2): "How to Successfully Appeal ..." and "The reality couldn't be
+  //   more different."
   {
     path: '/lynchburg-workers-comp-lawyer/',
     name: 'Lynchburg',
-    h1: 'Lynchburg Workers’ Compensation Attorney',
-    title: "Lynchburg Workers' Comp Claims & Attorney | Pathfinder Injury Law",
+    h1: 'Lynchburg Workers’ Comp Lawyer',
+    title: "Lynchburg, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      "Need a Lynchburg workers' comp lawyer? Trust the team at Pathfinder Injury Law with your Virginia work injury case.",
+      'Hurt at work in Lynchburg, Bedford, or Amherst? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond.',
     intro: [
-      'Injuries on the job happen, which is why most employers are required to carry a Workers’ Compensation insurance policy. Read on to discover the benefit of consulting a workers comp lawyer in Lynchburg for your claim.',
-      `Often, claims can be delayed, modified, or denied. You may want help seeking the benefits you need. A Lynchburg [workers’ comp attorney](${WC}) can help.`,
+      'Hurt at work in Lynchburg? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from across Central Virginia, including Bedford, Amherst, Campbell, and Appomattox counties.',
+      'We do not have an office in Lynchburg. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Investigating Your Lynchburg Workers’ Comp Claim',
+        h: 'What Are the First Rules for a Workers’ Comp Claim in Central Virginia?',
         body: [
-          'When you’ve been injured on the job, you may not know where to turn next. How do you get compensated for your medical bills related to your accident? What do you do if temporary or permanent disability keeps you out of work?',
-          `In Virginia, [employers are required to carry Workers’ Compensation insurance](https://workcomp.virginia.gov/content/injured-workers) if they have three or more employees regularly in service, although some exceptions apply. Workers don’t need to prove that their employer or anyone else was at fault in order to receive compensation. In theory, this should make these benefits accessible to all who need them. The reality couldn’t be more different, however.`,
-          'Insurance companies, as with any other business, look to protect themselves and their own profits more than any other interest. The sad result of this is that many injured workers have their claims denied or delayed by insurers that should be taking care of them. That’s why, if you’re going to seek the benefits you may be due for your injuries, you need to take swift action.',
-        ],
-      },
-      {
-        h: 'Timeline for Submitting Your Lynchburg Workers’ Comp Claim',
-        body: [
-          `Generally speaking, ${DEADLINE.charAt(0).toLowerCase()}${DEADLINE.slice(1)}`,
-          'That being said, there could be other restrictions in place that impact the timeline for your Lynchburg Workers’ Comp claim. It’s best to seek medical attention and speak to your employer as soon as you’re aware of your injuries.',
-        ],
-      },
-      {
-        h: 'How to Successfully Appeal Your Workers’ Comp Decision in Lynchburg, Virginia',
-        body: [
-          `Often, [Workers’ Compensation claims](${HOW_TO_FILE}) can be rejected. Fortunately, this doesn’t mean that you’re out of options just yet.`,
-          'Workers facing rejected Workers’ Comp claims can take their claim to a hearing before the Virginia Workers’ Compensation Commission.',
-          'Disputing the decision on your case can be difficult, and you might not know how to handle the complexity of Workers’ Compensation laws. For this reason, many injured workers in Lynchburg feel moved to seek the services of an experienced Workers’ Compensation attorney.',
-        ],
-      },
-      {
-        h: 'Talk to a Workers’ Comp Lawyer in Lynchburg Today',
-        body: [
-          'If your Workers’ Compensation claim has been delayed or denied, you may want to take action to [seek the benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/) you may be due. At [Pathfinder Injury Law](/), we take pride in advocating on behalf of injured Virginia workers, and we may be able to help with your claim.',
-          'Ready to speak to a Lynchburg Workers’ Comp lawyer with our firm today? Call {phone} or [fill out the form below](#contact) to schedule your no-hassle, free consultation.',
-        ],
-      },
-    ],
-  },
-
-  // -------------------------------------------------------------------- Suffolk
-  {
-    path: '/suffolk-workers-comp-lawyer/',
-    name: 'Suffolk',
-    h1: 'Suffolk Workers’ Compensation Attorney',
-    title: "Suffolk Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
-    description:
-      'An efficient Suffolk work comp lawyer can help you prepare a successful claim after a work injury. Call Pathfinder Injury Law.',
-    intro: [
-      'After a Suffolk work accident, you may have trouble getting the benefits you’re due for your injuries. Luckily, your Workers’ Comp lawyer can help you recover from the injuries you’ve suffered.',
-      'A day at work can turn into a disaster in an instant. You may have been seriously injured in an accident, and now, you and your family are struggling to recover from the aftermath. You may already be feeling the financial pressure of your situation.',
-      `Luckily, a Suffolk Workers’ Comp lawyer can help. If you’re lost in the middle of your [Workers’ Comp claim](${WC}), a lawyer at Pathfinder Injury Law wants to help you get compensated fairly for your losses.`,
-    ],
-    sections: [
-      {
-        h: 'Am I Eligible for a Suffolk Workers’ Comp Claim?',
-        body: [
-          'Your Suffolk work accident may have left you severely injured, but sadly, that doesn’t mean you’re automatically eligible for Workers’ Comp. You may be concerned that your employer will deny your claim, leaving you to cover the losses you’ve suffered in the accident.',
-          `Luckily, most Virginia workers are covered by Workers’ Compensation. That’s true even if you’re a part-time worker or work for a small company. ${EMPLOYER_THRESHOLD} Even independent contractors may be classified as employees in some cases, so speak with your Workers’ Comp lawyer if you’re worried about your eligibility.`,
-          'That makes it easier to get the help you need after a work accident. You don’t have to prove who was at fault, and you don’t have to accept the losses, either. You can file a claim for your Workers’ Comp benefits and focus on your health.',
-        ],
-      },
-      {
-        h: 'Benefits for Injured Suffolk Workers',
-        body: [
-          'Your Suffolk Workers’ Comp benefits are key to recovering from your work accident. These benefits can cover medical treatment and lost wages, including long-term needs that may not be fixed in a few trips to the doctor.',
-          'Because of this, you need to know what your claim is worth. If you don’t seek a Workers’ Comp lawyer, it’s easy to accept a settlement offer that doesn’t cover all your needs.',
-          'For example, you need to ensure your Workers’ Comp will cover all your medical expenses after a work accident. That’s not just for your medical bills, either. You may need vocational rehabilitation, a prosthesis, or coverage for your travel expenses. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first.',
-          `Workers’ comp can also pay a portion of your missed wages. You still need an income to pay your bills and cover your expenses, and your lawyer can work to help you get it. ${TWO_THIRDS}`,
-        ],
-      },
-      {
-        h: 'Connect with a Workers’ Comp Lawyer in Suffolk, Virginia',
-        body: [
-          'When you’re hurt in a Suffolk work accident, your financial recovery isn’t always easy. You may have some trouble proving you were injured, and your employer’s insurance company may have already denied you your Workers’ Comp.',
-          'Luckily, a lawyer at [Pathfinder Injury Law](/) can help in these situations. Your Suffolk Workers’ Comp lawyer can help you fight for and even appeal your claim. To take advantage of our free consultations with a lawyer, call {phone} or complete the [online contact form](#contact) below.',
-        ],
-      },
-    ],
-  },
-
-  // ----------------------------------------------------------------- Portsmouth
-  {
-    path: '/portsmouth-workers-comp-lawyer/',
-    name: 'Portsmouth',
-    h1: 'Portsmouth Workers’ Compensation Attorney',
-    title: "Portsmouth Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
-    description:
-      "Get the benefits you're entitled to after a Portsmouth work accident with the help of a workers’ comp lawyer. Call Pathfinder today.",
-    intro: [
-      'When you’re suffering after a serious work injury, you may need to contact a Workers’ Comp lawyer in Portsmouth. You have an opportunity to seek the benefits you’re entitled to after your accident.',
-      'When you’re at work, you and your fellow workers may do everything you can do to stay safe. But that doesn’t always stop a work accident from happening. Now, you may have been seriously injured in a work accident, and you can’t work while you’re recovering.',
-      'When this happens, you may be eligible for Workers’ Comp, but that doesn’t always make it easy to get compensated fairly. You may need a lawyer from Pathfinder Injury Law to step in and get the Workers’ Comp benefits you’re due. When you’re ready to seek Workers’ Comp benefits, reach out to a Portsmouth Workers’ Comp lawyer for guidance.',
-    ],
-    sections: [
-      {
-        h: 'How to Seek Workers’ Comp in Portsmouth',
-        body: [
-          `After you’re hurt on the job in Portsmouth, your first step to [Workers’ Comp](${WC}) is to notify your employer of your injuries and seek medical care. Delaying your care could cause even more health problems, and it can cast doubt on your claim. The insurance company may claim you must not have been seriously injured if you waited to seek help.`,
-          `Once you’ve notified your employer, you can file your claim with the Virginia Workers’ Compensation Commission. ${DEADLINE}`,
-          'If you’re denied, don’t panic. You still have a chance to get Workers’ Comp. Your Workers’ Comp lawyer in Portsmouth can review the reason for your denial and represent you in a hearing. They can present your evidence to the [Virginia Workers’ Compensation Commission](https://www.workcomp.virginia.gov/) to dispute the denial of your claim.',
-        ],
-      },
-      {
-        h: 'Workers’ Comp Benefits for Injured Portsmouth Workers',
-        body: [
-          'Your work injury can be difficult and complex, but Workers’ Comp benefits may include reasonable and necessary medical care and part of your lost wages. If you’ve been hurt in a Portsmouth work accident, you may be eligible for some of the following Workers’ Comp benefits:',
+          'A Virginia workers’ comp claim from Central Virginia follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
           {
             list: [
-              'Medical Costs: Recovering physically can be expensive. The insurance company is required to pay your [reasonable, necessary, and causally related medical expenses](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf), including things like hospital bills, prostheses, and travel expenses.',
-              'Wage Replacement: When you’re unable to work, you may need disability benefits to cover part of the income you’re missing. Talk to your Workers’ Comp lawyer about the exact amount you may be eligible for.',
-              `Death Benefits: After losing a loved one to a work accident, you shouldn’t have to worry about how you’ll afford the things you need. ${DEATH}`,
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
+        ],
+      },
+      {
+        h: 'What Jobs and Injuries Are Common in Central Virginia?',
+        body: [
+          'Health care employs more people than any other industry in Lynchburg, more than one worker in five, according to the state’s Virginia Works community profile. Restaurants and stores come next, then manufacturing, at about one job in nine. The state’s list of the largest employers in the city includes:',
+          {
+            list: [
+              'Health care: Centra Health, first on the list, plus Central Virginia Community Services, Westminster Canterbury, and several nursing and rehabilitation centers',
+              'Manufacturers: Delta Star, which builds power transformers, BWXT Advanced Technologies, Frito Lay, United States Pipe and Foundry, C.B. Fleet, and Tessy Plastics',
+              'Colleges: the University of Lynchburg, Randolph College, and Central Virginia Community College',
+              'Stores and delivery: Walmart, Kroger, Target, Food Lion, The Home Depot, and UPS',
+              'Local government: the city and its public schools',
+            ],
+          },
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Jobs like these produce sudden injuries, for example:',
+          {
+            list: [
+              'Nurses and aides hurt lifting or moving a patient',
+              'Hands and fingers caught or crushed in presses, conveyors, and other machinery',
+              'Burns and eye injuries from welding, cutting, grinding, and foundry work',
+              'Being struck by a falling load or a moving forklift',
+              'Slips and falls on wet floors in hospitals, dining halls, kitchens, and stores',
+              'Falls from ladders and loading docks',
+              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Crashes while driving for work',
+            ],
+          },
+          'Some of these claims are easier to prove than others. A burn or a crushed hand happens at one moment and usually leaves a record the same day. A back injury from moving a patient is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down who or what you were lifting, when it happened, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [factory accidents](/virginia-factory-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
+        ],
+      },
+      {
+        h: 'Where Are Central Virginia Workers’ Comp Disputes Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It lists a hearing location in Rustburg, the Campbell County seat, at 732 Village Highway, and a mediation location at 3506 Wards Rd. in Lynchburg. Its nearest regional office is in Roanoke at 3800 Electric Rd., Suite 200, which it lists as both a hearing location and a mediation location ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          // VERIFY: new to the site. Source: https://workcomp.virginia.gov/content/mediation-services
+          'The Commission describes its mediation as voluntary, confidential, and free. The mediators are Commission employees, and either side can ask for mediation to try to resolve a dispute or settle the claim, and it goes forward if both sides agree ([mediation services](https://workcomp.virginia.gov/content/mediation-services)).',
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}) and [how to prepare for a hearing](${WC}how-to-prepare-for-a-virginia-workers-comp-hearing/).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will. Your employer must offer a panel of at least three doctors, and you choose one.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring what you have. Nothing here is required to call us, and you can send it to us if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
             ],
           },
         ],
       },
       {
-        h: 'Contact a Workers’ Comp Lawyer in Portsmouth',
+        h: 'Do You Take Cases From Bedford, Forest, and Amherst?',
         body: [
-          `When you’re hurt in a serious work accident, it can be tough to recover from the injuries you’ve suffered. Worse, your employer’s insurance company may have already [denied your claim](${DENIALS}), putting you in a worse financial position.`,
-          'Luckily, you don’t have to seek Workers’ Comp benefits without help. At [Pathfinder Injury Law](/), we’re here to help you seek out benefits that meet all your needs. Your journey to compensation starts with a Portsmouth Workers’ Comp lawyer. To learn more during a free consultation, reach out by calling {phone} or by completing the [online contact form](#contact) below.',
+          'Yes. We take cases from Forest and the rest of Bedford County, the town of Bedford, Amherst County, Rustburg and the rest of Campbell County, and Appomattox County. The state’s list of the largest employers in Campbell County is led by Babcock & Wilcox and also includes Abbott Laboratories and Georgia-Pacific.',
+          'Farther west, see our [Roanoke workers’ comp page](/roanoke-workers-comp-lawyer/). Farther north, see our [Shenandoah Valley page](/harrisonburg-workers-comp-worker/).',
+        ],
+      },
+      {
+        h: 'Talk to a Workers’ Comp Lawyer About Your Central Virginia Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
-  // ---------------------------------------------------------------- Newport News
+  // -------------------------------------------------------------------- Suffolk
+  // Rewritten Nov 1, 2026 on the Shenandoah Valley model (city page batch D, #14). Research and sources:
+  // "SEO Audit - 10-30-26/35b - Suffolk Page Research.md" (copy into "SEO Audit - 10-30-26" with the batch).
+  // Fixes the audit's flags: "Luckily" (x4) and "efficient ... successful claim" are gone.
+  // Legal wording: shared constants and the Harrisonburg model's checked wording (25a), including the
+  // farm-worker rule (Va. Code § 65.2-101) copied word for word. Sentences marked // VERIFY are new or
+  // reworded legal sentences; send them to the authority check before Bryn sees the page.
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+  // VERIFY: Option A's "may fall under a different system" for shipyard and port workers (file 9, question 3)
+  //   should go to the authority check with the rest of file 9 before this page ships.
   {
-    path: '/newport-news-workers-comp-lawyer/',
-    name: 'Newport News',
-    h1: 'Newport News Workers’ Compensation Lawyer',
-    title: "Newport News Workers' Comp Claims & Attorney",
+    path: '/suffolk-workers-comp-lawyer/',
+    name: 'Suffolk',
+    h1: 'Suffolk Workers’ Comp Lawyer',
+    title: "Suffolk, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      'Pathfinder Injury Law is here to help when you need a Newport News workers’ comp lawyer. Call 804-505-0633 for your 100% free consultation.',
+      'Hurt in a Suffolk, VA warehouse, plant, or field? We handle only Virginia workers’ comp, for injured workers. Free consult by phone, video, or in Richmond.',
     intro: [
-      'If you’re hurt on the job in Newport News, you may be eligible for Workers’ Comp benefits. Talk to your lawyer about your options for a Workers’ Comp settlement.',
-      'When you’re hurt in a work accident, it can put a strain on you, your family, and your future. You need financial aid to help you recover from the injuries you’ve suffered and the time you’re unable to work. Unfortunately, you may have trouble getting everything you need without legal help.',
-      'At Pathfinder Injury Law, we’re here to help you seek the benefits you may be due as you recover. Your Newport News Workers’ Comp lawyer can help you seek out the Workers’ Comp benefits you need, so you can focus on your health and family.',
+      'Hurt in a warehouse, a plant, a store, or a farm field, or on a road crew in Suffolk? Virginia workers’ comp can pay for your medical care and part of the wages you lose while you recover, as long as the accident meets the legal test and the claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
+      'We do not have an office in Suffolk. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Virginia Workers’ Comp Process',
+        h: 'What Has to Be True Before Workers’ Comp Pays?',
         body: [
-          `When you’re injured in a Newport News work accident, you may need to act quickly to get your compensation. [${DEADLINE.slice(0, -1)}](https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf), and the clock starts ticking right after the accident happens.`,
-          'Your first step is to seek medical attention. If you don’t receive medical care, it can be tough to prove you were hurt on the job. Getting medical care now can also protect your future health. Your condition may worsen if you don’t seek treatment.',
-          'Once you’ve been cared for, you need to report your work accident to your employer as soon as possible.',
+          'These rules apply to every Virginia workers’ comp claim, and they come before any question about how badly you’re hurt:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `The filing steps are on our [how to file a workers’ comp claim](${HOW_TO_FILE}) page.`,
         ],
       },
       {
-        h: 'What If My Newport News Workers’ Comp Claim Is Denied?',
+        h: 'Who Are the Big Employers, and What Injuries Come With the Work?',
         body: [
-          'You may have already notified your employer that you’re seeking Workers’ Comp benefits, and you’re ready to relax and focus on healing. Unfortunately, you didn’t receive your benefits in the mail. You instead received a denial letter from the insurance company.',
-          `Luckily, you have options to [dispute the decision and get your Workers’ Comp benefits](${DENIALS}). First, you and your [Workers’ Comp lawyer](${WC}) in Newport News should review the reason for the denial. Your denial can help you determine what evidence you need for your claim, such as exam results or eyewitness statements.`,
-          'After this, you and your Workers’ Comp lawyer can request a hearing with the Virginia Workers’ Compensation Commission. Your lawyer can represent you during your hearing, to help you seek the Workers’ Comp benefits you’re due.',
+          'Transportation and warehousing is the largest industry in the city, with about 10,200 of some 44,500 jobs counted in the third quarter of 2025, according to the state’s Virginia Works community profile. Amazon’s fulfillment and logistics companies are first and second on the state’s list of the largest local employers. The list also includes:',
+          {
+            list: [
+              'Warehouses and distribution: CVN Distribution, Sysco Food Services, and UPS',
+              'Food and drink plants: Hormel Foods, Unilever’s Lipton tea plant, and Massimo Zanetti Beverage',
+              'Road and utility work: VDOT, Bridgeman Civil, Atlantic Constructors, and Tidewater Utility Construction',
+              'Health care: Sentara Healthcare and Bon Secours',
+              'Stores: Walmart, Food Lion, Kroger, Lowe’s, and Harris Teeter',
+            ],
+          },
+          'The U.S. Department of Defense and Mills Marine Ship Repair are on the list too.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'In warehouse, plant, and road work, sudden injuries often look like this:',
+          {
+            list: [
+              'Struck by a forklift, a reach truck, or a falling pallet',
+              'A foot or hand crushed under a load or caught in a conveyor',
+              'A fall from a dock edge, a trailer, or a ladder in the racks',
+              'A shoulder or back hurt in one specific heavy lift',
+              'Cuts and burns on a food or packaging line',
+              'Hit by traffic or equipment in a highway work zone',
+              'A crash while driving a truck or van for work',
+            ],
+          },
+          'Warehouse claims often turn on timing. In a fast-paced job it is easy to keep working through a sudden pull or pop and mention it days later. The insurance company may then say the injury built up over time instead of coming from one identifiable incident. Report it right away, get it looked at, and write down the exact task, the time, and who you told.',
+          `More on [automated warehouse injuries](/automated-warehouse-injuries-what-amazon-workers-need-to-know/), [factory accidents](/virginia-factory-accident-lawyer/), [construction accidents](/virginia-construction-accident-lawyer/), and [car accidents at work](/car-accident-at-work-in-virginia/).`,
         ],
       },
       {
-        h: 'Seek Help from a Workers’ Comp Lawyer in Newport News',
+        h: 'Are Farm Workers Covered by Workers’ Comp in Virginia?',
         body: [
-          'Injured in a Newport News work accident? You may already be struggling to prove you’re due Workers’ Comp benefits for your injuries. Worse, you may have already been denied that compensation. But you don’t have to seek your benefits alone; Pathfinder Injury Law is here to help.',
-          'When you’re hurt on the job, you may need a guide to get the Workers’ Comp benefits you’re due. Your Newport News Workers’ Comp lawyer can be that guide, and they can get you started with a free consultation. To work with a lawyer, reach out to us by calling {phone}. You can also contact us through the [online contact form](#contact) below.',
+          `Not always. The Workers’ Compensation Act leaves out farm and horticultural laborers unless the employer regularly has in service more than three full-time employees ([Va. Code § 65.2-101](${CODE}title65.2/chapter1/section65.2-101/)).`,
+          'Farm jobs are a small part of the city’s payroll count, about 110 in the Virginia Works profile. But the 2022 Census of Agriculture counted 231 farms on about 70,900 acres in the city. Soybeans, cotton, corn, and peanuts were the top crops by acreage, and the city ranked second in Virginia in cotton sales.',
+          'The farm rule is stricter than the general one. Most employers have to carry coverage once they regularly have three or more employees. For farm and horticultural work, the employer needs more than three, and they have to be full-time. If you work on a farm or for a company that processes what farms produce, the details of your job matter. Tell us what you do and who pays you.',
+        ],
+      },
+      {
+        h: 'Who Decides a Dispute, and Where?',
+        body: [
+          // VERIFY S1 (reworded from the model's checked § 65.2-700 sentence)
+          `Disputes over a workers’ comp claim that the parties don’t settle go to the Virginia Workers’ Compensation Commission, which decides them ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission lists no location in the city. Its Virginia Beach regional office, at 281 Independence Blvd., Suite 310, is listed for both hearings and mediations. To the west, the Commission lists a hearing location at 100 N. College Dr. in Franklin, and on the Peninsula, one at 22 Lincoln St. in Hampton ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          // VERIFY S2 (reworded from the model's checked hearing sentences)
+          `The Commission doesn’t publish which cases are heard at which location, and its rules let hearings go forward by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You have the right to ask for a hearing no matter what the insurance company decides. Expect the insurance company to have its own lawyer there. Here’s [how to respond to a denial](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Cover?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Pain and suffering is not part of workers’ comp. The details are on our page about [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Records Help Most at a First Meeting?',
+        body: [
+          'Bring whatever you have, and don’t wait to gather it before you call. Copies work fine if we meet by phone or video.',
+          {
+            list: [
+              'Anything from a doctor, urgent care, or the ER: notes, restrictions, and discharge papers',
+              'Medical bills you’ve received',
+              'The accident report, the doctor list your employer gave you, and any texts or emails with your supervisor about the injury',
+              'Letters, emails, or checks from the insurance company',
+              'Anything with the Virginia Workers’ Compensation Commission’s name on it',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Chuckatuck, Whaleyville, and Isle of Wight?',
+        body: [
+          'Yes. We take cases from every part of the city, including Chuckatuck, Holland, Whaleyville, Driver, and Harborview, and from neighboring Isle of Wight County. See our pages for [Portsmouth](/portsmouth-workers-comp-lawyer/), [Chesapeake](/chesapeake-workers-comp-lawyer/), [Norfolk](/norfolk-workers-comp-lawyer/), and, across the Monitor-Merrimac bridge-tunnel, [Newport News](/newport-news-workers-comp-lawyer/).',
+        ],
+      },
+      {
+        h: 'Call About Your Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers. Call {phone} or use the [form on this page](#contact).',
         ],
       },
     ],
   },
-
+  // ----------------------------------------------------------------- Portsmouth
+  // Rewritten Nov 1, 2026 on the Shenandoah Valley model (city page batch C, #11). Research and sources:
+  // "SEO Audit - 10-30-26/34c - Portsmouth Page Research.md" (copy into "SEO Audit - 10-30-26" with the batch).
+  // Fixes the audit's flags: "Your journey to compensation starts with" and the generic text are gone.
+  // Legal wording: shared constants and the Harrisonburg model's checked wording (25a). Sentences marked
+  // // VERIFY are new or reworded legal sentences; send them to the authority check before Bryn sees the page.
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+  // VERIFY: Option A's "may fall under a different system" for shipyard and port workers (file 9, question 3)
+  //   should go to the authority check with the rest of file 9 before this page ships.
+  {
+    path: '/portsmouth-workers-comp-lawyer/',
+    name: 'Portsmouth',
+    h1: 'Portsmouth Workers’ Comp Lawyer',
+    title: "Portsmouth, VA Workers' Comp Lawyer | Pathfinder Injury Law",
+    description:
+      'Hurt at work in Portsmouth, VA? Pathfinder handles only Virginia workers’ comp, for injured workers. Meet by phone, video, or in Richmond. Free consult.',
+    intro: [
+      'Hurt at work in Portsmouth? Whether it happened in a hospital, a store, a warehouse, or on a job site, Virginia workers’ comp can cover your medical care and part of the paycheck you lose while you heal. It pays only when the accident fits the law’s definition and the claim is filed in time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
+      'We do not have an office in Portsmouth. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
+    ],
+    sections: [
+      {
+        h: 'Which Rules Decide a Workers’ Comp Claim First?',
+        body: [
+          'Every claim under the Virginia Workers’ Compensation Act starts with the same few rules, and missing one can end a claim before anyone looks at your injury:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Step-by-step help: [how to file a workers’ comp claim](${HOW_TO_FILE}).`,
+        ],
+      },
+      {
+        h: 'Who Works in Portsmouth, and How Do They Get Hurt?',
+        body: [
+          'Government is the biggest employer by far. Of about 42,900 jobs counted in the city in the third quarter of 2025, about 18,000 were government jobs, and about 13,700 of those were federal, according to the state’s Virginia Works community profile. The U.S. Department of Defense is first on the state’s list of the largest local employers, and Norfolk Naval Shipyard, despite its name, is located here.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Among private employers, health care is the largest industry, with about 5,600 jobs. Others on the state’s list include:',
+          {
+            list: [
+              'Health care: Bon Secours, Aya Healthcare, Pines Residential Treatment, and Portside Health & Rehab Center',
+              'Ship repair and marine construction: Fairlead Integrated, Crofton Diving, and East Coast Repair & Fabrication',
+              'Trucking and delivery: Schneider National, Rolling Frito-Lay Sales, and U-Haul',
+              'Stores: Food Lion, Walmart, Kroger, Lowe’s, and Wawa',
+              'Public employers: the city, its public schools, and Tidewater Community College',
+            ],
+          },
+          'Work like this leads to sudden injuries such as:',
+          {
+            list: [
+              'A fall from a ladder, a roof edge, or a work platform',
+              'A hand or arm pinned by a machine, a load, or a vehicle',
+              'A cut, burn, or eye injury from a grinder, torch, or saw',
+              'A slip on a wet hospital or store floor',
+              'A patient lift or transfer that goes wrong',
+              'A crash in a box truck, rental truck, or delivery van',
+              'A back or neck injury from one specific lift, twist, or fall',
+            ],
+          },
+          'Back and spine injuries get the hardest look. The insurance company may argue that the pain built up over years of work, or that it comes from an old degenerative condition rather than one event at work. Your claim is stronger when the record points to a single moment: what you were doing, when it happened, and who you told. Write it down while you still remember it.',
+          // VERIFY P1 (reworded from the model's checked third-party sentence)
+          `A crash caused by another driver may also give you a separate injury claim against that driver, on top of workers’ comp. More on [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/), [spine injuries at work](/what-should-you-do-if-you-have-a-spine-injury-at-work/), [construction accidents](/virginia-construction-accident-lawyer/), and [car accidents at work](/car-accident-at-work-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'Where Would a Workers’ Comp Dispute Be Heard?',
+        body: [
+          // VERIFY P2 (reworded from the model's checked § 65.2-700 sentence)
+          `When the parties can’t settle a dispute over a workers’ comp claim, the Virginia Workers’ Compensation Commission decides it ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission has no location in the city. Its nearest regional office is in Virginia Beach at 281 Independence Blvd., Suite 310, which it lists as both a hearing location and a mediation location. Across the water, it also lists a hearing location at 22 Lincoln St. in Hampton ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          // VERIFY P3 (reworded from the model's checked hearing sentences)
+          `That list doesn’t say which cases go where, and the Commission’s rules allow hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). Whatever the insurance company decides, you can ask the Commission for a hearing, and the insurance company will send a lawyer to it. If your claim has been turned down, start with [what to do after a denial](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Can Workers’ Comp Pay For?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `It does not pay for pain and suffering. See [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/) and [how the weekly checks are calculated](${WC}how-is-workers-comp-calculated-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should You Gather Before We Talk?',
+        body: [
+          'None of this is required before you call. If we meet by phone or video, you can send copies.',
+          {
+            list: [
+              'Doctor’s notes, work restrictions, and visit summaries',
+              'Bills from hospitals, doctors, and pharmacies',
+              'Your employer’s accident report and the list of doctors it gave you, plus any texts or emails about the injury',
+              'Anything the insurance company has sent you',
+              'Any letter or form from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Churchland, Cradock, and Nearby Cities?',
+        body: [
+          'Yes. We take cases from every part of the city, including Olde Towne, Port Norfolk, Park View, Cradock, and Churchland, and from the rest of the Southside. See our pages for [Chesapeake](/chesapeake-workers-comp-lawyer/), [Suffolk](/suffolk-workers-comp-lawyer/), [Norfolk](/norfolk-workers-comp-lawyer/), and [Virginia Beach](/virginia-beach-workers-comp-lawyer/).',
+        ],
+      },
+      {
+        h: 'Talk to Us About Your Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers. Call {phone} or use the [form on this page](#contact).',
+        ],
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- Newport News
+  // Rewritten Nov 1, 2026 (city page batch A, #1). Research and sources:
+  // "SEO Audit - 10-30-26/32a - Newport News Page Research.md" (move into "SEO Audit - 10-30-26" as needed).
+  // Legal wording: shared constants, the Harrisonburg model's checked wording (25a), and the doctor-panel
+  // sentence checked in 17a (Nov 1 addendum). The only legal-ish sentence that is new to this page is the
+  // federal line below.
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+  // VERIFY: Option A's "may fall under a different system" for shipyard and port workers (file 9, question 3)
+  //   should go to the authority check with the rest of file 9 before this page ships.
+  // No other // VERIFY items: every other legal sentence is a shared constant or reused checked wording.
+  {
+    path: '/newport-news-workers-comp-lawyer/',
+    name: 'Newport News',
+    h1: 'Newport News Workers’ Comp Lawyer',
+    title: "Newport News, VA Workers' Comp Lawyer | Pathfinder",
+    description:
+      'Hurt at work in Newport News? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond. Free consultation.',
+    intro: [
+      'Hurt at work in Newport News? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from anywhere on the Peninsula.',
+      'We do not have an office in Newport News. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
+    ],
+    sections: [
+      {
+        h: 'What Are the First Rules for a Workers’ Comp Claim on the Peninsula?',
+        body: [
+          'A Virginia workers’ comp claim from the Peninsula follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
+        ],
+      },
+      {
+        h: 'What Jobs and Injuries Are Common on the Peninsula?',
+        body: [
+          'Manufacturing employs more people than any other industry in Newport News, more than a quarter of all workers, according to the state’s Virginia Works community profile. Health care is second. The state’s list of the largest employers in the city includes:',
+          {
+            list: [
+              'Huntington Ingalls Industries, first on the list. Its Newport News Shipbuilding division builds and maintains the Navy’s nuclear-powered aircraft carriers and submarines.',
+              'Other manufacturers: Liebherr, which builds mining trucks, and Canon',
+              'Health care: Riverside Regional Medical Center, Bon Secours, Sentara Healthcare, and home care companies such as Hope In Home Care',
+              'Stores and delivery: Walmart, Food Lion, Costco, Target, Lowe’s, and UPS',
+              'Local government: the city and its public schools',
+            ],
+          },
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Jobs like these produce sudden injuries, for example:',
+          {
+            list: [
+              'Falls from ladders, scaffolding, and platforms',
+              'Being struck by a falling or swinging load, or a crane or rigging accident',
+              'Hands and fingers crushed or caught in machinery',
+              'Burns and eye injuries from welding, cutting, and grinding',
+              'Slips and falls on wet floors in hospitals, stores, and kitchens',
+              'Forklift and pallet jack accidents in warehouses and stockrooms',
+              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Crashes while driving for work',
+            ],
+          },
+          'Some of these claims are easier to prove than others. A burn or a crushed hand happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down what you were lifting, when it happened, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [factory accidents](/virginia-factory-accident-lawyer/), [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
+        ],
+      },
+      {
+        h: 'Where Are Peninsula Workers’ Comp Disputes Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its closest regional office is in Virginia Beach at 281 Independence Blvd., Suite 310, and the Commission lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and at the Williamsburg/James City County Courthouse, 5201 Monticello Ave. ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will. Your employer must offer a panel of at least three doctors, and you choose one.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring what you have. Nothing here is required to call us, and you can send it to us if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Hampton, Williamsburg, and the Rest of the Peninsula?',
+        body: [
+          'Yes. We take cases from Hampton, Poquoson, York County, Williamsburg, James City County, and the rest of the Peninsula. See also our [Hampton workers’ comp page](/hampton-workers-comp-lawyer/). Across the water, see our [Norfolk](/norfolk-workers-comp-lawyer/) and [Virginia Beach](/virginia-beach-workers-comp-lawyer/) pages.',
+        ],
+      },
+      {
+        h: 'Talk to a Workers’ Comp Lawyer About Your Peninsula Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
+        ],
+      },
+    ],
+  },
   // -------------------------------------------------------------------- Roanoke
+  // Rewritten Nov 1, 2026 (city page batch D, #15). Research and sources:
+  // "SEO Audit - 10-30-26/35c - Roanoke Page Research.md" (move into "SEO Audit - 10-30-26" as needed).
+  // Legal wording: shared constants, the Harrisonburg model's checked wording (25a), the doctor-panel
+  // sentence checked in 17a (Nov 1 addendum), the Richmond page's "Can I sue" and denial-reason wording
+  // (checked in 16a, R13, R14, R16), and the federal line below.
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+  // VERIFY: Option A's "may fall under a different system" (file 9, question 3) should go to the authority
+  //   check with the rest of file 9 before this page ships. Railroad workers matter here, but no railroad
+  //   is on the state's largest-employer lists for Roanoke city or Roanoke County, so none is named.
+  // Dropped from the live page (audit file 2, item 6): the denial-reason list with "Injuries weren't serious
+  //   enough to warrant Workers' Comp" and "You were allegedly under the influence." Replaced with the
+  //   Richmond page's checked list.
+  // No other // VERIFY items: every other legal sentence is a shared constant or reused checked wording.
   {
     path: '/roanoke-workers-comp-lawyer/',
     name: 'Roanoke',
     h1: 'Roanoke Workers’ Comp Lawyer',
-    title: "Roanoke Workers' Compensation Claims & Attorney",
+    title: "Roanoke, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      'Hurt at work in Roanoke? Hire a trusted workers’ comp lawyer who offers sound advice. Visit the Pathfinder Injury Law website to learn more.',
+      'Hurt at work in Roanoke, Salem, or Vinton? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond.',
     intro: [
-      'After an on-the-job injury in Roanoke, you may be due Workers’ Comp benefits to help you recover from your injuries. Luckily, a lawyer at Pathfinder Injury Law may be able to help with your claim.',
-      'A serious work accident can happen at any time. Maybe you were making a delivery and were struck by another driver. Maybe you fell while working on a power line.',
-      `You may be eligible for Workers’ Comp in either of these situations, but how do you get your benefits? At Pathfinder Injury Law, we’re dedicated to [helping injured workers](${WC}) like you get the benefits they’re due. Talk to your Roanoke Workers’ Comp lawyer about how you can get your compensation.`,
+      'Hurt at work in Roanoke, Salem, or Vinton? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from across the valley and the rest of western Virginia.',
+      'We do not have an office in Roanoke. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Am I Eligible for Virginia Workers’ Comp?',
+        h: 'What Are the First Rules for a Workers’ Comp Claim in Western Virginia?',
         body: [
-          `Your workers’ comp claim may be [confusing](${HOW_TO_FILE}) if you’re not sure whether you’re eligible for Workers’ Comp benefits. Luckily, most Roanoke workers don’t have to worry about that. ${EMPLOYER_THRESHOLD}`,
-          'But what if you’re considered an independent contractor? In some cases, you may be listed as one even if you work in the capacity of an employee. In these cases, you and your Workers’ Comp lawyer in Roanoke may need to take your claim to the Virginia Workers’ Compensation Commission to show you were working as an employee.',
-        ],
-      },
-      {
-        h: 'How to Dispute a Workers’ Comp Denial',
-        body: [
-          `Even if you’re considered an employee, your Roanoke Workers’ Comp claim may still be [denied at first](${DENIALS}). But that doesn’t mean you have to just accept the expenses that have accrued. You can instead work with your Workers’ Comp lawyer in Roanoke to dispute your denial and seek a fair settlement offer.`,
-          'First, you’ll need to determine why your claim was denied. The reason you were denied should be included on your Workers’ Comp denial letter. Here are a few reasons why you may have been denied:',
+          'A Virginia workers’ comp claim from western Virginia follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
           {
             list: [
-              'Claim wasn’t filed in time',
-              'No medical treatment',
-              'The accident didn’t happen at work',
-              'Injuries weren’t serious enough to warrant Workers’ Comp',
-              'You were allegedly under the influence',
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
             ],
           },
-          'Your Workers’ Comp lawyer can seek out evidence that disputes the specific reasons you were denied, and they can present it to the Workers’ Compensation Commission during your [hearing](https://www.workcomp.virginia.gov/sites/default/files/documents/Claims-and-Hearings-Flow-Chart.pdf). Your employer’s insurance company will have a chance to present their own evidence, too. Once this is done, the Commission will decide the case.',
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'Contact a Workers’ Comp Lawyer in Roanoke',
+        h: 'What Jobs and Injuries Are Common in the Roanoke Valley?',
         body: [
-          'When you’re hurt in a Roanoke work accident, you have opportunities to seek compensation and overcome the injuries you’ve suffered. Unfortunately, you may have trouble getting your Workers’ Comp, especially if your employer has already denied you before.',
-          'But you don’t have to accept a denial and handle your losses on your own. A lawyer at Pathfinder Injury Law can guide you through the tough parts of getting your Workers’ Comp settled. When you’re ready to seek compensation, start with a free consultation with a Roanoke Workers’ Comp lawyer by calling {phone} or by completing the [online contact form](#contact) below.',
+          'Health care employs more people than any other industry in the city, more than one worker in five, according to the state’s Virginia Works community profile. Stores and restaurants come next, and construction and transportation and warehousing each employ more than 4,000 people. The state’s list of the largest employers in the city includes:',
+          {
+            list: [
+              'Health care: Roanoke Memorial Community Hospital, first on the list, and Carilion Services, plus Blue Ridge Behavioral Health Care and Virginia Lutheran Homes',
+              'Construction and utility work: Davis H. Elliot Company, an electrical contractor that builds and repairs power lines, Adams Construction Company, an asphalt paving company, and Branch Highways',
+              'Manufacturing: Virginia Transformer Corporation, Steel Dynamics, Coca-Cola Bottling, and Bimbo Bakeries',
+              'Delivery and stores: UPS, Federal Express, Walmart, Kroger, and Food Lion',
+              'Local government: the city and its public schools',
+            ],
+          },
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Jobs like these produce sudden injuries, for example:',
+          {
+            list: [
+              'Falls from ladders, roofs, bucket trucks, and utility poles',
+              'Electrical shocks and burns',
+              'Being struck by equipment or a passing vehicle in a road work zone',
+              'Hands and fingers caught in machinery, and burns from hot metal',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Back, neck, shoulder, and knee injuries from a specific lift or fall',
+              'Crashes while driving a delivery truck or other work vehicle',
+            ],
+          },
+          'Some of these claims are easier to prove than others. A fall from a pole or an electrical burn happens at one moment and usually leaves a record the same day. A back or neck injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down what you were lifting, when it happened, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back and spine injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
+        ],
+      },
+      {
+        h: 'Can I Sue My Employer Over a Back Injury at Work?',
+        body: [
+          `Usually not. If your injury is covered by workers’ comp, that is generally your only remedy against your employer ([Va. Code § 65.2-307](${CODE}title65.2/chapter3/section65.2-307/)). You may have a separate injury claim against someone outside your company, such as a driver who hit you while you were working, but not against a coworker. More on [suing your employer in Virginia](${WC}virginia-workers-compensation/).`,
+        ],
+      },
+      {
+        h: 'Where Are Western Virginia Workers’ Comp Disputes Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Roanoke at 3800 Electric Rd., Suite 200, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 55 E. Main St. in Christiansburg, 20 S. Randolph St. in Lexington, and 3160 Kings Mountain Rd. in Martinsville ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          'Insurance companies deny claims for many reasons. A few common ones: the accident didn’t happen at work, the injury is degenerative, or the treatment isn’t related to the accident.',
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will. Your employer must offer a panel of at least three doctors, and you choose one.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring what you have. Nothing here is required to call us, and you can send it to us if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Salem, Vinton, and the Rest of the Valley?',
+        body: [
+          'Yes. We take cases from Salem, Vinton and the rest of Roanoke County, Botetourt County, Franklin County, Craig County, and the rest of western Virginia. The state’s list of the largest employers in the county includes manufacturers such as Elbit Systems of America, Marvin Windows, Cardinal Glass Industries, and Medeco Security Locks.',
+          'To the east, see our [Lynchburg workers’ comp page](/lynchburg-workers-comp-lawyer/). To the north, see our [Shenandoah Valley page](/harrisonburg-workers-comp-worker/).',
+        ],
+      },
+      {
+        h: 'Talk to a Workers’ Comp Lawyer About Your Western Virginia Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // -------------------------------------------------------------------- Hampton
+  // Rewritten Nov 1, 2026 (city page batch B, #5). Research and sources:
+  // "SEO Audit - 10-30-26/33a - Hampton Page Research.md" (move into "SEO Audit - 10-30-26" as needed).
+  // Model: the Harrisonburg / Shenandoah Valley entry; reused model wording was checked in
+  // "25a - Valley Page Authority Check.md". Shared constants used for the employer threshold, deadline,
+  // two-thirds rate, and death benefits.
+  // Audit fix (file 2): the old "Hampton work accident" anchor that opened the faulty-equipment post is gone.
+  //
+  // VERIFY items (send to the authority check before Bryn sees the page):
+  //  V1. Jobs section, proof paragraph: the model's checked sentence with new examples ("A burn from hot metal or a
+  //      fall from scaffolding ..." and "A shoulder that starts hurting after weeks of lifting packages ...").
+  //  V2. "Federal site" section: "If a private company pays you, your claim usually runs through that company’s
+  //      Virginia workers’ comp insurance, even if you were hurt on a federal site." (New. Rests on 40 U.S.C. § 3172,
+  //      which lets states apply their comp laws on federal land; Longshore/DBA exceptions are covered by the
+  //      federal line next to it.)
+  //  V3. Option A's "may fall under a different system" for shipyard and port workers (file 9, question 3), as on
+  //      the Newport News page; goes to the authority check with the rest of file 9.
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
   {
     path: '/hampton-workers-comp-lawyer/',
     name: 'Hampton',
-    h1: 'Hampton Workers’ Compensation Attorney',
-    title: 'Hampton Workers Comp Claims & Lawyer - Pathfinder Injury Law',
+    h1: 'Hampton Workers’ Comp Lawyer',
+    title: "Hampton, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      "Hurt at work in Hampton? Explore your eligibility for workers' compensation benefits with Pathfinder Injury Law. Call 804-505-0633 today.",
+      'Hurt at work in Hampton? We handle only Virginia workers’ comp claims for injured workers. Meet by phone, video, or at our Richmond office. Free consult.',
     intro: [
-      'If you were hurt in a Hampton work accident, you may be eligible for Workers’ Comp benefits. Luckily, a lawyer at Pathfinder Injury Law may be able to help you. Give us a call.',
-      'One moment, you’re doing your job, just like you do every other day. Then, something happened, and you were left injured in the aftermath. Now, your employer may have claimed you’re not eligible for Workers’ Comp benefits.',
-      `You still have an opportunity to [seek your Workers’ Comp benefits](${WC}), but you may need some guidance. A lawyer at Pathfinder Injury Law can give you that support. If you’re struggling to get your benefits as an injured worker, reach out to your Hampton Workers’ Comp lawyer for aid.`,
+      'Hurt on the job in Hampton? Workers’ comp can cover your medical care and part of the pay you lose, but a Virginia claim has to meet a legal test and beat a filing deadline first. Pathfinder Injury Law represents injured workers only, and Virginia workers’ compensation is the only kind of case we handle.',
+      'We do not have an office in Hampton. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Workers’ Comp Benefits for Hampton Workers',
+        h: 'Which Rules Decide a Virginia Workers’ Comp Claim?',
         body: [
-          'Here’s the good news about your Hampton work accident. You may be due Workers’ Comp benefits for the injuries you’ve suffered at work. These benefits may include reasonable and necessary medical care and part of your lost wages.',
-          'For example, benefits may include reasonable and necessary medical care. That’s not just your initial medical treatment, either. You may also be due funds for the costs of your traveling, as well as any specialists you need to see during your treatment.',
-          'You may also need funds that replace your lost wages. Hampton workers may be eligible for disability benefits that cover their needs after a loss. The amount and length of time you’ll receive benefits depend on the type of injuries you’ve suffered and whether you’re able to work in any capacity.',
+          'Before anything else, a claim under the Virginia Workers’ Compensation Act has to clear these rules:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Ready to start? Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}).`,
         ],
       },
       {
-        h: 'What if My Workers’ Comp Claim Is Denied?',
+        h: 'Where Do Hampton Workers Get Hurt on the Job?',
         body: [
-          `When you were hurt in a Hampton work accident, you may at least have been relieved to think your Workers’ Comp benefits would arrive soon. Then, you received a denial letter in the mail.`,
-          `When this happens, you’re not out of options. Your denial letter should explain the reason for the denial, which may be your first step toward your benefits. Once you know why you were denied, you and your Workers’ Comp lawyer can gather stronger evidence that you were injured and [are due compensation](${HOW_TO_FILE}).`,
-          'If the insurance company still refuses to settle with you, your Workers’ Comp lawyer is prepared to take your claim to a hearing with the Virginia Workers’ Compensation Commission. The Commission will hear your claim and decide the case.',
+          'Health care is the city’s largest industry, with about one in six workers, and retail is second, according to the state’s Virginia Works community profile. The city government tops the state’s list of the largest employers, and three federal agencies are also in its top five: the Department of Defense, the Department of Veterans Affairs, and NASA. Private employers high on that list include:',
+          {
+            list: [
+              'Hospitals and care: Sentara Healthcare, Riverside Regional Medical Center, and York Convalescent Center',
+              'Howmet, whose plant makes cast metal parts for turbines',
+              'Main Industries, which does blasting, painting, and scaffolding work on ships',
+              'Warehouse and delivery work: Amazon Fulfillment Services, Amazon Logistics, and Federal Express',
+              'Stores and restaurants: Food Lion, Walmart, The Home Depot, Lowe’s, Kroger, and McDonald’s',
+              'Hampton University and the public schools',
+            ],
+          },
+          'Common sudden injuries in work like this include:',
+          {
+            list: [
+              'Burns from molten metal, furnaces, and hot parts',
+              'Falls from scaffolding or staging while blasting or painting',
+              'Aides and nurses hurt lifting or turning a resident or patient',
+              'Packages, totes, or carts that fall on or strike a worker',
+              'Hands caught in a conveyor or a cardboard baler',
+              'Kitchen burns and slips on greasy restaurant floors',
+              'Delivery van crashes on city streets and highways',
+              'A torn shoulder or knee from one specific lift or fall',
+            ],
+          },
+          // VERIFY V1
+          'Not every one of these is equally easy to prove. A burn from hot metal or a fall from scaffolding happens at one moment, and someone usually writes it down that day. A shoulder injury from lifting packages is a harder claim: the insurance company may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. If you felt it happen, write down the date, what you were doing, and who you told.',
+          'A crash caused by another driver while you were working may also give you a separate injury claim against that driver. More on [factory accidents](/virginia-factory-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [shoulder injuries on the job](/causes-of-on-the-job-shoulder-injuries/).',
         ],
       },
       {
-        h: 'Call a Workers’ Comp Lawyer in Hampton, Virginia',
+        h: 'What If I Was Hurt on a Base or Federal Site?',
         body: [
-          'After you’re hurt in a work accident, you may have trouble getting the benefits you’re due as an injured Hampton worker. Luckily, you don’t have to deal with your work injury alone. Your lawyer from Pathfinder Injury Law can guide you to the benefits you need, starting your journey to Workers’ Comp benefits with a free consultation. Work with a Hampton Workers’ Comp lawyer by calling {phone} or by completing the [online contact form](#contact) below.',
+          'The city is home to Langley Air Force Base and NASA Langley Research Center, and a Veterans Affairs medical center. Not everyone who works at a place like that is a federal employee.',
+          // VERIFY V2
+          'If a private company pays you, your claim usually runs through that company’s Virginia workers’ comp insurance, even if you were hurt on a federal site. Tell us who pays you and where you were working.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.  (VERIFY V3)
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+        ],
+      },
+      {
+        h: 'Who Decides a Disputed Claim?',
+        body: [
+          `When the parties don’t settle a dispute, the Virginia Workers’ Compensation Commission decides it ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission lists a hearing location in the city at 22 Lincoln St. Its nearest regional office is in Virginia Beach at 281 Independence Blvd., Suite 310, which it lists as a hearing and mediation location, and it also lists a hearing location at the Williamsburg/James City County Courthouse ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `That page doesn’t say which cases go to which location. The Commission’s rules also allow hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask for a hearing no matter what the insurance company decides, and the insurance company will have its own lawyer there. Read [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Can Workers’ Comp Pay For?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `There is no payment for pain and suffering. See [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Have Ready When We Talk?',
+        body: [
+          'Whatever you have is enough to start. If we meet by phone or video, you can send it to us afterward.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Phoebus, Fox Hill, and Nearby?',
+        body: [
+          'Yes. We take cases from Phoebus, Buckroe Beach, Fox Hill, Wythe, and the rest of the city, and from Poquoson and York County next door. Up the Peninsula, see our [Newport News page](/newport-news-workers-comp-lawyer/). Across the harbor, see our [Norfolk](/norfolk-workers-comp-lawyer/) and [Virginia Beach](/virginia-beach-workers-comp-lawyer/) pages.',
+        ],
+      },
+      {
+        h: 'Call About Your Workers’ Comp Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // ----------------------------------------------------------------- Alexandria
+  // Rewritten Nov 1, 2026 (draft). Research and sources: "SEO Audit - 10-30-26/32d - Alexandria Page Research.md"
+  // (to be filed as "SEO Audit - 10-30-26/3x - Alexandria Page Research.md"). Model: the Harrisonburg / Shenandoah Valley
+  // entry; reused model wording was checked in "25a - Valley Page Authority Check.md".
+  // Dropped from the live page (audit flags): "paid shortly after" and "You could face permanent damage or death".
+  //
+  // VERIFY items (go to the authority check before Bryn sees the page):
+  //  1. Jobs section, proof paragraph: the model's checked sentence with a new example ("A burn or a fall from a ladder
+  //     happens at one moment ..." replaces "A knife cut happens at one moment ...").
+  //  2. Jobs section: "Contracting and consulting firms such as Booz Allen Hamilton ..." The Virginia Works list names the
+  //     employers but gives no industry for them; the label is ours.
+  //  3. Jobs section: "Building maintenance and security companies" is read from employer names on the list
+  //     (Building Maintenance Serv LLC, Deco Security Services, Security Forces, Inc.); the profile gives no industry.
+  //  4. Nearby section: Option A says "hurt in another state." Washington, D.C. is not a state. If Bryn wants D.C. named,
+  //     the line would read "hurt in another state or in Washington, D.C." (not changed here; file 9 wording kept as is).
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
   {
     path: '/alexandria-workers-comp-lawyer/',
     name: 'Alexandria',
-    h1: 'Alexandria Workers’ Compensation Lawyer',
-    title: "Alexandria, Virginia Workers' Comp Claims & Attorney",
+    h1: 'Alexandria Workers’ Comp Lawyer',
+    title: "Alexandria, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      "Hurt at work in Alexandria? You need a trusted workers' comp lawyer by your side. Explore your employee rights with Pathfinder Injury Law.",
+      'Hurt at work in Alexandria, Old Town, or Del Ray? We handle only Virginia workers’ comp. Meet by phone, video, or in Richmond. Free consultation.',
     intro: [
-      'Injured on the clock in Alexandria? You may be due Workers’ Comp for your losses. Reach out to a lawyer at Pathfinder Injury Law to review your situation and explain your options.',
-      'One moment, you’re just doing your job, like always. The next, you’re hurt, you’re unable to work, and your employer doesn’t want to pay. So now what are your options?',
-      `Luckily, you can still [seek out Workers’ Comp benefits](${WC}) with the help of a lawyer at Pathfinder Injury Law. Your Alexandria Workers’ Comp lawyer can help you get fairly compensated when you’re hurt.`,
+      'Hurt at work in Alexandria, whether in Old Town, Del Ray, the West End, or along the Route 1 corridor? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
+      'We do not have an office in Alexandria. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Eligibility for Alexandria Workers',
+        h: 'What Are the First Rules for a Northern Virginia Workers’ Comp Claim?',
         body: [
-          'When you’re hurt on an Alexandria worksite, you may be eligible for benefits. Unfortunately, not all workers are so confident that they’re eligible for benefits. You may be a part-time worker, for example, or maybe you work for a small company. Fortunately, neither of these things keep you from getting coverage.',
-          `${EMPLOYER_THRESHOLD} If your boss refuses to offer coverage for your accident, your Workers’ Comp lawyer can help you seek compensation. Your lawyer can also help if you’re unfairly classified as an independent contractor, so reach out for help before your claim goes to a hearing.`,
+          'A Virginia workers’ comp claim from Alexandria follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'What Benefits Am I Due After an Alexandria Work Accident?',
+        h: 'What Jobs and Injuries Are Common in Alexandria?',
         body: [
-          'Your work accident may have left you unable to do your job in the capacity you once did without a problem. Even if you’re able to work at all, you may need financial assistance to recover from your injuries. Workers’ comp can pay for your medical treatment and part of your lost wages.',
-          'Below are some of the benefits you may be eligible for after a work accident:',
-          { list: ['Medical care', 'Wage replacement', 'Death benefits'] },
+          'Government employs more people in the city than any other sector, and professional, scientific, and technical services is the largest private industry, according to the state’s Virginia Works community profile. Health care, hotels and restaurants, and retail each employ thousands more. The state’s list of the largest employers in the city includes:',
+          {
+            list: [
+              'Health care: Inova Health System',
+              'Local government: the city government and the public school system',
+              'Grocery and retail: Harris Teeter, Wegmans, Giant Food, Safeway, Target, and The Home Depot',
+              'Delivery and distribution: UPS, Coca Cola Bottling Company, and Restaurant Depot',
+              'Transit and construction: Alexandria Transit Co and Sagres Construction Corp',
+              // VERIFY 3: industry read from the employer names; the profile gives none.
+              'Building maintenance and security companies',
+              // VERIFY 2: "contracting and consulting" is our label; the profile gives no industry.
+              'Contracting and consulting firms such as Booz Allen Hamilton and System Plan and Analysis',
+            ],
+          },
+          'The largest employer on that list is the U.S. Department of Defense, and federal agencies together account for about 9,500 jobs in the city. If you work for one of them, see the note on federal employees near the end of this page.',
+          'Jobs like these produce sudden injuries, for example:',
+          {
+            list: [
+              'Burns, cuts, and falls on wet floors in hotel and restaurant kitchens',
+              'Falls from ladders, scaffolds, and roofs on construction and renovation jobs',
+              'Workers struck by falling materials or tools',
+              'Back, shoulder, and knee injuries from a specific lift or fall, for example a housekeeper turning a mattress or a stocker lifting a case',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Delivery drivers hurt on stairs, curbs, and loading docks',
+              'Crashes while driving a bus, a delivery truck, or your own car for work',
+            ],
+          },
+          // VERIFY 1: model's checked wording with a new example (burn / ladder fall instead of knife cut).
+          'Some of these claims are easier to prove than others. A burn or a fall from a ladder happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down what you were lifting, when it happened, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [car accidents at work](/car-accident-at-work-in-virginia/), [construction accidents](/virginia-construction-accident-lawyer/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
       {
-        h: 'The Workers’ Comp Claim Process',
+        h: 'Where Are Northern Virginia Workers’ Comp Disputes Decided?',
         body: [
-          'After a work accident, your first step is to seek medical care. Your injuries may worsen if not treated right away. You could face permanent damage or death without medical care. You’ll also need to notify your Alexandria employer that you’re hurt and need Workers’ Comp benefits.',
-          'If the insurance company denies your workers’ comp claim or doesn’t respond, you will need to file a claim for benefits. Claims for benefits must generally be filed within two years of an accident or else you can forever lose benefit entitlement. Being accepted doesn’t always mean prompt payment. If the insurance company is late, you can ask the Commission for a hearing.',
-          'If you’re denied, you may still be eligible for benefits. Your Workers’ Comp lawyer can review the reason for your denial, gather evidence for your claim, and represent you in your hearing to dispute the denial before the Virginia Workers’ Compensation Commission.',
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Fairfax at 3020 Hamaker Court, Suite 200, and lists that office as both a hearing location and a mediation location. It lists its Manassas regional office, at 7900 Sudley Rd., Suite 500, the same way ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
       {
-        h: 'Speak with a Workers’ Comp Lawyer in Alexandria',
+        h: 'What Does Workers’ Comp Pay?',
         body: [
-          `When you’re hurt in an Alexandria, Virginia, work accident, getting benefits to help you recover is vital. But you may not have the tools or energy to face a [Workers’ Comp claim](${HOW_TO_FILE}). That’s where a lawyer at Pathfinder Injury Law can help. Your Alexandria Workers’ Comp lawyer can fight for you, from your free consultation to the final decision. Call {phone} or complete the [online contact form](/contact/) to learn more.`,
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring what you have. Nothing here is required to call us, and you can send it to us if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Arlington, Fairfax County, and the Rest of Northern Virginia?',
+        body: [
+          'Yes. We take cases from every part of the city, from Arlington and [Fairfax County](/fairfax-county-workers-comp-lawyer/), and from the rest of Northern Virginia. If you can’t get to Richmond, we can meet by phone or video.',
+          'Many people who live here work for a federal agency or commute to jobs in Washington, D.C., or Maryland.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+        ],
+      },
+      {
+        h: 'Talk to a Workers’ Comp Lawyer About Your Northern Virginia Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // ----------------------------------------------------------------- Chesapeake
+  // Rewritten Nov 1, 2026 (city page batch B, #6). Research and sources:
+  // "SEO Audit - 10-30-26/33b - Chesapeake Page Research.md" (move into "SEO Audit - 10-30-26" as needed).
+  // Model: the Harrisonburg / Shenandoah Valley entry; reused model wording was checked in
+  // "25a - Valley Page Authority Check.md". Shared constants used for the employer threshold, deadline,
+  // two-thirds rate, and death benefits.
+  // Audit fix (file 2): the "denial letter" link (live page: Form 16A, the officer's coverage opt-out) is removed.
+  // Denials now link only to the denials guide (DENIALS).
+  //
+  // VERIFY items (send to the authority check before Bryn sees the page):
+  //  V1. Subcontractor section: "If the subcontractor you work for doesn’t carry workers’ comp insurance, the
+  //      contractor above it on the job may have to pay your benefits (Va. Code § 65.2-302)." (New. Statutory
+  //      employer rule; check the wording "may have to pay" and the citation.)
+  //  V2. Jobs section, proof paragraph: the model's checked sentence with new examples ("A fall from a ladder or a
+  //      hand caught in a conveyor ..." and "A back that gives out after a long shift of unloading trucks ...").
+  //  V3. Option A's "may fall under a different system" for shipyard and port workers (file 9, question 3), as on
+  //      the Newport News page; goes to the authority check with the rest of file 9.
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
   {
     path: '/chesapeake-workers-comp-lawyer/',
     name: 'Chesapeake',
-    h1: 'Chesapeake Workers’ Compensation Attorney',
-    title: "Chesapeake Workers' Comp Claims & Lawyer - Pathfinder Injury Law",
+    h1: 'Chesapeake Workers’ Comp Lawyer',
+    title: "Chesapeake, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      'Need a dedicated Chesapeake workers’ comp lawyer? Contact Pathfinder Injury Law to seek the benefits you may be due.',
+      'Injured at work in Chesapeake? Pathfinder handles only Virginia workers’ comp, only for injured workers. Phone, video, or Richmond meetings. Free consult.',
     intro: [
-      `If you were injured at work, you may be due [workers’ comp benefits for your injuries](${WC}). Reach out to a Workers’ Comp lawyer in Chesapeake for help getting the benefits you’re due.`,
-      'You weren’t expecting a serious accident at work when you clocked in. Unfortunately, things went wrong that day, and now you’re seriously injured. Worse, you’ve been denied Workers’ Comp coverage for your injuries. Sound familiar?',
-      'Don’t worry, Pathfinder Injury Law is here to review your situation and explain your options. If you’ve been hurt at work, let a Chesapeake Workers’ Comp lawyer help you get compensated fairly for the injuries you’ve suffered.',
+      'Injured at work in Chesapeake? A Virginia workers’ comp claim can pay your medical bills and replace part of your wages, but the insurance company doesn’t have to pay a claim that misses the legal test or the filing deadline. Pathfinder Injury Law takes only Virginia workers’ compensation cases, and only for the injured worker.',
+      'We do not have an office in Chesapeake. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Eligibility for Chesapeake Workers',
+        h: 'What Has to Be True for My Claim to Pay?',
         body: [
-          'Many injured Chesapeake workers may be concerned they’re not eligible for Workers’ Comp benefits. You may work at a small company, for example, or you may be worried your job type isn’t covered. Luckily, Virginia law covers most employees in the state.',
-          `${EMPLOYER_THRESHOLD} If you aren’t sure your employer has coverage, file your claim with the Commission anyway.`,
+          'The Virginia Workers’ Compensation Act sets the first hurdles. Miss one and the rest of the claim may not matter:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `For the paperwork, see [how to file a workers’ comp claim](${HOW_TO_FILE}).`,
         ],
       },
       {
-        h: 'Why Was My Workers’ Comp Claim Denied?',
+        h: 'What Kinds of Work Lead to Injuries in Chesapeake?',
         body: [
-          'If something goes wrong with your Workers’ Comp claim, you may be denied benefits. Luckily, this isn’t the end of your claim. You may need a Workers’ Comp lawyer in Chesapeake to help you review the denial and seek Workers’ Comp benefits for your work-related injuries.',
-          `For example, your [denial letter](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) may have listed that you didn’t act in time for your Workers’ Comp benefits. ${DEADLINE} If you believe you did act on time, your Workers’ Comp lawyer can seek evidence based on when you filed. They can then help you take your claim to a hearing with the Virginia Workers’ Compensation Commission.`,
+          'Health care and retail each employ about one in eight workers in the city, and construction is third, according to the state’s Virginia Works community profile. The public schools and the city government top the state’s list of the largest employers. Next come Amazon Fulfillment Services and Chesapeake General Hospital. Others on the list include:',
+          {
+            list: [
+              'Warehouses and distribution: Amazon Logistics, Dollar Tree Distribution, and QVC',
+              'Builders and contractors: Mid Eastern Builders, Archer Western, Burns & McDonnell, and Electric Motor and Contracting',
+              'Factories: Plasser American, which builds railroad track maintenance machines, and Sumitomo Machinery',
+              'Shipboard contractors: International Marine & Industrial Applicators, which blasts, paints, and repairs ships, and Prism Maritime, which upgrades Navy combat systems',
+              'Health care: Sentara Healthcare',
+              'Stores: Walmart, Food Lion, The Home Depot, Target, Kroger, and Lowe’s',
+            ],
+          },
+          'Sudden injuries that come out of work like this include:',
+          {
+            list: [
+              'Falls from ladders, roofs, and unfinished floors on job sites',
+              'Trench and excavation accidents',
+              'Workers struck by heavy equipment or a backing truck',
+              'Hands and arms caught in conveyors or sorting machines',
+              'Forklift accidents and falls from loading docks',
+              'Crush and pinch injuries while assembling heavy machinery',
+              'Nurses and aides hurt helping a patient out of bed or a chair',
+              'A back, shoulder, or knee injury from one specific lift',
+            ],
+          },
+          // VERIFY V2
+          'Some injuries are simpler to prove than others. A fall from a ladder or a hand caught in a conveyor happens at one moment and usually gets reported the same shift. A back injury from unloading a truck is easier for the insurance company to fight: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Note the exact lift, the time, and the person you reported it to.',
+          `More on [construction accidents](/virginia-construction-accident-lawyer/), [warehouse injuries](/automated-warehouse-injuries-what-amazon-workers-need-to-know/), and [back injuries at work](${WC}virginia-back-injury-lawyer/).`,
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.  (VERIFY V3)
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
         ],
       },
       {
-        h: 'Your Chesapeake Workers’ Comp Benefits',
+        h: 'What If I Work for a Subcontractor?',
         body: [
-          'When you’re hurt at work, you may be eligible for benefits that cover the losses you’ve experienced. If you’re not sure what benefits you’re due, you may need a Workers’ Comp lawyer in Chesapeake to help you calculate all your benefits, both current and projected.',
-          'For example, you may need coverage for your medical expenses. The costs of traveling, seeing specialists, and other treatment add up quickly. The insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
-          'You may also be due wage replacement benefits if you’re unable to work in the capacity of your old job. The amount you receive depends on whether you’re able to work in any capacity, so talk to your Workers’ Comp lawyer about what your benefits are worth.',
+          'Construction jobs often stack several companies on one site: a general contractor, subcontractors, and sometimes subcontractors under them. That can make it hard to tell who is supposed to cover you.',
+          // VERIFY V1
+          `If the subcontractor you work for doesn’t carry workers’ comp insurance, the contractor above it on the job may have to pay your benefits ([Va. Code § 65.2-302](${CODE}title65.2/chapter3/section65.2-302/)). Write down every company name you see on the site: on trucks, signs, hard hats, and paperwork.`,
+          'If you were paid as a 1099 worker, read [what to do when your employer lists you as an independent contractor](/what-to-do-when-your-employer-lists-you-as-an-independent-contractor/).',
         ],
       },
       {
-        h: 'Talk to a Workers’ Comp Lawyer in Chesapeake',
+        h: 'Where Does a Disputed Claim Go?',
         body: [
-          'If you’ve been hurt on the job, you may need help getting the Workers’ Comp benefits you’re due for your injuries. [Pathfinder Injury Law](/) can help you file a claim, seek your Workers’ Comp benefits, and get compensated fairly for your injuries. You can even speak to a Chesapeake Workers’ Comp lawyer during a free consultation when you call {phone} or fill out the [online contact form](#contact) below.',
+          `The Virginia Workers’ Compensation Commission decides claim disputes that aren’t settled ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its nearest regional office is next door in Virginia Beach at 281 Independence Blvd., Suite 310, and the Commission lists it as a hearing and mediation location. Other hearing locations in the region include 22 Lincoln St. in Hampton and 100 N. College Dr. in Franklin ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission doesn’t say on that page which cases are heard where, and its rules allow hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask for a hearing whatever the insurance company decides. Expect the insurance company to bring a lawyer. Here’s [how to fight a workers’ comp denial](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Benefits Can I Get?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Pain and suffering isn’t part of workers’ comp. Read more on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Papers Help at the First Meeting?',
+        body: [
+          'None of this is required before you call. Bring what you have, or send it later if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Great Bridge, Deep Creek, and Western Branch?',
+        body: [
+          'Yes. We take cases from Great Bridge, Deep Creek, Western Branch, South Norfolk, and the rest of the city, which runs south to the North Carolina line. If you live here but were hurt across that line, call us. Depending on where you were hired and where your employer is based, Virginia’s system may still apply. Nearby, see our pages for [Norfolk](/norfolk-workers-comp-lawyer/), [Portsmouth](/portsmouth-workers-comp-lawyer/), [Virginia Beach](/virginia-beach-workers-comp-lawyer/), and [Suffolk](/suffolk-workers-comp-lawyer/).',
+        ],
+      },
+      {
+        h: 'Get Help With Your Workers’ Comp Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // -------------------------------------------------------------------- Norfolk
+  // Rewritten Nov 1, 2026 on the Shenandoah Valley model. Research and sources:
+  // "SEO Audit - 10-30-26/32b - Norfolk Page Research.md" (copy into "SEO Audit - 10-30-26" with the batch).
+  // Fixes the audit's flag: the old § 65.2-503 link was described as the "length" of benefits; it is
+  // now attached to the permanent partial disability bullet, which is what that section covers.
+  //
+  // VERIFY (new legal wording; send to the authority check before Bryn sees it):
+  //  V1. "Can I choose my own doctor?" section: "Usually not at first." (new lead-in), plus reused site
+  //      wording (panel of at least three, you choose one; denied claim = not limited to the panel),
+  //      now cited to Va. Code § 65.2-603.
+  //  V2. Permanent partial disability bullet now cites Va. Code § 65.2-503 (fixes the audit's flag).
+  //  V3. "A claim from anywhere in Hampton Roads follows the same Virginia Workers’ Compensation Act":
+  //      same as the model's Valley sentence, place swapped; true only for claims under the Virginia Act,
+  //      which is why the federal line (below) sits in the jobs section.
+  //  V4. Employer names as printed in the Virginia Works list (Virginia International Terminal(s),
+  //      Colonnas Shipyard = Colonna's Shipyard). Grouping of VIT, CMA CGM, and Maersk as "port and shipping".
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
   {
     path: '/norfolk-workers-comp-lawyer/',
     name: 'Norfolk',
-    h1: 'Norfolk Workers’ Compensation Attorney',
-    // The live title ended in a stray "|"; fixed.
-    title: "Norfolk Workers' Compensation Claims & Lawyer",
-    // The live description implied a Norfolk office ("the Pathfinder Injury Law team in Norfolk"); reworded.
+    h1: 'Norfolk Workers’ Comp Lawyer',
+    title: "Norfolk, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      "Virginia workers' comp benefits can help you recover from a work injury. Connect with the Pathfinder Injury Law team about your Norfolk case.",
+      'Hurt at work in Norfolk or elsewhere in Hampton Roads? We handle only Virginia workers’ comp. Meet by phone, video, or in Richmond. Free consultation.',
     intro: [
-      'If you’ve been hurt at work, you may be eligible for Workers’ Comp benefits that can help you recover from your injuries. Contact a workers comp lawyer in Norfolk for help getting compensated for those losses.',
-      'When something goes wrong at work, you could suffer some harsh consequences for it. Your injuries may be devastating, and worse, you may be denied Workers’ Comp benefits. Those benefits would have helped you recover, so now what can you do?',
-      `Now is the time to rely on a Norfolk Workers’ Comp lawyer. A qualified and experienced lawyer at [Pathfinder Injury Law](/) can help you get your Workers’ Comp benefits covered, so you can spend time on your health, not on your Workers’ Comp claim.`,
+      'Hurt at work in Norfolk, Virginia Beach, Chesapeake, Portsmouth, or anywhere else on the Southside? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
+      'We do not have an office in Norfolk. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Workers’ Comp Benefits for Norfolk Employees',
+        h: 'What Are the First Rules for a Workers’ Comp Claim in Hampton Roads?',
         body: [
-          'Your serious work accident can be overwhelming, so it’s not always clear what benefits you’re due. Workers’ comp can pay for your medical treatment and part of your lost wages.',
-          'For example, you may be worried about the costs of your treatment. You can’t skip your specialist’s appointment after a head injury, for example, but you may be unable to afford treatment on your own. The insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident, and related travel. That doesn’t mean it will.',
-          `A Workers’ Comp lawyer in Norfolk can also help you get disability benefits, depending on the severity of your injuries and how long you’re unable to work. ${TWO_THIRDS} The length of your Workers’ Comp [may depend on the type of injuries you suffered and what body part was damaged](${CODE}title65.2/chapter5/section65.2-503/).`,
+          // VERIFY V3
+          'A Virginia workers’ comp claim from anywhere in Hampton Roads follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'What to Do if Your Norfolk Workers’ Comp Benefits Are Denied',
+        h: 'What Jobs and Injuries Are Common in Norfolk?',
         body: [
-          'If you’ve already applied for Workers’ Compensation in Norfolk, you may have also already received a letter denying your claim. If this has happened to you, don’t panic. You have a chance to get Workers’ Comp benefits for the losses you’ve suffered.',
-          `Your Workers’ Comp lawyer can help you review the reason for your denial, which should be included in the letter. After that, you and your lawyer can request a hearing about your claim. Your lawyer can represent you through every part of the process. That way, you can focus on taking care of your family, rather than only on [your legal claim](${HOW_TO_FILE}).`,
+          'Government employs more people in the city than any other sector, and health care is the largest private industry, according to the state’s Virginia Works community profile. The U.S. Department of Defense tops the state’s list of the largest employers. Others on that list include:',
+          {
+            list: [
+              'Health care: Sentara Healthcare, Children’s Hospital of The King’s Daughters, and Lake Taylor Hospital',
+              // VERIFY V4
+              'The port and shipping: Virginia International Terminals, CMA CGM America, and Maersk Line Limited',
+              'Ship repair: Colonna’s Shipyard and Marine Hydraulics International',
+              'Public employers: the city government, the public schools, Old Dominion University, and Norfolk State University',
+              'Stores and delivery: Walmart, Food Lion, Harris Teeter, and Federal Express',
+            ],
+          },
+          'Jobs like these produce sudden injuries, for example:',
+          {
+            list: [
+              'Falls from ladders, scaffolds, and gangways',
+              'Hands and arms caught or crushed in machinery or between heavy loads',
+              'Cuts and burns from tools, welding, and cutting torches',
+              'Forklift and truck accidents in yards, docks, and warehouses',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Slips and falls on wet floors in hospitals, stores, and kitchens',
+              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Crashes while driving for work',
+            ],
+          },
+          'Some of these claims are easier to prove than others. A cut or a fall from a ladder happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down what you were lifting, when it happened, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
         ],
       },
       {
-        h: 'Call a Workers’ Comp Lawyer in Norfolk',
+        h: 'Can I Choose My Own Workers’ Comp Doctor?',
         body: [
-          'After a serious work accident, you may be struggling to get compensated fairly for the losses you’ve suffered. You need your benefits to support your family, but your employer refuses to pay. That puts you in a difficult spot, and a lawyer may be able to help.',
-          'At Pathfinder Injury Law, we’re here to guide you through the obstacles of your Workers’ Comp claim so you can get on the path to recovery. A lawyer at Pathfinder Injury Law may be able to help, starting with a free consultation. To work with an experienced, dedicated lawyer, call {phone} or fill out the online contact form below.',
+          // VERIFY V1
+          `Usually not at first. Your employer must offer a panel of at least three doctors, and you choose one ([Va. Code § 65.2-603](${CODE}title65.2/chapter6/section65.2-603/)). If your claim is denied, you can generally choose your own doctor instead.`,
+          'Tell every doctor, nurse, or clinic that your injury happened at work. Keep the panel list your employer gave you, and bring it when we meet.',
+        ],
+      },
+      {
+        h: 'Where Are Hampton Roads Workers’ Comp Disputes Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Virginia Beach at 281 Independence Blvd., Suite 310, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and at the Williamsburg/James City County Courthouse ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              // VERIFY V2 (fixes the audit's misdescribed § 65.2-503 link)
+              `Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating ([Va. Code § 65.2-503](${CODE}title65.2/chapter5/section65.2-503/)).`,
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring what you have. Nothing here is required to call us, and you can send it to us if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Virginia Beach, Chesapeake, and Portsmouth?',
+        body: [
+          'Yes. We take cases from across the Southside, including Virginia Beach, Chesapeake, Portsmouth, and Suffolk, and from the Peninsula. See our pages for [Virginia Beach](/virginia-beach-workers-comp-lawyer/), [Chesapeake](/chesapeake-workers-comp-lawyer/), [Portsmouth](/portsmouth-workers-comp-lawyer/), [Suffolk](/suffolk-workers-comp-lawyer/), [Hampton](/hampton-workers-comp-lawyer/), and [Newport News](/newport-news-workers-comp-lawyer/).',
+        ],
+      },
+      {
+        h: 'Talk to a Workers’ Comp Lawyer About Your Hampton Roads Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
   },
-
   // --------------------------------------------------------------- Virginia Beach
+  // Rewritten Nov 1, 2026 (City Page Rewrite Brief, file 30, batch B #8; model: the Harrisonburg / Shenandoah Valley entry).
+  // Research and sources: "SEO Audit - 10-30-26/33d - Virginia Beach Page Research.md" (move into "SEO Audit - 10-30-26" with the batch).
+  // Fixes the audit's flags: the mismatched "eligible" link is gone, and the page now names the Commission's
+  // regional office in the city (281 Independence Blvd., Suite 310; checked on the Commission's page Nov 1, 2026).
+  // Legal wording: shared constants, the Harrisonburg model's checked wording (25a), and the doctor-panel sentence
+  // checked in 17a (Nov 1 addendum), as on the Newport News page.
+  //
+  // VERIFY (new wording; send to the authority check before Bryn sees it):
+  //  B1. "Hurt at a Summer or Part-Time Job?" section: "That alone doesn’t take you out of workers’ comp. What matters
+  //      is whether you were an employee and whether your employer is covered." New legal sentences.
+  //  B2. "A claim from Kempsville or the Oceanfront follows the same Virginia Workers’ Compensation Act": the model's
+  //      sentence with places swapped (same as Norfolk V3); true only for claims under the Virginia Act, which is
+  //      why the federal line follows the employer list.
+  //  B3. Employer names as printed in the Virginia Works list: "Acoustial Sheetmetal Co" (printed with that spelling;
+  //      the page says "Acoustical Sheetmetal"), "Hampton Roads Sanitation", "Norfolk Naval Station" (on the city's
+  //      list although the station is in Norfolk). Dragados USA called a construction company from news reports.
+  //  B4. Proof paragraph (new wording, same point as the model's).
+  //
+  // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
   {
     path: '/virginia-beach-workers-comp-lawyer/',
     name: 'Virginia Beach',
-    h1: 'Virginia Beach Workers’ Compensation Lawyer',
-    title: "Virginia Beach Workers' Comp Attorney | Pathfinder Injury Law",
+    h1: 'Virginia Beach Workers’ Comp Lawyer',
+    title: "Virginia Beach, VA Workers' Comp Lawyer | Pathfinder",
     description:
-      'Are you eligible for workers\' compensation? Find out with the help of your Virginia Beach workers’ comp lawyer at Pathfinder Injury Law.',
+      'Injured on the job in Virginia Beach? We handle only Virginia workers’ comp. Meet by phone, video, or at our Richmond office. Free consultation.',
     intro: [
-      `Hurt on the job? A [Workers’ Comp lawyer](${WC}) in Virginia Beach may be able to help you understand the care and benefits you may be eligible for after your injury.`,
-      'An accident can happen at any time, including when you’re on the clock. It doesn’t matter if you work in a busy factory or a quiet office. One wrong move can lead to a serious injury. You’re unable to work, but how are you supposed to support your family?',
-      'Pathfinder Injury Law can help you get the Workers’ Comp benefits you’re due. If you’ve been denied, or if you’re just having trouble filing your claim, a Virginia Beach Workers’ Comp lawyer can help you get the benefits you need so you can focus on your recovery without added financial or mental strain.',
+      'Injured on the job at the Oceanfront, in Town Center, in Kempsville, or anywhere else in the city? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
+      'We do not have an office in Virginia Beach. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'Am I Eligible for Workers’ Comp?',
+        h: 'What Rules Decide Whether You Get Workers’ Comp?',
         body: [
-          'When you’re hurt in a serious Virginia Beach work accident, you may be worried about whether you’re eligible for benefits at all. But you can’t afford recovery time away from work or long-term treatment for your injuries. What can you do?',
-          `Luckily, most Virginia Beach workers are [eligible for Workers’ Comp benefits](/how-to-qualify-for-workers-comp-in-virginia/). ${EMPLOYER_THRESHOLD} If your employer still denies your claim, your workers comp lawyer can help you prove you’re due Workers’ Comp benefits.`,
+          // VERIFY B2
+          'A Virginia workers’ comp claim from Kempsville or the Oceanfront follows the same rules as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
+          {
+            list: [
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
+            ],
+          },
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'Workers’ Comp Benefits for Virginia Beach Workers',
+        h: 'What Jobs and Injuries Are Common in the City?',
         body: [
-          'After a serious work injury, you may be unsure what workers’ comp pays for. Benefits may include reasonable and necessary medical care and part of your lost wages after your Virginia Beach work accident.',
-          'The insurance company is required to pay for medical treatment that is reasonable, necessary, and causally related to the accident, including related travel. That doesn’t mean it will.',
-          `You may also receive benefits that cover a portion of your lost wages. ${TWO_THIRDS} Talk to your lawyer about how much your disability benefits are worth.`,
+          'Government employs more people in the city than any other sector, and most of those jobs are local government, according to the state’s Virginia Works community profile. Among private industries, hotels and restaurants come first, just ahead of health care, with retail close behind. The city’s public schools, the city government, and Sentara Healthcare top the state’s list of the largest employers. Others on that list include:',
+          {
+            list: [
+              'Manufacturing: Stihl, which makes chain saws and other outdoor power equipment at its plant in the city',
+              // VERIFY B3
+              'Construction: Century Concrete, Acoustical Sheetmetal, and Dragados USA',
+              'Restaurants and attractions: Red Lobster, The Olive Garden, and Ocean Breeze Waterpark',
+              'Stores and delivery: Walmart, Food Lion, Harris Teeter, Kroger, Target, Amazon, and UPS',
+              'Offices: GEICO and Anthem',
+              'Public employers: Hampton Roads Sanitation and Tidewater Community College',
+            ],
+          },
+          'The list also includes the U.S. Department of Defense, the U.S. Navy Exchange, Norfolk Naval Station, and the Postal Service. Naval Air Station Oceana and its Dam Neck Annex are inside the city limits, and Joint Expeditionary Base Little Creek-Fort Story sits in the city’s northwest corner and extends into Norfolk.',
+          // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Private jobs like these lead to sudden injuries, for example:',
+          {
+            list: [
+              'Hotel housekeepers hurt lifting a mattress or slipping in a wet bathroom',
+              'Burns and knife cuts in restaurant kitchens',
+              'Slips and falls on wet floors, pool decks, and boardwalks',
+              'Falls from ladders, scaffolds, and roofs on construction jobs',
+              'Hands caught in machinery on a production line',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Crashes while driving for work',
+            ],
+          },
+          // VERIFY B4
+          'Write things down early, because the injuries insurance companies like to dispute are the ones without a clear moment. A kitchen burn or a fall from a ladder happens all at once, and someone usually sees it. A back injury from lifting a mattress is harder: the insurance company may say there was no single identifiable incident, or that the problem is degenerative. Note the task, the room or job site, the time, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [factory accidents](/virginia-factory-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
       {
-        h: 'How to Fight a Workers’ Comp Denial',
+        h: 'Hurt at a Summer or Part-Time Job?',
         body: [
-          'When you’re denied Workers’ Comp benefits, you may need help fighting back against that denial. Your denial letter should include the reason for your denial, but you may be unsure what to do with that information.',
-          'Your Workers’ Comp lawyer can help you build your case, gathering evidence like eyewitnesses, doctor’s opinions, and video footage of the accident. From there, your lawyer can represent you at each stage of the process, including a hearing with the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/). They can help you dispute the denial and pursue the benefits you’re due.',
+          // VERIFY B1
+          'Many jobs at the Oceanfront are seasonal or part-time. That alone doesn’t take you out of workers’ comp. What matters is whether you were an employee and whether your employer is covered.',
+          'Report the injury and get treatment the same way a full-time worker would. If you were working more than one job when you were hurt, tell us about each one.',
         ],
       },
       {
-        h: 'Seek Out a Workers’ Comp Lawyer in Virginia Beach',
+        h: 'Does the Workers’ Comp Commission Have an Office in Virginia Beach?',
         body: [
-          'Your Virginia Beach work accident may have devastated you and your family. You can’t work, you’re in debt, and you’re struggling to deal with the losses you’re facing. Luckily, you don’t have to face this difficult, confusing time alone.',
-          'You can instead work with our team at Pathfinder Injury Law. Your Virginia Beach Workers’ Comp lawyer can be your guide when you’re struggling to get compensated. To take advantage of your free consultation, reach out by calling {phone} or by completing the [online contact form](#contact) below.',
+          `Yes. The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its regional office for this area is at 281 Independence Blvd., Suite 310, and the Commission lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and in Eastville on the Eastern Shore ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will. Your employer must offer a panel of at least three doctors, and you choose one.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/) and [whether it pays for lost wages](${WC}does-virginia-workers-comp-pay-for-lost-wages/).`,
+        ],
+      },
+      {
+        h: 'What Should I Have Ready When We Talk?',
+        body: [
+          'Gather what you have and send it to us before a phone or video meeting, or bring it to Richmond. Nothing here is required to call us.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Sandbridge, Pungo, and the Rest of the City?',
+        body: [
+          'Yes. We take cases from every part of the city, from Great Neck and Lynnhaven to Hilltop, Sandbridge, and Pungo, and from across Hampton Roads. See our pages for [Norfolk](/norfolk-workers-comp-lawyer/), [Chesapeake](/chesapeake-workers-comp-lawyer/), and [Portsmouth](/portsmouth-workers-comp-lawyer/). Across the Chesapeake Bay, our [Eastern Shore page](/eastern-shore-workers-comp-lawyer/) covers our Chincoteague office.',
+        ],
+      },
+      {
+        h: 'Talk to Us About Your Workers’ Comp Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],

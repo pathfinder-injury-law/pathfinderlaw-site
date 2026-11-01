@@ -169,7 +169,7 @@ Insurance companies often try to pay as little as possible on knee claims, even 
 
 ### What is the average impairment rating for a total knee replacement?
 
-Virginia has no set or average rating for a knee replacement. A doctor rates the permanent loss of use of your leg. If the replacement improves how your leg works, Virginia measures the loss of use as it was before the replacement, not after, so a good surgical result does not shrink the rating. Each 1% of the leg pays 1.75 weeks of compensation ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)), so a 30% rating is 52.5 weeks of pay. The insurance company often sends injured workers to its own doctor, who may give a lower number. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
+Virginia has no set or average rating for a knee replacement. A doctor rates the permanent loss of use of your leg. If the replacement improves how your leg works, Virginia measures the loss of use as it was before the replacement, not after, so a good surgical result does not shrink the rating. Each 1% of the leg pays 1.75 weeks of compensation ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)), so a 30% rating is 52.5 weeks of pay. The insurance company often sends injured workers to its own doctor, who may give a lower number. Here’s more on [how impairment ratings work in Virginia](/impairment-rating-virginia-workers-comp/). Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
 
 ### Will workers’ comp pay for a knee replacement years after my injury?
 
@@ -177,7 +177,7 @@ It can, if the replacement is causally related to the work injury and your medic
 
 ### Is a torn meniscus at work worth filing a claim?
 
-Yes, file it. Some tears settle down with therapy. Others lead to surgery and, years later, a knee replacement. A filed claim protects your deadline if the knee doesn’t heal the way everyone expected. Hurt your ankle in the same fall? Here’s our guide to [ankle injuries at work](/ankle-injury-workers-comp/).
+Yes, file it. Some tears settle down with therapy. Others lead to surgery and, years later, a knee replacement. A filed claim protects your deadline if the knee doesn’t heal the way everyone expected. Hurt your ankle in the same fall? Here’s our guide to [ankle injuries at work](/ankle-injury-workers-comp/). If your other knee started hurting from limping on the injured one, here’s when [an injury from favoring the first one](/injured-another-body-part-favoring-work-injury/) is covered.
 
 ## Talk to Pathfinder Injury Law About Your Knee Injury
 
