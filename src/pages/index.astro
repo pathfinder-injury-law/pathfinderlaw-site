@@ -36,11 +36,15 @@ const results = [
     amount: '$1,200,000',
     count: 1200000,
     text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.',
+    linkText: 'ankle injury',
+    href: '/ankle-injury-workers-comp/',
   },
   {
     amount: '$360,000',
     count: 360000,
     text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.',
+    linkText: 'back injury',
+    href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/',
   },
   {
     amount: '$250,000',
@@ -51,6 +55,8 @@ const results = [
     amount: '$240,000',
     count: 240000,
     text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.',
+    linkText: 'lumbar herniation',
+    href: '/what-should-you-do-if-you-have-a-spine-injury-at-work/',
   },
 ];
 ---
@@ -207,7 +213,7 @@ const results = [
         {results.map((r) => (
           <article class="result">
             <p class="amount" data-count={r.count}>{r.amount}</p>
-            <p>{r.text}</p>
+            <p>{r.href ? <>{r.text.split(r.linkText)[0]}<a href={r.href}>{r.linkText}</a>{r.text.split(r.linkText).slice(1).join(r.linkText)}</> : r.text}</p>
           </article>
         ))}
       </div>
