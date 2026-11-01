@@ -51,6 +51,8 @@ Here is an example. A warehouse worker has mild arthritis in one hip. If the hip
 
 This is where hip claims are most often fought. Expect the insurance company to say your problem is degenerative. What your doctor writes about the cause usually matters more than anything else.
 
+Hip pain can also start months after a different work injury, from limping on a hurt ankle or knee. That can be covered too. Here’s when [an injury from favoring the first one](/injured-another-body-part-favoring-work-injury/) is covered.
+
 ## Steps to Take After a Hip Injury at Work
 
 1. **Get medical care.** Tell every doctor that you hurt your hip at work and how it happened, so your records say so from the start. If your other hip, your back, or your knee hurts too, say so.
@@ -79,7 +81,7 @@ Hip injuries often mean a long stretch of light duty, because so many jobs requi
 
 Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/), meaning your doctor says you are as healed as you are going to get, a doctor may rate a permanent loss of use. Virginia’s schedule pays a set number of weeks for the loss of use of certain body parts ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). The hip itself is not listed, but the leg is, at 175 weeks. A hip injury can lead to PPD benefits when it causes a permanent loss of use of the leg. For example, a 20 percent loss of use of the leg works out to 35 weeks of pay at your compensation rate. The doctor’s rating has to be to the leg, not just the hip. If you have a hip replacement, the loss of use is measured as it was before the replacement, not after.
 
-How a hip injury gets rated is often disputed, and insurance companies frequently send injured workers to their own doctors for a second opinion. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
+Here’s more on [how impairment ratings work in Virginia](/impairment-rating-virginia-workers-comp/). How a hip injury gets rated is often disputed, and insurance companies frequently send injured workers to their own doctors for a second opinion. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
 
 ## What If You Need Hip Surgery?
 

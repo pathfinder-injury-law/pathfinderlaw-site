@@ -111,7 +111,7 @@ Disc herniation can lead to radiculopathy, more commonly known as a pinched nerv
 - Atrophy of the muscles innervated by the nerves impinged by the herniated disc
 - Neck pain and/or back pain
 
-A referral to an orthopedic specialist will likely be given to treat the herniated disc. Treatment of a herniated disc often involves steroid injections, pain management, and physical therapy. In severe herniated disc cases, the injured person might require a surgical procedure known as a discectomy. Spinal fusion surgery may also be necessary to stabilize the spine after the complete removal of a disc.
+A referral to an orthopedic specialist will likely be given to treat the herniated disc. Treatment of a herniated disc often involves steroid injections, pain management, and physical therapy. In severe herniated disc cases, the injured person might require a surgical procedure known as a discectomy. Spinal fusion surgery may also be necessary to stabilize the spine after the complete removal of a disc. Here’s our full guide to a [herniated disc at work](/herniated-disc-workers-comp/), including the “degenerative” defense and how disc injuries are rated.
 
 ### Spinal Cord Injury
 

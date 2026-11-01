@@ -81,7 +81,7 @@ Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-
 | 15% | 26.25 weeks of pay | 18.75 weeks of pay |
 | 20% | 35 weeks of pay | 25 weeks of pay |
 
-Each week is paid at your compensation rate. Common reasons for a rating after an Achilles rupture include weakness pushing off, lost ankle motion, and a limp. Insurance companies frequently send injured workers to their own doctors for a lower rating. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
+Each week is paid at your compensation rate. Common reasons for a rating after an Achilles rupture include weakness pushing off, lost ankle motion, and a limp. A limp can also strain your other leg, knee, or hip; here’s when [an injury from favoring the first one](/injured-another-body-part-favoring-work-injury/) is covered. Insurance companies frequently send injured workers to their own doctors for a lower rating. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
 
 ## What Is an Achilles Rupture Worth in Virginia?
 
