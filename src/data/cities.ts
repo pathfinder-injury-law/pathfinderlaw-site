@@ -53,84 +53,86 @@ export const cities: City[] = [
   {
     path: '/richmond-workers-comp-lawyer/',
     name: 'Richmond',
-    h1: 'Richmond Workers’ Comp Attorney',
-    title: "Richmond Workers' Compensation Attorney | Pathfinder Injury Law",
+    h1: 'Richmond Workers’ Comp Lawyer',
+    title: "Richmond, VA Workers' Comp Lawyer | Pathfinder Injury Law",
     description:
-      "A Richmond workers’ comp lawyer can help you recover after a work accident with the benefits you're entitled to. Call Pathfinder Injury Law now.",
+      'Hurt at work in Richmond? Pathfinder Injury Law handles only Virginia workers’ comp. Meet at our Ridge Road office or by phone or video. Free consultation.',
     intro: [
-      'After you’ve suffered a workplace injury, the last thing on your mind is securing your workers’ compensation benefits. You think workers’ compensation insurance is supposed to be there to protect you, but insurance companies typically look for reasons to deny your coverage! This makes it more difficult to secure the benefits you expected to receive and harder to get well because you’re so stressed.',
-      'A qualified workers’ compensation law firm like Pathfinder Injury Law can help you during these stressful times. Call us at {phone} or complete our online contact form for a free consultation from a workers’ compensation lawyer. We can help show you the way, and you can focus on getting better.',
+      'Hurt at work in Richmond? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and our main office is here in Richmond.',
+      'Our office is at 8010 Ridge Road, Suite A, Richmond, VA 23229. We meet by appointment, and we can meet by phone or video if getting to the office is hard while you recover. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'What is the Purpose of Workers’ Comp in Richmond?',
+        h: 'Workers’ Comp in Richmond: The Rules That Matter First',
         body: [
-          'Workers’ compensation, whether in Richmond, Mechanicsville, Midlothian, or anywhere in Virginia, provides benefits to cover medical expenses (including medical bills and medical care) and lost wages after you suffer a work-related injury.',
-          'In cases where a worker dies on the job, workers’ compensation can also provide death benefits to certain survivors or dependents who meet statutory criteria.',
-          'The goal of workers’ compensation is allegedly to help injured workers with their medical treatment and lost wages, but insurance companies look for reasons to get out of paying those benefits. It doesn’t matter the extent or nature of your injuries, whether you have partial disability or total disability or temporary disability or permanent disability. Insurance companies want to make money, and that doesn’t happen when they pay the injured worker. This is where a workers’ compensation attorney can be helpful.',
-        ],
-      },
-      {
-        h: 'Who’s Eligible for a Richmond Workers’ Comp Claim?',
-        body: [
-          `Workers’ compensation is a form of administrative law overseen by the Virginia Workers’ Compensation Commission. ${EMPLOYER_THRESHOLD} This insurance is provided by a workers’ compensation insurance carrier that provides benefits to the injured worker.`,
-          'Considered a “no-fault” system, workers’ compensation typically doesn’t care about who is responsible for the accident, unlike other areas of Virginia law. Injured workers who were hurt acting in the course and scope of their employment are usually eligible for coverage. However, if you are considered an independent contractor, you may not be eligible for workers’ compensation benefits unless you can prove you are actually an employee or are the functional equivalent of an employee. If the insurance company denies you on any of these bases, the Commission is the governing authority to hear the case.',
-          'This is why speaking to a qualified and experienced workers’ compensation attorney at an injured workers’ law firm for a free consultation regarding your claim is so important. The right workers’ compensation attorney may be able to help with your claim. They can show you the way.',
-        ],
-      },
-      {
-        h: 'Personal Injury Claims v. Workers’ Compensation Claims in Richmond',
-        body: [
-          `One of the more common questions injured workers ask is: “Can I sue my employer for my workplace injury like a personal injury lawsuit?” If your accident qualifies under the workers’ comp laws, you will be [barred from suing your employer](${WC}virginia-workers-compensation/) or any coworkers for the accident. You can still potentially file a personal injury case to recover damages against a third party (such as a negligent driver on the road) so long as they are not a coworker or in the same trade, business, or occupation as your employer.`,
-          'Workers’ comp provides a way for injured workers to recover compensation for work-related injuries, including medical, disability, and death benefits, without regard to who was at fault for the accident or their injuries. The trade-off is that the types of compensation available are more limited than what you could recover through a personal injury claim. You cannot, for example, recover noneconomic damages such as pain and suffering or mental anguish.',
-        ],
-      },
-      {
-        h: 'Benefits for Workers in Richmond, VA',
-        body: [
-          'The benefits available to workers in Richmond, Virginia, or anywhere in the state fall into four different categories:',
+          'A Richmond claim follows the same Virginia Workers’ Compensation Act as a claim anywhere else in the state. The first few rules decide whether you get anything at all:',
           {
             list: [
-              'Medical Benefits: Workers’ compensation should cover all of your reasonable, necessary, and causally related medical expenses from your work injury, including medical bills for office visits, medical procedures, medication, therapy, and other costs such as mileage to and from medical appointments.',
-              `Lost Wage Benefits (AKA Indemnity Benefits): ${TWO_THIRDS} If you are on light duty or are working fewer hours after your accident, that number may be different depending on your personal circumstances.`,
-              'Permanent Partial Disability Benefits: When a doctor determines you have recovered from your injury as much as possible, you may be sent for physical tests to assess a permanent impairment rating for the affected body parts. These benefits are based on a statutory formula.',
-              `Death Benefits: If a loved one is lost to a work-related injury, workers’ compensation can also provide death benefits. ${DEATH}`,
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your accident arose out of and in the course of your employment, and that it resulted in a sudden, identifiable, structural or mechanical change to your body.',
+              'Notice: give your employer written notice of the accident within 30 days, although exceptions exist.',
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you.`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
             ],
           },
-          `Determining [what type of benefits you may be eligible to receive](/virginia-workers-comp-lawyer/what-does-workers-comp-cover-in-virginia/) or how to go about getting those benefits can be confusing.`,
-          'If the insurance company denies your workers’ comp claim or doesn’t respond, you will need to file a claim for benefits. Claims for benefits must generally be filed within two years of an accident or else you can forever lose benefit entitlement. It is important to call an injured workers’ law firm for a free consultation and case evaluation. To learn more about how to file a workers’ compensation claim in Richmond, Virginia, or anywhere in the state, contact Pathfinder Injury Law at {phone} or use our online form. We look forward to speaking with you.',
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'How to Prepare for a Workers’ Comp Consultation',
+        h: 'What Workers’ Comp Pays',
         body: [
-          'Before your initial consultation for a case evaluation, it is important to gather a few things to help the workers’ compensation attorney understand your individual situation. This includes:',
           {
             list: [
-              'Medical records, including work notes, visit summaries, etc.',
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              'Other benefits in some cases, including vocational rehabilitation and home or vehicle modifications.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/) and [how benefits are calculated](${WC}how-is-workers-comp-calculated-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'Can I Sue My Employer?',
+        body: [
+          `Usually not. If your injury is covered by workers’ comp, that is generally your only remedy against your employer ([Va. Code § 65.2-307](${CODE}title65.2/chapter3/section65.2-307/)). You may have a separate injury claim against someone outside your company, such as a driver who hit you while you were working, but not against a coworker. More on [suing your employer in Virginia](${WC}virginia-workers-compensation/).`,
+        ],
+      },
+      {
+        h: 'If the Insurance Company Denies Your Claim',
+        body: [
+          'Insurance companies deny claims for many reasons. A few common ones: the accident didn’t happen at work, the injury is degenerative, or the treatment isn’t related to the accident.',
+          `The Virginia Workers’ Compensation Commission decides those disputes. Its headquarters is at 333 E. Franklin Street in downtown Richmond. You can ask the Commission for a hearing no matter what the insurance company decides, and some hearings are held by video. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What to Bring to Your Consultation',
+        body: [
+          'Bring what you have. Nothing here is required to call us.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
               'Medical bills',
-              'Communications between you and the employer, including any accident reports detailing the accident and injury, the physician panel given to you, etc.',
-              'Communication between you and the insurance company',
-              'Any documentation from the Virginia Workers’ Compensation Commission',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
             ],
           },
-          'Overall, any documentation about your work accident, your injuries, and communications with the insurer and Virginia Workers’ Compensation Commission will be important. The more detail you can provide, the more accurate a workers’ compensation attorney can be when assessing your case.',
         ],
       },
       {
-        h: 'Why Hire a Workers’ Compensation Law Firm?',
+        h: 'Workers Near Richmond',
         body: [
-          `A qualified and experienced [workers’ compensation law firm](${WC}) can help you build the right case to get the benefits you need. If a hearing is scheduled before the Virginia Workers’ Compensation Commission to challenge a denial by the workers’ compensation insurance company, you may want someone in your corner to help show that you are due benefits, for medical expenses and lost wages.`,
-          'Many times, proving entitlement for benefits can be difficult for certain injuries, such as back injuries or shoulder injuries, that require more medical intervention than physical therapy and an x-ray. A lawyer can help you prove your injuries, understand your options, and pursue benefits.',
-          'Additionally, an experienced workers’ compensation lawyer will look at the entire case to determine the best practices moving forward. They will know the ins and outs of litigation to plot a strategy that will work for your specific case. You won’t be just a number.',
+          'We take cases from Henrico, [Chesterfield County](/chesterfield-county-workers-comp-lawyer/), [Hanover County](/hanover-county-workers-comp-lawyer/), [Powhatan County](/powhatan-county-workers-comp-lawyer/), and every other part of Virginia. If you can’t get to Ridge Road, we can meet by phone or video.',
+          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We’ll point you to a lawyer who does.',
         ],
       },
       {
-        h: 'Injured in a Workplace Accident? Find Out How We Can Help You!',
+        h: 'Talk to a Richmond Workers’ Comp Lawyer',
         body: [
-          'At Pathfinder Injury Law, you’re not just a number. Our team cares about you and puts the attorney-client relationship at the forefront. We value personalized attention and service.',
-          'Additionally, we listen to our clients’ needs and endeavor to obtain results to fit their individual situation.',
-          'If you’re looking for a workers’ compensation attorney in Richmond or in central Virginia, we are happy to do an initial consultation over the phone or virtually. Just call us at {phone} or fill out our [contact form](/contact/) online. We look forward to speaking with you!',
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out our [contact form](/contact/).',
         ],
       },
     ],

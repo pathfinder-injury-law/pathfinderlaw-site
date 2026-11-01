@@ -11,11 +11,11 @@ import variants from '../data/imageVariants.json';
 const heroSet = (crop: 'desktop' | 'phone', fmt: 'avif' | 'webp') =>
   (variants as any)[`/images/photos/hero-over-shoulder-${crop}.webp`][fmt].map((v: { url: string; width: number }) => `${v.url} ${v.width}w`).join(', ');
 
-// Title, description and wording match the current live homepage, except the
-// approved results wording (migration plan, Section VIII, fix 1).
-const title = "Pathfinder Injury Law - Virginia Workers' Comp Lawyer";
+// Nov 1 SEO rewrite: new title, description and intro text (who we are, both offices,
+// links into the main topic pages). Layout and the other sections are unchanged.
+const title = "Pathfinder Injury Law | Virginia Workers' Comp Lawyer";
 const description =
-  "At Pathfinder Injury Law, all we do is workers' comp cases. Call our dedicated law office in Richmond, Virginia at 804-505-0633 today.";
+  "Pathfinder Injury Law handles only Virginia workers' comp, only for injured workers. Offices in Richmond and Chincoteague. Free consultation: 804-505-0633.";
 
 const topics = [
   { label: 'Construction Accidents', href: '/virginia-construction-accident-lawyer/', icon: 'construction' },
@@ -114,9 +114,18 @@ const results = [
         <hr class="rule" />
         <p class="lede lede-caps">We’ll guide you on the path to <mark>compensation.</mark></p>
         <p>
-          <strong>Pathfinder Injury Law</strong> is a Worker’s Compensation law firm nestled in the
-          outskirts of Richmond, Virginia, exclusively representing people who get injured in their
-          workplaces. Pathfinder Injury Law takes clients from all corners of the state of Virginia.
+          <strong>Pathfinder Injury Law</strong> is a family-owned workers’ compensation law firm in
+          Richmond, Virginia. We handle only Virginia workers’ comp claims, and only for people who get
+          hurt at work. Our offices are in <a href="/richmond-workers-comp-lawyer/">Richmond</a> and in
+          Chincoteague on the <a href="/eastern-shore-workers-comp-lawyer/">Eastern Shore</a>, and we
+          take cases from every part of the state, by phone or video if that’s easier.
+        </p>
+        <p>
+          Most people call us with the same few questions: <a href="/virginia-workers-comp-lawyer/">what
+          Virginia workers’ comp pays</a>, <a href="/how-to-file-a-workers-comp-claim/">how to file a
+          claim</a>, and <a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">what to do when the
+          insurance company says no</a>. Quick answers are in our
+          <a href="/virginia-workers-comp-faq/">workers’ comp FAQ</a>. Your first consultation is free.
         </p>
         <div class="btn-row">
           <a class="btn btn-dark" href="/about-us/">Learn About Our Firm</a>
