@@ -444,49 +444,120 @@ export const cities: City[] = [
   },
 
   // ---------------------------------------------------------------- Harrisonburg
+  // Rewritten Nov 1, 2026 as the firm's Shenandoah Valley page. Research and sources:
+  // "SEO Audit - 10-30-26/25 - Shenandoah Valley Page Research.md"; legal check: "25a - Valley Page Authority Check.md".
   {
     // The address keeps the live spelling ("worker") on purpose, so search rankings carry over.
     path: '/harrisonburg-workers-comp-worker/',
     name: 'Harrisonburg',
-    h1: 'Harrisonburg Workers’ Compensation Lawyer',
-    title: "Harrisonburg Workers' Comp Claims & Attorney",
+    h1: 'Harrisonburg and Shenandoah Valley Workers’ Comp Lawyer',
+    title: "Harrisonburg, VA Workers' Comp Lawyer | Shenandoah Valley",
     description:
-      'Need a Harrisonburg workers’ compensation lawyer? Call Pathfinder Injury Law at 804-505-0633 to discuss your work-related injury.',
+      'Hurt at work in Harrisonburg, Staunton, or the Shenandoah Valley? We handle only Virginia workers’ comp. Meet by phone, video, or in Richmond. Free consult.',
     intro: [
-      'Getting injured on the job can be a frightening experience. When you’re unsure whom to turn to, you can trust an experienced Workers’ Comp lawyer in Harrisonburg.',
-      `Workers can be frustrated to discover that injury claims are [often denied](${DENIALS}) or delayed. If you’re struggling to get the benefits you need, let a Harrisonburg Workers’ Comp lawyer review your case.`,
+      'Hurt at work in Harrisonburg, Staunton, Waynesboro, or anywhere else in the Shenandoah Valley? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take many cases from Rockingham and Augusta counties and up and down the I-81 corridor.',
+      'We do not have an office in the Valley. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
       {
-        h: 'What Are the Common Types of Workplace Accidents?',
+        h: 'What Are the First Rules for a Valley Workers’ Comp Claim?',
         body: [
-          `Workplace injuries are commonplace. That’s why [Virginia law](${WC}) requires most employers to carry Workers’ Compensation insurance, which includes virtually all employers with three or more employees regularly in service in Virginia. And although many people associate dangerous jobs with construction crews or other occupations involving the use of heavy machinery, we know from experience that a workplace accident can happen anywhere, anytime.`,
-          'Some of the common types of Harrisonburg workplace accidents that occur include:',
+          'A claim from Harrisonburg or Staunton follows the same Virginia Workers’ Compensation Act as a claim from anywhere else in the state. The first few rules decide whether you get anything at all:',
           {
             list: [
-              'Slips-and-falls or falls from great heights',
-              'Injuries caused by falling equipment',
-              'Injuries caused by the use of heavy machinery or specialized equipment',
-              'Burns or electrical shock',
+              `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
+              `Notice: give your employer written notice of the accident within 30 days, although exceptions exist ([Va. Code § 65.2-600](${CODE}title65.2/chapter6/section65.2-600/)).`,
+              `Filing: ${DEADLINE} File it even if the insurance company is already paying you ([Va. Code § 65.2-601](${CODE}title65.2/chapter6/section65.2-601/)).`,
+              'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
             ],
           },
-          'Of course, no list can completely cover the gamut of injuries that can impact Harrisonburg workers. That’s why if you’ve been injured in an accident, you might feel compelled to better understand how Workers’ Comp claims work. If you’re unsure, consulting an experienced Workers’ Comp lawyer could help.',
+          `Here’s [how to file a workers’ comp claim](${HOW_TO_FILE}), step by step.`,
         ],
       },
       {
-        h: 'How Do I Start the Harrisonburg Workers’ Comp Application Process?',
+        h: 'What Jobs and Injuries Are Common in the Valley?',
         body: [
-          'The Workers’ Compensation process can change depending on the nature of the injury you’ve sustained. For example, you may have suffered an injury serious enough to require you to be taken immediately to the hospital. In that case, your injury will have already been documented by medical records, and your supervisor will likely be aware of your injuries.',
-          'In other cases, however, it’s advisable to attempt to document your injuries as thoroughly as possible. This could include using your phone to take pictures of the accident site, your injuries, and other evidence. Finally, it will be up to you to inform your employer of the accident as soon as possible and then seek medical attention.',
-          `Once these steps are complete, you’ll need to fill out the required paperwork to [officially file your claim](https://workcomp.virginia.gov/forms/claim-form). ${NOTICE} Failing to do so could affect your ability to receive workers comp benefits.`,
-          `Fortunately, a claim denial doesn’t mean all hope is lost. A Workers’ Comp lawyer in Harrisonburg can help you take your claim to a hearing before the Virginia Workers’ Compensation Commission.`,
+          'Manufacturing employs more people than any other industry in both the Harrisonburg and Staunton-Waynesboro metro areas, according to the state’s Virginia Works community profiles. The state’s lists of the largest employers in those two areas include:',
+          {
+            list: [
+              'Food companies: Cargill Meat Solutions, Pilgrim’s Pride, George’s Foods, and Perdue Products in the Harrisonburg area, and The Hershey Company and McKee Foods in the Staunton-Waynesboro area',
+              'Warehouse and delivery work: Amazon Fulfillment Services and Amazon Logistics, plus UPS and Federal Express',
+              'Health care: Sentara Healthcare, Augusta Medical Center, and Western State Hospital',
+            ],
+          },
+          'Jobs like these produce sudden injuries, for example:',
+          {
+            list: [
+              'Knife and blade cuts on a processing line',
+              'Slips and falls on wet or greasy floors',
+              'Hands and arms caught in conveyors, packaging equipment, or other machinery',
+              'Forklift and pallet jack accidents, and falls from loading docks',
+              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Nurses and aides hurt lifting or moving a patient',
+              'Crashes while driving a truck or delivery van for work',
+            ],
+          },
+          'Some of these claims are easier to prove than others. A knife cut happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down what you were lifting, when it happened, and who you told.',
+          'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [factory accidents](/virginia-factory-accident-lawyer/) and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
       {
-        h: 'Contact a Workers’ Comp Lawyer in Harrisonburg Today',
+        h: 'Are Farm Workers Covered by Workers’ Comp in Virginia?',
         body: [
-          'At Pathfinder Injury Law, we’re motivated by a genuine desire to defend the rights of injured Harrisonburg workers. We help clients take denied Workers’ Compensation claims to a hearing before the Virginia Workers’ Compensation Commission, and we can talk with you about whether that is an option in your case.',
-          'Call {phone} or [fill out the below form](#contact) to set up your free case consult with a Harrisonburg Workers’ Comp lawyer from our firm.',
+          `Not always. The Workers’ Compensation Act leaves out farm and horticultural laborers unless the employer regularly has in service more than three full-time employees ([Va. Code § 65.2-101](${CODE}title65.2/chapter1/section65.2-101/)).`,
+          'That rule matters here. In the 2022 Census of Agriculture, Rockingham County ranked first in Virginia in the value of farm products sold (about $1.2 billion), and Augusta County ranked second (about $448 million). The two counties also ranked first and second in the state in poultry and egg sales.',
+          'The farm rule is stricter than the general one. Most employers have to carry coverage once they regularly have three or more employees. For farm and horticultural work, the employer needs more than three, and they have to be full-time. If you work on a farm or for a company that processes what farms produce, the details of your job matter. Tell us what you do and who pays you.',
+        ],
+      },
+      {
+        h: 'Where Are Valley Workers’ Comp Disputes Decided?',
+        body: [
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Harrisonburg at 136 W. Elizabeth St., Suite 101, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 113 East Beverley St. in Staunton and 20 S. Randolph St. in Lexington ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
+        ],
+      },
+      {
+        h: 'What Does Workers’ Comp Pay?',
+        body: [
+          {
+            list: [
+              `Wage checks while you can’t work: ${TWO_THIRDS}`,
+              'Wage checks on light duty at lower pay: two-thirds of the difference between what you earned before and what you earn now, up to the weekly maximum.',
+              'Medical treatment: the insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
+              'Permanent partial disability: a set number of weeks of pay for a permanent loss of use of certain body parts, based on a doctor’s rating.',
+              `Death benefits: ${DEATH}`,
+            ],
+          },
+          `Workers’ comp does not pay for pain and suffering. More on [what workers’ comp covers in Virginia](${WC}what-does-workers-comp-cover-in-virginia/).`,
+        ],
+      },
+      {
+        h: 'What Should I Bring to a Consultation?',
+        body: [
+          'Bring what you have. Nothing here is required to call us, and you can send it to us if we meet by phone or video.',
+          {
+            list: [
+              'Medical records, work notes, and visit summaries',
+              'Medical bills',
+              'Anything from your employer: the accident report, the list of doctors you were given, emails or texts about the injury',
+              'Letters or emails from the insurance company',
+              'Anything from the Virginia Workers’ Compensation Commission',
+            ],
+          },
+        ],
+      },
+      {
+        h: 'Do You Take Cases From Staunton, Waynesboro, and the Rest of the Valley?',
+        body: [
+          'Yes. We take cases from Harrisonburg, Rockingham County, Staunton, Waynesboro, Augusta County, Page County, Shenandoah County, and the rest of the I-81 corridor. Farther north, the Commission also lists hearing locations in Stephens City and Berryville. Farther south, see our [Roanoke workers’ comp page](/roanoke-workers-comp-lawyer/).',
+          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We’ll point you to a lawyer who does.',
+        ],
+      },
+      {
+        h: 'Talk to a Workers’ Comp Lawyer About Your Valley Claim',
+        body: [
+          'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
         ],
       },
     ],
