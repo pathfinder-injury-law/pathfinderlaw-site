@@ -67,7 +67,7 @@ A foot sprain stretches or tears the ligaments that hold the bones together, usu
 
 ### Achilles Tendon Tears
 
-The Achilles tendon connects your calf muscles to your heel. It can tear or rupture during a sudden push-off, a jump, or a missed step. Many people feel or hear a pop, followed by pain, swelling, and stiffness.
+The Achilles tendon connects your calf muscles to your heel. It can tear or rupture during a sudden push-off, a jump, or a missed step. Many people feel or hear a pop, followed by pain, swelling, and stiffness. Here’s more on an [Achilles tendon rupture at work](/achilles-tendon-rupture-workers-comp/), including how the insurance company fights these claims.
 
 ### Nerve Injuries and Foot Drop
 

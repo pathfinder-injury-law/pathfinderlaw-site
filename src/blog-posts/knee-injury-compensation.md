@@ -1,9 +1,9 @@
 ---
 title: "Hurt Your Knee at Work in Virginia? Here’s What Workers’ Comp Covers"
 metaTitle: "Knee Injury at Work in Virginia: Workers’ Comp Payouts"
-description: "Hurt your knee at work in Virginia? Learn what workers’ comp pays for, what affects the value of a knee claim, and why there is no average payout."
+description: "Hurt your knee at work in Virginia? What workers’ comp pays for a torn meniscus, a torn ACL, or a knee replacement, and what drives a knee claim’s value."
 date: 2022-10-04T19:15:50Z
-updated: 2026-10-31T18:00:00Z
+updated: 2026-11-01T20:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
@@ -30,7 +30,7 @@ Four main ligaments hold the knee together:
 - The **medial collateral ligament (MCL)** on the inside and the **lateral collateral ligament (LCL)** on the outside control side-to-side movement.
 - The **anterior cruciate ligament (ACL)** and **posterior cruciate ligament (PCL)** cross inside the joint and control front-to-back movement.
 
-Any of these can tear partly or completely. ACL tears often come from a sudden stop, a pivot, or a bad landing. A complete tear often needs surgery.
+Any of these can tear partly or completely. ACL tears often come from a sudden stop, a pivot, or a bad landing. A complete tear often needs surgery. See [torn ACL at work](#torn-acl-at-work-surgery-time-off-and-your-claim) below.
 
 ### Broken Kneecap and Other Fractures
 
@@ -96,6 +96,46 @@ Some knee injuries do not heal with rest, medication, injections, or therapy. A 
 
 If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it, along with follow-up care such as physical therapy. That does not mean it will. Insurance companies often fight surgery requests. If it refuses, or your claim has been denied, you can ask the Commission for a hearing. Your doctor’s written opinion on why the surgery is needed and how it connects to the accident is usually the key evidence.
 
+## When a Torn Meniscus Leads to a Knee Replacement
+
+**A torn meniscus at work can lead to a knee replacement months or years later, and Virginia workers’ comp can pay for the replacement if the work injury caused it or sped up the arthritis behind it.** The meniscus cushions the joint. The American Academy of Orthopaedic Surgeons says meniscus and ligament injuries can make the knee unstable and add wear that, over time, can lead to arthritis ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/arthritis-of-the-knee/)). Arthritis that follows an injury is one of the listed reasons for a total knee replacement ([AAOS](https://www.orthoinfo.org/en/treatment/total-knee-replacement/)).
+
+The path usually looks like this:
+
+1. **The tear.** A twist on a planted foot or a fast rise from a squat. An MRI confirms it.
+2. **The first surgery.** Usually arthroscopy, either trimming the torn piece (a partial meniscectomy, about 3 to 6 weeks of recovery) or stitching it (a repair, about 3 to 6 months) ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/meniscus-tears/)).
+3. **The knee never quite recovers.** Pain, swelling, and stiffness come back, and later X-rays show arthritis.
+4. **The replacement.** Your surgeon recommends a total knee replacement.
+
+### Where Knee Replacement Claims Get Fought
+
+The insurance company’s main argument is almost always the same: the replacement is for age-related arthritis, not the work injury. Expect it if your first MRI mentioned arthritis or called the tear “degenerative.” The legal question is causation. A work accident that aggravates or speeds up a pre-existing condition can still be covered, so the fight comes down to what the doctors say. Your surgeon’s written opinion that the work injury caused or accelerated the need for the replacement is usually the deciding evidence. The insurance company will often get the opposite opinion from its own doctor.
+
+### What a Replacement Changes in Your Claim
+
+| Part of the claim | What changes |
+|---|---|
+| Medical | If the replacement is reasonable, necessary, and causally related to the accident, the insurance company is required to pay for it and the rehab after it ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). That does not mean it will. |
+| Wage checks | Most people resume daily activities within 3 to 6 weeks of a knee replacement ([AAOS](https://www.orthoinfo.org/en/treatment/total-knee-replacement/)), but heavy work takes longer. If you were back at work, wage checks can restart. A claim for them generally must be filed within 24 months from the last day for which you were paid compensation under an award, and checks generally can’t be awarded for more than 90 days before you file ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). |
+| Permanent rating | A replacement often changes the permanent loss of use of your leg. Your doctor rates it once you heal from the replacement. Each 1% of the leg is worth 1.75 weeks of pay, because the leg is scheduled at 175 weeks ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). A claim for a new or higher rating generally must be filed within 36 months from the last day for which compensation was paid under an award ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). |
+| Settlement | A full and final settlement usually closes your medical benefits for good. Settle before a likely replacement, and workers’ comp will not pay for it. |
+
+## Torn ACL at Work: Surgery, Time Off, and Your Claim
+
+**Virginia workers’ comp covers a torn ACL when a specific accident at work caused it, and a complete tear usually means reconstruction surgery and months away from heavy work.** Complete tears usually need reconstruction because the knee feels unstable, and most people return to full sports in 6 to 12 months ([AAOS](https://www.orthoinfo.org/en/treatment/acl-injury-does-it-require-surgery/)). Heavy work on ladders, docks, and job sites often follows a similar timeline.
+
+### Torn ACL and Meniscus Together
+
+About half of ACL injuries happen along with other damage, such as a meniscus tear, cartilage damage, or another torn ligament ([AAOS](https://www.orthoinfo.org/en/treatment/acl-injury-does-it-require-surgery/)). Two injuries in one knee give the insurance company two chances to dispute something. It may accept the ACL and call the meniscus tear “degenerative,” or the other way around. Make sure every injury is in your medical records and listed on your claim, because the insurance company can refuse to pay for treatment of an injury it says was never part of the claim.
+
+### Can You Work With a Torn ACL?
+
+Some people can, especially in lighter jobs. Orthopedic surgeons say people who do light manual work or sit most of the day may manage a torn ACL without surgery ([AAOS](https://www.orthoinfo.org/en/treatment/acl-injury-does-it-require-surgery/)). In a workers’ comp case, that choice has consequences:
+
+- **Light duty.** If your doctor releases you to light duty and your employer offers a job within your restrictions, refusing it can stop your wage checks ([Va. Code § 65.2-510](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-510/)).
+- **Lower pay.** If the light-duty job pays less than you earned before, you may be owed two-thirds of the difference ([Va. Code § 65.2-502](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-502/)).
+- **Turning down surgery.** Refusing treatment your doctor recommends, without a good reason, can stop your wage checks until you accept the treatment, and you may not get paid for that time ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). Surgeons also note that many people who skip ACL surgery later hurt another part of the knee because it stays unstable ([AAOS](https://www.orthoinfo.org/en/treatment/acl-injury-does-it-require-surgery/)). If you and your surgeon decide against surgery, make sure the reasons are in the records.
+
 ## What Is the Average Payout for a Knee Injury at Work in Virginia?
 
 There is no reliable average. Knee claims range from a few weeks of wage checks for a sprain to years of benefits and surgery for a torn ACL or a knee replacement, and the numbers do not average out into anything useful for your case. These are the things that drive what a knee claim is worth:
@@ -124,6 +164,20 @@ A realistic number depends on all of these at once, and the insurance company ru
 ## Where Knee Claims Get Fought
 
 Insurance companies often try to pay as little as possible on knee claims, even after accepting them. Common fights include whether the injury is new or degenerative, whether surgery is needed, and what the impairment rating should be. Each fight is decided by medical records, doctors’ opinions, and deadlines most people don’t see coming.
+
+## Knee Injury Questions
+
+### What is the average impairment rating for a total knee replacement?
+
+Virginia has no set or average rating for a knee replacement. A doctor rates the permanent loss of use of your leg after you heal from the surgery, and the rating depends on how well the new knee works. Each 1% of the leg pays 1.75 weeks of compensation ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)), so a 30% rating is 52.5 weeks of pay. The insurance company often sends injured workers to its own doctor, who may give a lower number. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
+
+### Will workers’ comp pay for a knee replacement years after my injury?
+
+It can, if the replacement is causally related to the work injury and your medical benefits are still open. If you settled your claim full and final, your medical benefits are usually closed for good. Wage checks for the time off after the replacement have their own deadlines, so don’t wait for the surgery date to act.
+
+### Is a torn meniscus at work worth filing a claim?
+
+Yes, file it. Some tears settle down with therapy. Others lead to surgery and, years later, a knee replacement. A filed claim protects your deadline if the knee doesn’t heal the way everyone expected. Hurt your ankle in the same fall? Here’s our guide to [ankle injuries at work](/ankle-injury-workers-comp/).
 
 ## Talk to Pathfinder Injury Law About Your Knee Injury
 
