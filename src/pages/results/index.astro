@@ -15,21 +15,21 @@ const description =
   'Past Virginia workers’ compensation settlements in back, brain, ankle, spine, and other injury cases, most reached at mediation before the Commission.';
 
 const results = [
-  { amount: '$1,200,000', count: 1200000, text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$360,000', count: 360000, text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.' },
+  { amount: '$1,200,000', count: 1200000, text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.', linkText: 'ankle injury', href: '/ankle-injury-workers-comp/' },
+  { amount: '$360,000', count: 360000, text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.', linkText: 'back injury', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/' },
   { amount: '$250,000', count: 250000, text: 'Settlement obtained in a contested concussion/brain injury Workers’ Compensation case with psychosomatic issues following mediation before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$240,000', count: 240000, text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$240,000', count: 240000, text: 'Settlement obtained in a 20-year-old back injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$240,000', count: 240000, text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.', linkText: 'lumbar herniation', href: '/what-should-you-do-if-you-have-a-spine-injury-at-work/' },
+  { amount: '$240,000', count: 240000, text: 'Settlement obtained in a 20-year-old back injury case before the Virginia Workers’ Compensation Commission.', linkText: 'back injury', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/' },
   { amount: '$195,000', count: 195000, text: 'Settlement obtained in a contested multi-body-part case before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$195,000', count: 195000, text: 'Full and final settlement obtained in a slip and fall hip injury case involving a public school teacher following mediation before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$175,000', count: 175000, text: 'Settlement obtained in a gunshot wound spinal injury workers’ compensation case before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$170,000', count: 170000, text: 'Settlement obtained in a back injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$195,000', count: 195000, text: 'Full and final settlement obtained in a slip and fall hip injury case involving a public school teacher following mediation before the Virginia Workers’ Compensation Commission.', linkText: 'hip injury', href: '/hurt-your-hip-at-work/' },
+  { amount: '$175,000', count: 175000, text: 'Settlement obtained in a gunshot wound spinal injury workers’ compensation case before the Virginia Workers’ Compensation Commission.', linkText: 'spinal injury', href: '/what-should-you-do-if-you-have-a-spine-injury-at-work/' },
+  { amount: '$170,000', count: 170000, text: 'Settlement obtained in a back injury case before the Virginia Workers’ Compensation Commission.', linkText: 'back injury', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/' },
   { amount: '$170,000', count: 170000, text: 'Settlement obtained in a concussion/brain injury case before the Virginia Workers’ Compensation Commission' },
   { amount: '$150,000', count: 150000, text: 'Settlement in a concussion/brain injury case before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$150,000', count: 150000, text: 'Settlement obtained in a broken ankle case before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$140,000', count: 140000, text: 'Settlement obtained in a spinal injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$150,000', count: 150000, text: 'Settlement obtained in a broken ankle case before the Virginia Workers’ Compensation Commission.', linkText: 'broken ankle', href: '/ankle-injury-workers-comp/' },
+  { amount: '$140,000', count: 140000, text: 'Settlement obtained in a spinal injury case before the Virginia Workers’ Compensation Commission.', linkText: 'spinal injury', href: '/what-should-you-do-if-you-have-a-spine-injury-at-work/' },
   { amount: '$135,000', count: 135000, text: 'Settlement obtained in a contested femur fracture case before the Virginia Workers’ Compensation Commission.' },
-  { amount: '$130,000', count: 130000, text: 'Settlement obtained in a disputed neck injury case before the Virginia Workers’ Compensation Commission.' },
+  { amount: '$130,000', count: 130000, text: 'Settlement obtained in a disputed neck injury case before the Virginia Workers’ Compensation Commission.', linkText: 'neck injury', href: '/what-should-you-do-if-you-have-a-spine-injury-at-work/' },
 ];
 ---
 <Base
@@ -63,7 +63,7 @@ const results = [
         {results.map((r) => (
           <article class="result">
             <p class="amount" data-count={r.count}>{r.amount}</p>
-            <p>{r.text}</p>
+            <p>{r.href ? <>{r.text.split(r.linkText)[0]}<a href={r.href}>{r.linkText}</a>{r.text.split(r.linkText).slice(1).join(r.linkText)}</> : r.text}</p>
           </article>
         ))}
       </div>
