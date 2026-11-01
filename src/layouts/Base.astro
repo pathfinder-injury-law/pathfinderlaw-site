@@ -63,11 +63,7 @@ const offices = site.offices.map((o) => ({
   logo: { '@id': `${origin}/#organizationLogo` },
   image: { '@id': `${origin}/#organizationLogo` },
   parentOrganization: { '@id': `${origin}/#organization` },
-  // HOLD: site.ts lists both "By appointment only" and Mon-Fri 9-5. These are the hours the site
-  // already published; change or remove them once Bryn says which is right.
-  openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' },
-  ],
+  // No opening hours: both offices are by appointment only (Bryn, Nov 1), so no walk-in hours are listed.
 }));
 // Bryn, with the career facts from his bio page (/bryn-swartz/). The old author address
 // (/author/brynswartz/) does not exist on the new site, so the author points to the bio page.
