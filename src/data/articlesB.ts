@@ -291,7 +291,8 @@ export const articlesB = {
         // settlements) removed from the last paragraph.
         html: `
           <p>In most cases, you must give notice to your employer within thirty days of the accident, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Missing these deadlines could affect your ability to receive benefits.</p>
-          <p>A request for review based on a change in condition generally must be made within 24 months from the last day for which compensation was paid, with longer periods for some claims. Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity. There are limits on consequences of your accident being covered.</p>`,
+          <p>A request for review based on a change in condition generally must be made within 24 months from the last day for which compensation was paid, with longer periods for some claims. Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity. There are limits on consequences of your accident being covered.</p>
+          <p>Here’s <a href="/how-long-does-workers-comp-last-in-virginia/">how long each workers’ comp benefit lasts in Virginia</a>.</p>`,
       },
       {
         id: 'changes',
