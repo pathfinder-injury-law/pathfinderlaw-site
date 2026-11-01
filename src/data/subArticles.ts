@@ -42,7 +42,7 @@ const FILING =
 const DISPUTE =
   'If you have received a denial of your workers’ comp claim, you have the right to dispute that decision and take your claim to a hearing before the Virginia Workers’ Compensation Commission.';
 const MEDICAL =
-  'Your workers’ comp medical benefits should cover all of your medical bills and related costs for medical treatment that is reasonable, necessary, and causally related to your work accident.';
+  'The insurance company is required to pay for medical treatment that is reasonable, necessary, and causally related to your work accident. That doesn’t mean it will.';
 const TTD =
   'If a doctor says you cannot return to work at all for a temporary period because of your injuries, you may receive two-thirds of the pre-injury average weekly wage you received during the year immediately prior to your accident, up to a maximum weekly compensation rate.';
 const TPD =
@@ -119,7 +119,7 @@ export const subArticles: SubArticle[] = [
         h2: 'Steps to Getting Your Workers’ Comp Benefits',
         blocks: [
           'Once you know why you were denied, your Workers’ Compensation lawyer can help you take the next steps toward your Workers’ Comp benefits.',
-          'First, your lawyer can help you gather evidence that you’re due Workers’ Comp benefits. This evidence can show you were injured, you were actually injured on the job, and you’re unable to work until you’ve healed. Your benefits should cover [wage replacement](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), medical bill costs, and death benefits (if a loved one was [killed in a work accident](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)).',
+          'First, your lawyer can help you gather evidence that you’re due Workers’ Comp benefits. This evidence can show you were injured, you were actually injured on the job, and you’re unable to work until you’ve healed. Benefits can include [wage replacement](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), medical bill costs, and death benefits (if a loved one was [killed in a work accident](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)).',
           'But the insurance company may continue denying you the benefits you’re due for the severe injuries you suffered. ' +
             DISPUTE +
             ' Your lawyer will help you [prepare for your work comp hearing](/steps-to-take-before-a-workers-comp-hearing/).',
@@ -429,7 +429,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'Your Virginia Disability Benefits',
         blocks: [
-          'Your Virginia Workers’ Comp covers more than your hospital bills. Your Workers’ Comp settlement should also cover part of your wages when you’re unable to work.',
+          'Your Virginia Workers’ Comp covers more than your hospital bills. Workers’ comp can also pay part of your wages when you’re unable to work.',
           'These benefits cover a [portion of your weekly income](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide). The amount and duration of the benefits you receive will depend on the type of injury you suffered and whether you’re able to return to work in any capacity. If you’re not sure what disability benefits you’re due, talk to your Workers’ Comp lawyer in Virginia about what your settlement may be worth.',
         ],
       },
@@ -458,14 +458,14 @@ export const subArticles: SubArticle[] = [
         h2: 'Medical Bills',
         blocks: [
           'After a serious work injury, you shouldn’t have to pay for your medical care yourself. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions. ' + MEDICAL,
-          'These benefits should cover your travel to medical appointments, too. For example, you may have to travel out of your town to see a specialist about your injury, and workers’ comp can reimburse mileage for travel to and from medical appointments.',
+          'Medical benefits can include travel to medical appointments, too. For example, you may have to travel out of your town to see a specialist about your injury, and workers’ comp can reimburse mileage for travel to and from medical appointments.',
         ],
       },
       {
         h2: 'Disability Benefits',
         blocks: [
           'You may be unable to work, but that doesn’t mean you can get by without an income. You still need some wage replacement benefits to cover your daily expenses and needs.',
-          'Your disability benefits should cover at least part of your original wages. ' + TTD,
+          'Disability benefits replace part of your wages, not all of them. ' + TTD,
           TPD,
         ],
       },
@@ -533,7 +533,7 @@ export const subArticles: SubArticle[] = [
         h2: 'Your Virginia Wage Replacement Benefits',
         blocks: [
           'When you’re hurt on the job in Virginia, you may be due benefits that cover your losses for a work accident. You may expect coverage for your medical bills, from specialist care to travel costs. But what about your wages?',
-          'Your disability benefits should cover a portion of the wages you would have originally received. Although you won’t receive your full paycheck, these funds can help keep you and your family supported and fed while you heal from your injuries.',
+          'Disability benefits replace a portion of the wages you would have received. Although you won’t receive your full paycheck, these funds can help keep you and your family supported and fed while you heal from your injuries.',
         ],
       },
       {

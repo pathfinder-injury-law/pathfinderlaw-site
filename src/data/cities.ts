@@ -7,7 +7,8 @@
 //    Kept: Virginia Code links, the Workers' Compensation Commission, and links inside this site.
 //  - Statements of Virginia law now use the wording Bryn reviewed on the Workers' Comp page
 //    (employer threshold, 30-day notice, two-year filing deadline "although exceptions apply",
-//    "sudden, identifiable, structural or mechanical change", death benefits, two-thirds of wage).
+//    the accident definition (Nov 1: "identifiable incident at a reasonably definite time ... sudden
+//    mechanical or structural change", per the hub authority check), death benefits, two-thirds of wage).
 //    Live sentences that had no reviewed equivalent were reworded or dropped; see the city-pages
 //    hand-over note for the list.
 //  - Phone numbers fixed (the live pages had 804-505-1633, 804-505-063 and a broken link).
@@ -40,7 +41,7 @@ const NOTICE = 'The Virginia Workers’ Compensation Act requires notice to your
 const DEADLINE =
   'Your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply.';
 const COMPENSABLE =
-  'you do have to show that your accident arose out of and in the course of your employment and that it resulted in a sudden, identifiable, structural or mechanical change to your body';
+  'you do have to show that your injury arose out of and in the course of your employment and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body';
 const DEATH =
   'These benefits can pay for a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.';
 const TWO_THIRDS =
@@ -69,7 +70,7 @@ export const cities: City[] = [
           {
             list: [
               `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
-              'What you have to show: that your accident arose out of and in the course of your employment, and that it resulted in a sudden, identifiable, structural or mechanical change to your body.',
+              'What you have to show: that your injury arose out of and in the course of your employment, and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
               'Notice: give your employer written notice of the accident within 30 days, although exceptions exist.',
               `Filing: ${DEADLINE} File it even if the insurance company is already paying you.`,
               'Fault: it doesn’t matter whether your employer caused the accident. Your own conduct can matter, for example willful misconduct or willfully breaking a known safety rule.',
@@ -215,7 +216,7 @@ export const cities: City[] = [
             ],
           },
           'Workplace accidents aren’t always caused by the negligence of a fellow colleague or a person’s employer; sometimes, accidents just happen. In this sense, Workers’ Compensation is a benefit to both employee and employer.',
-          `An injured employee won’t be required to prove that someone else is at fault in order to receive Workers’ Compensation benefits. They do have to show that the accident [arose out of and in the course of their employment](${CODE}title65.2/chapter1/section65.2-105/) and that it resulted in a sudden, identifiable, structural or mechanical change to the body. Similarly, the Workers’ Compensation system also insulates employers from the negative impact of a costly personal injury lawsuit.`,
+          `An injured employee won’t be required to prove that someone else is at fault in order to receive Workers’ Compensation benefits. They do have to show that the injury [arose out of and in the course of their employment](${CODE}title65.2/chapter1/section65.2-105/) and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to the body. Similarly, the Workers’ Compensation system also insulates employers from the negative impact of a costly personal injury lawsuit.`,
           'That being said, Workers’ Compensation doesn’t always work how it should. Sadly, many of the insurance companies offering Workers’ Compensation benefits are motivated more strongly by the desire to protect their own profit margins than to help direct benefits into the hands of workers that most deserve them.',
           'That’s why many injured workers feel compelled to retain the services of an experienced Workers’ Compensation lawyer in Hanover County to handle their case for them.',
         ],
@@ -323,7 +324,7 @@ export const cities: City[] = [
             ],
           },
           `The last point highlights the fact that, though sometimes workplace accidents are directly related to another colleague’s or employer’s negligence, freak accidents can happen for which no one is really responsible. This is a distinguishing factor in [Workers’ Compensation law](${CODE}title65.2/): no fault needs to be proven in order for benefits to be awarded.`,
-          'Instead, you do have to show that your accident arose out of and in the course of your employment and that it resulted in a sudden, identifiable, structural or mechanical change to your body.',
+          'Instead, you do have to show that your injury arose out of and in the course of your employment and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
         ],
       },
       {
@@ -369,7 +370,7 @@ export const cities: City[] = [
         body: [
           `When you’ve been hurt on the job, you should know the rights available to you. ${EMPLOYER_THRESHOLD}`,
           'Workers’ Compensation can help workers that have sustained injuries on the job in Fairfax County receive the benefits they need: compensation for medical bills or specialized treatment, temporary or partial disability, and even death benefits for certain survivors or dependents of workers who die on the job.',
-          'In theory, these benefits should be open to all who need them. Workers’ Compensation law functions differently than personal injury claims, which require proof of fault or negligence to win damages. In order for your accident to qualify for Workers’ Compensation benefits, you do have to show that your accident arose out of and in the course of your employment and that it resulted in a sudden, identifiable, structural or mechanical change to your body.',
+          'In theory, these benefits should be open to all who need them. Workers’ Compensation law functions differently than personal injury claims, which require proof of fault or negligence to win damages. In order for your accident to qualify for Workers’ Compensation benefits, you do have to show that your injury arose out of and in the course of your employment and that it was caused by an identifiable incident at a reasonably definite time that produced a sudden mechanical or structural change to your body.',
           'Unfortunately, Workers’ Comp insurance companies often look out for their own self interests ahead of those of injured workers, and claims that have no business being denied can be rejected. The process can be complicated, however, which is why injured workers often choose to work with an experienced Workers’ Comp lawyer.',
         ],
       },
@@ -562,10 +563,10 @@ export const cities: City[] = [
       {
         h: 'Benefits for Injured Suffolk Workers',
         body: [
-          'Your Suffolk Workers’ Comp benefits are key to recovering from your work accident. These benefits should cover the losses you’ve suffered for your injuries, even long-term losses that may not be fixed in a few trips to the doctor.',
+          'Your Suffolk Workers’ Comp benefits are key to recovering from your work accident. These benefits can cover medical treatment and lost wages, including long-term needs that may not be fixed in a few trips to the doctor.',
           'Because of this, you need to know what your claim is worth. If you don’t seek a Workers’ Comp lawyer, it’s easy to accept a settlement offer that doesn’t cover all your needs.',
           'For example, you need to ensure your Workers’ Comp will cover all your medical expenses after a work accident. That’s not just for your medical bills, either. You may need vocational rehabilitation, a prosthesis, or coverage for your travel expenses. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first.',
-          `Your Workers’ Comp benefits should also cover a portion of your missed wages. You still need an income to pay your bills and cover your expenses, and your lawyer can work to help you get it. ${TWO_THIRDS}`,
+          `Workers’ comp can also pay a portion of your missed wages. You still need an income to pay your bills and cover your expenses, and your lawyer can work to help you get it. ${TWO_THIRDS}`,
         ],
       },
       {
@@ -606,7 +607,7 @@ export const cities: City[] = [
           'Your work injury can be difficult and complex, but Workers’ Comp benefits may include reasonable and necessary medical care and part of your lost wages. If you’ve been hurt in a Portsmouth work accident, you may be eligible for some of the following Workers’ Comp benefits:',
           {
             list: [
-              'Medical Costs: Recovering physically can be expensive. Luckily, your Workers’ Comp should cover your [reasonable and necessary medical expenses](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf), including things like hospital bills, prostheses, and travel expenses.',
+              'Medical Costs: Recovering physically can be expensive. The insurance company is required to pay your [reasonable, necessary, and causally related medical expenses](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf), including things like hospital bills, prostheses, and travel expenses.',
               'Wage Replacement: When you’re unable to work, you may need disability benefits to cover part of the income you’re missing. Talk to your Workers’ Comp lawyer about the exact amount you may be eligible for.',
               `Death Benefits: After losing a loved one to a work accident, you shouldn’t have to worry about how you’ll afford the things you need. ${DEATH}`,
             ],
@@ -774,7 +775,7 @@ export const cities: City[] = [
       {
         h: 'What Benefits Am I Due After an Alexandria Work Accident?',
         body: [
-          'Your work accident may have left you unable to do your job in the capacity you once did without a problem. Even if you’re able to work at all, you may need financial assistance to recover from your injuries. Your Workers’ Comp benefits should cover the costs of your injuries, as well as expenses related to your injuries and disability.',
+          'Your work accident may have left you unable to do your job in the capacity you once did without a problem. Even if you’re able to work at all, you may need financial assistance to recover from your injuries. Workers’ comp can pay for your medical treatment and part of your lost wages.',
           'Below are some of the benefits you may be eligible for after a work accident:',
           { list: ['Medical care', 'Wage replacement', 'Death benefits'] },
         ],
@@ -783,7 +784,7 @@ export const cities: City[] = [
         h: 'The Workers’ Comp Claim Process',
         body: [
           'After a work accident, your first step is to seek medical care. Your injuries may worsen if not treated right away. You could face permanent damage or death without medical care. You’ll also need to notify your Alexandria employer that you’re hurt and need Workers’ Comp benefits.',
-          'If the insurance company denies your workers’ comp claim or doesn’t respond, you will need to file a claim for benefits. Claims for benefits must generally be filed within two years of an accident or else you can forever lose benefit entitlement. If you’re approved, your Workers’ Comp benefits should be paid shortly after, so you can focus on your health.',
+          'If the insurance company denies your workers’ comp claim or doesn’t respond, you will need to file a claim for benefits. Claims for benefits must generally be filed within two years of an accident or else you can forever lose benefit entitlement. Being accepted doesn’t always mean prompt payment. If the insurance company is late, you can ask the Commission for a hearing.',
           'If you’re denied, you may still be eligible for benefits. Your Workers’ Comp lawyer can review the reason for your denial, gather evidence for your claim, and represent you in your hearing to dispute the denial before the Virginia Workers’ Compensation Commission.',
         ],
       },
@@ -814,7 +815,7 @@ export const cities: City[] = [
         h: 'Eligibility for Chesapeake Workers',
         body: [
           'Many injured Chesapeake workers may be concerned they’re not eligible for Workers’ Comp benefits. You may work at a small company, for example, or you may be worried your job type isn’t covered. Luckily, Virginia law covers most employees in the state.',
-          `${EMPLOYER_THRESHOLD} You shouldn’t have to worry about whether you’re covered; you should be able to simply file your Workers’ Comp claim and focus on recovery.`,
+          `${EMPLOYER_THRESHOLD} If you aren’t sure your employer has coverage, file your claim with the Commission anyway.`,
         ],
       },
       {
@@ -828,7 +829,7 @@ export const cities: City[] = [
         h: 'Your Chesapeake Workers’ Comp Benefits',
         body: [
           'When you’re hurt at work, you may be eligible for benefits that cover the losses you’ve experienced. If you’re not sure what benefits you’re due, you may need a Workers’ Comp lawyer in Chesapeake to help you calculate all your benefits, both current and projected.',
-          'For example, you may need coverage for your medical expenses. The costs of traveling, seeing specialists, and other treatment add up quickly. Luckily, your medical benefits should cover the reasonable, necessary, and causally related costs of your treatment.',
+          'For example, you may need coverage for your medical expenses. The costs of traveling, seeing specialists, and other treatment add up quickly. The insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will.',
           'You may also be due wage replacement benefits if you’re unable to work in the capacity of your old job. The amount you receive depends on whether you’re able to work in any capacity, so talk to your Workers’ Comp lawyer about what your benefits are worth.',
         ],
       },
@@ -860,8 +861,8 @@ export const cities: City[] = [
       {
         h: 'Workers’ Comp Benefits for Norfolk Employees',
         body: [
-          'Your serious work accident can be overwhelming, so it’s not always clear what benefits you’re due. Luckily, your Workers’ Comp benefits should cover your needs as an injured Norfolk worker.',
-          'For example, you may be worried about the costs of your treatment. You can’t skip your specialist’s appointment after a head injury, for example, but you may be unable to afford treatment on your own. Luckily, your Workers’ Comp benefits should cover the reasonable, necessary, and causally related costs of your treatment and related travel expenses.',
+          'Your serious work accident can be overwhelming, so it’s not always clear what benefits you’re due. Workers’ comp can pay for your medical treatment and part of your lost wages.',
+          'For example, you may be worried about the costs of your treatment. You can’t skip your specialist’s appointment after a head injury, for example, but you may be unable to afford treatment on your own. The insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident, and related travel. That doesn’t mean it will.',
           `A Workers’ Comp lawyer in Norfolk can also help you get disability benefits, depending on the severity of your injuries and how long you’re unable to work. ${TWO_THIRDS} The length of your Workers’ Comp [may depend on the type of injuries you suffered and what body part was damaged](${CODE}title65.2/chapter5/section65.2-503/).`,
         ],
       },
@@ -906,8 +907,8 @@ export const cities: City[] = [
       {
         h: 'Workers’ Comp Benefits for Virginia Beach Workers',
         body: [
-          'After a serious work injury, you may be unsure what your Workers’ Comp benefits should cover. Benefits may include reasonable and necessary medical care and part of your lost wages after your Virginia Beach work accident.',
-          'Your reasonable, necessary, and causally related medical bills, including special costs and travel expenses, should be covered by your Workers’ Comp benefits. After all, you wouldn’t be attending these appointments if you hadn’t been injured on the job.',
+          'After a serious work injury, you may be unsure what workers’ comp pays for. Benefits may include reasonable and necessary medical care and part of your lost wages after your Virginia Beach work accident.',
+          'The insurance company is required to pay for medical treatment that is reasonable, necessary, and causally related to the accident, including related travel. That doesn’t mean it will.',
           `You may also receive benefits that cover a portion of your lost wages. ${TWO_THIRDS} Talk to your lawyer about how much your disability benefits are worth.`,
         ],
       },
