@@ -61,7 +61,7 @@ export const articlesB = {
         html: `
           <p>Before you get your Workers’ Comp benefits, you need to know what benefits you’re eligible for. Below are some of the workers comp benefits you may receive after a work injury:</p>
           <ul>
-            <li><strong>Medical Cost Coverage</strong>: Your workers’ comp medical benefits should cover your medical bills and related costs for medical treatment that is reasonable, necessary, and causally related to your work accident, including the costs of travel and specialists.</li>
+            <li><strong>Medical Cost Coverage</strong>: The insurance company is required to pay for medical treatment that is reasonable, necessary, and causally related to your work accident, including travel and specialists. That doesn’t mean it will.</li>
             <li><strong>Temporary Partial Disability Benefits</strong>: You may receive benefits to help offset loss of income when your doctor only allows you to return to work with restrictions and you are earning less than you were before you got hurt. The amount paid is two-thirds of the difference between what you were earning before you got hurt, and what you are earning now.</li>
             <li><strong>Temporary Total Disability Benefits</strong>: If a doctor says you <a href="https://workcomp.virginia.gov/documents/injured-workers-benefits-guide" rel="noopener">cannot return to work at all</a> for a temporary period because of your injuries, you may receive two-thirds of the pre-injury average weekly wage you received during the year immediately prior to your accident, up to a maximum weekly compensation rate.</li>
             <li><strong>Permanent Partial Disability Benefits</strong>: When a doctor determines you have recovered from your injury as much as possible and assigns a permanent impairment rating greater than zero percent to a body part that is eligible for permanent partial disability benefits, you may be entitled to workers’ comp benefits for the permanent damage you have suffered in that body part.</li>
@@ -94,7 +94,7 @@ export const articlesB = {
       h2: 'Contact a Work Injury Lawyer in Virginia',
       // Live: "putting in the hard work to help you achieve positive results. Our expertise—combined...".
       html: `
-        <p>After a work injury, you need <a href="${WC}">Workers’ Comp benefits</a> that cover your needs. From your initial medical care to your disability benefits, you should receive the help you need for your injuries. But what if you have some trouble getting your benefits in Virginia?</p>
+        <p>After a work injury, you need <a href="${WC}">Workers’ Comp benefits</a> that cover your needs. Those benefits can include your medical care and part of your lost wages. But what if you have some trouble getting your benefits in Virginia?</p>
         <p><a href="/">Pathfinder Injury Law</a> cares deeply about our clients and invests ourselves in your struggle, putting in the hard work for you. Our experience, combined with our care and our friendly approach, help not just to guide clients through their cases, but to put their minds at ease. Want to learn more? Give us a call at ${phone} today to get your free no-obligation consultation.</p>`,
     },
   },
@@ -177,7 +177,7 @@ export const articlesB = {
       "Pathfinder Injury Law handles workers' comp cases across Virginia. Head to our website to find out if workers' comp benefits are taxable.",
     h1: 'Are Workers’ Comp Benefits Taxable?',
     lead: `
-      <p class="lead">An on-the-job injury can be costly, taking time and money to overcome the injuries you suffered. Your Workers’ Comp benefits should help cover many of those expenses, making it easier for you to recover. You need as much of your benefits as possible, but what about your taxes?</p>
+      <p class="lead">An on-the-job injury can be costly, taking time and money to overcome the injuries you suffered. Workers’ comp can help cover many of those expenses while you recover. You need as much of your benefits as possible, but what about your taxes?</p>
       <p>No one wants to be caught off-guard when tax season arrives after a serious injury. That’s why it’s important to talk with a lawyer at <a href="${WC}">Pathfinder Injury Law</a> now, not later, if you’re hurt in a <a href="/virginia-work-injury-lawyer/">work accident</a>. They can help you pursue the benefits you need following a serious work-related injury.</p>`,
     sections: [
       {
@@ -243,7 +243,7 @@ export const articlesB = {
         h2: 'You May Be Approved or Denied',
         // Denial reasons use the reviewed Workers' Comp page list.
         html: `
-          <p>If you receive approval for your Workers’ Comp claim, your benefits should cover the costs of your injuries and recovery, as well as wage replacement for the time you’re unable to work.</p>
+          <p>If your claim is accepted, workers’ comp can pay for your medical treatment and part of your wages for the time you’re unable to work.</p>
           <p>But you’re not out of options just <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf" rel="noopener">because you were denied</a>. Denials can happen for a number of reasons. Once you determine why your claim was denied with a Workers’ Comp lawyer, you can begin to <a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">dispute the denial</a>.</p>
           <p>Reasons for an initial denial often include:</p>
           <ul>
@@ -422,7 +422,7 @@ export const articlesB = {
         // reviewed equivalent; Commission link kept as on live. Needs Bryn's review.
         html: `
           <p>If you’ve been injured on the job, your first step is to seek medical care. Yes, you need it, even if you feel fine. You may not notice a serious injury until it’s worsened, and the insurance company may doubt your claim if you don’t act immediately.</p>
-          <p>Your employer must offer a <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">panel of three doctors</a>, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.</p>`,
+          <p>Your employer must offer a <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">panel of at least three doctors</a>, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.</p>`,
       },
       {
         id: 'file',
@@ -515,8 +515,9 @@ export const articlesB = {
         id: 'types',
         h2: 'What Types of Workers’ Compensation Settlements Are There?',
         // Live listed four types, including a structured settlement (removed per Bryn). The "full and
-        // final" and "open medical" descriptions use the reviewed Workers' Comp page wording. The
-        // Medicare set-aside type is LIVE WORDING (federal rule, no reviewed equivalent).
+        // final" and "open medical" descriptions use the reviewed Workers' Comp page wording. The live
+        // Medicare set-aside bullet was removed earlier; the Medicare section below copies the wording
+        // Bryn approved on /work-injury-compensation/ (Oct 31, checked against the CMS WCMSA Reference Guide).
         html: `
           <p>Common types of Workers’ Compensation settlements include:</p>
           <ul>
@@ -524,6 +525,13 @@ export const articlesB = {
             <li><strong>Lump Sum Settlement With Open Medical Benefits:</strong> It is exceedingly rare to settle a case for a lump sum with open medicals.</li>
           </ul>
           <p>You should always consult with a lawyer before accepting a settlement. To learn more, read <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">Should I Accept a Lump Sum Settlement?</a></p>`,
+      },
+      {
+        id: 'medicare',
+        h2: 'Settlements When Medicare Is Involved',
+        html: `
+          <p>Not every settlement needs a <strong>Workers’ Compensation Medicare Set-Aside</strong>. The question comes up when you are already on Medicare, or have a reasonable expectation of getting on Medicare within 30 months, for example because you have applied for Social Security Disability or are 62 and a half. Medicare will review a proposed set-aside only when the settlement is over certain amounts: $25,000 if you are on Medicare, or $250,000 if you expect to be. Medicare says those amounts reflect its own workload, not a safe zone, and that its interests have to be considered in every settlement (<a href="https://www.cms.gov/medicare/coordination-benefits-recovery/workers-comp-set-aside-arrangements" rel="noopener">CMS WCMSA Reference Guide</a>).</p>
+          <p>When there is a set-aside, part of the settlement goes into a separate, interest-bearing account that can be used only for Medicare-covered treatment of the work injury. The insurance company funds it as part of the settlement. A professional administrator can manage it, but often you are the one who has to: paying the bills from it, keeping records, and sending Medicare a yearly accounting. Medicare won’t pay for treatment related to the work injury until that money is used up, and used properly. Spend it on anything else, and Medicare can refuse to pay for work-injury care until the full amount is accounted for. More on <a href="/work-injury-compensation/">how much compensation you can get for a work injury</a>.</p>`,
       },
       {
         id: 'average',

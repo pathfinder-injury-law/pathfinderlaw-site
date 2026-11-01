@@ -3,24 +3,33 @@ title: "What to Do When Your Employer Lists You as an Independent Contractor?"
 metaTitle: "Employer Listed Me As An Independent Contractor - What to Do"
 description: "What should you do if your employer lists you as an independent contractor? Speak to the trusted team at Pathfinder Injury Law in Virginia."
 date: 2021-07-22T12:36:00Z
-updated: 2022-09-21T19:35:17Z
+updated: 2026-11-01T20:00:00Z
 tags: ["eligibility"]
 ---
 
 If you are being listed as an independent contractor for the first time or just started working with a new employer, you might be confused by this term and what it means for your job and taxes. Independent contractors do not have the same status and protections as regular employees in many situations.
 
-However, an employer can’t just call you an independent contractor to avoid certain requirements at the federal or state levels. If you are performing duties as a regular employee, then you need to be paid and referred to as a regular employee. If you’re unsure whether your position should be contracted out or not, contact a [lawyer](/virginia-workers-comp-lawyer/) for help.
+However, an employer can’t make you an independent contractor just by calling you one. For Virginia workers’ comp, what matters most is how you actually work, and whether the company has the right to control how you do it. If you’re unsure whether your position should be contracted out or not, contact a [lawyer](/virginia-workers-comp-lawyer/) for help.
 
 ## Make Sure You Are an Employee
 
-If your employer has you listed as an independent contractor, first look at how you actually work. Factors like these may suggest that you are an independent contractor rather than a regular employee. Your classification depends on the facts of your situation.
+If your employer has you listed as an independent contractor, first look at how you actually work. Under Virginia workers’ comp law, the most important question is whether the company has the right to control how you do the work, not just the result it wants. The company doesn’t have to use that control every day. What matters most is whether it has the right to. Courts also look at who hired you, how you are paid, and whether the company can fire you.
 
-- You are paid by project, not hourly or monthly.
+Signs that point toward being an employee:
+
+- The company tells you how, when, and where to do the job.
+- The company supplies the tools and equipment.
+- You are paid by the hour or on a regular schedule, not by the finished project.
+- The company can fire you at any time, not just end a contract.
+
+Signs that point toward being an independent contractor:
+
+- You decide how the job gets done and only answer for the result.
 - You use your own tools and [equipment](/how-faulty-equipment-causes-workplace-injuries/).
-- You do part of the job off-site and don’t have to work regular work hours.
-- You can subcontract some of the work to others.
-- You complete projects without ample or specific instructions.
-- You can perform other services and work for other clients at the same time.
+- You can hire others to do part of the work.
+- You work for other clients at the same time.
+
+No single sign decides it. Your classification depends on the facts of your situation, and if the insurance company says you weren’t an employee, the Virginia Workers’ Compensation Commission can decide.
 
 Usually, people know if they are independent contractors. If you have never heard of the term before and work like other employees, your employer may have made a mistake or is trying to not give you all your benefits.
 
