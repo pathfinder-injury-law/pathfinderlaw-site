@@ -49,6 +49,61 @@ const addressOf = (o: { lines: string[] }) => {
   return { '@type': 'PostalAddress', streetAddress: o.lines[0], addressLocality: m[1], addressRegion: m[2], postalCode: m[3], addressCountry: 'US' };
 };
 const virginia = { '@type': 'State', name: 'Virginia' };
+// One LegalService per office, so each address can be matched to its own Google Business Profile.
+// The firm-wide LegalService below points to them by id.
+const officeId = (o: { name: string }) => `${origin}/#legalservice-${o.name.toLowerCase()}`;
+const offices = site.offices.map((o) => ({
+  '@type': 'LegalService',
+  '@id': officeId(o),
+  name: `${site.name}, ${o.name} office`,
+  url: new URL(o.page?.href ?? '/', origin).href,
+  telephone: '+18045050633',
+  address: addressOf(o),
+  hasMap: o.mapUrl,
+  logo: { '@id': `${origin}/#organizationLogo` },
+  image: { '@id': `${origin}/#organizationLogo` },
+  parentOrganization: { '@id': `${origin}/#organization` },
+  // HOLD: site.ts lists both "By appointment only" and Mon-Fri 9-5. These are the hours the site
+  // already published; change or remove them once Bryn says which is right.
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' },
+  ],
+}));
+// Bryn, with the career facts from his bio page (/bryn-swartz/). The old author address
+// (/author/brynswartz/) does not exist on the new site, so the author points to the bio page.
+const person = {
+  '@type': 'Person',
+  '@id': `${origin}/#author`,
+  name: 'Bryn Swartz',
+  url: `${origin}/bryn-swartz/`,
+  image: `${origin}/images/photos/bryn.jpg`,
+  jobTitle: 'Owner & Attorney',
+  description:
+    'Virginia workers’ compensation lawyer, licensed in Virginia since 2011. Former prosecutor with the Virginia Office of the Attorney General. Founded Pathfinder Injury Law in 2019.',
+  worksFor: { '@id': `${origin}/#organization` },
+  knowsAbout: ['Workers’ compensation', 'Virginia workers’ compensation law'],
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'license',
+    name: 'Licensed to practice law in Virginia',
+    dateCreated: '2011',
+    recognizedBy: { '@type': 'Organization', name: 'Virginia State Bar', url: 'https://www.vsb.org/' },
+  },
+  hasOccupation: { '@type': 'Occupation', name: 'Attorney', occupationLocation: virginia },
+  // Schools, and the office where he was a prosecutor.
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Randolph-Macon College' },
+    { '@type': 'CollegeOrUniversity', name: 'University of Richmond School of Law' },
+    { '@type': 'GovernmentOrganization', name: 'Virginia Office of the Attorney General' },
+  ],
+  memberOf: [
+    { '@type': 'Organization', name: 'Virginia State Bar' },
+    { '@type': 'Organization', name: 'Virginia Trial Lawyers Association' },
+  ],
+  sameAs: site.social.filter((s) => s.name === 'LinkedIn').map((s) => s.url),
+};
+// The full Person goes on pages that credit Bryn as author and on his own bio page.
+const withPerson = author || path === '/bryn-swartz/';
 // The Eastern Shore page is covered by its two counties, so it is not listed as a separate area.
 const cityAreas = cities
   .filter((c) => c.path !== '/eastern-shore-workers-comp-lawyer/')
@@ -67,16 +122,7 @@ const legalService = {
   logo: { '@id': `${origin}/#organizationLogo` },
   image: { '@id': `${origin}/#organizationLogo` },
   parentOrganization: { '@id': `${origin}/#organization` },
-  location: site.offices.map((o) => ({
-    '@type': 'Place',
-    name: `${site.name}, ${o.name} office`,
-    telephone: '+18045050633',
-    address: addressOf(o),
-    // By appointment only: these are the hours appointments are offered, weekends by arrangement.
-    openingHoursSpecification: [
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '17:00' },
-    ],
-  })),
+  location: offices.map((o) => ({ '@id': o['@id'] })),
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Accomack County', containedInPlace: virginia },
     { '@type': 'AdministrativeArea', name: 'Northampton County', containedInPlace: virginia },
@@ -115,9 +161,12 @@ const graph = [
       height: 522,
     },
     image: { '@id': `${origin}/#organizationLogo` },
+    foundingDate: '2019',
+    founder: { '@type': 'Person', '@id': `${origin}/#author`, name: 'Bryn Swartz' },
     sameAs: site.social.map((s) => s.url),
   },
   legalService,
+  ...offices,
   {
     '@type': 'WebPage',
     '@id': `${url}#webpage`,
@@ -129,12 +178,9 @@ const graph = [
     breadcrumb: { '@id': `${url}#breadcrumblist` },
     ...(author ? { author: { '@id': `${origin}/#author` }, creator: { '@id': `${origin}/#author` } } : {}),
     ...(datePublished ? { datePublished } : {}),
+    ...(path === '/bryn-swartz/' ? { mainEntity: { '@id': `${origin}/#author` } } : {}),
   },
-  // The old author address (/author/brynswartz/) does not exist on the new site,
-  // so the author points to Bryn's bio page instead.
-  ...(author
-    ? [{ '@type': 'Person', '@id': `${origin}/#author`, name: 'Bryn Swartz', url: `${origin}/bryn-swartz/` }]
-    : []),
+  ...(withPerson ? [person] : []),
   {
     '@type': 'WebSite',
     '@id': `${origin}/#website`,
