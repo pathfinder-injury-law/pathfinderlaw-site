@@ -63,7 +63,7 @@ A dislocation happens when trauma pushes the bones in a joint out of place. The 
 
 ### Sprains
 
-A foot sprain stretches or tears the ligaments that hold the bones together, usually in the ankle or midfoot. Sprains can cause swelling, bruising, muscle spasms, instability, and pain when you move. They are not always minor.
+A foot sprain stretches or tears the ligaments that hold the bones together, usually in the ankle or midfoot. Sprains can cause swelling, bruising, muscle spasms, instability, and pain when you move. They are not always minor. Here’s more on [ankle injuries at work](/ankle-injury-workers-comp/), including sprains, fractures, and how ankle ratings work.
 
 ### Achilles Tendon Tears
 
