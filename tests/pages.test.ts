@@ -102,7 +102,7 @@ test('redirect targets are built pages', opts, () => {
   }
 });
 
-test('LegalService data: both offices, phone, appointment hours, areas, nothing invented', opts, () => {
+test('LegalService data: both offices, phone, appointment only, areas, nothing invented', opts, () => {
   const graph = graphOf(read(SHORE));
   const ls = graph.find((n) => n['@id'] === 'https://pathfinderlaw.com/#legalservice');
   assert.ok(ls, 'LegalService missing');
@@ -127,13 +127,8 @@ test('LegalService data: both offices, phone, appointment hours, areas, nothing 
   const text = JSON.stringify([ls, ...offices]);
   assert.doesNotMatch(text, /geo|latitude|longitude|aggregateRating|reviewCount|ratingValue|sameAs|knowsLanguage|availableLanguage|Spanish/i);
   assert.match(text, /by appointment only/i);
-  // Monday to Friday, 9 to 5, by appointment only, at both offices. No weekend hours.
-  for (const o of offices) {
-    assert.deepEqual(o.openingHoursSpecification.map((h: any) => [h.dayOfWeek.join(','), h.opens, h.closes]), [
-      ['Monday,Tuesday,Wednesday,Thursday,Friday', '09:00', '17:00'],
-    ]);
-  }
-  assert.doesNotMatch(text, /Saturday|Sunday/);
+  // Appointment only, so no opening hours anywhere.
+  assert.doesNotMatch(text, /openingHours|dayOfWeek|Monday|Saturday|Sunday/);
 });
 
 test('Bryn’s Person data is on his bio page and on posts he wrote, with his career facts', opts, () => {

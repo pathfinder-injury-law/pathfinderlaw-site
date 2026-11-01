@@ -14,7 +14,7 @@ export const site = {
   phoneDisplay: '(804) 505-0633',
   phoneHeader: '804-505-0633',
   phoneHref: 'tel:+18045050633',
-  // Both offices: Monday to Friday, 9 to 5, by appointment only (Bryn, Nov 1, 2026).
+  // Both offices are by appointment only, with no set hours (Bryn, Nov 1, 2026).
   offices: [
     {
       name: 'Richmond',
@@ -29,7 +29,7 @@ export const site = {
       page: { label: 'Eastern Shore Workers’ Comp Lawyer', href: '/eastern-shore-workers-comp-lawyer/' },
     },
   ] as Office[],
-  hours: ['Mon-Fri: 9am-5pm', 'By appointment only', 'Video Consultations Avail.'],
+  hours: ['By appointment only', 'Video Consultations Avail.'],
   social: [
     { name: 'Facebook', url: 'https://www.facebook.com/PathfinderInjuryLaw/' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/bryn-swartz-5279551ab/' },
