@@ -103,11 +103,19 @@ test('redirect targets are built pages', opts, () => {
 });
 
 test('LegalService data: both offices, phone, appointment hours, areas, nothing invented', opts, () => {
-  const ls = graphOf(read(SHORE)).find((n) => n['@type'] === 'LegalService');
+  const graph = graphOf(read(SHORE));
+  const ls = graph.find((n) => n['@id'] === 'https://pathfinderlaw.com/#legalservice');
   assert.ok(ls, 'LegalService missing');
   assert.equal(ls.name, 'Pathfinder Injury Law');
   assert.equal(ls.telephone, '+18045050633');
-  const streets = ls.location.map((l: any) => `${l.address.streetAddress}, ${l.address.addressLocality}, ${l.address.addressRegion} ${l.address.postalCode}`);
+  // Each office is its own LegalService on the page, which the firm-wide one points to by id.
+  const offices = ls.location.map((l: any) => graph.find((n) => n['@id'] === l['@id']));
+  for (const o of offices) {
+    assert.equal(o?.['@type'], 'LegalService');
+    assert.equal(o.telephone, '+18045050633');
+    assert.equal(o.parentOrganization['@id'], 'https://pathfinderlaw.com/#organization');
+  }
+  const streets = offices.map((o: any) => `${o.address.streetAddress}, ${o.address.addressLocality}, ${o.address.addressRegion} ${o.address.postalCode}`);
   assert.deepEqual(streets, [
     '8010 Ridge Road, Suite A, Richmond, VA 23229',
     '6294 Cropper Street, Chincoteague, VA 23336',
@@ -116,9 +124,24 @@ test('LegalService data: both offices, phone, appointment hours, areas, nothing 
   for (const want of ['Accomack County', 'Northampton County', 'Virginia', 'Richmond', 'Virginia Beach', 'Fairfax County']) {
     assert.ok(areas.includes(want), `areaServed missing ${want}`);
   }
-  const text = JSON.stringify(ls);
+  const text = JSON.stringify([ls, ...offices]);
   assert.doesNotMatch(text, /geo|latitude|longitude|aggregateRating|reviewCount|ratingValue|sameAs|knowsLanguage|availableLanguage|Spanish/i);
   assert.match(text, /by appointment only/i);
+});
+
+test('Bryn’s Person data is on his bio page and on posts he wrote, with his career facts', opts, () => {
+  const post = readFileSync(new URL('post-sitemap.xml', dist), 'utf8').match(/<loc>https:\/\/pathfinderlaw\.com(\/[^<]+)<\/loc>/g)!
+    .map((l) => l.replace(/<\/?loc>|https:\/\/pathfinderlaw\.com/g, '')).find((p) => p !== '/blog/')!;
+  for (const page of ['/bryn-swartz/', post]) {
+    const p = graphOf(read(page)).find((n) => n['@type'] === 'Person');
+    assert.ok(p, `${page} lacks Person`);
+    assert.equal(p['@id'], 'https://pathfinderlaw.com/#author');
+    assert.equal(p.hasCredential.dateCreated, '2011');
+    assert.ok(p.alumniOf.some((o: any) => o.name === 'Virginia Office of the Attorney General'));
+    assert.match(p.description, /prosecutor/);
+    assert.match(p.description, /2019/);
+  }
+  assert.ok(!graphOf(read('/contact/')).some((n) => n['@type'] === 'Person'), '/contact/ should not carry Person');
 });
 
 test('LegalService is on every page type that carries structured data', opts, () => {

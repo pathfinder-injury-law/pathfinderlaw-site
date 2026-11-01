@@ -17,6 +17,8 @@ const { Content } = post;
 const toc = post.headings.filter((h) => h.depth === 2);
 const related = relatedPosts(post);
 const minutes = Math.max(1, Math.round(post.words / 220));
+// "Updated" shows only when the post was changed on a later day than it was first published.
+const updated = longDate(post.updated) !== longDate(post.date) && post.updated > post.date;
 ---
 <Base
   title={post.metaTitle}
@@ -31,6 +33,7 @@ const minutes = Math.max(1, Math.round(post.words / 220));
     <p class="byline">
       <span>By Bryn Swartz</span>
       <span><time datetime={post.date.toISOString()}>{longDate(post.date)}</time></span>
+      {updated && <span>Updated <time datetime={post.updated.toISOString()}>{longDate(post.updated)}</time></span>}
       <span>{minutes} min read</span>
     </p>
   </BlogHero>
