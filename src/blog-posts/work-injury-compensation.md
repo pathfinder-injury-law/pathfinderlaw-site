@@ -22,7 +22,7 @@ How much you end up with depends on your wages before the accident, how long you
 | Medical treatment | Treatment that is reasonable, necessary, and causally related to the accident | [Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/) |
 | Permanent partial disability | A set number of weeks of pay for permanent loss of use of certain body parts | [Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/) |
 
-Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity ([Va. Code § 65.2-518](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/)). Wage checks also have a seven-day waiting period. Here’s [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/) and [how benefits are calculated](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).
+Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity ([Va. Code § 65.2-518](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/)). Here’s [how long each workers’ comp benefit lasts in Virginia](/how-long-does-workers-comp-last-in-virginia/). Wage checks also have a seven-day waiting period. Here’s [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/) and [how benefits are calculated](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).
 
 ## Does It Matter What Body Part Was Injured?
 
