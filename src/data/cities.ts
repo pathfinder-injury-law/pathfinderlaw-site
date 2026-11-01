@@ -180,7 +180,7 @@ export const cities: City[] = [
           `Construction employs more people in the county than any other industry, more than one job in five, according to the state’s Virginia Works community profile. Two steel erection companies, Mid Atlantic Steel Erectors and Trinity Steel Erection, are on the profile’s list of the county’s 50 largest employers, along with Colony Construction, Layman Brothers Insulation, and tree companies such as Arbor Pro of Virginia. That work brings falls from steel, ladders, and roofs, loads dropped from overhead, and saw and chipper injuries. More on [construction accidents](/virginia-construction-accident-lawyer/).`,
           // VERIFY: new legal sentence ("State employees are covered ..."), based on Va. Code § 65.2-101 (definition of
           //   "Employee," subdivision 1 f: "all officers and employees of the Commonwealth"). Send to the authority check.
-          `Deep Meadow Correctional Center is second on the same list, behind only the school board. State employees are covered by Virginia workers’ comp too: the Act’s definition of “employee” includes officers and employees of the Commonwealth ([Va. Code § 65.2-101](${CODE}title65.2/chapter1/section65.2-101/)). Corrections officers can be hurt restraining an inmate, breaking up a fight, or falling on stairs or wet floors.`,
+          `Deep Meadow Correctional Center is second on the same list, behind only the school board. Most state employees are covered by Virginia workers’ comp too: the Act’s definition of “employee” includes officers and employees of the Commonwealth ([Va. Code § 65.2-101](${CODE}title65.2/chapter1/section65.2-101/)). Corrections officers can be hurt restraining an inmate, breaking up a fight, or falling on stairs or wet floors.`,
           'Most people who live in Powhatan work somewhere else. Census commuting figures in the same profile show Chesterfield, Henrico, and Richmond as the top destinations. We handle claims from those jobs too; see our [Chesterfield County page](/chesterfield-county-workers-comp-lawyer/).',
         ],
       },
@@ -294,7 +294,7 @@ export const cities: City[] = [
             ],
           },
           // VERIFY H3
-          'The kind of injury changes how hard the claim is to prove. A broken wrist from a fall off a loading dock happens at one moment, and the emergency room records it that day. A shoulder or back that starts hurting during a long shift of lifting is harder: the insurance company may argue there was no single identifiable incident, or that the problem is wear and tear. If you can, write down the exact task, the time, and the name of the supervisor you told.',
+          'The kind of injury changes how hard the claim is to prove. A broken wrist from a fall off a loading dock happens at one moment, and the emergency room records it that day. A shoulder or back injury from lifting is harder: the insurance company may argue there was no single identifiable incident, or that the problem is wear and tear. If you can, write down the exact task, the time, and the name of the supervisor you told.',
           'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
@@ -504,7 +504,7 @@ export const cities: City[] = [
       {
         h: 'What Rules Decide a Prince William Workers’ Comp Claim?',
         body: [
-          'Every claim in the state runs under one law, the Virginia Workers’ Compensation Act, whether you were hurt at a store in Woodbridge or on a job site near Haymarket. These are the rules that come up first:',
+          'Every Virginia workers’ comp claim runs under one law, the Virginia Workers’ Compensation Act, whether you were hurt at a store in Woodbridge or on a job site near Haymarket. These are the rules that come up first:',
           {
             list: [
               `Who is covered: ${EMPLOYER_THRESHOLD} Being called an independent contractor doesn’t always settle it. What matters most is whether the company has the right to control how the work is done.`,
@@ -803,7 +803,7 @@ export const cities: City[] = [
               'Electrical shocks and arc flash burns',
               'Being struck by a crane load, a falling tool, or a backing truck',
               'Hands and fingers crushed while setting heavy equipment',
-              'Back and shoulder injuries from pulling cable or lifting a specific load',
+              'Back and shoulder injuries from one specific pull on a cable or one specific lift',
             ],
           },
           'Big projects often have several layers of contractors, and it isn’t always clear which company’s insurance should pay.',
@@ -846,7 +846,7 @@ export const cities: City[] = [
         h: 'Where Would a Dispute Be Heard?',
         body: [
           `Disputes over a claim that the parties don’t settle are decided by the Virginia Workers’ Compensation Commission ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission has no location in this county. Its two nearest regional offices are in Fairfax (Prosperity Plaza, 3020 Hamaker Court, Suite 200) and Manassas (Sudley Tower, 7900 Sudley Rd., Suite 500), and it lists both as hearing and mediation locations ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
-          `That list doesn’t say how cases are assigned to locations. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do after a denial](${DENIALS}).`,
+          `That list doesn’t say how cases are assigned to locations. The Commission’s rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do after a denial](${DENIALS}).`,
         ],
       },
       {
@@ -1093,7 +1093,7 @@ export const cities: City[] = [
         body: [
           `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It lists a hearing location in Rustburg, the Campbell County seat, at 732 Village Highway, and a mediation location at 3506 Wards Rd. in Lynchburg. Its nearest regional office is in Roanoke at 3800 Electric Rd., Suite 200, which it lists as both a hearing location and a mediation location ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           // VERIFY: new to the site. Source: https://workcomp.virginia.gov/content/mediation-services
-          'The Commission describes its mediation as voluntary, confidential, and free. The mediators are Commission employees, and either side can ask for mediation to try to resolve a dispute or settle the claim ([mediation services](https://workcomp.virginia.gov/content/mediation-services)).',
+          'The Commission describes its mediation as voluntary, confidential, and free. The mediators are Commission employees, and either side can ask for mediation to try to resolve a dispute or settle the claim, and it goes forward if both sides agree ([mediation services](https://workcomp.virginia.gov/content/mediation-services)).',
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}) and [how to prepare for a hearing](${WC}how-to-prepare-for-a-virginia-workers-comp-hearing/).`,
         ],
       },
@@ -1340,7 +1340,7 @@ export const cities: City[] = [
           },
           'Back and spine injuries get the hardest look. The insurance company may argue that the pain built up over years of work, or that it comes from an old degenerative condition rather than one event at work. Your claim is stronger when the record points to a single moment: what you were doing, when it happened, and who you told. Write it down while you still remember it.',
           // VERIFY P1 (reworded from the model's checked third-party sentence)
-          `A crash caused by another driver can also give you a separate injury claim against that driver, on top of workers’ comp. More on [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/), [spine injuries at work](/what-should-you-do-if-you-have-a-spine-injury-at-work/), [construction accidents](/virginia-construction-accident-lawyer/), and [car accidents at work](/car-accident-at-work-in-virginia/).`,
+          `A crash caused by another driver may also give you a separate injury claim against that driver, on top of workers’ comp. More on [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/), [spine injuries at work](/what-should-you-do-if-you-have-a-spine-injury-at-work/), [construction accidents](/virginia-construction-accident-lawyer/), and [car accidents at work](/car-accident-at-work-in-virginia/).`,
         ],
       },
       {
@@ -1725,7 +1725,7 @@ export const cities: City[] = [
             ],
           },
           // VERIFY V1
-          'Not every one of these is equally easy to prove. A burn from hot metal or a fall from scaffolding happens at one moment, and someone usually writes it down that day. A shoulder that starts hurting after weeks of lifting packages is a harder claim: the insurance company may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. If you felt it happen, write down the date, what you were doing, and who you told.',
+          'Not every one of these is equally easy to prove. A burn from hot metal or a fall from scaffolding happens at one moment, and someone usually writes it down that day. A shoulder injury from lifting packages is a harder claim: the insurance company may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. If you felt it happen, write down the date, what you were doing, and who you told.',
           'A crash caused by another driver while you were working may also give you a separate injury claim against that driver. More on [factory accidents](/virginia-factory-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [shoulder injuries on the job](/causes-of-on-the-job-shoulder-injuries/).',
         ],
       },
@@ -1999,7 +1999,7 @@ export const cities: City[] = [
             ],
           },
           // VERIFY V2
-          'Some injuries are simpler to prove than others. A fall from a ladder or a hand caught in a conveyor happens at one moment and usually gets reported the same shift. A back that gives out after a long shift of unloading trucks is easier for the insurance company to fight: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Note the exact lift, the time, and the person you reported it to.',
+          'Some injuries are simpler to prove than others. A fall from a ladder or a hand caught in a conveyor happens at one moment and usually gets reported the same shift. A back injury from unloading a truck is easier for the insurance company to fight: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Note the exact lift, the time, and the person you reported it to.',
           `More on [construction accidents](/virginia-construction-accident-lawyer/), [warehouse injuries](/automated-warehouse-injuries-what-amazon-workers-need-to-know/), and [back injuries at work](${WC}virginia-back-injury-lawyer/).`,
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.  (VERIFY V3)
           'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
@@ -2054,7 +2054,7 @@ export const cities: City[] = [
       {
         h: 'Do You Take Cases From Great Bridge, Deep Creek, and Western Branch?',
         body: [
-          'Yes. We take cases from Great Bridge, Deep Creek, Western Branch, South Norfolk, and the rest of the city, which runs south to the North Carolina line. If you live here but were hurt across that line, call us and we’ll sort out which state’s system applies. Nearby, see our pages for [Norfolk](/norfolk-workers-comp-lawyer/), [Portsmouth](/portsmouth-workers-comp-lawyer/), [Virginia Beach](/virginia-beach-workers-comp-lawyer/), and [Suffolk](/suffolk-workers-comp-lawyer/).',
+          'Yes. We take cases from Great Bridge, Deep Creek, Western Branch, South Norfolk, and the rest of the city, which runs south to the North Carolina line. If you live here but were hurt across that line, call us. Depending on where you were hired and where your employer is based, Virginia’s system may still apply. Nearby, see our pages for [Norfolk](/norfolk-workers-comp-lawyer/), [Portsmouth](/portsmouth-workers-comp-lawyer/), [Virginia Beach](/virginia-beach-workers-comp-lawyer/), and [Suffolk](/suffolk-workers-comp-lawyer/).',
         ],
       },
       {
@@ -2286,7 +2286,7 @@ export const cities: City[] = [
             ],
           },
           // VERIFY B4
-          'Write things down early, because the injuries insurance companies like to dispute are the ones without a clear moment. A kitchen burn or a fall from a ladder happens all at once, and someone usually sees it. A back that gives out after weeks of stripping beds is harder: the insurance company may say there was no single identifiable incident, or that the problem is degenerative. Note the task, the room or job site, the time, and who you told.',
+          'Write things down early, because the injuries insurance companies like to dispute are the ones without a clear moment. A kitchen burn or a fall from a ladder happens all at once, and someone usually sees it. A back injury from lifting a mattress is harder: the insurance company may say there was no single identifiable incident, or that the problem is degenerative. Note the task, the room or job site, the time, and who you told.',
           'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [factory accidents](/virginia-factory-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
         ],
       },
