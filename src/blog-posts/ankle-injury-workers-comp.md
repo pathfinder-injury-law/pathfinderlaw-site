@@ -46,7 +46,7 @@ A hard twist or fall can push the ankle joint out of place, often along with a f
 
 ### Complications: CRPS and Arthritis
 
-Some ankle injuries don’t follow the usual recovery. Complex regional pain syndrome (CRPS) can develop after a fracture, a sprain, or even surgery, causing burning pain, swelling, and color and temperature changes that spread beyond the ankle. A badly broken ankle can also lead to arthritis in the joint years later. When a later condition flows from the work injury or its treatment, it can be covered as part of the same claim. These are among the most fought-over parts of an ankle case, because they change what the claim is worth.
+Some ankle injuries don’t follow the usual recovery. Complex regional pain syndrome (CRPS) can develop after a fracture, a sprain, or even surgery, causing burning pain, swelling, and color and temperature changes that spread beyond the ankle. A badly broken ankle can also lead to arthritis in the joint years later. When a later condition flows from the work injury or its treatment, it can be covered as part of the same claim. So can a knee or hip you hurt by [favoring the injured ankle](/injured-another-body-part-favoring-work-injury/). These are among the most fought-over parts of an ankle case, because they change what the claim is worth.
 
 ## Does Workers’ Comp Cover Your Ankle Injury?
 
@@ -107,7 +107,7 @@ Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-
 | 20% | 35 weeks of pay | 25 weeks of pay |
 | 30% | 52.5 weeks of pay | 37.5 weeks of pay |
 
-Each week is paid at your compensation rate. Insurance companies frequently send injured workers to their own doctors for a lower rating. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
+Each week is paid at your compensation rate. Here’s more on [how impairment ratings work in Virginia](/impairment-rating-virginia-workers-comp/). Insurance companies frequently send injured workers to their own doctors for a lower rating. Here’s [what happens after an IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).
 
 ## What Is an Ankle Injury Worth in Virginia?
 
