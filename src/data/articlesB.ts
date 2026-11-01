@@ -102,51 +102,70 @@ export const articlesB = {
   // ---------------------------------------------------------------------------------------------
   delayedBenefits: {
     path: '/what-if-a-workers-comp-insurer-delays-my-benefits/',
-    title: 'What To Do About Delayed Virginia Workers Comp Benefits',
+    // Oct 31 SEO rewrite: answer-first, cited, checked by the authority check (SEO Audit file 15a).
+    title: 'Workers’ Comp Insurer Delaying Benefits in Virginia?',
     description:
-      "How does workers' comp insurance work? What happens if a workers' comp insurer delays benefits? Find these answers at Pathfinder Injury Law.",
+      'What to do when a Virginia workers’ comp insurer delays checks or treatment: the 20% late-payment penalty, a Commission hearing, and what to document.',
     h1: 'What Happens if a Workers’ Comp Insurer Delays Benefits?',
     lead: `
-      <p class="lead">If you suffered from a work-related injury, you might be <a href="${WC}virginia-workers-compensation/">wondering what your rights</a> are under the law. Fortunately, with the help of a <a href="${WC}">workplace injury lawyer</a>, Virginia law has a <a href="https://law.lis.virginia.gov/vacode/title65.2/" rel="noopener">Workers’ Compensation program</a> that allows you to recover compensation if you suffer a work-related injury.</p>
-      <p>These claims are ordinarily faster than they would be if you had to go to court to seek benefits, but the process is not always that smooth. If the Workers’ Comp insurer delays your benefits, what should you do?</p>`,
+      <p class="lead">If a Virginia workers’ comp insurance company is late paying benefits it owes under an award, the law adds 20 percent to any payment more than two weeks late, unless the Commission finds the delay had good cause outside the employer’s control (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/" rel="noopener">Va. Code § 65.2-524</a>). If there is no award yet, or the insurance company is stalling on a claim or a treatment request, the answer is the Commission: you can ask for a hearing no matter what the insurance company decides.</p>
+      <p>What you can do depends on why the money or treatment is late, and on whether you already have an award. Here is how to tell which situation you are in.</p>`,
     sections: [
       {
-        id: 'how-it-works',
-        h2: 'How Does Workers’ Comp Insurance Work?',
-        // Live said Virginia "doesn't require all employers" to carry insurance, and linked 65.2-811
-        // for "prompt payment" (that section is "Liability of insurer"; link dropped). The
-        // "presumption of connection" sentence (a rule for certain diseases) is left out.
+        id: 'why',
+        h2: 'Why Workers’ Comp Benefits Get Delayed',
         html: `
-          <p>The Virginia Workers’ Compensation Act requires virtually all Virginia employers with three or more employees regularly in service to have workers’ compensation insurance. However, if you are covered under Workers’ Comp insurance, it doesn’t mean the benefits are automatic once you suffer an injury.</p>
-          <p>While the law does require the insurer to make prompt payment if you are entitled to the benefits, you still have to prove that entitlement.</p>
-          <p>Specifically, a successful workers’ comp claim requires evidence that your accident arose out of and in the course of your employment and that it resulted in a sudden, identifiable, structural or mechanical change to your body.</p>`,
+          <p>The insurance company is required to pay a covered claim, but that doesn’t mean it will pay on time. Common reasons for a delay are a few of many:</p>
+          <ul>
+            <li>No claim has been filed with the Commission, so nothing forces a decision.</li>
+            <li>The insurance company is “investigating,” waiting on medical records, or waiting for a <a href="/insurance-recorded-statement/">recorded statement</a>.</li>
+            <li>There is a dispute over your average weekly wage, so nobody agrees on the amount.</li>
+            <li>The Award Agreement hasn’t been sent, signed, or entered by the Commission.</li>
+            <li>The insurance company sent you to an <a href="${WC}what-happens-after-a-workers-comp-ime-in-virginia/">IME</a> and is using the report to question your claim.</li>
+            <li>It says you can do light duty, or that you turned down a job.</li>
+          </ul>`,
       },
       {
-        id: 'when-to-file',
-        h2: 'When Should You File a Claim for Workers’ Comp Benefits?',
+        id: 'no-award',
+        h2: 'If You Don’t Have an Award Yet',
         html: `
-          <p>Under Virginia law, your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Otherwise, you could sacrifice your right to compensation.</p>
-          <p>While two years might seem a long time to file a claim, your recovery period, <a href="${WC}how-to-prepare-for-a-virginia-workers-comp-hearing/">gathering of evidence</a>, <a href="/how-to-prepare-for-a-workers-comp-deposition/">preparing for deposition</a>, among other factors, can also take a long time before you are fully ready to establish your claim. If you’re worried about the deadline for your claim, contact a local Workers’ Comp lawyer today.</p>`,
+          <p>Until there is an award, the insurance company may pay voluntarily, but there is no Commission order requiring it to pay you. That is why the first step is a filed claim. Once you file, the Commission will order the insurance company to respond within 30 days. It may accept the claim or deny it. If it denies the claim or doesn’t answer, you can ask for a hearing before a deputy commissioner.</p>
+          <p>File the claim even if the insurance company says it is accepting your injury. A claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Here’s <a href="/how-to-file-a-workers-comp-claim/">how to file a workers’ comp claim</a>.</p>`,
       },
       {
-        id: 'delays',
-        h2: 'What If a Workers’ Comp Insurer Delays Your Benefits?',
-        // LIVE WORDING: two-week payment period and 20% increase (same wording the Denials page kept).
-        // The Virginia Code link now goes to the section that matches the sentence (65.2-524).
+        id: 'award',
+        h2: 'If You Have an Award and the Checks Are Late or Stopped',
         html: `
-          <p>Once payment from a Workers’ Comp insurer becomes due, the insurer has <a href="${WC}when-does-virginia-workers-comp-start-paying/">two weeks to make the payment</a>. If it <a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/" rel="noopener">fails to pay within that period</a>, a late payment can lead to a penalty, but penalties are not guaranteed.</p>`,
+          <p>An award is an order of the Commission. Once you have one, the insurance company can’t just stop paying because it decides you are better. To stop or reduce your checks, it has to file an application with the Commission (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/" rel="noopener">Va. Code § 65.2-708</a>).</p>
+          <ul>
+            <li>A payment more than two weeks late gets the 20 percent addition, unless the Commission finds the delay had good cause outside the employer’s control (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/" rel="noopener">Va. Code § 65.2-524</a>).</li>
+            <li>If the checks stop without an application, you can ask the Commission for a hearing to enforce the award.</li>
+            <li>If the insurance company defends a case without reasonable grounds, the Commission can make it pay the costs of the proceeding, including a reasonable attorney’s fee (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-713/" rel="noopener">Va. Code § 65.2-713</a>).</li>
+          </ul>`,
       },
       {
-        id: 'attorney',
-        h2: 'How Can an Attorney Help?',
-        // Live: "you can be sure you will receive full benefits and compensation due by law".
+        id: 'medical',
+        h2: 'If the Insurance Company Is Delaying Treatment',
         html: `
-          <p>With an experienced Workers’ Comp lawyer at your side, you can have help pursuing the benefits and compensation due by law. At Pathfinder Injury Law, your Workers’ Comp lawyer can help build your case to seek your benefits and, where it applies, a penalty if the Workers’ Comp insurer pays late.</p>`,
+          <p>Medical delays work differently from late checks. The insurance company may sit on a request for surgery, an MRI, or a referral to a specialist, or deny it after a records review or an IME. The insurance company is required to provide medical treatment that is reasonable, necessary, and causally related to the accident (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/" rel="noopener">Va. Code § 65.2-603</a>). When it won’t authorize that care, you can ask the Commission to order it.</p>`,
+      },
+      {
+        id: 'document',
+        h2: 'What to Do While You Wait',
+        html: `
+          <ul>
+            <li>Check whether a claim has been filed. If not, file one.</li>
+            <li>Write down every call with the adjuster: date, time, name, and what was said.</li>
+            <li>Ask for anything important in writing, and send your own requests in writing.</li>
+            <li>Keep your pay stubs and every out-of-work note from your doctor.</li>
+            <li>Keep going to your doctor and following your restrictions. Gaps in treatment become the insurance company’s next argument.</li>
+          </ul>
+          <p>Here’s <a href="${WC}when-does-virginia-workers-comp-start-paying/">when Virginia workers’ comp starts paying</a> and <a href="${WC}what-happens-if-your-workers-comp-claim-is-denied/">what happens if your claim is denied</a>.</p>`,
       },
     ],
     closing: {
-      h2: 'Ready to Hold the Insurance Company Accountable?',
-      html: `<p>When you’re ready to hold the insurance company accountable, schedule your free consultation by calling ${phone} or <a href="#contact">fill out the contact form</a> online.</p>`,
+      h2: 'Is the Insurance Company Stalling?',
+      html: `<p>Delays are rarely just paperwork. They usually mean the insurance company is building a reason to pay less: a wage dispute, an IME, a light-duty offer. Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call ${phone} or <a href="#contact">use the contact form</a> on this page.</p>`,
     },
   },
 
