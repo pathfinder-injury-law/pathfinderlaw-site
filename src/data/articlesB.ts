@@ -422,7 +422,7 @@ export const articlesB = {
         // reviewed equivalent; Commission link kept as on live. Needs Bryn's review.
         html: `
           <p>If you’ve been injured on the job, your first step is to seek medical care. Yes, you need it, even if you feel fine. You may not notice a serious injury until it’s worsened, and the insurance company may doubt your claim if you don’t act immediately.</p>
-          <p>Your employer must offer a <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">panel of three doctors</a>, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.</p>`,
+          <p>Your employer must offer a <a href="https://workcomp.virginia.gov/content/medical-providers" rel="noopener">panel of at least three doctors</a>, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.</p>`,
       },
       {
         id: 'file',

@@ -457,7 +457,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'Medical Bills',
         blocks: [
-          'After a serious work injury, you shouldn’t have to pay for your medical care yourself. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions. ' + MEDICAL,
+          'After a serious work injury, you shouldn’t have to pay for your medical care yourself. Your employer must offer a panel of at least three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions. ' + MEDICAL,
           'Medical benefits can include travel to medical appointments, too. For example, you may have to travel out of your town to see a specialist about your injury, and workers’ comp can reimburse mileage for travel to and from medical appointments.',
         ],
       },

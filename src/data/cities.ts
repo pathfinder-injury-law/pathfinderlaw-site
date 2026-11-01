@@ -334,7 +334,7 @@ export const cities: City[] = [
           {
             list: [
               'Document Everything: Take pictures of the accident site before you leave the premises, and take pictures of your injuries.',
-              'Receive Medical Attention: Going to see a trusted doctor can help get your injuries on file, an important piece of evidence that you’ll need for your Workers’ Compensation claim. Your employer must offer a panel of three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.',
+              'Receive Medical Attention: Going to see a trusted doctor can help get your injuries on file, an important piece of evidence that you’ll need for your Workers’ Compensation claim. Your employer must offer a panel of at least three doctors, and you choose one. If your claim is denied, you don’t have to choose from their panel. You should talk to a lawyer before taking any actions.',
               'Inform Your Supervisor: The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. Failing to do so could affect your ability to receive benefits.',
               'File Your Claim: Your Workers’ Compensation [claim form](https://workcomp.virginia.gov/forms/claim-form) can be submitted electronically, faxed, or mailed.',
             ],
