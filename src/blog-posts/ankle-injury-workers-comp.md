@@ -3,7 +3,7 @@ title: "Ankle Injury at Work in Virginia: Workers’ Comp and Settlements"
 metaTitle: "Ankle Injury Workers’ Comp Settlement in Virginia"
 description: "Broke, sprained, or tore a ligament in your ankle at work in Virginia? What workers’ comp pays, how ankle ratings work, and what drives a settlement."
 date: 2026-11-01T18:00:00Z
-updated: 2026-11-01T18:00:00Z
+updated: 2026-11-01T20:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
@@ -34,11 +34,11 @@ A sprain stretches or tears the ligaments, usually when the foot rolls inward on
 
 ### Fractures
 
-Falls from ladders or trucks, missed steps, and crush injuries can break one or more of the bony bumps on either side of the ankle. Breaks of two or three of them (bimalleolar and trimalleolar fractures) usually need surgery with plates and screws. A fracture at the bottom of the tibia (a pilon fracture), often from a fall from a height, is one of the most serious ankle injuries and can lead to arthritis later.
+Falls from ladders or trucks, missed steps, and crush injuries can break one or more of the bony bumps on either side of the ankle. Breaks of two or three of them (bimalleolar and trimalleolar fractures) usually need surgery with plates and screws. A fracture at the bottom of the tibia (a pilon fracture), often from a fall from a height, is one of the most serious ankle injuries and can lead to arthritis later. See [broken ankle at work](#broken-ankle-at-work-recovery-time-and-settlement) below.
 
 ### Achilles Tendon Ruptures
 
-A sudden push-off, a jump down from equipment, or a missed step can tear the Achilles tendon. Many people feel a pop, as if they were kicked in the back of the leg.
+A sudden push-off, a jump down from equipment, or a missed step can tear the Achilles tendon. Many people feel a pop, as if they were kicked in the back of the leg. Here’s our full guide to an [Achilles tendon rupture at work](/achilles-tendon-rupture-workers-comp/).
 
 ### Dislocations
 
@@ -69,6 +69,33 @@ The insurance company will also look for any earlier ankle sprains or injuries. 
 Many ankle fractures, ligament tears, and Achilles ruptures need surgery: plates and screws for a fracture, a ligament repair or reconstruction, or an Achilles repair. A badly damaged joint may eventually need a fusion or an ankle replacement.
 
 If the surgery is reasonable, necessary, and related to your work injury, the insurance company is required to pay for it, along with follow-up care such as physical therapy. That does not mean it will. If the insurance company refuses, you can ask the Commission for a hearing. Your doctor’s written opinion on why the surgery is needed and how it connects to the accident is usually the key evidence.
+
+## Broken Ankle at Work: Recovery Time and Settlement
+
+**A broken ankle from a fall, a missed step, or a crush at work is usually a clear accident under Virginia workers’ comp. What the claim is worth depends mostly on the type of break, whether it needs surgery, and whether the joint is left permanently damaged.** The insurance company rarely argues that a fracture didn’t happen. It argues about how long you are out, what your rating should be, and whether later problems belong to the work injury.
+
+| Type of break | Usual treatment | What it means for your claim |
+|---|---|---|
+| One bone, not out of place | Cast or walking boot | Weeks of wage checks; often a smaller permanent rating |
+| One bone, out of place or unstable | Surgery with screws or a plate | Longer time off; a surgical scar and hardware in the joint |
+| Two or three bones (bimalleolar or trimalleolar) | Usually surgery with plates and screws | Months off; higher risk of a lasting rating and later arthritis |
+| Fracture with a torn syndesmosis (the ligaments between the tibia and fibula) | Surgery; the screws may be removed later | A possible second surgery, which is part of the same claim |
+
+Treatment details are from the American Academy of Orthopaedic Surgeons ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/ankle-fractures-broken-ankle/)). Your surgeon decides what your break needs.
+
+### How Long Will You Be Out of Work?
+
+Most ankle fractures take at least 6 weeks for early healing and 10 to 12 weeks to heal completely. Most people return to normal activities in 3 to 4 months, and full recovery from some fractures can take up to 2 years ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/ankle-fractures-broken-ankle/)). A job on ladders, trucks, or uneven ground usually takes longer to return to than a desk job.
+
+While your doctor keeps you out of work, you are owed wage checks at two-thirds of your average weekly wage ([Va. Code § 65.2-500](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/)). Once you are released to light duty, the rules change. If your employer offers a job within your restrictions and you refuse it, your checks can stop ([Va. Code § 65.2-510](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-510/)). If the light-duty job pays less, you may be owed two-thirds of the difference ([Va. Code § 65.2-502](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-502/)).
+
+### Hardware Removal, Arthritis, and Later Surgery
+
+A broken ankle can need care long after the bone heals. Screws or plates sometimes have to come out, and arthritis can develop years after the injury ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/ankle-fractures-broken-ankle/)). Arthritis can lead to a fusion or an ankle replacement. If that later care is reasonable, necessary, and related to the work injury, the insurance company is required to pay for it while your medical benefits are open ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). That does not mean it will. A full and final settlement usually closes your medical benefits for good, so the chance of a second surgery belongs in any settlement decision.
+
+### What Is a Broken Ankle Worth?
+
+It depends on the factors in the next sections: your rating, your wage, your time out, and your future medical care. Our [case results](/results/) include a $150,000 settlement in a broken ankle case. Every case is different, and past results don’t predict the result in yours.
 
 ## How Is a Permanent Ankle Injury Rated?
 
@@ -108,7 +135,7 @@ Possibly, but it depends on why you rolled it. Virginia requires that an actual 
 
 ### How long will I be out of work with a broken ankle?
 
-That depends on the break and your job. Many workers are off their feet for weeks, and a surgically repaired fracture can mean months before a return to heavy work. Wage checks continue while your doctor keeps you out of work, and partial checks may continue on light duty at lower pay.
+That depends on the break and your job. Most ankle fractures take 10 to 12 weeks to heal completely, and most people are back to normal activities in 3 to 4 months ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/ankle-fractures-broken-ankle/)). A surgically repaired fracture can mean longer before a return to heavy work. Wage checks continue while your doctor keeps you out of work, and partial checks may continue on light duty at lower pay.
 
 ## Talk to Pathfinder Injury Law About Your Ankle Injury
 
