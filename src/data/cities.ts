@@ -994,7 +994,7 @@ export const cities: City[] = [
       {
         h: 'Our Chincoteague Office and Video Consultations',
         body: [
-          'Our Chincoteague office is at 6294 Cropper Street, Chincoteague, VA 23336. It is open by appointment only, and video consultations are available, so you can talk with our team from home. Office hours are Monday to Friday, 9am to 5pm, with weekend appointments by arrangement. See all of our [locations](/location/).',
+          'Our Chincoteague office is at 6294 Cropper Street, Chincoteague, VA 23336. It is open by appointment only, and video consultations are available, so you can talk with our team from home. Office hours are Monday to Friday, 9am to 5pm. See all of our [locations](/location/).',
         ],
       },
       {
