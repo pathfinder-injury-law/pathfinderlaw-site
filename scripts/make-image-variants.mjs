@@ -41,6 +41,13 @@ const FORMATS = {
   avif: (img) => img.avif({ quality: 60, effort: 7, chromaSubsampling: '4:4:4' }),
   webp: (img) => img.webp({ quality: 82, effort: 6 }),
 };
+// The phone hero is the mobile LCP image, so it trades a little quality for size
+// (900w: 141 KB at the default, 83 KB here, with no visible difference on the rock detail).
+const OVERRIDES = {
+  '/images/photos/e4-overlook-phone.webp': {
+    avif: (img) => img.avif({ quality: 45, effort: 7, chromaSubsampling: '4:2:0' }),
+  },
+};
 
 mkdirSync(join(repo, 'public', OUT_DIR), { recursive: true });
 const manifest = {};
@@ -51,7 +58,7 @@ for (const [src, widths] of Object.entries(PHOTOS)) {
   const entry = { width: meta.width, height: meta.height, avif: [], webp: [] };
   for (const w of widths) {
     if (w > meta.width) throw new Error(`${src}: ${w} is wider than the original (${meta.width})`);
-    for (const [fmt, encode] of Object.entries(FORMATS)) {
+    for (const [fmt, encode] of Object.entries({ ...FORMATS, ...OVERRIDES[src] })) {
       const url = `${OUT_DIR}/${name}-${w}.${fmt}`;
       const info = await encode(sharp(input).resize({ width: w, withoutEnlargement: true })).toFile(join(repo, 'public', url));
       entry[fmt].push({ url, width: w, bytes: info.size });

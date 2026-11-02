@@ -495,6 +495,8 @@ const doodles: Record<string, string> = {
       linear-gradient(90deg, rgba(20, 36, 27, 0.4), rgba(20, 36, 27, 0) 60%);
   }
   .e4 .hero-copy { position: relative; z-index: 2; padding-bottom: 4rem; }
+  /* No fade-in on the home hero text: it is visible on first paint, so it can't hold back LCP. */
+  .e4 .hero-copy > * { animation: none; }
   .e4 .hero-copy .kicker { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sun); margin: 0 0 0.75rem; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
   .e4 .hero-big { font-size: clamp(2.625rem, 6.6vw, 6.5rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 2.75rem; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25); }
   .e4 .hero-lede { font-size: 1.375rem; margin: 0 0 1.875rem; max-width: 41rem; }
