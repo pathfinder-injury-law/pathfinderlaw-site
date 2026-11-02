@@ -6,6 +6,14 @@ hero-over-shoulder-desktop.webp, hero-over-shoulder-phone.webp   AI-generated wi
 tile-a.jpg, tile-b.jpg, tile-c.jpg   AI-generated with Google AI Studio (gemini-3-pro-image), 10-30-26. Replace earlier photos whose license could not be confirmed. Prompts: Active/Hero Image Notes - 10-29-26.md, Round 6.
                  (file names on the old site began with "photo-", the Unsplash pattern).
 
+E4 home page photos, from Unsplash (Unsplash License, free for commercial use; resized and cropped here, 11-02-26):
+e4-overlook-desktop.webp, e4-overlook-phone.webp   Brayden Winemiller  https://unsplash.com/photos/PkPCoWIOkSc
+e4-autumn-ridges.jpg     K T  https://unsplash.com/photos/PV_4h9i73BU
+e4-green-ridges-gold-sky.jpg   K T  https://unsplash.com/photos/JkoYQPW6DBc
+e4-farm-road.jpg         Erika Fletcher  https://unsplash.com/photos/qbzDnnklZGA
+e4-misty-river.jpg       Tyler Held  https://unsplash.com/photos/uA2IbCjvuk8
+e4-green-valley.jpg      Girma Nigusse  https://unsplash.com/photos/_dJ_pNSWehQ
+
 No paid stock photos or paid fonts belong in this public repository.
 
 public/images/blog/birthday/   23 photos in the "Happy Birthday to Pathfinder Injury Law!" post.

@@ -26,6 +26,14 @@ const PHOTOS = {
   '/images/photos/tile-c.jpg': [480, 800, 1200, 1400],
   '/images/photos/bryn.jpg': [360, 600, 900],
   '/images/photos/mandy.jpg': [360, 600, 900],
+  // E4 home page (Unsplash photos, see CREDITS.txt)
+  '/images/photos/e4-overlook-desktop.webp': [1024, 1440, 2000],
+  '/images/photos/e4-overlook-phone.webp': [480, 900],
+  '/images/photos/e4-farm-road.jpg': [480, 800],
+  '/images/photos/e4-autumn-ridges.jpg': [480, 800],
+  '/images/photos/e4-green-valley.jpg': [480, 800],
+  '/images/photos/e4-green-ridges-gold-sky.jpg': [800, 1400, 2000],
+  '/images/photos/e4-misty-river.jpg': [800, 1400, 2000],
 };
 
 // High quality settings: the copies should look the same as the originals.

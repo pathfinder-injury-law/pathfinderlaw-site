@@ -274,5 +274,231 @@
         "bytes": 43120
       }
     ]
+  },
+  "/images/photos/e4-overlook-desktop.webp": {
+    "width": 2000,
+    "height": 1333,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-overlook-desktop-1024.avif",
+        "width": 1024,
+        "bytes": 79983
+      },
+      {
+        "url": "/images/photos/sized/e4-overlook-desktop-1440.avif",
+        "width": 1440,
+        "bytes": 135344
+      },
+      {
+        "url": "/images/photos/sized/e4-overlook-desktop-2000.avif",
+        "width": 2000,
+        "bytes": 235073
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-overlook-desktop-1024.webp",
+        "width": 1024,
+        "bytes": 109350
+      },
+      {
+        "url": "/images/photos/sized/e4-overlook-desktop-1440.webp",
+        "width": 1440,
+        "bytes": 187156
+      },
+      {
+        "url": "/images/photos/sized/e4-overlook-desktop-2000.webp",
+        "width": 2000,
+        "bytes": 347744
+      }
+    ]
+  },
+  "/images/photos/e4-overlook-phone.webp": {
+    "width": 900,
+    "height": 1452,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-overlook-phone-480.avif",
+        "width": 480,
+        "bytes": 57792
+      },
+      {
+        "url": "/images/photos/sized/e4-overlook-phone-900.avif",
+        "width": 900,
+        "bytes": 144548
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-overlook-phone-480.webp",
+        "width": 480,
+        "bytes": 80014
+      },
+      {
+        "url": "/images/photos/sized/e4-overlook-phone-900.webp",
+        "width": 900,
+        "bytes": 226870
+      }
+    ]
+  },
+  "/images/photos/e4-farm-road.jpg": {
+    "width": 1000,
+    "height": 1000,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-farm-road-480.avif",
+        "width": 480,
+        "bytes": 18557
+      },
+      {
+        "url": "/images/photos/sized/e4-farm-road-800.avif",
+        "width": 800,
+        "bytes": 46094
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-farm-road-480.webp",
+        "width": 480,
+        "bytes": 23030
+      },
+      {
+        "url": "/images/photos/sized/e4-farm-road-800.webp",
+        "width": 800,
+        "bytes": 57018
+      }
+    ]
+  },
+  "/images/photos/e4-autumn-ridges.jpg": {
+    "width": 1000,
+    "height": 1000,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-autumn-ridges-480.avif",
+        "width": 480,
+        "bytes": 38327
+      },
+      {
+        "url": "/images/photos/sized/e4-autumn-ridges-800.avif",
+        "width": 800,
+        "bytes": 96090
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-autumn-ridges-480.webp",
+        "width": 480,
+        "bytes": 48560
+      },
+      {
+        "url": "/images/photos/sized/e4-autumn-ridges-800.webp",
+        "width": 800,
+        "bytes": 123258
+      }
+    ]
+  },
+  "/images/photos/e4-green-valley.jpg": {
+    "width": 1000,
+    "height": 1000,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-green-valley-480.avif",
+        "width": 480,
+        "bytes": 27343
+      },
+      {
+        "url": "/images/photos/sized/e4-green-valley-800.avif",
+        "width": 800,
+        "bytes": 67118
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-green-valley-480.webp",
+        "width": 480,
+        "bytes": 35242
+      },
+      {
+        "url": "/images/photos/sized/e4-green-valley-800.webp",
+        "width": 800,
+        "bytes": 88896
+      }
+    ]
+  },
+  "/images/photos/e4-green-ridges-gold-sky.jpg": {
+    "width": 2000,
+    "height": 1333,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-green-ridges-gold-sky-800.avif",
+        "width": 800,
+        "bytes": 27061
+      },
+      {
+        "url": "/images/photos/sized/e4-green-ridges-gold-sky-1400.avif",
+        "width": 1400,
+        "bytes": 63901
+      },
+      {
+        "url": "/images/photos/sized/e4-green-ridges-gold-sky-2000.avif",
+        "width": 2000,
+        "bytes": 123856
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-green-ridges-gold-sky-800.webp",
+        "width": 800,
+        "bytes": 32416
+      },
+      {
+        "url": "/images/photos/sized/e4-green-ridges-gold-sky-1400.webp",
+        "width": 1400,
+        "bytes": 73248
+      },
+      {
+        "url": "/images/photos/sized/e4-green-ridges-gold-sky-2000.webp",
+        "width": 2000,
+        "bytes": 122862
+      }
+    ]
+  },
+  "/images/photos/e4-misty-river.jpg": {
+    "width": 2000,
+    "height": 1333,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-misty-river-800.avif",
+        "width": 800,
+        "bytes": 39139
+      },
+      {
+        "url": "/images/photos/sized/e4-misty-river-1400.avif",
+        "width": 1400,
+        "bytes": 105973
+      },
+      {
+        "url": "/images/photos/sized/e4-misty-river-2000.avif",
+        "width": 2000,
+        "bytes": 194603
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-misty-river-800.webp",
+        "width": 800,
+        "bytes": 49182
+      },
+      {
+        "url": "/images/photos/sized/e4-misty-river-1400.webp",
+        "width": 1400,
+        "bytes": 129622
+      },
+      {
+        "url": "/images/photos/sized/e4-misty-river-2000.webp",
+        "width": 2000,
+        "bytes": 220628
+      }
+    ]
   }
 }

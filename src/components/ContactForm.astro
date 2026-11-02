@@ -7,7 +7,8 @@
 import { site } from '../data/site';
 import { HOW, WHEN, WORK, YES_NO } from '../worker/intake.ts';
 
-const { id = 'contact-form' } = Astro.props;
+// namePlaceholder: the home page asks "What’s your name?" in the box itself (E4 design).
+const { id = 'contact-form', namePlaceholder = 'Your name' } = Astro.props;
 
 // Turnstile public site key, supplied at build time. Cloudflare's published
 // always-pass test key is used for previews. A live build without the real
@@ -40,7 +41,7 @@ const questions = [
       <legend><span class="step-q" tabindex="-1">Let’s start with your name</span></legend>
       <div class="field">
         <label class="visually-hidden" for={`${id}-name`}>Your name</label>
-        <input id={`${id}-name`} name="name" type="text" autocomplete="name" maxlength="200" placeholder="Your name" required aria-describedby={`${id}-name-err`} />
+        <input id={`${id}-name`} name="name" type="text" autocomplete="name" maxlength="200" placeholder={namePlaceholder} required aria-describedby={`${id}-name-err`} />
         <p class="field-error" id={`${id}-name-err`}></p>
       </div>
       <button class="btn btn-primary" type="button" data-next>Next</button>
