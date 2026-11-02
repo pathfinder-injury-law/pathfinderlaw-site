@@ -125,7 +125,7 @@ Your wage checks end, unless your case is one of the permanent and total incapac
 
 ### Does workers’ comp stop if I go back to light duty?
 
-Your total disability checks stop, but if light duty pays less than you earned before, you may receive partial checks for the difference. Medical care continues. If your restrictions get worse and you can’t work again, total disability checks can resume, but they don’t restart automatically. The insurance company has to agree to pay them, or you have to ask the Commission to review your award based on a change in condition ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)).
+Your total disability checks stop, but if light duty pays less than you earned before, you may receive partial checks for the difference. Medical care continues. If your restrictions get worse and you can’t work again, total disability checks can resume, but they don’t restart automatically. The insurance company has to agree to pay them, or you have to ask the Commission to review your award based on a change in condition ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). Here’s what happens if you [refuse a light-duty job in Virginia](/light-duty-workers-comp-virginia/).
 
 ### Does a settlement end workers’ comp?
 
