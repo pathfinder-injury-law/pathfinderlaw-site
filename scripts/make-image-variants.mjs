@@ -26,12 +26,27 @@ const PHOTOS = {
   '/images/photos/tile-c.jpg': [480, 800, 1200, 1400],
   '/images/photos/bryn.jpg': [360, 600, 900],
   '/images/photos/mandy.jpg': [360, 600, 900],
+  // E4 home page (Unsplash photos, see CREDITS.txt)
+  '/images/photos/e4-overlook-desktop.webp': [1024, 1440, 2000],
+  '/images/photos/e4-overlook-phone.webp': [480, 900],
+  '/images/photos/e4-farm-road.jpg': [480, 800],
+  '/images/photos/e4-autumn-ridges.jpg': [480, 800],
+  '/images/photos/e4-green-valley.jpg': [480, 800],
+  '/images/photos/e4-green-ridges-gold-sky.jpg': [800, 1400, 2000],
+  '/images/photos/e4-misty-river.jpg': [800, 1400, 2000],
 };
 
 // High quality settings: the copies should look the same as the originals.
 const FORMATS = {
   avif: (img) => img.avif({ quality: 60, effort: 7, chromaSubsampling: '4:4:4' }),
   webp: (img) => img.webp({ quality: 82, effort: 6 }),
+};
+// The phone hero is the mobile LCP image, so it trades a little quality for size
+// (900w: 141 KB at the default, 83 KB here, with no visible difference on the rock detail).
+const OVERRIDES = {
+  '/images/photos/e4-overlook-phone.webp': {
+    avif: (img) => img.avif({ quality: 45, effort: 7, chromaSubsampling: '4:2:0' }),
+  },
 };
 
 mkdirSync(join(repo, 'public', OUT_DIR), { recursive: true });
@@ -43,7 +58,7 @@ for (const [src, widths] of Object.entries(PHOTOS)) {
   const entry = { width: meta.width, height: meta.height, avif: [], webp: [] };
   for (const w of widths) {
     if (w > meta.width) throw new Error(`${src}: ${w} is wider than the original (${meta.width})`);
-    for (const [fmt, encode] of Object.entries(FORMATS)) {
+    for (const [fmt, encode] of Object.entries({ ...FORMATS, ...OVERRIDES[src] })) {
       const url = `${OUT_DIR}/${name}-${w}.${fmt}`;
       const info = await encode(sharp(input).resize({ width: w, withoutEnlargement: true })).toFile(join(repo, 'public', url));
       entry[fmt].push({ url, width: w, bytes: info.size });

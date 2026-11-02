@@ -1,64 +1,91 @@
 ---
 import Photo from '../components/Photo.astro';
 import Base from '../layouts/Base.astro';
-import TornEdge from '../components/TornEdge.astro';
-import TopicIcon from '../components/TopicIcon.astro';
-import ContactSection from '../components/ContactSection.astro';
 import ContactForm from '../components/ContactForm.astro';
 import variants from '../data/imageVariants.json';
+import { site } from '../data/site';
+import { marks } from '../data/e4Marks';
 
-// Hero photo copies (scripts/make-image-variants.mjs), as srcset lists.
+// Home page, design E4 (Nov 2, 2026): one real outdoor photo up top, hand-drawn marker marks on key
+// words, a pinned "what happens when you call" trail, diamond photos, map lines that fade in as you
+// scroll, and a sketched west-to-east Virginia map at the bottom. Mockup: Active/Mockup E - 11-01-26/e5.html.
+// The marker underlines and circles are drawn in the browser at each word's real size (script below);
+// everything else is inline SVG, so no extra requests. The search text and links from the Nov 1 SEO
+// rewrite are kept (intro paragraphs, topic links, results links).
+
 const heroSet = (crop: 'desktop' | 'phone', fmt: 'avif' | 'webp') =>
-  (variants as any)[`/images/photos/hero-over-shoulder-${crop}.webp`][fmt].map((v: { url: string; width: number }) => `${v.url} ${v.width}w`).join(', ');
+  (variants as any)[`/images/photos/e4-overlook-${crop}.webp`][fmt].map((v: { url: string; width: number }) => `${v.url} ${v.width}w`).join(', ');
 
-// Nov 1 SEO rewrite: new title, description and intro text (who we are, both offices,
-// links into the main topic pages). Layout and the other sections are unchanged.
 const title = "Pathfinder Injury Law | Virginia Workers' Comp Lawyer";
 const description =
   "Pathfinder Injury Law handles only Virginia workers' comp, only for injured workers. Offices in Richmond and Chincoteague. Free consultation: 804-505-0633.";
 
+// Word for word from /reviews/ (initials only, as there). No results or comparisons (LEO 1750 section G).
+const reviews = [
+  { by: 'M.W.', mark: 'guided the way', text: ['They ', ' when I needed help the most. Very knowledgeable, respectful of my situation and always there whenever I had questions.'] },
+  { by: 'T.B.', text: ['The team at Pathfinders was very professional, attentive and knowledgeable. Mr. Swartz made certain that I understood my rights and walked me through the process.'] },
+  { by: 'K.W.', text: ['Pathfinder Injury Law was extremely helpful, knowledgeable, personable, and ensured that I understood each step of the process.'] },
+];
+
+// Bryn's own steps (Nov 2), legal-checked. Step 3 is his reworded line after the check.
+const steps = [
+  { title: 'Free consultation', text: 'We discuss your case in a free, no-pressure consultation with Bryn, Mandy, or both.' },
+  { title: 'We do our homework', text: 'We research any issues and figure out if we can help. We make sure there are no conflicts of interest or other problems.' },
+  { title: 'Good fit or not', text: 'If it’s a good fit, we offer to help. If not, we tell you why. We’ll point you to another lawyer if we know someone who might be able to help.' },
+  { title: 'We get to work', text: 'Paperwork is signed and we get to work.', link: { href: '/what-happens-when-you-file-a-workers-comp-claim/', label: 'How filing a claim works' } },
+];
+
+const help = [
+  { title: 'Starting a claim', text: 'Just got hurt? Here’s what to do first.', href: '/how-to-file-a-workers-comp-claim/', img: '/images/photos/e4-farm-road.jpg' },
+  { title: 'Denied claims', text: 'A denial isn’t the end. Here’s how appeals work.', href: '/how-to-appeal-a-workers-comp-denial-in-virginia/', img: '/images/photos/e4-autumn-ridges.jpg' },
+  { title: 'Settlements', text: 'What a settlement covers, and what it closes.', href: '/workers-comp-settlement-in-virginia/', img: '/images/photos/e4-green-valley.jpg' },
+];
+
 const topics = [
-  { label: 'Construction Accidents', href: '/virginia-construction-accident-lawyer/', icon: 'construction' },
-  { label: 'Factory Accidents', href: '/virginia-factory-accident-lawyer/', icon: 'factory' },
-  { label: 'Vehicle Accidents', href: '/car-accident-at-work-in-virginia/', icon: 'vehicle' },
-  { label: 'Back Injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', icon: 'spine' },
+  { label: 'What Virginia workers’ comp pays', href: '/virginia-workers-comp-lawyer/' },
+  { label: 'Construction accidents', href: '/virginia-construction-accident-lawyer/' },
+  { label: 'Factory accidents', href: '/virginia-factory-accident-lawyer/' },
+  { label: 'Vehicle accidents', href: '/car-accident-at-work-in-virginia/' },
+  { label: 'Back injuries', href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/' },
+  { label: 'Workers’ comp FAQ', href: '/virginia-workers-comp-faq/' },
 ];
 
-const team = [
-  { name: 'Bryn Swartz', role: 'Owner and Attorney', href: '/bryn-swartz/', img: '/images/photos/bryn-round.webp' },
-  { name: 'Mandy Truman', role: 'Firm Administrator', href: '/mandy-truman/', img: '/images/photos/mandy-round.webp' },
-];
-
-const traits = ['Local', 'Experienced', 'Focused', 'Fighting Spirit', 'Calming Presence'];
-
+// Same wording and links as before the redesign (legal-checked); a doodle sits above each.
 const results = [
   {
     amount: '$1,200,000',
-    count: 1200000,
+    icon: 'crutch',
     text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.',
     linkText: 'ankle injury',
     href: '/ankle-injury-workers-comp/',
   },
   {
     amount: '$360,000',
-    count: 360000,
+    icon: 'spine',
     text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.',
     linkText: 'back injury',
     href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/',
   },
   {
     amount: '$250,000',
-    count: 250000,
+    icon: 'hardhat',
     text: 'Settlement obtained in a contested concussion/brain injury Workers’ Compensation case with psychosomatic issues following mediation before the Virginia Workers’ Compensation Commission.',
   },
   {
     amount: '$240,000',
-    count: 240000,
+    icon: 'back',
     text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.',
     linkText: 'lumbar herniation',
     href: '/what-should-you-do-if-you-have-a-spine-injury-at-work/',
   },
 ];
+
+const doodles: Record<string, string> = {
+  crutch: '<path d="M20 8Q30 2 40 8M22 8L28 66M38 8L32 66M24 34H36M28 66H32V74M24 74H36"/>',
+  spine: [0, 1, 2, 3, 4].map((i) => `<rect x="21" y="${4 + i * 14}" width="18" height="10" rx="4"/><path d="M21 ${9 + i * 14}H13M39 ${9 + i * 14}H47"/>`).join(''),
+  hardhat: '<path d="M12 54C12 32 52 32 52 54M6 54H58Q62 58 58 60H6Q2 58 6 54ZM32 30V54M24 34L22 54M40 34L42 54"/>',
+  back: '<circle cx="14" cy="14" r="6"/><path d="M19 19C28 24 36 30 40 38M40 38L34 56L36 72M40 38L48 56L50 72M24 23L22 40L26 52M40 38Q44 36 42 30"/><path d="M48 24L52 18M51 32L58 30M48 40L55 44" stroke-width="2.2"/>',
+};
 ---
 <Base
   title={title}
@@ -69,182 +96,541 @@ const results = [
   heroLight
 >
   <Fragment slot="head">
-    <!-- Start the hero photo download right away, in the size and format the browser will pick below.
-         Browsers without AVIF skip these (type="image/avif") and find the WebP in the picture instead. -->
+    <!-- Start the hero photo download right away, in the size and format the browser will pick below. -->
     <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('desktop', 'avif')} imagesizes="100vw" media="(min-width: 48rem)" fetchpriority="high" />
     <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('phone', 'avif')} imagesizes="100vw" media="(max-width: 47.99rem)" fetchpriority="high" />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-wght-italic.woff2" crossorigin />
   </Fragment>
-  <!-- Hero: words in the left two thirds over the sky, hiker in the right third. -->
-  <section class="hero hero-sky">
-    <!-- Art direction as before: the phone crop below 768px, the wide photo above. Each in AVIF, then WebP, in two sizes. -->
-    <picture class="hero-pic">
-      <source media="(max-width: 47.99rem)" type="image/avif" srcset={heroSet('phone', 'avif')} sizes="100vw" width="776" height="768" />
-      <source media="(max-width: 47.99rem)" type="image/webp" srcset={heroSet('phone', 'webp')} sizes="100vw" width="776" height="768" />
-      <source type="image/avif" srcset={heroSet('desktop', 'avif')} sizes="100vw" />
-      <img class="hero-photo" src="/images/photos/hero-over-shoulder-desktop.webp" srcset={heroSet('desktop', 'webp')} sizes="100vw" alt="" width="1376" height="768" fetchpriority="high" />
-    </picture>
-    <div class="wrap">
-      <div class="hero-kicker"><h1>Virginia Workers’ Comp Lawyer</h1></div>
-      <span class="rule" aria-hidden="true"></span>
-      <p class="hero-l1">Hurt at work?</p>
-      <p class="hero-l2">Let’s go.</p>
-      <div class="hero-form" id="contact">
-        <ContactForm />
-      </div>
-    </div>
-    <TornEdge fill="var(--white)" />
-  </section>
 
-  <!-- Team: two round portraits sitting on the torn edge of the hero. -->
-  <section class="team-peek" aria-label="Meet your team">
-    <div class="wrap">
-      <ul class="peek-list">
-        {team.map((p) => (
-          <li>
-            <a class="peek" href={p.href}>
-              <img src={p.img} alt="" width="360" height="360" />
-              <span class="peek-text"><strong>{p.name}</strong><span>{p.role}</span></span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
+  <div class="e4">
+    <!-- Shared SVG texture that makes the drawn marks look like marker ink. -->
+    <svg width="0" height="0" class="ink-defs" aria-hidden="true" focusable="false">
+      <filter id="ink" x="-5%" y="-20%" width="110%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="warp" />
+        <feDisplacementMap in="SourceGraphic" in2="warp" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="rough" />
+        <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="9" result="grain" />
+        <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3 2.3" result="dry" />
+        <feComposite in="rough" in2="dry" operator="in" />
+      </filter>
+    </svg>
 
-  <!-- Intro -->
-  <section class="section">
-    <div class="wrap intro" data-reveal>
-      <div class="intro-text">
-        <h2>Injured At Work?</h2>
-        <hr class="rule" />
-        <p class="lede lede-caps">We’ll guide you on the path to <mark>compensation.</mark></p>
-        <p>
-          <strong>Pathfinder Injury Law</strong> is a family-owned workers’ compensation law firm in
-          Richmond, Virginia. We handle only Virginia workers’ comp claims, and only for people who get
-          hurt at work. Our offices are in <a href="/richmond-workers-comp-lawyer/">Richmond</a> and in
-          Chincoteague on the <a href="/eastern-shore-workers-comp-lawyer/">Eastern Shore</a>, and we
-          take cases from every part of the state, by phone or video if that’s easier.
-        </p>
-        <p>
-          Most people call us with the same few questions: <a href="/virginia-workers-comp-lawyer/">what
-          Virginia workers’ comp pays</a>, <a href="/how-to-file-a-workers-comp-claim/">how to file a
-          claim</a>, and <a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">what to do when the
-          insurance company says no</a>. Quick answers are in our
-          <a href="/virginia-workers-comp-faq/">workers’ comp FAQ</a>. Your first consultation is free.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-dark" href="/about-us/">Learn About Our Firm</a>
+    <!-- Hero: one real photo edge to edge, words low left. -->
+    <section class="hero hero-e4">
+      <picture class="hero-pic">
+        <source media="(max-width: 47.99rem)" type="image/avif" srcset={heroSet('phone', 'avif')} sizes="100vw" width="900" height="1452" />
+        <source media="(max-width: 47.99rem)" type="image/webp" srcset={heroSet('phone', 'webp')} sizes="100vw" width="900" height="1452" />
+        <source type="image/avif" srcset={heroSet('desktop', 'avif')} sizes="100vw" />
+        <img class="hero-photo" src="/images/photos/e4-overlook-desktop.webp" srcset={heroSet('desktop', 'webp')} sizes="100vw" alt="A hiker standing on a rocky overlook above a wide valley" width="2000" height="1333" fetchpriority="high" />
+      </picture>
+      <div class="wrap hero-copy">
+        <h1 class="kicker">Virginia Workers’ Comp Lawyer</h1>
+        <p class="hero-big">Hurt at work?<br /><span class="mk u" data-seed="101">We’ve got this.</span></p>
+        <p class="hero-lede">Workers’ comp is all we do. Free consultation. Zero pressure.</p>
+        <div class="hero-acts">
+          <a class="btn btn-sun" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+          <a class="tl" href="#contact">Or send us a message</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- All we do -->
-  <section class="section focus-band contour on-dark">
-    <div class="wrap">
-      <div class="section-head center" data-reveal>
-        <p class="caps">All We Do Is</p>
-        <h2>Workers’ Comp Law</h2>
-        <hr class="rule" />
-      </div>
-      <div class="tiles" data-stagger>
-        <a class="tile" href="/virginia-workers-comp-lawyer/">
-          <Photo src="/images/photos/tile-b.jpg" alt="" width="1400" height="886" sizes="(min-width: 75rem) 588px, (min-width: 48rem) 45vw, calc(100vw - 30px)" loading="lazy" />
-          <h3>Workers’ Compensation</h3>
-        </a>
-        <a class="tile" href="/how-to-appeal-a-workers-comp-denial-in-virginia/">
-          <Photo src="/images/photos/tile-a.jpg" alt="" width="1400" height="1750" sizes="(min-width: 75rem) 588px, (min-width: 48rem) 45vw, calc(100vw - 30px)" loading="lazy" />
-          <h3>Workers’ Comp Denials</h3>
-        </a>
-      </div>
-      <ul class="topic-grid" data-stagger>
-        {topics.map((t) => (
-          <li>
-            <a href={t.href}>
-              <span class="topic-circle"><TopicIcon name={t.icon} /></span>
-              <span class="topic-label">{t.label}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <!-- Why choose us -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head center" data-reveal>
-        <h2>Why Choose Us?</h2>
-        <hr class="rule" />
-      </div>
-      <div class="why" data-stagger>
-        <a class="person" href="/bryn-swartz/">
-          <Photo src="/images/photos/bryn.jpg" alt="" width="900" height="900" sizes="288px" loading="lazy" />
-          <h3>Bryn Swartz</h3>
-          <p>Founder &amp; Attorney</p>
-        </a>
-        <div class="traits-wrap">
-          <svg class="traits-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-            <path d="M19 42l3-26h4l3 26z" /><path d="M20 28h8M20.8 22h6.4" /><rect x="20" y="10" width="8" height="6" rx="1" /><path d="M24 4v3M12 8l4 3M36 8l-4 3" /><path d="M15 42h18" />
-          </svg>
-          <hr class="rule" style="margin-inline: auto" />
-          <ul class="traits">
-            {traits.map((t) => <li>{t}</li>)}
-          </ul>
+    <!-- Client comments -->
+    <section class="e4-quotes map-bg dark">
+      <div class="wrap">
+        <h2 class="e4-h">What our clients <span class="mk u" data-seed="515">say</span></h2>
+        <div class="notes">
+          {reviews.map((r) => (
+            <figure class="note">
+              <svg class="stars" viewBox="0 0 118 22" role="img" aria-label="5 star review"><g>{[0, 1, 2, 3, 4].map((i) => <path transform={`translate(${i * 24} 0)`} d="M11 2l2.6 6 6.4.5-4.9 4.2 1.5 6.3L11 15.6 5.4 19l1.5-6.3L2 8.5l6.4-.5z" />)}</g></svg>
+              <blockquote><p>“{r.text[0]}{r.mark && <span class="mk c" data-seed="611">{r.mark}</span>}{r.text[1]}”</p></blockquote>
+              <figcaption>{r.by}</figcaption>
+            </figure>
+          ))}
         </div>
-        <a class="person" href="/mandy-truman/">
-          <Photo src="/images/photos/mandy.jpg" alt="" width="900" height="900" sizes="288px" loading="lazy" />
-          <h3>Mandy Truman</h3>
-          <p>Firm Administrator</p>
-        </a>
+        <p class="fine">These comments are from past clients. Each case is different, and these comments do not promise or predict a result in yours.</p>
+        <a class="tl" href="/reviews/">Read more reviews</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Results -->
-  <section class="section results contour on-dark">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <h2>Results For Our Clients</h2>
-        <hr class="rule" />
+    <!-- What happens when you call: on wide screens the section holds still while the trail draws. -->
+    <section class="e4-steps map-bg pinwrap">
+      <div class="pin">
+        <div class="wrap">
+          <p class="k">Your trail</p>
+          <h2 class="e4-h">What happens when <span class="mk u amber" data-seed="303">you call</span></h2>
+          <div class="cards">
+            <p class="scrawl here" aria-hidden="true">you are here<svg viewBox={marks.aDown.vb}><path d={marks.aDown.d} /></svg></p>
+            <svg class="trail ink" viewBox={marks.trail.vb} preserveAspectRatio="none" aria-hidden="true"><path d={marks.trail.d} /></svg>
+            <ol class="card-list">
+              {steps.map((s, i) => (
+                <li class="card">
+                  <span class="num"><svg class="ink" viewBox={marks[`num${i + 1}`].vb} aria-hidden="true"><path d={marks[`num${i + 1}`].d} /></svg>{i + 1}</span>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}{s.link && <> <a class="tl" href={s.link.href}>{s.link.label}</a></>}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
       </div>
-      <div class="results-grid" data-stagger>
-        {results.map((r) => (
-          <article class="result">
-            <p class="amount" data-count={r.count}>{r.amount}</p>
-            <p>{r.href ? <>{r.text.split(r.linkText)[0]}<a href={r.href}>{r.linkText}</a>{r.text.split(r.linkText).slice(1).join(r.linkText)}</> : r.text}</p>
-          </article>
-        ))}
+    </section>
+
+    <!-- How we help: diamonds like the logo mark. -->
+    <section class="e4-help map-bg dark">
+      <div class="wrap">
+        <p class="k">How we help</p>
+        <h2 class="e4-h">Wherever <span class="mk c" data-seed="212">your claim</span> stands</h2>
+        <div class="dia-row">
+          <svg class="sun ink" viewBox={marks.sun.vb} aria-hidden="true"><path d={marks.sun.d} /></svg>
+          {help.map((h) => (
+            <a class="dia-card" href={h.href}>
+              <span class="dia"><Photo src={h.img} alt="" width="1000" height="1000" sizes="(min-width: 48rem) 420px, 90vw" loading="lazy" /></span>
+              <h3>{h.title}</h3>
+              <p>{h.text}</p>
+            </a>
+          ))}
+        </div>
+        <ul class="topic-links">
+          {topics.map((t) => <li><a href={t.href}>{t.label}</a></li>)}
+        </ul>
       </div>
-      <p class="disclaimer" data-reveal>
-        Amounts shown are gross, before attorney’s fees, costs, and liens. Every case is different. These results depended on facts unique to each case and do not
-        predict or guarantee the result in yours.
-      </p>
-      <p class="more-link"><a class="btn btn-primary" href="/results/">View More Case Results</a></p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Reviews -->
-  <section class="section section-sage">
-    <div class="wrap review" data-reveal>
-      <img class="quote-mark" src="/images/quote.svg" width="46" height="34" alt="" />
-      <h2>What Our Clients Say</h2>
-      <hr class="rule" />
-      <p class="review-note">These comments are from past clients. Each case is different, and these comments do not promise or predict a result in yours.</p>
-      <blockquote>
-        <p>
-          Could not ask for a better group of people to work with! Very knowledgeable and on top of
-          your case. Kept me informed every step of the way and answered all of questions and
-          concerns did not feel like a number very personal touch.
-        </p>
-      </blockquote>
-      <cite>&ndash; R.A.</cite>
-      <a class="btn btn-dark" href="/reviews/">Read More Reviews</a>
-    </div>
-  </section>
+    <!-- Big band -->
+    <section class="e4-band">
+      <Photo class="band-bg" src="/images/photos/e4-green-ridges-gold-sky.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
+      <div class="wrap">
+        <p class="big">All we do is <span class="mk c amber" data-seed="404">workers’ comp.</span></p>
+        <p class="sub">Not wills. Not divorces. Just helping people hurt at work.</p>
+      </div>
+    </section>
 
-  <!-- Call to action with contact form -->
-  <ContactSection variant="link" />
+    <!-- Results -->
+    <section class="e4-results map-bg">
+      <div class="wrap">
+        <svg class="paper ink" viewBox="0 0 120 110" aria-hidden="true"><g><path d="M20 8H76L92 24V100H20Z" /><path d="M76 8V24H92" /><path d="M32 36H78M32 48H78M32 60H66" /><path d="M32 84C38 74 42 92 48 80S58 76 62 84S74 82 80 78" /><path d="M98 70L112 56L104 48L90 62L86 76Z" /></g></svg>
+        <p class="k">Results</p>
+        <h2 class="e4-h">Some of our clients’ settlements</h2>
+        <div class="rgrid">
+          {results.map((r) => (
+            <article>
+              <svg class="dood ink" viewBox="0 0 60 76" aria-hidden="true"><g set:html={doodles[r.icon]} /></svg>
+              <p class="amount">{r.amount}</p>
+              <p>{r.href ? <>{r.text.split(r.linkText!)[0]}<a href={r.href}>{r.linkText}</a>{r.text.split(r.linkText!).slice(1).join(r.linkText!)}</> : r.text}</p>
+            </article>
+          ))}
+        </div>
+        <p class="fine">Amounts shown are gross, before attorney’s fees, costs, and liens. Every case is different. These results depended on facts unique to each case and do not predict or guarantee the result in yours.</p>
+        <a class="tl" href="/results/">View more case results</a>
+      </div>
+    </section>
+
+    <!-- Meet us, with the who-we-are text from the Nov 1 SEO rewrite. -->
+    <section class="e4-us map-bg dark">
+      <div class="wrap">
+        <p class="k">Meet us</p>
+        <h2 class="e4-h"><span class="mk u" data-seed="808">Two</span> people. <span class="mk c" data-seed="909">One</span> kind of case.</h2>
+        <div class="us-text">
+          <p>
+            <strong>Pathfinder Injury Law</strong> is a family-owned workers’ compensation law firm in
+            Richmond, Virginia. We handle only Virginia workers’ comp claims, and only for people who get
+            hurt at work. Our offices are in <a href="/richmond-workers-comp-lawyer/">Richmond</a> and in
+            Chincoteague on the <a href="/eastern-shore-workers-comp-lawyer/">Eastern Shore</a>, and we
+            take cases from every part of the state, by phone or video if that’s easier.
+          </p>
+          <p>
+            Most people call us with the same few questions: <a href="/virginia-workers-comp-lawyer/">what
+            Virginia workers’ comp pays</a>, <a href="/how-to-file-a-workers-comp-claim/">how to file a
+            claim</a>, and <a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">what to do when the
+            insurance company says no</a>. Quick answers are in our
+            <a href="/virginia-workers-comp-faq/">workers’ comp FAQ</a>. Your first consultation is free.
+          </p>
+        </div>
+        <div class="pair">
+          <a class="person" href="/bryn-swartz/">
+            <Photo src="/images/photos/bryn.jpg" alt="Bryn Swartz" width="900" height="900" sizes="(min-width: 48rem) 560px, 90vw" loading="lazy" />
+            <h3>Bryn Swartz</h3>
+            <p class="role">Owner/Attorney</p>
+          </a>
+          <a class="person" href="/mandy-truman/">
+            <Photo src="/images/photos/mandy.jpg" alt="Mandy Truman" width="900" height="900" sizes="(min-width: 48rem) 560px, 90vw" loading="lazy" />
+            <h3>Mandy Truman</h3>
+            <p class="role">Firm Administrator</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- The one form on this page (id="contact"). -->
+    <section class="e4-contact">
+      <Photo class="contact-bg" src="/images/photos/e4-misty-river.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
+      <div class="wrap contact-grid">
+        <div class="talk">
+          <h2 class="e4-h">Let’s talk about <span class="mk u" data-seed="707">what happened.</span></h2>
+          <svg class="lead" viewBox="0 0 130 110" aria-hidden="true"><path d="M8 96C20 40 70 20 118 34" /><path d="M100 20L120 34L102 50" /></svg>
+        </div>
+        <div class="form-bare" id="contact">
+          <ContactForm namePlaceholder="What’s your name?" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sketched map, west to east: Blue Ridge, Richmond, the Bay, the Eastern Shore, the Atlantic. -->
+    <div class="mapfoot">
+      <svg viewBox="0 0 1440 190" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Map sketch: mountains in western Virginia, Richmond in the middle, and the Eastern Shore by the ocean">
+        <g fill="none" stroke="#a7c18a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M0 132L52 84L84 108L146 46L196 96L238 70L292 112L344 86L398 124L452 140" />
+          <path d="M0 156L64 118L110 142L182 98L248 144L318 120L386 150L452 152" />
+          <path d="M146 46L134 66M146 46L158 64M146 46L148 70M238 70L230 84M238 70L246 84M182 98L174 112M182 98L190 112" />
+          <path d="M412 150L424 118L436 150ZM416 136H432M440 152L450 128L460 152Z" />
+          <path d="M260 170C340 176 420 164 500 170S640 178 720 170S860 166 930 172" stroke-dasharray="1 9" stroke-width="3" />
+          <path d="M452 152C520 146 590 150 660 148S800 144 900 152" />
+          <path d="M520 162H560M580 164H630M700 162H760M780 160H830" stroke-width="1.6" />
+          <path d="M548 146V132M548 132a8 8 0 1 0 0.1 0ZM604 147V135M604 135a6 6 0 1 0 0.1 0ZM770 145V131M770 131a8 8 0 1 0 0.1 0ZM806 147V137M806 137a5 5 0 1 0 0.1 0Z" />
+          <path d="M662 132L678 148M678 132L662 148" stroke="#ffd040" stroke-width="3.4" />
+          <path d="M920 160q10-7 20 0t20 0t20 0t20 0M940 174q10-7 20 0t20 0t20 0M1000 146q10-7 20 0t20 0" stroke-width="1.8" />
+          <path d="M1060 156C1100 140 1180 136 1250 142C1280 145 1300 150 1312 156" />
+          <path d="M1252 150C1272 152 1292 156 1312 162" stroke-dasharray="1 7" stroke-width="2.6" />
+          <path d="M1096 146l-4-12M1100 146l2-14M1104 146l6-10M1214 140l-4-12M1218 140l2-14M1222 140l6-10" />
+          <path d="M1140 132L1156 148M1156 132L1140 148" stroke="#ffd040" stroke-width="3.4" />
+          <path d="M1262 142L1266 100H1278L1282 142ZM1264 128H1280M1265 114H1279M1268 100L1272 92L1276 100" />
+          <path d="M1330 158q10-7 20 0t20 0t20 0t20 0t20 0M1350 174q10-7 20 0t20 0t20 0t20 0" stroke-width="1.8" />
+          <path d="M1352 144A34 34 0 0 1 1420 144M1386 98V86M1358 110L1350 102M1414 110L1422 102M1342 128L1332 124M1430 128L1440 124" stroke="#ffd040" />
+        </g>
+        <g class="map-labels" fill="#e9efdf" font-size="30">
+          <text x="132" y="30">Blue Ridge</text>
+          <text x="622" y="118">Richmond</text>
+          <text x="1080" y="112">Eastern Shore</text>
+        </g>
+      </svg>
+    </div>
+  </div>
 </Base>
 
+<script>
+  // Marker underlines (.mk.u) and circles (.mk.c) drawn as filled pen strokes at each word's real
+  // size, so nothing is stretched. Redrawn after fonts load and on resize. Decorative only.
+  let seed = 1;
+  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const n = (a: number) => (rnd() * 2 - 1) * a;
+  const f = (v: number) => Math.round(v * 10) / 10;
+  type Pt = [number, number];
+
+  function stroke(pts: Pt[], w: number, o: { tin?: number; tout?: number; swell?: number; blob?: number } = {}) {
+    const { tin = 0.06, tout = 0.28, swell = 0.22, blob = 0.25 } = o;
+    const ph = rnd() * 6, L: Pt[] = [], R: Pt[] = [];
+    pts.forEach((p, i) => {
+      const t = i / (pts.length - 1);
+      const a = pts[Math.max(0, i - 1)], b = pts[Math.min(pts.length - 1, i + 1)];
+      let dx = b[0] - a[0], dy = b[1] - a[1];
+      const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
+      let k = 1 + swell * Math.sin(t * 4.2 + ph) * 0.6 + blob * Math.exp(-t * 40);
+      if (t < tin) k *= 0.55 + 0.45 * (t / tin);
+      if (t > 1 - tout) k *= Math.pow((1 - t) / tout, 0.8) * 0.9 + 0.1;
+      const hw = (w * k) / 2;
+      L.push([p[0] - dy * hw, p[1] + dx * hw]); R.push([p[0] + dy * hw, p[1] - dx * hw]);
+    });
+    const ring = L.concat(R.reverse());
+    let s = `M${f(ring[0][0])} ${f(ring[0][1])}`;
+    for (let i = 1; i < ring.length; i++) {
+      const m: Pt = [(ring[i - 1][0] + ring[i][0]) / 2, (ring[i - 1][1] + ring[i][1]) / 2];
+      s += `Q${f(ring[i - 1][0])} ${f(ring[i - 1][1])} ${f(m[0])} ${f(m[1])}`;
+    }
+    return s + 'Z';
+  }
+
+  function underline(W: number, H: number, w: number) {
+    const N = 40, rise = H * (0.18 + n(0.06)), sag = H * (0.14 + n(0.05)), s0 = seed;
+    const a: Pt[] = [];
+    for (let i = 0; i < N; i++) {
+      const t = i / (N - 1);
+      const hook = t < 0.04 ? (1 - t / 0.04) * H * 0.18 : 0;
+      const flick = t > 0.93 ? -(((t - 0.93) / 0.07) ** 2) * H * 0.35 : 0;
+      a.push([W * (0.005 + 0.99 * t) + n(0.3), H * 0.42 + rise * (0.5 - t) - sag * Math.sin(Math.PI * t) + hook + flick + Math.sin(t * 9 + s0) * H * 0.03]);
+    }
+    const x0 = 0.94 + n(0.03), x1 = 0.1 + n(0.05), b: Pt[] = [];
+    for (let i = 0; i < N; i++) {
+      const t = i / (N - 1);
+      b.push([W * (x0 + (x1 - x0) * t), H * 0.66 + H * 0.16 * t - H * 0.08 * Math.sin(Math.PI * t) + Math.sin(t * 7 + s0) * H * 0.025]);
+    }
+    return [stroke(a, w), stroke(b, w * 0.62, { tin: 0.1, tout: 0.4, blob: 0.1 })];
+  }
+
+  function circle(W: number, H: number, w: number) {
+    const turns = 1.18 + n(0.08), N = 90, a0 = -Math.PI * 0.35 + n(0.25), tilt = n(0.06), egg = 0.08 + n(0.04), ph = rnd() * 6;
+    const rx = W / 2 - w, ry = H / 2 - w, pts: Pt[] = [];
+    for (let i = 0; i < N; i++) {
+      const t = i / (N - 1), a = a0 - t * turns * Math.PI * 2;
+      let r = 1 + egg * Math.cos(a - ph) + 0.03 * Math.sin(a * 3 + ph) + t * 0.06;
+      if (t > 0.9) r += ((t - 0.9) / 0.1) ** 2 * 0.1;
+      const x = Math.cos(a) * rx * r, y = Math.sin(a) * ry * r * (1 - t * 0.06);
+      pts.push([W / 2 + x * Math.cos(tilt) - y * Math.sin(tilt) + t * W * 0.025, H / 2 + x * Math.sin(tilt) + y * Math.cos(tilt) - t * H * 0.05]);
+    }
+    return [stroke(pts, w, { tin: 0.03, tout: 0.22, swell: 0.3, blob: 0.35 })];
+  }
+
+  const NS = 'http://www.w3.org/2000/svg';
+  function draw() {
+    document.querySelectorAll<HTMLElement>('.e4 .mk').forEach((el, i) => {
+      el.querySelector('svg.mark')?.remove();
+      seed = Number(el.dataset.seed || 100 + i * 37);
+      const fs = parseFloat(getComputedStyle(el).fontSize), r = el.getBoundingClientRect();
+      const circ = el.classList.contains('c');
+      const W = circ ? r.width * 1.18 : r.width * 1.04, H = circ ? r.height * 1.3 : fs * 0.42;
+      const w = circ ? Math.max(3, fs * 0.07) : Math.max(5, fs * 0.15);
+      const svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('class', 'mark');
+      svg.setAttribute('viewBox', `0 0 ${f(W)} ${f(H)}`);
+      svg.setAttribute('aria-hidden', 'true');
+      svg.setAttribute('style', circ
+        ? `left:${-r.width * 0.09}px;top:${-r.height * 0.15}px;width:${W}px;height:${H}px`
+        : `left:${-r.width * 0.02}px;bottom:${-fs * 0.3}px;width:${W}px;height:${H}px`);
+      for (const d of circ ? circle(W, H, w) : underline(W, H, w)) {
+        const p = document.createElementNS(NS, 'path');
+        p.setAttribute('d', d);
+        svg.appendChild(p);
+      }
+      el.appendChild(svg);
+    });
+  }
+  document.fonts.ready.then(draw);
+  let resizeTimer: number | undefined;
+  addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = window.setTimeout(draw, 150); });
+
+  // Steps: on wide screens the section holds still while the trail draws and each step lights up.
+  // Phones and reduced-motion settings get the plain list.
+  const wrap = document.querySelector<HTMLElement>('.e4 .pinwrap');
+  if (wrap) {
+    const cards = [...wrap.querySelectorAll<HTMLElement>('.card')];
+    const trail = wrap.querySelector<SVGElement>('.trail');
+    const here = wrap.querySelector<HTMLElement>('.here');
+    const still = matchMedia('(prefers-reduced-motion: reduce), (max-width: 47.99rem)');
+    const tick = () => {
+      if (still.matches) { wrap.classList.remove('on'); return; }
+      wrap.classList.add('on');
+      const r = wrap.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
+      if (trail) trail.style.clipPath = `inset(-20% ${(1 - p) * 100}% -20% 0)`;
+      const step = Math.min(cards.length - 1, Math.floor(p * cards.length * 0.999));
+      cards.forEach((c, i) => { c.classList.toggle('lit', i <= step); c.classList.toggle('now', i === step); });
+      if (here) here.style.transform = `translateX(${cards[step].offsetLeft}px) rotate(-5deg)`;
+    };
+    addEventListener('scroll', tick, { passive: true });
+    addEventListener('resize', tick);
+    tick();
+  }
+
+  // Map lines fade in behind the sections as you scroll from the photo down to the results.
+  const hero = document.querySelector<HTMLElement>('.e4 .hero');
+  const res = document.querySelector<HTMLElement>('.e4 .e4-results');
+  if (hero && res) {
+    const fade = () => {
+      const a = hero.offsetTop + hero.offsetHeight * 0.6, b = res.offsetTop;
+      const p = Math.min(1, Math.max(0, (scrollY + innerHeight * 0.5 - a) / (b - a)));
+      document.documentElement.style.setProperty('--map', p.toFixed(3));
+    };
+    addEventListener('scroll', fade, { passive: true });
+    addEventListener('resize', fade);
+    fade();
+  }
+</script>
+
+<style is:global>
+  /* ===== Home page, design E4. Scoped by .e4 (and body:has(.e4) for the shared header). ===== */
+  .e4 {
+    --sage-e4: #e9efdf;
+    --cream: #fff5d5;
+    --act-e4: #a15b00; /* darker Brand Book orange shade, 5.23:1 with white text */
+    background: var(--sage-e4);
+  }
+  .e4 .ink-defs { position: absolute; }
+  .e4 .ink { filter: url(#ink); }
+  .e4 .k { font-weight: 800; font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin: 0 0 0.75rem; }
+  .e4 .dark .k { color: var(--sun); }
+  .e4 .e4-h { font-size: clamp(2.125rem, 4vw, 3.25rem); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; margin: 0; }
+  .e4 .dark .e4-h { color: var(--cream); }
+  .e4 .tl { font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--sun); color: inherit; }
+  .e4 .fine { font-size: 0.8125rem; margin: 1.75rem 0 0.75rem; }
+  .e4 .scrawl { font-family: Caveat, 'Bradley Hand', 'Segoe Print', cursive; font-weight: 600; line-height: 1; }
+
+  /* Marker marks drawn by the script */
+  .e4 .mk { position: relative; display: inline-block; white-space: nowrap; z-index: 0; --mc: var(--sun); }
+  .e4 .mk.amber { --mc: var(--amber); }
+  .e4 .mk.c { margin: 0 0.12em; }
+  .e4 .mk > svg.mark { position: absolute; z-index: -1; pointer-events: none; overflow: visible; fill: var(--mc); filter: url(#ink); }
+
+  /* Header on this page: sage bar, bigger logo, and a sage tab that dips around the logo. */
+  body:has(.e4) .site-header:not(.is-solid) { background: #e9efdf; box-shadow: none; }
+  body:has(.e4) .site-header:not(.is-solid)::before { display: none; }
+  body:has(.e4) .site-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 700px;
+    height: 124px;
+    margin-top: -1px;
+    background: #e9efdf;
+    clip-path: path('M0 0H700C640 0 610 20 570 56C530 96 470 118 380 122H0Z');
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  body:has(.e4) .site-header.is-solid::after { opacity: 0; }
+  @media (min-width: 48rem) {
+    body:has(.e4) .site-header:not(.is-solid) .brand img { width: 18.75rem; }
+  }
+  @media (max-width: 47.99rem) {
+    body:has(.e4) .site-header::after { width: 300px; height: 56px; clip-path: path('M0 0H300C270 0 255 10 235 26C215 44 190 54 150 55H0Z'); }
+  }
+
+  /* Hero */
+  .e4 .hero-e4 { position: relative; min-height: 100svh; max-height: 68rem; overflow: hidden; color: var(--cream); display: flex; align-items: flex-end; }
+  .e4 .hero-e4 .hero-pic, .e4 .hero-e4 .hero-photo { position: absolute; inset: var(--hero-top, 7.5rem) 0 0 0; width: 100%; height: calc(100% - var(--hero-top, 7.5rem)); object-fit: cover; object-position: 70% 0%; }
+  .e4 .hero-e4 .hero-photo { inset: 0; height: 100%; }
+  .e4 .hero-e4::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(64, 104, 60, 0) 86%, #40683c 100%),
+      linear-gradient(0deg, rgba(20, 36, 27, 0.62) 0%, rgba(20, 36, 27, 0.28) 40%, rgba(20, 36, 27, 0) 62%),
+      linear-gradient(90deg, rgba(20, 36, 27, 0.4), rgba(20, 36, 27, 0) 60%);
+  }
+  .e4 .hero-copy { position: relative; z-index: 2; padding-bottom: 4rem; }
+  /* No fade-in on the home hero text: it is visible on first paint, so it can't hold back LCP. */
+  .e4 .hero-copy > * { animation: none; }
+  .e4 .hero-copy .kicker { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sun); margin: 0 0 0.75rem; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
+  .e4 .hero-big { font-size: clamp(2.625rem, 6.6vw, 6.5rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 2.75rem; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25); }
+  .e4 .hero-lede { font-size: 1.375rem; margin: 0 0 1.875rem; max-width: 41rem; }
+  .e4 .hero-acts { display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap; }
+  .e4 .btn-sun { background: var(--sun); color: var(--forest); border-color: var(--sun); letter-spacing: 0.01em; font-weight: 800; font-size: 1.125rem; padding: 0 1.75rem; }
+  @media (max-width: 47.99rem) {
+    .e4 .hero-e4 { --hero-top: 5.25rem; }
+    .e4 .hero-e4 .hero-photo { object-position: 0% 0%; }
+    .e4 .hero-e4::after { background: linear-gradient(180deg, rgba(64, 104, 60, 0) 90%, #40683c 100%), linear-gradient(0deg, rgba(20, 36, 27, 0.82) 0%, rgba(20, 36, 27, 0.5) 50%, rgba(20, 36, 27, 0) 75%); }
+    .e4 .hero-lede { font-size: 1.125rem; }
+    .e4 .hero-acts { flex-direction: column; align-items: stretch; gap: 1rem; }
+    .e4 .hero-acts .tl { text-align: center; }
+    .e4 .hero-copy { padding-bottom: 5.5rem; } /* room for the phone call bar */
+  }
+
+  /* Map lines that fade in as you scroll (--map is set by the script) */
+  .e4 .map-bg { position: relative; isolation: isolate; }
+  .e4 .map-bg::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url(/images/topo-light.svg) center / cover; opacity: calc(var(--map, 0) * 0.3); }
+  .e4 .map-bg.dark::before { background-image: url(/images/topo-dark.svg); opacity: calc(var(--map, 0) * 0.22); }
+
+  /* Client comments */
+  .e4 .e4-quotes { background: var(--pine); color: #fff; padding: 5.5rem 0 6rem; }
+  .e4 .notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.1rem; margin: 2.9rem 0 1.9rem; }
+  .e4 .note { margin: 0; background: var(--cream); color: var(--forest); padding: 1.9rem 1.9rem 1.6rem; border-radius: 2px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 6px 14px rgba(0, 0, 0, 0.14); }
+  .e4 .note:nth-child(1) { transform: rotate(-0.6deg); }
+  .e4 .note:nth-child(2) { transform: rotate(0.5deg) translateY(10px); }
+  .e4 .note:nth-child(3) { transform: rotate(-0.3deg); }
+  .e4 .note .stars { width: 94px; height: 18px; fill: var(--amber); display: block; margin-bottom: 0.75rem; }
+  .e4 .note blockquote { margin: 0; font-size: 1.1875rem; line-height: 1.6; font-weight: 500; }
+  .e4 .note blockquote p { margin: 0; }
+  .e4 .note figcaption { font-family: Caveat, 'Bradley Hand', 'Segoe Print', cursive; font-size: 1.75rem; font-weight: 700; color: var(--act-e4); margin-top: 0.9rem; }
+  .e4 .e4-quotes .fine { color: #e9efdf; }
+  @media (max-width: 47.99rem) { .e4 .notes { grid-template-columns: 1fr; gap: 1.9rem; } .e4 .note:nth-child(n) { transform: rotate(-1deg); } .e4 .e4-quotes { padding: 4rem 0; } }
+
+  /* Steps */
+  .e4 .e4-steps { background: var(--sage-e4); padding: 6rem 0; }
+  .e4 .cards { position: relative; margin-top: 9.5rem; }
+  .e4 .card-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; z-index: 1; }
+  .e4 .card { background: #f4f7ef; border-top: 5px solid var(--moss); border-radius: 14px; padding: 1.6rem 1.4rem; }
+  .e4 .card h3 { font-size: 1.3125rem; line-height: 1.2; margin: 0 0 0.6rem; }
+  .e4 .card p { font-size: 1rem; margin: 0; color: #3d5546; }
+  .e4 .card .tl { display: inline-block; margin-top: 0.5rem; text-decoration-color: var(--amber); color: var(--forest); }
+  .e4 .num { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem; }
+  .e4 .num::before { content: ''; position: absolute; inset: 4px; border-radius: 50%; background: var(--sun); z-index: -1; }
+  .e4 .num svg { position: absolute; inset: -8px; width: 60px; height: 60px; fill: var(--forest); }
+  .e4 .trail { position: absolute; left: 0; top: -62px; height: 56px; width: 100%; fill: var(--amber); }
+  .e4 .here { position: absolute; left: -10px; top: -128px; font-size: 2.125rem; color: var(--act-e4); transform: rotate(-5deg); margin: 0; z-index: 3; }
+  .e4 .here svg { display: block; width: 40px; height: 44px; margin-left: 40px; fill: currentColor; }
+  @media (min-width: 48rem) and (prefers-reduced-motion: no-preference) {
+    .e4 .pinwrap { height: 300vh; padding: 0; }
+    .e4 .pin { position: sticky; top: 0; height: 100vh; display: grid; align-content: center; }
+    .e4 .pinwrap.on .card { opacity: 0.4; transform: translateY(14px); transition: opacity 0.45s, transform 0.45s, box-shadow 0.45s; }
+    .e4 .pinwrap.on .card.lit { opacity: 1; transform: none; }
+    .e4 .pinwrap.on .card.now { box-shadow: 0 10px 30px rgba(41, 70, 52, 0.16); }
+    .e4 .pinwrap.on .num svg { opacity: 0; transition: opacity 0.4s; }
+    .e4 .pinwrap.on .card.lit .num svg { opacity: 1; }
+    .e4 .pinwrap.on .here { transition: transform 0.5s ease; }
+  }
+  @media (max-width: 47.99rem) {
+    .e4 .e4-steps { padding: 4rem 0; }
+    .e4 .cards { margin-top: 4.1rem; }
+    .e4 .card-list { grid-template-columns: 1fr; }
+    .e4 .trail, .e4 .here svg { display: none; }
+    .e4 .here { top: -3.4rem; left: 0; font-size: 1.75rem; }
+  }
+
+  /* How we help: diamonds */
+  .e4 .e4-help { background: var(--forest); color: #fff; padding: 6rem 0; }
+  .e4 .e4-help .k { color: var(--sky-tint); }
+  .e4 .dia-row { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 3.75rem; }
+  .e4 .dia-card { text-align: center; color: #fff; text-decoration: none; }
+  .e4 .dia { display: block; width: 72%; aspect-ratio: 1; margin: 12% auto 15%; transform: rotate(45deg); border-radius: 22px; overflow: hidden; border: 5px solid var(--moss); box-shadow: 0 0 0 6px var(--forest), 0 0 0 9px var(--sun); }
+  .e4 .dia picture, .e4 .dia img { display: block; }
+  .e4 .dia img { width: 142%; height: 142%; max-width: none; margin: -21%; transform: rotate(-45deg); object-fit: cover; }
+  .e4 .dia-card:hover .dia, .e4 .dia-card:focus-visible .dia { box-shadow: 0 0 0 6px var(--forest), 0 0 0 9px var(--amber); }
+  .e4 .dia-card h3 { font-size: 1.625rem; margin: 0 0 0.4rem; }
+  .e4 .dia-card p { margin: 0; color: #d6e3d0; }
+  .e4 .sun { position: absolute; left: calc(66.66% - 70px); top: -80px; width: 120px; height: 92px; fill: var(--sun); }
+  .e4 .topic-links { list-style: none; padding: 0; margin: 3.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.75rem 1.75rem; justify-content: center; }
+  .e4 .topic-links a { color: #e9efdf; font-weight: 700; text-decoration: underline; text-decoration-color: var(--sun); text-underline-offset: 5px; }
+  @media (max-width: 47.99rem) { .e4 .e4-help { padding: 4rem 0; } .e4 .dia-row { grid-template-columns: 1fr; gap: 2.25rem; } .e4 .sun { left: auto; right: 0; top: -70px; width: 84px; height: 64px; } }
+
+  /* Band */
+  .e4 .e4-band { position: relative; min-height: 38.75rem; display: flex; align-items: center; color: var(--cream); overflow: hidden; }
+  .e4 .e4-band picture, .e4 .e4-band .band-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .e4 .e4-band::after { content: ''; position: absolute; inset: 0; background: rgba(20, 36, 27, 0.32); }
+  .e4 .e4-band .wrap { position: relative; z-index: 2; width: 100%; }
+  .e4 .e4-band .big { font-size: clamp(2.5rem, 7.5vw, 6.75rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; margin: 0; max-width: 62rem; }
+  .e4 .e4-band .sub { font-size: 1.375rem; margin: 1.4rem 0 0; }
+  @media (max-width: 47.99rem) { .e4 .e4-band { min-height: 28.75rem; } .e4 .e4-band .sub { font-size: 1.125rem; } }
+
+  /* Results */
+  .e4 .e4-results { background: var(--cream); padding: 6rem 0; }
+  .e4 .e4-results .wrap { position: relative; }
+  .e4 .paper { position: absolute; right: 0; top: 0; width: 120px; height: 110px; transform: rotate(6deg); fill: none; stroke: var(--amber); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+  .e4 .rgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; margin-top: 2.5rem; }
+  .e4 .rgrid article { border-top: 4px solid var(--amber); padding-top: 1rem; }
+  .e4 .dood { display: block; width: 58px; height: 74px; margin-bottom: 0.6rem; fill: none; stroke: var(--amber); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+  .e4 .amount { font-size: 2.5rem; font-weight: 900; letter-spacing: -0.02em; margin: 0 0 0.4rem; color: var(--forest); }
+  .e4 .rgrid p:not(.amount) { font-size: 1rem; margin: 0; color: #3d5546; }
+  .e4 .e4-results .fine { color: #5a6b5f; max-width: 48rem; }
+  .e4 .e4-results .tl { text-decoration-color: var(--amber); }
+  @media (max-width: 47.99rem) { .e4 .e4-results { padding: 4rem 0; } .e4 .rgrid { grid-template-columns: 1fr 1fr; gap: 1.4rem; } .e4 .amount { font-size: 1.75rem; } .e4 .paper { width: 70px; height: 64px; top: -20px; } }
+
+  /* Meet us */
+  .e4 .e4-us { background: var(--pine); color: #fff; padding: 6rem 0; }
+  .e4 .us-text { max-width: 48rem; margin: 2rem 0 0; color: #e4ecdf; }
+  .e4 .us-text a { color: #fff; text-decoration-color: var(--sun); }
+  .e4 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.75rem; }
+  .e4 .person { color: #fff; text-decoration: none; }
+  .e4 .person img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 22%; border-radius: 18px; display: block; }
+  .e4 .person h3 { font-size: 1.75rem; margin: 1.25rem 0 0.15rem; }
+  .e4 .person .role { font-weight: 800; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sun); margin: 0; }
+  @media (max-width: 47.99rem) { .e4 .e4-us { padding: 4rem 0; } .e4 .pair { grid-template-columns: 1fr; } }
+
+  /* Contact: heading, a drawn arrow, and the step-by-step form with no card */
+  .e4 .e4-contact { position: relative; padding: 7rem 0; color: #fff; }
+  .e4 .e4-contact picture, .e4 .e4-contact .contact-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .e4 .e4-contact::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(41, 70, 52, 0.85), rgba(41, 70, 52, 0.4)); }
+  .e4 .contact-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 27.5rem; gap: 8.75rem; align-items: center; }
+  .e4 .talk { position: relative; }
+  .e4 .talk .e4-h { font-size: clamp(2.5rem, 4.6vw, 4rem); line-height: 1.02; color: var(--cream); }
+  .e4 .lead { position: absolute; left: calc(100% + 6px); bottom: 10px; width: 124px; height: 104px; fill: none; stroke: var(--sun); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 14 16; filter: url(#ink); }
+  .e4 .form-bare .form-card { background: none; box-shadow: none; padding: 0; border: 0; color: #fff; }
+  .e4 .form-bare .form-card > h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .e4 .form-bare .step[data-step='name'] legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .e4 .form-bare .intake-top:has(.intake-back[hidden]) .intake-progress { visibility: hidden; }
+  .e4 .form-bare .step-q { color: var(--cream); }
+  .e4 .form-bare input[type='text'] { background: rgba(233, 239, 223, 0.95); border: 0; min-height: 3.875rem; border-radius: 12px; font-size: 1.25rem; }
+  @media (max-width: 47.99rem) { .e4 .e4-contact { padding: 4rem 0; } .e4 .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; } .e4 .lead { display: none; } }
+
+  /* Sketched map above the footer */
+  .e4 .mapfoot { background: var(--forest); padding: 1.25rem 0 0; overflow: hidden; }
+  .e4 .mapfoot svg { display: block; width: 100%; max-width: 90rem; margin: 0 auto; height: auto; }
+  .e4 .map-labels { font-family: Caveat, 'Bradley Hand', 'Segoe Print', cursive; font-weight: 600; }
+  @media (max-width: 47.99rem) { .e4 .mapfoot svg { width: 180%; margin-left: -40%; } }
+</style>
