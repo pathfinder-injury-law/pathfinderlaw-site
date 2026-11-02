@@ -431,6 +431,11 @@ const doodles: Record<string, string> = {
     addEventListener('resize', fade);
     fade();
   }
+
+  // Bryn's handwriting font starts downloading only after the page has loaded (see .hand in the styles).
+  const hand = () => document.documentElement.classList.add('hand');
+  if (document.readyState === 'complete') hand();
+  else addEventListener('load', hand, { once: true });
 </script>
 
 <style is:global>
@@ -448,7 +453,10 @@ const doodles: Record<string, string> = {
     font-display: swap;
     src: url('/fonts/kbs-handwriting.ttf') format('truetype');
   }
-  .e4 .scrawl, .e4 .note figcaption, .e4 .map-labels { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; }
+  .e4 .scrawl, .e4 .note figcaption, .e4 .map-labels { font-family: 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; }
+  /* The font is only named once the page has loaded (the script adds .hand), so it never competes
+     with the hero photo for bandwidth. All of this text sits below the first screen. */
+  .hand .e4 .scrawl, .hand .e4 .note figcaption, .hand .e4 .map-labels { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; }
   .e4 .ink-defs { position: absolute; }
   .e4 .ink { filter: url(#ink); }
   .e4 .k { font-weight: 800; font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin: 0 0 0.75rem; }
