@@ -99,6 +99,8 @@ const doodles: Record<string, string> = {
     <!-- Start the hero photo download right away, in the size and format the browser will pick below. -->
     <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('desktop', 'avif')} imagesizes="100vw" media="(min-width: 48rem)" fetchpriority="high" />
     <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('phone', 'avif')} imagesizes="100vw" media="(max-width: 47.99rem)" fetchpriority="high" />
+    <!-- Bryn's handwriting is in the headline, so fetch it early: a late swap would rewrap the hero (layout shift). -->
+    <link rel="preload" as="font" type="font/ttf" href="/fonts/kbs-handwriting.ttf" crossorigin />
   </Fragment>
 
   <div class="e4">
@@ -392,6 +394,8 @@ const doodles: Record<string, string> = {
     });
   }
   document.fonts.ready.then(draw);
+  // Redraw when a font arrives after that (the handwriting can), so the underline fits the real letters.
+  document.fonts.addEventListener('loadingdone', draw);
   let resizeTimer: number | undefined;
   addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = window.setTimeout(draw, 150); });
 
