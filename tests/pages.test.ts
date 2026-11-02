@@ -127,8 +127,15 @@ test('LegalService data: both offices, phone, appointment only, areas, nothing i
   const text = JSON.stringify([ls, ...offices]);
   assert.doesNotMatch(text, /geo|latitude|longitude|aggregateRating|reviewCount|ratingValue|sameAs|knowsLanguage|availableLanguage|Spanish/i);
   assert.match(text, /by appointment only/i);
-  // Appointment only, so no opening hours anywhere.
-  assert.doesNotMatch(text, /openingHours|dayOfWeek|Monday|Saturday|Sunday/);
+  // Meetings are by appointment only, so no opening hours on the firm or either office.
+  assert.doesNotMatch(text, /openingHours|Saturday|Sunday/);
+  assert.doesNotMatch(JSON.stringify(offices), /dayOfWeek|Monday/);
+  // The 9 to 5 hours are contact hours, on the firm-wide ContactPoint only.
+  assert.equal(ls.contactPoint['@type'], 'ContactPoint');
+  assert.equal(ls.contactPoint.telephone, '+18045050633');
+  assert.deepEqual(ls.contactPoint.hoursAvailable.dayOfWeek, ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']);
+  assert.equal(ls.contactPoint.hoursAvailable.opens, '09:00');
+  assert.equal(ls.contactPoint.hoursAvailable.closes, '17:00');
 });
 
 test('Bryn’s Person data is on his bio page and on posts he wrote, with his career facts', opts, () => {

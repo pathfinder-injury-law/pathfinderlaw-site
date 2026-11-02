@@ -18,9 +18,9 @@ Phone: ${firm.phoneHeader}
 
 ${offices}
 
-Both offices are by appointment only.
+Meetings at both offices are by appointment only.
 
-Office hours:
+Hours:
 ${firm.hours.map((h) => `- ${h}`).join('\n')}
 
 ## Main pages
