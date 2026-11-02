@@ -23,7 +23,7 @@ If an employer discharges an employee solely because the employee filed or inten
 
 ## How Your Workers’ Comp Lawyer Can Help
 
-Of course, it’s not easy to fight back against employer retaliation without help. You may need a Workers’ Comp lawyer to step in and represent you. You may also need their help to prove your employer fired you, for example, out of retaliation, not for legitimate reasons.
+Of course, it’s not easy to fight back against employer retaliation without help. You may need a Workers’ Comp lawyer to step in and represent you. You may also need their help to prove your employer fired you, for example, out of retaliation, not for legitimate reasons. If you are thinking about leaving the job yourself, read [can I quit my job while on workers’ comp in Virginia](/quit-job-while-on-workers-comp-virginia/) first, because quitting light duty can stop your wage checks.
 
 If you’ve never filed a lawsuit before, it can be difficult to get started. If you believe your employer discharged you because you filed or intended to file a Workers’ Comp claim, you may want to speak with a lawyer about your options. Acting within [Virginia time limits](https://law.lis.virginia.gov/vacode/title8.01/chapter4/section8.01-243/) to file a lawsuit may also be difficult, but acting too late may lead to a dismissal of your claim.
 
