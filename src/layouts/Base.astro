@@ -63,8 +63,9 @@ const offices = site.offices.map((o) => ({
   logo: { '@id': `${origin}/#organizationLogo` },
   image: { '@id': `${origin}/#organizationLogo` },
   parentOrganization: { '@id': `${origin}/#organization` },
-  // No opening hours: both offices are by appointment only (Bryn, Nov 1). Google's advice for
-  // appointment-only businesses is to list no hours. The firm-wide description says "by appointment only".
+  // No opening hours: meetings at both offices are by appointment only. Google's advice for
+  // appointment-only businesses is to list no hours. The 9 to 5 phone hours go on the firm-wide
+  // ContactPoint instead (Bryn, Nov 2).
 }));
 // Bryn, with the career facts from his bio page (/bryn-swartz/). The old author address
 // (/author/brynswartz/) does not exist on the new site, so the author points to the bio page.
@@ -115,11 +116,25 @@ const legalService = {
   name: site.name,
   url: `${origin}/`,
   telephone: '+18045050633',
-  description: 'Virginia Workers’ Comp law firm with offices in Richmond and Chincoteague. Both offices are by appointment only.',
+  description:
+    'Virginia Workers’ Comp law firm with offices in Richmond and Chincoteague. Calls, texts and email Monday to Friday, 9 a.m. to 5 p.m. Meetings at both offices are by appointment only.',
   logo: { '@id': `${origin}/#organizationLogo` },
   image: { '@id': `${origin}/#organizationLogo` },
   parentOrganization: { '@id': `${origin}/#organization` },
   location: offices.map((o) => ({ '@id': o['@id'] })),
+  // When the firm answers calls, texts and email. These are contact hours, not office hours.
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: '+18045050633',
+    areaServed: virginia,
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: site.contactHours.days,
+      opens: site.contactHours.opens,
+      closes: site.contactHours.closes,
+    },
+  },
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Accomack County', containedInPlace: virginia },
     { '@type': 'AdministrativeArea', name: 'Northampton County', containedInPlace: virginia },
