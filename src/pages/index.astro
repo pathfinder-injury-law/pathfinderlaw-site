@@ -441,6 +441,14 @@ const doodles: Record<string, string> = {
     --act-e4: #a15b00; /* darker Brand Book orange shade, 5.23:1 with white text */
     background: var(--sage-e4);
   }
+  /* Bryn's own handwriting, made on Calligraphr (his property, per Calligraphr's FAQ). One weight only,
+     so the notes stay at 400 with no faux bold. */
+  @font-face {
+    font-family: 'Kbs Handwriting';
+    font-display: swap;
+    src: url('/fonts/kbs-handwriting.ttf') format('truetype');
+  }
+  .e4 .scrawl, .e4 .note figcaption, .e4 .map-labels { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; }
   .e4 .ink-defs { position: absolute; }
   .e4 .ink { filter: url(#ink); }
   .e4 .k { font-weight: 800; font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin: 0 0 0.75rem; }
@@ -449,7 +457,7 @@ const doodles: Record<string, string> = {
   .e4 .dark .e4-h { color: var(--cream); }
   .e4 .tl { font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--sun); color: inherit; }
   .e4 .fine { font-size: 0.8125rem; margin: 1.75rem 0 0.75rem; }
-  .e4 .scrawl { font-family: Caveat, 'Bradley Hand', 'Segoe Print', cursive; font-weight: 600; line-height: 1; }
+  .e4 .scrawl { line-height: 1; }
 
   /* Marker marks drawn by the script */
   .e4 .mk { position: relative; display: inline-block; white-space: nowrap; z-index: 0; --mc: var(--sun); }
@@ -527,7 +535,7 @@ const doodles: Record<string, string> = {
   .e4 .note .stars { width: 94px; height: 18px; fill: var(--amber); display: block; margin-bottom: 0.75rem; }
   .e4 .note blockquote { margin: 0; font-size: 1.1875rem; line-height: 1.6; font-weight: 500; }
   .e4 .note blockquote p { margin: 0; }
-  .e4 .note figcaption { font-family: Caveat, 'Bradley Hand', 'Segoe Print', cursive; font-size: 1.75rem; font-weight: 700; color: var(--act-e4); margin-top: 0.9rem; }
+  .e4 .note figcaption { font-size: 2.125rem; color: var(--act-e4); margin-top: 0.9rem; }
   .e4 .e4-quotes .fine { color: #e9efdf; }
   @media (max-width: 47.99rem) { .e4 .notes { grid-template-columns: 1fr; gap: 1.9rem; } .e4 .note:nth-child(n) { transform: rotate(-1deg); } .e4 .e4-quotes { padding: 4rem 0; } }
 
@@ -631,6 +639,6 @@ const doodles: Record<string, string> = {
   /* Sketched map above the footer */
   .e4 .mapfoot { background: var(--forest); padding: 1.25rem 0 0; overflow: hidden; }
   .e4 .mapfoot svg { display: block; width: 100%; max-width: 90rem; margin: 0 auto; height: auto; }
-  .e4 .map-labels { font-family: Caveat, 'Bradley Hand', 'Segoe Print', cursive; font-weight: 600; }
+
   @media (max-width: 47.99rem) { .e4 .mapfoot svg { width: 180%; margin-left: -40%; } }
 </style>
