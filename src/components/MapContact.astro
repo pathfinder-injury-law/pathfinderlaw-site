@@ -5,15 +5,17 @@ import { compass } from '../data/doodles';
 // The form inside a map, as at the end of the home page: forest green, faint contour lines, a compass under the
 // headline, and a dotted trail from the compass to a yellow X by the form's first field. No photo, so nothing here
 // competes with the page's first paint. The headline goes in the default slot (an h1 or an h2, set by the page).
-// The home page still has its own copy of this section (index.astro); it moves to this component in a later PR.
+// Used by the home page (end of the page), Contact (top of the page) and ContactSection (the form band on inner pages).
 interface Props {
   namePlaceholder?: string;
   // top: the section opens the page, so it starts behind the header (no strip of page background between them).
   top?: boolean;
+  // Extra classes from the page (the home page adds "dark" for its own section styles).
+  class?: string;
 }
-const { namePlaceholder = 'What’s your preferred name?', top = false } = Astro.props;
+const { namePlaceholder = 'What’s your preferred name?', top = false, class: extra } = Astro.props;
 ---
-<section class:list={['map-contact', top && 'mc-top']}>
+<section class:list={['map-contact', top && 'mc-top', extra]}>
   <div class="wrap mc-grid">
     <svg class="mc-route" aria-hidden="true" focusable="false"><path class="route" /><path class="x" /></svg>
     <div class="mc-talk">
