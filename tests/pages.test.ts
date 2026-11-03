@@ -191,3 +191,19 @@ test('privacy policy has no date placeholder', opts, () => {
   assert.doesNotMatch(html, /TO BE SET/);
   assert.match(html, /last updated on October 30, 2026/);
 });
+
+test('Every sitemap URL carries a last-updated date, and none is in the future', opts, () => {
+  const today = new Date().toISOString().slice(0, 10);
+  for (const kind of ['post', 'page', 'practice_areas', 'attorneys', 'arears_served']) {
+    const xml = readFileSync(new URL(`${kind}-sitemap.xml`, dist), 'utf8');
+    const urls = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => m[1]);
+    assert.ok(urls.length > 0, kind);
+    for (const u of urls) {
+      const loc = u.match(/<loc>([^<]+)<\/loc>/)![1];
+      const mod = u.match(/<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/);
+      assert.ok(mod, `${kind}: ${loc} has no <lastmod>`);
+      assert.ok(mod![1] <= today, `${loc}: ${mod![1]} is in the future`);
+      assert.ok(mod![1] >= '2019-01-01', `${loc}: ${mod![1]} looks wrong`);
+    }
+  }
+});
