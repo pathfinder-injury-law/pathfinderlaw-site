@@ -5,7 +5,13 @@ import { nav, site } from '../data/site';
 <header class="site-header" id="top" tabindex="-1">
   <div class="wrap header-bar">
     <a class="brand" href="/" aria-label={`${site.name}, home`}>
-      <img src="/images/brand/logo-horizontal.png" width="1703" height="522" alt={site.name} />
+      <!-- Shown at 152 to 416px wide (up to 26rem on the home page), so phones get a copy near that size. -->
+      <img
+        src="/images/brand/logo-horizontal.png"
+        srcset="/images/brand/sized/logo-horizontal-320.png 320w, /images/brand/sized/logo-horizontal-480.png 480w, /images/brand/sized/logo-horizontal-640.png 640w, /images/brand/sized/logo-horizontal-860.png 860w, /images/brand/sized/logo-horizontal-1280.png 1280w, /images/brand/logo-horizontal.png 1703w"
+        sizes="(min-width: 48rem) 26rem, 15.5rem"
+        width="1703" height="522" alt={site.name}
+      />
     </a>
 
     <!-- Wide screens: a short menu; groups open on hover, keyboard focus or a tap on the arrow. -->
