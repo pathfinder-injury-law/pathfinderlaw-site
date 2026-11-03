@@ -285,13 +285,29 @@ const speculationRules = JSON.stringify({
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
 
-        // Phone Call / Message bar: stays put while scrolling, and steps aside where it would cover
-        // something: the home page hero (which has its own Free Consultation button and the team photos
-        // peeking up at its bottom edge), the contact form and the footer. Without script it stays visible.
+        // Phone Call / Message bar. Bryn, Nov 3 2026: "nonintrusive". It slides away while the reader
+        // scrolls down and comes back as soon as they scroll up. It also steps aside where it would cover
+        // something: the home page hero (which has its own Free Consultation button), the contact form and
+        // the footer. Without script it stays visible.
         var bar = document.querySelector('.call-bar');
         if (bar && 'IntersectionObserver' in window) {
           var seen = new Set();
-          var apply = function () { bar.classList.toggle('is-hidden', seen.size > 0); };
+          var tucked = false;
+          var apply = function () { bar.classList.toggle('is-hidden', seen.size > 0 || tucked); };
+          // Reading direction: more than 8px down tucks the bar, more than 8px up brings it back.
+          var lastY = window.scrollY, ticking = false;
+          window.addEventListener('scroll', function () {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(function () {
+              ticking = false;
+              var y = window.scrollY;
+              if (Math.abs(y - lastY) < 8) return;
+              var down = y > lastY;
+              lastY = y;
+              if (down !== tucked) { tucked = down; apply(); }
+            });
+          }, { passive: true });
           var bio = new IntersectionObserver(function (entries) {
             entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
             apply();
