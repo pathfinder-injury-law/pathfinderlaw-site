@@ -97,7 +97,7 @@ const isList = (b: Block): b is { list: string[] } => typeof b !== 'string';
 </Base>
 
 <style>
-  /* Other places we serve: a band in the home page's style, with a moss small-caps label like the home kickers. */
+  /* Other places we serve: a band in the home page's style, with a small-caps label like the home kickers (pine, for contrast). */
   .areas {
     background: var(--mist);
     border-top: 5px solid var(--moss);
@@ -108,7 +108,7 @@ const isList = (b: Block): b is { list: string[] } => typeof b !== 'string';
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--moss);
+    color: var(--pine); /* 5.9:1 on the card color; moss is too light for 13px text */
     margin-bottom: 1.1rem;
   }
   .areas ul {
