@@ -29,6 +29,10 @@ const { namePlaceholder = 'What’s your preferred name?', top = false, class: e
 </section>
 
 <script>
+  // Map lines below the fold: added once the page has loaded, so they never compete with the first paint.
+  const lines = () => document.querySelectorAll('.map-contact:not(.mc-top)').forEach((el) => el.classList.add('mc-lines'));
+  if (document.readyState === 'complete') lines(); else window.addEventListener('load', lines, { once: true });
+
   // The dotted trail: from the compass under the headline to an X beside the first field of the form. It is drawn
   // from the real positions each time the layout changes, so it always connects (same drawing as the home page).
   const grid = document.querySelector<HTMLElement>('.mc-grid');
@@ -80,7 +84,10 @@ const { namePlaceholder = 'What’s your preferred name?', top = false, class: e
   /* Same look as the home page form section (.e4 .e4-contact). */
   .map-contact { position: relative; isolation: isolate; padding: 6rem 0 5rem; background: var(--forest); color: #fff; }
   /* Map lines: the shared contour file as a mask, pale sage on forest, at the home page's form strength. */
-  .map-contact::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: #e9efdf; opacity: 0.13; -webkit-mask: url(/images/contours.svg) center / 90rem auto repeat; mask: url(/images/contours.svg) center / 90rem auto repeat; }
+  /* Below the fold (the band on inner pages), the lines are added after the page has loaded (.mc-lines, set by the
+     script above), since Chrome fetches mask images at load even off screen. At the top of a page (Contact) they show at once. */
+  .map-contact::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: #e9efdf; opacity: 0.13; }
+  .map-contact.mc-top::before, .map-contact.mc-lines::before { -webkit-mask: url(/images/contours.svg) center / 90rem auto repeat; mask: url(/images/contours.svg) center / 90rem auto repeat; }
   body:has(.mc-top) main { padding-top: 0; }
   .map-contact.mc-top { padding-top: calc(var(--header-h) + 3.5rem); }
   .mc-grid { position: relative; display: grid; grid-template-columns: 1fr 27.5rem; gap: 6rem; align-items: center; }
