@@ -1,0 +1,14 @@
+# Commits that changed page text only trivially, so they must not move a page's sitemap date.
+# Read by scripts/page-dates.mjs (git blame --ignore-revs-file). SEO decides what goes here.
+# The rule: commas, links added or retargeted, and cites relabeled are trivial. Anything that adds,
+# removes or rewrites a sentence counts, and a commit that mixes the two stays OFF this list.
+# One full commit hash per line; a comment line above each says what it was.
+
+# PR 72, Nov 3: Oxford commas only (location, Mandy Truman, Roanoke entry in cities.ts).
+7a1ed9b660b6bab13cfa42afd535af9545021ad1
+# PR 73, Nov 3: on /results/ and /car-accident-at-work-in-virginia/, only links to the new
+# concussion post were added. Its post changes don't matter here (posts use their own dates).
+8d4b7c0c353895f826976c0529baed6c1c608446
+# PR 83, Nov 3: cite relabels and link retargets only (how-to-appeal page; the IME sub-article's
+# rule numbers became 16VAC30-50 cites). Its post changes don't matter here.
+b7ceb6c4c36fbc4c76a493d0df19504c147164d2

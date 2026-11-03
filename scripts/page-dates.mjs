@@ -8,6 +8,11 @@
 // speed change never moves a page's date. Blog posts are not here: they keep their own `updated`
 // front matter.
 //
+// Google asks for the date of the last *significant* change. So commits listed in
+// scripts/date-ignore-revs.txt are skipped: SEO decides which commits are trivial (commas, links added or
+// retargeted, cites relabeled). Anything that adds, removes or rewrites a sentence counts, and a commit
+// that mixes trivial and real edits stays off the list, so the page keeps the newer date.
+//
 // Run after changing a page's text, and commit the JSON with the change:
 //   node scripts/page-dates.mjs            prints the dates and what changed against the JSON
 //   node scripts/page-dates.mjs --write    rewrites src/data/pageDates.json
@@ -21,6 +26,8 @@ import { fileURLToPath } from 'node:url';
 
 const repo = fileURLToPath(new URL('..', import.meta.url));
 const OUT = join(repo, 'src/data/pageDates.json');
+// Commits that only fixed commas, links or cite labels: they never move a date (SEO decides the list).
+const IGNORE = join(repo, 'scripts/date-ignore-revs.txt');
 const git = (...args) => execFileSync('git', args, { cwd: repo, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
 
 if (git('rev-parse', '--is-shallow-repository').trim() === 'true') {
@@ -36,7 +43,7 @@ const ARTICLE_BASE = '/virginia-workers-comp-lawyer/';
 const blameCache = new Map();
 function blame(file) {
   if (!blameCache.has(file)) {
-    const out = git('blame', '--line-porcelain', '-w', 'HEAD', '--', file).split('\n');
+    const out = git('blame', '--line-porcelain', '-w', '--ignore-revs-file', IGNORE, 'HEAD', '--', file).split('\n');
     const rows = [];
     let time = 0;
     for (const l of out) {
