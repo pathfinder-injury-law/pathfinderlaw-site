@@ -57,7 +57,7 @@ const results = [
     </div>
   </section>
 
-  <section class="section results contour tex-img on-dark results-page">
+  <section class="section results contour tex-img results-page">
     <img class="contour-tex" data-src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" />
     <div class="wrap">
       <div class="results-grid" data-stagger>
@@ -79,8 +79,54 @@ const results = [
 </Base>
 
 <style>
+  /* Nov 3 2026 (Bryn approved the mockup): the home page's results look. Open columns on cream with an orange
+     rule over each amount, faint dark map lines, and bearing ticks down both edges. The disclaimer stays below. */
   .results-page {
     padding-top: clamp(3rem, 7vw, 5rem);
+    position: relative;
+    background: #fff5d5;
+    color: var(--forest);
+  }
+  .results-page :global(.contour-tex) {
+    filter: brightness(0);
+    opacity: 0.06;
+  }
+  .results-page::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    color: var(--forest);
+    background:
+      repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) left 0 top 1.5rem / 1rem 100% no-repeat,
+      repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) left 0 top 1.5rem / 0.5rem 100% no-repeat,
+      repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) right 0 top 1.5rem / 1rem 100% no-repeat,
+      repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) right 0 top 1.5rem / 0.5rem 100% no-repeat;
+  }
+  .results-page :global(.results-grid) {
+    gap: 2.25rem 1.75rem;
+  }
+  .results-page .result {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-top: 4px solid var(--amber);
+    padding: 1rem 0 0;
+  }
+  .results-page .result:hover {
+    transform: none;
+  }
+  .results-page .result .amount {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--forest);
+  }
+  .results-page .result p {
+    color: #3d5546;
+  }
+  .results-page .disclaimer {
+    color: #4f6155; /* 6:1 on cream */
   }
   /* Fifteen cards: three across on desktop reads better than four. */
   @media (min-width: 62rem) {

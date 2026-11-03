@@ -201,11 +201,43 @@ const reasons = [
   .about-intro {
     padding-top: clamp(2.5rem, 6vw, 4.5rem);
   }
+  /* Our Vision (Nov 3 2026, Bryn approved the mockup): a forest map band, the vision in big cream words,
+     "Our Vision" as a small yellow label like the home page kickers. */
+  .vision {
+    position: relative;
+    isolation: isolate;
+    background: var(--forest);
+    color: #fff5d5;
+  }
+  .vision::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: #e9efdf;
+    opacity: 0.12;
+    -webkit-mask: url(/images/contours.svg) center / 90rem auto repeat;
+    mask: url(/images/contours.svg) center / 90rem auto repeat;
+  }
+  .vision h2 {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sun);
+    margin-bottom: 0.9rem;
+  }
+  .vision .rule {
+    display: none;
+  }
   .vision-text {
     font-family: var(--font-head);
-    font-size: clamp(1.4rem, 3vw, 1.9rem);
-    font-weight: 600;
-    line-height: 1.4;
+    font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: #fff5d5;
     margin: 0;
   }
   .reasons {
@@ -262,22 +294,17 @@ const reasons = [
       grid-template-columns: repeat(4, 1fr);
     }
   }
+  /* Areas: a plain link list, as on the city pages (no white buttons). */
   .areas a {
     display: block;
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 0.9rem 1rem;
-    text-align: center;
-    font-weight: 700;
+    padding: 0.2rem 0;
+    font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 0.25rem 0.9rem rgba(41, 70, 52, 0.1);
-    transition: transform 0.25s var(--ease), background 0.25s, color 0.25s;
   }
   .areas a:hover,
   .areas a:focus-visible {
-    background: var(--forest);
-    color: var(--white);
-    transform: translateY(-3px);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
   .team {
     display: grid;
@@ -299,10 +326,8 @@ const reasons = [
     width: min(100%, 16rem);
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 14px; /* rounded rectangles, like the home page photos */
     margin: 0 auto 1.25rem;
-    border: 6px solid var(--forest);
-    box-shadow: var(--shadow);
     transition: transform 0.5s var(--ease);
   }
   .member:hover :global(img) {
