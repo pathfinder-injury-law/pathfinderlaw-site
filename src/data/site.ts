@@ -38,7 +38,7 @@ export const site = {
   },
   social: [
     { name: 'Facebook', url: 'https://www.facebook.com/PathfinderInjuryLaw/' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/bryn-swartz-5279551ab/' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/brynswartz' },
     { name: 'YouTube', url: 'https://www.youtube.com/channel/UCFV8IOmL8EqzD5z6Jh-ApPA' },
   ],
 };
