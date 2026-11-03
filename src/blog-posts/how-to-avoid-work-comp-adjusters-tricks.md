@@ -71,7 +71,7 @@ You can ask the Commission for a hearing no matter what the insurance company de
 
 **An early offer usually comes before anyone knows how the injury will turn out.** Most full and final settlements close your medical benefits for good, so an offer made before surgery, a final rating, or a return-to-work decision prices those things without knowing them. Every Virginia comp settlement must be approved by the Commission, which has to find that it serves your interests ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)). That approval doesn’t mean the number is fair. Here’s [what to know about lump sum settlements](/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/).
 
-> “The adjuster isn’t your enemy, and the adjuster isn’t your friend. The adjuster is doing a job, and that job is closing your file for as little as the law allows.” (Bryn Swartz)
+> “The adjuster isn’t really your enemy, but they certainly aren’t your friend. The adjuster is doing a job, and that job is closing your file for as little as the law allows.” (Bryn Swartz)
 
 ## What Not to Say to a Workers’ Comp Adjuster
 

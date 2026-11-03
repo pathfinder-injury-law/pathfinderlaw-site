@@ -63,7 +63,7 @@ Our guide to [light duty and refusing light duty in Virginia](/light-duty-worker
 
 - **Your medical care for the injury** continues under the claim.
 - **Your permanent partial disability benefits,** if your doctor rates a lasting loss of use of an arm, leg, hand, or other listed body part ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)).
-- **An existing award.** Under an award, the insurance company can’t just stop your checks because you were fired. It has to file a written application with the Commission first. It can stop paying once it files, so act fast: you have 15 days from the filing date to send the Commission your evidence against it. If the Commission rejects the application, your checks start again right away.
+- **An existing award.** Under an award, the insurance company can’t just stop your checks because you were fired. It has to file a written application with the Commission first. It can stop paying once it files, so act fast: you have 15 days from the filing date to send the Commission your evidence against it. If the application alleges a refusal of light duty, and a firing for cause from light duty is treated as one (*Murphy*), the insurer only has to pay through the date of the refusal or 14 days before it filed, whichever is later (Commission Rule 1, 16VAC30-50-20(D)(3)). If the Commission rejects the application, your checks start again right away.
 - **Your average weekly wage.** It is based on what you earned before the injury, not on what you earn after being let go.
 
 ## Steps to Take If You’re Fired While on Workers’ Comp
@@ -75,7 +75,7 @@ Our guide to [light duty and refusing light duty in Virginia](/light-duty-worker
 5. **Report any new job or earnings to the insurance company right away,** and do it in writing so there’s a record ([Va. Code § 65.2-712](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-712/)).
 6. **Don’t sign a severance agreement without reading what it releases.** A release in a severance package may try to cover your comp claim too. A workers’ comp claim can only be settled with the Commission’s approval ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)), and no other agreement can let an employer out of what it owes under the comp law ([Va. Code § 65.2-300](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-300/)).
 
-> “Getting fired feels like the end of the claim. It usually isn’t. What matters is what your doctor says you can do and why the employer says it let you go, and both of those can be fought over.” (Bryn Swartz)
+> “Getting fired might feel like the end of the claim, but it isn’t. What matters is what your doctor says you can do and why the employer let you go, and both of those can be fought over.” (Bryn Swartz)
 
 ## Fired While on Workers’ Comp Questions
 
