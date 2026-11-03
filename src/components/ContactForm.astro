@@ -8,7 +8,10 @@ import { site } from '../data/site';
 import { HOW, WHEN, WORK, YES_NO } from '../worker/intake.ts';
 
 // namePlaceholder: the home page asks "What’s your preferred name?" in the box itself (E4 design; Bryn, Nov 3).
-const { id = 'contact-form', namePlaceholder = 'Your name' } = Astro.props;
+// headingLevel: the form's (screen-reader-only) "Talk With Us" heading. h3 under a section h2 (the default);
+// Contact has no h2 above the form, so it asks for h2 and the headings don't skip a level after the h1.
+const { id = 'contact-form', namePlaceholder = 'Your name', headingLevel = 3 } = Astro.props;
+const Heading = headingLevel === 2 ? 'h2' : 'h3';
 
 // Turnstile public site key, supplied at build time. Cloudflare's published
 // always-pass test key is used for previews. A live build without the real
@@ -30,7 +33,7 @@ const questions = [
 ];
 ---
 <div class="form-card">
-  <h3>Talk With Us</h3>
+  <Heading class="form-title">Talk With Us</Heading>
   <form class="contact-form intake" id={id} method="post" action="/contact/" novalidate data-sitekey={siteKey || TEST_SITE_KEY} data-phone={site.phoneHeader} data-phone-href={site.phoneHref}>
     <div class="intake-top">
       <button class="intake-back" type="button" hidden>Back</button>
