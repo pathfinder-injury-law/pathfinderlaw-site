@@ -36,6 +36,21 @@ test('Home: the band and help photos are held back so only the hero loads first;
   assert.doesNotMatch(read('/about-us/index.html'), /data-defer/); // other pages unchanged
 });
 
+test('The map texture never loads with the hero: no CSS background, no early src, filled in after page load', opts, () => {
+  for (const page of ['/index.html', '/contact/index.html', '/results/index.html', '/richmond-workers-comp-lawyer/index.html']) {
+    const html = read(page);
+    for (const [, cls] of html.matchAll(/class="([^"]*)"/g)) {
+      const names = cls.split(/\s+/);
+      if (names.includes('contour')) assert.ok(names.includes('tex-img'), `${page}: "${cls}" would use the CSS background`);
+    }
+    for (const img of html.match(/<img class="contour-tex"[^>]*>/g) ?? []) {
+      assert.doesNotMatch(img, /\ssrc=/, page);
+      assert.match(img, /data-src="\/images\/contour-map\.svg"/, page);
+    }
+    assert.match(html, /img\.contour-tex\[data-src\]/, `${page}: the loader script`);
+  }
+});
+
 test('Every photo copy named in a page exists, and originals stay the fallback', opts, () => {
   for (const page of ['/index.html', '/about-us/index.html', '/bryn-swartz/index.html', '/contact/index.html']) {
     const html = read(page);

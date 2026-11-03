@@ -10,7 +10,7 @@ const { variant = 'band' } = Astro.props;
 ---
 {variant === 'link' ? (
 <section class="section cta cta-link contour tex-img on-dark" id="free-consultation">
-  <img class="contour-tex" src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" />
+  <img class="contour-tex" data-src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" />
   <Photo class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" sizes="100vw" loading="lazy" />
   <div class="wrap" data-reveal>
     <ul class="cta-points caps">
@@ -33,7 +33,7 @@ const { variant = 'band' } = Astro.props;
   </section>
 ) : (
 <section class="section cta contour tex-img on-dark" id="contact">
-  <img class="contour-tex" src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" />
+  <img class="contour-tex" data-src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" />
   <Photo class="cta-bg" src="/images/photos/tile-c.jpg" alt="" width="1400" height="1050" sizes="100vw" loading="lazy" />
   <div class="wrap cta-grid">
     <div data-reveal>

@@ -28,7 +28,8 @@ const description =
 
   <ContactSection variant="plain" />
 
-  <div class="contact-divider contour" aria-hidden="true"></div>
+  <!-- The map texture as a lazy image (not a CSS background), so it never competes with the hero photo. -->
+  <div class="contact-divider contour tex-img" aria-hidden="true"><img class="contour-tex" data-src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" /></div>
 
   <section class="section contact-cards-section">
     <div class="wrap">
