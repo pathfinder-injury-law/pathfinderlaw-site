@@ -10,7 +10,11 @@ import { site } from '../data/site';
 // scroll, and the form inside a map at the end, where the trail stops at an X. Rules: one art layer
 // per section (a photo or map lines, never both), the map stays behind things, and about five small
 // single-line doodles at the edges. No doodles in the hero, in Results, or near any disclaimer.
-// "We've got this." is the page's only handwriting. Everything is inline SVG or CSS, no script.
+// "We've got this." is the page's only handwriting.
+// Nov 3 (Bryn): the motif goes lost, then bearings, then guided. The hero is the lost moment; a line-drawn
+// compass appears at the band (needle a little off north), the steps read as field notes and the help photos
+// as field-guide plates, and at the form a second compass points along the trail to the X. Six drawn marks now;
+// binoculars join when the "Two people" section is built (Bryn OK'd seven).
 // The search text and links from the Nov 1 SEO rewrite are kept (intro paragraphs, topic links, results links).
 
 const heroSet = (crop: 'desktop' | 'phone', fmt: 'avif' | 'webp') =>
@@ -92,8 +96,11 @@ const doodle = {
   bird: 'M27 10m-5.5 0a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0-11 0M32.5 9L37 10.5L32 12M28.5 9m-0.6 0a0.6 0.6 0 1 0 1.2 0a0.6 0.6 0 1 0-1.2 0M22.5 13.5C27 17 26 25 17 25C12 25 8 22 3 19C9 19 13 14 22.5 13.5M11 19C15 21 19 20 21 17M15 25V30M19 25V30M13 30H17M17 30H21',
   // tucked behind a photo corner
   sun: 'M30 30m-10 0a10 10 0 1 0 20 0a10 10 0 1 0-20 0M30 15V8M30 52V45M15 30H8M52 30H45M19.4 19.4L14.4 14.4M45.6 45.6L40.6 40.6M40.6 19.4L45.6 14.4M14.4 45.6L19.4 40.6',
-  // tent and campfire by the X at the end of the trail
-  camp: 'M96 116H190M104 116L127 80L150 116M121 116L127 103L133 116M127 80l-3-6M127 80l3-6M162 116L184 109M162 109L184 116M173 107C167 101 170 95 173 88C176 95 179 101 173 107',
+  // compass (120 x 130 box, centre 60,70): ring, dotted inner ring, cardinal ticks, a small N; the needle is
+  // separate so it can turn. The needle is a diamond, like the logo mark.
+  compassRing: 'M10 70a50 50 0 1 0 100 0a50 50 0 1 0-100 0M60 20V32M60 108V120M10 70H22M98 70H110M32.5 42.5L36 46M87.5 42.5L84 46M32.5 97.5L36 94M87.5 97.5L84 94M55 15V4L65 15V4',
+  compassDots: 'M16 70a44 44 0 1 0 88 0a44 44 0 1 0-88 0',
+  needle: 'M60 34L69 70L60 106L51 70ZM60 34V106M56.5 70a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0',
 };
 ---
 <Base
@@ -136,15 +143,16 @@ const doodle = {
     <section class="e4-band">
       <Photo class="band-bg" src="/images/photos/e4-green-ridges-gold-sky.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
       <div class="wrap">
+        <svg class="doodle compass compass-band" viewBox="0 0 120 130" aria-hidden="true"><path d={doodle.compassRing} /><path class="dots" d={doodle.compassDots} /><path class="needle" transform="rotate(28 60 70)" d={doodle.needle} /></svg>
         <p class="big">All we do is workers’ comp.</p>
         <p class="sub">Not wills. Not divorces. Just helping people <span class="typer" data-typer={bandPhrases.join('|')} data-end=".">hurt at work.</span></p>
       </div>
     </section>
 
-    <!-- What happens when you call: one thin trail line behind the four steps. -->
+    <!-- What happens when you call: field notes, with one thin trail line behind the four steps. -->
     <section class="e4-steps map map-1">
       <div class="wrap">
-        <p class="k">Your trail</p>
+        <p class="k">Field notes</p>
         <h2 class="e4-h">What happens when you call</h2>
         <div class="cards">
           <svg class="trail" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44C120 44 180 20 300 22S480 50 600 46S780 14 900 18S1080 46 1200 34" /></svg>
@@ -152,7 +160,7 @@ const doodle = {
           <ol class="card-list">
             {steps.map((s, i) => (
               <li class="card">
-                <span class="num">{i + 1}</span>
+                <span class="num" aria-hidden="true">Note {i + 1}</span>
                 <h3>{s.title}</h3>
                 <p>{s.text}{s.link && <> <a class="tl" href={s.link.href}>{s.link.label}</a></>}</p>
               </li>
@@ -162,7 +170,7 @@ const doodle = {
       </div>
     </section>
 
-    <!-- How we help: plain photos, the last wilderness views. -->
+    <!-- How we help: the photos as field-guide plates (corner crop marks and a Fig. label). -->
     <section class="e4-help dark">
       <div class="wrap">
         <p class="k">How we help</p>
@@ -170,10 +178,12 @@ const doodle = {
         <div class="help-row">
           {help.map((h, i) => (
             <a class="help-card" href={h.href}>
-              <span class="ph">
+              <span class="ph plate">
+                <i class="crop" aria-hidden="true"></i>
                 {i === 1 && <svg class="doodle bird" viewBox="0 0 40 32" aria-hidden="true"><path d={doodle.bird} /></svg>}
                 <Photo src={h.img} alt="" width="1000" height="1000" sizes="(min-width: 48rem) 380px, 90vw" loading="lazy" />
               </span>
+              <p class="fig" aria-hidden="true">Fig. {i + 1}</p>
               <h3>{h.title}</h3>
               <p>{h.text}</p>
             </a>
@@ -261,13 +271,13 @@ const doodle = {
       </div>
     </section>
 
-    <!-- The one form on this page (id="contact"), in a map-only frame: a dotted trail from the camp under the headline to an X by the form (drawn by the script below). -->
+    <!-- The one form on this page (id="contact"), in a map-only frame: a dotted trail from the compass under the headline to an X by the form (drawn by the script below). -->
     <section class="e4-contact map map-4 dark">
       <div class="wrap contact-grid">
         <svg class="route-link" aria-hidden="true" focusable="false"><path class="route" /><path class="x" /></svg>
         <div class="talk">
           <h2 class="e4-h">Let’s talk about <span class="typer typer-block" data-typer={formPhrases.join('|')} data-end=".">what happened.</span></h2>
-          <svg class="camp" viewBox="92 66 106 54" aria-hidden="true"><path d={doodle.camp} /></svg>
+          <svg class="camp compass" viewBox="0 0 120 130" aria-hidden="true"><path d={doodle.compassRing} /><path class="dots" d={doodle.compassDots} /><path class="needle" transform="rotate(70 60 70)" d={doodle.needle} /></svg>
         </div>
         <div class="form-bare" id="contact">
           <ContactForm namePlaceholder="What’s your name?" />
@@ -338,13 +348,13 @@ const doodle = {
         const later = (fn: () => void, ms: number) => { timer = window.setTimeout(fn, ms); };
         const typeIn = (n: number) => {
           const ph = phrases[i];
-          text.data = ph.slice(0, n);
+          text.data = ph.slice(0, n) || '\u200b'; // a zero-width space keeps a caret position when empty
           place();
           if (n < ph.length) later(() => typeIn(n + 1), 55 + Math.random() * 35);
           else later(() => eraseOut(ph.length), 2400);
         };
         const eraseOut = (n: number) => {
-          text.data = phrases[i].slice(0, n);
+          text.data = phrases[i].slice(0, n) || '\u200b';
           place();
           if (n > 0) later(() => eraseOut(n - 1), 24);
           else { i = (i + 1) % phrases.length; later(() => typeIn(0), 260); }
@@ -359,7 +369,7 @@ const doodle = {
       });
     }
 
-    // 2) The dotted trail in the contact section: from the camp under the headline to an X beside the first
+    // 2) The dotted trail in the contact section: from the compass under the headline to an X beside the first
     //    field of the form. It is drawn from the real positions each time the layout changes, so it always connects.
     const grid = document.querySelector<HTMLElement>('.contact-grid');
     const svg = grid?.querySelector<SVGSVGElement>('.route-link');
@@ -368,6 +378,7 @@ const doodle = {
     if (grid && svg && camp && form) {
       const route = svg.querySelector('.route')!;
       const x = svg.querySelector('.x')!;
+      const needle = camp.querySelector('.needle');
       let raf = 0;
       const draw = () => {
         raf = 0;
@@ -376,8 +387,8 @@ const doodle = {
         const field = form.querySelector<HTMLElement>('.step:not([hidden]) :is(input, textarea, select, button)') ?? form;
         const f = field.getBoundingClientRect();
         const sx = c.right - g.left + 10;
-        const sy = c.bottom - g.top - 8;
-        const side = f.left - c.right > 140; // form beside the camp (wide) or under it (phones, tablets)
+        const sy = c.top - g.top + c.height * 0.55;
+        const side = f.left - c.right > 140; // form beside the compass (wide) or under it (phones, tablets)
         const ex = side ? f.left - g.left - 34 : f.left - g.left + f.width * 0.72;
         const ey = side ? f.top - g.top + Math.min(f.height / 2, 34) : f.top - g.top - 30;
         const dx = ex - sx, dy = ey - sy;
@@ -387,6 +398,10 @@ const doodle = {
           ? `M${sx} ${sy} C${sx + dx * 0.4} ${sy + 34}, ${tx - dx * 0.3} ${ty + 50}, ${tx} ${ty}`
           : `M${sx} ${sy} C${sx + (tx - sx) * 0.6} ${sy + 4}, ${tx} ${ty - (ty - sy) * 0.6}, ${tx} ${ty}`);
         x.setAttribute('d', `M${ex - 8} ${ey - 8}L${ex + 8} ${ey + 8}M${ex + 8} ${ey - 8}L${ex - 8} ${ey + 8}`);
+        // Turn the compass needle to point at the X (0 degrees is straight up).
+        const cx = c.left - g.left + c.width / 2, cy = c.top - g.top + c.height * (70 / 130);
+        const deg = Math.atan2(ex - cx, cy - ey) * 180 / Math.PI;
+        needle?.setAttribute('transform', `rotate(${deg.toFixed(1)} 60 70)`);
       };
       const soon = () => { if (!raf) raf = requestAnimationFrame(draw); };
       new ResizeObserver(soon).observe(grid);
@@ -497,6 +512,17 @@ const doodle = {
     background: repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 3rem) left 0 top 1.5rem / 0.75rem 100% no-repeat,
                 repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 3rem) right 0 top 1.5rem / 0.75rem 100% no-repeat; }
   .e4 .e4-results.map-3::after { color: var(--forest); }
+  /* Results: the edge ticks read as compass bearings (a fine tick every 1.5rem, a longer one every 6rem). */
+  .e4 .e4-results.map-3::after {
+    background: repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) left 0 top 1.5rem / 1rem 100% no-repeat,
+                repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) left 0 top 1.5rem / 0.5rem 100% no-repeat,
+                repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) right 0 top 1.5rem / 1rem 100% no-repeat,
+                repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) right 0 top 1.5rem / 0.5rem 100% no-repeat; }
+
+  /* Compass: same doodle line. The needle is a diamond, like the logo mark. */
+  .e4 .compass .dots { stroke-dasharray: 0.1 5; stroke-width: 2.4; }
+  .e4 .e4-band .compass-band { width: 7.5rem; height: 8.125rem; left: 1.5rem; bottom: 3rem; stroke: var(--cream); } /* in the empty left side of the band */
+  @media (max-width: 61.99rem) { .e4 .compass-band { display: none; } } /* the words fill the band on narrow screens */
 
   /* Doodles: one 2px line, rounded ends, no fill. Dark green on light sections, pale sage on dark ones.
      Small, at the edges, never on words, never animated. */
@@ -527,7 +553,9 @@ const doodle = {
   .e4 .card h3 { font-size: 1.3125rem; line-height: 1.2; margin: 0 0 0.6rem; }
   .e4 .card p { font-size: 1rem; margin: 0; color: #3d5546; }
   .e4 .card .tl { display: inline-block; margin-top: 0.5rem; text-decoration-color: var(--amber); color: var(--forest); }
-  .e4 .num { display: flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--sun); font-weight: 800; font-size: 1.125rem; margin-bottom: 1rem; }
+  /* Field notes: a small tab and faint notebook ruling under each note. */
+  .e4 .num { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); border: 1.5px solid var(--moss); border-radius: 4px; padding: 0.1rem 0.5rem; margin-bottom: 0.9rem; }
+  .e4 .card p { line-height: 1.75rem; background: repeating-linear-gradient(180deg, transparent 0 calc(1.75rem - 1px), rgba(41, 70, 52, 0.14) calc(1.75rem - 1px) 1.75rem); }
   @media (max-width: 47.99rem) {
     .e4 .e4-steps { padding: 4rem 0; }
     .e4 .cards { margin-top: 2.25rem; }
@@ -543,7 +571,15 @@ const doodle = {
   .e4 .help-card { color: #fff; text-decoration: none; }
   .e4 .ph { position: relative; display: block; }
   .e4 .help-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; }
-  .e4 .help-card h3 { font-size: 1.625rem; margin: 1.25rem 0 0.4rem; }
+  .e4 .help-card h3 { font-size: 1.625rem; margin: 0 0 0.4rem; }
+  /* Plates: corner crop marks around each photo and a Fig. label with a short rule. */
+  .e4 .plate::before, .e4 .plate::after, .e4 .plate .crop::before, .e4 .plate .crop::after { content: ''; position: absolute; width: 18px; height: 18px; pointer-events: none; border: 0 solid rgba(233, 239, 223, 0.85); }
+  .e4 .plate::before { left: -8px; top: -8px; border-left-width: 2px; border-top-width: 2px; }
+  .e4 .plate::after { right: -8px; bottom: -8px; border-right-width: 2px; border-bottom-width: 2px; }
+  .e4 .plate .crop { position: absolute; inset: -8px; pointer-events: none; }
+  .e4 .plate .crop::before { right: 0; top: 0; border-right-width: 2px; border-top-width: 2px; }
+  .e4 .plate .crop::after { left: 0; bottom: 0; border-left-width: 2px; border-bottom-width: 2px; }
+  .e4 .fig { display: inline-block; margin: 1.6rem 0 0.35rem; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sun); border-bottom: 1.5px solid rgba(233, 239, 223, 0.45); padding-bottom: 0.15rem; }
   .e4 .help-card:hover h3, .e4 .help-card:focus-visible h3 { text-decoration: underline; text-decoration-color: var(--sun); text-underline-offset: 6px; }
   .e4 .help-card p { margin: 0; color: #d6e3d0; }
   .e4 .bird { width: 38px; height: 30px; right: 1.75rem; top: -29px; }
