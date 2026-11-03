@@ -127,7 +127,7 @@ export const cities: City[] = [
         h: 'Workers Near Richmond',
         body: [
           'We take cases from Henrico, [Chesterfield County](/chesterfield-county-workers-comp-lawyer/), [Hanover County](/hanover-county-workers-comp-lawyer/), [Powhatan County](/powhatan-county-workers-comp-lawyer/), and every other part of Virginia. If you can’t get to Ridge Road, we can meet by phone or video.',
-          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We’ll point you to a lawyer who does.',
+          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -340,7 +340,7 @@ export const cities: City[] = [
         h: 'Do You Take Cases From Ashland, Mechanicsville, and the Rest of the County?',
         body: [
           'Yes. We take cases from Ashland, Mechanicsville, Atlee, Doswell, Montpelier, Beaverdam, and every other part of the county, and from across Virginia. Nearby, see our [Richmond](/richmond-workers-comp-lawyer/), [Chesterfield County](/chesterfield-county-workers-comp-lawyer/), and [Powhatan County](/powhatan-county-workers-comp-lawyer/) pages.',
-          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We’ll point you to a lawyer who does.',
+          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -457,7 +457,7 @@ export const cities: City[] = [
         body: [
           'Yes. We take cases from Chester, Midlothian, Bon Air, Ettrick, Chesterfield Court House, Brandermill, Enon, and the rest of the county. Nearby, see our pages for [Richmond](/richmond-workers-comp-lawyer/), [Powhatan County](/powhatan-county-workers-comp-lawyer/), and [Hanover County](/hanover-county-workers-comp-lawyer/).',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026. Added because the Defense Department is on the county's largest-employer list.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -555,7 +555,7 @@ export const cities: City[] = [
         body: [
           'Part of the county is federal land, including Marine Corps Base Quantico. The U.S. Department of Defense is the third-largest employer on the state’s list, and the profile counts about 7,000 federal government jobs here.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -687,7 +687,7 @@ export const cities: City[] = [
           // VERIFY: new legal sentence (private employers, including government contractors, generally under Virginia comp).
           'If you work for a private company, including one that holds a government contract, an injury on the job is generally a Virginia workers’ comp claim.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -885,7 +885,7 @@ export const cities: City[] = [
           'Yes. We take cases from Ashburn, Sterling, Leesburg, South Riding, Brambleton, Lansdowne, Purcellville, Round Hill, Hamilton, Lovettsville, Hillsboro, Middleburg, Aldie, and the rest of the county. Nearby, see our pages for [Fairfax County](/fairfax-county-workers-comp-lawyer/) and [Prince William County](/prince-william-county-workers-comp-lawyer/).',
           'The state’s profile counts about 6,400 federal government jobs in the county, and its commuting figures show thousands of residents working in Washington, D.C., and Maryland.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -1004,7 +1004,7 @@ export const cities: City[] = [
         h: 'Do You Take Cases From Staunton, Waynesboro, and the Rest of the Valley?',
         body: [
           'Yes. We take cases from Harrisonburg, Rockingham County, Staunton, Waynesboro, Augusta County, Page County, Shenandoah County, and the rest of the I-81 corridor. Farther north, the Commission also lists hearing locations in Stephens City and Berryville. Farther south, see our [Roanoke workers’ comp page](/roanoke-workers-comp-lawyer/).',
-          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We’ll point you to a lawyer who does.',
+          'If your injury turns out to be a kind of claim we don’t handle, call us anyway. We may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -1070,7 +1070,7 @@ export const cities: City[] = [
             ],
           },
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
           'Jobs like these produce sudden injuries, for example:',
           {
             list: [
@@ -1195,7 +1195,7 @@ export const cities: City[] = [
           },
           'The U.S. Department of Defense and Mills Marine Ship Repair are on the list too.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
           'In warehouse, plant, and road work, sudden injuries often look like this:',
           {
             list: [
@@ -1315,7 +1315,7 @@ export const cities: City[] = [
         body: [
           'Government is the biggest employer by far. Of about 42,900 jobs counted in the city in the third quarter of 2025, about 18,000 were government jobs, and about 13,700 of those were federal, according to the state’s Virginia Works community profile. The U.S. Department of Defense is first on the state’s list of the largest local employers, and Norfolk Naval Shipyard, despite its name, is located here.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
           'Among private employers, health care is the largest industry, with about 5,600 jobs. Others on the state’s list include:',
           {
             list: [
@@ -1448,7 +1448,7 @@ export const cities: City[] = [
             ],
           },
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
           'Jobs like these produce sudden injuries, for example:',
           {
             list: [
@@ -1574,7 +1574,7 @@ export const cities: City[] = [
             ],
           },
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
           'Jobs like these produce sudden injuries, for example:',
           {
             list: [
@@ -1736,7 +1736,7 @@ export const cities: City[] = [
           // VERIFY V2
           'If a private company pays you, your claim usually runs through that company’s Virginia workers’ comp insurance, even if you were hurt on a federal site. Tell us who pays you and where you were working.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.  (VERIFY V3)
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -1913,7 +1913,7 @@ export const cities: City[] = [
           'Yes. We take cases from every part of the city, from Arlington and [Fairfax County](/fairfax-county-workers-comp-lawyer/), and from the rest of Northern Virginia. If you can’t get to Richmond, we can meet by phone or video.',
           'Many people who live here work for a federal agency or commute to jobs in Washington, D.C., or Maryland.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -2002,7 +2002,7 @@ export const cities: City[] = [
           'Some injuries are simpler to prove than others. A fall from a ladder or a hand caught in a conveyor happens at one moment and usually gets reported the same shift. A back injury from unloading a truck is easier for the insurance company to fight: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Note the exact lift, the time, and the person you reported it to.',
           `More on [construction accidents](/virginia-construction-accident-lawyer/), [warehouse injuries](/automated-warehouse-injuries-what-amazon-workers-need-to-know/), and [back injuries at work](${WC}virginia-back-injury-lawyer/).`,
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.  (VERIFY V3)
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -2142,7 +2142,7 @@ export const cities: City[] = [
           'Some of these claims are easier to prove than others. A cut or a fall from a ladder happens at one moment and usually leaves a record the same day. A back injury from lifting is easier for an insurance company to dispute: it may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. Write down what you were lifting, when it happened, and who you told.',
           'If another driver hits you while you are driving for work, you may also have a separate injury claim against that driver. More on [construction accidents](/virginia-construction-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [back injuries at work](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/).',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
         ],
       },
       {
@@ -2271,7 +2271,7 @@ export const cities: City[] = [
           },
           'The list also includes the U.S. Department of Defense, the U.S. Navy Exchange, Norfolk Naval Station, and the Postal Service. Naval Air Station Oceana and its Dam Neck Annex are inside the city limits, and Joint Expeditionary Base Little Creek-Fort Story sits in the city’s northwest corner and extends into Norfolk.',
           // Federal line: Option A from file 9, approved by Bryn Nov 1, 2026.
-          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we’ll point you to a lawyer who does.',
+          'Pathfinder Injury Law focuses only on Virginia state workers’ compensation. If you’re a federal employee, a railroad worker, or a shipyard or port worker, or if you were hurt in another state, your claim may fall under a different system. Give us a call anyway. We’ll help you figure out where your claim belongs, and if it isn’t one we handle, we may be able to point you to a lawyer who does.',
           'Private jobs like these lead to sudden injuries, for example:',
           {
             list: [
