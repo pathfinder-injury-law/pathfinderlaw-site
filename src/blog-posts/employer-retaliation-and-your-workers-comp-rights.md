@@ -1,36 +1,100 @@
 ---
-title: "Employer Retaliation and Your Workers’ Comp Rights"
-metaTitle: "Your Work Comp Rights If Injured From Employer Retaliation"
-description: "Worried about employer retaliation? Call Pathfinder Injury Law in Richmond, Virginia, at 804-505-0633 to talk about your options."
+title: "Can You Be Fired While on Workers’ Comp in Virginia?"
+metaTitle: "Can You Be Fired While on Workers’ Comp in Virginia?"
+description: "Virginia employers can fire you while you’re on workers’ comp, but not solely for filing a claim. What a firing does to your checks and medical care."
 date: 2021-02-12T21:53:20Z
-updated: 2022-10-24T10:41:52Z
-tags: ["rights"]
+updated: 2026-11-03T14:00:00Z
+tags: ["rights","return-to-work"]
 ---
 
-When you’re hurt in a work accident, you may just want to [get your Workers’ Comp benefits](/virginia-workers-comp-lawyer/) and focus on your health. But that may not be so easy to do when your employer tries to retaliate against you.
+*Nothing in this article should be taken as legal advice. Every case is different.*
 
-If you believe your employer has retaliated against you for [filing a Workers’ Comp claim](/how-to-file-a-workers-comp-claim/), you may need to speak with a [lawyer](/virginia-work-injury-lawyer/) about your Workers’ Comp rights. Retaliation is never ok, and you may have grounds for a claim to get the Workers’ Comp benefits you’re due.
+Yes, you can be fired while you’re on workers’ comp in Virginia. Virginia is an at-will state, and being hurt doesn’t make your job safe. What the law forbids is firing you solely because you filed, or plan to file, a workers’ comp claim, or because you testified in one ([Va. Code § 65.2-308](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/)). Losing the job usually does not end your workers’ comp claim. Your medical care for the injury continues, and whether your wage checks continue depends on your work status when you were fired and on why you were fired.
 
-## Is Employer Retaliation Legal?
+## What Happens to Your Checks If You’re Fired
 
-Many employees worry about reporting a work accident out of fear that their employer will retaliate against them. You may be worried about being blamed for the accident, refused Workers’ Comp benefits, or even fired from your job. Virginia law limits when an employer may discharge an employee for filing a claim, so speak with a lawyer promptly about your situation. [Employer retaliation is illegal](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/), and an employer that retaliates against you for seeking Workers’ Comp benefits may face legal consequences.
+| Your situation when you’re fired | What usually happens to wage checks |
+|---|---|
+| Your doctor has you completely out of work | Total disability checks generally continue while the injury keeps you from working. Even a worker fired for cause can be owed them (*McKellar v. Northrop Grumman Shipbuilding, Inc.*, Va. 2015). |
+| You’re on light duty and you’re laid off or the job is cut for business reasons | Partial checks generally continue until you’re released to full duty or offered other light duty, as long as you look for work within your restrictions (*Carr v. Atkinson/Clark/Shea*, Va. Ct. App. 2014). |
+| You’re on light duty and you’re fired for misconduct | Partial checks can stop for good. The Court of Appeals treats the lost wages as caused by the misconduct, not the injury (*Chesapeake & Potomac Tel. Co. v. Murphy*, 12 Va. App. 633 (1991), aff’d en banc, 13 Va. App. 304 (1991)). |
+| You’re on light duty and you’re fired for a reason short of misconduct | Your checks aren’t lost for good. That takes cause “of the type that warrants permanent forfeiture of compensation benefits” (*Eppling v. Schultz Dining Programs*, 18 Va. App. 125 (1994)). Your checks can still be put on hold until you fix what led to the firing and look for work. The Commission decides. |
+| You’re back at full duty | No wage checks are being paid. If the injury later keeps you from working, you can ask the Commission to start them again. If you had an award, file within 24 months of your last check ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). The Commission generally won’t pay for more than 90 days before you file, so don’t wait. |
 
-## Your Rights as an Injured Worker
+In every row, the insurance company is still required to pay for reasonable, necessary medical treatment for the work injury ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). That doesn’t mean it will.
 
-As a worker, your rights are protected by Virginia law. If you’re injured in the scope of your job, you may be [entitled to certain benefits](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf). For example, you shouldn’t have to pay out of pocket for any medical expenses related to the work accident. You may also be due compensation for the lost wages you suffered while unable to work.
+## Is It Illegal to Fire You for Filing a Workers’ Comp Claim?
 
-If an employer discharges an employee solely because the employee filed or intends to file a claim, or testified, the Act allows the employee to bring an action in circuit court. As a worker, you should be protected by state law from these acts of retaliation.
+**Yes. Virginia law says no employer “shall discharge an employee solely because the employee intends to file or has filed a claim” or has testified or is about to testify in a workers’ comp case** ([Va. Code § 65.2-308(A)](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/)). Three things about that law trip people up:
 
-## How Your Workers’ Comp Lawyer Can Help
+- **“Solely” is a high bar.** If the employer can point to another real reason, such as attendance, a policy violation, or a layoff, the retaliation claim gets much harder.
+- **It covers firing.** The statute’s words are “discharge an employee.” Other bad treatment, such as a cut in hours or a bad schedule, may not fit it.
+- **It doesn’t protect a fraudulent claim.** “The discharge of a person who has filed a fraudulent claim is not a violation of this section” (same law).
 
-Of course, it’s not easy to fight back against employer retaliation without help. You may need a Workers’ Comp lawyer to step in and represent you. You may also need their help to prove your employer fired you, for example, out of retaliation, not for legitimate reasons. If you are thinking about leaving the job yourself, read [can I quit my job while on workers’ comp in Virginia](/quit-job-while-on-workers-comp-virginia/) first, because quitting light duty can stop your wage checks.
+## Where You Bring a Retaliation Claim
 
-If you’ve never filed a lawsuit before, it can be difficult to get started. If you believe your employer discharged you because you filed or intended to file a Workers’ Comp claim, you may want to speak with a lawyer about your options. Acting within [Virginia time limits](https://law.lis.virginia.gov/vacode/title8.01/chapter4/section8.01-243/) to file a lawsuit may also be difficult, but acting too late may lead to a dismissal of your claim.
+**A retaliation claim is not part of your workers’ comp case. It is a separate lawsuit in circuit court.** The law sends it to circuit court, not to the Workers’ Compensation Commission. Under [§ 65.2-308(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/), the court can order:
 
-You may also simply not have the time and energy to represent yourself. Even if you had the right tools, you’re hurt, and you may be struggling to focus on your everyday concerns. Luckily, a lawyer can help you file, no matter how difficult your situation is.
+| What the court can order | What it means |
+|---|---|
+| Rehiring or reinstatement | Getting your job back |
+| Back pay | With interest at the judgment rate |
+| Actual damages | Losses the firing caused |
+| Attorney’s fees | For a worker who wins |
 
-## Talk to a Lawyer if Your Employer Retaliated Against You
+That lawsuit has its own deadline. The Supreme Court of Virginia has held that Virginia’s catch-all deadline applies to these suits (*Purcell v. Tidewater Construction Corp.*, 250 Va. 93 (1995)), and that deadline is now two years ([Va. Code § 8.01-248](https://law.lis.virginia.gov/vacode/title8.01/chapter4/section8.01-248/)). That clock starts with the firing, not the accident, so it runs separately from your comp claim. Write down what happened, who said what, and when, while you still remember it. Pathfinder Injury Law does not bring retaliation lawsuits. We keep your workers’ comp case and refer the discharge claim to a lawyer who handles them.
 
-When you’re hurt on the job, you shouldn’t have to worry about losing your job or facing other penalties for the accident. Unfortunately, many Virginia workers face this difficult situation, and many are worried they won’t receive Workers’ Comp benefits when they need them.
+## Can You Be Fired From a Light-Duty Job?
 
-If you’re concerned that your benefits may be denied or that your employer may retaliate against you, reach out to Pathfinder Injury Law. We don’t handle these kinds of retaliatory discharge cases. We would refer out the discharge claim and keep the comp case. To get started with a free consultation, call [804-505-0633](tel:+18045050633) or fill out the online contact form below.
+**Yes, and the reason for the firing decides whether your partial checks survive it.** Light duty is where most firings that hurt a comp claim happen, because partial checks depend on you being willing to do work within your restrictions.
+
+- **Fired for misconduct.** When “a disabled employee is terminated for cause from selective employment procured or offered by his employer, any subsequent wage loss is properly attributable to his wrongful act rather than his disability” (*Murphy*). Examples the courts have accepted include a failed drug test when passing was a written condition of the job (*Richfood, Inc. v. Williams*, 20 Va. App. 404 (1995)) and repeated careless mistakes that put patients at risk (*Walter Reed Convalescent Center v. Reese*, 24 Va. App. 328 (1997)).
+- **Fired for something less.** Missing work because of an unrelated illness isn’t the kind of misconduct that ends your checks for good (*Eppling*). Your checks can be put on hold until the health problem clears up and you’re looking for work, and then they can start again. If you have an award, the insurance company has to prove the firing was for a reason serious enough to stop your checks. If you don’t have an award yet, you may have to prove the firing was really about your injury.
+- **Laid off.** An economic layoff from light duty keeps partial checks going, but you have to look for work within your restrictions and keep a record of it (*Carr*).
+- **Fired because the injury made the job impossible.** If the mistakes or absences come from the injury itself, that changes the analysis. Get your doctor’s opinion in writing.
+
+Our guide to [light duty and refusing light duty in Virginia](/light-duty-workers-comp-virginia/) covers what counts as suitable work and the six-month rule for fixing a refusal.
+
+## Fired Before You Filed a Claim
+
+**Being fired doesn’t take away your right to file.** If you were hurt at work and fired before you reported it or filed, you still have the same deadlines: written notice to your employer within 30 days of the accident ([Va. Code § 65.2-600](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)) and a claim filed with the Commission within two years ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). Expect the insurance company to argue that the injury story came after the firing. Medical records from right after the accident, and anyone you told at the time, are your answer to that. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
+
+## What Being Fired Doesn’t Change
+
+- **Your medical care for the injury** continues under the claim.
+- **Your permanent partial disability benefits,** if your doctor rates a lasting loss of use of an arm, leg, hand, or other listed body part ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)).
+- **An existing award.** Under an award, the insurance company can’t just stop your checks because you were fired. It has to file a written application with the Commission first. It can stop paying once it files, so act fast: you have 15 days from the filing date to send the Commission your evidence against it. If the application alleges a refusal of light duty, and a firing for cause from light duty is treated as one (*Murphy*), the insurer only has to pay through the date of the refusal or 14 days before it filed, whichever is later (Commission Rule 1, 16VAC30-50-20(D)(3)). If the Commission rejects the application, your checks start again right away.
+- **Your average weekly wage.** It is based on what you earned before the injury, not on what you earn after being let go.
+
+## Steps to Take If You’re Fired While on Workers’ Comp
+
+1. **Ask for the reason in writing.** Keep the termination letter, any write-ups, and your schedule records.
+2. **Get your work status from your doctor in writing.** Totally out of work, light duty with restrictions, or full duty. The table above turns on it.
+3. **Make sure your claim is filed with the Commission,** even if the insurance company accepted it and is paying. If the checks stop, a filed claim is what protects you.
+4. **If you’re on restrictions, start looking for work within them** and keep a log of every application: date, employer, job, and result.
+5. **Report any new job or earnings to the insurance company right away,** and do it in writing so there’s a record ([Va. Code § 65.2-712](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-712/)).
+6. **Don’t sign a severance agreement without reading what it releases.** A release in a severance package may try to cover your comp claim too. A workers’ comp claim can only be settled with the Commission’s approval ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)), and no other agreement can let an employer out of what it owes under the comp law ([Va. Code § 65.2-300](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-300/)).
+
+> “Getting fired might feel like the end of the claim, but it isn’t. What matters is what your doctor says you can do and why the employer let you go, and both of those can be fought over.” (Bryn Swartz)
+
+## Fired While on Workers’ Comp Questions
+
+### Can my employer fire me for missing work because of my injury?
+
+It can be lawful, because the law bars firing you *solely* for filing a claim, not every firing of an injured worker. But if you’re totally disabled, your total disability checks generally continue anyway. If you’re on light duty and the absences came from the injury, the fight is over whether you were fired because of the injury or because of misconduct. If it was the injury, the misconduct rule that can end partial checks doesn’t apply.
+
+### Can I quit instead of waiting to be fired?
+
+Quitting is treated differently. Quitting a light-duty job usually counts as refusing suitable work. Read [can I quit my job while on workers’ comp in Virginia](/quit-job-while-on-workers-comp-virginia/) before you decide.
+
+### Can I collect unemployment after being fired while on workers’ comp?
+
+Unemployment is decided by the Virginia Employment Commission, under different rules. Ask it directly, and report any unemployment benefits to the workers’ comp insurance company.
+
+### Does a settlement require me to resign?
+
+Many workers’ comp settlements ask for a resignation. That is something to bargain over, not a rule. Here’s more on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/).
+
+## Fired While on Workers’ Comp? Call Pathfinder Injury Law
+
+Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/).
