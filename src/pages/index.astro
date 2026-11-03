@@ -236,7 +236,7 @@ const doodle = {
     <section class="e4-us map map-3 dark">
       <div class="wrap">
         <p class="k">Meet us</p>
-        <h2 class="e4-h">Two people. One kind of case.</h2>
+        <h2 class="e4-h">Two people. <span class="hand hand-reply">One kind of case.</span></h2>
         <div class="us-text">
           <p>
             <strong>Pathfinder Injury Law</strong> is a family-owned workers’ compensation law firm in
@@ -274,7 +274,7 @@ const doodle = {
     <!-- The one form on this page (id="contact"), in a map-only frame: a dotted trail from the compass under the headline
          to an X by the form. Shared with Contact and the inner pages (MapContact). -->
     <MapContact class="dark" namePlaceholder="What’s your preferred name?">
-      <h2 class="e4-h">Let’s talk about <span class="typer typer-block" data-typer={formPhrases.join('|')} data-end=".">what happened.</span></h2>
+      <h2 class="e4-h hand-h">Let’s talk about <span class="typer typer-block" data-typer={formPhrases.join('|')} data-end=".">what happened.</span></h2>
     </MapContact>
 
   </div>
@@ -597,5 +597,10 @@ const doodle = {
   /* Contact: no photo. The form sits in a map: contour lines, and a trail that ends at an X by the form. */
   .e4 .map-contact { padding: 7rem 0 5rem; } /* the form section itself is MapContact */
   .e4 .mc-talk .e4-h { font-size: clamp(2.5rem, 4.6vw, 4rem); line-height: 1.02; color: var(--cream); }
+  /* Bryn's handwriting on two more reply lines (he picked "3 and 4", Nov 3): "One kind of case." under "Two people.",
+     and the whole form headline, whose rotating ending types out in the same hand. Same font file and settings as
+     the hero's "We've got this."; every letter is in scripts/make-handwriting-font.mjs. */
+  .e4 .e4-h .hand-reply { display: block; font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; letter-spacing: 0; font-size: 1.15em; line-height: 1.1; color: var(--sun); }
+  .e4 .mc-talk .hand-h { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; letter-spacing: 0; font-size: clamp(2.75rem, 5.2vw, 4.5rem); line-height: 1.08; color: var(--sun); }
   @media (max-width: 47.99rem) { .e4 .map-contact { padding: 4rem 0 3rem; } }
 </style>
