@@ -1498,6 +1498,8 @@ mark {
   margin: 0.25rem 0 1.25rem;
   padding: 0.9rem 1rem;
   background: var(--mist);
+  /* Its own dark text: the map form sets white text for the forest band, and this card is light. */
+  color: var(--forest);
   border-radius: var(--radius);
   font-size: 0.9rem;
   line-height: 1.5;
@@ -1617,6 +1619,7 @@ mark {
   margin: 0 0 1.25rem;
   padding: 0.9rem 1rem;
   background: var(--mist);
+  color: var(--forest); /* a light card, so dark text even inside the map form's white text */
   border-left: 4px solid var(--moss);
   line-height: 1.5;
 }
