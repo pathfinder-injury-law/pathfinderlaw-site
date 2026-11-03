@@ -108,7 +108,7 @@ Since there is no average, it helps to know what actually moves the number:
 
 ### Ankle and Foot
 
-**An ankle injury is usually rated to the leg (175 weeks), and sometimes to the foot (125 weeks), depending on the injury and the medical evidence.** A 20% rating is 35 weeks of pay as a leg rating but 25 weeks as a foot rating. Common reasons for an ankle rating include lost motion, instability, a fusion, and arthritis after a fracture. See our guides to [ankle injuries at work](/ankle-injury-workers-comp/) and [Achilles tendon ruptures](/achilles-tendon-rupture-workers-comp/).
+**An ankle injury is rated to the leg (175 weeks) when it leaves a lasting, measurable effect on the leg, and to the foot (125 weeks) when the problem stays in the foot.** A 20% rating is 35 weeks of pay as a leg rating but 25 weeks as a foot rating. Common reasons for an ankle rating include lost motion, instability, a fusion, and arthritis after a fracture. See our guides to [ankle injuries at work](/ankle-injury-workers-comp/) and [Achilles tendon ruptures](/achilles-tendon-rupture-workers-comp/).
 
 ### Shoulder and Arm
 
