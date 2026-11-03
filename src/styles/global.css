@@ -157,7 +157,6 @@ p {
    Fields inside the white form card go back to green. */
 .on-dark :focus-visible,
 .contour :focus-visible,
-.site-footer :focus-visible,
 .cta :focus-visible {
   outline-color: var(--white);
 }
@@ -1626,10 +1625,23 @@ mark {
 }
 
 /* ---------- Footer ---------- */
+/* Pale sage, like the Brand Book letterhead's footer band, so the color logo can sit on it with no card
+   (Bryn, Nov 3). An olive rule on top, dark green text, and the same contour texture drawn dark. */
 .site-footer {
-  color: var(--white);
+  background: #e9efdf;
+  color: var(--forest);
   padding-block: 2.5rem calc(5.5rem + env(safe-area-inset-bottom)); /* bottom room for the floating phone bar */
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 4px solid var(--moss);
+}
+.site-footer :focus-visible {
+  outline-color: var(--forest);
+}
+.site-footer .contour-tex {
+  filter: brightness(0);
+  opacity: 0.05;
+}
+.footer-logo img {
+  width: 10rem; /* well above the Brand Book's 75px minimum */
 }
 .footer-grid {
   display: grid;
@@ -1642,14 +1654,14 @@ mark {
 }
 @media (min-width: 62rem) {
   .footer-grid {
-    grid-template-columns: 1.3fr 1.2fr 0.9fr 0.9fr;
+    grid-template-columns: 11rem 1.3fr 1.2fr 0.9fr 0.9fr;
   }
 }
 .site-footer h2 {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--sky-tint);
+  color: var(--pine); /* mid green, 5.5:1 on the sage */
   margin-bottom: 0.9rem;
 }
 .site-footer ul {
@@ -1676,7 +1688,7 @@ mark {
 .legal-note {
   margin: 2.75rem 0 0;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 1px solid rgba(41, 70, 52, 0.2);
   font-size: 0.85rem;
   line-height: 1.55;
   max-width: 60rem;
@@ -1689,7 +1701,7 @@ mark {
 .copyright {
   margin: 2.75rem 0 0;
   padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 1px solid rgba(41, 70, 52, 0.2);
   font-size: 0.92rem;
 }
 
