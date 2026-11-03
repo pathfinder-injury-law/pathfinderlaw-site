@@ -394,7 +394,7 @@ const doodle = {
     font-display: swap;
     src: url('/fonts/kbs-handwriting.woff2') format('woff2'); /* subset by scripts/make-handwriting-font.mjs */
   }
-  .e4 .k { font-weight: 800; font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin: 0 0 0.75rem; }
+  .e4 .k { font-weight: 800; font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pine); margin: 0 0 0.75rem; } /* pine: 13px text needs 4.5:1, moss on sage is 3.4:1 */
   .e4 .dark .k { color: var(--sun); }
   .e4 .e4-h { font-size: clamp(2.125rem, 4vw, 3.25rem); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; margin: 0; }
   .e4 .dark .e4-h { color: var(--cream); }
@@ -519,7 +519,7 @@ const doodle = {
   .e4 .card p { font-size: 1rem; margin: 0; color: #3d5546; }
   .e4 .card .tl { display: inline-block; margin-top: 0.5rem; text-decoration-color: var(--amber); color: var(--forest); }
   /* Field notes: a small tab and faint notebook ruling under each note. */
-  .e4 .num { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); border: 1.5px solid var(--moss); border-radius: 4px; padding: 0.1rem 0.5rem; margin-bottom: 0.9rem; }
+  .e4 .num { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pine); border: 1.5px solid var(--moss); /* pine text for contrast; the moss outline stays */ border-radius: 4px; padding: 0.1rem 0.5rem; margin-bottom: 0.9rem; }
   .e4 .card p { line-height: 1.75rem; background: repeating-linear-gradient(180deg, transparent 0 calc(1.75rem - 1px), rgba(41, 70, 52, 0.14) calc(1.75rem - 1px) 1.75rem); }
   @media (max-width: 47.99rem) {
     .e4 .e4-steps { padding: 4rem 0; }
