@@ -1,0 +1,100 @@
+---
+import ContactForm from './ContactForm.astro';
+import { compass } from '../data/doodles';
+
+// The form inside a map, as at the end of the home page: forest green, faint contour lines, a compass under the
+// headline, and a dotted trail from the compass to a yellow X by the form's first field. No photo, so nothing here
+// competes with the page's first paint. The headline goes in the default slot (an h1 or an h2, set by the page).
+// The home page still has its own copy of this section (index.astro); it moves to this component in a later PR.
+interface Props {
+  namePlaceholder?: string;
+  // top: the section opens the page, so it starts behind the header (no strip of page background between them).
+  top?: boolean;
+}
+const { namePlaceholder = 'What’s your name?', top = false } = Astro.props;
+---
+<section class:list={['map-contact', top && 'mc-top']}>
+  <div class="wrap mc-grid">
+    <svg class="mc-route" aria-hidden="true" focusable="false"><path class="route" /><path class="x" /></svg>
+    <div class="mc-talk">
+      <slot />
+      <svg class="mc-compass" viewBox="0 0 120 130" aria-hidden="true"><path d={compass.ring} /><path class="dots" d={compass.dots} /><path class="needle" transform="rotate(70 60 70)" d={compass.needle} /></svg>
+    </div>
+    <div class="mc-form" id="contact">
+      <ContactForm namePlaceholder={namePlaceholder} />
+    </div>
+  </div>
+</section>
+
+<script>
+  // The dotted trail: from the compass under the headline to an X beside the first field of the form. It is drawn
+  // from the real positions each time the layout changes, so it always connects (same drawing as the home page).
+  const grid = document.querySelector<HTMLElement>('.mc-grid');
+  const svg = grid?.querySelector<SVGSVGElement>('.mc-route');
+  const camp = grid?.querySelector<SVGSVGElement>('.mc-compass');
+  const form = grid?.querySelector<HTMLElement>('.mc-form');
+  if (grid && svg && camp && form) {
+    const route = svg.querySelector('.route')!;
+    const x = svg.querySelector('.x')!;
+    const needle = camp.querySelector('.needle');
+    let raf = 0;
+    const draw = () => {
+      raf = 0;
+      const g = grid.getBoundingClientRect();
+      const c = camp.getBoundingClientRect();
+      const field = form.querySelector<HTMLElement>('.step:not([hidden]) :is(input, textarea, select, button)') ?? form;
+      const f = field.getBoundingClientRect();
+      const sx = c.right - g.left + 10;
+      const sy = c.top - g.top + c.height * 0.55;
+      const side = f.left - c.right > 140; // form beside the compass (wide) or under it (phones, tablets)
+      // Under the compass, the X sits just above the form itself, not above the first field: from step 2 on, the
+      // first field is below the question, and the X would land on the question's words.
+      const top = form.getBoundingClientRect().top;
+      const ex = side ? f.left - g.left - 34 : f.left - g.left + f.width * 0.72;
+      const ey = side ? f.top - g.top + Math.min(f.height / 2, 34) : top - g.top - 22;
+      const dx = ex - sx;
+      // stop the dots a little short of the X
+      const tx = side ? ex - 14 : ex, ty = side ? ey : ey - 14;
+      route.setAttribute('d', side
+        ? `M${sx} ${sy} C${sx + dx * 0.4} ${sy + 34}, ${tx - dx * 0.3} ${ty + 50}, ${tx} ${ty}`
+        : `M${sx} ${sy} C${sx + (tx - sx) * 0.6} ${sy + 4}, ${tx} ${ty - (ty - sy) * 0.6}, ${tx} ${ty}`);
+      x.setAttribute('d', `M${ex - 8} ${ey - 8}L${ex + 8} ${ey + 8}M${ex + 8} ${ey - 8}L${ex - 8} ${ey + 8}`);
+      // Turn the compass needle to point at the X (0 degrees is straight up).
+      const cx = c.left - g.left + c.width / 2, cy = c.top - g.top + c.height * (70 / 130);
+      const deg = Math.atan2(ex - cx, cy - ey) * 180 / Math.PI;
+      needle?.setAttribute('transform', `rotate(${deg.toFixed(1)} 60 70)`);
+    };
+    const soon = () => { if (!raf) raf = requestAnimationFrame(draw); };
+    new ResizeObserver(soon).observe(grid);
+    new ResizeObserver(soon).observe(form);
+    new MutationObserver(soon).observe(form, { subtree: true, attributes: true, attributeFilter: ['hidden'] });
+    window.addEventListener('resize', soon);
+    document.fonts?.ready.then(soon);
+    soon();
+  }
+</script>
+
+<style is:global>
+  /* Same look as the home page form section (.e4 .e4-contact). */
+  .map-contact { position: relative; isolation: isolate; padding: 6rem 0 5rem; background: var(--forest); color: #fff; }
+  /* Map lines: the shared contour file as a mask, pale sage on forest, at the home page's form strength. */
+  .map-contact::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: #e9efdf; opacity: 0.13; -webkit-mask: url(/images/contours.svg) center / 90rem auto repeat; mask: url(/images/contours.svg) center / 90rem auto repeat; }
+  body:has(.mc-top) main { padding-top: 0; }
+  .map-contact.mc-top { padding-top: calc(var(--header-h) + 3.5rem); }
+  .mc-grid { position: relative; display: grid; grid-template-columns: 1fr 27.5rem; gap: 6rem; align-items: center; }
+  .mc-route { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+  .mc-route .route { fill: none; stroke: #e9efdf; stroke-opacity: 0.6; stroke-width: 2.5; stroke-dasharray: 0.1 9; stroke-linecap: round; }
+  .mc-route .x { fill: none; stroke: var(--sun); stroke-width: 3.4; stroke-linecap: round; }
+  .mc-compass { display: block; width: 8.25rem; height: auto; margin: 0.75rem 0 0; fill: none; stroke: #e9efdf; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+  .mc-compass path { vector-effect: non-scaling-stroke; }
+  .mc-compass .dots { stroke-dasharray: 0.1 5; stroke-width: 2.4; }
+  .mc-form .form-card { background: none; box-shadow: none; padding: 0; border: 0; color: #fff; }
+  .mc-form .form-card > h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .mc-form .step[data-step='name'] legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .mc-form .intake-top:has(.intake-back[hidden]) .intake-progress { visibility: hidden; }
+  .mc-form .step-q { color: #fff5d5; }
+  .mc-form .intake-back, .mc-form .intake-progress { color: #e9efdf; } /* "Back" and "Step 2 of 8": the form's pine green is unreadable on forest */
+  .mc-form input[type='text'] { background: rgba(233, 239, 223, 0.95); border: 0; min-height: 3.875rem; border-radius: 12px; font-size: 1.25rem; }
+  @media (max-width: 61.99rem) { .mc-grid { grid-template-columns: 1fr; gap: 1.75rem; } } /* the headline needs room, so the form drops under it below about 990px */
+  @media (max-width: 47.99rem) { .map-contact { padding: 3.5rem 0 3rem; } .map-contact.mc-top { padding-top: calc(var(--header-h) + 2rem); } .mc-compass { width: 6.5rem; margin-top: 1rem; } }
+</style>
