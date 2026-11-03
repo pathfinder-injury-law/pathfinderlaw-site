@@ -97,15 +97,19 @@ const isList = (b: Block): b is { list: string[] } => typeof b !== 'string';
 </Base>
 
 <style>
+  /* Other places we serve: a band in the home page's style, with a small-caps label like the home kickers (pine, for contrast). */
   .areas {
     background: var(--mist);
-    padding-block: clamp(2rem, 5vw, 3rem);
+    border-top: 5px solid var(--moss);
+    padding-block: clamp(2.25rem, 5vw, 3.25rem);
   }
   .areas h2 {
-    font-size: 1.1rem;
+    font-size: 0.8125rem;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
+    letter-spacing: 0.14em;
+    color: var(--pine); /* 5.9:1 on the card color; moss is too light for 13px text */
+    margin-bottom: 1.1rem;
   }
   .areas ul {
     list-style: none;
