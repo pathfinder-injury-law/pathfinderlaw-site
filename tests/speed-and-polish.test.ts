@@ -53,13 +53,14 @@ test('The map texture never loads with the hero: no CSS background, no early src
 
 test('Every photo copy named in a page exists, and originals stay the fallback', opts, () => {
   // Contact has no photos since Nov 3 (it opens on the form in a map), so the page-hero check uses About.
+  // Inner page tops use the misty Blue Ridge photo since Nov 3 (Bryn picked the photo band).
   for (const page of ['/index.html', '/about-us/index.html', '/bryn-swartz/index.html']) {
     const html = read(page);
     const sets = [...html.matchAll(/(?:srcset|imagesrcset)="([^"]+)"/g)].map((m) => m[1]);
     assert.ok(sets.length > 0, page);
     for (const set of sets) for (const part of set.split(',')) assert.ok(exists(part.trim().split(' ')[0]), `${page}: ${part}`);
   }
-  assert.match(read('/about-us/index.html'), /<img class="hero-photo" src="\/images\/photos\/tile-b\.jpg"/);
+  assert.match(read('/about-us/index.html'), /<img class="hero-photo" src="\/images\/photos\/e4-misty-river\.jpg"/);
 });
 
 test('The main font is preloaded and every font loads with font-display: swap', opts, () => {

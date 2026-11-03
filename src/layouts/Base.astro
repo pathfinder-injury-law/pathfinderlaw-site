@@ -256,7 +256,9 @@ const speculationRules = JSON.stringify({
     <script type="application/ld+json" set:html={jsonLd} />
     <script type="speculationrules" set:html={speculationRules} />
   </head>
-  <body class:list={[overlay && 'has-overlay', (heroLight || overlay) && 'hero-light']}>
+  <!-- Only the home page puts the header over its photo (overlay + heroLight). Since Nov 3 2026 the inner pages'
+       photo bands are dark, so they keep the solid sage header bar above the photo instead (the logo stays on sage). -->
+  <body class:list={[overlay && heroLight && 'has-overlay', heroLight && 'hero-light']}>
     <Header />
     <main id="main">
       <slot />

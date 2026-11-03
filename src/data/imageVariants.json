@@ -534,6 +534,11 @@
     "height": 1333,
     "avif": [
       {
+        "url": "/images/photos/sized/e4-misty-river-480.avif",
+        "width": 480,
+        "bytes": 14473
+      },
+      {
         "url": "/images/photos/sized/e4-misty-river-800.avif",
         "width": 800,
         "bytes": 39139
@@ -550,6 +555,11 @@
       }
     ],
     "webp": [
+      {
+        "url": "/images/photos/sized/e4-misty-river-480.webp",
+        "width": 480,
+        "bytes": 18358
+      },
       {
         "url": "/images/photos/sized/e4-misty-river-800.webp",
         "width": 800,
