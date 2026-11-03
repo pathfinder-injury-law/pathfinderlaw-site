@@ -1,7 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PageHero from '../../components/PageHero.astro';
-import ContactSection from '../../components/ContactSection.astro';
+import MapContact from '../../components/MapContact.astro';
 import { site } from '../../data/site';
 
 // Wording is carried over from the live page ("Hurt? We'll Show You The Way", the free-consultation
@@ -9,6 +8,9 @@ import { site } from '../../data/site';
 //  - Meta description: "Contact VA workers' comp lawyers" became "our team" (plan Section VIII, fix 6).
 //  - The live page linked to a separate /location/ page for the Richmond office. Both offices
 //    (Richmond and Chincoteague, by appointment only) are shown here instead, from site.ts.
+// Nov 3, 2026 (Bryn: the rest of the site should look like the new home page): no photo up top. The page opens on
+// the home page's form-in-a-map (MapContact), so the form is the first thing on screen, then the call and office
+// cards in the home page's field-notes card style on sage. Same words as before.
 const title = 'Contact - Pathfinder Injury Law';
 const description =
   "Hurt at work and don't know where to turn? Make Pathfinder Injury Law your first call. Contact our VA workers' comp team at 804-505-0633.";
@@ -18,103 +20,79 @@ const description =
   description={description}
   path="/contact/"
   crumbs={[{ name: 'Contact Us', path: '/contact/' }]}
-  overlay
 >
   <Fragment slot="head">
-    <!-- "Let's talk." uses the accent font, near the top of the page. -->
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-wght-italic.woff2" crossorigin />
+    <!-- "Let's talk." is in Bryn's handwriting at the top of the page; fetch it early so a late swap can't rewrap the headline. -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/kbs-handwriting.woff2" crossorigin />
   </Fragment>
-  <PageHero title="Contact Us" crumbs={[{ name: 'Contact Us' }]} lockup={{ line1: 'Hurt?', line2: 'Let’s talk.' }} />
+  <MapContact top>
+    <nav class="crumbs ct-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><span aria-current="page">Contact Us</span></li>
+      </ol>
+    </nav>
+    <!-- "Contact Us" stays the h1 for search engines and screen readers; the lockup is the visible headline. -->
+    <h1 class="visually-hidden">Contact Us</h1>
+    <div class="ct-lockup">
+      <p class="ct-l1">Hurt?</p>
+      <p class="ct-l2 hand">Let’s talk.</p>
+    </div>
+  </MapContact>
 
-  <ContactSection variant="plain" />
-
-  <!-- The map texture as a lazy image (not a CSS background), so it never competes with the hero photo. -->
-  <div class="contact-divider contour tex-img" aria-hidden="true"><img class="contour-tex" data-src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" /></div>
-
-  <section class="section contact-cards-section">
+  <section class="ct-cards-section">
     <div class="wrap">
-      <div class="contact-cards">
-        <div class="contact-card">
+      <ul class="ct-cards">
+        <li class="ct-card">
           <h3>Call Us</h3>
-          <a class="big-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
-          <ul class="hours">
+          <a class="ct-phone" href={site.phoneHref}>{site.phoneDisplay}</a>
+          <ul class="ct-hours">
             {site.hours.map((h) => <li>{h}</li>)}
           </ul>
-        </div>
+        </li>
         {site.offices.map((o) => (
-          <div class="contact-card">
+          <li class="ct-card">
             <h3>{o.name} Office</h3>
             <address>
               {o.lines.map((l) => <span>{l}</span>)}
             </address>
-            <p class="appt">By appointment only</p>
-            <a class="map-link" href={o.mapUrl} rel="noopener">View on Google Maps</a>
-          </div>
+            <p class="ct-appt">By appointment only</p>
+            <a class="ct-map" href={o.mapUrl} rel="noopener">View on Google Maps</a>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   </section>
 </Base>
 
 <style>
-  .contact-cards-section {
-    padding-top: clamp(3rem, 6vw, 5rem);
+  /* Bryn's own handwriting, the same file and settings as the home hero line ("We've got this."). One weight only. */
+  @font-face {
+    font-family: 'Kbs Handwriting';
+    font-display: swap;
+    src: url('/fonts/kbs-handwriting.woff2') format('woff2'); /* subset by scripts/make-handwriting-font.mjs */
   }
-  .contact-cards {
-    display: grid;
-    gap: 1.5rem;
-  }
-  @media (min-width: 52rem) {
-    .contact-cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  .contact-card {
-    background: var(--mist);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    border-top: 0.4rem solid var(--moss);
-    text-align: center;
-  }
-  .contact-card h3 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
-  }
-  .big-phone {
-    display: block;
-    font-family: var(--font-head);
-    font-weight: 800;
-    font-size: clamp(1.1rem, 2.2vw, 2rem);
-    white-space: nowrap;
-    text-decoration: none;
-    margin-bottom: 1rem;
-  }
-  .big-phone:hover {
-    color: var(--pine);
-  }
-  .hours {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  address {
-    font-style: normal;
-    margin-bottom: 0.6rem;
-  }
-  address span {
-    display: block;
-  }
-  .appt {
-    margin: 0 0 1rem;
-    font-weight: 700;
-    color: var(--pine);
-  }
-  .map-link {
-    font-weight: 700;
-    text-decoration-color: var(--moss);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.25em;
-  }
+  /* Headline: the home page's hero type. "Hurt?" in Brand Book yellow capitals, "Let's talk." in Bryn's handwriting. */
+  .ct-crumbs { color: #e9efdf; font-size: 0.875rem; font-weight: 600; }
+  .ct-crumbs a { color: inherit; }
+  .ct-lockup p { margin: 0; font-weight: 900; line-height: 0.95; letter-spacing: -0.025em; }
+  .ct-l1 { font-size: clamp(3.5rem, 9vw, 7.5rem); text-transform: uppercase; color: var(--sun); }
+  .ct-l2 { font-size: clamp(3.5rem, 9vw, 7.5rem); color: var(--sun); margin-top: 0.05em !important; }
+  .ct-l2.hand { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; letter-spacing: 0; line-height: 1.1; }
+
+  /* Call and office cards: the home page's field-notes cards (pale card, moss top edge) on sage with faint map lines. */
+  .ct-cards-section { position: relative; isolation: isolate; background: #e9efdf; padding: 5rem 0 5.5rem; }
+  .ct-cards-section::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: var(--forest); opacity: 0.07; -webkit-mask: url(/images/contours.svg) center / 90rem auto repeat; mask: url(/images/contours.svg) center / 90rem auto repeat; }
+  .ct-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+  @media (min-width: 52rem) { .ct-cards { grid-template-columns: repeat(3, 1fr); } }
+  .ct-card { background: #f4f7ef; border-top: 5px solid var(--moss); border-radius: 14px; padding: 1.75rem 1.6rem; color: #3d5546; }
+  .ct-card h3 { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin: 0 0 0.9rem; }
+  .ct-phone { display: block; font-weight: 900; font-size: clamp(1.6rem, 2.4vw, 2rem); letter-spacing: -0.01em; white-space: nowrap; color: var(--forest); text-decoration: none; margin-bottom: 0.75rem; }
+  .ct-phone:hover { color: var(--pine); }
+  .ct-hours { list-style: none; margin: 0; padding: 0; }
+  address { font-style: normal; font-size: 1.125rem; color: var(--forest); margin-bottom: 0.6rem; }
+  address span { display: block; }
+  .ct-appt { margin: 0 0 1rem; font-weight: 700; color: var(--pine); }
+  .ct-map { font-weight: 700; color: var(--forest); text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 0.25em; }
+  @media (max-width: 47.99rem) { .ct-cards-section { padding: 3.5rem 0 4rem; } }
 </style>

@@ -17,9 +17,10 @@ const repo = fileURLToPath(new URL('..', import.meta.url));
 const SRC = join(repo, 'fonts-src/kbs-handwriting.ttf');
 const OUT = join(repo, 'public/fonts/kbs-handwriting.woff2');
 
-// The only handwriting on the site is "We’ve got this." in the home hero, plus a straight
-// apostrophe in case an edit types ' instead of ’.
-const TEXT = 'We’ve got this.' + "'";
+// Bryn's short reply lines (Nov 3, 2026: "The responsive words should be in my handwriting across the site"):
+// "We’ve got this." in the home hero and "Let’s talk." on Contact, plus a straight apostrophe in case an
+// edit types ' instead of ’. Add each new line here when a page sets it in the handwriting.
+const TEXT = ['We’ve got this.', 'Let’s talk.'].join('') + "'";
 
 // 1. Subset, without hinting (the font only shows at large sizes).
 const tmp = mkdtempSync(join(tmpdir(), 'kbs-'));
