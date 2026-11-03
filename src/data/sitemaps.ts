@@ -7,6 +7,9 @@ import { posts } from './blogPosts';
 import { cities } from './cities';
 import { subArticles, ARTICLE_BASE } from './subArticles';
 import { articlesB } from './articlesB';
+// When each page's own words last changed (from git history; scripts/page-dates.mjs). Blog posts use their
+// own `updated` date instead. A page missing here simply gets no <lastmod>.
+import pageDates from './pageDates.json';
 
 export interface SitemapUrl {
   path: string; // leading and trailing slash
@@ -16,11 +19,17 @@ export interface SitemapUrl {
 // The Eastern Shore page uses the city template but is listed with the pages (owner's build note, Oct 28).
 const EASTERN_SHORE = '/eastern-shore-workers-comp-lawyer/';
 
-const urls = (paths: string[]): SitemapUrl[] => paths.map((path) => ({ path }));
+const dated = (path: string): SitemapUrl => {
+  const d = (pageDates as Record<string, string>)[path];
+  return d ? { path, lastmod: new Date(`${d}T00:00:00Z`) } : { path };
+};
+const urls = (paths: string[]): SitemapUrl[] => paths.map(dated);
+// The blog index changes when a post does, so it carries the newest post's date.
+const newestPost = new Date(Math.max(...posts.map((p) => p.updated.getTime())));
 
 export const sitemaps: Record<string, SitemapUrl[]> = {
   post: [
-    { path: '/blog/' },
+    { path: '/blog/', lastmod: newestPost },
     ...posts.map((p) => ({ path: p.path, lastmod: p.updated })),
   ],
   page: urls([
