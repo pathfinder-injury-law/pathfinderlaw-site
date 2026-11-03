@@ -12,8 +12,10 @@ interface Props {
   top?: boolean;
   // Extra classes from the page (the home page adds "dark" for its own section styles).
   class?: string;
+  // The form's hidden heading level (Contact passes 2: there is no section h2 above its form).
+  formHeadingLevel?: 2 | 3;
 }
-const { namePlaceholder = 'What’s your preferred name?', top = false, class: extra } = Astro.props;
+const { namePlaceholder = 'What’s your preferred name?', top = false, class: extra, formHeadingLevel = 3 } = Astro.props;
 ---
 <section class:list={['map-contact', top && 'mc-top', extra]}>
   <div class="wrap mc-grid">
@@ -23,7 +25,7 @@ const { namePlaceholder = 'What’s your preferred name?', top = false, class: e
       <svg class="mc-compass" viewBox="0 0 120 130" aria-hidden="true"><path d={compass.ring} /><path class="dots" d={compass.dots} /><path class="needle" transform="rotate(70 60 70)" d={compass.needle} /></svg>
     </div>
     <div class="mc-form" id="contact">
-      <ContactForm namePlaceholder={namePlaceholder} />
+      <ContactForm namePlaceholder={namePlaceholder} headingLevel={formHeadingLevel} />
     </div>
   </div>
 </section>
@@ -98,7 +100,7 @@ const { namePlaceholder = 'What’s your preferred name?', top = false, class: e
   .mc-compass path { vector-effect: non-scaling-stroke; }
   .mc-compass .dots { stroke-dasharray: 0.1 5; stroke-width: 2.4; }
   .mc-form .form-card { background: none; box-shadow: none; padding: 0; border: 0; color: #fff; }
-  .mc-form .form-card > h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .mc-form .form-card > .form-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .mc-form .step[data-step='name'] legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .mc-form .intake-top:has(.intake-back[hidden]) .intake-progress { visibility: hidden; }
   .mc-form .step-q { color: #fff5d5; }
