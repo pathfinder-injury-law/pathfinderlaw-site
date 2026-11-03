@@ -6,6 +6,10 @@ hero-over-shoulder-desktop.webp, hero-over-shoulder-phone.webp   AI-generated wi
 tile-a.jpg, tile-b.jpg, tile-c.jpg   AI-generated with Google AI Studio (gemini-3-pro-image), 10-30-26. Replace earlier photos whose license could not be confirmed. Prompts: Active/Hero Image Notes - 10-29-26.md, Round 6.
                  (file names on the old site began with "photo-", the Unsplash pattern).
 
+e4-trail-map-desktop.webp, e4-trail-map-phone.webp   AI-generated with Google's image model (gemini-nano-banana-2.1) on Bryn's API key, 11-03-26.
+                 Takes A-wide-3 and A-phone-3, picked by Bryn. Prompts: Active/Hero Photo Prompts - 11-03-26.json (prompt A).
+                 Resized to 2000 and 900 wide and saved as WebP. Originals: Active/Hero Photo Results - 11-03-26/.
+
 E4 home page photos, from Unsplash (Unsplash License, free for commercial use; resized and cropped here, 11-02-26):
 e4-overlook-desktop.webp, e4-overlook-phone.webp   Brayden Winemiller  https://unsplash.com/photos/PkPCoWIOkSc
 e4-autumn-ridges.jpg     K T  https://unsplash.com/photos/PV_4h9i73BU
