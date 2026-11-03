@@ -102,3 +102,10 @@ test('Theme colour, web app manifest and skip link', opts, () => {
   assert.match(html, /<a class="skip-link" href="#main">Skip to main content<\/a>/);
   assert.match(html, /<main id="main">/);
 });
+
+test('No ruler ticks down the section edges (Bryn, Nov 3: distracting, off theme)', opts, () => {
+  for (const page of ['/index.html', '/results/index.html']) {
+    const all = (css() + read(page)).replace(/\s+/g, ' ');
+    assert.doesNotMatch(all, /repeating-linear-gradient\((180deg, ?)?currentColor 0 1(\.5)?px/, page);
+  }
+});

@@ -472,17 +472,6 @@ const doodle = {
   .e4 .map-4::before { opacity: 0.2; }
   .e4 .map.dark.map-3::before { opacity: 0.1; }
   .e4 .map.dark.map-4::before { opacity: 0.13; }
-  /* Small map ticks down both edges where the map has fully taken over. */
-  .e4 .map-3::after, .e4 .map-4::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.35;
-    background: repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 3rem) left 0 top 1.5rem / 0.75rem 100% no-repeat,
-                repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 3rem) right 0 top 1.5rem / 0.75rem 100% no-repeat; }
-  .e4 .e4-results.map-3::after { color: var(--forest); }
-  /* Results: the edge ticks read as compass bearings (a fine tick every 1.5rem, a longer one every 6rem). */
-  .e4 .e4-results.map-3::after {
-    background: repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) left 0 top 1.5rem / 1rem 100% no-repeat,
-                repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) left 0 top 1.5rem / 0.5rem 100% no-repeat,
-                repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) right 0 top 1.5rem / 1rem 100% no-repeat,
-                repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) right 0 top 1.5rem / 0.5rem 100% no-repeat; }
 
   /* Compass: same doodle line. The needle is a diamond, like the logo mark. */
   .e4 .compass .dots { stroke-dasharray: 0.1 5; stroke-width: 2.4; }
