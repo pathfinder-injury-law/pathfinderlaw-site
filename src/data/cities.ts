@@ -1638,7 +1638,7 @@ export const cities: City[] = [
       {
         h: 'Do You Take Cases From Salem, Vinton, and the Rest of the Valley?',
         body: [
-          'Yes. We take cases from Salem, Vinton and the rest of Roanoke County, Botetourt County, Franklin County, Craig County, and the rest of western Virginia. The state’s list of the largest employers in the county includes manufacturers such as Elbit Systems of America, Marvin Windows, Cardinal Glass Industries, and Medeco Security Locks.',
+          'Yes. We take cases from Salem, Vinton, and the rest of Roanoke County, Botetourt County, Franklin County, Craig County, and the rest of western Virginia. The state’s list of the largest employers in the county includes manufacturers such as Elbit Systems of America, Marvin Windows, Cardinal Glass Industries, and Medeco Security Locks.',
           'To the east, see our [Lynchburg workers’ comp page](/lynchburg-workers-comp-lawyer/). To the north, see our [Shenandoah Valley page](/harrisonburg-workers-comp-worker/).',
         ],
       },
