@@ -1,6 +1,6 @@
 ---
-title: "Do Pre-Existing Conditions affect Workers’ Comp?"
-metaTitle: "Do Pre-Existing Conditions affect Workers’ Comp? - Guide"
+title: "Do Pre-Existing Conditions Affect Workers’ Comp?"
+metaTitle: "Do Pre-Existing Conditions Affect Workers’ Comp? - Guide"
 description: "What happens with pre-existing conditions and Virginia workers' compensation claims? Find out with Pathfinder Injury Law in Richmond."
 date: 2021-08-29T08:49:00Z
 updated: 2022-10-24T11:21:37Z

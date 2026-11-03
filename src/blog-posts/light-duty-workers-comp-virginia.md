@@ -99,19 +99,19 @@ Firing someone solely for filing a workers’ comp claim is separately against t
 
 ## Light Duty Questions
 
-### Can I refuse light duty because it pays less?
+### Can I Refuse Light Duty Because It Pays Less?
 
 Lower pay alone usually isn’t enough, because workers’ comp covers part of the gap, though a job that pays very little can be a different story. Partial checks pay two-thirds of the difference ([Va. Code § 65.2-502](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-502/)). Refusing because of the pay can cost you all of your wage checks during the refusal.
 
-### Does light duty affect my medical care?
+### Does Light Duty Affect My Medical Care?
 
 No. Your medical treatment continues whether you accept light duty, refuse it, or are fired from it ([Va. Code § 65.2-510(A)](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-510/)). The insurance company is still required to pay for reasonable, necessary treatment related to the accident. That doesn’t mean it will.
 
-### What if light duty makes my injury worse?
+### What if Light Duty Makes My Injury Worse?
 
 Stop and tell your treating doctor right away. If the doctor changes your restrictions or takes you out of work, the job may no longer be suitable, and you may be owed total disability checks again. Get the new restrictions in writing and give them to your employer.
 
-### Can my employer make up a light-duty job just to stop my checks?
+### Can My Employer Make Up a Light-Duty Job Just to Stop My Checks?
 
 The job has to be real. The employer has to prove a bona fide offer suitable to your capacity (*Hillcrest Manor*). A made-up job that doesn’t exist, doesn’t fit your restrictions, or disappears once your checks stop can be challenged at a hearing.
 

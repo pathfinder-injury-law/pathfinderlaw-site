@@ -101,15 +101,15 @@ Any settlement has to be approved by the Commission ([Va. Code § 65.2-701](http
 
 ## Concussion and Workers’ Comp Questions
 
-### Do I have to lose consciousness for it to count as a concussion?
+### Do I Have to Lose Consciousness for It to Count as a Concussion?
 
 No. The CDC describes a concussion as caused by a bump, blow, or jolt to the head, or a hit to the body that shakes the head and brain ([CDC](https://www.cdc.gov/traumatic-brain-injury/about/index.html)). Passing out is not part of that definition. For the claim, what matters is whether your doctor diagnoses the injury and ties it to the accident.
 
-### My symptoms started a few days after the accident. Is it too late?
+### My Symptoms Started a Few Days After the Accident. Is It Too Late?
 
 No. Delayed symptoms are common with concussions. Get seen as soon as they start, tell the doctor about the accident, and give your employer written notice if you haven’t already.
 
-### Can I sue my employer for a brain injury?
+### Can I Sue My Employer for a Brain Injury?
 
 Generally no. Workers’ comp is the only claim against your employer or a coworker. If someone outside the company caused the accident, such as another driver, you may have a separate injury claim against that person.
 

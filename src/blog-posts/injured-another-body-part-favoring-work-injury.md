@@ -94,11 +94,11 @@ Pathfinder obtained a [$1,200,000 settlement in a heavily contested ankle injury
 
 ## Compensable Consequence Questions
 
-### Can I add a body part to my workers’ comp claim in Virginia?
+### Can I Add a Body Part to My Workers’ Comp Claim in Virginia?
 
 Yes, if a doctor connects it to your work accident. If the body part was hurt in the original accident, it should be claimed as part of that accident. If it was hurt later because of the original injury, it is claimed as a compensable consequence. Either way, file a claim with the Commission that names the body part. Don’t rely on the insurance company to add it.
 
-### What if the second injury is worse than the first?
+### What if the Second Injury Is Worse Than the First?
 
 That happens. A limp after an [Achilles tendon rupture](/achilles-tendon-rupture-workers-comp/) can lead to a knee or hip that needs more treatment than the ankle did. The second injury is judged on its own medical evidence, and it can carry its own rating and wage benefits.
 

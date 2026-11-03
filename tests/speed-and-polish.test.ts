@@ -103,6 +103,18 @@ test('Theme colour, web app manifest and skip link', opts, () => {
   assert.match(html, /<main id="main">/);
 });
 
+test('Light cards in the form set their own dark text, so the white text of the map form never lands on them', opts, () => {
+  const all = css().replace(/\s+/g, ' ');
+  for (const card of ['consent', 'intake-note']) {
+    const rule = all.match(new RegExp(`\\.${card} ?{([^}]*)}`));
+    assert.ok(rule, `.${card} rule is in the stylesheet`);
+    assert.match(rule![1], /background:\s*(var\(--mist\)|#f4f7ef)/, card);
+    assert.match(rule![1], /(^|;)\s*color:\s*(var\(--forest\)|#294634)/, card);
+  }
+  // On the forest map band, error messages switch from the white-card red to brand yellow.
+  assert.match(all + read('/index.html'), /\.mc-form \.field-error(\[data-astro-cid-[a-z0-9]+\])? ?{ ?color: ?(var\(--sun\)|#ffd040)/);
+});
+
 test('No ruler ticks down the section edges (Bryn, Nov 3: distracting, off theme)', opts, () => {
   for (const page of ['/index.html', '/results/index.html']) {
     const all = (css() + read(page)).replace(/\s+/g, ' ');
