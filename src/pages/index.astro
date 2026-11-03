@@ -4,14 +4,14 @@ import Base from '../layouts/Base.astro';
 import ContactForm from '../components/ContactForm.astro';
 import variants from '../data/imageVariants.json';
 import { site } from '../data/site';
-import { marks } from '../data/e4Marks';
 
-// Home page, design E4 (Nov 2, 2026): one real outdoor photo up top, hand-drawn marker marks on key
-// words, a pinned "what happens when you call" trail, diamond photos, map lines that fade in as you
-// scroll, and a sketched west-to-east Virginia map at the bottom. Mockup: Active/Mockup E - 11-01-26/e5.html.
-// The marker underlines and circles are drawn in the browser at each word's real size (script below);
-// everything else is inline SVG, so no extra requests. The search text and links from the Nov 1 SEO
-// rewrite are kept (intro paragraphs, topic links, results links).
+// Home page, design E4 (Nov 2, 2026), wilderness-to-map version (outside review, 11-02-26).
+// One idea top to bottom: a real wilderness photo up top, faint map contour lines taking over as you
+// scroll, and the form inside a map at the end, where the trail stops at an X. Rules: one art layer
+// per section (a photo or map lines, never both), the map stays behind things, and about five small
+// single-line doodles at the edges. No doodles in the hero, in Results, or near any disclaimer.
+// "We've got this." is the page's only handwriting. Everything is inline SVG or CSS, no script.
+// The search text and links from the Nov 1 SEO rewrite are kept (intro paragraphs, topic links, results links).
 
 const heroSet = (crop: 'desktop' | 'phone', fmt: 'avif' | 'webp') =>
   (variants as any)[`/images/photos/e4-overlook-${crop}.webp`][fmt].map((v: { url: string; width: number }) => `${v.url} ${v.width}w`).join(', ');
@@ -22,9 +22,9 @@ const description =
 
 // Word for word from /reviews/ (initials only, as there). No results or comparisons (LEO 1750 section G).
 const reviews = [
-  { by: 'M.W.', mark: 'guided the way', text: ['They ', ' when I needed help the most. Very knowledgeable, respectful of my situation and always there whenever I had questions.'] },
-  { by: 'T.B.', text: ['The team at Pathfinders was very professional, attentive and knowledgeable. Mr. Swartz made certain that I understood my rights and walked me through the process.'] },
-  { by: 'K.W.', text: ['Pathfinder Injury Law was extremely helpful, knowledgeable, personable, and ensured that I understood each step of the process.'] },
+  { by: 'M.W.', text: 'They guided the way when I needed help the most. Very knowledgeable, respectful of my situation and always there whenever I had questions.' },
+  { by: 'T.B.', text: 'The team at Pathfinders was very professional, attentive and knowledgeable. Mr. Swartz made certain that I understood my rights and walked me through the process.' },
+  { by: 'K.W.', text: 'Pathfinder Injury Law was extremely helpful, knowledgeable, personable, and ensured that I understood each step of the process.' },
 ];
 
 // Bryn's own steps (Nov 2), legal-checked. Step 3 is his reworded line after the check.
@@ -50,41 +50,45 @@ const topics = [
   { label: 'Workers’ comp FAQ', href: '/virginia-workers-comp-faq/' },
 ];
 
-// Same wording and links as before the redesign (legal-checked); a doodle sits above each.
+// Same wording and links as before the redesign (legal-checked).
 const results = [
   {
     amount: '$1,200,000',
-    icon: 'crutch',
     text: 'Settlement obtained in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences following a mediation before the Virginia Workers’ Compensation Commission.',
     linkText: 'ankle injury',
     href: '/ankle-injury-workers-comp/',
   },
   {
     amount: '$360,000',
-    icon: 'spine',
     text: 'Settlement obtained in a Virginia Workers’ Compensation case involving a back injury 10 years prior.',
     linkText: 'back injury',
     href: '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/',
   },
   {
     amount: '$250,000',
-    icon: 'hardhat',
     text: 'Settlement obtained in a contested concussion/brain injury Workers’ Compensation case with psychosomatic issues following mediation before the Virginia Workers’ Compensation Commission.',
   },
   {
     amount: '$240,000',
-    icon: 'back',
     text: 'Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.',
     linkText: 'lumbar herniation',
     href: '/what-should-you-do-if-you-have-a-spine-injury-at-work/',
   },
 ];
 
-const doodles: Record<string, string> = {
-  crutch: '<path d="M20 8Q30 2 40 8M22 8L28 66M38 8L32 66M24 34H36M28 66H32V74M24 74H36"/>',
-  spine: [0, 1, 2, 3, 4].map((i) => `<rect x="21" y="${4 + i * 14}" width="18" height="10" rx="4"/><path d="M21 ${9 + i * 14}H13M39 ${9 + i * 14}H47"/>`).join(''),
-  hardhat: '<path d="M12 54C12 32 52 32 52 54M6 54H58Q62 58 58 60H6Q2 58 6 54ZM32 30V54M24 34L22 54M40 34L42 54"/>',
-  back: '<circle cx="14" cy="14" r="6"/><path d="M19 19C28 24 36 30 40 38M40 38L34 56L36 72M40 38L48 56L50 72M24 23L22 40L26 52M40 38Q44 36 42 30"/><path d="M48 24L52 18M51 32L58 30M48 40L55 44" stroke-width="2.2"/>',
+// The doodles: one line weight, rounded ends, no fill, one ink color per background (set in CSS).
+// None may suggest a win (no trophies, flags, money or summit poses).
+const doodle = {
+  // peeking over the top edge of a quote card: shaggy head, two eyes, fingers on the edge
+  yeti: 'M12 42C12 22 21 12 32 12S52 22 52 42M27 13C27 9 29 7 31 6M33 12C34 9 36 8 38 8M21 42C21 31 26 25 32 25S43 31 43 42M28 32m-1.3 0a1.3 1.3 0 1 0 2.6 0a1.3 1.3 0 1 0-2.6 0M36 32m-1.3 0a1.3 1.3 0 1 0 2.6 0a1.3 1.3 0 1 0-2.6 0M29.5 37q2.5 1.6 5 0M2 42q2-5 4 0q2-5 4 0q2-5 4 0M50 42q2-5 4 0q2-5 4 0q2-5 4 0',
+  // riding the trail line
+  biker: 'M14 36m-9 0a9 9 0 1 0 18 0a9 9 0 1 0-18 0M50 36m-9 0a9 9 0 1 0 18 0a9 9 0 1 0-18 0M14 36H28L22 24M28 36L42 22L50 36M22 24H42M42 22L40 17H45M18 22H25M40 8m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0M38 12L25 21M36 14L42 18M25 21L32 28L28 35',
+  // perched on the top edge of a photo
+  bird: 'M27 10m-5.5 0a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0-11 0M32.5 9L37 10.5L32 12M28.5 9m-0.6 0a0.6 0.6 0 1 0 1.2 0a0.6 0.6 0 1 0-1.2 0M22.5 13.5C27 17 26 25 17 25C12 25 8 22 3 19C9 19 13 14 22.5 13.5M11 19C15 21 19 20 21 17M15 25V30M19 25V30M13 30H17M17 30H21',
+  // tucked behind a photo corner
+  sun: 'M30 30m-10 0a10 10 0 1 0 20 0a10 10 0 1 0-20 0M30 15V8M30 52V45M15 30H8M52 30H45M19.4 19.4L14.4 14.4M45.6 45.6L40.6 40.6M40.6 19.4L45.6 14.4M14.4 45.6L19.4 40.6',
+  // tent and campfire by the X at the end of the trail
+  camp: 'M96 116H190M104 116L127 80L150 116M121 116L127 103L133 116M127 80l-3-6M127 80l3-6M162 116L184 109M162 109L184 116M173 107C167 101 170 95 173 88C176 95 179 101 173 107',
 };
 ---
 <Base
@@ -104,17 +108,6 @@ const doodles: Record<string, string> = {
   </Fragment>
 
   <div class="e4">
-    <!-- Shared SVG texture that makes the drawn marks look like marker ink. -->
-    <svg width="0" height="0" class="ink-defs" aria-hidden="true" focusable="false">
-      <filter id="ink" x="-5%" y="-20%" width="110%" height="140%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4" result="warp" />
-        <feDisplacementMap in="SourceGraphic" in2="warp" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="rough" />
-        <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" seed="9" result="grain" />
-        <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3 2.3" result="dry" />
-        <feComposite in="rough" in2="dry" operator="in" />
-      </filter>
-    </svg>
-
     <!-- Hero: one real photo edge to edge, words low left. -->
     <section class="hero hero-e4">
       <picture class="hero-pic">
@@ -134,15 +127,17 @@ const doodles: Record<string, string> = {
       </div>
     </section>
 
-    <!-- Client comments -->
-    <section class="e4-quotes map-bg dark">
+    <!-- Client comments. A ridge line closes the hero photo; the first faint map lines start here. -->
+    <section class="e4-quotes map map-1 dark">
+      <svg class="ridge" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V52L70 30L120 44L210 8L290 40L350 26L430 50L520 18L600 42L690 22L780 46L860 14L950 40L1030 28L1120 50L1200 20L1290 44L1360 32L1440 46V80Z" /></svg>
       <div class="wrap">
-        <h2 class="e4-h">What our clients <span class="mk u" data-seed="515">say</span></h2>
+        <h2 class="e4-h">What our clients say</h2>
         <div class="notes">
-          {reviews.map((r) => (
+          {reviews.map((r, i) => (
             <figure class="note">
+              {i === 2 && <svg class="doodle yeti" viewBox="0 0 64 42" aria-hidden="true"><path d={doodle.yeti} /></svg>}
               <svg class="stars" viewBox="0 0 118 22" role="img" aria-label="5 star review"><g>{[0, 1, 2, 3, 4].map((i) => <path transform={`translate(${i * 24} 0)`} d="M11 2l2.6 6 6.4.5-4.9 4.2 1.5 6.3L11 15.6 5.4 19l1.5-6.3L2 8.5l6.4-.5z" />)}</g></svg>
-              <blockquote><p>“{r.text[0]}{r.mark && <span class="mk c" data-seed="611">{r.mark}</span>}{r.text[1]}”</p></blockquote>
+              <blockquote><p>“{r.text}”</p></blockquote>
               <figcaption>{r.by}</figcaption>
             </figure>
           ))}
@@ -152,39 +147,39 @@ const doodles: Record<string, string> = {
       </div>
     </section>
 
-    <!-- What happens when you call: on wide screens the section holds still while the trail draws. -->
-    <section class="e4-steps map-bg pinwrap">
-      <div class="pin">
-        <div class="wrap">
-          <p class="k">Your trail</p>
-          <h2 class="e4-h">What happens when <span class="mk u amber" data-seed="303">you call</span></h2>
-          <div class="cards">
-            <p class="scrawl here" aria-hidden="true">you are here<svg viewBox={marks.aDown.vb}><path d={marks.aDown.d} /></svg></p>
-            <svg class="trail ink" viewBox={marks.trail.vb} preserveAspectRatio="none" aria-hidden="true"><path d={marks.trail.d} /></svg>
-            <ol class="card-list">
-              {steps.map((s, i) => (
-                <li class="card">
-                  <span class="num"><svg class="ink" viewBox={marks[`num${i + 1}`].vb} aria-hidden="true"><path d={marks[`num${i + 1}`].d} /></svg>{i + 1}</span>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}{s.link && <> <a class="tl" href={s.link.href}>{s.link.label}</a></>}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
+    <!-- What happens when you call: one thin trail line behind the four steps. -->
+    <section class="e4-steps map map-2">
+      <div class="wrap">
+        <p class="k">Your trail</p>
+        <h2 class="e4-h">What happens when you call</h2>
+        <div class="cards">
+          <svg class="trail" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44C120 44 180 20 300 22S480 50 600 46S780 14 900 18S1080 46 1200 34" /></svg>
+          <svg class="doodle biker" viewBox="0 0 64 46" aria-hidden="true"><path d={doodle.biker} /></svg>
+          <ol class="card-list">
+            {steps.map((s, i) => (
+              <li class="card">
+                <span class="num">{i + 1}</span>
+                <h3>{s.title}</h3>
+                <p>{s.text}{s.link && <> <a class="tl" href={s.link.href}>{s.link.label}</a></>}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- How we help: diamonds like the logo mark. -->
-    <section class="e4-help map-bg dark">
+    <!-- How we help: plain photos, the last wilderness views. -->
+    <section class="e4-help dark">
       <div class="wrap">
         <p class="k">How we help</p>
-        <h2 class="e4-h">Wherever <span class="mk c" data-seed="212">your claim</span> stands</h2>
-        <div class="dia-row">
-          <svg class="sun ink" viewBox={marks.sun.vb} aria-hidden="true"><path d={marks.sun.d} /></svg>
-          {help.map((h) => (
-            <a class="dia-card" href={h.href}>
-              <span class="dia"><Photo src={h.img} alt="" width="1000" height="1000" sizes="(min-width: 48rem) 420px, 90vw" loading="lazy" /></span>
+        <h2 class="e4-h">Wherever your claim stands</h2>
+        <div class="help-row">
+          {help.map((h, i) => (
+            <a class="help-card" href={h.href}>
+              <span class="ph">
+                {i === 1 && <svg class="doodle bird" viewBox="0 0 40 32" aria-hidden="true"><path d={doodle.bird} /></svg>}
+                <Photo src={h.img} alt="" width="1000" height="1000" sizes="(min-width: 48rem) 380px, 90vw" loading="lazy" />
+              </span>
               <h3>{h.title}</h3>
               <p>{h.text}</p>
             </a>
@@ -196,25 +191,23 @@ const doodles: Record<string, string> = {
       </div>
     </section>
 
-    <!-- Big band -->
+    <!-- Big band: the last full photo on the page. -->
     <section class="e4-band">
       <Photo class="band-bg" src="/images/photos/e4-green-ridges-gold-sky.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
       <div class="wrap">
-        <p class="big">All we do is <span class="mk c amber" data-seed="404">workers’ comp.</span></p>
+        <p class="big">All we do is workers’ comp.</p>
         <p class="sub">Not wills. Not divorces. Just helping people hurt at work.</p>
       </div>
     </section>
 
-    <!-- Results -->
-    <section class="e4-results map-bg">
+    <!-- Results: map lines at full (still light) strength. No doodles near results or their disclaimer. -->
+    <section class="e4-results map map-3">
       <div class="wrap">
-        <svg class="paper ink" viewBox="0 0 120 110" aria-hidden="true"><g><path d="M20 8H76L92 24V100H20Z" /><path d="M76 8V24H92" /><path d="M32 36H78M32 48H78M32 60H66" /><path d="M32 84C38 74 42 92 48 80S58 76 62 84S74 82 80 78" /><path d="M98 70L112 56L104 48L90 62L86 76Z" /></g></svg>
         <p class="k">Results</p>
         <h2 class="e4-h">Some of our clients’ settlements</h2>
         <div class="rgrid">
           {results.map((r) => (
             <article>
-              <svg class="dood ink" viewBox="0 0 60 76" aria-hidden="true"><g set:html={doodles[r.icon]} /></svg>
               <p class="amount">{r.amount}</p>
               <p>{r.href ? <>{r.text.split(r.linkText!)[0]}<a href={r.href}>{r.linkText}</a>{r.text.split(r.linkText!).slice(1).join(r.linkText!)}</> : r.text}</p>
             </article>
@@ -226,10 +219,10 @@ const doodles: Record<string, string> = {
     </section>
 
     <!-- Meet us, with the who-we-are text from the Nov 1 SEO rewrite. -->
-    <section class="e4-us map-bg dark">
+    <section class="e4-us map map-3 dark">
       <div class="wrap">
         <p class="k">Meet us</p>
-        <h2 class="e4-h"><span class="mk u" data-seed="808">Two</span> people. <span class="mk c" data-seed="909">One</span> kind of case.</h2>
+        <h2 class="e4-h">Two people. One kind of case.</h2>
         <div class="us-text">
           <p>
             <strong>Pathfinder Injury Law</strong> is a family-owned workers’ compensation law firm in
@@ -248,12 +241,15 @@ const doodles: Record<string, string> = {
         </div>
         <div class="pair">
           <a class="person" href="/bryn-swartz/">
-            <Photo src="/images/photos/bryn.jpg" alt="Bryn Swartz" width="900" height="900" sizes="(min-width: 48rem) 560px, 90vw" loading="lazy" />
+            <span class="ph">
+              <svg class="doodle sun" viewBox="0 0 60 60" aria-hidden="true"><path d={doodle.sun} /></svg>
+              <Photo src="/images/photos/bryn.jpg" alt="Bryn Swartz" width="900" height="900" sizes="(min-width: 48rem) 560px, 90vw" loading="lazy" />
+            </span>
             <h3>Bryn Swartz</h3>
             <p class="role">Owner/Attorney</p>
           </a>
           <a class="person" href="/mandy-truman/">
-            <Photo src="/images/photos/mandy.jpg" alt="Mandy Truman" width="900" height="900" sizes="(min-width: 48rem) 560px, 90vw" loading="lazy" />
+            <span class="ph"><Photo src="/images/photos/mandy.jpg" alt="Mandy Truman" width="900" height="900" sizes="(min-width: 48rem) 560px, 90vw" loading="lazy" /></span>
             <h3>Mandy Truman</h3>
             <p class="role">Firm Administrator</p>
           </a>
@@ -261,13 +257,16 @@ const doodles: Record<string, string> = {
       </div>
     </section>
 
-    <!-- The one form on this page (id="contact"). -->
-    <section class="e4-contact">
-      <Photo class="contact-bg" src="/images/photos/e4-misty-river.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
+    <!-- The one form on this page (id="contact"), in a map-only frame: the trail ends at an X by the form. -->
+    <section class="e4-contact map map-4 dark">
       <div class="wrap contact-grid">
         <div class="talk">
-          <h2 class="e4-h">Let’s talk about <span class="mk u" data-seed="707">what happened.</span></h2>
-          <svg class="lead" viewBox="0 0 130 110" aria-hidden="true"><path d="M8 96C20 40 70 20 118 34" /><path d="M100 20L120 34L102 50" /></svg>
+          <h2 class="e4-h">Let’s talk about what happened.</h2>
+          <svg class="camp" viewBox="0 0 260 120" aria-hidden="true">
+            <path class="route" d="M4 10C40 30 30 70 80 74S150 40 196 70" />
+            <path class="x" d="M196 62L212 78M212 62L196 78" />
+            <path class="ink" d={doodle.camp} />
+          </svg>
         </div>
         <div class="form-bare" id="contact">
           <ContactForm namePlaceholder="What’s your name?" />
@@ -307,136 +306,6 @@ const doodles: Record<string, string> = {
   </div>
 </Base>
 
-<script>
-  // Marker underlines (.mk.u) and circles (.mk.c) drawn as filled pen strokes at each word's real
-  // size, so nothing is stretched. Redrawn after fonts load and on resize. Decorative only.
-  let seed = 1;
-  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-  const n = (a: number) => (rnd() * 2 - 1) * a;
-  const f = (v: number) => Math.round(v * 10) / 10;
-  type Pt = [number, number];
-
-  function stroke(pts: Pt[], w: number, o: { tin?: number; tout?: number; swell?: number; blob?: number } = {}) {
-    const { tin = 0.06, tout = 0.28, swell = 0.22, blob = 0.25 } = o;
-    const ph = rnd() * 6, L: Pt[] = [], R: Pt[] = [];
-    pts.forEach((p, i) => {
-      const t = i / (pts.length - 1);
-      const a = pts[Math.max(0, i - 1)], b = pts[Math.min(pts.length - 1, i + 1)];
-      let dx = b[0] - a[0], dy = b[1] - a[1];
-      const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
-      let k = 1 + swell * Math.sin(t * 4.2 + ph) * 0.6 + blob * Math.exp(-t * 40);
-      if (t < tin) k *= 0.55 + 0.45 * (t / tin);
-      if (t > 1 - tout) k *= Math.pow((1 - t) / tout, 0.8) * 0.9 + 0.1;
-      const hw = (w * k) / 2;
-      L.push([p[0] - dy * hw, p[1] + dx * hw]); R.push([p[0] + dy * hw, p[1] - dx * hw]);
-    });
-    const ring = L.concat(R.reverse());
-    let s = `M${f(ring[0][0])} ${f(ring[0][1])}`;
-    for (let i = 1; i < ring.length; i++) {
-      const m: Pt = [(ring[i - 1][0] + ring[i][0]) / 2, (ring[i - 1][1] + ring[i][1]) / 2];
-      s += `Q${f(ring[i - 1][0])} ${f(ring[i - 1][1])} ${f(m[0])} ${f(m[1])}`;
-    }
-    return s + 'Z';
-  }
-
-  function underline(W: number, H: number, w: number) {
-    const N = 40, rise = H * (0.18 + n(0.06)), sag = H * (0.14 + n(0.05)), s0 = seed;
-    const a: Pt[] = [];
-    for (let i = 0; i < N; i++) {
-      const t = i / (N - 1);
-      const hook = t < 0.04 ? (1 - t / 0.04) * H * 0.18 : 0;
-      const flick = t > 0.93 ? -(((t - 0.93) / 0.07) ** 2) * H * 0.35 : 0;
-      a.push([W * (0.005 + 0.99 * t) + n(0.3), H * 0.42 + rise * (0.5 - t) - sag * Math.sin(Math.PI * t) + hook + flick + Math.sin(t * 9 + s0) * H * 0.03]);
-    }
-    const x0 = 0.94 + n(0.03), x1 = 0.1 + n(0.05), b: Pt[] = [];
-    for (let i = 0; i < N; i++) {
-      const t = i / (N - 1);
-      b.push([W * (x0 + (x1 - x0) * t), H * 0.66 + H * 0.16 * t - H * 0.08 * Math.sin(Math.PI * t) + Math.sin(t * 7 + s0) * H * 0.025]);
-    }
-    return [stroke(a, w), stroke(b, w * 0.62, { tin: 0.1, tout: 0.4, blob: 0.1 })];
-  }
-
-  function circle(W: number, H: number, w: number) {
-    const turns = 1.18 + n(0.08), N = 90, a0 = -Math.PI * 0.35 + n(0.25), tilt = n(0.06), egg = 0.08 + n(0.04), ph = rnd() * 6;
-    const rx = W / 2 - w, ry = H / 2 - w, pts: Pt[] = [];
-    for (let i = 0; i < N; i++) {
-      const t = i / (N - 1), a = a0 - t * turns * Math.PI * 2;
-      let r = 1 + egg * Math.cos(a - ph) + 0.03 * Math.sin(a * 3 + ph) + t * 0.06;
-      if (t > 0.9) r += ((t - 0.9) / 0.1) ** 2 * 0.1;
-      const x = Math.cos(a) * rx * r, y = Math.sin(a) * ry * r * (1 - t * 0.06);
-      pts.push([W / 2 + x * Math.cos(tilt) - y * Math.sin(tilt) + t * W * 0.025, H / 2 + x * Math.sin(tilt) + y * Math.cos(tilt) - t * H * 0.05]);
-    }
-    return [stroke(pts, w, { tin: 0.03, tout: 0.22, swell: 0.3, blob: 0.35 })];
-  }
-
-  const NS = 'http://www.w3.org/2000/svg';
-  function draw() {
-    document.querySelectorAll<HTMLElement>('.e4 .mk').forEach((el, i) => {
-      el.querySelector('svg.mark')?.remove();
-      seed = Number(el.dataset.seed || 100 + i * 37);
-      const fs = parseFloat(getComputedStyle(el).fontSize), r = el.getBoundingClientRect();
-      const circ = el.classList.contains('c');
-      const W = circ ? r.width * 1.18 : r.width * 1.04, H = circ ? r.height * 1.3 : fs * 0.42;
-      const w = circ ? Math.max(3, fs * 0.07) : Math.max(5, fs * 0.15);
-      const svg = document.createElementNS(NS, 'svg');
-      svg.setAttribute('class', 'mark');
-      svg.setAttribute('viewBox', `0 0 ${f(W)} ${f(H)}`);
-      svg.setAttribute('aria-hidden', 'true');
-      svg.setAttribute('style', circ
-        ? `left:${-r.width * 0.09}px;top:${-r.height * 0.15}px;width:${W}px;height:${H}px`
-        : `left:${-r.width * 0.02}px;bottom:${-fs * 0.3}px;width:${W}px;height:${H}px`);
-      for (const d of circ ? circle(W, H, w) : underline(W, H, w)) {
-        const p = document.createElementNS(NS, 'path');
-        p.setAttribute('d', d);
-        svg.appendChild(p);
-      }
-      el.appendChild(svg);
-    });
-  }
-  document.fonts.ready.then(draw);
-  // Redraw when a font arrives after that (the handwriting can), so the underline fits the real letters.
-  document.fonts.addEventListener('loadingdone', draw);
-  let resizeTimer: number | undefined;
-  addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = window.setTimeout(draw, 150); });
-
-  // Steps: on wide screens the section holds still while the trail draws and each step lights up.
-  // Phones and reduced-motion settings get the plain list.
-  const wrap = document.querySelector<HTMLElement>('.e4 .pinwrap');
-  if (wrap) {
-    const cards = [...wrap.querySelectorAll<HTMLElement>('.card')];
-    const trail = wrap.querySelector<SVGElement>('.trail');
-    const here = wrap.querySelector<HTMLElement>('.here');
-    const still = matchMedia('(prefers-reduced-motion: reduce), (max-width: 47.99rem)');
-    const tick = () => {
-      if (still.matches) { wrap.classList.remove('on'); return; }
-      wrap.classList.add('on');
-      const r = wrap.getBoundingClientRect();
-      const p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight)));
-      if (trail) trail.style.clipPath = `inset(-20% ${(1 - p) * 100}% -20% 0)`;
-      const step = Math.min(cards.length - 1, Math.floor(p * cards.length * 0.999));
-      cards.forEach((c, i) => { c.classList.toggle('lit', i <= step); c.classList.toggle('now', i === step); });
-      if (here) here.style.transform = `translateX(${cards[step].offsetLeft}px) rotate(-5deg)`;
-    };
-    addEventListener('scroll', tick, { passive: true });
-    addEventListener('resize', tick);
-    tick();
-  }
-
-  // Map lines fade in behind the sections as you scroll from the photo down to the results.
-  const hero = document.querySelector<HTMLElement>('.e4 .hero');
-  const res = document.querySelector<HTMLElement>('.e4 .e4-results');
-  if (hero && res) {
-    const fade = () => {
-      const a = hero.offsetTop + hero.offsetHeight * 0.6, b = res.offsetTop;
-      const p = Math.min(1, Math.max(0, (scrollY + innerHeight * 0.5 - a) / (b - a)));
-      document.documentElement.style.setProperty('--map', p.toFixed(3));
-    };
-    addEventListener('scroll', fade, { passive: true });
-    addEventListener('resize', fade);
-    fade();
-  }
-</script>
-
 <style is:global>
   /* ===== Home page, design E4. Scoped by .e4 (and body:has(.e4) for the shared header). ===== */
   .e4 {
@@ -452,22 +321,12 @@ const doodles: Record<string, string> = {
     font-display: swap;
     src: url('/fonts/kbs-handwriting.woff2') format('woff2'); /* subset by scripts/make-handwriting-font.mjs */
   }
-  .e4 .scrawl, .e4 .note figcaption, .e4 .map-labels { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; }
-  .e4 .ink-defs { position: absolute; }
-  .e4 .ink { filter: url(#ink); }
   .e4 .k { font-weight: 800; font-size: 0.8125rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss); margin: 0 0 0.75rem; }
   .e4 .dark .k { color: var(--sun); }
   .e4 .e4-h { font-size: clamp(2.125rem, 4vw, 3.25rem); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; margin: 0; }
   .e4 .dark .e4-h { color: var(--cream); }
   .e4 .tl { font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--sun); color: inherit; }
   .e4 .fine { font-size: 0.8125rem; margin: 1.75rem 0 0.75rem; }
-  .e4 .scrawl { line-height: 1; }
-
-  /* Marker marks drawn by the script */
-  .e4 .mk { position: relative; display: inline-block; white-space: nowrap; z-index: 0; --mc: var(--sun); }
-  .e4 .mk.amber { --mc: var(--amber); }
-  .e4 .mk.c { margin: 0 0.12em; }
-  .e4 .mk > svg.mark { position: absolute; z-index: -1; pointer-events: none; overflow: visible; fill: var(--mc); filter: url(#ink); }
 
   /* Header on this page: sage bar with a straight bottom edge and a bigger logo (Bryn, Nov 2).
      The padding keeps the Brand Book clear space (the x-height of the logotype) around the logo. */
@@ -519,94 +378,95 @@ const doodles: Record<string, string> = {
     .e4 .hero-copy { padding-bottom: 5.5rem; } /* room for the phone call bar */
   }
 
-  /* Map lines that fade in as you scroll (--map is set by the script) */
-  .e4 .map-bg { position: relative; isolation: isolate; }
-  .e4 .map-bg::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url(/images/topo-light.svg) center / cover; opacity: calc(var(--map, 0) * 0.3); }
-  .e4 .map-bg.dark::before { background-image: url(/images/topo-dark.svg); opacity: calc(var(--map, 0) * 0.22); }
+  /* Map lines: one shared contour file used as a mask, so each section picks its own line color.
+     Strength rises down the page (map-1 to map-4): the photo fades out, the map takes over. No script. */
+  .e4 .map { position: relative; isolation: isolate; }
+  .e4 .map::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: var(--forest); -webkit-mask: url(/images/contours.svg) center / 90rem auto repeat; mask: url(/images/contours.svg) center / 90rem auto repeat; }
+  .e4 .map.dark::before { background: #e9efdf; }
+  .e4 .map-1::before { opacity: 0.07; }
+  .e4 .map-2::before { opacity: 0.12; }
+  .e4 .map-3::before { opacity: 0.12; }
+  .e4 .map-4::before { opacity: 0.2; }
+  .e4 .map.dark.map-3::before { opacity: 0.1; }
+  .e4 .map.dark.map-4::before { opacity: 0.13; }
+  /* Small map ticks down both edges where the map has fully taken over. */
+  .e4 .map-3::after, .e4 .map-4::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.35;
+    background: repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 3rem) left 0 top 1.5rem / 0.75rem 100% no-repeat,
+                repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 3rem) right 0 top 1.5rem / 0.75rem 100% no-repeat; }
+  .e4 .e4-results.map-3::after { color: var(--forest); }
 
-  /* Client comments */
+  /* Doodles: one 2px line, rounded ends, no fill. Dark green on light sections, pale sage on dark ones.
+     Small, at the edges, never on words, never animated. */
+  .e4 .doodle { position: absolute; fill: none; stroke: var(--forest); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+  .e4 .doodle path { vector-effect: non-scaling-stroke; }
+  .e4 .dark .doodle { stroke: #e9efdf; }
+
+  /* Client comments: straight cards, plain initials. */
   .e4 .e4-quotes { background: var(--pine); color: #fff; padding: 5.5rem 0 6rem; }
+  .e4 .ridge { position: absolute; left: 0; top: -4.9rem; width: 100%; height: 5rem; fill: var(--pine); pointer-events: none; }
   .e4 .notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.1rem; margin: 2.9rem 0 1.9rem; }
-  .e4 .note { margin: 0; background: var(--cream); color: var(--forest); padding: 1.9rem 1.9rem 1.6rem; border-radius: 2px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 6px 14px rgba(0, 0, 0, 0.14); }
-  .e4 .note:nth-child(1) { transform: rotate(-0.6deg); }
-  .e4 .note:nth-child(2) { transform: rotate(0.5deg) translateY(10px); }
-  .e4 .note:nth-child(3) { transform: rotate(-0.3deg); }
+  .e4 .note { position: relative; margin: 0; background: var(--cream); color: var(--forest); padding: 1.9rem 1.9rem 1.6rem; border-radius: 14px; }
   .e4 .note .stars { width: 94px; height: 18px; fill: var(--amber); display: block; margin-bottom: 0.75rem; }
   .e4 .note blockquote { margin: 0; font-size: 1.1875rem; line-height: 1.6; font-weight: 500; }
   .e4 .note blockquote p { margin: 0; }
-  .e4 .note figcaption { font-size: 2.125rem; color: var(--act-e4); margin-top: 0.9rem; }
+  .e4 .note figcaption { font-weight: 800; letter-spacing: 0.06em; color: var(--act-e4); margin-top: 1rem; }
+  .e4 .yeti { width: 84px; height: 55px; right: 1.6rem; top: -53px; }
   .e4 .e4-quotes .fine { color: #e9efdf; }
-  @media (max-width: 47.99rem) { .e4 .notes { grid-template-columns: 1fr; gap: 1.9rem; } .e4 .note:nth-child(n) { transform: rotate(-1deg); } .e4 .e4-quotes { padding: 4rem 0; } }
+  @media (max-width: 47.99rem) { .e4 .notes { grid-template-columns: 1fr; gap: 2.4rem; } .e4 .e4-quotes { padding: 4rem 0; } .e4 .ridge { height: 3rem; top: -2.9rem; } }
 
-  /* Steps */
+  /* Steps: one plain row, a thin dotted trail behind it. */
   .e4 .e4-steps { background: var(--sage-e4); padding: 6rem 0; }
-  .e4 .cards { position: relative; margin-top: 9.5rem; }
+  .e4 .cards { position: relative; margin-top: 5.5rem; }
+  .e4 .trail { position: absolute; left: -2rem; top: -3.25rem; width: calc(100% + 4rem); height: 3.75rem; fill: none; stroke: var(--forest); stroke-opacity: 0.45; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 0.1 9; overflow: visible; }
+  .e4 .trail path { vector-effect: non-scaling-stroke; }
+  .e4 .biker { width: 54px; height: 39px; left: calc(70% - 27px); top: -4.4rem; transform: rotate(-6deg); } /* wheels on the trail line */
   .e4 .card-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; z-index: 1; }
   .e4 .card { background: #f4f7ef; border-top: 5px solid var(--moss); border-radius: 14px; padding: 1.6rem 1.4rem; }
   .e4 .card h3 { font-size: 1.3125rem; line-height: 1.2; margin: 0 0 0.6rem; }
   .e4 .card p { font-size: 1rem; margin: 0; color: #3d5546; }
   .e4 .card .tl { display: inline-block; margin-top: 0.5rem; text-decoration-color: var(--amber); color: var(--forest); }
-  .e4 .num { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem; }
-  .e4 .num::before { content: ''; position: absolute; inset: 4px; border-radius: 50%; background: var(--sun); z-index: -1; }
-  .e4 .num svg { position: absolute; inset: -8px; width: 60px; height: 60px; fill: var(--forest); }
-  .e4 .trail { position: absolute; left: 0; top: -62px; height: 56px; width: 100%; fill: var(--amber); }
-  .e4 .here { position: absolute; left: -10px; top: -128px; font-size: 2.125rem; color: var(--act-e4); transform: rotate(-5deg); margin: 0; z-index: 3; }
-  .e4 .here svg { display: block; width: 40px; height: 44px; margin-left: 40px; fill: currentColor; }
-  @media (min-width: 48rem) and (prefers-reduced-motion: no-preference) {
-    .e4 .pinwrap { height: 300vh; padding: 0; }
-    .e4 .pin { position: sticky; top: 0; height: 100vh; display: grid; align-content: center; }
-    .e4 .pinwrap.on .card { opacity: 0.4; transform: translateY(14px); transition: opacity 0.45s, transform 0.45s, box-shadow 0.45s; }
-    .e4 .pinwrap.on .card.lit { opacity: 1; transform: none; }
-    .e4 .pinwrap.on .card.now { box-shadow: 0 10px 30px rgba(41, 70, 52, 0.16); }
-    .e4 .pinwrap.on .num svg { opacity: 0; transition: opacity 0.4s; }
-    .e4 .pinwrap.on .card.lit .num svg { opacity: 1; }
-    .e4 .pinwrap.on .here { transition: transform 0.5s ease; }
-  }
+  .e4 .num { display: flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--sun); font-weight: 800; font-size: 1.125rem; margin-bottom: 1rem; }
   @media (max-width: 47.99rem) {
     .e4 .e4-steps { padding: 4rem 0; }
-    .e4 .cards { margin-top: 4.1rem; }
+    .e4 .cards { margin-top: 2.25rem; }
     .e4 .card-list { grid-template-columns: 1fr; }
-    .e4 .trail, .e4 .here svg { display: none; }
-    .e4 .here { top: -3.4rem; left: 0; font-size: 1.75rem; }
+    .e4 .trail { display: none; }
+    .e4 .biker { left: auto; right: 0.5rem; top: -2.6rem; }
   }
 
-  /* How we help: diamonds */
+  /* How we help: plain photos with rounded corners. */
   .e4 .e4-help { background: var(--forest); color: #fff; padding: 6rem 0; }
   .e4 .e4-help .k { color: var(--sky-tint); }
-  .e4 .dia-row { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 3.75rem; }
-  .e4 .dia-card { text-align: center; color: #fff; text-decoration: none; }
-  .e4 .dia { display: block; width: 72%; aspect-ratio: 1; margin: 12% auto 15%; transform: rotate(45deg); border-radius: 22px; overflow: hidden; border: 5px solid var(--moss); box-shadow: 0 0 0 6px var(--forest), 0 0 0 9px var(--sun); }
-  .e4 .dia picture, .e4 .dia img { display: block; }
-  .e4 .dia img { width: 142%; height: 142%; max-width: none; margin: -21%; transform: rotate(-45deg); object-fit: cover; }
-  .e4 .dia-card:hover .dia, .e4 .dia-card:focus-visible .dia { box-shadow: 0 0 0 6px var(--forest), 0 0 0 9px var(--amber); }
-  .e4 .dia-card h3 { font-size: 1.625rem; margin: 0 0 0.4rem; }
-  .e4 .dia-card p { margin: 0; color: #d6e3d0; }
-  .e4 .sun { position: absolute; left: calc(66.66% - 70px); top: -80px; width: 120px; height: 92px; fill: var(--sun); }
+  .e4 .help-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.25rem; margin-top: 3rem; }
+  .e4 .help-card { color: #fff; text-decoration: none; }
+  .e4 .ph { position: relative; display: block; }
+  .e4 .help-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 18px; }
+  .e4 .help-card h3 { font-size: 1.625rem; margin: 1.25rem 0 0.4rem; }
+  .e4 .help-card:hover h3, .e4 .help-card:focus-visible h3 { text-decoration: underline; text-decoration-color: var(--sun); text-underline-offset: 6px; }
+  .e4 .help-card p { margin: 0; color: #d6e3d0; }
+  .e4 .bird { width: 38px; height: 30px; right: 1.75rem; top: -29px; }
   .e4 .topic-links { list-style: none; padding: 0; margin: 3.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.75rem 1.75rem; justify-content: center; }
   .e4 .topic-links a { color: #e9efdf; font-weight: 700; text-decoration: underline; text-decoration-color: var(--sun); text-underline-offset: 5px; }
-  @media (max-width: 47.99rem) { .e4 .e4-help { padding: 4rem 0; } .e4 .dia-row { grid-template-columns: 1fr; gap: 2.25rem; } .e4 .sun { left: auto; right: 0; top: -70px; width: 84px; height: 64px; } }
+  @media (max-width: 47.99rem) { .e4 .e4-help { padding: 4rem 0; } .e4 .help-row { grid-template-columns: 1fr; gap: 2.5rem; } }
 
   /* Band */
   .e4 .e4-band { position: relative; min-height: 38.75rem; display: flex; align-items: center; color: var(--cream); overflow: hidden; }
   .e4 .e4-band picture, .e4 .e4-band .band-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .e4 .e4-band::after { content: ''; position: absolute; inset: 0; background: rgba(20, 36, 27, 0.32); }
-  .e4 .e4-band .wrap { position: relative; z-index: 2; width: 100%; }
+  .e4 .e4-band .wrap { position: relative; z-index: 2; }
   .e4 .e4-band .big { font-size: clamp(2.5rem, 7.5vw, 6.75rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; margin: 0; max-width: 62rem; }
   .e4 .e4-band .sub { font-size: 1.375rem; margin: 1.4rem 0 0; }
   @media (max-width: 47.99rem) { .e4 .e4-band { min-height: 28.75rem; } .e4 .e4-band .sub { font-size: 1.125rem; } }
 
   /* Results */
   .e4 .e4-results { background: var(--cream); padding: 6rem 0; }
-  .e4 .e4-results .wrap { position: relative; }
-  .e4 .paper { position: absolute; right: 0; top: 0; width: 120px; height: 110px; transform: rotate(6deg); fill: none; stroke: var(--amber); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
   .e4 .rgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; margin-top: 2.5rem; }
   .e4 .rgrid article { border-top: 4px solid var(--amber); padding-top: 1rem; }
-  .e4 .dood { display: block; width: 58px; height: 74px; margin-bottom: 0.6rem; fill: none; stroke: var(--amber); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
   .e4 .amount { font-size: 2.5rem; font-weight: 900; letter-spacing: -0.02em; margin: 0 0 0.4rem; color: var(--forest); }
   .e4 .rgrid p:not(.amount) { font-size: 1rem; margin: 0; color: #3d5546; }
   .e4 .e4-results .fine { color: #5a6b5f; max-width: 48rem; }
   .e4 .e4-results .tl { text-decoration-color: var(--amber); }
-  @media (max-width: 47.99rem) { .e4 .e4-results { padding: 4rem 0; } .e4 .rgrid { grid-template-columns: 1fr 1fr; gap: 1.4rem; } .e4 .amount { font-size: 1.75rem; } .e4 .paper { width: 70px; height: 64px; top: -20px; } }
+  @media (max-width: 47.99rem) { .e4 .e4-results { padding: 4rem 0; } .e4 .rgrid { grid-template-columns: 1fr 1fr; gap: 1.4rem; } .e4 .amount { font-size: 1.75rem; } }
 
   /* Meet us */
   .e4 .e4-us { background: var(--pine); color: #fff; padding: 6rem 0; }
@@ -614,30 +474,34 @@ const doodles: Record<string, string> = {
   .e4 .us-text a { color: #fff; text-decoration-color: var(--sun); }
   .e4 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.75rem; }
   .e4 .person { color: #fff; text-decoration: none; }
+  .e4 .person .ph { isolation: isolate; }
+  .e4 .sun { width: 60px; height: 60px; right: -22px; top: -24px; z-index: -1; }
   .e4 .person img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 22%; border-radius: 18px; display: block; }
-  .e4 .person h3 { font-size: 1.75rem; margin: 1.25rem 0 0.15rem; }
+  .e4 .person h3 { display: block; font-size: 1.75rem; margin: 1.25rem 0 0.15rem; padding: 0; background: none; } /* no highlighter on the names */
+  .e4 .person img { border: 0; }
   .e4 .person .role { font-weight: 800; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sun); margin: 0; }
   @media (max-width: 47.99rem) { .e4 .e4-us { padding: 4rem 0; } .e4 .pair { grid-template-columns: 1fr; } }
 
-  /* Contact: heading, a drawn arrow, and the step-by-step form with no card */
-  .e4 .e4-contact { position: relative; padding: 7rem 0; color: #fff; }
-  .e4 .e4-contact picture, .e4 .e4-contact .contact-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .e4 .e4-contact::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(41, 70, 52, 0.85), rgba(41, 70, 52, 0.4)); }
-  .e4 .contact-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 27.5rem; gap: 8.75rem; align-items: center; }
-  .e4 .talk { position: relative; }
+  /* Contact: no photo. The form sits in a map: contour lines, and a trail that ends at an X by the form. */
+  .e4 .e4-contact { padding: 7rem 0 5rem; background: var(--forest); color: #fff; }
+  .e4 .contact-grid { display: grid; grid-template-columns: 1fr 27.5rem; gap: 6rem; align-items: center; }
   .e4 .talk .e4-h { font-size: clamp(2.5rem, 4.6vw, 4rem); line-height: 1.02; color: var(--cream); }
-  .e4 .lead { position: absolute; left: calc(100% + 6px); bottom: 10px; width: 124px; height: 104px; fill: none; stroke: var(--sun); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 14 16; filter: url(#ink); }
+  .e4 .camp { display: block; width: 16.25rem; height: 7.5rem; margin: 2.25rem 0 0 auto; fill: none; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+  .e4 .camp .route { stroke: #e9efdf; stroke-opacity: 0.6; stroke-width: 2.5; stroke-dasharray: 0.1 9; }
+  .e4 .camp .x { stroke: var(--sun); stroke-width: 3.4; }
+  .e4 .camp .ink { stroke: #e9efdf; stroke-width: 2; }
   .e4 .form-bare .form-card { background: none; box-shadow: none; padding: 0; border: 0; color: #fff; }
   .e4 .form-bare .form-card > h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .e4 .form-bare .step[data-step='name'] legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .e4 .form-bare .intake-top:has(.intake-back[hidden]) .intake-progress { visibility: hidden; }
   .e4 .form-bare .step-q { color: var(--cream); }
   .e4 .form-bare input[type='text'] { background: rgba(233, 239, 223, 0.95); border: 0; min-height: 3.875rem; border-radius: 12px; font-size: 1.25rem; }
-  @media (max-width: 47.99rem) { .e4 .e4-contact { padding: 4rem 0; } .e4 .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; } .e4 .lead { display: none; } }
+  @media (max-width: 47.99rem) { .e4 .e4-contact { padding: 4rem 0 3rem; } .e4 .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; } .e4 .camp { width: 12rem; height: 5.5rem; margin-top: 1.25rem; } }
 
   /* Sketched map above the footer */
   .e4 .mapfoot { background: var(--forest); padding: 1.25rem 0 0; overflow: hidden; }
   .e4 .mapfoot svg { display: block; width: 100%; max-width: 90rem; margin: 0 auto; height: auto; }
+  .e4 .map-labels { font-family: var(--font-body); font-weight: 700; font-size: 24px; letter-spacing: 0.02em; }
 
   @media (max-width: 47.99rem) { .e4 .mapfoot svg { width: 180%; margin-left: -40%; } }
 </style>
