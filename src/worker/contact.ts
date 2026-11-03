@@ -62,7 +62,7 @@ type EmailFacts = { id: string; outcome: string; reason: string; logged: boolean
 export function leadNotes(o: EmailFacts, sub?: Submission): string[] {
   const why = (reason: string) => {
     if (reason.startsWith('repeat_sender')) return 'This person has sent the form more than once recently. It may be a follow-up or a duplicate.';
-    if (reason.startsWith('agency_phrase')) return 'This reads like a sales pitch, not someone who was hurt.';
+    if (reason.startsWith('agency_phrase') || reason.startsWith('firm_pitch')) return 'This reads like a sales pitch, not someone who was hurt.';
     if (reason === 'agency_domain') return 'This came from an address used by a marketing company.';
     if (reason.startsWith('many_links') || reason === 'has_link') return 'The message has web links in it, which spam often does.';
     if (reason === 'too_fast') return 'The form was filled out faster than a person usually can, so this may be a bot.';

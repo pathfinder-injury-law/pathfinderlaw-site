@@ -2,7 +2,7 @@ import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { handleContact } from '../src/worker/contact.ts';
 import { resetTokenCache } from '../src/worker/google.ts';
-import { decide, findLinkHosts } from '../src/worker/screen.ts';
+import { decide, findLinkHosts, mentionsCase } from '../src/worker/screen.ts';
 import { buildDailyCheck, etDayRange, runDailyCheck, runPurge, runSelfTest } from '../src/worker/scheduled.ts';
 import { validate } from '../src/worker/validate.ts';
 import { route } from '../src/worker/intake.ts';
@@ -52,6 +52,46 @@ test('screening: agency domain screens even with case words, as sender or link',
 test('screening: repeat senders', () => {
   assert.equal(decide(sub('hello'), STARTER_RULES, 3).reason, 'repeat_sender');
   assert.equal(decide(sub('my injury'), STARTER_RULES, 3).outcome, 'unsure');
+});
+// The Nov 3, 2026 SEO pitch came in through the step-by-step form. Answering the questions is not
+// proof of a case, so the pitch is judged on the words typed in the "What happened" box.
+const PITCH = 'Hi Pathfinderlaw Team!\n\nI looked up www.pathfinderlaw.com, to see how it sits on Google. I do SEO for local businesses and can tell you what is going on with your site.\n\nMarketing Head';
+const withSteps = (message: string, email = 'pat@example.com') => ({ ...sub('x', email), message, intake: { how: 'sick', when: 'older' } });
+test('screening: a pitch typed into the step-by-step form is screened, not delivered as a lead', () => {
+  assert.deepEqual(decide(withSteps(PITCH), STARTER_RULES, 0), { outcome: 'screened', reason: 'agency_phrase: seo' });
+  assert.equal(decide(withSteps('Our backlinks and web design services will grow your practice. Your company and competitors rank higher.'), STARTER_RULES, 0).outcome, 'screened');
+});
+test('screening: injury words typed in the box still protect the message, with or without step answers', () => {
+  assert.equal(decide(withSteps('I fell off a ladder at work. My virtual assistant said to call you.'), STARTER_RULES, 0).outcome, 'unsure');
+  assert.equal(decide(withSteps('I hurt my back at work. Found you at pathfinderlaw.com'), STARTER_RULES, 0).outcome, 'unsure');
+});
+test('screening: a blank or plain "what happened" box on the step form is still a lead', () => {
+  assert.equal(decide(withSteps(''), STARTER_RULES, 0).outcome, 'lead');
+  assert.equal(decide(withSteps('Please call after 5.'), STARTER_RULES, 0).outcome, 'lead');
+});
+test('screening: pitch words that start with a short case word no longer count as case words', () => {
+  assert.equal(mentionsCase('We build backlinks for your company and your competitors', STARTER_RULES.caseWords), false);
+  assert.equal(mentionsCase('Cheap networking events', STARTER_RULES.caseWords), false);
+  for (const real of ['I hurt my back', 'My back is out', 'She works nights', 'my workers comp claim', 'I fell', 'My claimant status', 'at the workplace', 'The boss said no', 'on light duty', 'I was injured', 'a doctor visit', 'surgery next week'])
+    assert.equal(mentionsCase(real, STARTER_RULES.caseWords), true, real);
+});
+test('screening: a message that talks to the firm about its own site or ranking is a pitch', () => {
+  assert.equal(decide(sub('Hello Pathfinder Injury Law team, your Google ranking is slipping'), STARTER_RULES, 0).reason, 'firm_pitch');
+  assert.equal(decide(sub('Your website ranking can be fixed'), STARTER_RULES, 0).reason, 'firm_pitch');
+  assert.equal(decide(sub('Hello Pathfinderlaw team, your Google ranking is slipping'), STARTER_RULES, 0).outcome, 'screened');
+  assert.equal(decide(sub('I hurt my back. Your Google ranking put you first. Please call'), STARTER_RULES, 0).outcome, 'unsure');
+  assert.equal(decide(sub('I found your website and I was injured at work'), STARTER_RULES, 0).outcome, 'lead');
+});
+test('screening: a repeat step-by-step sender is noted, not screened', () => {
+  assert.equal(decide(withSteps(''), STARTER_RULES, 3).outcome, 'unsure');
+});
+test('a pitch sent through the step-by-step form is emailed with [Screened] and a sales-pitch note', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld();
+  await handleContact(post(intakeInput({ how: 'sick', when: 'older' }, { message: PITCH })), env, deps);
+  const raw = decodeRaw(gmail(calls)[0]);
+  assert.match(raw.head, /Subject: \[Screened\] Website inquiry - Refer out/);
+  assert.match(raw.body + raw.html, /sales pitch/);
+  assert.equal(rows(env)[0].outcome, 'screened');
 });
 test('email addresses in a message are not links', () => {
   assert.deepEqual(findLinkHosts('write me at pat@example.com'), []);
