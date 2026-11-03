@@ -20,3 +20,6 @@ b7ceb6c4c36fbc4c76a493d0df19504c147164d2
 # "Let’s talk." in the handwriting font. (d11bced in the same PR touches only MapContact, not dated.)
 e3335c618260d4472bb49b6291b9128b1e4c839e
 0a5185efe444c9fc12ade158903f7ba80f9629c7
+# PR 95, Nov 3: Contact heading levels (card titles and the form's hidden heading h3 to h2) by Design.
+# Same words; SEO's call: Contact's date must not move.
+8a88b22080b5238c7e66e093ba1bbe0f27ecbb22
