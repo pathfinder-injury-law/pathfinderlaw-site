@@ -99,7 +99,7 @@ It depends on the factors in the next sections: your rating, your wage, your tim
 
 ## How Is a Permanent Ankle Injury Rated?
 
-Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/), meaning your doctor says you are as healed as you are going to get, a doctor may rate a permanent loss of use. The ankle itself is not listed on Virginia’s schedule ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)), so an ankle rating is usually treated as a loss of use of the leg. Some ankle injuries are rated to the foot instead, depending on the injury and the medical evidence. That choice matters:
+Once you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/), meaning your doctor says you are as healed as you are going to get, a doctor may rate a permanent loss of use. The ankle itself is not listed on Virginia’s schedule ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)), so the rating goes to the leg or the foot, depending on the injury and the medical evidence. When an ankle injury leaves a lasting, measurable effect on the leg, such as a limp, the Commission has historically rated the leg (175 weeks). When the lasting problem stays in the foot, the rating can go to the foot (125 weeks) instead. That choice matters:
 
 | Rating | As loss of use of the leg (175 weeks) | As loss of use of the foot (125 weeks) |
 |---|---|---|
