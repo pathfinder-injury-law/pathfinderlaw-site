@@ -1705,7 +1705,7 @@ mark {
   font-size: 0.92rem;
 }
 
-/* Phone-only Call / Message bar: a small floating pill, 48px tall, with a 12px margin all round
+/* Phone-only Call / Message bar: a small floating pill, 44px tall, with a 12px margin all round
    (plus the iPhone home-bar inset). Without JavaScript it simply stays put. With JavaScript it slides
    away while scrolling down, comes back on scrolling up, and steps aside over the contact form and
    footer. Hidden from 1024px up. Colours are the site's yellow and green at 94 percent, so text
@@ -1717,7 +1717,7 @@ mark {
   bottom: calc(0.75rem + env(safe-area-inset-bottom));
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 26rem;
+  max-width: 23rem; /* Nov 3 2026: slimmer, so it covers less while it shows */
   margin-inline: auto;
   z-index: 40;
   border-radius: 999px;
@@ -1741,7 +1741,7 @@ mark {
 .call-bar a {
   display: grid;
   place-items: center;
-  min-height: 3rem;
+  min-height: 2.75rem; /* 44px: the smallest comfortable tap target */
   text-align: center;
   text-decoration: none;
   font-family: var(--font-head);
