@@ -351,7 +351,7 @@ p {
   max-height: calc(100svh - var(--header-h));
   overflow: auto;
   padding: 0.5rem var(--gutter) 1.25rem;
-  background: var(--white);
+  background: #e9efdf; /* pale sage like the header bar */
   box-shadow: 0 1rem 1.5rem rgba(41, 70, 52, 0.18);
 }
 .nav-mobile {
@@ -387,7 +387,7 @@ body.hero-light .site-header:not(.is-solid) .nav-toggle svg {
 /* Solid bar: after scrolling, and always on pages without a photo behind the header. */
 .site-header.is-solid,
 body:not(.has-overlay) .site-header {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(233, 239, 223, 0.96); /* pale sage, same as the home page header; no stark white */
   backdrop-filter: blur(8px);
   box-shadow: 0 0.25rem 1.5rem rgba(41, 70, 52, 0.12);
 }
@@ -517,7 +517,7 @@ body:not(.has-overlay) .site-header .nav-toggle svg {
     min-width: 16rem;
     margin: 0;
     list-style: none;
-    background: var(--white);
+    background: #e9efdf; /* pale sage like the header bar */
     border-radius: var(--radius);
     padding: 0.6rem 1.1rem;
     box-shadow: var(--shadow);
