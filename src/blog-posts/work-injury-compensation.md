@@ -52,7 +52,7 @@ The law treats some injuries as permanent and total incapacity ([Va. Code § 65.
 
 - Loss of both hands, both arms, both feet, both legs, both eyes, or any two of them
 - Injury resulting in total paralysis for all practical purposes, as the Commission decides from the medical evidence
-- A brain injury so severe that the worker is permanently unemployable in gainful employment
+- A [brain injury](/concussion-brain-injury-workers-comp/) so severe that the worker is permanently unemployable in gainful employment
 
 These cases are rare, and they pay for life.
 

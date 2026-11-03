@@ -1,118 +1,108 @@
 ---
-title: "How To Avoid Work Compensation Adjuster’s Tricks"
-metaTitle: "Watch Out For These Tricks Work Comp Adjusters Might Pull"
-description: "Work comp adjusters will go to great lengths to try and withhold your benefits. Read here about what tricks they may use and how to avoid them."
+title: "Workers’ Comp Adjuster Tricks in Virginia and How to Handle Them"
+metaTitle: "Workers’ Comp Adjuster Tricks in Virginia (and Fixes)"
+description: "The tactics Virginia workers’ comp adjusters use most, what each one costs you, and the law that answers it. Plus what not to say to the adjuster."
 date: 2022-11-22T23:37:03Z
-updated: 2022-11-28T18:31:58Z
+updated: 2026-11-03T14:00:00Z
 tags: ["insurance","settlement"]
 ---
 
-*Disclaimer: Please note nothing in this article is to be considered legal advice. You should always consult with an attorney about the specific facts of your situation before making any legal decisions. No attorney/client relationship or representation relationship is created by the dissemination of this content or your consumption thereof.*
+*Nothing in this article should be taken as legal advice. Every case is different.*
 
-If you have been injured on the job, your first step is to notify your employer. It will be your employer’s insurance that will be on the hook to pay for your injuries. This process means an insurance adjuster will be assigned to your case, and their main goal is the opposite of yours. You want benefits. They do not desire to give them to you. With the assistance of a Virginia [workers’ compensation attorney](/virginia-workers-comp-lawyer/) who understands the process and tactics of insurance adjusters, you may have help understanding the benefits that may be available to you.
+A workers’ comp adjuster works for your employer’s insurance company, and the adjuster’s job is to pay what the law requires and not a dollar more. The tactics that cost Virginia workers the most aren’t dramatic. They’re quiet: a recorded statement taken the first week, a medical release that opens your whole history, an agreement form with the wage figured low, or a body part left off the claim. Each one has an answer in Virginia law, and most of those answers have deadlines.
 
-## What Are the Different Types of Settlements?
+## The Most Common Adjuster Tactics, and the Answer to Each
 
-Settlements are voluntary agreements between the claimant and the insurance company. Nobody can force anyone to take a settlement or to pay a settlement in Virginia. When both parties agree, however, that settlement may take different forms. Settlements may pay out the whole workers’ comp claim or just parts of it, such as with an indemnity-only or medical-only settlement.
+| What the adjuster does | What it can cost you | The answer |
+|---|---|---|
+| Asks for a recorded statement right away | Answers used later to deny the claim | You can ask to schedule it for later. See [recorded statements](/insurance-recorded-statement/). |
+| Sends a blanket medical release | Your whole medical history, searched for pre-existing conditions | You don’t have to sign it. Doctors treating the work injury must give reports on request ([§ 65.2-604](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-604/)). |
+| Says there’s no need to file because it’s paying | A deadline you didn’t know was running | File your own claim with the Commission ([§ 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). |
+| Figures your weekly wage low | Every check smaller, for as long as you’re paid | Check it against your pay for the 52 weeks before the injury ([§ 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)). |
+| Accepts some body parts and not others | No medical care or checks for what’s left off | Read the agreement form line by line before you sign it, and check the award when it comes. |
+| Sends you to its own doctor | A report saying you can work, or that the injury isn’t from work | One exam per specialty without Commission approval, and you can bring your own doctor ([§ 65.2-607](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-607/)). |
+| Pays late | Bills you can’t cover, and pressure to settle | After an award, a late payment can carry a 20 percent penalty ([§ 65.2-524](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/)). |
+| Makes an early settlement offer | Your medical care closed for good, usually | Every settlement needs the Commission’s approval ([§ 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)). |
 
-Both pros and cons exist for each type. For example, receiving a lump sum for the full amount of the settlement to close out your case entirely may seem satisfactory, but what if you are due additional compensation for your injuries at a later date? The closing of the injury claim coincides with the payout, and now you have no more opportunities to gain additional benefits. Working with an experienced workers’ compensation benefits attorney may be beneficial to your case and help you find the best option.
+Those are a few of many. The sections below explain the ones that do the most damage.
 
-Another reason to stay alert during this claims process is that insurance companies may make voluntary payments following an employer’s reporting of the injury to the Virginia Workers’ Compensation Commission. By making these payments, they hope that the statute of limitations on your injury will expire before you file your own claim with the Commission. In Virginia, injured workers generally have two years from the date of the work-related accident to file that claim with the Commission, although exceptions apply. You must make this filing deadline to protect your rights under workers’ compensation law and to receive an award order. This order shows that the employer’s insurance company has a legal obligation to your claim.
+## “You Don’t Need to File, We’re Already Paying”
 
-## How Long Do Most Workers’ Comp Settlements Take?
+**This is the tactic that costs workers the most, because the cost doesn’t show up until it’s too late to fix.** In Virginia, your claim must be filed with the Workers’ Compensation Commission within two years of the accident ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). Your employer’s report of the injury is not your claim.
 
-Every workers’ compensation case is different, so there is no defined answer to how long a workers’ comp settlement will take. It is not uncommon for a Virginia workers’ comp case to take over a year to wind through the litigation process, but this varies widely depending on a whole host of factors. The good news here is you may be able to speed up the process with the help of a workers’ compensation lawyer.
+Voluntary payments can pause that deadline in some situations ([Va. Code § 65.2-602](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-602/)), but the rules are technical, the pause ends, and the insurance company decides when to stop paying. File your own claim even if the insurance company accepted your injury and is paying. There’s no fee to file a claim with the Commission. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 
-## Do Not Fall for Insurance Adjusters’ Friendliness
+## The Agreement Form With the Wrong Numbers
 
-Workers’ compensation insurance adjusters do not want what is best for you as an injured employee. Rather, they want to keep their money and pay out as little as possible. This motive is why they sometimes come to you in a friendly and polite manner at first. They want you to accept whatever low offer they initially make.
+**When the insurance company accepts a claim, it often sends an agreement form to sign. Once the Commission approves it, the numbers on it become your award.** Check three things before you sign:
 
-Their job is not to inform you about the available [workers’ compensation benefits](/how-to-qualify-for-workers-comp-in-virginia/) and how to receive them but to simultaneously protect your employer and the insurance carrier. So, remain cautious when dealing with the insurance adjuster, no matter how friendly they may appear.
+1. **Your average weekly wage.** It should reflect your total earnings, including overtime pay, for the 52 weeks before the injury ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)). Overtime and extra shifts at that job are the parts most often left out. Here’s [how workers’ comp is calculated in Virginia](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).
+2. **The body parts.** If you hurt your back and your knee, both should be listed. A body part that isn’t listed is one the insurance company can refuse to treat until the Commission orders it to.
+3. **The dates.** The weeks you’ve already missed should be covered.
 
-## What Are the Common Tricks Used by Workers’ Comp Adjusters?
+The Commission has to approve the agreement before it becomes an award ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)).
 
-Workers’ comp insurance adjusters will often use common tactics and tricks to throw you off guard and help them reach their goals only. You will benefit from knowing what these are and how best to combat them so they cannot take advantage of you.
+## The Insurance Company’s Doctor
 
-### Work Comp Investigator to Follow You
+**The insurance company can send you to a doctor it chooses and pays, and if you refuse without good reason, your benefits can be suspended** ([Va. Code § 65.2-607](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-607/)). That same law gives you protections the adjuster won’t mention:
 
-In some cases, an adjuster may have a workers’ comp investigator follow you. The goal of such private investigators will be to capture video footage or photos, hopefully showing you doing something that conflicts with your work restrictions. The adjuster will then use these to show you are being dishonest about your disability to the Workers’ Compensation Commission or your doctor. They might even threaten to report you for fraud, and this can be a scare tactic to encourage you to accept a lower settlement offer than you deserve.
+- **One exam per medical specialty.** More than one requires the Commission’s approval.
+- **Your own doctor can be there.** You can bring a qualified physician, at your expense.
+- **Reasonable times and places.**
 
-If this happens to you, try to stay calm. Your workers’ compensation attorney may be able to use legal procedures to determine the accuracy of the evidence. For example, a video may show that you perform certain physical activities yet not show that you only did so for a short period of time and then had to rest for the next two days. A workers’ compensation judge will most likely understand that short-term activity does not constitute fraud and that it does not prove you can return to work in a full capacity.
+This is separate from the doctor who treats you. Here’s [how to prepare for an IME in Virginia](/virginia-workers-comp-lawyer/how-to-prepare-for-an-ime-in-virginia/).
 
-### Delay Your Benefit Check
+## Surveillance and the Fraud Threat
 
-Any benefits you receive will come from the insurance agency of your employer, not from the Virginia Workers’ Compensation Commission. Being unable to work, you depend on these payments to arrive on time. When they do not, you may become stressed, and this is exactly what the adjuster wants. Delaying benefit checks and causing desperation is a way to force you into accepting a lower settlement. For help with these types of workers comp adjuster tricks, contact an attorney to speak on your behalf.
+**Insurance companies sometimes hire investigators to film injured workers.** The goal is a clip of you doing something that looks like it breaks your restrictions: carrying groceries, mowing, lifting a child. A short clip doesn’t show that you paid for it the next two days. It does get sent to your doctor with a question attached.
 
-### Offer an Insufficient Settlement
+Some adjusters mention fraud to scare you into settling. Virginia’s fraud law is about knowingly making or using a written document with a materially false statement in a comp case. It applies to everyone involved, not just injured workers ([Va. Code § 65.2-312](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-312/)). Telling your doctor the truth about what you can and can’t do, every time, is what protects you. So is staying within your restrictions in public and off social media.
 
-The adjuster may offer you an insufficient settlement quickly, so you have less time to consider your rights and options. Many offers involve scare tactics, such as telling you how long the process takes and how benefits can be delayed. They may tell you that the volume of information needed to review a workers’ compensation claim is massive, and you can alleviate yourself of this burden by accepting the generous settlement they are now offering.
+## Delays, Missed Calls, and Stopped Checks
 
-In addition, the adjuster may send you an agreement form that leaves out important information. For instance, the form may calculate the amount using a lower average weekly wage or fail to provide enough wage loss benefits for the time you, the injured employee, are already out of work. In other instances, the adjuster fails to list all injured body parts from the work-related accident, potentially limiting coverage for many medical bills.
+**Slow responses put pressure on you, and pressure makes a low offer look better.** Two rules limit how far that goes:
 
-### Get You to Sign a Statement Immediately or Give a Recorded Statement
+- **Late payments.** Once you have an award, a payment that comes due and isn’t paid within two weeks gets 20 percent added to it. The main exception is a delay outside the insurance company’s control, when it paid as fast as it could ([Va. Code § 65.2-524](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-524/)).
+- **Stopped checks.** Under an award, the insurance company can’t simply stop paying. It has to file an application with the Commission, and you have 15 days from the filing date to respond ([Commission Rule 1](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section20/)).
 
-The adjuster may ask you to sign a statement or give a recorded statement over the phone immediately following your work-related injury. They may even present this as a normal step in the process and necessary to move forward.
+You can ask the Commission for a hearing no matter what the insurance company decides. Here’s [what to do when the insurer delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/).
 
-The reason behind this tactic may be that they are attempting to get you to admit to certain facts that show the injury is not work-related or that the accident itself is not covered under workers’ comp benefits law. The adjuster will ask the questions in a way that elicits the type of responses they can use against your claim.
+## The Early Settlement Offer
 
-In other words, signing a statement immediately or giving a recorded statement on the phone can come back to haunt you and your claim, potentially leading to a denial of coverage, medical treatment, or wage loss benefits.
+**An early offer usually comes before anyone knows how the injury will turn out.** Most full and final settlements close your medical benefits for good, so an offer made before surgery, a final rating, or a return-to-work decision prices those things without knowing them. Every Virginia comp settlement must be approved by the Commission, which has to find that it serves your interests ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)). That approval doesn’t mean the number is fair. Here’s [what to know about lump sum settlements](/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/).
 
-So, what should you do if asked to sign or provide a recorded statement? Contact a lawyer. If the adjuster says you must give a statement to receive benefits, reach out to a workers’ comp attorney for legal advice and guidance.
+> “The adjuster isn’t your enemy, and the adjuster isn’t your friend. The adjuster is doing a job, and that job is closing your file for as little as the law allows.” (Bryn Swartz)
 
-### Have You Sign Consent for Medical Records
+## What Not to Say to a Workers’ Comp Adjuster
 
-The claims adjuster may ask you to sign a consent for your medical history records so they can better assess your claim more quickly. It is easy to fall for this tactic, wanting to believe the best of people in these circumstances.
+**Say less than you think you need to, and nothing you aren’t sure of.** The lines that hurt claims most often:
 
-Such a consent, or medical authorization form, is usually vague and directs your medical care providers to release health records to the workers’ comp adjuster. Once there is receipt of records, the adjuster knows what to look for to deny you benefits, such as prior accidents and injuries, pre-existing conditions, or separate medical issues unrelated to your workers’ comp claim.
+- **“I’m fine” or “It’s not that bad.”** It ends up in the claim notes and gets quoted later.
+- **A guess.** “I think it was around 2:00” becomes the time. If you don’t know, say so.
+- **Your old injuries, in your own words.** Prior back pain, an old car accident, or a sports injury will come up through records. Don’t describe them as related.
+- **Blame.** Who was at fault generally doesn’t matter in comp. Arguing about it only gives the adjuster more to write down.
+- **Anything about other jobs, side work, or activities** you haven’t talked through first. The law does require you to tell the insurance company right away about any new job or higher earnings. Do it in writing so there’s a record ([Va. Code § 65.2-712](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-712/)).
 
-Avoid signing a consent for records until you consult with your attorney. A claimant is not legally obligated to give consent in exchange for benefits available under workers’ compensation.
+Always tell the truth. The point is not to hide anything. It’s to keep a hurried phone call from becoming the official version of your injury.
 
-### Miss Your Calls Purposefully or Fail to Respond to Emails
+## Can You Scare an Insurance Adjuster?
 
-You are most likely anxious to know where your claim is in the process and will make several calls or send emails to the adjuster for updates. Unfortunately, the adjuster may miss your calls on purpose and fail to respond to those emails. After leaving several messages, you can quickly become frustrated. They may be trying to push you into a mental place where you will give up on the claim and be more ready to accept a lowball settlement offer.
+**No, and trying usually backfires.** Threats and angry calls go into the claim notes. What actually moves a workers’ comp adjuster in Virginia is the Commission: a filed claim, a request for a hearing, a late-payment penalty, and medical records that answer the insurance company’s defenses. Adjusters handle many files. The ones with deadlines attached get attention first.
 
-Knowing this is a deliberate tactic can help you avoid falling prey to it. To push for answers and updates, seek legal advice, and leave that frustration behind. Learn ways to get the most from your claim without caving to the tactics of the insurance company adjusters.
+## Adjuster Questions
 
-## What to Avoid When Talking to an Insurance Adjuster
+### Does the adjuster work for me or for my employer?
 
-When you do talk with an insurance adjuster, there are a few things you need to avoid. You should avoid agreeing to anything, verbally or in writing, until you completely understand what is being offered or asked of you.
+For the insurance company that covers your employer, or for a company hired to handle its claims. Either way, not for you.
 
-Also, unless you are highly knowledgeable in common workers’ compensation rights and benefits, resist negotiating a settlement. If you do, you increase the risk of accepting an offer that does not include all the benefits you may be entitled to now or in the future. A better option is to consult with a lawyer before talking to the insurance company. A lawyer may be able to give you guidance on what to do and what to avoid to obtain your benefits.
+### Do I have to talk to the adjuster at all?
 
-## If You Decide to Deal with an Insurance Adjuster Yourself, Here are Some Tips
+You do have to go to properly scheduled medical exams, accept reasonable medical care, tell the insurance company right away if you go back to work or earn more, and answer formal questions once a claim is filed with the Commission. You don’t have to answer questions on the spot, sign every form sent to you, or give a recorded statement the moment you’re asked.
 
-It is important to remember that no matter how friendly the adjuster is, they are not your friend. While you do not have to be rude, you do need to remain confident if you decide to deal with the insurance claims adjuster yourself. Here are some tips to help.
+### What if the adjuster offers me a light-duty job?
 
-### Remain Polite
+Read the job description against your doctor’s written restrictions before you answer. Refusing suitable light duty can stop your wage checks. Here’s more on [light duty in Virginia](/light-duty-workers-comp-virginia/).
 
-Remain polite and treat the adjuster with respect even when you disagree or become frustrated at the process. Return phone calls, letters, or emails and, if you do hire an attorney at some point, let them know and provide the contact information for the law firm.
+## Talk to Pathfinder Injury Law About Your Adjuster
 
-### Do Not Sign Anything
-
-If the adjuster requests you sign a statement, a consent for medical records, or any other document, especially one you do not understand, you can refuse. You do not need to sign anything, especially early on in the process.
-
-### Do Not Offer Personal Information
-
-Keep the exchange of information strictly professional and associated with the work-related injury and accident. Talk with a lawyer before you decide what personal information to share with an adjuster, if any. If you do answer questions, you must be truthful. However, speaking with an adjuster before talking with a lawyer can be a very bad idea. Also, avoid sharing any contradictory posts on social media as adjusters can find these and use them against you.
-
-### Stay Persistent
-
-Your claim is not the only one an adjuster will be handling at any given time. Their caseloads for insurance claims can be quite large, which means you will need to stay persistent to get their attention focused on yours. Set a schedule for contacting the adjuster, such as every 30 days or so, to check on the status of your case and such things as approval of medical treatments.
-
-### Ask Questions
-
-Ask the adjuster questions. Just be sure those questions are well-researched and not the result of frustration or fear. Try asking them what they need to move forward with your claim. By doing so, you gain a better picture of where they are in the process and what is most important to them in making an assessment.
-
-If the adjuster says you do not qualify for wage loss benefits, ask why specifically. You may need to return to your treating physician for defined work restrictions. Also, ask how long it should take for the adjuster to make a decision.
-
-## Will an Attorney Get You More Money?
-
-Following an injury at work, you will have a lot on your mind as you continue medical treatments and possibly even rehabilitation. It is at this point you may be considering whether to hire an experienced workers’ compensation attorney and what a lawyer may be able to do for your claim.
-
-An attorney may be able to help you through the workers’ compensation process by talking to the insurance company and the Virginia Workers’ Compensation Commission on your behalf. With experience in workers’ compensation law, your attorney already understands the benefits you are eligible for and will work to obtain the compensation payout for those benefits.
-
-## Are You Falling for The Insurance Adjusters’ Tactics?
-
-Suffering a work-related injury and enduring the complicated workers’ compensation process that follows can be overwhelming. Your employer’s insurance carrier will assign an adjuster to evaluate your claim and make a determination of benefits. Yet, the adjuster’s goal is to settle your claim for much less than it is worth. Do not let this happen to you!
-
-Avoid falling for the insurance adjuster’s tricks and tactics by consulting with a Virginia workers’ comp lawyer here at the law office of Pathfinder Injury Law. Give us a call today at phone number [804-505-0633](tel:+18045050633) or submit our [online contact form](/contact/) to get started with a free consultation.
+Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/).
