@@ -1,6 +1,5 @@
 ---
 import Photo from './Photo.astro';
-import TornEdge from './TornEdge.astro';
 
 // Same photo header as PageHero, with a smaller headline so long post titles fit,
 // and an optional line under the headline (author and date).
@@ -9,10 +8,10 @@ interface Props {
   crumbs?: { name: string; href?: string }[];
   image?: string;
 }
-const { title, crumbs = [], image = '/images/photos/tile-b.jpg' } = Astro.props;
+const { title, crumbs = [], image = '/images/photos/e4-misty-river.jpg' } = Astro.props;
 ---
 <section class="page-hero blog-hero on-dark">
-  <Photo class="hero-photo" src={image} alt="" width="1400" height="886" sizes="100vw" fetchpriority="high" />
+  <Photo class="hero-photo" src={image} alt="" width="2000" height="1333" sizes="100vw" fetchpriority="high" />
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
       <ol>
@@ -25,7 +24,6 @@ const { title, crumbs = [], image = '/images/photos/tile-b.jpg' } = Astro.props;
     <h1>{title}</h1>
     <slot />
   </div>
-  <TornEdge fill="var(--white)" />
 </section>
 <style is:global>
   .blog-hero h1 {

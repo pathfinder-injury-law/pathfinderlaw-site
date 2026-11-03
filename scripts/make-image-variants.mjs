@@ -36,7 +36,7 @@ const PHOTOS = {
   '/images/photos/e4-autumn-ridges.jpg': [480, 800],
   '/images/photos/e4-green-valley.jpg': [480, 800],
   '/images/photos/e4-green-ridges-gold-sky.jpg': [800, 1400, 2000],
-  '/images/photos/e4-misty-river.jpg': [800, 1400, 2000],
+  '/images/photos/e4-misty-river.jpg': [480, 800, 1400, 2000], // 480: inner page tops on phones (Nov 3)
 };
 
 // High quality settings: the copies should look the same as the originals.
