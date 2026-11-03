@@ -114,3 +114,10 @@ test('Light cards in the form set their own dark text, so the white text of the 
   // On the forest map band, error messages switch from the white-card red to brand yellow.
   assert.match(all + read('/index.html'), /\.mc-form \.field-error(\[data-astro-cid-[a-z0-9]+\])? ?{ ?color: ?(var\(--sun\)|#ffd040)/);
 });
+
+test('No ruler ticks down the section edges (Bryn, Nov 3: distracting, off theme)', opts, () => {
+  for (const page of ['/index.html', '/results/index.html']) {
+    const all = (css() + read(page)).replace(/\s+/g, ' ');
+    assert.doesNotMatch(all, /repeating-linear-gradient\((180deg, ?)?currentColor 0 1(\.5)?px/, page);
+  }
+});

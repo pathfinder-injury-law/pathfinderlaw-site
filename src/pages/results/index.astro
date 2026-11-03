@@ -80,7 +80,7 @@ const results = [
 
 <style>
   /* Nov 3 2026 (Bryn approved the mockup): the home page's results look. Open columns on cream with an orange
-     rule over each amount, faint dark map lines, and bearing ticks down both edges. The disclaimer stays below. */
+     rule over each amount, and faint dark map lines (the edge ticks came off Nov 3, Bryn). The disclaimer stays below. */
   .results-page {
     padding-top: clamp(3rem, 7vw, 5rem);
     position: relative;
@@ -90,19 +90,6 @@ const results = [
   .results-page :global(.contour-tex) {
     filter: brightness(0);
     opacity: 0.06;
-  }
-  .results-page::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.35;
-    color: var(--forest);
-    background:
-      repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) left 0 top 1.5rem / 1rem 100% no-repeat,
-      repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) left 0 top 1.5rem / 0.5rem 100% no-repeat,
-      repeating-linear-gradient(180deg, currentColor 0 1.5px, transparent 1.5px 6rem) right 0 top 1.5rem / 1rem 100% no-repeat,
-      repeating-linear-gradient(180deg, currentColor 0 1px, transparent 1px 1.5rem) right 0 top 1.5rem / 0.5rem 100% no-repeat;
   }
   .results-page :global(.results-grid) {
     gap: 2.25rem 1.75rem;
