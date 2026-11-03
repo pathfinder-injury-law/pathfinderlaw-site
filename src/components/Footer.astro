@@ -3,10 +3,19 @@ import { site } from '../data/site';
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer contour tex-img">
-  <!-- The topographic texture, as a lazy image so it loads only when the footer is near the screen. -->
+  <!-- The topographic texture, as a lazy image so it loads only when the footer is near the screen (drawn dark on the sage footer). -->
   <img class="contour-tex" src="/images/contour-map.svg" alt="" width="2560" height="1600" loading="lazy" decoding="async" />
   <div class="wrap">
     <div class="footer-grid">
+      <!-- The color logo sits straight on the pale sage footer, with no card (Bryn, Nov 3). -->
+      <div class="footer-logo">
+        <img
+          src="/images/brand/logo-vertical.png"
+          srcset="/images/brand/sized/logo-vertical-200.png 200w, /images/brand/sized/logo-vertical-320.png 320w, /images/brand/sized/logo-vertical-480.png 480w, /images/brand/logo-vertical.png 753w"
+          sizes="10rem"
+          width="753" height="626" alt={site.name} loading="lazy" decoding="async"
+        />
+      </div>
       <div>
         <h2>Get In Touch</h2>
         <p><a href={site.phoneHref}>{site.phoneDisplay}</a></p>
