@@ -3,6 +3,8 @@
 // the size it needs. The original file stays the fallback, so the photo looks the same everywhere.
 // Copies come from scripts/make-image-variants.mjs; a photo without copies is shown as a plain <img>.
 // `sizes` says how wide the photo is shown on the page (see MDN "sizes"); it must match the CSS.
+// `defer` holds a decorative photo back until it is near the screen: the addresses go in data- attributes
+// so the browser can't start them, and the home page script fills them in (Tech, Nov 3, for mobile LCP).
 import variants from '../data/imageVariants.json';
 
 interface Props {
@@ -14,12 +16,19 @@ interface Props {
   class?: string;
   loading?: 'lazy' | 'eager';
   fetchpriority?: 'high' | 'low' | 'auto';
+  defer?: boolean;
 }
-const { src, alt, width, height, sizes, class: className, loading, fetchpriority } = Astro.props;
+const { src, alt, width, height, sizes, class: className, loading, fetchpriority, defer } = Astro.props;
 const v = (variants as Record<string, { avif: { url: string; width: number }[]; webp: { url: string; width: number }[] }>)[src];
 const srcset = (list: { url: string; width: number }[]) => list.map((x) => `${x.url} ${x.width}w`).join(', ');
 ---
-{v ? (
+{v && defer ? (
+  <picture class="photo" data-defer>
+    <source type="image/avif" data-srcset={srcset(v.avif)} sizes={sizes} />
+    <source type="image/webp" data-srcset={srcset(v.webp)} sizes={sizes} />
+    <img class={className} data-src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" />
+  </picture>
+) : v ? (
   <picture class="photo">
     <source type="image/avif" srcset={srcset(v.avif)} sizes={sizes} />
     <source type="image/webp" srcset={srcset(v.webp)} sizes={sizes} />
