@@ -15,11 +15,11 @@ If your employer has you covered under Workers’ Comp insurance, it’s still i
 
 ## What Is Workers’ Comp in Virginia?
 
-[Workers’ Comp](https://law.lis.virginia.gov/vacodefull/title65.2/#:~:text=compensation%20for%20personal%20injury%20or%20death%20by%20accident%20arising%20out%20of%20and%20in%20the%20course%20of%20the%20employment) is the compensation received by an employee in case of injury and by their qualified successors in the case of death. To qualify for compensation, the injury or the death must be proven to have arisen out of and in the course of employment.
+[Workers’ Comp](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/) is the compensation received by an employee in case of injury and by their qualified successors in the case of death. To qualify for compensation, the injury or the death must be proven to have arisen out of and in the course of employment.
 
 ## When Should You File Your Claim for Workers’ Comp?
 
-If you have a right to Workers’ Comp in Virginia, you should [file it within two years](https://law.lis.virginia.gov/vacodefull/title65.2/#:~:text=%C2%A7%2065.2-601.%20Time%20for%20filing%20claim.) from the date of the work-related accident, although exceptions apply. In case of death, the claim must be filed within two years from the death. Otherwise, your right to pursue it will be forever barred. Workers’ compensation is generally the exclusive remedy against your employer, so a lawsuit against your employer is generally barred except in extremely rare situations. Claims against third parties may exist, such as suing the driver of another vehicle. Talk with a lawyer about your situation.
+If you have a right to Workers’ Comp in Virginia, you should [file it within two years](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/) from the date of the work-related accident, although exceptions apply. In case of death, the claim must be filed within two years from the death. Otherwise, your right to pursue it will be forever barred. Workers’ compensation is generally the exclusive remedy against your employer, so a lawsuit against your employer is generally barred except in extremely rare situations. Claims against third parties may exist, such as suing the driver of another vehicle. Talk with a lawyer about your situation.
 
 ## What Are the Benefits You Can Claim from Workers’ Comp?
 
@@ -33,7 +33,7 @@ Even [lost wages](/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-f
 
 To qualify for Workers’ Comp, you first need to be covered under your employer’s Workers’ Comp insurance.
 
-However, there are other things you need to prove if you want to claim your benefits fully. You also need to prove that you were an employee at the time of the accident, you must prove that you suffered a [work-related injury](https://law.lis.virginia.gov/vacodefull/title65.2/), and you must meet the two-year deadline for filing claims for Workers’ Comp.
+However, there are other things you need to prove if you want to claim your benefits fully. You also need to prove that you were an employee at the time of the accident, you must prove that you suffered a [work-related injury](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/), and you must meet the two-year deadline for filing claims for Workers’ Comp.
 
 ## How Can an Attorney Help You Claim Workers’ Comp Benefits?
 

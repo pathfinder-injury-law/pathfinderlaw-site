@@ -356,7 +356,7 @@ export const subArticles: SubArticle[] = [
               'An impairment rating for any permanent loss of use',
             ],
           },
-          'The report usually goes to the insurance company first. Commission rules require the insurance company to send you a copy promptly (Rules of the Virginia Workers’ Compensation Commission, Rule 4.2).',
+          'The report usually goes to the insurance company first. Commission rules require the insurance company to send you a copy promptly ([16VAC30-50-50(B)](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section50/)).',
         ],
       },
       {
@@ -364,7 +364,7 @@ export const subArticles: SubArticle[] = [
         blocks: [
           {
             ul: [
-              'Try to stop or reduce your wage checks. Once you have an award, the insurance company can’t just stop paying on its own. It has to file a sworn application with the Commission, backed by the medical reports it relies on, such as the IME report. It generally must pay you through the date it files. If the Commission rejects the application, your checks start again right away. If the Commission accepts it, your checks can stay stopped until the case is decided, and you have 15 days to respond ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/); Commission Rules 1.4 and 1.5).',
+              'Try to stop or reduce your wage checks. Once you have an award, the insurance company can’t just stop paying on its own. It has to file a sworn application with the Commission, backed by the medical reports it relies on, such as the IME report. It generally must pay you through the date it files. If the Commission rejects the application, your checks start again right away. If the Commission accepts it, your checks can stay stopped until the case is decided, and you have 15 days to respond ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/); [16VAC30-50-20(D) and (E)](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section20/)).',
               'Refuse to authorize treatment your doctor recommends. You can ask the Commission to order it.',
               'Argue for a lower impairment rating, which means fewer weeks of pay for permanent damage. Here’s [how permanent partial disability is paid](/work-injury-compensation/).',
               'Deny a claim it hasn’t accepted yet. A denial is not the final word. ' + DISPUTE,
