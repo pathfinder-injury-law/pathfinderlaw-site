@@ -125,15 +125,15 @@ A settlement is optional, and the Commission must approve it ([Va. Code § 65.2-
 
 ## Ankle Injury Questions
 
-### Is a sprained ankle at work worth filing a claim?
+### Is a Sprained Ankle at Work Worth Filing a Claim?
 
 Yes, file it. Many sprains heal in a few weeks, but some turn out to be ligament tears or fractures that only show up later on an MRI. A filed claim protects your deadline if the ankle doesn’t heal the way everyone expected.
 
-### Can I get workers’ comp if I rolled my ankle walking at work?
+### Can I Get Workers’ Comp if I Rolled My Ankle Walking at Work?
 
 Possibly, but it depends on why you rolled it. Virginia requires that an actual risk of your work caused the accident. A defect in the floor or the steps, debris, an unusually high or awkward step, or something your job had you carrying can help supply that risk. Simply walking on a clear, level surface usually does not.
 
-### How long will I be out of work with a broken ankle?
+### How Long Will I Be Out of Work with a Broken Ankle?
 
 That depends on the break and your job. Most ankle fractures take 10 to 12 weeks to heal completely, and most people are back to normal activities in 3 to 4 months ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/ankle-fractures-broken-ankle/)). A surgically repaired fracture can mean longer before a return to heavy work. Wage checks continue while your doctor keeps you out of work, and partial checks may continue on light duty at lower pay.
 

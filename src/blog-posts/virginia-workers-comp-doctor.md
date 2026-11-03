@@ -94,15 +94,15 @@ Whether you’re in Norfolk, Newport News, Richmond, or anywhere else in Virgini
 
 ## Workers’ Comp Doctor Questions
 
-### Can I go to my own doctor for workers’ comp in Virginia?
+### Can I Go to My Own Doctor for Workers’ Comp in Virginia?
 
 Not usually at first. You choose from your employer’s panel. You can generally choose your own doctor if the employer never gives you a valid panel, the claim is denied, or the Commission orders a change.
 
-### Does workers’ comp pay for the emergency room?
+### Does Workers’ Comp Pay for the Emergency Room?
 
 Emergency care is one of the situations where the Commission can order the employer to pay for a doctor outside the panel ([§ 65.2-603(C)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). Tell the hospital it was a work injury.
 
-### Does the insurance company have to pay for everything my doctor orders?
+### Does the Insurance Company Have to Pay for Everything My Doctor Orders?
 
 It is required to pay for treatment that is reasonable, necessary, and related to the accident. That doesn’t mean it will. Insurance companies often push back on surgery, injections, and specialist referrals. If it refuses, you can ask the Commission for a hearing.
 

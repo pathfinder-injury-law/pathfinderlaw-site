@@ -79,19 +79,19 @@ Our guide to [light duty and refusing light duty in Virginia](/light-duty-worker
 
 ## Fired While on Workers’ Comp Questions
 
-### Can my employer fire me for missing work because of my injury?
+### Can My Employer Fire Me for Missing Work Because of My Injury?
 
 It can be lawful, because the law bars firing you *solely* for filing a claim, not every firing of an injured worker. But if you’re totally disabled, your total disability checks generally continue anyway. If you’re on light duty and the absences came from the injury, the fight is over whether you were fired because of the injury or because of misconduct. If it was the injury, the misconduct rule that can end partial checks doesn’t apply.
 
-### Can I quit instead of waiting to be fired?
+### Can I Quit Instead of Waiting to Be Fired?
 
 Quitting is treated differently. Quitting a light-duty job usually counts as refusing suitable work. Read [can I quit my job while on workers’ comp in Virginia](/quit-job-while-on-workers-comp-virginia/) before you decide.
 
-### Can I collect unemployment after being fired while on workers’ comp?
+### Can I Collect Unemployment After Being Fired While on Workers’ Comp?
 
 Unemployment is decided by the Virginia Employment Commission, under different rules. Ask it directly, and report any unemployment benefits to the workers’ comp insurance company.
 
-### Does a settlement require me to resign?
+### Does a Settlement Require Me to Resign?
 
 Many workers’ comp settlements ask for a resignation. That is something to bargain over, not a rule. Here’s more on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/).
 

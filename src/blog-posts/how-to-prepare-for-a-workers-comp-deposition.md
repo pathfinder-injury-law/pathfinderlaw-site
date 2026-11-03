@@ -23,7 +23,7 @@ When preparing for a deposition, make sure before your deposition you have every
 
 During the deposition, the lawyer present may ask you questions about your medical history. These questions are there to determine whether your condition started during your time working, or whether you have a personal or family history of similar problems. In other cases, you may have had a prior injury. Because of that prior injury, your current injuries may be worse.
 
-## What to Share during Your Deposition
+## What to Share During Your Deposition
 
 Answer each question truthfully, and answer only the question asked. While you are under oath, meaning you can’t lie during the deposition, you’re not obligated to share all the details of your discussions with your lawyer, for example. Client-attorney privilege still applies to your case, even in the courtroom.
 

@@ -99,15 +99,15 @@ A settlement is optional, and the Commission must approve it ([Va. Code § 65.2-
 
 ## Achilles Injury Questions
 
-### Can I get workers’ comp if my Achilles tore while I was walking at work?
+### Can I Get Workers’ Comp if My Achilles Tore While I Was Walking at Work?
 
 Possibly, but it depends on why it tore. Virginia requires that an actual risk of your work caused the accident. An unusually high or awkward step, uneven ground, a heavy load your job had you carrying or pushing, or a climb your job had you rushing can help supply that risk. Walking on a clear, level floor usually does not.
 
-### What if I had Achilles tendinitis before the rupture?
+### What if I Had Achilles Tendinitis Before the Rupture?
 
 An earlier problem does not automatically bar the claim. If a work accident caused the rupture, it can still be covered. Expect the insurance company to point to the earlier problem, and make sure your surgeon addresses it in writing.
 
-### Is a partial Achilles tear covered?
+### Is a Partial Achilles Tear Covered?
 
 A partial tear can be covered the same way as a full rupture if a specific work accident caused it. Partial tears are much less common than complete tears ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/achilles-tendon-rupture-tear/)), and the insurance company may call one “tendinitis” from overuse. Gradual overuse injuries are generally not covered as an accident.
 
