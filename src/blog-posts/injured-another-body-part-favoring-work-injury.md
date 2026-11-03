@@ -23,7 +23,7 @@ Virginia courts have covered this kind of slow, wear-and-tear consequence. In a 
 
 In another published case, a worker’s back injury changed the way he walked, and his treating doctor tied his knee pain to those “gait deviations.” The Court of Appeals held the knee was a compensable consequence, even though it developed gradually ([Allen & Rocks, Inc. v. Briggs, 28 Va. App. 662 (1998)](https://www.vacourts.gov/opinions/opncavwp/0768983.pdf)).
 
-The same idea runs in any direction. In one Commission case, a worker’s injured knee caused frequent falls, and in one of them she hurt her ankle, and the Commission held the ankle was a compensable consequence of the knee. It also ordered the insurance company to pay for a stair lift or downstairs bathroom because she could no longer safely use her stairs (Johnson v. Hall Chevrolet, VWC No. VA00001414230 (Mar. 15, 2021)). Commission opinions like this one are not binding on later cases.
+The same idea runs in any direction. In one Commission case, a worker’s injured knee caused frequent falls, and in one of them she hurt her ankle, and the Commission held the ankle was a compensable consequence of the knee. It also ordered the insurance company to pay for a stair lift or downstairs bathroom because she could no longer safely use her stairs (Johnson v. Hall Chevrolet, VWC No. VA00001414230 (Mar. 15, 2021) (full Commission review)). This was a decision of the full Commission, which reviews deputy commissioners’ rulings, and the Court of Appeals of Virginia can review it. Every case turns on its own facts, so another worker’s result can be different.
 
 ## What Other Injuries Count as Compensable Consequences?
 
