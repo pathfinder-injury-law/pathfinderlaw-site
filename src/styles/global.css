@@ -2192,8 +2192,10 @@ mark {
 }
 
 .pull {
-  background: var(--sage);
-  border-radius: var(--radius-lg);
+  /* Call-to-action and quote boxes inside articles: the home page's field-notes card. */
+  background: var(--mist);
+  border-top: 5px solid var(--moss);
+  border-radius: 14px;
   padding: 1.75rem 2rem;
   margin: 2.5rem 0;
 }
@@ -2212,7 +2214,8 @@ mark {
 }
 .faq details {
   background: var(--mist);
-  border-radius: var(--radius);
+  border-left: 4px solid var(--moss); /* a field-notes edge, like the home cards */
+  border-radius: 12px;
   transition: background 0.2s;
 }
 .faq details[open] {
