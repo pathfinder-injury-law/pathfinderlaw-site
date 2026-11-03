@@ -23,3 +23,6 @@ e3335c618260d4472bb49b6291b9128b1e4c839e
 # PR 95, Nov 3: Contact heading levels (card titles and the form's hidden heading h3 to h2) by Design.
 # Same words; SEO's call: Contact's date must not move.
 8a88b22080b5238c7e66e093ba1bbe0f27ecbb22
+# PR 97, Nov 3: heading capitalization only (home, 404, sitemap page, 15 posts); Title Case sitewide per Bryn.
+# Same words; SEO's call: no page's date should move. Do not rebase this branch (it would change this hash).
+9eef01f48431a05beba7bccc437c3bc08bc081c3
