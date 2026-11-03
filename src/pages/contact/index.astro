@@ -21,6 +21,10 @@ const description =
   path="/contact/"
   crumbs={[{ name: 'Contact Us', path: '/contact/' }]}
 >
+  <Fragment slot="head">
+    <!-- "Let's talk." is in Bryn's handwriting at the top of the page; fetch it early so a late swap can't rewrap the headline. -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/kbs-handwriting.woff2" crossorigin />
+  </Fragment>
   <MapContact top>
     <nav class="crumbs ct-crumbs" aria-label="Breadcrumb">
       <ol>
@@ -32,7 +36,7 @@ const description =
     <h1 class="visually-hidden">Contact Us</h1>
     <div class="ct-lockup">
       <p class="ct-l1">Hurt?</p>
-      <p class="ct-l2">Let’s talk.</p>
+      <p class="ct-l2 hand">Let’s talk.</p>
     </div>
   </MapContact>
 
@@ -62,12 +66,19 @@ const description =
 </Base>
 
 <style>
-  /* Headline: the home page's hero type. "Hurt?" in Brand Book yellow capitals, "Let's talk." in cream. */
+  /* Bryn's own handwriting, the same file and settings as the home hero line ("We've got this."). One weight only. */
+  @font-face {
+    font-family: 'Kbs Handwriting';
+    font-display: swap;
+    src: url('/fonts/kbs-handwriting.woff2') format('woff2'); /* subset by scripts/make-handwriting-font.mjs */
+  }
+  /* Headline: the home page's hero type. "Hurt?" in Brand Book yellow capitals, "Let's talk." in Bryn's handwriting. */
   .ct-crumbs { color: #e9efdf; font-size: 0.875rem; font-weight: 600; }
   .ct-crumbs a { color: inherit; }
   .ct-lockup p { margin: 0; font-weight: 900; line-height: 0.95; letter-spacing: -0.025em; }
   .ct-l1 { font-size: clamp(3.5rem, 9vw, 7.5rem); text-transform: uppercase; color: var(--sun); }
-  .ct-l2 { font-size: clamp(2.75rem, 6.5vw, 5.25rem); color: #fff5d5; margin-top: 0.1em !important; }
+  .ct-l2 { font-size: clamp(3.5rem, 9vw, 7.5rem); color: var(--sun); margin-top: 0.05em !important; }
+  .ct-l2.hand { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; letter-spacing: 0; line-height: 1.1; }
 
   /* Call and office cards: the home page's field-notes cards (pale card, moss top edge) on sage with faint map lines. */
   .ct-cards-section { position: relative; isolation: isolate; background: #e9efdf; padding: 5rem 0 5.5rem; }
