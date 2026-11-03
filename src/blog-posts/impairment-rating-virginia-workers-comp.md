@@ -138,15 +138,15 @@ None of that helps if the original claim was never filed. The claim must general
 
 ## Impairment Rating Questions
 
-### What is the average impairment rating for a total knee replacement?
+### What Is the Average Impairment Rating for a Total Knee Replacement?
 
 There isn’t one in Virginia. The rating is to the leg, and if the replacement improves how the leg works, the loss of use is measured as it was before the replacement, not after ([Richardson](https://www.vacourts.gov/opinions/opncavwp/1533184.pdf)). Each 1% of the leg pays 1.75 weeks of compensation.
 
-### What is the average impairment rating for back surgery?
+### What Is the Average Impairment Rating for Back Surgery?
 
 There isn’t one. The back isn’t on Virginia’s schedule. A back injury pays a rating only if it causes a permanent loss of use of a body part on the schedule, usually an arm or a leg, and the rating is to that body part.
 
-### Can I get a rating if I went back to my old job?
+### Can I Get a Rating if I Went Back to My Old Job?
 
 Yes, it’s possible. PPD pays for lost use of the body part, not lost wages. You still need to be at MMI and have a percentage rating to a body part on the schedule.
 

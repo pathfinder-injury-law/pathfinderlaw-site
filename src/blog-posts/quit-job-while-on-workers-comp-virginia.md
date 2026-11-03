@@ -81,15 +81,15 @@ Here’s more on [how Virginia workers’ comp benefits are calculated](/virgini
 
 ## Quitting and Workers’ Comp Questions
 
-### Will I lose my medical care if I quit?
+### Will I Lose My Medical Care if I Quit?
 
 No. Medical treatment for the work injury continues after you quit, for as long as your claim allows. The insurance company is required to pay for reasonable, necessary treatment related to the accident. That doesn’t mean it will.
 
-### Can I collect unemployment and workers’ comp at the same time?
+### Can I Collect Unemployment and Workers’ Comp at the Same Time?
 
 That is a question of unemployment law, which the Virginia Employment Commission decides, not the Workers’ Compensation Commission. Ask the Employment Commission before you file, and report any unemployment benefits to the workers’ comp insurance company.
 
-### Can I move out of state while on workers’ comp?
+### Can I Move Out of State While on Workers’ Comp?
 
 Moving doesn’t end a Virginia claim. But if you’re on light duty or looking for work, the Commission looks at job availability where you live. If a move means you can’t take an offered light-duty job, the Commission decides whether your reason for moving justified saying no, and the answer can go either way.
 

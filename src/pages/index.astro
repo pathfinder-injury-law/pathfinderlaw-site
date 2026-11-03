@@ -33,15 +33,15 @@ const reviews = [
 
 // Bryn's own steps (Nov 2), legal-checked. Step 3 is his reworded line after the check.
 const steps = [
-  { title: 'Free consultation', text: 'We discuss your case in a free, no-pressure consultation with Bryn, Mandy, or both.' },
-  { title: 'We do our homework', text: 'We research any issues and figure out if we can help. We make sure there are no conflicts of interest or other problems.' },
-  { title: 'Good fit or not', text: 'If it’s a good fit, we offer to help. If not, we tell you why. We’ll point you to another lawyer if we know someone who might be able to help.' },
-  { title: 'We get to work', text: 'Paperwork is signed and we get to work.', link: { href: '/what-happens-when-you-file-a-workers-comp-claim/', label: 'How filing a claim works' } },
+  { title: 'Free Consultation', text: 'We discuss your case in a free, no-pressure consultation with Bryn, Mandy, or both.' },
+  { title: 'We Do Our Homework', text: 'We research any issues and figure out if we can help. We make sure there are no conflicts of interest or other problems.' },
+  { title: 'Good Fit or Not', text: 'If it’s a good fit, we offer to help. If not, we tell you why. We’ll point you to another lawyer if we know someone who might be able to help.' },
+  { title: 'We Get to Work', text: 'Paperwork is signed and we get to work.', link: { href: '/what-happens-when-you-file-a-workers-comp-claim/', label: 'How filing a claim works' } },
 ];
 
 const help = [
-  { title: 'Starting a claim', text: 'Just got hurt? Here’s what to do first.', href: '/how-to-file-a-workers-comp-claim/', img: '/images/photos/e4-farm-road.jpg' },
-  { title: 'Denied claims', text: 'A denial isn’t the end. Here’s how appeals work.', href: '/how-to-appeal-a-workers-comp-denial-in-virginia/', img: '/images/photos/e4-autumn-ridges.jpg' },
+  { title: 'Starting a Claim', text: 'Just got hurt? Here’s what to do first.', href: '/how-to-file-a-workers-comp-claim/', img: '/images/photos/e4-farm-road.jpg' },
+  { title: 'Denied Claims', text: 'A denial isn’t the end. Here’s how appeals work.', href: '/how-to-appeal-a-workers-comp-denial-in-virginia/', img: '/images/photos/e4-autumn-ridges.jpg' },
   { title: 'Settlements', text: 'What a settlement covers, and what it closes.', href: '/workers-comp-settlement-in-virginia/', img: '/images/photos/e4-green-valley.jpg' },
 ];
 
@@ -153,7 +153,7 @@ const doodle = {
     <section class="e4-steps map map-1">
       <div class="wrap">
         <p class="k">Field notes</p>
-        <h2 class="e4-h">What happens when you call</h2>
+        <h2 class="e4-h">What Happens When You Call</h2>
         <div class="cards">
           <svg class="trail" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44C120 44 180 20 300 22S480 50 600 46S780 14 900 18S1080 46 1200 34" /></svg>
           <svg class="doodle biker" viewBox="0 0 64 46" aria-hidden="true"><path d={doodle.biker} /></svg>
@@ -174,7 +174,7 @@ const doodle = {
     <section class="e4-help dark">
       <div class="wrap">
         <p class="k">How we help</p>
-        <h2 class="e4-h">Wherever your claim stands</h2>
+        <h2 class="e4-h">Wherever Your Claim Stands</h2>
         <div class="help-row">
           {help.map((h, i) => (
             <a class="help-card" href={h.href}>
@@ -198,7 +198,7 @@ const doodle = {
     <!-- Client comments, further down the page now (Bryn, Nov 3). The yeti peeks over card 3. -->
     <section class="e4-quotes map map-2 dark">
       <div class="wrap">
-        <h2 class="e4-h">What our clients say</h2>
+        <h2 class="e4-h">What Our Clients Say</h2>
         <div class="notes">
           {reviews.map((r, i) => (
             <figure class="note">
@@ -218,7 +218,7 @@ const doodle = {
     <section class="e4-results map map-3">
       <div class="wrap">
         <p class="k">Results</p>
-        <h2 class="e4-h">Some of our clients’ settlements</h2>
+        <h2 class="e4-h">Some of Our Clients’ Settlements</h2>
         <div class="rgrid">
           {results.map((r) => (
             <article>

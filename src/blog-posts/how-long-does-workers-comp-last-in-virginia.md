@@ -115,19 +115,19 @@ Because the weeks run from the date of injury, weeks the worker was paid before 
 
 ## Questions About How Long Workers’ Comp Lasts
 
-### Can workers’ comp last for life in Virginia?
+### Can Workers’ Comp Last for Life in Virginia?
 
 Yes, in two ways. Weekly wage checks last for life if the injury meets Virginia’s definition of permanent and total incapacity. Medical care can also continue for life, as long as it stays necessary and related to the accident and the case hasn’t been closed by a full and final settlement.
 
-### What happens when my 500 weeks run out?
+### What Happens When My 500 Weeks Run Out?
 
 Your wage checks end, unless your case is one of the permanent and total incapacity cases the 500-week limit doesn’t apply to. The 500 weeks is a limit on compensation. The Court of Appeals of Virginia has contrasted that limit with the employer’s duty to provide medical care as long as necessary, which “can last for a lifetime.” So necessary medical care for the injury can continue, unless the case has been settled.
 
-### Does workers’ comp stop if I go back to light duty?
+### Does Workers’ Comp Stop if I Go Back to Light Duty?
 
 Your total disability checks stop, but if light duty pays less than you earned before, you may receive partial checks for the difference. Medical care continues. If your restrictions get worse and you can’t work again, total disability checks can resume, but they don’t restart automatically. The insurance company has to agree to pay them, or you have to ask the Commission to review your award based on a change in condition ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). Here’s what happens if you [refuse a light-duty job in Virginia](/light-duty-workers-comp-virginia/).
 
-### Does a settlement end workers’ comp?
+### Does a Settlement End Workers’ Comp?
 
 A full and final settlement ends all of it: wage checks, permanent partial disability, and medical care for the injury. Here’s [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 

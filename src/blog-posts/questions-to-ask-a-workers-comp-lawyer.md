@@ -11,19 +11,19 @@ When you’re hurt in a work-related accident, you may have plenty of questions 
 
 Because of this, you may need to speak with a [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) before your claim goes to court. These claims can be confusing, and if you’re struggling to get answers, it can be easy to make mistakes. Luckily, your lawyer is here to help you avoid any problems that can impact your claim. Check out the following questions, and talk to a lawyer if you have more questions about your case.
 
-## When will I receive my Workers’ Comp benefits?
+## When Will I Receive My Workers’ Comp Benefits?
 
 When you’re hurt in a work accident, you should receive your benefits as soon as possible. You must give your employer [notice of the injury within thirty days](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/), and you generally have two years to file your claim, although exceptions apply. Unfortunately, you may have been denied, which can drag out your case even longer.
 
 Because of this, your Workers’ Comp lawyer can’t give you an exact date that you’ll receive your benefits. There’s no set answer for [how long Virginia Workers’ Comp settlements take](/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/). But a lawyer can represent you at a hearing before the Commission and help you get benefits as soon as possible.
 
-## If I was partly at fault for the work accident, can I still get a settlement?
+## If I Was Partly at Fault for the Work Accident, Can I Still Get a Settlement?
 
 In Virginia, Workers’ Comp cases are no-fault. That means even if you were partly at fault for the accident, you can usually still recover benefits.
 
 For example, you may have not looked both ways while crossing an area of the floor, and you didn’t see another worker driving through with a forklift. While failing to look may have been a part of your accident, you’re not barred from seeking Workers’ Comp benefits. However, a willful failure to use a safety appliance or perform a statutory duty, or a willful breach of a known, reasonable rule of the employer, can bar recovery. The employer has the burden of proof.
 
-## What benefits am I due after a work accident?
+## What Benefits Am I Due After a Work Accident?
 
 If you’re not sure what benefits you’re due, talk to your lawyer about seeking out the following Workers’ Comp benefits:
 

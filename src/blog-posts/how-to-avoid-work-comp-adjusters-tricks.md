@@ -91,15 +91,15 @@ Always tell the truth. The point is not to hide anything. It’s to keep a hurri
 
 ## Adjuster Questions
 
-### Does the adjuster work for me or for my employer?
+### Does the Adjuster Work for Me or for My Employer?
 
 For the insurance company that covers your employer, or for a company hired to handle its claims. Either way, not for you.
 
-### Do I have to talk to the adjuster at all?
+### Do I Have to Talk to the Adjuster at All?
 
 You do have to go to properly scheduled medical exams, accept reasonable medical care, tell the insurance company right away if you go back to work or earn more, and answer formal questions once a claim is filed with the Commission. You don’t have to answer questions on the spot, sign every form sent to you, or give a recorded statement the moment you’re asked.
 
-### What if the adjuster offers me a light-duty job?
+### What if the Adjuster Offers Me a Light-Duty Job?
 
 Read the job description against your doctor’s written restrictions before you answer. Refusing suitable light duty can stop your wage checks. Here’s more on [light duty in Virginia](/light-duty-workers-comp-virginia/).
 

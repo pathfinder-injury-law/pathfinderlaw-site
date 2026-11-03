@@ -127,11 +127,11 @@ One of our [past results](/results/): Settlement obtained in a lumbar herniation
 
 ## Herniated Disc Questions
 
-### Does workers’ comp cover a bulging disc?
+### Does Workers’ Comp Cover a Bulging Disc?
 
 It can, on the same terms as a herniation: a specific work accident must have caused a structural change that explains your symptoms. Because bulges show up on MRIs of many people with no pain at all, expect the insurance company to call a bulge degenerative. Your doctor’s opinion connecting it to the accident, and your symptoms matching that level of the spine, matter even more.
 
-### What if my symptoms showed up a day or two later?
+### What if My Symptoms Showed Up a Day or Two Later?
 
 Disc symptoms don’t always start at the moment of the lift. A delay does not by itself defeat the claim, but it gives the insurance company room to argue that something else happened in between. Report the specific incident to your employer and your doctor as soon as you connect your symptoms to it.
 
