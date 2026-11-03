@@ -22,6 +22,20 @@ test('Home hero: AVIF and WebP copies in two sizes, art direction kept, preloade
   assert.match(html, /<link rel="preload" as="image" type="image\/avif" imagesrcset="[^"]*phone-480\.avif[^"]*" imagesizes="100vw" media="\(max-width: 47\.99rem\)"/);
 });
 
+test('Home: the band and help photos are held back so only the hero loads first; the hero never is', opts, () => {
+  const html = read('/index.html');
+  const held = [...html.matchAll(/<picture class="photo" data-defer>[\s\S]*?<\/picture>/g)].map((m) => m[0]);
+  assert.equal(held.length, 4);
+  for (const pic of held) {
+    assert.doesNotMatch(pic, /\ssrcset=|\ssrc=/); // nothing the browser could start early
+    assert.match(pic, /data-srcset="[^"]+"/);
+    assert.match(pic, /<img[^>]* data-src="[^"]+"[^>]* width="\d+" height="\d+"/); // keeps its box, so no shift
+  }
+  assert.ok(held.some((p) => p.includes('e4-green-ridges-gold-sky')));
+  assert.doesNotMatch(html.match(/<picture class="hero-pic">[\s\S]*?<\/picture>/)![0], /data-defer|data-src/);
+  assert.doesNotMatch(read('/about-us/index.html'), /data-defer/); // other pages unchanged
+});
+
 test('Every photo copy named in a page exists, and originals stay the fallback', opts, () => {
   for (const page of ['/index.html', '/about-us/index.html', '/bryn-swartz/index.html', '/contact/index.html']) {
     const html = read(page);

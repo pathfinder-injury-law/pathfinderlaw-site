@@ -141,7 +141,7 @@ const doodle = {
 
     <!-- Big band, right under the hero (Bryn, Nov 3): the eye goes left in the hero, right here, then back to the middle. -->
     <section class="e4-band">
-      <Photo class="band-bg" src="/images/photos/e4-green-ridges-gold-sky.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
+      <Photo class="band-bg" src="/images/photos/e4-green-ridges-gold-sky.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" defer />
       <div class="wrap">
         <svg class="doodle compass compass-band" viewBox="0 0 120 130" aria-hidden="true"><path d={doodle.compassRing} /><path class="dots" d={doodle.compassDots} /><path class="needle" transform="rotate(28 60 70)" d={doodle.needle} /></svg>
         <p class="big">All we do is workers’ comp.</p>
@@ -181,7 +181,7 @@ const doodle = {
               <span class="ph plate">
                 <i class="crop" aria-hidden="true"></i>
                 {i === 1 && <svg class="doodle bird" viewBox="0 0 40 32" aria-hidden="true"><path d={doodle.bird} /></svg>}
-                <Photo src={h.img} alt="" width="1000" height="1000" sizes="(min-width: 48rem) 380px, 90vw" loading="lazy" />
+                <Photo src={h.img} alt="" width="1000" height="1000" sizes="(min-width: 48rem) 380px, 90vw" loading="lazy" defer />
               </span>
               <p class="fig" aria-hidden="true">Fig. {i + 1}</p>
               <h3>{h.title}</h3>
@@ -292,6 +292,21 @@ const doodle = {
     //    typed out and swapped. Screen readers keep reading that original sentence. Nothing runs for visitors who
     //    ask for reduced motion, so they see the static sentence. The box is sized to the longest phrase first, and
     //    the caret and the full stop slide along by transform (not by layout), so nothing moves while it types.
+    // 0) The band and help photos are held back (Photo "defer") so only the hero loads first on phones. Each one
+    //    gets its real URLs back when it comes within 400px of the screen. This runs for every visitor.
+    const wake = (p: Element) => {
+      p.querySelectorAll<HTMLSourceElement>('source[data-srcset]').forEach((s) => { s.srcset = s.dataset.srcset!; s.removeAttribute('data-srcset'); });
+      const img = p.querySelector<HTMLImageElement>('img[data-src]');
+      if (img) { img.src = img.dataset.src!; img.removeAttribute('data-src'); }
+      p.removeAttribute('data-defer');
+    };
+    const held = document.querySelectorAll('picture[data-defer]');
+    if ('IntersectionObserver' in window) {
+      // Watch the img: the picture element is display: contents, so it has no box of its own.
+      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { io.unobserve(e.target); wake(e.target.closest('picture')!); } }), { rootMargin: '400px 0px' });
+      held.forEach((p) => { const img = p.querySelector('img'); if (img) io.observe(img); else wake(p); });
+    } else held.forEach(wake);
+
     const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!calm) {
       document.querySelectorAll<HTMLElement>('[data-typer]').forEach((el) => {

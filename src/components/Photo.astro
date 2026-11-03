@@ -3,6 +3,9 @@
 // the size it needs. The original file stays the fallback, so the photo looks the same everywhere.
 // Copies come from scripts/make-image-variants.mjs; a photo without copies is shown as a plain <img>.
 // `sizes` says how wide the photo is shown on the page (see MDN "sizes"); it must match the CSS.
+// `defer` holds the download until the photo is near the screen: the URLs go in data- attributes and the
+// page's script copies them back (home page). Chrome's own lazy loading starts about 1250px early, which on
+// the home page pulls lower photos in alongside the hero and slows its paint (LCP). Decorative photos only.
 import variants from '../data/imageVariants.json';
 
 interface Props {
@@ -14,12 +17,19 @@ interface Props {
   class?: string;
   loading?: 'lazy' | 'eager';
   fetchpriority?: 'high' | 'low' | 'auto';
+  defer?: boolean;
 }
-const { src, alt, width, height, sizes, class: className, loading, fetchpriority } = Astro.props;
+const { src, alt, width, height, sizes, class: className, loading, fetchpriority, defer } = Astro.props;
 const v = (variants as Record<string, { avif: { url: string; width: number }[]; webp: { url: string; width: number }[] }>)[src];
 const srcset = (list: { url: string; width: number }[]) => list.map((x) => `${x.url} ${x.width}w`).join(', ');
 ---
-{v ? (
+{v && defer ? (
+  <picture class="photo" data-defer>
+    <source type="image/avif" data-srcset={srcset(v.avif)} sizes={sizes} />
+    <source type="image/webp" data-srcset={srcset(v.webp)} sizes={sizes} />
+    <img class={className} data-src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" />
+  </picture>
+) : v ? (
   <picture class="photo">
     <source type="image/avif" srcset={srcset(v.avif)} sizes={sizes} />
     <source type="image/webp" srcset={srcset(v.webp)} sizes={sizes} />
