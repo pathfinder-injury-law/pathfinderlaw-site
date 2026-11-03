@@ -14,7 +14,7 @@ export const site = {
   phoneDisplay: '(804) 505-0633',
   phoneHeader: '804-505-0633',
   phoneHref: 'tel:+18045050633',
-  // The firm takes calls, texts and email Mon to Fri, 9 to 5. Meetings at both offices are
+  // The firm takes calls, texts, and email Mon to Fri, 9 to 5. Meetings at both offices are
   // by appointment only (Bryn, Nov 2, 2026). contactHours feeds the schema's ContactPoint.
   offices: [
     {
@@ -30,7 +30,7 @@ export const site = {
       page: { label: 'Eastern Shore Workers’ Comp Lawyer', href: '/eastern-shore-workers-comp-lawyer/' },
     },
   ] as Office[],
-  hours: ['Calls, texts and email: Mon to Fri, 9 to 5', 'Meetings by appointment only', 'Video Consultations Avail.'],
+  hours: ['Calls, texts, and email: Mon to Fri, 9 to 5', 'Meetings by appointment only', 'Video Consultations Avail.'],
   contactHours: {
     days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     opens: '09:00',

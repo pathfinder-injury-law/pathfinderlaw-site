@@ -1642,7 +1642,7 @@ mark {
 }
 @media (min-width: 62rem) {
   .footer-grid {
-    grid-template-columns: 1.1fr 1.3fr 1fr 0.8fr 0.9fr;
+    grid-template-columns: 1.3fr 1.2fr 0.9fr 0.9fr;
   }
 }
 .site-footer h2 {
@@ -1672,16 +1672,6 @@ mark {
 .site-footer a:hover {
   text-decoration: underline;
   text-underline-offset: 0.25em;
-}
-.footer-logo {
-  align-self: start;
-  background: var(--mist);
-  border-radius: var(--radius);
-  padding: 1rem;
-  max-width: 11rem;
-}
-.footer-logo img {
-  width: 100%;
 }
 .legal-note {
   margin: 2.75rem 0 0;

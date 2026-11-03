@@ -76,6 +76,11 @@ const results = [
   },
 ];
 
+// Rotating type-outs (Bryn, Nov 3). The first phrase of each list is the sentence that is in the HTML,
+// so Google, screen readers and visitors without scripts always get one complete sentence.
+const bandPhrases = ['hurt at work', 'losing wages', 'needing surgery', 'with denied claims', 'with lots of questions', 'who need a hand'];
+const formPhrases = ['what happened', 'your injury', 'lost wages', 'surgery', 'why your claim was denied', 'what comes next'];
+
 // The doodles: one line weight, rounded ends, no fill, one ink color per background (set in CSS).
 // None may suggest a win (no trophies, flags, money or summit poses).
 const doodle = {
@@ -117,7 +122,7 @@ const doodle = {
         <img class="hero-photo" src="/images/photos/e4-overlook-desktop.webp" srcset={heroSet('desktop', 'webp')} sizes="100vw" alt="A hiker standing on a rocky overlook above a wide valley" width="2000" height="1333" fetchpriority="high" />
       </picture>
       <div class="wrap hero-copy">
-        <h1 class="kicker">Virginia Workers’ Comp Lawyer</h1>
+        <h1 class="kicker"><span class="va">Virginia</span> Workers’ Comp Lawyer</h1>
         <p class="hero-big">Hurt at work?<br /><span class="hand">We’ve got this.</span></p>
         <p class="hero-lede">Workers’ comp is all we do. Free consultation. Zero pressure.</p>
         <div class="hero-acts">
@@ -127,28 +132,17 @@ const doodle = {
       </div>
     </section>
 
-    <!-- Client comments. A ridge line closes the hero photo; the first faint map lines start here. -->
-    <section class="e4-quotes map map-1 dark">
-      <svg class="ridge" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80V52L70 30L120 44L210 8L290 40L350 26L430 50L520 18L600 42L690 22L780 46L860 14L950 40L1030 28L1120 50L1200 20L1290 44L1360 32L1440 46V80Z" /></svg>
+    <!-- Big band, right under the hero (Bryn, Nov 3): the eye goes left in the hero, right here, then back to the middle. -->
+    <section class="e4-band">
+      <Photo class="band-bg" src="/images/photos/e4-green-ridges-gold-sky.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
       <div class="wrap">
-        <h2 class="e4-h">What our clients say</h2>
-        <div class="notes">
-          {reviews.map((r, i) => (
-            <figure class="note">
-              {i === 2 && <svg class="doodle yeti" viewBox="0 0 64 42" aria-hidden="true"><path d={doodle.yeti} /></svg>}
-              <svg class="stars" viewBox="0 0 118 22" role="img" aria-label="5 star review"><g>{[0, 1, 2, 3, 4].map((i) => <path transform={`translate(${i * 24} 0)`} d="M11 2l2.6 6 6.4.5-4.9 4.2 1.5 6.3L11 15.6 5.4 19l1.5-6.3L2 8.5l6.4-.5z" />)}</g></svg>
-              <blockquote><p>“{r.text}”</p></blockquote>
-              <figcaption>{r.by}</figcaption>
-            </figure>
-          ))}
-        </div>
-        <p class="fine">These comments are from past clients. Each case is different, and these comments do not promise or predict a result in yours.</p>
-        <a class="tl" href="/reviews/">Read more reviews</a>
+        <p class="big">All we do is workers’ comp.</p>
+        <p class="sub">Not wills. Not divorces. Just helping people <span class="typer" data-typer={bandPhrases.join('|')} data-end=".">hurt at work.</span></p>
       </div>
     </section>
 
     <!-- What happens when you call: one thin trail line behind the four steps. -->
-    <section class="e4-steps map map-2">
+    <section class="e4-steps map map-1">
       <div class="wrap">
         <p class="k">Your trail</p>
         <h2 class="e4-h">What happens when you call</h2>
@@ -191,12 +185,22 @@ const doodle = {
       </div>
     </section>
 
-    <!-- Big band: the last full photo on the page. -->
-    <section class="e4-band">
-      <Photo class="band-bg" src="/images/photos/e4-green-ridges-gold-sky.jpg" alt="" width="2000" height="1333" sizes="100vw" loading="lazy" />
+    <!-- Client comments, further down the page now (Bryn, Nov 3). The yeti peeks over card 3. -->
+    <section class="e4-quotes map map-2 dark">
       <div class="wrap">
-        <p class="big">All we do is workers’ comp.</p>
-        <p class="sub">Not wills. Not divorces. Just helping people hurt at work.</p>
+        <h2 class="e4-h">What our clients say</h2>
+        <div class="notes">
+          {reviews.map((r, i) => (
+            <figure class="note">
+              {i === 2 && <svg class="doodle yeti" viewBox="0 0 64 42" aria-hidden="true"><path d={doodle.yeti} /></svg>}
+              <svg class="stars" viewBox="0 0 118 22" role="img" aria-label="5 star review"><g>{[0, 1, 2, 3, 4].map((i) => <path transform={`translate(${i * 24} 0)`} d="M11 2l2.6 6 6.4.5-4.9 4.2 1.5 6.3L11 15.6 5.4 19l1.5-6.3L2 8.5l6.4-.5z" />)}</g></svg>
+              <blockquote><p>“{r.text}”</p></blockquote>
+              <figcaption>{r.by}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <p class="fine">These comments are from past clients. Each case is different, and these comments do not promise or predict a result in yours.</p>
+        <a class="tl" href="/reviews/">Read more reviews</a>
       </div>
     </section>
 
@@ -257,16 +261,13 @@ const doodle = {
       </div>
     </section>
 
-    <!-- The one form on this page (id="contact"), in a map-only frame: the trail ends at an X by the form. -->
+    <!-- The one form on this page (id="contact"), in a map-only frame: a dotted trail from the camp under the headline to an X by the form (drawn by the script below). -->
     <section class="e4-contact map map-4 dark">
       <div class="wrap contact-grid">
+        <svg class="route-link" aria-hidden="true" focusable="false"><path class="route" /><path class="x" /></svg>
         <div class="talk">
-          <h2 class="e4-h">Let’s talk about what happened.</h2>
-          <svg class="camp" viewBox="0 0 260 120" aria-hidden="true">
-            <path class="route" d="M4 10C40 30 30 70 80 74S150 40 196 70" />
-            <path class="x" d="M196 62L212 78M212 62L196 78" />
-            <path class="ink" d={doodle.camp} />
-          </svg>
+          <h2 class="e4-h">Let’s talk about <span class="typer typer-block" data-typer={formPhrases.join('|')} data-end=".">what happened.</span></h2>
+          <svg class="camp" viewBox="92 66 106 54" aria-hidden="true"><path d={doodle.camp} /></svg>
         </div>
         <div class="form-bare" id="contact">
           <ContactForm namePlaceholder="What’s your name?" />
@@ -274,36 +275,128 @@ const doodle = {
       </div>
     </section>
 
-    <!-- Sketched map, west to east: Blue Ridge, Richmond, the Bay, the Eastern Shore, the Atlantic. -->
-    <div class="mapfoot">
-      <svg viewBox="0 0 1440 190" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Map sketch: mountains in western Virginia, Richmond in the middle, and the Eastern Shore by the ocean">
-        <g fill="none" stroke="#a7c18a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M0 132L52 84L84 108L146 46L196 96L238 70L292 112L344 86L398 124L452 140" />
-          <path d="M0 156L64 118L110 142L182 98L248 144L318 120L386 150L452 152" />
-          <path d="M146 46L134 66M146 46L158 64M146 46L148 70M238 70L230 84M238 70L246 84M182 98L174 112M182 98L190 112" />
-          <path d="M412 150L424 118L436 150ZM416 136H432M440 152L450 128L460 152Z" />
-          <path d="M260 170C340 176 420 164 500 170S640 178 720 170S860 166 930 172" stroke-dasharray="1 9" stroke-width="3" />
-          <path d="M452 152C520 146 590 150 660 148S800 144 900 152" />
-          <path d="M520 162H560M580 164H630M700 162H760M780 160H830" stroke-width="1.6" />
-          <path d="M548 146V132M548 132a8 8 0 1 0 0.1 0ZM604 147V135M604 135a6 6 0 1 0 0.1 0ZM770 145V131M770 131a8 8 0 1 0 0.1 0ZM806 147V137M806 137a5 5 0 1 0 0.1 0Z" />
-          <path d="M662 132L678 148M678 132L662 148" stroke="#ffd040" stroke-width="3.4" />
-          <path d="M920 160q10-7 20 0t20 0t20 0t20 0M940 174q10-7 20 0t20 0t20 0M1000 146q10-7 20 0t20 0" stroke-width="1.8" />
-          <path d="M1060 156C1100 140 1180 136 1250 142C1280 145 1300 150 1312 156" />
-          <path d="M1252 150C1272 152 1292 156 1312 162" stroke-dasharray="1 7" stroke-width="2.6" />
-          <path d="M1096 146l-4-12M1100 146l2-14M1104 146l6-10M1214 140l-4-12M1218 140l2-14M1222 140l6-10" />
-          <path d="M1140 132L1156 148M1156 132L1140 148" stroke="#ffd040" stroke-width="3.4" />
-          <path d="M1262 142L1266 100H1278L1282 142ZM1264 128H1280M1265 114H1279M1268 100L1272 92L1276 100" />
-          <path d="M1330 158q10-7 20 0t20 0t20 0t20 0t20 0M1350 174q10-7 20 0t20 0t20 0t20 0" stroke-width="1.8" />
-          <path d="M1352 144A34 34 0 0 1 1420 144M1386 98V86M1358 110L1350 102M1414 110L1422 102M1342 128L1332 124M1430 128L1440 124" stroke="#ffd040" />
-        </g>
-        <g class="map-labels" fill="#e9efdf" font-size="30">
-          <text x="132" y="30">Blue Ridge</text>
-          <text x="622" y="118">Richmond</text>
-          <text x="1080" y="112">Eastern Shore</text>
-        </g>
-      </svg>
-    </div>
   </div>
+
+  <script>
+    // 1) Rotating type-outs ([data-typer]). The HTML already holds one complete sentence. Here the last phrase is
+    //    typed out and swapped. Screen readers keep reading that original sentence. Nothing runs for visitors who
+    //    ask for reduced motion, so they see the static sentence. The box is sized to the longest phrase first, and
+    //    the caret and the full stop slide along by transform (not by layout), so nothing moves while it types.
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!calm) {
+      document.querySelectorAll<HTMLElement>('[data-typer]').forEach((el) => {
+        const end = el.dataset.end ?? '';
+        const phrases = (el.dataset.typer ?? '').split('|').filter(Boolean);
+        if (phrases.length < 2) return;
+        const reader = document.createElement('span');
+        reader.className = 'visually-hidden';
+        reader.textContent = el.textContent ?? '';
+        const live = document.createElement('span');
+        live.setAttribute('aria-hidden', 'true');
+        const text = document.createTextNode(phrases[0]);
+        live.append(text);
+        const caret = document.createElement('span');
+        caret.className = 'typer-caret';
+        caret.setAttribute('aria-hidden', 'true');
+        const dot = document.createElement('span');
+        dot.className = 'typer-dot';
+        dot.setAttribute('aria-hidden', 'true');
+        dot.textContent = end;
+        el.textContent = '';
+        el.append(reader, live, caret, dot);
+
+        // Put the caret and the full stop just after the last typed letter.
+        const place = () => {
+          const range = document.createRange();
+          range.setStart(text, text.length);
+          range.collapse(true);
+          const r = range.getClientRects()[0];
+          const b = el.getBoundingClientRect();
+          const x = r ? r.left - b.left : 0;
+          const y = r ? r.top - b.top : 0;
+          caret.style.transform = `translate(${x}px, ${y}px)`;
+          dot.style.transform = `translate(${x + caret.offsetWidth + 1}px, ${y}px)`;
+        };
+        // Size the box to the longest phrase at the current width.
+        const reserve = () => {
+          const keep = text.data;
+          el.style.minWidth = '';
+          el.style.minHeight = '';
+          let w = 0, h = 0;
+          for (const ph of phrases) {
+            text.data = ph;
+            const r = el.getBoundingClientRect();
+            w = Math.max(w, r.width);
+            h = Math.max(h, r.height);
+          }
+          text.data = keep;
+          el.style.minHeight = h + 'px';
+          if (!el.classList.contains('typer-block')) el.style.minWidth = w + 'px';
+          place();
+        };
+        let timer = 0, i = 0, seen = false, shown = true;
+        const later = (fn: () => void, ms: number) => { timer = window.setTimeout(fn, ms); };
+        const typeIn = (n: number) => {
+          const ph = phrases[i];
+          text.data = ph.slice(0, n);
+          place();
+          if (n < ph.length) later(() => typeIn(n + 1), 55 + Math.random() * 35);
+          else later(() => eraseOut(ph.length), 2400);
+        };
+        const eraseOut = (n: number) => {
+          text.data = phrases[i].slice(0, n);
+          place();
+          if (n > 0) later(() => eraseOut(n - 1), 24);
+          else { i = (i + 1) % phrases.length; later(() => typeIn(0), 260); }
+        };
+        const run = () => { window.clearTimeout(timer); if (seen && shown && !document.hidden) later(() => eraseOut(phrases[i].length), 2400); };
+        new IntersectionObserver((e) => { seen = e[0].isIntersecting; if (seen) run(); else window.clearTimeout(timer); }).observe(el);
+        document.addEventListener('visibilitychange', () => { shown = !document.hidden; if (shown) run(); else window.clearTimeout(timer); });
+        document.fonts?.ready.then(reserve);
+        let rz = 0;
+        window.addEventListener('resize', () => { window.clearTimeout(rz); rz = window.setTimeout(() => { window.clearTimeout(timer); reserve(); run(); }, 160); });
+        place();
+      });
+    }
+
+    // 2) The dotted trail in the contact section: from the camp under the headline to an X beside the first
+    //    field of the form. It is drawn from the real positions each time the layout changes, so it always connects.
+    const grid = document.querySelector<HTMLElement>('.contact-grid');
+    const svg = grid?.querySelector<SVGSVGElement>('.route-link');
+    const camp = grid?.querySelector<SVGSVGElement>('.camp');
+    const form = grid?.querySelector<HTMLElement>('.form-bare');
+    if (grid && svg && camp && form) {
+      const route = svg.querySelector('.route')!;
+      const x = svg.querySelector('.x')!;
+      let raf = 0;
+      const draw = () => {
+        raf = 0;
+        const g = grid.getBoundingClientRect();
+        const c = camp.getBoundingClientRect();
+        const field = form.querySelector<HTMLElement>('.step:not([hidden]) :is(input, textarea, select, button)') ?? form;
+        const f = field.getBoundingClientRect();
+        const sx = c.right - g.left + 10;
+        const sy = c.bottom - g.top - 8;
+        const side = f.left - c.right > 140; // form beside the camp (wide) or under it (phones, tablets)
+        const ex = side ? f.left - g.left - 34 : f.left - g.left + f.width * 0.72;
+        const ey = side ? f.top - g.top + Math.min(f.height / 2, 34) : f.top - g.top - 30;
+        const dx = ex - sx, dy = ey - sy;
+        // stop the dots a little short of the X
+        const tx = side ? ex - 14 : ex, ty = side ? ey : ey - 14;
+        route.setAttribute('d', side
+          ? `M${sx} ${sy} C${sx + dx * 0.4} ${sy + 34}, ${tx - dx * 0.3} ${ty + 50}, ${tx} ${ty}`
+          : `M${sx} ${sy} C${sx + (tx - sx) * 0.6} ${sy + 4}, ${tx} ${ty - (ty - sy) * 0.6}, ${tx} ${ty}`);
+        x.setAttribute('d', `M${ex - 8} ${ey - 8}L${ex + 8} ${ey + 8}M${ex + 8} ${ey - 8}L${ex - 8} ${ey + 8}`);
+      };
+      const soon = () => { if (!raf) raf = requestAnimationFrame(draw); };
+      new ResizeObserver(soon).observe(grid);
+      new ResizeObserver(soon).observe(form);
+      new MutationObserver(soon).observe(form, { subtree: true, attributes: true, attributeFilter: ['hidden'] });
+      window.addEventListener('resize', soon);
+      document.fonts?.ready.then(soon);
+      soon();
+    }
+  </script>
 </Base>
 
 <style is:global>
@@ -328,19 +421,24 @@ const doodle = {
   .e4 .tl { font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--sun); color: inherit; }
   .e4 .fine { font-size: 0.8125rem; margin: 1.75rem 0 0.75rem; }
 
-  /* Header on this page: sage bar with a straight bottom edge and a bigger logo (Bryn, Nov 2).
-     The padding keeps the Brand Book clear space (the x-height of the logotype) around the logo. */
+  /* Header on this page: sage bar with a straight bottom edge and a big logo (Bryn, Nov 2).
+     The padding keeps the Brand Book clear space (the x-height of the logotype) around the logo.
+     Nov 3: the logo is a flex item that takes only the room the menu leaves, so the menu can never sit on
+     top of it at any width. --logo-top is its full size at the top of the page, --logo-solid is its size once
+     the header has turned solid on scroll (smaller, but still full-bodied on wide screens). */
+  body:has(.e4) { --logo-top: 15.5rem; --logo-solid: 10.5rem; }
+  @media (min-width: 48rem) { body:has(.e4) { --logo-top: clamp(15.5rem, 30vw, 26rem); --logo-solid: clamp(10.5rem, 20vw, 20rem); } }
   body:has(.e4) .site-header:not(.is-solid) { background: #e9efdf; box-shadow: none; }
   body:has(.e4) .site-header:not(.is-solid)::before { display: none; }
+  body:has(.e4) .site-header .brand { flex: 0 1 var(--logo-top); min-width: 9.5rem; }
+  body:has(.e4) .site-header.is-solid .brand { flex-basis: var(--logo-solid); }
   body:has(.e4) .site-header:not(.is-solid) .brand { padding: 1rem 0; }
-  body:has(.e4) .site-header:not(.is-solid) .brand img { width: 15.5rem; }
-  @media (min-width: 48rem) {
-    body:has(.e4) .site-header:not(.is-solid) .brand { padding: 1.5rem 0; }
-    body:has(.e4) .site-header:not(.is-solid) .brand img { width: 26rem; }
-  }
+  body:has(.e4) .site-header .brand img { width: 100%; }
+  body:has(.e4) .site-header .desktop-nav { flex: 1 0 auto; margin-left: 1.5rem; } /* at least 40px between the logo and the menu */
+  @media (min-width: 48rem) { body:has(.e4) .site-header:not(.is-solid) .brand { padding: 1.5rem 0; } }
 
   /* Hero */
-  .e4 .hero-e4 { --hero-top: 11rem; position: relative; min-height: 100svh; max-height: 68rem; overflow: hidden; color: #e9efdf; background: #e9efdf; display: flex; align-items: flex-end; }
+  .e4 .hero-e4 { --hero-top: calc(var(--logo-top) * 0.3065 + 3rem); position: relative; min-height: 100svh; max-height: 68rem; overflow: hidden; color: #e9efdf; background: #e9efdf; display: flex; align-items: flex-end; }
   .e4 .hero-e4 .hero-pic, .e4 .hero-e4 .hero-photo { position: absolute; inset: var(--hero-top) 0 0 0; width: 100%; height: calc(100% - var(--hero-top)); object-fit: cover; object-position: 70% 0%; }
   .e4 .hero-e4 .hero-photo { inset: 0; height: 100%; }
   .e4 .hero-e4::after {
@@ -361,7 +459,12 @@ const doodle = {
   .e4 .hero-copy { position: relative; z-index: 2; padding-bottom: 4rem; }
   /* No fade-in on the home hero text: it is visible on first paint, so it can't hold back LCP. */
   .e4 .hero-copy > * { animation: none; }
-  .e4 .hero-copy .kicker { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sun); margin: 0 0 0.75rem; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
+  /* "Virginia" stands out (Bryn, Nov 3). Option A, used here: bigger and heavier, still Brand Book yellow, with the rest in cream.
+     Option B (blue): .kicker-b below. To switch, add class "kicker-b" to the h1. */
+  .e4 .hero-copy .kicker .va { font-size: 1.55em; font-weight: 900; letter-spacing: 0.1em; margin-right: 0.15em; }
+  .e4 .hero-copy .kicker .va { color: var(--sun); }
+  .e4 .hero-copy .kicker-b .va { color: #6fb1c8; }
+  .e4 .hero-copy .kicker { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); margin: 0 0 0.75rem; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
   .e4 .hero-big { font-size: clamp(2.625rem, 6.6vw, 6.5rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 2.75rem; color: var(--sun); text-shadow: 0 2px 18px rgba(20, 36, 27, 0.45); }
   .e4 .hero-big .hand { display: inline-block; font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; text-transform: none; letter-spacing: 0; font-size: 1.12em; line-height: 1.1; text-shadow: none; }
   .e4 .hero-lede { font-size: 1.375rem; margin: 0 0 1.875rem; max-width: 41rem; }
@@ -369,7 +472,7 @@ const doodle = {
   /* Orange, like every other action on the site (dark green on orange is 3.3:1, so the label stays large: 19px bold). */
   .e4 .btn-call { letter-spacing: 0.01em; font-weight: 800; padding: 0 1.75rem; }
   @media (max-width: 47.99rem) {
-    .e4 .hero-e4 { --hero-top: 6.75rem; }
+    .e4 .hero-e4 { --hero-top: calc(var(--logo-top) * 0.3065 + 2rem); }
     .e4 .hero-e4 .hero-photo { object-position: 0% 0%; }
     .e4 .hero-e4::after { background: linear-gradient(180deg, rgba(64, 104, 60, 0) 90%, #40683c 100%), linear-gradient(0deg, rgba(20, 36, 27, 0.9) 0%, rgba(20, 36, 27, 0.8) 55%, rgba(20, 36, 27, 0) 84%); }
     .e4 .hero-lede { font-size: 1.125rem; }
@@ -402,9 +505,8 @@ const doodle = {
   .e4 .dark .doodle { stroke: #e9efdf; }
 
   /* Client comments: straight cards, plain initials. */
-  .e4 .e4-quotes { background: var(--pine); color: #fff; padding: 5.5rem 0 6rem; }
-  .e4 .ridge { position: absolute; left: 0; top: -4.9rem; width: 100%; height: 5rem; fill: var(--pine); pointer-events: none; }
-  .e4 .notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.1rem; margin: 2.9rem 0 1.9rem; }
+  .e4 .e4-quotes { background: var(--pine); color: #fff; padding: 5.5rem 0 5rem; }
+  .e4 .notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.1rem; margin: 3.25rem 0 1.9rem; }
   .e4 .note { position: relative; margin: 0; background: var(--cream); color: var(--forest); padding: 1.9rem 1.9rem 1.6rem; border-radius: 14px; }
   .e4 .note .stars { width: 94px; height: 18px; fill: var(--amber); display: block; margin-bottom: 0.75rem; }
   .e4 .note blockquote { margin: 0; font-size: 1.1875rem; line-height: 1.6; font-weight: 500; }
@@ -412,10 +514,10 @@ const doodle = {
   .e4 .note figcaption { font-weight: 800; letter-spacing: 0.06em; color: var(--act-e4); margin-top: 1rem; }
   .e4 .yeti { width: 84px; height: 55px; right: 1.6rem; top: -53px; }
   .e4 .e4-quotes .fine { color: #e9efdf; }
-  @media (max-width: 47.99rem) { .e4 .notes { grid-template-columns: 1fr; gap: 2.4rem; } .e4 .e4-quotes { padding: 4rem 0; } .e4 .ridge { height: 3rem; top: -2.9rem; } }
+  @media (max-width: 47.99rem) { .e4 .notes { grid-template-columns: 1fr; gap: 2.4rem; } .e4 .e4-quotes { padding: 4.5rem 0 4rem; } }
 
   /* Steps: one plain row, a thin dotted trail behind it. */
-  .e4 .e4-steps { background: var(--sage-e4); padding: 6rem 0; }
+  .e4 .e4-steps { background: var(--sage-e4); padding: 6rem 0; overflow-x: clip; } /* the trail line pokes 2rem past the edge of narrow windows */
   .e4 .cards { position: relative; margin-top: 5.5rem; }
   .e4 .trail { position: absolute; left: -2rem; top: -3.25rem; width: calc(100% + 4rem); height: 3.75rem; fill: none; stroke: var(--forest); stroke-opacity: 0.45; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 0.1 9; overflow: visible; }
   .e4 .trail path { vector-effect: non-scaling-stroke; }
@@ -449,18 +551,27 @@ const doodle = {
   .e4 .topic-links a { color: #e9efdf; font-weight: 700; text-decoration: underline; text-decoration-color: var(--sun); text-underline-offset: 5px; }
   @media (max-width: 47.99rem) { .e4 .e4-help { padding: 4rem 0; } .e4 .help-row { grid-template-columns: 1fr; gap: 2.5rem; } }
 
-  /* Band */
-  .e4 .e4-band { position: relative; min-height: 38.75rem; display: flex; align-items: center; color: var(--cream); overflow: hidden; }
+  /* Band: right under the hero, words on the right. The top of the photo fades in from the hero's bottom green,
+     so the two photos meet in one soft edge (no zigzag). */
+  .e4 .e4-band { position: relative; min-height: 34rem; display: flex; align-items: center; color: var(--cream); overflow: hidden; }
   .e4 .e4-band picture, .e4 .e4-band .band-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .e4 .e4-band::after { content: ''; position: absolute; inset: 0; background: rgba(20, 36, 27, 0.32); }
-  .e4 .e4-band .wrap { position: relative; z-index: 2; }
+  .e4 .e4-band::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #40683c 0, rgba(64, 104, 60, 0) 10rem), rgba(20, 36, 27, 0.32); }
+  .e4 .e4-band .wrap { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-end; text-align: right; padding-top: 4rem; }
   .e4 .e4-band .big { font-size: clamp(2.5rem, 7.5vw, 6.75rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.02em; text-transform: uppercase; margin: 0; max-width: 62rem; }
   .e4 .e4-band .sub { font-size: 1.375rem; margin: 1.4rem 0 0; }
-  @media (max-width: 47.99rem) { .e4 .e4-band { min-height: 28.75rem; } .e4 .e4-band .sub { font-size: 1.125rem; } }
+  @media (max-width: 47.99rem) { .e4 .e4-band { min-height: 26rem; } .e4 .e4-band .sub { font-size: 1.125rem; } }
+
+  /* Rotating type-outs. The sentence in the HTML is complete; the script only swaps the last phrase.
+     The box is sized (by the script) to the longest phrase so nothing moves while it types. The caret does not blink. */
+  .e4 .typer { display: inline-block; position: relative; box-sizing: border-box; text-align: left; white-space: nowrap; min-width: 23ch; padding-right: 0.5em; }
+  .e4 .typer-block { display: block; white-space: normal; min-width: 0; }
+  .e4 .typer-caret, .e4 .typer-dot { position: absolute; left: 0; top: 0; }
+  .e4 .typer-caret { width: 0.09em; min-width: 2px; height: 0.82em; margin-top: 0.1em; background: currentColor; opacity: 0.85; }
 
   /* Results */
   .e4 .e4-results { background: var(--cream); padding: 6rem 0; }
   .e4 .rgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; margin-top: 2.5rem; }
+  @media (max-width: 71.99rem) { .e4 .rgrid { grid-template-columns: 1fr 1fr; } } /* four across needs about 1150px; it ran off the side between 768 and 1150 */
   .e4 .rgrid article { border-top: 4px solid var(--amber); padding-top: 1rem; }
   .e4 .amount { font-size: 2.5rem; font-weight: 900; letter-spacing: -0.02em; margin: 0 0 0.4rem; color: var(--forest); }
   .e4 .rgrid p:not(.amount) { font-size: 1rem; margin: 0; color: #3d5546; }
@@ -469,7 +580,7 @@ const doodle = {
   @media (max-width: 47.99rem) { .e4 .e4-results { padding: 4rem 0; } .e4 .rgrid { grid-template-columns: 1fr 1fr; gap: 1.4rem; } .e4 .amount { font-size: 1.75rem; } }
 
   /* Meet us */
-  .e4 .e4-us { background: var(--pine); color: #fff; padding: 6rem 0; }
+  .e4 .e4-us { background: var(--pine); color: #fff; padding: 6rem 0; overflow-x: clip; } /* the sun doodle pokes out the right edge on narrow windows */
   .e4 .us-text { max-width: 48rem; margin: 2rem 0 0; color: #e4ecdf; }
   .e4 .us-text a { color: #fff; text-decoration-color: var(--sun); }
   .e4 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.75rem; }
@@ -486,22 +597,20 @@ const doodle = {
   .e4 .e4-contact { padding: 7rem 0 5rem; background: var(--forest); color: #fff; }
   .e4 .contact-grid { display: grid; grid-template-columns: 1fr 27.5rem; gap: 6rem; align-items: center; }
   .e4 .talk .e4-h { font-size: clamp(2.5rem, 4.6vw, 4rem); line-height: 1.02; color: var(--cream); }
-  .e4 .camp { display: block; width: 16.25rem; height: 7.5rem; margin: 2.25rem 0 0 auto; fill: none; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
-  .e4 .camp .route { stroke: #e9efdf; stroke-opacity: 0.6; stroke-width: 2.5; stroke-dasharray: 0.1 9; }
-  .e4 .camp .x { stroke: var(--sun); stroke-width: 3.4; }
-  .e4 .camp .ink { stroke: #e9efdf; stroke-width: 2; }
+  /* The trail: a dotted line from the camp under the headline to a yellow X by the first field. The script draws it
+     from the real positions, so it connects at every width and layout (phone, tablet, wide). */
+  .e4 .contact-grid { position: relative; }
+  .e4 .route-link { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+  .e4 .route-link .route { fill: none; stroke: #e9efdf; stroke-opacity: 0.6; stroke-width: 2.5; stroke-dasharray: 0.1 9; stroke-linecap: round; }
+  .e4 .route-link .x { fill: none; stroke: var(--sun); stroke-width: 3.4; stroke-linecap: round; }
+  .e4 .camp { display: block; width: 8.25rem; height: auto; margin: 0.75rem 0 0; fill: none; stroke: #e9efdf; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+  .e4 .camp path { vector-effect: non-scaling-stroke; }
   .e4 .form-bare .form-card { background: none; box-shadow: none; padding: 0; border: 0; color: #fff; }
   .e4 .form-bare .form-card > h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .e4 .form-bare .step[data-step='name'] legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .e4 .form-bare .intake-top:has(.intake-back[hidden]) .intake-progress { visibility: hidden; }
   .e4 .form-bare .step-q { color: var(--cream); }
   .e4 .form-bare input[type='text'] { background: rgba(233, 239, 223, 0.95); border: 0; min-height: 3.875rem; border-radius: 12px; font-size: 1.25rem; }
-  @media (max-width: 47.99rem) { .e4 .e4-contact { padding: 4rem 0 3rem; } .e4 .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; } .e4 .camp { width: 12rem; height: 5.5rem; margin-top: 1.25rem; } }
-
-  /* Sketched map above the footer */
-  .e4 .mapfoot { background: var(--forest); padding: 1.25rem 0 0; overflow: hidden; }
-  .e4 .mapfoot svg { display: block; width: 100%; max-width: 90rem; margin: 0 auto; height: auto; }
-  .e4 .map-labels { font-family: var(--font-body); font-weight: 700; font-size: 24px; letter-spacing: 0.02em; }
-
-  @media (max-width: 47.99rem) { .e4 .mapfoot svg { width: 180%; margin-left: -40%; } }
+  @media (max-width: 61.99rem) { .e4 .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; } } /* the headline needs room, so the form drops under it below about 990px */
+  @media (max-width: 47.99rem) { .e4 .e4-contact { padding: 4rem 0 3rem; } .e4 .camp { width: 6.5rem; margin-top: 1rem; } }
 </style>
