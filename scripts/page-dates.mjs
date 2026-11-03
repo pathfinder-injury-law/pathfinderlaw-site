@@ -57,6 +57,7 @@ function blame(file) {
 
 const words = (s) => (s.match(/[A-Za-z’']{2,}/g) ?? []).length >= 2;
 const quoted = (line) => [...line.matchAll(/'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\\.)*)"|`([^`]*)`/g)].map((m) => m[1] ?? m[2] ?? m[3]).join(' ');
+const MARKUP_ATTR = /\b(?:class|href|src|srcset|type|rel|id|as|media|crossorigin|loading|decoding|width|height|sizes|fetchpriority|for|name|autocomplete|tabindex|data-[\w-]+|aria-hidden|viewBox|d|fill|stroke|path)=(?:"[^"]*"|'[^']*'|\{[^}]*\})/g;
 const isComment = (t) => /^\s*(\/\/|\/\*|\*|<!--)/.test(t);
 
 // A data-file line counts when its quoted strings hold words (the page's wording).
@@ -75,7 +76,10 @@ function pageTextLines(rows) {
     if (open && !t.includes(`</${open[1]}`)) { block = open[1]; return; }
     if (isComment(t)) return;
     const visible = t.replace(/<!--.*?-->/g, ' ').replace(/<[^>]*>?/g, ' ').replace(/\{[^}]*\}/g, ' ');
-    if (words(visible) || words(quoted(t))) keep.push(i);
+    // Text props such as title="Contact Us" are words on the page; class names, paths and other markup
+    // attributes are not, so those are dropped before looking at quoted strings.
+    const props = t.replace(MARKUP_ATTR, ' ');
+    if (words(visible) || words(quoted(props))) keep.push(i);
   });
   return keep;
 }
