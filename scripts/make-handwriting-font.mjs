@@ -18,9 +18,12 @@ const SRC = join(repo, 'fonts-src/kbs-handwriting.ttf');
 const OUT = join(repo, 'public/fonts/kbs-handwriting.woff2');
 
 // Bryn's short reply lines (Nov 3, 2026: "The responsive words should be in my handwriting across the site"):
-// "We’ve got this." in the home hero and "Let’s talk." on Contact, plus a straight apostrophe in case an
-// edit types ' instead of ’. Add each new line here when a page sets it in the handwriting.
-const TEXT = ['We’ve got this.', 'Let’s talk.'].join('') + "'";
+// "We’ve got this." in the home hero and "Let’s talk." on Contact; on the home page (Nov 3, "3 and 4") "One kind of
+// case." and the form headline "Let’s talk about what happened." with every phrase its ending types out (formPhrases
+// in src/pages/index.astro: keep this list in step). Plus a straight apostrophe in case an edit types ' instead of ’.
+// Add each new line here when a page sets it in the handwriting.
+const formPhrases = ['what happened', 'your injury', 'lost wages', 'surgery', 'why your claim was denied', 'what comes next'];
+const TEXT = ['We’ve got this.', 'Let’s talk.', 'One kind of case.', 'Let’s talk about .', ...formPhrases].join('') + "'";
 
 // 1. Subset, without hinting (the font only shows at large sizes).
 const tmp = mkdtempSync(join(tmpdir(), 'kbs-'));
