@@ -1,7 +1,7 @@
 ---
 import Photo from '../components/Photo.astro';
 import Base from '../layouts/Base.astro';
-import ContactForm from '../components/ContactForm.astro';
+import MapContact from '../components/MapContact.astro';
 import variants from '../data/imageVariants.json';
 import { site } from '../data/site';
 
@@ -271,19 +271,11 @@ const doodle = {
       </div>
     </section>
 
-    <!-- The one form on this page (id="contact"), in a map-only frame: a dotted trail from the compass under the headline to an X by the form (drawn by the script below). -->
-    <section class="e4-contact map map-4 dark">
-      <div class="wrap contact-grid">
-        <svg class="route-link" aria-hidden="true" focusable="false"><path class="route" /><path class="x" /></svg>
-        <div class="talk">
-          <h2 class="e4-h">Let’s talk about <span class="typer typer-block" data-typer={formPhrases.join('|')} data-end=".">what happened.</span></h2>
-          <svg class="camp compass" viewBox="0 0 120 130" aria-hidden="true"><path d={doodle.compassRing} /><path class="dots" d={doodle.compassDots} /><path class="needle" transform="rotate(70 60 70)" d={doodle.needle} /></svg>
-        </div>
-        <div class="form-bare" id="contact">
-          <ContactForm namePlaceholder="What’s your preferred name?" />
-        </div>
-      </div>
-    </section>
+    <!-- The one form on this page (id="contact"), in a map-only frame: a dotted trail from the compass under the headline
+         to an X by the form. Shared with Contact and the inner pages (MapContact). -->
+    <MapContact class="dark" namePlaceholder="What’s your preferred name?">
+      <h2 class="e4-h">Let’s talk about <span class="typer typer-block" data-typer={formPhrases.join('|')} data-end=".">what happened.</span></h2>
+    </MapContact>
 
   </div>
 
@@ -383,49 +375,7 @@ const doodle = {
         place();
       });
     }
-
-    // 2) The dotted trail in the contact section: from the compass under the headline to an X beside the first
-    //    field of the form. It is drawn from the real positions each time the layout changes, so it always connects.
-    const grid = document.querySelector<HTMLElement>('.contact-grid');
-    const svg = grid?.querySelector<SVGSVGElement>('.route-link');
-    const camp = grid?.querySelector<SVGSVGElement>('.camp');
-    const form = grid?.querySelector<HTMLElement>('.form-bare');
-    if (grid && svg && camp && form) {
-      const route = svg.querySelector('.route')!;
-      const x = svg.querySelector('.x')!;
-      const needle = camp.querySelector('.needle');
-      let raf = 0;
-      const draw = () => {
-        raf = 0;
-        const g = grid.getBoundingClientRect();
-        const c = camp.getBoundingClientRect();
-        const field = form.querySelector<HTMLElement>('.step:not([hidden]) :is(input, textarea, select, button)') ?? form;
-        const f = field.getBoundingClientRect();
-        const sx = c.right - g.left + 10;
-        const sy = c.top - g.top + c.height * 0.55;
-        const side = f.left - c.right > 140; // form beside the compass (wide) or under it (phones, tablets)
-        const ex = side ? f.left - g.left - 34 : f.left - g.left + f.width * 0.72;
-        const ey = side ? f.top - g.top + Math.min(f.height / 2, 34) : f.top - g.top - 30;
-        const dx = ex - sx, dy = ey - sy;
-        // stop the dots a little short of the X
-        const tx = side ? ex - 14 : ex, ty = side ? ey : ey - 14;
-        route.setAttribute('d', side
-          ? `M${sx} ${sy} C${sx + dx * 0.4} ${sy + 34}, ${tx - dx * 0.3} ${ty + 50}, ${tx} ${ty}`
-          : `M${sx} ${sy} C${sx + (tx - sx) * 0.6} ${sy + 4}, ${tx} ${ty - (ty - sy) * 0.6}, ${tx} ${ty}`);
-        x.setAttribute('d', `M${ex - 8} ${ey - 8}L${ex + 8} ${ey + 8}M${ex + 8} ${ey - 8}L${ex - 8} ${ey + 8}`);
-        // Turn the compass needle to point at the X (0 degrees is straight up).
-        const cx = c.left - g.left + c.width / 2, cy = c.top - g.top + c.height * (70 / 130);
-        const deg = Math.atan2(ex - cx, cy - ey) * 180 / Math.PI;
-        needle?.setAttribute('transform', `rotate(${deg.toFixed(1)} 60 70)`);
-      };
-      const soon = () => { if (!raf) raf = requestAnimationFrame(draw); };
-      new ResizeObserver(soon).observe(grid);
-      new ResizeObserver(soon).observe(form);
-      new MutationObserver(soon).observe(form, { subtree: true, attributes: true, attributeFilter: ['hidden'] });
-      window.addEventListener('resize', soon);
-      document.fonts?.ready.then(soon);
-      soon();
-    }
+    // 2) The dotted trail and compass at the form are drawn by MapContact.
   </script>
 </Base>
 
@@ -645,23 +595,7 @@ const doodle = {
   @media (max-width: 47.99rem) { .e4 .e4-us { padding: 4rem 0; } .e4 .pair { grid-template-columns: 1fr; } }
 
   /* Contact: no photo. The form sits in a map: contour lines, and a trail that ends at an X by the form. */
-  .e4 .e4-contact { padding: 7rem 0 5rem; background: var(--forest); color: #fff; }
-  .e4 .contact-grid { display: grid; grid-template-columns: 1fr 27.5rem; gap: 6rem; align-items: center; }
-  .e4 .talk .e4-h { font-size: clamp(2.5rem, 4.6vw, 4rem); line-height: 1.02; color: var(--cream); }
-  /* The trail: a dotted line from the camp under the headline to a yellow X by the first field. The script draws it
-     from the real positions, so it connects at every width and layout (phone, tablet, wide). */
-  .e4 .contact-grid { position: relative; }
-  .e4 .route-link { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
-  .e4 .route-link .route { fill: none; stroke: #e9efdf; stroke-opacity: 0.6; stroke-width: 2.5; stroke-dasharray: 0.1 9; stroke-linecap: round; }
-  .e4 .route-link .x { fill: none; stroke: var(--sun); stroke-width: 3.4; stroke-linecap: round; }
-  .e4 .camp { display: block; width: 8.25rem; height: auto; margin: 0.75rem 0 0; fill: none; stroke: #e9efdf; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
-  .e4 .camp path { vector-effect: non-scaling-stroke; }
-  .e4 .form-bare .form-card { background: none; box-shadow: none; padding: 0; border: 0; color: #fff; }
-  .e4 .form-bare .form-card > h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .e4 .form-bare .step[data-step='name'] legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .e4 .form-bare .intake-top:has(.intake-back[hidden]) .intake-progress { visibility: hidden; }
-  .e4 .form-bare .step-q { color: var(--cream); }
-  .e4 .form-bare input[type='text'] { background: rgba(233, 239, 223, 0.95); border: 0; min-height: 3.875rem; border-radius: 12px; font-size: 1.25rem; }
-  @media (max-width: 61.99rem) { .e4 .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; } } /* the headline needs room, so the form drops under it below about 990px */
-  @media (max-width: 47.99rem) { .e4 .e4-contact { padding: 4rem 0 3rem; } .e4 .camp { width: 6.5rem; margin-top: 1rem; } }
+  .e4 .map-contact { padding: 7rem 0 5rem; } /* the form section itself is MapContact */
+  .e4 .mc-talk .e4-h { font-size: clamp(2.5rem, 4.6vw, 4rem); line-height: 1.02; color: var(--cream); }
+  @media (max-width: 47.99rem) { .e4 .map-contact { padding: 4rem 0 3rem; } }
 </style>
