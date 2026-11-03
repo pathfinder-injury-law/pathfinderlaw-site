@@ -11,7 +11,7 @@ interface Props {
   // top: the section opens the page, so it starts behind the header (no strip of page background between them).
   top?: boolean;
 }
-const { namePlaceholder = 'What’s your name?', top = false } = Astro.props;
+const { namePlaceholder = 'What’s your preferred name?', top = false } = Astro.props;
 ---
 <section class:list={['map-contact', top && 'mc-top']}>
   <div class="wrap mc-grid">
