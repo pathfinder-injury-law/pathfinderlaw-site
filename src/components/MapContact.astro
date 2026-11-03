@@ -105,6 +105,7 @@ const { namePlaceholder = 'What’s your preferred name?', top = false, class: e
   .mc-form .intake-top:has(.intake-back[hidden]) .intake-progress { visibility: hidden; }
   .mc-form .step-q { color: #fff5d5; }
   .mc-form .intake-back, .mc-form .intake-progress { color: #e9efdf; } /* "Back" and "Step 2 of 8": the form's pine green is unreadable on forest */
+  .mc-form .field-error { color: var(--sun); } /* the form's dark red is 1.4:1 on forest; brand yellow is 7.1:1 */
   .mc-form input[type='text'] { background: rgba(233, 239, 223, 0.95); border: 0; min-height: 3.875rem; border-radius: 12px; font-size: 1.25rem; }
   @media (max-width: 61.99rem) { .mc-grid { grid-template-columns: 1fr; gap: 1.75rem; } } /* the headline needs room, so the form drops under it below about 990px */
   @media (max-width: 47.99rem) { .map-contact { padding: 3.5rem 0 3rem; } .map-contact.mc-top { padding-top: calc(var(--header-h) + 2rem); } .mc-compass { width: 6.5rem; margin-top: 1rem; } }
