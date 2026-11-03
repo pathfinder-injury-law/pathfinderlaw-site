@@ -60,6 +60,29 @@ const onDomain = (host: string, domains: string[]) =>
     return host === dom || host.endsWith(`.${dom}`);
   });
 
+// Short case words ("back", "comp", "work") must stand alone or take a plain ending, so
+// "backlinks", "company" and "competitors" in a sales pitch do not count as injury words.
+// Longer stems ("injur", "disab", "claim", "doctor") still match as word beginnings.
+const SHORT_STEM = 4;
+const ENDINGS = '(?:s|es|ed|er|ers|ing|ful|place)?';
+
+// True when the words the person typed mention an injury, a job, a doctor or comp.
+export function mentionsCase(message: string, caseWords: string[]): boolean {
+  const msg = message.toLowerCase();
+  return caseWords.some((w) =>
+    new RegExp(w.length <= SHORT_STEM ? `\\b${esc(w)}${ENDINGS}\\b` : `\\b${esc(w)}`).test(msg),
+  );
+}
+
+// A message that talks to the firm about its own website or Google ranking, which an injured
+// worker does not do. Treated like an agency phrase: never screened when case words are present.
+const FIRM_PITCH: RegExp[] = [
+  /\bpathfinder\s*(?:injury\s*)?(?:law\s*)?(?:group\s+|firm\s+)?team\b/,
+  /\bpathfinder\s*law\.com\b/,
+  /\byour\s+(?:google|search)\s+(?:rank\w*|results?|presence|position)\b/,
+  /\byour\s+(?:web\s?site|site)(?:'s)?\s+(?:rank\w*|traffic|seo|speed|performance|visibility)\b/,
+];
+
 // Pure decision. `earlierFromSameEmail` is the count of earlier submissions
 // from the same email inside the repeat window (looked up by the caller).
 export function decide(sub: Submission, rules: Rules, earlierFromSameEmail: number): Decision {
@@ -67,8 +90,13 @@ export function decide(sub: Submission, rules: Rules, earlierFromSameEmail: numb
   const emailHost = sub.email.toLowerCase().split('@')[1] ?? '';
   const links = findLinkHosts(sub.message);
 
-  // Answering the step-by-step questions counts as describing a real case.
-  const hasCaseWords = sub.intake !== undefined || rules.caseWords.some((w) => new RegExp(`\\b${esc(w)}`).test(msg));
+  // Case words must be in what the person typed. Picking step-by-step answers proves nothing:
+  // a sales pitch can click through them. A blank "what happened" box has no pitch phrase, so
+  // it is still a lead.
+  // The firm's own name ("Pathfinder Injury Law") holds "injur", so it is cut out first.
+  const mentionsCaseWords = mentionsCase(sub.message.replace(/pathfinder\s*(?:injury\s*)?law(?:\.com)?/gi, ' '), rules.caseWords);
+  // Sending the step-by-step form again soon is only noted, never screened.
+  const countsAsCase = sub.intake !== undefined || mentionsCaseWords;
 
   // A known agency domain, as the sender or as a link, is screened even with case words.
   if (onDomain(emailHost, rules.agencyDomains) || links.some((h) => onDomain(h, rules.agencyDomains))) {
@@ -76,16 +104,21 @@ export function decide(sub: Submission, rules: Rules, earlierFromSameEmail: numb
   }
   const phrase = rules.agencyPhrases.find((p) => new RegExp(`\\b${esc(p)}\\b`).test(msg));
   if (phrase) {
-    return hasCaseWords
+    return mentionsCaseWords
       ? { outcome: 'unsure', reason: 'agency_phrase_with_case_words' }
       : { outcome: 'screened', reason: `agency_phrase: ${phrase}` };
   }
+  if (FIRM_PITCH.some((re) => re.test(msg))) {
+    return mentionsCaseWords
+      ? { outcome: 'unsure', reason: 'firm_pitch_with_case_words' }
+      : { outcome: 'screened', reason: 'firm_pitch' };
+  }
   if (earlierFromSameEmail >= rules.limits.repeatMax) {
-    return hasCaseWords
+    return countsAsCase
       ? { outcome: 'unsure', reason: 'repeat_sender_with_case_words' }
       : { outcome: 'screened', reason: 'repeat_sender' };
   }
-  if (links.length >= rules.limits.screenAtLinks && !hasCaseWords) {
+  if (links.length >= rules.limits.screenAtLinks && !mentionsCaseWords) {
     return { outcome: 'screened', reason: `many_links (${links.length})` };
   }
   if (links.length >= 1) return { outcome: 'unsure', reason: 'has_link' };

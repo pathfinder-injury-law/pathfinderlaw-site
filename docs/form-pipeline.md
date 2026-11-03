@@ -46,7 +46,9 @@ The email lists each answer as a plain line ("How hurt: An accident at work") un
 
 ### Screening rules (all in KV, none in the code)
 - Signals: an agency domain (as the sender or in a link), agency phrases ("virtual assistant", "SEO", "AI employee" and others), links in the message, a repeat sender (same email, 3 earlier messages in 24 hours). "VA" and the phone's country are never signals.
-- A message that mentions an injury, a job, a doctor or comp words (the `caseWords` list) is **never screened** unless it comes from or links to a known agency domain.
+- A message whose own words (the box the person typed in) mention an injury, a job, a doctor or comp words (the `caseWords` list) is **never screened** unless it comes from or links to a known agency domain. Picking answers on the step-by-step form does not count: a sales pitch can click through the questions (a pitch did on Nov 3, 2026). A blank "what happened" box has no pitch words, so it stays a lead. The firm's own name ("Pathfinder Injury Law") is ignored when looking for case words.
+- Short case words (4 letters or fewer: "back", "comp", "work", "hurt", "fell", "fall", "pain", "boss", "wage", "job") must be a whole word or take a plain ending (s, ed, er, ing, place and a few more), so "backlinks", "company" and "competitors" in a pitch do not count. Longer stems ("injur", "doctor") still match word beginnings.
+- A message that talks to the firm about its own site (for example "Hi Pathfinderlaw team", "pathfinderlaw.com", "your Google ranking", "your website's traffic") is treated like an agency phrase: screened with no case words, unsure with them (reason `firm_pitch`).
 - One link to any other site makes the message **unsure**, not spam.
 - Any trouble reading or applying the rules makes the message **unsure**.
 - No AI scoring.
@@ -60,7 +62,7 @@ The email lists each answer as a plain line ("How hurt: An accident at work") un
 - The email footer repeats that no attorney-client relationship exists and that the sender acknowledged this.
 - Lead emails come as a styled email (with a plain-text copy): a colored tag (PRIORITY CASE, POSSIBLE CASE, REFER OUT, LIKELY NOT A CASE, or WEBSITE MESSAGE for the plain form), the name, the phone number with Call and Text buttons, the email, the answers one per line with what happened last in the same style. Brand colors only. Everything the visitor typed is escaped. A yellow "Check this one:" box appears only when something needs a second look, written in plain words (for example "This person has sent the form more than once recently"), never as codes. A phone test that arrives with no "Check this one" box passed every check.
 - **When did it happen?** is asked right after "How did you get hurt?" (In the last month, 1 to 6 months ago, 6 months to a year ago, 1 to 2 years ago, More than 2 years ago, Not sure). More than 2 years ago is sorted LIKELY NOT A CASE (Virginia's 2-year filing deadline may have passed) unless it refers out; 1 to 2 years ago sorts as usual and the email warns the deadline may be close. Rule approved by Bryn, Oct 31, 2026.
-- Someone who answered the step-by-step questions counts as describing a real case, so sending the form again soon is noted, not screened.
+- Someone who answered the step-by-step questions counts as describing a real case for the repeat-sender rule only, so sending the form again soon is noted, not screened. Pitch phrases, firm pitches and many links are judged on the typed words alone.
 - The once-an-hour limit on the "Turnstile not configured" alarm is a self-expiring key (`alert-sent:turnstile_not_configured`) in the same settings store as the rules. It needs no setup and can be ignored.
 - On a death claim or an incident that hurt more than one worker, run a conflict check on the names before reading further (plan rule).
 
