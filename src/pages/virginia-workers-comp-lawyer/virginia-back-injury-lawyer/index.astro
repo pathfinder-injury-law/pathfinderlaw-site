@@ -4,26 +4,27 @@ import PageHero from '../../../components/PageHero.astro';
 import ContactSection from '../../../components/ContactSection.astro';
 import { site } from '../../../data/site';
 
-// Wording is carried over from the current live page. Changes from the live page:
-//  - Meta description: "The dedicated lawyers ... can help you win your back injury case" became
-//    singular and no longer promises a win (plan Section VIII, fix 6). Needs Bryn's OK.
-//  - One sentence added saying benefits depend on the accident meeting the compensability
-//    criteria, copied from the reviewed Workers' Comp page.
-//  - FAQ copied from the Factory page on the live site said "factory accident"; corrected.
-//    The "hearing within thirty days" promise is replaced with a plain statement and the employer
-//    threshold now reads "three or more people". Needs Bryn's review.
-//  - Photo from the old page left out (source unknown).
-const title = 'Virginia Back Injury Lawyer | Spine Injury Attorney';
+// Rewritten Nov 2, 2026 (publishing schedule piece #1). Search Console showed 10,554 impressions
+// and 0 clicks for this page, with "back injury attorney" at position 14.5 and "back injury lawyer"
+// at 20.2. The old body was generic; this version answers what comp pays for a back injury, when it
+// is covered, whether you can sue, and how back claims get fought. Law checked in audit file 38a.
+// Step-by-step filing detail stays in the spine post and disc detail in the herniated disc post,
+// so this page links to them instead of repeating them.
+const title = 'Virginia Back Injury Lawyer | Workers’ Comp Claims';
 const description =
-  'A dedicated lawyer at Pathfinder Injury Law can help you with your back injury case. Let’s talk about Virginia workers’ compensation.';
-const h1 = 'Back Injury Attorney Serving Virginia';
+  'Hurt your back at work in Virginia? What workers’ comp pays for a back injury, when it’s covered, whether you can sue, and how insurers fight back claims.';
+const h1 = 'Back Injury Lawyer for Virginia Workers’ Comp';
 const path = '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/';
 
 const toc = [
-  { id: 'benefits', label: 'Workers’ Comp Benefits After a Back Injury' },
-  { id: 'denial', label: 'Appealing a Workers’ Comp Denial in Virginia' },
-  { id: 'faq', label: 'Virginia Back Injury FAQ' },
-  { id: 'help', label: 'Talk to a Back Injury Lawyer in Virginia' },
+  { id: 'pays', label: 'What Workers’ Comp Pays for a Back Injury' },
+  { id: 'covered', label: 'Is Your Back Injury Covered?' },
+  { id: 'sue', label: 'Can You Sue for a Back Injury at Work?' },
+  { id: 'fight', label: 'How Insurance Companies Fight Back Claims' },
+  { id: 'types', label: 'Common Back Injuries at Work' },
+  { id: 'worth', label: 'What a Back Injury Claim Is Worth' },
+  { id: 'steps', label: 'Steps to Take' },
+  { id: 'faq', label: 'Back Injury Questions' },
 ];
 ---
 <Base
@@ -44,123 +45,216 @@ const toc = [
 
   <div class="wrap page-body">
     <article class="prose">
+      <p><em>Nothing on this page should be taken as legal advice. Every case is different.</em></p>
       <p class="lead">
-        If you’ve hurt your back at work, you may be due Workers’ Compensation to help you recover.
-        Reach out to a back injury lawyer in Virginia if you’re concerned about getting the benefits
-        you’re due.
-      </p>
-      <p>
-        When your back is hurt, it can make it impossible to do anything else. But resting at home means
-        you’re unable to earn the income you need to survive. That puts a strain on you and your family.
-        You need Workers’ Comp, and Pathfinder Injury Law can help you get it.
-      </p>
-      <p>
-        When a back injury caused by a work accident affects your job, reach out to a Virginia back
-        injury lawyer. We may be able to help you seek Workers’ Comp benefits, so you can focus on recovery.
+        If you hurt your back in an accident at work in Virginia, workers’ comp generally pays your
+        medical care and two-thirds of your lost wages while you can’t work. It doesn’t pay for pain and
+        suffering, and in most cases you can’t sue your employer instead. The fight in most back claims
+        is over whether a specific accident caused the injury, or whether the insurance company can call
+        it wear and tear.
       </p>
 
-      <h2 id="benefits">Workers’ Comp Benefits After a Back Injury</h2>
+      <h2 id="pays">What Workers’ Comp Pays for a Back Injury</h2>
       <p>
-        After your Virginia back injury, work may become difficult or impossible, especially if you’ve
-        not had time to heal. Thankfully, that’s why Workers’ Comp benefits exist. These benefits may include reasonable and necessary medical care and part of your lost wages after a serious work accident, assuming the accident meets the
-        compensability criteria for coverage under the Virginia Workers’ Compensation Act.
+        <strong>Virginia workers’ comp pays medical care, wage checks while you’re out or earning less,
+        and in some cases a permanent rating, but not pain and suffering.</strong>
+      </p>
+      <table>
+        <thead>
+          <tr><th>Benefit</th><th>What it pays</th><th>Law</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Medical care</td>
+            <td>Reasonable, necessary treatment for the injury, including surgery, therapy, injections, and prescriptions, for as long as it’s needed and related to the accident</td>
+            <td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/" rel="noopener">Va. Code § 65.2-603</a></td>
+          </tr>
+          <tr>
+            <td>Wage checks while you can’t work (temporary total disability)</td>
+            <td>Two-thirds of your average weekly wage, up to a weekly maximum. For injuries on or after July 1, 2026, the maximum is $1,507.01 a week.</td>
+            <td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/" rel="noopener">Va. Code § 65.2-500</a></td>
+          </tr>
+          <tr>
+            <td>Wage checks on light duty at lower pay (temporary partial disability)</td>
+            <td>Two-thirds of the difference between your old wage and what you earn now</td>
+            <td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-502/" rel="noopener">Va. Code § 65.2-502</a></td>
+          </tr>
+          <tr>
+            <td>A permanent rating</td>
+            <td>The back itself isn’t on Virginia’s rating schedule. A rating is paid when the back injury causes lasting loss of use of an arm or a leg, such as nerve damage down the leg.</td>
+            <td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/" rel="noopener">Va. Code § 65.2-503</a></td>
+          </tr>
+          <tr>
+            <td>Permanent total disability</td>
+            <td>Paid for life in a few listed situations, including an injury that leaves you, for all practical purposes, totally paralyzed</td>
+            <td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/" rel="noopener">Va. Code § 65.2-503(C)</a>, <a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/" rel="noopener">§ 65.2-500(D)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Wage checks are generally limited to 500 weeks in all, except for permanent total disability. Here’s
+        <a href="/how-long-does-workers-comp-last-in-virginia/">how long workers’ comp lasts in Virginia</a>
+        and <a href="/impairment-rating-virginia-workers-comp/">how impairment ratings work</a>.
+      </p>
+
+      <h2 id="covered">Is Your Back Injury Covered?</h2>
+      <p>
+        <strong>A back injury is covered when an identifiable incident at a reasonably definite time
+        causes a sudden mechanical or structural change in your body, at work and because of your
+        work.</strong> That’s the “injury by accident” rule, and the accident must arise out of and in the
+        course of your job (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/" rel="noopener">Va. Code § 65.2-101</a>).
+      </p>
+      <table>
+        <thead>
+          <tr><th>How your back was hurt</th><th>Usually covered?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>A specific lift, pull, twist, fall, or crash at work, and you can say when</td><td>Yes, if the medical evidence connects the injury to that event</td></tr>
+          <tr><td>Pain that built up over months or years of lifting, bending, or driving, with no single event</td><td>Generally no. Gradual wear from repeated work is generally not an injury by accident.</td></tr>
+          <tr><td>An older back problem made structurally worse by a specific work accident</td><td>It can be. A work accident that aggravates a pre-existing condition can be covered.</td></tr>
+        </tbody>
+      </table>
+      <p>
+        <strong>Whose fault it was generally doesn’t matter.</strong> You can be covered even if you lifted
+        the wrong way. A few defenses turn on your conduct, such as willfully breaking a safety rule you
+        knew about, and the insurance company has to prove them
+        (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-306/" rel="noopener">Va. Code § 65.2-306</a>).
+      </p>
+
+      <h2 id="sue">Can You Sue for a Back Injury at Work?</h2>
+      <p>
+        <strong>Usually not your employer or a coworker. Workers’ comp is generally your only remedy
+        against them, even when the employer’s carelessness caused the injury</strong>
+        (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-307/" rel="noopener">Va. Code § 65.2-307</a>).
+        That’s the trade the law makes: you don’t have to prove fault, and you can’t get pain and suffering.
       </p>
       <p>
-        Your back injury can make it difficult to recover because it can affect your ability to move and
-        work comfortably. For example, if your job involves
-        lifting heavy objects, you may be unable to
-        do your job because of your back injury. Workers’ Comp benefits help cover your related costs
-        and lost wages while you recover. They also offer benefits to workers who die after a work
-        accident.
+        A lawsuit can be possible against an outside party, someone who isn’t your employer or part of
+        its business. The common example is a driver from another company who rear-ends your work truck.
+        If you recover from that person, the workers’ comp insurance company generally has a lien on what
+        you recover for the benefits it paid
+        (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-309/" rel="noopener">Va. Code § 65.2-309</a>).
+        Whether a company counts as an outside party is often the hardest question in these cases. Here’s
+        more on a <a href="/car-accident-at-work-in-virginia/">car accident at work in Virginia</a>.
       </p>
-      <p>Below are some Workers’ Comp benefits you may be eligible for as a Virginia worker:</p>
+
+      <h2 id="fight">How Insurance Companies Fight Back Claims</h2>
+      <p>
+        <strong>Back claims are among the most contested, because back pain is common and the insurance
+        company can often point to something other than the accident.</strong> The arguments that come up
+        most:
+      </p>
       <ul>
-        <li>Medical care</li>
-        <li>Partial disability benefits if you’re able to return to work</li>
-        <li>Total disability benefits if you’re unable to work</li>
-        <li>Compensation for permanent damage or loss of use in an arm, leg, eye, or ear, or for severe disfigurement or scarring</li>
-        <li><a href="https://workcomp.virginia.gov/documents/injured-workers-benefits-guide" rel="noopener">Death benefits</a></li>
+        <li><strong>“No specific accident.”</strong> If the first medical record says your back “has been bothering you for months,” the insurer will call it gradual onset. Tell every doctor exactly what you were lifting or doing, and when.</li>
+        <li><strong>“It’s degenerative.”</strong> Most adult MRIs show some wear. The question is whether the accident caused a new structural change or aggravated the old one. Here’s how that plays out in a <a href="/herniated-disc-workers-comp/">herniated disc claim</a>.</li>
+        <li><strong>Late notice.</strong> You must give your employer written notice right away. Benefits can be barred if notice isn’t given within 30 days of the accident, unless the Commission excuses the delay (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/" rel="noopener">Va. Code § 65.2-600</a>).</li>
+        <li><strong>Gaps in treatment.</strong> Weeks without care give the insurer room to argue something else happened in between.</li>
+        <li><strong>Surgery and treatment denials.</strong> The insurer may send you to its own doctor for an exam (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-607/" rel="noopener">Va. Code § 65.2-607</a>). The insurance company is required to pay for reasonable, necessary treatment related to the accident. That doesn’t mean it will.</li>
+        <li><strong>Light duty.</strong> Once you’re released with lifting limits, a job offer within your restrictions can stop your checks if you turn it down without a good reason. Here’s <a href="/light-duty-workers-comp-virginia/">when you can refuse light duty</a>.</li>
       </ul>
-
       <div class="pull">
-        <p><strong>Learn how we can help you with your work related back injury case.</strong></p>
-        <p><a class="btn btn-primary" href="#contact">Get Help Now</a></p>
+        <p>
+          “In back cases, the fight is rarely over whether someone is hurt. It’s over the first medical
+          record. If it says your back has been bothering you for a while, and not the box you lifted on
+          Tuesday, the insurance company builds its whole defense on that one line.”
+        </p>
+        <p>
+          <a href="/bryn-swartz/">Bryn Swartz</a>, founder of Pathfinder Injury Law
+        </p>
       </div>
 
-      <h2 id="denial">Appealing a Workers’ Comp Denial in Virginia</h2>
+      <h2 id="types">Common Back Injuries at Work</h2>
+      <table>
+        <thead>
+          <tr><th>Injury</th><th>What often matters in the claim</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Herniated or bulging disc</td><td>Proof of a specific incident, and the degenerative defense. See <a href="/herniated-disc-workers-comp/">herniated disc workers’ comp</a>.</td></tr>
+          <tr><td>Muscle strain or sprain</td><td>Usually shorter treatment. The fight is often over whether pain that lingers is still from the accident.</td></tr>
+          <tr><td>Fractured vertebra</td><td>Often from a fall or a crash, so the accident is easier to prove. Value turns on surgery and permanent limits.</td></tr>
+          <tr><td>Spinal cord injury</td><td>Medical care that can last a lifetime, and possibly permanent total disability</td></tr>
+        </tbody>
+      </table>
       <p>
-        Your Virginia work compensation claim has been denied. Now what? You have some chances to get
-        your claim appealed and seek the Workers’ Comp benefits you’re due. But that’s not easy to do
-        alone. You may need a lawyer’s help to prepare for your hearing and get your claim appealed.
+        Neck, mid-back, and low-back injuries are covered more fully in
+        <a href="/what-should-you-do-if-you-have-a-spine-injury-at-work/">what to do after a spine injury at work</a>.
       </p>
-      <p>
-        First, you’ll need to gather evidence for your claim. Your denial letter should include the
-        reason your claim was denied. Your lawyer can seek evidence based on the reason you were denied
-        compensation. For example, if the insurance company claims you don’t have enough medical
-        evidence for your claim, your Workers’ Comp lawyer in Virginia can help you schedule further
-        testing for proof.
-      </p>
-      <p>
-        Once you have the evidence you need, your lawyer can set up a hearing for your claim. They’ll
-        present evidence in your case and seek the Workers’ Comp benefits you’re due.
-      </p>
-      <p><a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">Workers’ Comp Denials</a></p>
 
-      <h2 id="faq">Virginia Back Injury FAQ</h2>
+      <h2 id="worth">What a Back Injury Claim Is Worth</h2>
+      <p>
+        <strong>No one can fairly value a back claim without the medical records.</strong> What usually
+        moves the value: whether a specific accident is proven, whether you need surgery (a fusion tends
+        to mean longer recovery and lasting limits), future medical care, your average weekly wage, how
+        long you’re out of work, whether you can go back to heavy work, and any arm or leg rating from
+        nerve damage.
+      </p>
+      <p>
+        A settlement is optional, and the Commission must approve it
+        (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/" rel="noopener">Va. Code § 65.2-701</a>).
+        A full and final settlement closes your medical benefits for good, which matters for a
+        back that may need care for years. Here’s
+        <a href="/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/">how a Virginia workers’ comp settlement is calculated</a>.
+      </p>
+      <p>Two of our <a href="/results/">past results</a>:</p>
+      <ul>
+        <li>$240,000: settlement obtained in a 20-year-old back injury case before the Virginia Workers’ Compensation Commission.</li>
+        <li>$240,000: settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission.</li>
+      </ul>
+      <p>
+        Amounts shown are gross, before attorney’s fees, costs, and liens. Every case is different. These
+        results depended on facts unique to each case and do not predict or guarantee the result in yours.
+      </p>
+
+      <h2 id="steps">Steps to Take After a Back Injury at Work</h2>
+      <ol>
+        <li><strong>Get medical care, and tell the doctor it happened at work</strong> and exactly how.</li>
+        <li><strong>Give your employer written notice right away,</strong> and no later than 30 days (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/" rel="noopener">Va. Code § 65.2-600</a>).</li>
+        <li><strong>Ask for the panel of doctors in writing.</strong> Here’s <a href="/virginia-workers-comp-doctor/">how choosing a workers’ comp doctor works</a>.</li>
+        <li><strong>Keep every work note and restriction in writing,</strong> and give copies to your employer.</li>
+        <li><strong>File your claim with the Commission</strong> within two years of the accident, generally (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/" rel="noopener">Va. Code § 65.2-601</a>). File it even if the insurance company accepted your injury and is paying. You can ask the Commission for a hearing whatever the insurance company decides.</li>
+      </ol>
+
+      <h2 id="faq">Back Injury Questions</h2>
       <div class="faq">
         <details>
-          <summary>When can I expect my benefits from my accident?</summary>
+          <summary>My back pain came on slowly. Is it covered?</summary>
           <div class="answer">
             <p>
-              When you’re hurt in a Virginia work accident, you need Workers’ Comp benefits now, not
-              later. You should receive confirmation that your claim has been accepted or denied as soon
-              as possible. If your claim is denied, you have the right to request a hearing before the
-              Virginia Workers’ Compensation Commission so you don’t have to keep waiting for your
-              Workers’ Comp coverage.
+              Generally not, if there was no specific incident. But many workers do remember a moment, a
+              heavy lift or a bad step, when the pain got much worse. If that happened, it should be in
+              your medical records.
             </p>
-            <p><a href="/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/">Learn More</a></p>
           </div>
         </details>
         <details>
-          <summary>Does Virginia Workers’ Comp pay for lost wages?</summary>
+          <summary>Do I get a permanent rating for my back?</summary>
           <div class="answer">
             <p>
-              After a serious work injury in Virginia, you may be directed to your Workers’ Comp
-              benefits to recover from your injuries. You can’t cover your bills and needs without your
-              wages, so it’s vital that you get coverage.
+              Not for the back itself, because it isn’t on Virginia’s rating schedule. If the injury
+              causes lasting loss of use of an arm or a leg, that limb can be rated
+              (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/" rel="noopener">Va. Code § 65.2-503</a>).
+              See <a href="/impairment-rating-virginia-workers-comp/">impairment ratings in Virginia</a>.
             </p>
-            <p>
-              But does Virginia Workers’ Comp pay for lost wages? If you’re worried about losing your
-              wages, reach out to Pathfinder Injury Law. We can help you seek out the coverage you need
-              from your Workers’ Comp provider.
-            </p>
-            <p><a href="/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/">Learn More</a></p>
           </div>
         </details>
         <details>
-          <summary>What’s the Workers’ Comp Process in Virginia?</summary>
+          <summary>When do the checks start?</summary>
           <div class="answer">
             <p>
-              Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance. If an employee receives an injury while completing their job-related duties, they can file a claim with the Virginia Workers’ Compensation Commission to seek benefits including reimbursement of costs. Employees can use the Workers’ Comp process to apply for several
-              financial benefits.
+              Wage checks start on the eighth day out of work, and the first seven days are paid back if
+              you’re out more than three weeks
+              (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/" rel="noopener">Va. Code § 65.2-509</a>).
+              Here’s <a href="/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/">when Virginia workers’ comp starts paying</a>.
             </p>
-            <p><a href="/workers-comp-process-in-virginia/">Learn More</a></p>
           </div>
         </details>
       </div>
 
       <div class="pull" id="help">
-        <h2>Talk to a Back Injury Lawyer in Virginia</h2>
+        <h2>Talk to Pathfinder Injury Law About Your Back Injury</h2>
         <p>
-          A back injury can make it impossible to work, leaving you without the income you usually rely
-          on. Worse, your employer’s insurance company may be doing what they can to avoid paying for
-          your injuries. Here’s the good news: a lawyer may be able to help with your claim.
-        </p>
-        <p>
-          If you hurt your back in a serious work accident, reach out to
-          <a href="/">Pathfinder Injury Law</a>. Your Virginia back injury lawyer can guide you through
-          the claims process, starting with a free consultation. Reach out by calling
-          <a href={site.phoneHref}>804-505-0633</a> or by filling out our
+          Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call
+          <a href={site.phoneHref}>804-505-0633</a> or use our
           <a href="#contact">online contact form</a>.
         </p>
       </div>
