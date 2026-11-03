@@ -15,9 +15,9 @@ const css = () => readdirSync(new URL('_astro/', dist)).filter((f) => f.endsWith
 test('Home hero: AVIF and WebP copies in two sizes, art direction kept, preloaded as AVIF', opts, () => {
   const html = read('/index.html');
   const pic = html.match(/<picture class="hero-pic">[\s\S]*?<\/picture>/)![0];
-  assert.match(pic, /<source media="\(max-width: 47\.99rem\)" type="image\/avif" srcset="[^"]*e4-overlook-phone-480\.avif 480w, [^"]*-900\.avif 900w"/);
+  assert.match(pic, /<source media="\(max-width: 47\.99rem\)" type="image\/avif" srcset="[^"]*e4-trail-map-phone-480\.avif 480w, [^"]*-900\.avif 900w"/);
   assert.match(pic, /<source media="\(max-width: 47\.99rem\)" type="image\/webp"/);
-  assert.match(pic, /<img class="hero-photo" src="\/images\/photos\/e4-overlook-desktop\.webp" srcset="[^"]*-1024\.webp 1024w/);
+  assert.match(pic, /<img class="hero-photo" src="\/images\/photos\/e4-trail-map-desktop\.webp" srcset="[^"]*-1024\.webp 1024w/);
   assert.match(html, /<link rel="preload" as="image" type="image\/avif" imagesrcset="[^"]*desktop-1024\.avif[^"]*" imagesizes="100vw" media="\(min-width: 48rem\)"/);
   assert.match(html, /<link rel="preload" as="image" type="image\/avif" imagesrcset="[^"]*phone-480\.avif[^"]*" imagesizes="100vw" media="\(max-width: 47\.99rem\)"/);
 });

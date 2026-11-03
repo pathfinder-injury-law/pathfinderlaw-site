@@ -14,7 +14,7 @@ import { site } from '../data/site';
 // The search text and links from the Nov 1 SEO rewrite are kept (intro paragraphs, topic links, results links).
 
 const heroSet = (crop: 'desktop' | 'phone', fmt: 'avif' | 'webp') =>
-  (variants as any)[`/images/photos/e4-overlook-${crop}.webp`][fmt].map((v: { url: string; width: number }) => `${v.url} ${v.width}w`).join(', ');
+  (variants as any)[`/images/photos/e4-trail-map-${crop}.webp`][fmt].map((v: { url: string; width: number }) => `${v.url} ${v.width}w`).join(', ');
 
 const title = "Pathfinder Injury Law | Virginia Workers' Comp Lawyer";
 const description =
@@ -116,10 +116,10 @@ const doodle = {
     <!-- Hero: one real photo edge to edge, words low left. -->
     <section class="hero hero-e4">
       <picture class="hero-pic">
-        <source media="(max-width: 47.99rem)" type="image/avif" srcset={heroSet('phone', 'avif')} sizes="100vw" width="900" height="1452" />
-        <source media="(max-width: 47.99rem)" type="image/webp" srcset={heroSet('phone', 'webp')} sizes="100vw" width="900" height="1452" />
+        <source media="(max-width: 47.99rem)" type="image/avif" srcset={heroSet('phone', 'avif')} sizes="100vw" width="900" height="1613" />
+        <source media="(max-width: 47.99rem)" type="image/webp" srcset={heroSet('phone', 'webp')} sizes="100vw" width="900" height="1613" />
         <source type="image/avif" srcset={heroSet('desktop', 'avif')} sizes="100vw" />
-        <img class="hero-photo" src="/images/photos/e4-overlook-desktop.webp" srcset={heroSet('desktop', 'webp')} sizes="100vw" alt="A hiker standing on a rocky overlook above a wide valley" width="2000" height="1333" fetchpriority="high" />
+        <img class="hero-photo" src="/images/photos/e4-trail-map-desktop.webp" srcset={heroSet('desktop', 'webp')} sizes="100vw" alt="A hiker seen from behind holds a scribbled trail map and looks up a misty forest trail toward a mountain" width="2000" height="1116" fetchpriority="high" />
       </picture>
       <div class="wrap hero-copy">
         <h1 class="kicker"><span class="va">Virginia</span> Workers’ Comp Lawyer</h1>
@@ -452,7 +452,7 @@ const doodle = {
     mask: none;
     background:
       linear-gradient(180deg, rgba(64, 104, 60, 0) 86%, #40683c 100%),
-      linear-gradient(0deg, rgba(20, 36, 27, 0.78) 0%, rgba(20, 36, 27, 0.45) 45%, rgba(20, 36, 27, 0) 70%),
+      radial-gradient(ellipse 80% 75% at 12% 100%, rgba(20, 36, 27, 0.78) 0%, rgba(20, 36, 27, 0.45) 50%, rgba(20, 36, 27, 0) 100%), /* bottom shade stays under the words, so the hiker and map on the right stay clear (Nov 3 photo) */
       radial-gradient(ellipse 62% 60% at 20% 62%, rgba(20, 36, 27, 0.72) 0%, rgba(20, 36, 27, 0.72) 45%, rgba(20, 36, 27, 0) 100%), /* behind the words: yellow 4.3:1 at its worst spot */
       linear-gradient(90deg, rgba(20, 36, 27, 0.4), rgba(20, 36, 27, 0) 62%);
   }

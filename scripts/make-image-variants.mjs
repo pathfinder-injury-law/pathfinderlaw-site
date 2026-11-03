@@ -29,6 +29,9 @@ const PHOTOS = {
   // E4 home page (Unsplash photos, see CREDITS.txt)
   '/images/photos/e4-overlook-desktop.webp': [1024, 1440, 2000],
   '/images/photos/e4-overlook-phone.webp': [480, 900],
+  // Home hero from Nov 3 (AI-made in Google's image model from our prompts, see CREDITS.txt)
+  '/images/photos/e4-trail-map-desktop.webp': [1024, 1440, 2000],
+  '/images/photos/e4-trail-map-phone.webp': [480, 900],
   '/images/photos/e4-farm-road.jpg': [480, 800],
   '/images/photos/e4-autumn-ridges.jpg': [480, 800],
   '/images/photos/e4-green-valley.jpg': [480, 800],
@@ -45,6 +48,9 @@ const FORMATS = {
 // (900w: 141 KB at the default, 83 KB here, with no visible difference on the rock detail).
 const OVERRIDES = {
   '/images/photos/e4-overlook-phone.webp': {
+    avif: (img) => img.avif({ quality: 45, effort: 7, chromaSubsampling: '4:2:0' }),
+  },
+  '/images/photos/e4-trail-map-phone.webp': {
     avif: (img) => img.avif({ quality: 45, effort: 7, chromaSubsampling: '4:2:0' }),
   },
 };
