@@ -99,6 +99,8 @@ const doodles: Record<string, string> = {
     <!-- Start the hero photo download right away, in the size and format the browser will pick below. -->
     <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('desktop', 'avif')} imagesizes="100vw" media="(min-width: 48rem)" fetchpriority="high" />
     <link rel="preload" as="image" type="image/avif" imagesrcset={heroSet('phone', 'avif')} imagesizes="100vw" media="(max-width: 47.99rem)" fetchpriority="high" />
+    <!-- Bryn's handwriting is in the headline, so fetch it early: a late swap would rewrap the hero (layout shift). -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/kbs-handwriting.woff2" crossorigin />
   </Fragment>
 
   <div class="e4">
@@ -123,10 +125,10 @@ const doodles: Record<string, string> = {
       </picture>
       <div class="wrap hero-copy">
         <h1 class="kicker">Virginia Workers’ Comp Lawyer</h1>
-        <p class="hero-big">Hurt at work?<br /><span class="mk u" data-seed="101">We’ve got this.</span></p>
+        <p class="hero-big">Hurt at work?<br /><span class="hand">We’ve got this.</span></p>
         <p class="hero-lede">Workers’ comp is all we do. Free consultation. Zero pressure.</p>
         <div class="hero-acts">
-          <a class="btn btn-sun" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+          <a class="btn btn-primary btn-call" href={site.phoneHref}>Call {site.phoneDisplay}</a>
           <a class="tl" href="#contact">Or send us a message</a>
         </div>
       </div>
@@ -392,6 +394,8 @@ const doodles: Record<string, string> = {
     });
   }
   document.fonts.ready.then(draw);
+  // Redraw when a font arrives after that (the handwriting can), so the underline fits the real letters.
+  document.fonts.addEventListener('loadingdone', draw);
   let resizeTimer: number | undefined;
   addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = window.setTimeout(draw, 150); });
 
@@ -446,7 +450,7 @@ const doodles: Record<string, string> = {
   @font-face {
     font-family: 'Kbs Handwriting';
     font-display: swap;
-    src: url('/fonts/kbs-handwriting.ttf') format('truetype');
+    src: url('/fonts/kbs-handwriting.woff2') format('woff2'); /* subset by scripts/make-handwriting-font.mjs */
   }
   .e4 .scrawl, .e4 .note figcaption, .e4 .map-labels { font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; }
   .e4 .ink-defs { position: absolute; }
@@ -465,55 +469,50 @@ const doodles: Record<string, string> = {
   .e4 .mk.c { margin: 0 0.12em; }
   .e4 .mk > svg.mark { position: absolute; z-index: -1; pointer-events: none; overflow: visible; fill: var(--mc); filter: url(#ink); }
 
-  /* Header on this page: sage bar, bigger logo, and a sage tab that dips around the logo. */
+  /* Header on this page: sage bar with a straight bottom edge and a bigger logo (Bryn, Nov 2).
+     The padding keeps the Brand Book clear space (the x-height of the logotype) around the logo. */
   body:has(.e4) .site-header:not(.is-solid) { background: #e9efdf; box-shadow: none; }
   body:has(.e4) .site-header:not(.is-solid)::before { display: none; }
-  body:has(.e4) .site-header::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 700px;
-    height: 124px;
-    margin-top: -1px;
-    background: #e9efdf;
-    clip-path: path('M0 0H700C640 0 610 20 570 56C530 96 470 118 380 122H0Z');
-    pointer-events: none;
-    transition: opacity 0.3s;
-  }
-  body:has(.e4) .site-header.is-solid::after { opacity: 0; }
+  body:has(.e4) .site-header:not(.is-solid) .brand { padding: 1rem 0; }
+  body:has(.e4) .site-header:not(.is-solid) .brand img { width: 15.5rem; }
   @media (min-width: 48rem) {
-    body:has(.e4) .site-header:not(.is-solid) .brand img { width: 18.75rem; }
-  }
-  @media (max-width: 47.99rem) {
-    body:has(.e4) .site-header::after { width: 300px; height: 56px; clip-path: path('M0 0H300C270 0 255 10 235 26C215 44 190 54 150 55H0Z'); }
+    body:has(.e4) .site-header:not(.is-solid) .brand { padding: 1.5rem 0; }
+    body:has(.e4) .site-header:not(.is-solid) .brand img { width: 26rem; }
   }
 
   /* Hero */
-  .e4 .hero-e4 { position: relative; min-height: 100svh; max-height: 68rem; overflow: hidden; color: var(--cream); display: flex; align-items: flex-end; }
-  .e4 .hero-e4 .hero-pic, .e4 .hero-e4 .hero-photo { position: absolute; inset: var(--hero-top, 7.5rem) 0 0 0; width: 100%; height: calc(100% - var(--hero-top, 7.5rem)); object-fit: cover; object-position: 70% 0%; }
+  .e4 .hero-e4 { --hero-top: 11rem; position: relative; min-height: 100svh; max-height: 68rem; overflow: hidden; color: #e9efdf; background: #e9efdf; display: flex; align-items: flex-end; }
+  .e4 .hero-e4 .hero-pic, .e4 .hero-e4 .hero-photo { position: absolute; inset: var(--hero-top) 0 0 0; width: 100%; height: calc(100% - var(--hero-top)); object-fit: cover; object-position: 70% 0%; }
   .e4 .hero-e4 .hero-photo { inset: 0; height: 100%; }
   .e4 .hero-e4::after {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 1;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    -webkit-mask: none;
+    mask: none;
     background:
       linear-gradient(180deg, rgba(64, 104, 60, 0) 86%, #40683c 100%),
-      linear-gradient(0deg, rgba(20, 36, 27, 0.62) 0%, rgba(20, 36, 27, 0.28) 40%, rgba(20, 36, 27, 0) 62%),
-      linear-gradient(90deg, rgba(20, 36, 27, 0.4), rgba(20, 36, 27, 0) 60%);
+      linear-gradient(0deg, rgba(20, 36, 27, 0.78) 0%, rgba(20, 36, 27, 0.45) 45%, rgba(20, 36, 27, 0) 70%),
+      radial-gradient(ellipse 62% 60% at 20% 62%, rgba(20, 36, 27, 0.72) 0%, rgba(20, 36, 27, 0.72) 45%, rgba(20, 36, 27, 0) 100%), /* behind the words: yellow 4.3:1 at its worst spot */
+      linear-gradient(90deg, rgba(20, 36, 27, 0.4), rgba(20, 36, 27, 0) 62%);
   }
   .e4 .hero-copy { position: relative; z-index: 2; padding-bottom: 4rem; }
   /* No fade-in on the home hero text: it is visible on first paint, so it can't hold back LCP. */
   .e4 .hero-copy > * { animation: none; }
   .e4 .hero-copy .kicker { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sun); margin: 0 0 0.75rem; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55); }
-  .e4 .hero-big { font-size: clamp(2.625rem, 6.6vw, 6.5rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 2.75rem; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25); }
+  .e4 .hero-big { font-size: clamp(2.625rem, 6.6vw, 6.5rem); line-height: 0.92; font-weight: 900; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 2.75rem; color: var(--sun); text-shadow: 0 2px 18px rgba(20, 36, 27, 0.45); }
+  .e4 .hero-big .hand { display: inline-block; font-family: 'Kbs Handwriting', 'Bradley Hand', 'Segoe Print', cursive; font-weight: 400; font-synthesis: none; text-transform: none; letter-spacing: 0; font-size: 1.12em; line-height: 1.1; text-shadow: none; }
   .e4 .hero-lede { font-size: 1.375rem; margin: 0 0 1.875rem; max-width: 41rem; }
   .e4 .hero-acts { display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap; }
-  .e4 .btn-sun { background: var(--sun); color: var(--forest); border-color: var(--sun); letter-spacing: 0.01em; font-weight: 800; font-size: 1.125rem; padding: 0 1.75rem; }
+  /* Orange, like every other action on the site (dark green on orange is 3.3:1, so the label stays large: 19px bold). */
+  .e4 .btn-call { letter-spacing: 0.01em; font-weight: 800; padding: 0 1.75rem; }
   @media (max-width: 47.99rem) {
-    .e4 .hero-e4 { --hero-top: 5.25rem; }
+    .e4 .hero-e4 { --hero-top: 6.75rem; }
     .e4 .hero-e4 .hero-photo { object-position: 0% 0%; }
-    .e4 .hero-e4::after { background: linear-gradient(180deg, rgba(64, 104, 60, 0) 90%, #40683c 100%), linear-gradient(0deg, rgba(20, 36, 27, 0.82) 0%, rgba(20, 36, 27, 0.5) 50%, rgba(20, 36, 27, 0) 75%); }
+    .e4 .hero-e4::after { background: linear-gradient(180deg, rgba(64, 104, 60, 0) 90%, #40683c 100%), linear-gradient(0deg, rgba(20, 36, 27, 0.9) 0%, rgba(20, 36, 27, 0.8) 55%, rgba(20, 36, 27, 0) 84%); }
     .e4 .hero-lede { font-size: 1.125rem; }
     .e4 .hero-acts { flex-direction: column; align-items: stretch; gap: 1rem; }
     .e4 .hero-acts .tl { text-align: center; }
