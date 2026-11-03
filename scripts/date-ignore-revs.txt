@@ -12,3 +12,11 @@
 # PR 83, Nov 3: cite relabels and link retargets only (how-to-appeal page; the IME sub-article's
 # rule numbers became 16VAC30-50 cites). Its post changes don't matter here.
 b7ceb6c4c36fbc4c76a493d0df19504c147164d2
+# PR 85, Nov 3: map-texture markup on Contact and Results only (no words). Listed because git blame
+# credits Contact's moved lines from PR 88 to it.
+2616bc0d97c9e5b72fbf9cac8d42fdab76cf917c
+# PR 88, Nov 3: Contact restyle by Design (form-in-a-map, field-notes cards). Same words, new layout,
+# so git sees moved lines; SEO's call: Contact's date must not move. The second commit only set
+# "Let’s talk." in the handwriting font. (d11bced in the same PR touches only MapContact, not dated.)
+e3335c618260d4472bb49b6291b9128b1e4c839e
+0a5185efe444c9fc12ade158903f7ba80f9629c7
