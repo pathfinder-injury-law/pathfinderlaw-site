@@ -1,0 +1,9 @@
+---
+// Bryn's quote in his handwriting, for hand-built pages. Blog posts get the same markup from
+// scripts/rehype-bryn-quote.mjs (front matter pullQuote + pullQuoteStatus: approved). Approved quotes only.
+const { quote } = Astro.props;
+---
+<figure class="bryn-quote">
+  <blockquote><p>“{quote}”</p></blockquote>
+  <figcaption><a href="/bryn-swartz/">Bryn Swartz</a></figcaption>
+</figure>

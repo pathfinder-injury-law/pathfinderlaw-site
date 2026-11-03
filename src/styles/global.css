@@ -2611,3 +2611,62 @@ mark {
     break-inside: avoid;
   }
 }
+
+/* ---------- Bryn's quote, in his handwriting (Nov 3) ----------
+   Real text in a blockquote (scripts/rehype-bryn-quote.mjs, src/components/BrynQuote.astro). Beside the
+   text on wide screens, between sections on phones, never hidden. It sits below the first screen, so the
+   font is not preloaded and its swap moves nothing in view. */
+@font-face {
+  font-family: 'Kbs Handwriting Quote';
+  font-display: swap;
+  src: url('/fonts/kbs-handwriting-quote.woff2') format('woff2');
+}
+.bryn-quote {
+  margin: 2.25rem 0;
+  padding-top: 1rem;
+  border-top: 3px solid var(--moss); /* the Brand Book's short olive rule */
+  color: var(--forest);
+}
+.bryn-quote blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.bryn-quote blockquote p {
+  margin: 0;
+  font-family: 'Kbs Handwriting Quote', 'Bradley Hand', 'Segoe Print', cursive;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+.bryn-quote figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pine);
+}
+.bryn-quote figcaption a {
+  color: inherit;
+  text-decoration: none;
+}
+.bryn-quote figcaption a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 48rem) {
+  .bryn-quote {
+    float: right;
+    width: 16.5rem;
+    margin: 0.4rem 0 1.5rem 2rem;
+  }
+  .bryn-quote blockquote p {
+    font-size: 1.6rem;
+  }
+  /* Tables and the next section start below the quote, so a table never gets squeezed beside it. */
+  .bryn-quote ~ :is(h2, table, .table-wrap) {
+    clear: right;
+  }
+}

@@ -6,6 +6,7 @@ import BlogPostingLd from '../components/BlogPostingLd.astro';
 import ContactSection from '../components/ContactSection.astro';
 import { posts, relatedPosts, longDate } from '../data/blogPosts';
 import { site } from '../data/site';
+import { withBrynQuote } from '../data/brynQuote';
 
 // One template for every blog post. Posts are the Markdown files in src/blog-posts/.
 // Wording is carried over from the live posts (content rework comes later).
@@ -19,6 +20,8 @@ const related = relatedPosts(post);
 const minutes = Math.max(1, Math.round(post.words / 220));
 // "Updated" shows only when the post was changed on a later day than it was first published.
 const updated = longDate(post.updated) !== longDate(post.date) && post.updated > post.date;
+// Bryn's handwritten quote, only when the post's front matter marks it approved (src/data/brynQuote.ts).
+const quoted = post.pullQuote && post.pullQuoteStatus === 'approved' ? withBrynQuote(await post.compiled(), post.pullQuote) : null;
 ---
 <Base
   title={post.metaTitle}
@@ -41,7 +44,7 @@ const updated = longDate(post.updated) !== longDate(post.date) && post.updated >
   <div class="wrap page-body">
     <div class="bp-main">
       <article class="prose bp-article">
-        <Content />
+        {quoted ? <Fragment set:html={quoted} /> : <Content />}
       </article>
 
       <section class="bp-related" aria-labelledby="related-heading">

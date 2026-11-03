@@ -14,6 +14,9 @@ export interface BlogPost {
   Content: any;
   headings: { depth: number; slug: string; text: string }[];
   words: number;
+  compiled: () => Promise<string>; // the post body as HTML
+  pullQuote?: string; // Bryn's quote in his handwriting, shown only when pullQuoteStatus is "approved"
+  pullQuoteStatus?: string;
 }
 
 const files = import.meta.glob('../blog-posts/*.md', { eager: true }) as Record<string, any>;
@@ -34,6 +37,9 @@ export const posts: BlogPost[] = Object.entries(files)
       Content: mod.Content,
       headings: mod.getHeadings(),
       words: Math.round(String(mod.rawContent()).split(/\s+/).length),
+      compiled: mod.compiledContent,
+      pullQuote: fm.pullQuote,
+      pullQuoteStatus: fm.pullQuoteStatus,
     } as BlogPost;
   })
   .sort((a, b) => b.date.getTime() - a.date.getTime());

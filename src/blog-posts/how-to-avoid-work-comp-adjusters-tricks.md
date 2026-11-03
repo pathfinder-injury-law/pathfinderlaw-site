@@ -5,6 +5,8 @@ description: "The tactics Virginia workers’ comp adjusters use most, what each
 date: 2022-11-22T23:37:03Z
 updated: 2026-11-03T14:00:00Z
 tags: ["insurance","settlement"]
+pullQuote: "The adjuster isn’t really your enemy, but they certainly aren’t your friend. The adjuster is doing a job, and that job is closing your file for as little as the law allows."
+pullQuoteStatus: approved
 ---
 
 *Nothing in this article should be taken as legal advice. Every case is different.*

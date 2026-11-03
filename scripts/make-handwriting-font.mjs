@@ -3,7 +3,9 @@
 //
 // Run this after changing any text set in 'Kbs Handwriting', or after replacing the font:
 //   node scripts/make-handwriting-font.mjs
-// It writes public/fonts/kbs-handwriting.woff2. Commit it.
+// It writes public/fonts/kbs-handwriting.woff2 (the home hero line only, preloaded) and
+// public/fonts/kbs-handwriting-quote.woff2 (every character in the font, for Bryn's quotes on
+// article pages; not preloaded). Commit both.
 // Needs hb-subset (HarfBuzz: `brew install harfbuzz`). The WOFF2 packing uses Node's built-in Brotli.
 
 import { execFileSync } from 'node:child_process';
@@ -15,12 +17,15 @@ import { brotliCompressSync, constants } from 'node:zlib';
 
 const repo = fileURLToPath(new URL('..', import.meta.url));
 const SRC = join(repo, 'fonts-src/kbs-handwriting.ttf');
-const OUT = join(repo, 'public/fonts/kbs-handwriting.woff2');
+const OUTS = [
+  // The home hero: "We’ve got this." plus a straight apostrophe in case an edit types ' instead of ’.
+  { out: join(repo, 'public/fonts/kbs-handwriting.woff2'), text: 'We’ve got this.' + "'" },
+  // Bryn's quotes beside articles (Nov 3): everything the font has. It has letters, digits, curly quotes,
+  // and . , ! ? ( ) - but no colon or semicolon, so quotes in his handwriting should avoid those.
+  { out: join(repo, 'public/fonts/kbs-handwriting-quote.woff2'), text: String.fromCodePoint(...Array.from({ length: 95 }, (_, i) => 32 + i), 0xa0, 0x2018, 0x2019, 0x201a, 0x201c, 0x201d, 0x201e) },
+];
 
-// The only handwriting on the site is "We’ve got this." in the home hero, plus a straight
-// apostrophe in case an edit types ' instead of ’.
-const TEXT = 'We’ve got this.' + "'";
-
+for (const { out: OUT, text: TEXT } of OUTS) {
 // 1. Subset, without hinting (the font only shows at large sizes).
 const tmp = mkdtempSync(join(tmpdir(), 'kbs-'));
 const subset = join(tmp, 'subset.ttf');
@@ -73,3 +78,4 @@ const woff2 = Buffer.alloc(length);
 Buffer.concat([head, body]).copy(woff2);
 writeFileSync(OUT, woff2);
 console.log(`${OUT}: ${woff2.length} bytes (${TEXT.length} characters, from ${readFileSync(SRC).length} byte .ttf)`);
+}

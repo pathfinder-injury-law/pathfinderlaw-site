@@ -5,6 +5,8 @@ description: "A concussion or brain injury from a work accident is covered by Vi
 date: 2026-11-03T14:00:00Z
 updated: 2026-11-03T14:00:00Z
 tags: ["body-parts","settlement"]
+pullQuote: "On the first call, I won’t guess what your case is worth. I don’t know anything about it yet. Any lawyer who puts a number on it that early is making it up."
+pullQuoteStatus: approved
 ---
 
 *Nothing in this article should be taken as legal advice. Every case is different.*

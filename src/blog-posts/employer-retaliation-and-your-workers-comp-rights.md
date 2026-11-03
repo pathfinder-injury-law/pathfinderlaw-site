@@ -5,6 +5,8 @@ description: "Virginia employers can fire you while you’re on workers’ comp,
 date: 2021-02-12T21:53:20Z
 updated: 2026-11-03T14:00:00Z
 tags: ["rights","return-to-work"]
+pullQuote: "Getting fired might feel like the end of the claim, but it isn’t. What matters is what your doctor says you can do and why the employer let you go, and both of those can be fought over."
+pullQuoteStatus: approved
 ---
 
 *Nothing in this article should be taken as legal advice. Every case is different.*
