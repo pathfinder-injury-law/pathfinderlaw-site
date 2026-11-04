@@ -52,7 +52,7 @@ Amputations are rare. They can happen in crush injuries, falls into machinery, a
 
 ### Arthritis and Other Pre-Existing Knee Problems
 
-Purely degenerative arthritis, even when work makes it hurt more, is generally not covered by itself. But a pre-existing condition does not automatically end your claim. If a work accident caused a new structural or mechanical change, or a structural aggravation of the old condition, that injury can still be covered. And if a serious knee injury at work later leads to arthritis in that joint, the arthritis is more likely to be covered.
+Purely degenerative arthritis, even when work makes it hurt more, is generally not covered by itself. But a [pre-existing condition](/pre-existing-conditions-and-workers-comp-claims/) does not automatically end your claim. If a work accident caused a new structural or mechanical change, or a structural aggravation of the old condition, that injury can still be covered. And if a serious knee injury at work later leads to arthritis in that joint, the arthritis is more likely to be covered.
 
 Here is an example. A construction worker has arthritis in one knee. If the knee keeps getting worse on the job until the ACL gives out with no specific accident, workers’ comp likely will not cover the tear. If the worker falls from a ladder and tears the ACL, the claim may be covered even though the arthritis was already there.
 

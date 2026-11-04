@@ -1,38 +1,42 @@
 ---
 title: "Do Pre-Existing Conditions Affect Workers’ Comp?"
 metaTitle: "Do Pre-Existing Conditions Affect Workers’ Comp? - Guide"
-description: "What happens with pre-existing conditions and Virginia workers' compensation claims? Find out with Pathfinder Injury Law in Richmond."
+description: "A pre-existing condition doesn't bar a Virginia workers' comp claim. When a work accident makes it worse, the question is what the accident changed."
 date: 2021-08-29T08:49:00Z
-updated: 2022-10-24T11:21:37Z
+updated: 2026-11-04T14:00:00Z
 tags: ["claim-process","benefits"]
 ---
 
-When you’ve suffered a work-related injury, you need Workers’ Comp benefits that cover all the costs of your injury. But that may not be a simple case. You may have a pre-existing condition that impacts your Workers’ Comp claim.
+Plenty of people who get hurt at work already had a bad back, a worn knee, or an old shoulder injury. A pre-existing condition does not bar a [Virginia workers’ comp](/virginia-workers-comp-lawyer/) claim. But it changes what the fight is about.
 
-If you’re worried about the ways a previous injury can impact your claim, reach out to a [Virginia Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) to [calculate your claim’s worth](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/). We’re here to guide you to the benefits you’re due for your injuries.
+## Can You Get Workers’ Comp for a Pre-Existing Condition?
 
-## How a Pre-Existing Condition Can Impact Workers’ Comp
+Yes, in the right case. Workers’ comp can cover a pre-existing condition that a work accident made materially worse, but the medical records have to show what the accident changed.
 
-When you’re [injured in a work accident](https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf), you’re due benefits that cover the costs of your recovery. But if you already had an injury or medical condition, that previous condition may make your new injuries worse. For example, if you had already suffered a concussion in the past, a second blow to the head may lead to more severe brain damage than you would have suffered if it was your first injury.
+There has to be an accident. Your injury must arise out of and in the course of your employment, and an identifiable incident at a reasonably definite time must cause a sudden mechanical or structural change to your body. A condition that simply wore down over time, even when work makes it hurt more, is generally not covered by itself. More on [how to qualify for workers’ comp in Virginia](/how-to-qualify-for-workers-comp-in-virginia/).
 
-Because of this, your Workers’ Comp can be impacted if you have a pre-existing condition. A pre-existing condition can be awarded in a Virginia workers’ comp case, but pre-existing injuries can also cause problems proving what’s related to your work accident. Each case depends on its unique facts, so talk with a lawyer about your situation. Your doctor may need to calculate how severe your injuries would be if you didn’t have the previous injury.
+## Where the Insurance Company Looks
 
-## Calculating Your Claim’s Value
+The insurance company will look for the old condition in your records and argue that your problems today come from it, not from the accident. As [Bryn Swartz](/bryn-swartz/) puts it about back claims:
 
-Because of this, calculating your Workers’ Comp claim’s [value with a pre-existing condition](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/) can be tough. Determining how severe your suffering would be can be complex and may require plenty of medical exams. But what Workers’ Comp benefits can you expect?
+> “In back cases, the fight is rarely over whether someone is hurt. It’s over the first medical record. If it says your back has been bothering you for a while, and not the box you lifted on Tuesday, the insurance company builds its whole defense on that one line.” (Bryn Swartz)
 
-First come [medical benefits](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf), which cover the costs of care for your work injury. You shouldn’t have the threat of hospital liens over you while you’re recovering from your work injury.
+Expect the same argument with an old knee, shoulder, or neck injury. What matters most:
 
-You may also receive wage replacement benefits. These benefits cover a percentage of the [wages you would have received](/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/) while you’re unable to work at your usual capacity. If you’re unsure how to calculate these complex benefits, reach out to your lawyer for guidance.
+- **What you tell the first doctor.** Say what happened at work, when, and what changed afterward: pain you didn’t have before, a limp, a job you could do last week and can’t do now.
+- **Being honest about the old condition.** The insurance company will find your earlier records. A history that leaves them out gives it a reason to doubt everything else you said.
+- **The difference before and after.** Old records showing you were working full duty, without treatment, before the accident can help show what the accident changed.
 
-## What if I’m Denied Workers’ Comp?
+## What Benefits Can Be Covered?
 
-Unfortunately, the Workers’ Comp insurance company may deny you if they believe your injuries weren’t work-related. Proving your injuries would still be severe because of your work accident can be tough. Luckily, a lawyer at Pathfinder Injury Law may be able to help you during these difficult times.
+If the claim is accepted, workers’ comp pays for specific things: medical care, part of your lost wages, and permanent loss of use of certain body parts. It does not pay for pain and suffering. Here’s [whether workers’ comp pays for lost wages](/virginia-workers-comp-lawyer/does-virginia-workers-comp-pay-for-lost-wages/) and [how impairment ratings work](/impairment-rating-virginia-workers-comp/).
 
-Your Workers’ Comp lawyer can help you seek out a hearing with the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/), who will hear out your appeal. Your lawyer can represent you, presenting evidence for your claim and seeking out the benefits you need to recover.
+If you hurt another body part by favoring the work injury, that can be covered too. Here’s [when an injury from favoring your work injury is covered](/injured-another-body-part-favoring-work-injury/).
 
-## Talk to a Workers’ Comp Lawyer About Your Condition
+## What If the Claim Is Denied?
 
-If you were injured previously, your work accident claim may be a little more complex. Luckily, your lawyer is here to make things simple.
+If you have received a denial of your workers’ comp claim, you have the right to dispute that decision and take your claim to a hearing before the Virginia Workers’ Compensation Commission. At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due. Read about [what happens if your claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).
 
-At Pathfinder Injury Law, we know pre-existing conditions can complicate matters, making it tough to recover from your injuries. If you’re struggling to get [compensated fairly for a Workers’ Comp claim](/how-to-win-a-virginia-workers-comp-case/), reach out for assistance, starting with a free consultation. We’re here to help when you call [804-505-0633](tel:+18045050633) or fill out the online contact form below.
+## Hurt at Work With an Old Injury?
+
+Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/).

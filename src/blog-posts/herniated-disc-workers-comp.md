@@ -39,7 +39,7 @@ That arm-or-leg pattern is how doctors tie the disc to your symptoms, and it is 
 |---|---|
 | It herniated during a specific lift, pull, twist, or fall at work, and you can say when | Yes, if the medical evidence connects the disc to that event |
 | It developed slowly from years of lifting, bending, or driving, with no single event | Generally no. Gradual wear from repeated work is generally not an injury by accident |
-| You had an older disc problem, and a specific work accident made it structurally worse | It can be. A structural aggravation of a pre-existing condition by a work accident can be covered |
+| You had an older disc problem, and a specific work accident made it structurally worse | It can be. A structural aggravation of a [pre-existing condition](/pre-existing-conditions-and-workers-comp-claims/) by a work accident can be covered |
 
 Many disc claims are lost in the middle row. Tell a doctor your back “has been getting worse for months” and leave out the pallet you lifted on Tuesday, and the insurance company will call it gradual onset. Tell every doctor the specific moment: what you lifted, how heavy, how you were turned, and what you felt.
 
