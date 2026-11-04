@@ -225,7 +225,7 @@ export const articlesB = {
     h1: 'What Happens After You File a Workers’ Comp Claim?',
     lead: `
       <p class="lead">After a serious work accident, you may have immediately reported your accident to your employer. They need to know about injuries that happen at work, and they’re responsible for your Workers’ Comp benefits.</p>
-      <p>But once you file a Workers’ Comp claim, what happens? If you’re worried about the next steps in your Workers’ Comp process, a <a href="${WC}">workers comp lawyer</a> from Pathfinder Injury Law is here to help. Here’s what you can expect when you’re hurt in a work accident.</p>`,
+      <p>But once you file a <a href="${WC}">Workers’ Comp</a> claim, what happens? Here’s what to expect, in order.</p>`,
     sections: [
       {
         id: 'review',
@@ -236,15 +236,15 @@ export const articlesB = {
         html: `
           <p>The Virginia Workers’ Compensation Act requires notice to your employer within <a href="https://workcomp.virginia.gov/content/injured-workers" rel="noopener">thirty days of the accident</a>, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Once you’ve done this, the insurance company is responsible for assessing your claim.</p>
           <p>This review is meant to determine whether you were seriously injured, whether your injuries happened on the job, and what funds you’re due for the injuries you suffered.</p>
-          <p>Once the insurance company has reviewed your claim, you’ll then receive a notice about whether your claim was approved or denied.</p>`,
+          <p>After you file, the Commission will order your employer’s insurance company to respond to your claim within 30 days. It may accept the claim or deny it.</p>`,
       },
       {
         id: 'approved-or-denied',
         h2: 'You May Be Approved or Denied',
         // Denial reasons use the reviewed Workers' Comp page list.
         html: `
-          <p>If your claim is accepted, workers’ comp can pay for your medical treatment and part of your wages for the time you’re unable to work.</p>
-          <p>But you’re not out of options just <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf" rel="noopener">because you were denied</a>. Denials can happen for a number of reasons. Once you determine why your claim was denied with a Workers’ Comp lawyer, you can begin to <a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">dispute the denial</a>.</p>
+          <p>If your claim is accepted, workers’ comp can pay for your medical treatment and part of your wages for the time you’re unable to work. If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8.</p>
+          <p>But you’re not out of options just <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_1.pdf" rel="noopener">because you were denied</a>. Denials can happen for a number of reasons. Once you know why your claim was denied, you can begin to <a href="/how-to-appeal-a-workers-comp-denial-in-virginia/">dispute the denial</a>.</p>
           <p>Reasons for an initial denial often include:</p>
           <ul>
             <li>Lack of sufficient evidence regarding your injuries;</li>
@@ -259,15 +259,13 @@ export const articlesB = {
         h2: 'You Have a Chance to Dispute the Denial',
         // Live: "seek out a hearing to appeal your claim ... Your appeal is a chance to present new evidence".
         html: `
-          <p>Once you’ve determined why your Workers’ Comp claim may have been denied, you and your lawyer can then request a hearing to dispute the denial. The hearing will be held before the <a href="https://workcomp.virginia.gov/" rel="noopener">Virginia Workers’ Compensation Commission</a>, and your lawyer can represent you during the proceedings.</p>
-          <p>The hearing is a chance to present new evidence and details for your claim. Because of this, it’s important to <a href="${WC}how-to-prepare-for-a-virginia-workers-comp-hearing/">be prepared for your hearing</a> with the evidence you need. Reach out to your lawyer for help gathering evidence before your hearing.</p>`,
+          <p>Once you know why your Workers’ Comp claim was denied, you can request a hearing to dispute the denial. The hearing will be held before the <a href="https://workcomp.virginia.gov/" rel="noopener">Virginia Workers’ Compensation Commission</a>. You can ask for a hearing no matter what the insurance company decides, including when it accepts the claim but refuses to pay for certain treatment or benefits.</p>
+          <p>At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due. The hearing is a chance to present new evidence and details for your claim. Because of this, it’s important to <a href="${WC}how-to-prepare-for-a-virginia-workers-comp-hearing/">be prepared for your hearing</a> with the medical records and other evidence you need.</p>`,
       },
     ],
     closing: {
-      h2: 'Seek Help When Filing a Workers’ Comp Claim',
-      html: `
-        <p>If you’ve been hurt on the job, you may be eligible for Workers’ Comp benefits that cover the costs of your <a href="/virginia-work-injury-lawyer/">work-related injuries</a>. But you may be worried about your next steps, once you’ve filed the claim.</p>
-        <p>Your lawyer at Pathfinder Injury Law is here to help you recover when you’ve been hurt in a work accident. Your lawyer can give you the guidance you need when you’re hurt and need help filing your claim. Reach out for a free consultation by calling ${phone} or by <a href="#contact">completing the online contact form</a>.</p>`,
+      h2: 'Filed Your Claim and Waiting to Hear Back?',
+      html: `<p>The insurance company writes the 30-day answer and the Award Agreement. You decide whether to sign that agreement and whether to ask for a hearing. Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call ${phone} or <a href="#contact">use the contact form</a> on this page.</p>`,
     },
   },
 
@@ -324,7 +322,7 @@ export const articlesB = {
     parents: [{ name: 'Virginia Work Injury Lawyer', path: '/virginia-work-injury-lawyer/' }],
     lead: `
       <p class="lead">A single mistake or distraction on the job can leave you hurt and suffering. Your Workers’ Comp benefits are supposed to protect you and compensate you when this happens, but you may not have much luck getting your compensation.</p>
-      <p>Luckily, your lawyer at Pathfinder Injury Law can guide you through the steps to settle a Virginia Workers’ Comp dispute. If you were hurt on the job and you’ve been denied Workers’ Comp benefits or had a dispute with your claim, <a href="${WC}">your Workers’ Comp lawyer</a> can help you get answers.</p>
+      <p>Here are the steps to settle a Virginia <a href="${WC}">Workers’ Comp</a> dispute, whether your claim was denied or the insurance company is fighting part of it.</p>
       <p>A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.</p>`,
     sections: [
       {
@@ -334,8 +332,8 @@ export const articlesB = {
         // to the insurer). Live said "ten days to report" an injury; replaced with the reviewed
         // thirty-day notice and two-year filing wording.
         html: `
-          <p>Your first option is to speak with the insurance company and your employer about your Workers’ Comp claim. Your lawyer can request more information about the reason for your denial, determining why you didn’t receive compensation.</p>
-          <p>Once you know the reasons for your denial, you and your lawyer can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://workcomp.virginia.gov/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires notice to your employer within thirty days of the accident, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you and your lawyer may focus on proving you met those deadlines.</p>`,
+          <p>Your first step is to find out the insurance company’s reason for the denial or the dispute.</p>
+          <p>Once you know the reasons for your denial, you can focus on disputing those reasons. For example, your employer may claim you didn’t <a href="https://workcomp.virginia.gov/sites/default/files/documents/Reporting-an-Accident_0.pdf" rel="noopener">give notice or file your claim in time</a> to receive compensation. In Virginia, the Workers’ Compensation Act requires notice to your employer within thirty days of the accident, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply. In this case, you may focus on proving you met those deadlines.</p>`,
       },
       {
         id: 'hearing',
@@ -343,17 +341,16 @@ export const articlesB = {
         // Live heading: "Take Your Claim to Court". The Commission is not a court, and the reviewed
         // wording is "hearing before the Commission". LIVE WORDING kept: mediation sentence.
         html: `
-          <p>Pathfinder Injury Law can also help at mediation. Mediations are settlement conferences with the insurance company and a judge (called a deputy commissioner) for the purpose of trying to reach a lump sum settlement.</p>
-          <p>But <a href="https://workcomp.virginia.gov/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. While your Workers’ Comp lawyer can help you provide evidence that you are <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
-          <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://workcomp.virginia.gov/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, your lawyer can represent you and present evidence that you’re due Workers’ Comp benefits. Once all evidence has been presented, the commissioner will determine whether you’re due benefits.</p>`,
+          <p>Some disputes go to mediation. Mediations are settlement conferences with the insurance company and a Commission mediator, a neutral Commission employee trained to help both sides reach an agreement, often a lump sum settlement.</p>
+          <p>But <a href="https://workcomp.virginia.gov/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. Even with evidence that you are <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
+          <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://workcomp.virginia.gov/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, you present evidence that you’re due Workers’ Comp benefits. At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due.</p>`,
       },
     ],
     closing: {
-      h2: 'Settle Your Dispute with a Workers’ Comp Lawyer',
+      h2: 'Stuck in a Workers’ Comp Dispute?',
       // Live: "your lawyer can fight for your claim in the courtroom, guiding you to compensation".
       html: `
-        <p>After a work accident, you need Workers’ Comp benefits that meet your needs. But if your employer fails to compensate you, you may need help getting compensated for your work injuries.</p>
-        <p>Your lawyer at Pathfinder Injury Law is here to help you negotiate the settlement you need. If the insurance company refuses to work with you, your lawyer can represent you at a hearing before the Commission. To discuss your path to recovery, reach out for a free consultation by calling ${phone} or by <a href="#contact">filling out the online contact form</a>.</p>`,
+        <p>Pathfinder Injury Law handles only Virginia workers’ compensation claims, and <a href="/bryn-swartz/">Bryn Swartz</a> has taken part in hundreds of mediations. Call ${phone} or <a href="#contact">use the contact form</a> on this page.</p>`,
     },
   },
 
@@ -506,10 +503,10 @@ export const articlesB = {
     path: '/workers-comp-settlement-in-virginia/',
     title: 'Workers’ Comp Settlement in Virginia - Pathfinder Injury Law',
     description:
-      "Pathfinder Injury Law is a law firm exclusively handling Virginia workers' comp cases. Call 804-505-0633 for a free consultation.",
+      "How Virginia workers' comp settlements work: full and final or open medical, Medicare set-asides, and why there's no honest average.",
     h1: 'Workers’ Comp Settlement in Virginia',
     lead: `
-      <p class="lead">When you’ve been injured, you know you’ll likely have to file a Workers’ Comp claim. Many people wonder what the average Workers’ Compensation settlement is, and may worry about the process they’ll have to go through. When you’re preparing for a Workers’ Comp settlement in Virginia, trust <a href="${WC}">Pathfinder Injury Law</a>. We have years of experience helping clients with their Workers’ Compensation settlements and are more than willing to answer any questions you may have on the process.</p>
+      <p class="lead">When you’ve been injured, you know you’ll likely have to file a Workers’ Comp claim. Many people wonder what the average Workers’ Compensation settlement is, and how a <a href="${WC}">Virginia workers’ comp</a> settlement works. Here’s what to know.</p>
       <p>A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.</p>`,
     sections: [
       {
@@ -525,7 +522,7 @@ export const articlesB = {
             <li><strong>Full and Final Settlement:</strong> A one-time payment to resolve your workers’ comp claim, with the understanding that you may not bring any future claims in relation to your injury. You agree to take a lump sum of money to close out your entire case, with no future benefit entitlement of any kind, whether for wage loss, medical bills, vocational rehab, permanent partial disability benefits, or any other benefits. Typically, cases settle this way, top to bottom. Settling your case closes everything and ends benefits.</li>
             <li><strong>Lump Sum Settlement With Open Medical Benefits:</strong> It is exceedingly rare to settle a case for a lump sum with open medicals.</li>
           </ul>
-          <p>You should always consult with a lawyer before accepting a settlement. To learn more, read <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">Should I Accept a Lump Sum Settlement?</a></p>`,
+          <p>To learn more, read <a href="/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/">Should I Accept a Lump Sum Settlement?</a></p>`,
       },
       {
         id: 'medicare',
@@ -539,12 +536,14 @@ export const articlesB = {
         h2: 'What Is the Average Workers’ Compensation Settlement?',
         // Live: "We're compassionate, honest, and skilled at what we do." ("skilled" left out).
         html: `
-          <p>The fact of the matter is, determining the amount you’ll get for a Workers’ Comp settlement is complicated. It’s generally beneficial to work with a lawyer who can represent you effectively.</p>`,
+          <p>There isn’t an honest average. The amount has to account for future medical care and lost earning power, because after a full and final settlement you cannot come back for more. Those depend on your injury, your wages, and your treatment, and they take time to know.</p>
+          <blockquote><p>“On the first call, I won’t guess what your case is worth. I don’t know anything about it yet. Any lawyer who puts a number on it that early is making it up.” (Bryn Swartz)</p></blockquote>
+          <p>More on <a href="/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/">how a settlement is calculated</a>.</p>`,
       },
     ],
     closing: {
-      h2: 'Get Help with Your Workers’ Comp Settlement in Virginia',
-      html: `<p>At <a href="/">Pathfinder Injury Law</a>, we’re here to show you the way forward. We’re compassionate and honest. Call us today at ${phone} to get a free consultation.</p>`,
+      h2: 'Thinking About Settling Your Workers’ Comp Claim?',
+      html: `<p>Settling your case closes everything and ends benefits. Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call ${phone} or <a href="#contact">use the contact form</a> on this page.</p>`,
     },
   },
 } satisfies Record<string, ArticleB>;
