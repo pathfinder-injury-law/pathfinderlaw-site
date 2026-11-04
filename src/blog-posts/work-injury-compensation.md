@@ -85,7 +85,7 @@ When there is a set-aside, part of the settlement goes into a separate, interest
 
 ## Where Settlement Talks Happen
 
-Many cases settle through direct negotiation. Others settle at a free mediation held through the Commission, where a deputy commissioner acts as the mediator and helps both sides try to reach a lump sum. The deputy commissioner who mediates your case is not the one who decides it. For a full and final settlement mediation, the Commission requires every party to have a lawyer. If the case doesn’t settle, the dispute goes to a hearing before a deputy commissioner. The insurance company has handled thousands of these. Most injured workers have never been through one.
+Many cases settle through direct negotiation. Others settle at a free mediation held through the Commission, where a deputy commissioner acts as the mediator and helps both sides try to reach a lump sum. The deputy commissioner who mediates your case is not the one who decides it. For a full and final settlement mediation, the Commission requires the injured worker to have a lawyer. If the case doesn’t settle, the dispute goes to a hearing before a deputy commissioner. The insurance company has handled thousands of these. Most injured workers have never been through one.
 
 ## Talk to Pathfinder Injury Law About Your Claim
 
