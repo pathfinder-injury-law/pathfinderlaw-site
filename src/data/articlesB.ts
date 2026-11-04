@@ -155,7 +155,7 @@ export const articlesB = {
         html: `
           <ul>
             <li>Check whether a claim has been filed. If not, file one.</li>
-            <li>Write down every call with the adjuster: date, time, name, and what was said.</li>
+            <li>Write down every call with the <a href="/how-to-avoid-work-comp-adjusters-tricks/">adjuster</a>: date, time, name, and what was said.</li>
             <li>Ask for anything important in writing, and send your own requests in writing.</li>
             <li>Keep your pay stubs and every out-of-work note from your doctor.</li>
             <li>Keep going to your doctor and following your restrictions. Gaps in treatment become the insurance company’s next argument.</li>

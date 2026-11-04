@@ -317,7 +317,7 @@ export const subArticles: SubArticle[] = [
     closing: {
       h2: 'Talk to Your Virginia Work Comp Lawyer Before Your IME',
       blocks: [
-        'When you’re hurt in a serious Virginia work accident, attending an IME may be part of your Workers’ Comp process. But you may be worried and unsure how to prepare for an IME in Virginia. A mistake could leave you with a denial.',
+        'When you’re hurt in a serious Virginia work accident, attending an IME may be part of your [Workers’ Comp process](/workers-comp-process-in-virginia/). But you may be worried and unsure how to prepare for an IME in Virginia. A mistake could leave you with a denial.',
         'A lawyer at [Pathfinder Injury Law](/) can help you deal with your IME appointment, starting with a free consultation about it. To work with our team, call {phone} or complete the online contact form below.',
       ],
     },
@@ -714,7 +714,7 @@ export const subArticles: SubArticle[] = [
               'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8.',
             ],
           },
-          'Be careful what you say to the insurance adjuster, and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/).',
+          'Be careful what you say to the [insurance adjuster](/how-to-avoid-work-comp-adjusters-tricks/), and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/).',
         ],
       },
       {
@@ -790,7 +790,7 @@ export const subArticles: SubArticle[] = [
               'If it accepts, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you can’t work because of the injury.',
             ],
           },
-          'Be careful what you say to the insurance adjuster, and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/) and [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/).',
+          'Be careful what you say to the [insurance adjuster](/how-to-avoid-work-comp-adjusters-tricks/), and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/) and [when Virginia workers’ comp starts paying](/virginia-workers-comp-lawyer/when-does-virginia-workers-comp-start-paying/).',
         ],
       },
       {
