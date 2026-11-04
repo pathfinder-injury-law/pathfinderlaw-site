@@ -407,6 +407,44 @@
       }
     ]
   },
+  "/images/photos/e4-trail-map-phone-wide.webp": {
+    "width": 1200,
+    "height": 1116,
+    "avif": [
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-wide-480.avif",
+        "width": 480,
+        "bytes": 18715
+      },
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-wide-800.avif",
+        "width": 800,
+        "bytes": 37725
+      },
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-wide-1200.avif",
+        "width": 1200,
+        "bytes": 79921
+      }
+    ],
+    "webp": [
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-wide-480.webp",
+        "width": 480,
+        "bytes": 27836
+      },
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-wide-800.webp",
+        "width": 800,
+        "bytes": 55308
+      },
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-wide-1200.webp",
+        "width": 1200,
+        "bytes": 111568
+      }
+    ]
+  },
   "/images/photos/e4-farm-road.jpg": {
     "width": 1000,
     "height": 1000,

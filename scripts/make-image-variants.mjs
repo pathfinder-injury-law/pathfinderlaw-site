@@ -32,6 +32,7 @@ const PHOTOS = {
   // Home hero from Nov 3 (AI-made in Google's image model from our prompts, see CREDITS.txt)
   '/images/photos/e4-trail-map-desktop.webp': [1024, 1440, 2000],
   '/images/photos/e4-trail-map-phone.webp': [480, 900],
+  '/images/photos/e4-trail-map-phone-wide.webp': [480, 800, 1200], // phones from Nov 4: cut from the desktop photo so the whole hiker shows
   '/images/photos/e4-farm-road.jpg': [480, 800],
   '/images/photos/e4-autumn-ridges.jpg': [480, 800],
   '/images/photos/e4-green-valley.jpg': [480, 800],
