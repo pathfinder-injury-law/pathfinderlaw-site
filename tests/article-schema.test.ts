@@ -29,7 +29,7 @@ const h1Of = (path: string) =>
 const SAMPLE = '/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/';
 
 test('article pages carry one Article block with the H1, Bryn, the firm, and the true date', opts, () => {
-  for (const path of [SAMPLE, '/workers-comp-process-in-virginia/', '/how-to-appeal-a-workers-comp-denial-in-virginia/', '/car-accident-at-work-in-virginia/']) {
+  for (const path of [SAMPLE, '/workers-comp-process-in-virginia/', '/how-to-appeal-a-workers-comp-denial-in-virginia/']) {
     const nodes = nodesOf(path);
     const articles = nodes.filter((n) => n['@type'] === 'Article');
     assert.equal(articles.length, 1, `${path} should have one Article`);
@@ -57,7 +57,7 @@ test('Article is not on blog posts, city pages, practice pages, or pages without
     if (hasArticle) count++;
   }
   for (const path of ['/', '/virginia-workers-comp-lawyer/', '/virginia-work-injury-lawyer/', '/virginia-construction-accident-lawyer/',
-    '/virginia-factory-accident-lawyer/', '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', '/contact/', '/about-us/', '/bryn-swartz/']) {
+    '/virginia-factory-accident-lawyer/', '/car-accident-at-work-in-virginia/', '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/', '/contact/', '/about-us/', '/bryn-swartz/']) {
     assert.ok(!nodesOf(path).some((n) => n['@type'] === 'Article'), `${path} should not carry Article`);
   }
   assert.ok(count >= 25, `expected the article pages to carry Article, found ${count}`);
