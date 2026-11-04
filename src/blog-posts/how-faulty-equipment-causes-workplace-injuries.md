@@ -25,7 +25,7 @@ But if they failed to do their part of the job, you may have been seriously inju
 
 ## What a Lawyer Can Do to Help You
 
-Faulty equipment can malfunction at any time and leave you seriously injured on the job, but what can you do about it? If you’re an injured worker, Virginia law may have you covered with Workers’ Comp insurance. That’s great, but it’s only step one. The next step is navigating the claim process and dealing with greedy insurers and reluctant employers.
+Faulty equipment can malfunction at any time and leave you seriously injured on the job, but what can you do about it? If you’re an injured worker, Virginia law may have you covered with Workers’ Comp insurance. That’s great, but it’s only step one. The next step is navigating the [claim process](/workers-comp-process-in-virginia/) and dealing with greedy insurers and reluctant employers.
 
 If you’re having trouble with the insurer or your employer, reach out to a Workers’ Comp lawyer. They can identify the cause of your accident, gather evidence in your favor, and represent you in court hearings and negotiations.
 

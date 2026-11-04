@@ -59,7 +59,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Richmond? Pathfinder Injury Law handles only Virginia workers’ comp. Meet at our Ridge Road office or by phone or video. Free consultation.',
     intro: [
-      'Hurt at work in Richmond? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and our main office is here in Richmond.',
+      'Hurt at work in Richmond? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and our main office is here in Richmond.',
       'Our office is at 8010 Ridge Road, Suite A, Richmond, VA 23229. We meet by appointment, and we can meet by phone or video if getting to the office is hard while you recover. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -245,7 +245,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Hanover County, Mechanicsville, or Ashland? We handle only Virginia workers’ comp. Meet at our Ridge Road office or by phone or video.',
     intro: [
-      'Hurt at work in Mechanicsville, Ashland, or anywhere else in Hanover County? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
+      'Hurt at work in Mechanicsville, Ashland, or anywhere else in Hanover County? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
       'You don’t have to go far to meet with us. Our main office is at 8010 Ridge Road, Suite A, in Richmond. From most of the county, that’s a drive south on I-95, I-295, or one of the U.S. routes into the Richmond area, not a trip across the state. We meet there by appointment, and we can meet by phone or video if driving is hard while you recover. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -301,7 +301,7 @@ export const cities: City[] = [
       {
         h: 'Where Would a Dispute Over My Claim Be Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its headquarters is at 333 E. Franklin St. in downtown Richmond, and the Commission lists it as both a hearing location and a mediation location. To the north, it also lists a hearing location at 9113 Courthouse Rd. in Spotsylvania ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its headquarters is at 333 E. Franklin St. in downtown Richmond, and the Commission lists it as both a hearing location and a mediation location. To the north, it also lists a hearing location at 9113 Courthouse Rd. in Spotsylvania ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -367,7 +367,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Chester, Midlothian, or Chesterfield County? We handle only Virginia workers’ comp. Meet in Richmond or by video. Free consultation.',
     intro: [
-      'Hurt at work in Chester, Midlothian, or anywhere else in Chesterfield County? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
+      'Hurt at work in Chester, Midlothian, or anywhere else in Chesterfield County? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
       'Our office is close: 8010 Ridge Road, Suite A, in Richmond. We meet there by appointment, and we can meet by phone or video if the trip is hard while you recover. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -418,7 +418,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its headquarters is across the river in Richmond at 333 E. Franklin St., and the Commission lists that address as both a hearing location and a mediation location. It lists no hearing location in the county itself ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its headquarters is across the river in Richmond at 333 E. Franklin St., and the Commission lists that address as both a hearing location and a mediation location. It lists no hearing location in the county itself ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -632,7 +632,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Fairfax County? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond. Free consultation.',
     intro: [
-      'Hurt at work in Fairfax County, whether in Tysons, Reston, Springfield, or Centreville? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from every part of Virginia.',
+      'Hurt at work in Fairfax County, whether in Tysons, Reston, Springfield, or Centreville? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from every part of Virginia.',
       'We do not have an office in Fairfax County. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -670,7 +670,7 @@ export const cities: City[] = [
               'Falls from ladders, scaffolds, and roofs on construction sites',
               'Being struck by falling tools or materials, or caught in equipment',
               'Forklift and pallet jack accidents, and falls from loading docks',
-              'Back, shoulder, and knee injuries from a specific lift, such as stocking shelves or moving freight',
+              'Back, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift, such as stocking shelves or moving freight',
               'Nurses and aides hurt lifting or moving a patient',
               'Slips and falls on wet floors in stores and kitchens',
               'Crashes while driving for work, including delivery drivers and technicians traveling to job sites',
@@ -693,7 +693,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Northern Virginia Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Fairfax at Prosperity Plaza, 3020 Hamaker Court, Suite 200, and another in Manassas at Sudley Tower, 7900 Sudley Rd., Suite 500. It lists each of them as an office, a hearing location, and a mediation location ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Fairfax at Prosperity Plaza, 3020 Hamaker Court, Suite 200, and another in Manassas at Sudley Tower, 7900 Sudley Rd., Suite 500. It lists each of them as an office, a hearing location, and a mediation location ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -908,7 +908,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Harrisonburg, Staunton, or the Shenandoah Valley? We handle only Virginia workers’ comp. Meet by phone, video, or in Richmond. Free consult.',
     intro: [
-      'Hurt at work in Harrisonburg, Staunton, Waynesboro, or anywhere else in the Shenandoah Valley? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take many cases from Rockingham and Augusta counties and up and down the I-81 corridor.',
+      'Hurt at work in Harrisonburg, Staunton, Waynesboro, or anywhere else in the Shenandoah Valley? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take many cases from Rockingham and Augusta counties and up and down the I-81 corridor.',
       'We do not have an office in the Valley. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -946,7 +946,7 @@ export const cities: City[] = [
               'Slips and falls on wet or greasy floors',
               'Hands and arms caught in conveyors, packaging equipment, or other machinery',
               'Forklift and pallet jack accidents, and falls from loading docks',
-              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Back, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift or fall',
               'Nurses and aides hurt lifting or moving a patient',
               'Crashes while driving a truck or delivery van for work',
             ],
@@ -966,7 +966,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Valley Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Harrisonburg at 136 W. Elizabeth St., Suite 101, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 113 East Beverley St. in Staunton and 20 S. Randolph St. in Lexington ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Harrisonburg at 136 W. Elizabeth St., Suite 101, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 113 East Beverley St. in Staunton and 20 S. Randolph St. in Lexington ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -1036,7 +1036,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Lynchburg, Bedford, or Amherst? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond.',
     intro: [
-      'Hurt at work in Lynchburg? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from across Central Virginia, including Bedford, Amherst, Campbell, and Appomattox counties.',
+      'Hurt at work in Lynchburg? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from across Central Virginia, including Bedford, Amherst, Campbell, and Appomattox counties.',
       'We do not have an office in Lynchburg. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -1080,7 +1080,7 @@ export const cities: City[] = [
               'Being struck by a falling load or a moving forklift',
               'Slips and falls on wet floors in hospitals, dining halls, kitchens, and stores',
               'Falls from ladders and loading docks',
-              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Back, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift or fall',
               'Crashes while driving for work',
             ],
           },
@@ -1091,7 +1091,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Central Virginia Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It lists a hearing location in Rustburg, the Campbell County seat, at 732 Village Highway, and a mediation location at 3506 Wards Rd. in Lynchburg. Its nearest regional office is in Roanoke at 3800 Electric Rd., Suite 200, which it lists as both a hearing location and a mediation location ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It lists a hearing location in Rustburg, the Campbell County seat, at 732 Village Highway, and a mediation location at 3506 Wards Rd. in Lynchburg. Its nearest regional office is in Roanoke at 3800 Electric Rd., Suite 200, which it lists as both a hearing location and a mediation location ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           // VERIFY: new to the site. Source: https://workcomp.virginia.gov/content/mediation-services
           'The Commission describes its mediation as voluntary, confidential, and free. The mediators are Commission employees, and either side can ask for mediation to try to resolve a dispute or settle the claim, and it goes forward if both sides agree ([mediation services](https://workcomp.virginia.gov/content/mediation-services)).',
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}) and [how to prepare for a hearing](${WC}how-to-prepare-for-a-virginia-workers-comp-hearing/).`,
@@ -1414,7 +1414,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Newport News? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond. Free consultation.',
     intro: [
-      'Hurt at work in Newport News? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from anywhere on the Peninsula.',
+      'Hurt at work in Newport News? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from anywhere on the Peninsula.',
       'We do not have an office in Newport News. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -1458,7 +1458,7 @@ export const cities: City[] = [
               'Burns and eye injuries from welding, cutting, and grinding',
               'Slips and falls on wet floors in hospitals, stores, and kitchens',
               'Forklift and pallet jack accidents in warehouses and stockrooms',
-              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Back, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift or fall',
               'Nurses and aides hurt lifting or moving a patient',
               'Crashes while driving for work',
             ],
@@ -1470,7 +1470,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Peninsula Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its closest regional office is in Virginia Beach at 281 Independence Blvd., Suite 310, and the Commission lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and at the Williamsburg/James City County Courthouse, 5201 Monticello Ave. ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its closest regional office is in Virginia Beach at 281 Independence Blvd., Suite 310, and the Commission lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and at the Williamsburg/James City County Courthouse, 5201 Monticello Ave. ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -1540,7 +1540,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Roanoke, Salem, or Vinton? We handle only Virginia workers’ comp, only for injured workers. Meet by phone, video, or in Richmond.',
     intro: [
-      'Hurt at work in Roanoke, Salem, or Vinton? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from across the valley and the rest of western Virginia.',
+      'Hurt at work in Roanoke, Salem, or Vinton? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers, and we take cases from across the valley and the rest of western Virginia.',
       'We do not have an office in Roanoke. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -1583,7 +1583,7 @@ export const cities: City[] = [
               'Being struck by equipment or a passing vehicle in a road work zone',
               'Hands and fingers caught in machinery, and burns from hot metal',
               'Nurses and aides hurt lifting or moving a patient',
-              'Back, neck, shoulder, and knee injuries from a specific lift or fall',
+              'Back, neck, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift or fall',
               'Crashes while driving a delivery truck or other work vehicle',
             ],
           },
@@ -1600,7 +1600,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Western Virginia Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Roanoke at 3800 Electric Rd., Suite 200, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 55 E. Main St. in Christiansburg, 20 S. Randolph St. in Lexington, and 3160 Kings Mountain Rd. in Martinsville ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Roanoke at 3800 Electric Rd., Suite 200, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 55 E. Main St. in Christiansburg, 20 S. Randolph St. in Lexington, and 3160 Kings Mountain Rd. in Martinsville ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           'Insurance companies deny claims for many reasons. A few common ones: the accident didn’t happen at work, the injury is degenerative, or the treatment isn’t related to the accident.',
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
@@ -1742,7 +1742,7 @@ export const cities: City[] = [
       {
         h: 'Who Decides a Disputed Claim?',
         body: [
-          `When the parties don’t settle a dispute, the Virginia Workers’ Compensation Commission decides it ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission lists a hearing location in the city at 22 Lincoln St. Its nearest regional office is in Virginia Beach at 281 Independence Blvd., Suite 310, which it lists as a hearing and mediation location, and it also lists a hearing location at the Williamsburg/James City County Courthouse ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `When the parties don’t [settle a dispute](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/), the Virginia Workers’ Compensation Commission decides it ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). The Commission lists a hearing location in the city at 22 Lincoln St. Its nearest regional office is in Virginia Beach at 281 Independence Blvd., Suite 310, which it lists as a hearing and mediation location, and it also lists a hearing location at the Williamsburg/James City County Courthouse ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `That page doesn’t say which cases go to which location. The Commission’s rules also allow hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask for a hearing no matter what the insurance company decides, and the insurance company will have its own lawyer there. Read [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -1815,7 +1815,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Alexandria, Old Town, or Del Ray? We handle only Virginia workers’ comp. Meet by phone, video, or in Richmond. Free consultation.',
     intro: [
-      'Hurt at work in Alexandria, whether in Old Town, Del Ray, the West End, or along the Route 1 corridor? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
+      'Hurt at work in Alexandria, whether in Old Town, Del Ray, the West End, or along the Route 1 corridor? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, and only for injured workers.',
       'We do not have an office in Alexandria. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -1859,7 +1859,7 @@ export const cities: City[] = [
               'Burns, cuts, and falls on wet floors in hotel and restaurant kitchens',
               'Falls from ladders, scaffolds, and roofs on construction and renovation jobs',
               'Workers struck by falling materials or tools',
-              'Back, shoulder, and knee injuries from a specific lift or fall, for example a housekeeper turning a mattress or a stocker lifting a case',
+              'Back, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift or fall, for example a housekeeper turning a mattress or a stocker lifting a case',
               'Nurses and aides hurt lifting or moving a patient',
               'Delivery drivers hurt on stairs, curbs, and loading docks',
               'Crashes while driving a bus, a delivery truck, or your own car for work',
@@ -1873,7 +1873,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Northern Virginia Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Fairfax at 3020 Hamaker Court, Suite 200, and lists that office as both a hearing location and a mediation location. It lists its Manassas regional office, at 7900 Sudley Rd., Suite 500, the same way ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Fairfax at 3020 Hamaker Court, Suite 200, and lists that office as both a hearing location and a mediation location. It lists its Manassas regional office, at 7900 Sudley Rd., Suite 500, the same way ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -1995,7 +1995,7 @@ export const cities: City[] = [
               'Forklift accidents and falls from loading docks',
               'Crush and pinch injuries while assembling heavy machinery',
               'Nurses and aides hurt helping a patient out of bed or a chair',
-              'A back, shoulder, or knee injury from one specific lift',
+              'A back, shoulder, or [knee injury](/knee-injury-compensation/) from one specific lift',
             ],
           },
           // VERIFY V2
@@ -2017,7 +2017,7 @@ export const cities: City[] = [
       {
         h: 'Where Does a Disputed Claim Go?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides claim disputes that aren’t settled ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its nearest regional office is next door in Virginia Beach at 281 Independence Blvd., Suite 310, and the Commission lists it as a hearing and mediation location. Other hearing locations in the region include 22 Lincoln St. in Hampton and 100 N. College Dr. in Franklin ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides claim disputes that aren’t [settled](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its nearest regional office is next door in Virginia Beach at 281 Independence Blvd., Suite 310, and the Commission lists it as a hearing and mediation location. Other hearing locations in the region include 22 Lincoln St. in Hampton and 100 N. College Dr. in Franklin ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission doesn’t say on that page which cases are heard where, and its rules allow hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask for a hearing whatever the insurance company decides. Expect the insurance company to bring a lawyer. Here’s [how to fight a workers’ comp denial](${DENIALS}).`,
         ],
       },
@@ -2091,7 +2091,7 @@ export const cities: City[] = [
     description:
       'Hurt at work in Norfolk or elsewhere in Hampton Roads? We handle only Virginia workers’ comp. Meet by phone, video, or in Richmond. Free consultation.',
     intro: [
-      'Hurt at work in Norfolk, Virginia Beach, Chesapeake, Portsmouth, or anywhere else on the Southside? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
+      'Hurt at work in Norfolk, Virginia Beach, Chesapeake, Portsmouth, or anywhere else on the Southside? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
       'We do not have an office in Norfolk. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -2135,7 +2135,7 @@ export const cities: City[] = [
               'Forklift and truck accidents in yards, docks, and warehouses',
               'Nurses and aides hurt lifting or moving a patient',
               'Slips and falls on wet floors in hospitals, stores, and kitchens',
-              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Back, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift or fall',
               'Crashes while driving for work',
             ],
           },
@@ -2156,7 +2156,7 @@ export const cities: City[] = [
       {
         h: 'Where Are Hampton Roads Workers’ Comp Disputes Decided?',
         body: [
-          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Virginia Beach at 281 Independence Blvd., Suite 310, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and at the Williamsburg/James City County Courthouse ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). It has a regional office in Virginia Beach at 281 Independence Blvd., Suite 310, and lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and at the Williamsburg/James City County Courthouse ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -2233,7 +2233,7 @@ export const cities: City[] = [
     description:
       'Injured on the job in Virginia Beach? We handle only Virginia workers’ comp. Meet by phone, video, or at our Richmond office. Free consultation.',
     intro: [
-      'Injured on the job at the Oceanfront, in Town Center, in Kempsville, or anywhere else in the city? Virginia workers’ comp can pay for your medical treatment and part of your lost wages, but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
+      'Injured on the job at the Oceanfront, in Town Center, in Kempsville, or anywhere else in the city? Virginia workers’ comp can pay for your medical treatment and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/), but only if your accident meets the legal test and your claim is filed on time. Pathfinder Injury Law handles only Virginia workers’ compensation claims, only for injured workers.',
       'We do not have an office in Virginia Beach. You can meet with us by phone or video, or at our Richmond office by appointment. Your first consultation is free. Call {phone} or use the form on this page.',
     ],
     sections: [
@@ -2281,7 +2281,7 @@ export const cities: City[] = [
               'Falls from ladders, scaffolds, and roofs on construction jobs',
               'Hands caught in machinery on a production line',
               'Nurses and aides hurt lifting or moving a patient',
-              'Back, shoulder, and knee injuries from a specific lift or fall',
+              'Back, shoulder, and [knee injuries](/knee-injury-compensation/) from a specific lift or fall',
               'Crashes while driving for work',
             ],
           },
@@ -2301,7 +2301,7 @@ export const cities: City[] = [
       {
         h: 'Does the Workers’ Comp Commission Have an Office in Virginia Beach?',
         body: [
-          `Yes. The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t settle ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its regional office for this area is at 281 Independence Blvd., Suite 310, and the Commission lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and in Eastville on the Eastern Shore ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
+          `Yes. The Virginia Workers’ Compensation Commission decides disputes over workers’ comp claims that the parties don’t [settle](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/) ([Va. Code § 65.2-700](${CODE}title65.2/chapter7/section65.2-700/)). Its regional office for this area is at 281 Independence Blvd., Suite 310, and the Commission lists that office as both a hearing location and a mediation location. It also lists hearing locations at 22 Lincoln St. in Hampton and in Eastville on the Eastern Shore ([Commission locations](https://www.workcomp.virginia.gov/hearing-locations)).`,
           `The Commission’s locations page does not say which cases are heard where. Its rules also provide for hearings by video over Webex ([16VAC30-50-30](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section30/)). You can ask the Commission for a hearing no matter what the insurance company decides. The insurance company will have a lawyer at that hearing. Here’s [what to do if your claim is denied](${DENIALS}).`,
         ],
       },
@@ -2362,7 +2362,7 @@ export const cities: City[] = [
     description:
       "Hurt at work on Virginia's Eastern Shore? Pathfinder Injury Law has a Chincoteague office and handles Workers' Comp claims in Accomack and Northampton.",
     intro: [
-      `If you were hurt at work on Virginia’s Eastern Shore, you may be eligible for Workers’ Comp benefits that help with your medical care and part of your lost wages. [Pathfinder Injury Law](${WC}) has an office in Chincoteague and takes clients across Accomack and Northampton counties.`,
+      `If you were hurt at work on Virginia’s Eastern Shore, you may be eligible for Workers’ Comp benefits that help with your medical care and [part of your lost wages](/virginia-workers-comp-lawyer/if-i-get-injured-at-work-in-virginia-do-i-get-paid/). [Pathfinder Injury Law](${WC}) has an office in Chincoteague and takes clients across Accomack and Northampton counties.`,
       'Work on the Shore can be hard on the body. Poultry and seafood processing, farming and aquaculture, construction, and seasonal tourism and hospitality jobs all carry real risks of injury. When you are hurt, the questions come fast. Who pays for your treatment? What happens to your paycheck? What do you do if the insurance company says no?',
       'Our team can walk you through the claim process, starting with a free consultation, so you can focus on getting better.',
     ],
