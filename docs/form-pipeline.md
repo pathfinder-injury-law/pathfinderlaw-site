@@ -23,7 +23,7 @@ Every inquiry is emailed to both inboxes. The subject ends with the sorting:
 |---|---|---|
 | PRIORITY case | Surgery had or recommended AND missed work or earned less (Bryn's rule, from the firm's settled-case data) | Thank-you page |
 | Possible case | Everything else that is not below, including every "Not sure" | Thank-you page |
-| Refer out | Sick from something at work, Social Security disability, or works for a Virginia state agency, the federal government, a railroad, a shipyard or port, or outside Virginia. Questions 3 to 5 are skipped once this is known. | "We'll reach out with the name of a lawyer who handles this kind of claim" |
+| Refer out | Sick from something at work, Social Security disability, or works for a Virginia state agency, the federal government, a railroad, a shipyard or port, or outside Virginia. Questions 3 to 5 are skipped once this is known. | Before Send, a note on the contact step: "Pathfinder handles only Virginia state workers’ comp claims, and your answers suggest this may be a different kind of case. If you leave your info, we’ll have a look and confirm." After Send: "Thanks for your message. We will review and, if we can help, we’ll reach out." Wording is Bryn's (Nov 3). It never promises a referral; referrals are at the firm's discretion. |
 | Likely not a case | Injury built up over time | "We'll review it and get back to you" |
 
 The email lists each answer as a plain line ("How hurt: An accident at work") under Name, Email and Phone. Phone numbers must be 10-digit US numbers and are stored and emailed as (804) 555-0100.

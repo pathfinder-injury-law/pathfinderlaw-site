@@ -73,7 +73,7 @@ const questions = [
 
     <fieldset class="step" data-step="contact" hidden>
       <legend><span class="step-q" tabindex="-1">How can we reach you?</span></legend>
-      <p class="intake-note" data-refer-note hidden>Thanks for telling us. This sounds like a kind of claim we don’t handle ourselves, but we know lawyers who do. Leave your info and we’ll point you to one.</p>
+      <p class="intake-note" data-refer-note hidden>Pathfinder handles only Virginia state workers’ comp claims, and your answers suggest this may be a different kind of case. If you leave your info, we’ll have a look and confirm.</p>
       <div class="field-pair">
         <div class="field">
           <label for={`${id}-phone`}>Phone Number<span aria-hidden="true">*</span></label>
@@ -310,9 +310,10 @@ const questions = [
     const finish = (r: Route) => {
       const name = firstName() ? `Thanks, ${firstName()}. ` : 'Thanks. ';
       const text = (form.querySelector('.intake-done-text') as HTMLElement);
+      // Refer-out wording is Bryn's (Nov 3): it promises a review, never a referral.
       text.textContent =
         r === 'refer'
-          ? `${name}We got your message. Someone from our office will reach out with the name of a lawyer who handles this kind of claim. Want to talk sooner? Call us at `
+          ? 'Thanks for your message. We will review and, if we can help, we’ll reach out. Want to talk sooner? Call '
           : `${name}We got your message. We’ll review it and get back to you. Want to talk sooner? Call us at `;
       const a = document.createElement('a');
       a.href = form.dataset.phoneHref || '';
