@@ -162,7 +162,7 @@ export const subArticles: SubArticle[] = [
       },
     ],
     closing: {
-      h2: 'Seek Help from a Workers’ Comp Lawyer',
+      h2: 'Seek Help From a Workers’ Comp Lawyer',
       blocks: [
         'Hurt in a work accident and unsure what benefits you qualify for? Your lawyer at Pathfinder Injury Law can talk with you about your options when you’re hurt in a work accident. We even offer free consultations, so reach out for the guidance you need. Call {phone}, or complete the online contact form below.',
       ],
@@ -622,7 +622,7 @@ export const subArticles: SubArticle[] = [
       },
     ],
     closing: {
-      h2: 'Know Your Claim’s Value with Help from a Virginia Workers’ Comp Lawyer',
+      h2: 'Know Your Claim’s Value with Help From a Virginia Workers’ Comp Lawyer',
       blocks: [
         'Injured in a Virginia work accident and unsure how to get compensated for your related losses? Reach out to a dedicated lawyer at [Pathfinder Injury Law](/). We can help you understand the potential value of your benefits. To start with a free consultation, call {phone} or fill out the online contact form below.',
       ],

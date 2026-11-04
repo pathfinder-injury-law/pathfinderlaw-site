@@ -21,7 +21,7 @@ If your employer has you covered under Workers’ Comp insurance, it’s still i
 
 If you have a right to Workers’ Comp in Virginia, you should [file it within two years](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/) from the date of the work-related accident, although exceptions apply. In case of death, the claim must be filed within two years from the death. Otherwise, your right to pursue it will be forever barred. Workers’ compensation is generally the exclusive remedy against your employer, so a lawsuit against your employer is generally barred except in extremely rare situations. Claims against third parties may exist, such as suing the driver of another vehicle. Talk with a lawyer about your situation.
 
-## What Are the Benefits You Can Claim from Workers’ Comp?
+## What Are the Benefits You Can Claim From Workers’ Comp?
 
 The benefits awarded for a [Workers’ Comp claim depend on the nature and severity of the injury](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/), loss, and hardship caused by the accident.
 
