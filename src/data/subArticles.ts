@@ -526,7 +526,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'Does Workers’ Comp Pay Lost Wages?',
     intro: [
       'After a serious work injury in Virginia, you may be directed to your Workers’ Comp benefits to recover from your injuries. You can’t cover your bills and needs without your wages, so it’s vital that you get coverage.',
-      'But does Virginia Workers’ Comp pay for lost wages? If you’re worried about losing your wages, reach out to Pathfinder Injury Law. We can help you seek out the coverage you need from your Workers’ Comp provider.',
+      'But does Virginia Workers’ Comp pay for lost wages? Yes, in part. Here’s how wage benefits work.',
     ],
     sections: [
       {
@@ -534,24 +534,23 @@ export const subArticles: SubArticle[] = [
         blocks: [
           'When you’re hurt on the job in Virginia, you may be due benefits that cover your losses for a work accident. You may expect coverage for your medical bills, from specialist care to travel costs. But what about your wages?',
           'Disability benefits replace a portion of the wages you would have received. Although you won’t receive your full paycheck, these funds can help keep you and your family supported and fed while you heal from your injuries.',
+          'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8.',
         ],
       },
       {
-        h2: 'How Much Will My Virginia Workers’ Comp Settlement Pay?',
+        h2: 'How Much Do Wage Checks Pay?',
         blocks: [
           'The funds you receive depend on your original wages and the severity of your injuries. For example, if you’re unable to work in any capacity, you may be eligible for total disability benefits. ' + TTD,
           'But let’s say you injured your back at work. You may be unable to perform all your usual tasks at work, but you’re able to work to some degree. In these cases, you may receive wages for the work you’re able to do, as well as partial disability benefits. ' +
-            TPD +
-            ' Your Workers’ Comp lawyer can go through the details of your Workers’ Comp payments with you.',
+            TPD,
           'Wondering about taxes on these checks? Read [Are Workers’ Comp benefits taxable?](/are-workers-comp-benefits-taxable/)',
         ],
       },
     ],
     closing: {
-      h2: 'Learn About Your Virginia Workers’ Comp Benefits for Lost Wages',
+      h2: 'Not Getting Your Wage Checks?',
       blocks: [
-        'When you’re hurt in a serious Virginia work accident, you may worry about your Workers’ Comp paying for lost wages. You need funds for more than your injuries, after all.',
-        'Luckily, [Pathfinder Injury Law](/) is here to help. We can help you seek the Workers’ Comp you may be due for your lost wages. If you’re having trouble getting your Workers’ Comp benefits, reach out for a free consultation by calling {phone} or by completing the following online contact form.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
