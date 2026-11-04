@@ -81,7 +81,7 @@ Expect the method to be attacked anyway. In Blakey, the Commission discounted a 
 In practice, a rating fight usually looks like this:
 
 1. Your treating doctor gives a rating at MMI.
-2. The insurance company sends you to its own doctor for an independent medical exam, or has a doctor review the records. That doctor gives a lower number, or rates a smaller body part, such as the foot instead of the leg.
+2. The insurance company sends you to its own doctor for an independent medical exam, or has a doctor review the records. That doctor gives a lower number, or rates a smaller body part, such as the [foot](/foot-injury-workers-comp/) instead of the leg.
 3. The Commission compares them: who examined you, who treated you over time, what each doctor measured, and whether each explained how the number was reached.
 
 In Blakey, the Court of Appeals threw out a rating from a doctor who never examined the worker, never reviewed the medical records, and didn’t give an actual rating at all. Here’s [what happens after a workers’ comp IME in Virginia](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).

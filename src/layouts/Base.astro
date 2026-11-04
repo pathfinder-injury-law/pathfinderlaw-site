@@ -8,6 +8,7 @@ import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 import { site } from '../data/site';
 import { cities } from '../data/cities';
+import pageDates from '../data/pageDates.json';
 
 interface Props {
   title: string;
@@ -142,6 +143,40 @@ const legalService = {
   ],
 };
 
+// Article data for article pages: pages that credit Bryn as author, minus blog posts (they carry
+// BlogPosting, and they are the pages that pass datePublished), city pages, and the practice pages
+// below, which describe the firm's service rather than answer a question. A new article page built
+// the same way gets this block with no change here.
+const practicePages = new Set([
+  '/virginia-workers-comp-lawyer/',
+  '/virginia-work-injury-lawyer/',
+  '/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/',
+  '/virginia-construction-accident-lawyer/',
+  '/virginia-factory-accident-lawyer/',
+  '/car-accident-at-work-in-virginia/',
+]);
+const isArticle = author && !datePublished && !practicePages.has(path) && !cities.some((c) => c.path === path);
+// The headline is the page's H1, which every article page passes as its last breadcrumb.
+// dateModified is the page's own sitemap date (src/data/pageDates.json, from git). There is no
+// datePublished: no true first-publish date exists for these pages, and none is guessed.
+const modified = (pageDates as Record<string, string>)[path];
+const article = isArticle && crumbs.length
+  ? {
+      '@type': 'Article',
+      '@id': `${url}#article`,
+      mainEntityOfPage: { '@id': `${url}#webpage` },
+      headline: crumbs[crumbs.length - 1].name,
+      description,
+      url,
+      inLanguage: 'en-US',
+      ...(modified ? { dateModified: modified } : {}),
+      author: { '@type': 'Person', '@id': `${origin}/#author`, name: 'Bryn Swartz', url: `${origin}/bryn-swartz/` },
+      publisher: { '@id': `${origin}/#organization` },
+      isPartOf: { '@id': `${origin}/#website` },
+      image,
+    }
+  : null;
+
 // Structured data: the same four blocks the current site carries on every page, plus LegalService above.
 const trail = [{ name: 'Home', path: '/' }, ...crumbs];
 const graph = [
@@ -192,6 +227,7 @@ const graph = [
     ...(path === '/bryn-swartz/' ? { mainEntity: { '@id': `${origin}/#author` } } : {}),
   },
   ...(withPerson ? [person] : []),
+  ...(article ? [article] : []),
   {
     '@type': 'WebSite',
     '@id': `${origin}/#website`,

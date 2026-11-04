@@ -1,15 +1,25 @@
 ---
 title: "Essential Elements of a Successful Workers’ Comp Claim"
 metaTitle: "The Most Important Elements of a Successful Work Comp Claim"
-description: "Fight for your rights with a Virginia workers' comp claim based on evidence and expert testimony. Read more from Pathfinder Injury Law."
+description: "The elements of a successful Virginia workers' comp claim: an accident at work, a covered employer, timely notice and filing, and the evidence to prove it."
 date: 2021-01-04T20:56:38Z
-updated: 2022-10-21T16:11:17Z
+updated: 2026-11-04T14:00:00Z
 tags: ["hearing","claim-process"]
 ---
 
 When you’re hurt in the workplace, it’s not always easy to get the benefits you’re entitled to as a Virginia worker. You may be denied your [Workers’ Comp benefits](/virginia-workers-comp-lawyer/) by your employer, which could leave you struggling to overcome your losses following the work accident.
 
-So what are the essential elements of a successful Workers’ Comp claim? If you’re not sure where to start on your claim, make sure you have all the pieces you need for a successful claim.
+So what are the essential elements of a successful Workers’ Comp claim? Start with what the law requires, then the evidence that proves it.
+
+## What the Law Requires
+
+You generally qualify if you are an employee, your employer is covered, and you were hurt in an accident that arose out of and in the course of your job.
+
+- **The injury came from an accident at work.** It must arise out of and in the course of your employment, and an identifiable incident at a reasonably definite time must cause a sudden mechanical or structural change to your body.
+- **Your employer is covered.** Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)).
+- **You gave notice and filed on time.** The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, and your claim must be on file with the Commission within two years of your date of accident, although exceptions apply.
+
+More on [how to qualify for workers’ comp in Virginia](/how-to-qualify-for-workers-comp-in-virginia/).
 
 ## Evidence for Your Claim
 
@@ -29,10 +39,8 @@ Your doctor can step in as an expert witness. They can discuss the evidence of y
 
 When you have a Workers’ Comp claim in Virginia, you may need to focus on protecting it. Many employers and insurance companies are focused on their profits, not on your recovery. Because of this, you may need to prepare a strong defense for your claim.
 
-Gathering evidence can help you determine what your best approach is for your Workers’ Comp claim. Luckily, [your lawyer](/virginia-work-injury-lawyer/) can help you determine this. They can review the details of your claim and represent you in the courtroom before the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/).
+Gathering evidence early matters, because the first medical records and the accident report are written before anyone is arguing about your claim. If the insurance company won’t pay, you can ask for a hearing before the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/), where a deputy commissioner hears the evidence and decides whether benefits are due. More on [work injury claims in Virginia](/virginia-work-injury-lawyer/).
 
-## Prepare a Successful Workers’ Comp Claim with a Lawyer
+## Building Your Workers’ Comp Claim?
 
-When you’re hurt at work, recovering from your injuries can be difficult. Worse, you may not have gathered the elements of a Workers’ Comp claim that can help yours succeed.
-
-Luckily, your lawyer at Pathfinder Injury Law is here to help. If you’ve been injured at work and you’re concerned about the success of your claim, reach out for help from a lawyer, starting with a free consultation. We can help you determine your needs for your claim and seek the benefits you need. To start with your free consultation, call [804-505-0633](tel:+18045050633) or fill out the online contact form below.
+Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/).
