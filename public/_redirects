@@ -130,6 +130,28 @@
 /virginia-beach-workers-comp-lawyer /virginia-beach-workers-comp-lawyer/ 301
 /blog/page/2 /blog/page/2/ 301
 
+# Older addresses missing from the migration inventory, found Nov 4, 2026 in the Wayback
+# Machine (web.archive.org). Each one returned 404 here. Each goes to the closest live page.
+# WordPress articles, archived 2020 to 2024:
+/virginia-workers-comp-lawyer/can-a-workers-comp-case-be-reopened/ /how-long-can-a-workers-comp-claim-stay-open/ 301
+/virginia-workers-comp-lawyer/can-a-workers-comp-case-be-reopened /how-long-can-a-workers-comp-claim-stay-open/ 301
+/virginia-workers-comp-lawyer/virginia-work-injury-lawyer/ /virginia-work-injury-lawyer/ 301
+/virginia-workers-comp-lawyer/virginia-work-injury-lawyer /virginia-work-injury-lawyer/ 301
+/virginia-workers-comp-lawyer/virginia-workers-comp-law-firm/ /virginia-workers-comp-lawyer/ 301
+/virginia-workers-comp-lawyer/virginia-workers-comp-law-firm /virginia-workers-comp-lawyer/ 301
+/virginia-workers-comp-lawyer/virginia-workers-comp-lawsuit/ /virginia-workers-comp-lawyer/ 301
+/virginia-workers-comp-lawyer/virginia-workers-comp-lawsuit /virginia-workers-comp-lawyer/ 301
+# The first site's .html pages, archived 2014 to 2017. Matching is case-sensitive, so both
+# spellings are listed. Legal_2.html, Sitemap.html, and client-login.html have no match and stay 404.
+/Home.html / 301
+/home.html / 301
+/Contact.html /contact/ 301
+/contact.html /contact/ 301
+/Services.html /virginia-workers-comp-lawyer/ 301
+/services.html /virginia-workers-comp-lawyer/ 301
+/Resources.html /blog/ 301
+/resources.html /blog/ 301
+
 # Redirects the old site already had (plan section C). A :name or :slug stands for exactly one
 # address segment, so the list pages /results/ and /testimonials/ themselves are not caught
 # (a * wildcard would catch them). Placed last: Cloudflare checks plain lines first, which is faster.

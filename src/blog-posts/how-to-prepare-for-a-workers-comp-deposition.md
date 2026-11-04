@@ -1,9 +1,9 @@
 ---
 title: "How to Prepare for a Workers’ Comp Deposition"
 metaTitle: "How To Prepare For a Work Comp Deposition in Virginia"
-description: "Pathfinder Injury Law can help you prepare for a Virginia workers' comp deposition. Call us for a 100% free consultation."
+description: "What to expect at a Virginia workers' comp deposition, the questions you'll likely get, and how to prepare so your answers match your records."
 date: 2021-05-20T20:39:00Z
-updated: 2022-10-21T16:45:58Z
+updated: 2026-11-04T14:00:00Z
 tags: ["hearing","hiring-a-lawyer"]
 ---
 
@@ -13,24 +13,22 @@ When preparing for your deposition, keep the following in mind. Acting now, befo
 
 ## What Is a Deposition?
 
-A [Workers’ Comp deposition](https://workcomp.virginia.gov/sites/default/files/documents/Rules-of-the-Commission-Branded.pdf) is sworn questioning, outside the hearing room, about yourself, your medical history, and your work accident. This deposition gives the court a recorded statement about the work accident, giving them the details they need.
+A [Workers’ Comp deposition](https://workcomp.virginia.gov/sites/default/files/documents/Rules-of-the-Commission-Branded.pdf) is sworn questioning, outside the hearing room, about yourself, your medical history, and your work accident. A court reporter takes down every word, and what you say can come back up at your hearing before the Commission, for example if your testimony there doesn’t match.
 
-The problem is, your deposition can work against you. You’re speaking under oath at the time, and that can be intimidating. It’s easy to make a mistake during this session. Fortunately, your [Workers’ Compensation lawyer](/virginia-workers-comp-lawyer/) can help you prepare for anything you’re asked during the deposition.
+The problem is, your deposition can work against you. You’re speaking under oath at the time, and that can be intimidating. It’s easy to make a mistake during this session. Most of the questions in a [Virginia workers’ comp](/virginia-workers-comp-lawyer/) deposition are predictable, so you can prepare.
 
 ## Questions to Expect in a Deposition
 
-When preparing for a deposition, make sure before your deposition you have everything you need to know about your medical history and your accident. Your lawyer can help you determine what questions you’ll likely be asked and what information to prepare.
+Before the deposition, review what you’ve already said: your [recorded statement](/insurance-recorded-statement/), if you gave one, the accident report, and the history you gave your doctors. The insurance company’s lawyer will compare your answers to those records, and the differences are what the insurance company builds its defense on.
 
 During the deposition, the lawyer present may ask you questions about your medical history. These questions are there to determine whether your condition started during your time working, or whether you have a personal or family history of similar problems. In other cases, you may have had a prior injury. Because of that prior injury, your current injuries may be worse.
 
 ## What to Share During Your Deposition
 
-Answer each question truthfully, and answer only the question asked. While you are under oath, meaning you can’t lie during the deposition, you’re not obligated to share all the details of your discussions with your lawyer, for example. Client-attorney privilege still applies to your case, even in the courtroom.
+Answer each question truthfully, and answer only the question asked. While you are under oath, meaning you can’t lie during the deposition, you’re not obligated to share all the details of your discussions with your lawyer, for example. Client-attorney privilege still applies at the deposition.
 
-Because of this, you and your lawyer may need to discuss what to avoid during your deposition. The details of this will depend on your case, but one thing is certain: your lawyer can help you decide what to share and when to object to the questions.
+If you don’t know or don’t remember, say so. Don’t guess at dates, distances, or weights. If a question is unclear, ask for it to be repeated.
 
-## Make Your Plan with a Workers’ Comp Lawyer
+## Have a Deposition Coming Up?
 
-When you’re hurt in a work accident, you need your benefits to cover all your needs. Because of this, you need to ensure you’re taking the right steps throughout your claim. A mistake can cost you. Because of this, you may need to speak with Pathfinder Injury Law before you attend your deposition.
-
-Your Workers’ Comp attorney can help you prepare, explain what to expect, and object to improper questions. Talk with a lawyer before your deposition. Your lawyer can guide you through this process when you reach out for a free consultation, leading you to the benefits you’re due. When you’re ready to work with a lawyer, call [804-505-0633](tel:+18045050633) or complete the online contact form below.
+Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/).
