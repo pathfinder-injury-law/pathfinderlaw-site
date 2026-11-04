@@ -3,7 +3,7 @@ title: "How Much Compensation Can You Get for a Work Injury in Virginia?"
 metaTitle: "How Much Compensation for a Work Injury in Virginia?"
 description: "What Virginia workers’ comp pays for a work injury: wage checks, medical care, and set weeks of pay for permanent loss of a hand, arm, leg, or foot."
 date: 2022-11-22T23:16:14Z
-updated: 2026-10-31T20:00:00Z
+updated: 2026-11-04T14:00:00Z
 tags: ["settlement","benefits"]
 ---
 
@@ -85,7 +85,7 @@ When there is a set-aside, part of the settlement goes into a separate, interest
 
 ## Where Settlement Talks Happen
 
-Many cases settle through direct negotiation. Others settle at a free mediation held through the Commission, where a mediator helps both sides try to reach a lump sum. For a full and final settlement mediation, the Commission requires every party to have a lawyer. If the case doesn’t settle, the dispute goes to a hearing before a deputy commissioner. The insurance company has handled thousands of these. Most injured workers have never been through one.
+Many cases settle through direct negotiation. Others settle at a free mediation held through the Commission, where a deputy commissioner acts as the mediator and helps both sides try to reach a lump sum. The deputy commissioner who mediates your case is not the one who decides it. For a full and final settlement mediation, the Commission requires the injured worker to have a lawyer. If the case doesn’t settle, the dispute goes to a hearing before a deputy commissioner. The insurance company has handled thousands of these. Most injured workers have never been through one.
 
 ## Talk to Pathfinder Injury Law About Your Claim
 

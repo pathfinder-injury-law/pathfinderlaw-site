@@ -341,7 +341,7 @@ export const articlesB = {
         // Live heading: "Take Your Claim to Court". The Commission is not a court, and the reviewed
         // wording is "hearing before the Commission". LIVE WORDING kept: mediation sentence.
         html: `
-          <p>Some disputes go to mediation. Mediations are settlement conferences with the insurance company and a Commission mediator, a neutral Commission employee trained to help both sides reach an agreement, often a lump sum settlement.</p>
+          <p>Some disputes go to mediation. Mediations are settlement conferences with the insurance company and a deputy commissioner who acts as the mediator, often to try to reach a lump sum settlement. The deputy commissioner who mediates your case is not the one who decides it.</p>
           <p>But <a href="https://workcomp.virginia.gov/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. Even with evidence that you are <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
           <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://workcomp.virginia.gov/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, you present evidence that you’re due Workers’ Comp benefits. At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due.</p>`,
       },
