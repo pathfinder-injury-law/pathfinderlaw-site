@@ -1,5 +1,6 @@
 ---
 import Photo from './Photo.astro';
+import { compass } from '../data/doodles';
 
 interface Props {
   title: string;
@@ -8,8 +9,10 @@ interface Props {
   image?: string;
   // Contact page: the big "Hurt? / Let's talk." lockup under the small page heading.
   lockup?: { line1: string; line2: string };
+  // The 404 and thank-you bodies draw their own compass on a map band, so they turn this one off.
+  compass?: boolean;
 }
-const { title, crumbs = [], image = '/images/photos/e4-misty-river.jpg', lockup } = Astro.props;
+const { title, crumbs = [], image = '/images/photos/e4-misty-river.jpg', lockup, compass: showCompass = true } = Astro.props;
 ---
 <section class:list={['page-hero', 'on-dark', lockup && 'page-hero-lockup']}>
   <Photo class="hero-photo" src={image} alt="" width="2000" height="1333" sizes="100vw" fetchpriority="high" />
@@ -22,6 +25,8 @@ const { title, crumbs = [], image = '/images/photos/e4-misty-river.jpg', lockup 
         ))}
       </ol>
     </nav>
+    <!-- Bryn's pick "A" (Nov 4): one cream compass on the photo band, beside the title. Drawn inline, so no request. -->
+    {showCompass && <svg class="hero-compass" viewBox="0 0 120 130" aria-hidden="true" focusable="false"><path d={compass.ring} /><path class="dots" d={compass.dots} /><path transform="rotate(24 60 70)" d={compass.needle} /></svg>}
     <h1>{title}</h1>
     {lockup && (
       <div class="lockup">

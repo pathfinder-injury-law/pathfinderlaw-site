@@ -1906,6 +1906,58 @@ mark {
 .page-hero .crumbs a {
   color: inherit;
 }
+/* The compass on the photo band (Bryn picked "A", Nov 4 2026): cream line drawing at the right end of the title
+   row, like the compass on the home page's photo band. Out of the flow, so nothing moves. Hidden on phones, where
+   it would crowd the title and the post byline. */
+.page-hero .wrap {
+  position: relative;
+}
+.hero-compass {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 2.75rem;
+  width: 6rem;
+  height: 6.5rem;
+  fill: none;
+  stroke: #fff5d5;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.hero-compass path {
+  vector-effect: non-scaling-stroke;
+}
+.hero-compass .dots {
+  stroke-dasharray: 0.1 5;
+  stroke-width: 2.4;
+}
+@media (min-width: 64rem) {
+  .hero-compass {
+    width: 7.5rem;
+    height: 8.125rem;
+  }
+}
+@media (max-width: 47.99rem) {
+  .hero-compass {
+    display: none;
+  }
+}
+@media (min-width: 48rem) {
+  /* keep long titles clear of the compass */
+  .page-hero h1,
+  .page-hero.blog-hero h1 {
+    max-width: min(22ch, calc(100% - 9rem));
+  }
+  .page-hero.blog-hero h1 {
+    max-width: min(26ch, calc(100% - 9rem));
+  }
+  .page-hero.blog-hero .byline {
+    max-width: calc(100% - 9rem); /* author, date, and read time wrap before they reach the compass */
+  }
+}
 /* Page titles: the home page's heavy headline type, in cream. */
 .page-hero h1 {
   font-size: clamp(2.125rem, 5vw, 3.75rem);
@@ -1998,6 +2050,11 @@ mark {
    the Free Consultation band (same ask, same dark green). Phones also have the call bar. Desktop keeps it. */
 @media (max-width: 63.99rem) {
   .side-call {
+    display: none;
+  }
+  /* Same reason: "On this page" would land after the whole article, where its jump links do nothing.
+     It stays in the HTML (SEO agreed, Nov 4); desktop keeps it beside the article. */
+  .side nav.side-card {
     display: none;
   }
 }

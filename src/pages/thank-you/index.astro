@@ -1,5 +1,7 @@
 ---
-import InfoPage from '../../components/InfoPage.astro';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import MapNote from '../../components/MapNote.astro';
 import { site } from '../../data/site';
 
 // Form confirmation page. Must stay out of search results and out of the sitemap:
@@ -9,10 +11,14 @@ const title = 'Thank You - Pathfinder Injury Law';
 const description =
   "Pathfinder Injury Law offers a free consultation with no pressure. Let's discuss your Virginia workers' comp case.";
 ---
-<InfoPage title={title} description={description} path="/thank-you/" h1="Thank You" showContact={false} noindex>
-  <p class="lead">
-    Thank you. Your message has been sent. We will get back to you shortly. If you’d like to contact us immediately, please call our office
-    at <a href={site.phoneHref}>{site.phoneDisplay}</a>.
-  </p>
-  <p><a class="btn btn-primary" href="/">Back To Home</a></p>
-</InfoPage>
+<Base title={title} description={description} path="/thank-you/" crumbs={[{ name: 'Thank You', path: '/thank-you/' }]} overlay noindex>
+  <PageHero title="Thank You" crumbs={[{ name: 'Thank You' }]} compass={false} />
+  <!-- The form's map, finished: the trail ends at the X. -->
+  <MapNote mood="found">
+    <p class="lead">
+      Thank you. Your message has been sent. We will get back to you shortly. If you’d like to contact us immediately, please call our office
+      at <a href={site.phoneHref}>{site.phoneDisplay}</a>.
+    </p>
+    <p><a class="btn btn-primary" href="/">Back To Home</a></p>
+  </MapNote>
+</Base>
