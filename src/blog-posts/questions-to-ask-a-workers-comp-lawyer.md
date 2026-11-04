@@ -31,6 +31,6 @@ If you’re not sure what benefits you’re due, talk to your lawyer about seeki
 - **Wage Replacement:** You may be unable to work, but you still need an income. Your wage replacement benefits can cover a portion of your income until you’re able to return to your job.
 - **Death Benefits:** Losing a spouse or parent is already difficult emotionally. Death benefits can help with the financial side, paying a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.
 
-## Get Answers from a Workers’ Comp Lawyer
+## Get Answers From a Workers’ Comp Lawyer
 
 If you’ve been [injured on the job in Virginia](/virginia-work-injury-lawyer/), you may be left with more questions than answers. Luckily, a lawyer at Pathfinder Injury Law can help. Starting with a free consultation, you can get the answers you need when you’re hurt and suffering. Reach out for your free consultation by calling [804-505-0633](tel:+18045050633) or by completing the online contact form below.

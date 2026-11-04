@@ -37,3 +37,5 @@ f0962e0e3c1cfd420c37d14a5526ee7119df09ce
 896feb63c220bf32876e586868112156d3365c23
 # Back injury page: one link added to an existing sentence, Nov 4, by SEO. No date should move. Do not rebase this branch.
 0c7edb147a708f6c50359cfd1e107fe39a690e1c
+# Five headings: from -> From, Nov 4, by SEO. Capitalization only; no page date should move. Do not rebase this branch.
+377af86c730fa084b28e449c3b3d96ef064b8c9f
