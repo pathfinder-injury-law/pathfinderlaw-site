@@ -3,14 +3,14 @@ title: "How to File a Workers’ Compensation Claim"
 metaTitle: "How to File a Workers' Compensation Claim in Virginia"
 description: "If you're hurt at work in Virginia, it's important to know your rights. Check out workers' comp claim resources from Pathfinder Injury Law."
 date: 2021-09-16T08:59:00Z
-updated: 2022-09-13T19:22:03Z
+updated: 2026-11-04T14:00:00Z
 tags: ["claim-process"]
 ---
 Getting hurt at work is stressful. You may be missing paychecks, dealing with doctors, and wondering what to do first. One of the most important steps is making sure your Workers’ Comp claim is filed correctly and on time. This guide walks through the steps in Virginia.
 
 ## What Does It Mean to File a Claim?
 
-In Virginia, Workers’ Compensation claims are handled by the Virginia Workers’ Compensation Commission. Your employer or its insurance company may start paying benefits without any dispute. Even so, a claim for benefits filed with the Commission is what protects your rights if the insurance company later denies, delays, or stops your benefits. Do not assume that someone else has filed a claim for you. If you are not sure whether a claim is on file, talk with a lawyer.
+In Virginia, Workers’ Compensation claims are handled by the Virginia Workers’ Compensation Commission. Your employer or its insurance company may start paying benefits without any dispute. Even so, a claim for benefits filed with the Commission is what protects your rights if the insurance company later denies, delays, or stops your benefits. Do not assume that someone else has filed a claim for you. If you are not sure whether a claim is on file, you can check the Commission’s WebFile system or call the Commission.
 
 ## Step 1: Get Medical Care and Tell Your Employer
 
@@ -35,7 +35,7 @@ Before you fill out a claim form, collect what you can. Having these items in on
 - Records of your earnings before the accident, such as pay stubs
 - Photos of your injury or the place where the accident happened, if you have them
 
-If something is missing, do not let that stop you from filing on time. Talk with a lawyer about how to handle it.
+If something is missing, do not let that stop you from filing on time.
 
 ## Step 4: Complete the Claim Form
 
@@ -49,7 +49,7 @@ You can mail a completed claim form to the Virginia Workers’ Compensation Comm
 
 Once the Commission has your claim, the employer and insurance company generally have the chance to respond. They may accept the claim, deny it, or say they are still investigating. You can read more about [what happens when you file a Workers’ Comp claim](/what-happens-when-you-file-a-workers-comp-claim/).
 
-If your claim is denied, you may be able to request a hearing before the Commission. Read about [what happens if your claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) and [how to appeal a denial](/how-to-appeal-a-workers-comp-denial-in-virginia/). Decisions of the Commission may be reviewed by the Court of Appeals of Virginia, and in some cases the Supreme Court of Virginia. These steps have strict deadlines, so talk with a lawyer promptly if you receive a denial.
+If your claim is denied, you may be able to request a hearing before the Commission. Read about [what happens if your claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) and [how to appeal a denial](/how-to-appeal-a-workers-comp-denial-in-virginia/). Decisions of the Commission may be reviewed by the Court of Appeals of Virginia, and in some cases the Supreme Court of Virginia. These steps have strict deadlines.
 
 ## Common Mistakes to Avoid
 
@@ -61,8 +61,8 @@ If your claim is denied, you may be able to request a hearing before the Commiss
 
 ## Do You Need a Lawyer to File?
 
-You are allowed to file a claim on your own. A lawyer is not required, but many people choose to talk with one, especially if the claim has been denied, the insurance company is not responding, or your employer is disputing what happened. A lawyer can review your claim form, help you gather records, and explain your options. Attorney fees in Workers’ Comp cases are subject to the approval and award of the Commission, so ask about fees and costs at your consultation. You can also read about the [essential elements of a successful claim](/essential-elements-of-a-successful-workers-comp-claim/).
+You are allowed to file a claim on your own. A lawyer is not required, but many people choose to talk with one, especially if the claim has been denied, the insurance company is not responding, or your employer is disputing what happened. Attorney fees in Workers’ Comp cases are subject to the approval and award of the Commission, so ask about fees and costs at your consultation. You can also read about the [essential elements of a successful claim](/essential-elements-of-a-successful-workers-comp-claim/).
 
-## Get Ahold of a Lawyer Today
+## Filing a Claim?
 
-If you want to talk with a lawyer about filing your claim, call Pathfinder Injury Law today at [804-505-0633](tel:+18045050633). You can also fill out the online contact form below.
+Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call [804-505-0633](tel:+18045050633) or use our [online contact form](/contact/).
