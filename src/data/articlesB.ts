@@ -174,11 +174,11 @@ export const articlesB = {
     path: '/are-workers-comp-benefits-taxable/',
     title: 'Are Workers’ Comp Benefits Taxable? - Pathfinder Injury Law',
     description:
-      "Pathfinder Injury Law handles workers' comp cases across Virginia. Head to our website to find out if workers' comp benefits are taxable.",
+      "Are workers' comp benefits taxable? Usually not. What the IRS says, and the Social Security Disability exception that catches people.",
     h1: 'Are Workers’ Comp Benefits Taxable?',
     lead: `
       <p class="lead">An on-the-job injury can be costly, taking time and money to overcome the injuries you suffered. Workers’ comp can help cover many of those expenses while you recover. You need as much of your benefits as possible, but what about your taxes?</p>
-      <p>No one wants to be caught off-guard when tax season arrives after a serious injury. That’s why it’s important to talk with a lawyer at <a href="${WC}">Pathfinder Injury Law</a> now, not later, if you’re hurt in a <a href="/virginia-work-injury-lawyer/">work accident</a>. They can help you pursue the benefits you need following a serious work-related injury.</p>`,
+      <p>No one wants to be caught off-guard when tax season arrives after a serious <a href="/virginia-work-injury-lawyer/">work accident</a>. Here’s what the IRS says about <a href="${WC}">workers’ comp</a> benefits, and the one exception that catches people.</p>`,
     sections: [
       {
         id: 'taxed',
@@ -186,7 +186,7 @@ export const articlesB = {
         // LIVE WORDING (tax statements, no reviewed equivalent). The live sentence that an employer "may
         // be able to get a tax break" (with a winchesterva.gov link) is left out: outside source.
         html: `
-          <p>Workers’ Comp benefits are typically not taxed, but talk with a tax professional about your situation. These benefits aren’t a form of income like your wages before the accident were. These benefits are repayment for a single work accident paid through an insurance policy. Because of that, you shouldn’t have to worry about including your workers comp benefits in your taxes.</p>`,
+          <p>Workers’ comp benefits paid under a workers’ compensation act are fully exempt from federal income tax, according to the IRS (<a href="https://www.irs.gov/publications/p525" rel="noopener">IRS Publication 525</a>). These benefits aren’t a form of income like your wages before the accident were. These benefits are repayment for a single work accident paid through an insurance policy. Because of that, you shouldn’t have to worry about including your workers comp benefits in your taxes. Wages you earn on light duty are still taxed like any paycheck. Your own tax situation can have wrinkles, so check with a tax professional.</p>`,
       },
       {
         id: 'ssdi',
@@ -194,7 +194,8 @@ export const articlesB = {
         // Live: SSDI benefits "are taxable" with an SSA link; now "may be taxable", SSA links removed.
         html: `
           <p>But that doesn’t mean other benefits and payments can’t be taxed. For example, if you’ve suffered an injury that leads to a lifelong disability, you may be eligible for Social Security Disability Benefits (SSDI). Unlike your Workers’ Comp benefits, your <a href="${WC}can-i-receive-workers-comp-and-social-security-disability-at-the-same-time/">SSDI benefits may be taxable</a>.</p>
-          <p>That’s because SSDI benefits offer constant coverage for people with disabilities, rather than payments for a single work accident. You don’t have to be injured on the job to receive SSDI benefits. You just need a disability that impacts your ability to work.</p>`,
+          <p>That’s because SSDI benefits offer constant coverage for people with disabilities, rather than payments for a single work accident. You don’t have to be injured on the job to receive SSDI benefits. You just need a disability that impacts your ability to work.</p>
+          <p>If you get both, the part of your workers’ comp that reduces your SSDI is treated as a Social Security benefit, and it may be taxable (<a href="https://www.irs.gov/publications/p525" rel="noopener">IRS Publication 525</a>).</p>`,
       },
       {
         id: 'due',
@@ -203,15 +204,12 @@ export const articlesB = {
         // went to a page that is not in the plan's inventory, so it is dropped.
         html: `
           <p>Even without the threat of losing a large portion of your benefits to taxes, you may have some worries about getting the benefits you’re due. For example, your Workers’ Compensation may have been cut off before you were able to return completely to work.</p>
-          <p>When this happens, you may need a Workers’ Comp lawyer to guide you through the process of requesting a hearing to seek the benefits you’re due after a work accident. Your lawyer can help take your claim to the <a href="https://workcomp.virginia.gov/" rel="noopener">Virginia Workers’ Compensation Commission</a>, seeking out the benefits you need <a href="${WC}what-happens-if-your-workers-comp-claim-is-denied/">when you’re denied</a>.</p>`,
+          <p>When this happens, you can request a hearing before the <a href="https://workcomp.virginia.gov/" rel="noopener">Virginia Workers’ Compensation Commission</a> to seek the benefits you’re due, just as you can <a href="${WC}what-happens-if-your-workers-comp-claim-is-denied/">when you’re denied</a>.</p>`,
       },
     ],
     closing: {
-      h2: 'Hurt on the Job? Reach Out to a Work Comp Lawyer',
-      // Live: "work illness or injury ... benefits should cover the suffering you experienced completely".
-      html: `
-        <p>When you’ve suffered a work injury, your Workers’ Comp benefits should help cover your medical costs and lost wages. Giving up part of your benefits through taxes may put a strain on you and your family.</p>
-        <p>A lawyer at Pathfinder Injury Law is here to guide you through this difficult time. If you’re worried about getting the benefits you’re due and recovering from your injuries, reach out for help through a free consultation. Call ${phone} or <a href="#contact">fill out the online contact form</a> to learn more.</p>`,
+      h2: 'Questions About Your Workers’ Comp Checks?',
+      html: `<p>Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call ${phone} or <a href="#contact">use the contact form</a> on this page.</p>`,
     },
   },
 
@@ -341,7 +339,7 @@ export const articlesB = {
         // Live heading: "Take Your Claim to Court". The Commission is not a court, and the reviewed
         // wording is "hearing before the Commission". LIVE WORDING kept: mediation sentence.
         html: `
-          <p>Some disputes go to mediation. Mediations are settlement conferences with the insurance company and a Commission mediator, a neutral Commission employee trained to help both sides reach an agreement, often a lump sum settlement.</p>
+          <p>Some disputes go to mediation. Mediations are settlement conferences with the insurance company and a deputy commissioner who acts as the mediator, often to try to reach a lump sum settlement. The deputy commissioner who mediates your case is not the one who decides it.</p>
           <p>But <a href="https://workcomp.virginia.gov/content/alternative-dispute-resolution-adr" rel="noopener">mediation for you</a> and your employer may not work in every case. Even with evidence that you are <a href="https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-Benefits-Guide_0.pdf" rel="noopener">due benefits</a>, the insurance company and your employer may continue to refuse your compensation.</p>
           <p>When you’re hurt in a serious work accident, you don’t have to settle for less or move on after a refusal. You may instead <a href="https://workcomp.virginia.gov/hearing-locations" rel="noopener">request a hearing</a> before the Virginia Workers’ Compensation Commission. There, you present evidence that you’re due Workers’ Comp benefits. At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due.</p>`,
       },

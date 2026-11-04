@@ -62,17 +62,17 @@ export const subArticles: SubArticle[] = [
     h1: 'Virginia Workers’ Compensation Guide',
     crumb: 'Workers’ Compensation Guide',
     intro: [
-      'Hurt in an on-the-job accident in Virginia? You may be eligible for Workers’ Compensation. Reach out to a lawyer who can help you seek the Workers’ Comp benefits you need.',
+      'Hurt in an on-the-job accident in Virginia? You may be eligible for Workers’ Compensation.',
       'One moment, you’re doing your job, just like always. The next, something went wrong, and you were seriously injured. Now, you’re dealing with the pain, the bills, and the inability to work. Worse, you may not have the funds to deal with your injuries.',
-      'Luckily, you have a chance to get Virginia Workers’ Compensation. Pathfinder Injury Law is here to help you seek the benefits you may be due when you’re hurt on the job.',
+      'Here’s what Virginia Workers’ Compensation pays and what to do if it’s denied.',
     ],
     sections: [
       {
         h2: 'Benefits for Injured Virginia Workers',
         blocks: [
-          'When you’ve suffered a severe work injury, you need your Workers’ Compensation to cover your needs following the accident. But you may be unsure what benefits you should expect or ask for. Here are a few benefits your [Workers’ Compensation lawyer in Virginia](/virginia-workers-comp-lawyer/) can help you seek.',
+          'When you’ve suffered a severe work injury, you need your Workers’ Compensation to cover your needs following the accident. But you may be unsure what benefits you should expect or ask for. Here are the main [Virginia workers’ comp](/virginia-workers-comp-lawyer/) benefits.',
           'Medical benefits. ' + MEDICAL,
-          'Disability benefits. Being unable to work can put a financial strain on you and your family. Your lawyer can help you seek disability benefits to ease that strain. These benefits replace some of the [wages you’ve lost](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/) while you are unable to work. ' +
+          'Disability benefits. Being unable to work can put a financial strain on you and your family. These benefits replace some of the [wages you’ve lost](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/) while you are unable to work. ' +
             TTD,
           'Death benefits. ' + DEATH,
         ],
@@ -81,15 +81,14 @@ export const subArticles: SubArticle[] = [
         h2: 'What if My Workers’ Comp Is Denied?',
         blocks: [
           'If you’ve been hurt on the job in Virginia, you may be relieved to know that Workers’ Compensation is available for you. But you may have received a denial letter, not a Workers’ Compensation check.',
-          'Luckily, that’s not the end of your claim. Your Workers’ Comp lawyer can help you gather evidence in your favor to [dispute the denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). For example, the insurance company may claim you weren’t that seriously injured. More tests from your doctor may show you were hurt badly enough that you need Workers’ Compensation. Your lawyer can also represent you in a hearing for your Workers’ Compensation.',
+          'Luckily, that’s not the end of your claim. You can gather evidence in your favor to [dispute the denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/). For example, the insurance company may claim you weren’t that seriously injured. More tests from your doctor may show you were hurt badly enough that you need Workers’ Compensation. At a hearing before the Commission, a deputy commissioner hears the evidence and decides whether benefits are due.',
         ],
       },
     ],
     closing: {
-      h2: 'Connect with a Virginia Lawyer for Your Workers’ Compensation Claim',
+      h2: 'Hurt on the Job in Virginia?',
       blocks: [
-        'If you’ve suffered through an on-the-job accident in Virginia, you may need Workers’ Comp benefits to recover from your losses. Unfortunately, it’s not always easy to get compensated for those losses.',
-        'That’s where [Pathfinder Injury Law](/) can help. If you’re struggling to get Virginia Workers’ Compensation, you can reach out to us for a free consultation. When you’re ready to get help with your claim, call {phone} or complete the {contact} below.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
@@ -103,34 +102,31 @@ export const subArticles: SubArticle[] = [
     crumb: 'If Your Claim Is Denied',
     intro: [
       'If you’ve been hurt on the job, your Workers’ Compensation benefits may be a key part of your recovery. But your employer may not act to help you recover. Instead, your [employer may deny you the benefits](/virginia-workers-comp-lawyer/can-an-employer-deny-a-workers-comp-claim/) you’re due, leaving you with hefty bills and difficulties recovering from your injuries while working.',
-      'If you were denied a claim, your [Virginia Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) at Pathfinder Injury Law can help. We understand that getting your benefits can be tough, so seek out help when you’re struggling to recover.',
+      'A denial is not the end of a [Virginia workers’ comp](/virginia-workers-comp-lawyer/) claim. Here’s what happens next.',
     ],
     sections: [
       {
         h2: 'Why Was My Claim Denied?',
         blocks: [
-          'Before you take your claim to a hearing, your first step is determining why your [claim was denied](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601.2/). Your denial letter should include a reason for the denial, but you may need to turn to a lawyer to get answers about what it means or what your next steps should be.',
+          'Before you take your claim to a hearing, your first step is determining why your [claim was denied](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601.2/). Your denial letter should include a reason for the denial. That reason is a good first look at what your evidence will have to answer.',
           'Typically, a denial depends on the details of your accident. For example, you may not have had many witnesses who saw the accident. The insurance company may use this lack of evidence against you. Even if others did see your accident, you may be denied in other cases if you didn’t give notice on time. ' +
             NOTICE.replace('within thirty days of the accident', '[within thirty days of the accident](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)'),
-          'While individual Workers’ Comp cases vary, your lawyer can be a constant source of aid and guidance. Your lawyer can gather evidence supporting your claim and seek compensation on your behalf.',
         ],
       },
       {
         h2: 'Steps to Getting Your Workers’ Comp Benefits',
         blocks: [
-          'Once you know why you were denied, your Workers’ Compensation lawyer can help you take the next steps toward your Workers’ Comp benefits.',
-          'First, your lawyer can help you gather evidence that you’re due Workers’ Comp benefits. This evidence can show you were injured, you were actually injured on the job, and you’re unable to work until you’ve healed. Benefits can include [wage replacement](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), medical bill costs, and death benefits (if a loved one was [killed in a work accident](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)).',
+          'Once you know why you were denied, gather evidence that you’re due Workers’ Comp benefits. This evidence can show you were injured, you were actually injured on the job, and you’re unable to work until you’ve healed. Benefits can include [wage replacement](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), medical bill costs, and death benefits (if a loved one was [killed in a work accident](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)).',
           'But the insurance company may continue denying you the benefits you’re due for the severe injuries you suffered. ' +
             DISPUTE +
-            ' Your lawyer will help you [prepare for your work comp hearing](/steps-to-take-before-a-workers-comp-hearing/).',
+            ' Here’s how to [prepare for your work comp hearing](/steps-to-take-before-a-workers-comp-hearing/).',
         ],
       },
     ],
     closing: {
-      h2: 'Speak with a Lawyer About Your Workers’ Comp Denial',
+      h2: 'Got a Denial Letter?',
       blocks: [
-        'A work injury can make it difficult or even impossible to work, but your employer may not take the right steps to support you during this difficult time. That can leave you paying out of pocket for expenses you shouldn’t have to worry about.',
-        'That’s where a Workers’ Comp lawyer at Pathfinder Injury Law can help. If you’ve been injured in a work-related accident and you’ve been denied compensation, we’re here to help. We can talk through the benefits you may be due when you seek out a free consultation. Call {phone} or fill out the {contact} below to learn more.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
@@ -173,38 +169,37 @@ export const subArticles: SubArticle[] = [
     slug: 'can-an-employer-deny-a-workers-comp-claim',
     title: "Can an Employer Deny a Work Comp Claim?",
     description:
-      "Did your employer deny your VA workers' compensation claim? Call Pathfinder Injury Law for a 100% free consultation to discuss your options.",
+      "Can an employer deny a Virginia workers' comp claim? Common reasons for denials, the notice and filing deadlines, and how to dispute one.",
     h1: 'Can an Employer Deny a Workers’ Comp Claim?',
     crumb: 'Can an Employer Deny a Claim?',
     intro: [
       'When you’re hurt in a serious work accident, [your Workers’ Compensation](/virginia-workers-comp-lawyer/) may be key to your recovery. Your injuries can be difficult to recover from without financial support.',
-      'But you may have received a denial, rather than the Workers’ Comp benefits you need for your recovery. At Pathfinder Injury Law, we know a denial can be confusing, and we’re here to help. Here are some common reasons an employer may deny a Workers’ Comp claim and how we can help.',
+      'But you may have received a denial, rather than the Workers’ Comp benefits you need for your recovery. Here are some common reasons an employer may deny a Workers’ Comp claim and what happens next.',
     ],
     sections: [
       {
         h2: 'Reasons Employers Deny Workers’ Comp Claims',
         blocks: [
-          'When an employer denies your Workers’ Comp claim, you need to know why you were denied before you get started. Knowing why you were denied can help your lawyer find the right approach to your claim.',
+          'When an employer denies your Workers’ Comp claim, you need to know why you were denied before you get started. The reason for the denial is a good first look at what your evidence will have to answer.',
           'For example, your employer may claim you didn’t give notice on time. ' +
             NOTICE.replace('within thirty days of the accident', '[within thirty days of the accident](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)') +
-            ' If you don’t act on time, you may be denied your Workers’ Comp benefits. In these cases, your lawyer may focus on showing you reported the accident to your employer on time. Your lawyer can review the specific details of your claim with you.',
+            ' If you don’t act on time, you may be denied your Workers’ Comp benefits. In these cases, the evidence focuses on showing you reported the accident to your employer on time.',
         ],
       },
       {
-        h2: 'What Your Workers’ Comp Lawyer Can Do After a Denial',
+        h2: 'What to Do After a Denial',
         blocks: [
-          'After suffering a work injury, you need work comp benefits as soon as possible, so your [denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) may be impacting your health and well-being. Because of this, you may need a lawyer who can act right away to seek a change for your claim.',
-          'Your lawyer can seek out answers for why you were denied. If they’re unable to resolve the conflict with the employer, your lawyer can help you [file a claim](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_0.pdf) for your benefits. ' +
+          'After suffering a work injury, you need work comp benefits as soon as possible, so your [denial](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/) may be impacting your health and well-being.',
+          'Start by finding out why you were denied. If that doesn’t resolve it, [file a claim](https://workcomp.virginia.gov/sites/default/files/documents/Injured-Worker-FAQs_0.pdf) for your benefits. ' +
             FILING,
-          'Once you’ve filed your claim, you and your lawyer can prepare evidence that shows you were hurt and need Workers’ Comp benefits. You’ll then attend a hearing before the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/). There, your lawyer can advocate for the benefits you’re due and seek to reverse the denial you received.',
+          'Once you’ve filed your claim, prepare evidence that shows you were hurt and need Workers’ Comp benefits. If the insurance company still won’t pay, you can ask for a hearing before the [Virginia Workers’ Compensation Commission](https://workcomp.virginia.gov/). At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due.',
         ],
       },
     ],
     closing: {
-      h2: 'Talk to a Lawyer Before Your Hearing',
+      h2: 'Did Your Employer Deny Your Claim?',
       blocks: [
-        'A Workers’ Comp claim denial can make it tough to focus on your recovery. It leaves you without the funds you need when you’re unable to work.',
-        'But a denial isn’t always the end of your path to recovery. You may have grounds for Workers’ Comp benefits when you work with a lawyer from Pathfinder Injury Law. Your lawyer can look into the reason for your denial and pursue the compensation you need, starting with a free consultation. To get started, reach out by calling {phone} or by completing the online contact form below.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
@@ -253,7 +248,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'Maximum Medical Improvement',
     intro: [
       'After a work accident, the road to recovery may be long and difficult. You may be concerned about the costs of your losses and the costs of paying your bills while you’re unable to work. Because of this, you need to know what your Workers’ Comp claim may be worth and what maximum medical improvement means in Virginia Workers’ Comp claims.',
-      'At Pathfinder Injury Law, we know these terms can be confusing, when all you need to know is how to get covered while you can’t work. Luckily, your [workers comp lawyer](/virginia-workers-comp-lawyer/) can help you deal with your doctors and your claim in order to protect your Workers’ Comp benefits.',
+      'Here’s what maximum medical improvement means for your [Virginia workers’ comp](/virginia-workers-comp-lawyer/) benefits.',
     ],
     sections: [
       {
@@ -267,15 +262,14 @@ export const subArticles: SubArticle[] = [
         h2: 'How Maximum Medical Improvement Can Impact Your Workers’ Comp Claim',
         blocks: [
           'Your Workers’ Comp benefits can be impacted if your doctor determines you’ve [reached maximum medical improvement](https://www.workcomp.virginia.gov/documents/injured-workers-benefits-guide). When a doctor determines you have recovered from your injury as much as possible, you may be sent for a battery of physical tests to assess a permanent impairment rating for the affected body parts. If this rating comes back at greater than zero percent and pertains to a body part that is eligible for permanent partial disability benefits, you may be entitled to workers’ comp benefits for the permanent damage you have suffered in that body part. There is a [complex statutory formula](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/) that determines how much you will be paid for damage to a body part.',
-          'That means you may see some changes to your benefits, and you may feel that you’ve not yet reached maximum medical improvement. In a situation like this, you may need to speak with your Workers’ Comp lawyer in Virginia about your benefits and whether they cover all of your needs.',
+          'That means you may see some changes to your benefits, and you may feel that you’ve not yet reached maximum medical improvement. If you don’t think you’re done improving, tell your doctor what still limits you so it’s in the records. Which body part the rating is assigned to can change what you’re paid. Here’s [how impairment ratings work](/impairment-rating-virginia-workers-comp/).',
         ],
       },
     ],
     closing: {
-      h2: 'Talk to a Lawyer About Maximum Medical Improvement',
+      h2: 'Told You’ve Reached Maximum Medical Improvement?',
       blocks: [
-        'If you’re concerned about your Workers’ Comp benefits, you need to understand all the factors that can impact your claim. For example, what is maximum medical improvement in Virginia Workers’ Comp claims, and how can it impact the funds you receive?',
-        'You don’t have to have all the answers. That’s where Pathfinder Injury Law can help. We can pursue Workers’ Comp benefits that cover the losses you’ve suffered from your work accident. When you’re ready to seek compensation for your injuries, reach out for a free consultation by calling {phone} or completing the online contact form below.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
@@ -407,12 +401,12 @@ export const subArticles: SubArticle[] = [
     slug: 'how-to-calculate-a-virginia-workers-comp-settlement',
     title: "How is a Virginia Workers' Comp Settlement Determined?",
     description:
-      "Pathfinder Injury Law will fight for your rights if you're hurt at work. Here's our guide to calculating Virginia workers’ comp settlements.",
+      "What a Virginia workers' comp settlement has to account for: future medical care, wage loss, permanent loss of use, and Medicare.",
     h1: 'How to Calculate a Virginia Workers’ Comp Settlement',
     crumb: 'How to Calculate a Settlement',
     intro: [
       'When you’ve suffered a work injury, you may need financial aid that covers your losses. The problem is, you don’t know how to calculate a Virginia Workers’ Comp settlement. You may have no experience, and your injuries may be sapping any time and energy you had for learning about Workers’ Comp law.',
-      'That’s where Pathfinder Injury Law can help. If you’re hurt because of a work accident, reach out to a [dedicated lawyer](/virginia-work-injury-lawyer/) from our firm for help when calculating your Virginia Workers’ Comp settlement.',
+      'Here’s what a [Virginia work injury](/virginia-work-injury-lawyer/) settlement has to account for. The amount has to account for future medical care and lost earning power, because after a full and final settlement you cannot come back for more.',
       'A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.',
     ],
     sections: [
@@ -422,21 +416,28 @@ export const subArticles: SubArticle[] = [
           'First, you need those medical bills covered, fast. They add up when you’re hurt, and you may need treatment for months or even years after your work accident. For injuries like spinal cord damage, you may face lifelong consequences for the work accident.',
           'Virginia workers can get their medical bills covered by Workers’ Comp. ' +
             MEDICAL +
-            ' If you’re worried about paying out of pocket for your treatment, talk to your Workers’ Comp lawyer about your settlement.',
+            ' A full and final settlement closes your medical benefits for good, so future care for the injury has to be part of the number.',
         ],
       },
       {
         h2: 'Your Virginia Disability Benefits',
         blocks: [
           'Your Virginia Workers’ Comp covers more than your hospital bills. Workers’ comp can also pay part of your wages when you’re unable to work.',
-          'These benefits cover a [portion of your weekly income](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide). The amount and duration of the benefits you receive will depend on the type of injury you suffered and whether you’re able to return to work in any capacity. If you’re not sure what disability benefits you’re due, talk to your Workers’ Comp lawyer in Virginia about what your settlement may be worth.',
+          'These benefits cover a [portion of your weekly income](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide). The amount and duration of the benefits you receive will depend on the type of injury you suffered and whether you’re able to return to work in any capacity.',
+        ],
+      },
+      {
+        h2: 'Permanent Loss of Use and Medicare',
+        blocks: [
+          'If your doctor has rated a permanent loss of use, the permanent partial disability benefits for that rating are part of what a full and final settlement closes. Here’s [how impairment ratings work](/impairment-rating-virginia-workers-comp/).',
+          'If you are on Medicare, or likely to be within 30 months, Medicare’s interests have to be considered, and part of the money may need to go into a [Medicare set-aside](/workers-comp-settlement-in-virginia/#medicare).',
         ],
       },
     ],
     closing: {
-      h2: 'Talk to a Workers’ Comp Lawyer About Your Virginia Settlement',
+      h2: 'Have a Settlement Offer on the Table?',
       blocks: [
-        'When you’re hurt in a Virginia work accident, recovery can be a drawn-out process. You need funds for your losses, but you may not know how to calculate a Virginia Workers’ Comp settlement. At [Pathfinder Injury Law](/), we’re prepared to help you understand what a settlement may need to cover. For a free consultation about your claim, call {phone} or fill out the following {contact}.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
@@ -491,33 +492,33 @@ export const subArticles: SubArticle[] = [
     slug: 'how-to-prepare-for-a-virginia-workers-comp-hearing',
     title: "Virginia Workers' Comp Hearing Guide | Pathfinder Injury Law",
     description:
-      "Get ready for a Virginia workers' comp hearing with the help of Pathfinder Injury Law. Call us today at 804-505-0633.",
+      "How to prepare for a Virginia workers' comp hearing: read the denial, gather the medical evidence, and know what the deputy commissioner decides.",
     h1: 'Virginia Workers’ Comp Hearing Preparation',
     crumb: 'Hearing Preparation',
     intro: [
       'After a serious work injury, you may have been denied Workers’ Compensation after reporting your injury. Now, you’ll need to dispute your employer and their Workers’ Comp insurer.',
-      'If you’re unsure how to prepare for a Virginia Workers’ Comp hearing, reach out to a dedicated lawyer at Pathfinder Injury Law. We may be able to help you prepare for your Virginia Workers’ Comp hearing.',
+      'Here’s how to prepare for a Virginia Workers’ Comp hearing.',
     ],
     sections: [
       {
         h2: 'Gather Evidence',
         blocks: [
           'Before your hearing, you need to look at the reason for your denial. Your denial letter can show you why your claim was denied, as well as what you’ll need to prepare for your hearing.',
-          'For example, let’s say you’re unable to perform at your job because of a work injury. The insurance company may deny you on the grounds that you don’t have enough medical evidence of your injury. In this case, you and your Workers’ Comp lawyer in Virginia may turn to your doctor for further exams and expert testimony.',
+          'For example, let’s say you’re unable to perform at your job because of a work injury. The insurance company may deny you on the grounds that you don’t have enough medical evidence of your injury. In this case, you may turn to your doctor for further exams and expert testimony.',
         ],
       },
       {
         h2: 'Calculate Your Workers’ Comp Benefits',
         blocks: [
           'During your Virginia Workers’ Comp hearing, you have a chance to ask for the benefits you need for your injuries. These benefits may include wage replacement, coverage for medical expenses, and more.',
-          'If you don’t have the right tools, that is easier said than done. Luckily, your Workers’ Comp lawyer in Virginia can help.',
+          'At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due.',
         ],
       },
     ],
     closing: {
-      h2: 'Get a Workers’ Comp Lawyer’s Help Before Your Hearing',
+      h2: 'Have a Hearing Coming Up?',
       blocks: [
-        'When you’re hurt in a work accident and your employer won’t pay, you may need to prepare for a Virginia Workers’ Comp hearing. The problem is, you may not have the tools you need to prepare for your Workers’ Comp hearing. At [Pathfinder Injury Law](/), we’re ready to guide you through your hearing, starting with a free consultation. Call {phone} or complete the online contact form below to learn more.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
