@@ -159,7 +159,10 @@ const isArticle = author && !datePublished && !practicePages.has(path) && !citie
 // The headline is the page's H1, which every article page passes as its last breadcrumb.
 // dateModified is the page's own sitemap date (src/data/pageDates.json, from git). There is no
 // datePublished: no true first-publish date exists for these pages, and none is guessed.
-const modified = (pageDates as Record<string, string>)[path];
+// The sitemap date is a UTC day; Google's Rich Results Test rejects a bare day ("invalid datetime,
+// missing a timezone"), so it is written as the start of that UTC day.
+const modifiedDay = (pageDates as Record<string, string>)[path];
+const modified = modifiedDay ? `${modifiedDay}T00:00:00Z` : undefined;
 const article = isArticle && crumbs.length
   ? {
       '@type': 'Article',

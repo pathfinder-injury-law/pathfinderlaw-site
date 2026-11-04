@@ -42,7 +42,7 @@ test('article pages carry one Article block with the H1, Bryn, the firm, and the
     assert.equal(a.author['@id'], 'https://pathfinderlaw.com/#author');
     assert.equal(a.author.name, 'Bryn Swartz');
     assert.equal(a.publisher['@id'], 'https://pathfinderlaw.com/#organization');
-    assert.equal(a.dateModified, pageDates[path], `${path}: dateModified should be the sitemap date`);
+    assert.equal(a.dateModified, `${pageDates[path]}T00:00:00Z`, `${path}: dateModified should be the sitemap day, as a full UTC datetime`);
     assert.ok(!('datePublished' in a), `${path}: no datePublished (no true first-publish date exists)`);
   }
 });
