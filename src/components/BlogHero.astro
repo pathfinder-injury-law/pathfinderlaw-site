@@ -1,5 +1,6 @@
 ---
 import Photo from './Photo.astro';
+import { compass } from '../data/doodles';
 
 // Same photo header as PageHero, with a smaller headline so long post titles fit,
 // and an optional line under the headline (author and date).
@@ -21,6 +22,8 @@ const { title, crumbs = [], image = '/images/photos/e4-misty-river.jpg' } = Astr
         ))}
       </ol>
     </nav>
+    <!-- Bryn's pick "A" (Nov 4): one cream compass on the photo band, beside the title. Drawn inline, so no request. -->
+    <svg class="hero-compass" viewBox="0 0 120 130" aria-hidden="true" focusable="false"><path d={compass.ring} /><path class="dots" d={compass.dots} /><path transform="rotate(24 60 70)" d={compass.needle} /></svg>
     <h1>{title}</h1>
     <slot />
   </div>
