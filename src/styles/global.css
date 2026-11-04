@@ -1954,6 +1954,9 @@ mark {
   .page-hero.blog-hero h1 {
     max-width: min(26ch, calc(100% - 9rem));
   }
+  .page-hero.blog-hero .byline {
+    max-width: calc(100% - 9rem); /* author, date, and read time wrap before they reach the compass */
+  }
 }
 /* Page titles: the home page's heavy headline type, in cream. */
 .page-hero h1 {
