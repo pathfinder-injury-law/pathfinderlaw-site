@@ -2049,6 +2049,11 @@ mark {
   .side-call {
     display: none;
   }
+  /* Same reason: "On this page" would land after the whole article, where its jump links do nothing.
+     It stays in the HTML (SEO agreed, Nov 4); desktop keeps it beside the article. */
+  .side nav.side-card {
+    display: none;
+  }
 }
 .toc {
   list-style: none;

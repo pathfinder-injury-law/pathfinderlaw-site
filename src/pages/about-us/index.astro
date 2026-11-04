@@ -248,8 +248,9 @@ const reasons = [
     .reasons {
       grid-template-columns: 1fr 1fr;
     }
-    .reason:first-child {
-      grid-column: 1 / -1;
+    .reason:first-child,
+    .reason:last-child:nth-child(even) {
+      grid-column: 1 / -1; /* six cards: the first and last run full width, so none sits alone at half width */
     }
   }
   .reason {
