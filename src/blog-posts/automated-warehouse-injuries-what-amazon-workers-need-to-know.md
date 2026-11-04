@@ -3,7 +3,7 @@ title: "Automated Warehouse Injuries: Amazon Workers Protection"
 metaTitle: "What Amazon Workers Should Know About Automated Injuries"
 description: "Were you hurt at work in an automated warehouse? Pathfinder Injury Law fights for benefits on behalf of injured Amazon workers in Virginia."
 date: 2020-12-18T21:06:39Z
-updated: 2022-10-21T17:48:53Z
+updated: 2026-11-04T14:00:00Z
 tags: ["causes","benefits"]
 ---
 Warehouses are using more robots, conveyors, and automated systems to move, sort, and pack items. Automation can change the kind of risks workers face. If you were hurt working in an automated warehouse, including a large e-commerce fulfillment center, Virginia Workers’ Compensation may be available to you.
