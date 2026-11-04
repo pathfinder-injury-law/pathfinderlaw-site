@@ -1994,6 +1994,13 @@ mark {
   display: block;
   margin-bottom: 1rem;
 }
+/* Below the two-column width the side column drops under the article, so this card would sit right on top of
+   the Free Consultation band (same ask, same dark green). Phones also have the call bar. Desktop keeps it. */
+@media (max-width: 63.99rem) {
+  .side-call {
+    display: none;
+  }
+}
 .toc {
   list-style: none;
   margin: 0;
