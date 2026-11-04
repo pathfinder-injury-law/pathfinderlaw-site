@@ -218,7 +218,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'Vocational Rehabilitation',
     intro: [
       'A serious work accident can bring your career to a halt. You may be worried that you’ll never work again, especially after a traumatic injury like an amputation, as an example.',
-      'But what if you’re able to work, just not in your former position? In these situations, you may be eligible for vocational rehabilitation that can help you get back to work. Vocational rehabilitation can be a benefit, but an employer can also use it against you, so talk to a lawyer first. Work with your [lawyer at Pathfinder Injury Law](/virginia-workers-comp-lawyer/) for guidance on getting back to building a career.',
+      'But what if you’re able to work, just not in your former position? In these situations, you may be eligible for vocational rehabilitation that can help you get back to work. Vocational rehabilitation can be a benefit, but an employer can also use it against you. Here’s how it works under [Virginia workers’ comp](/virginia-workers-comp-lawyer/).',
     ],
     sections: [
       {
@@ -232,15 +232,14 @@ export const subArticles: SubArticle[] = [
         h2: 'Taking Advantage of Your Workers’ Comp Benefits',
         blocks: [
           'Fortunately, you may be [eligible for these benefits](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/) as part of your Workers’ Comp benefits. Vocational rehabilitation is available to many Virginia workers, who can take advantage of these benefits to build new job skills after a devastating injury.',
-          'But your employer may try to avoid covering these services when you’re injured. If you’ve been refused the services you need to recover from your injuries and get back to work, talk to your Workers’ Comp lawyer about the benefits you may be entitled to.',
+          'But it cuts both ways. If you unjustifiably refuse to cooperate with vocational rehabilitation, the insurance company can ask the Commission to suspend your wage benefits until you cooperate, and the checks for that time are not made up later ([Va. Code § 65.2-603(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). Job searches, meetings with the vocational counselor, and which jobs count as suitable are frequent points of dispute.',
         ],
       },
     ],
     closing: {
-      h2: 'Get Vocational Rehabilitation with a Lawyer’s Help',
+      h2: 'Asked to Meet a Vocational Counselor?',
       blocks: [
-        'A serious work injury doesn’t have to end your career. Instead, you may have access to resources that help you get employment in a new position or field.',
-        'Of course, that doesn’t mean it’s always easy to get that help. If you’re worried about your eligibility for vocational rehabilitation, reach out for guidance from a lawyer at Pathfinder Injury Law. Begin during a free consultation, where we can discuss your options for benefits. Reach out by calling {phone} or filling out the online contact form below.',
+        'A serious work injury doesn’t have to end your career. Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },
@@ -451,7 +450,7 @@ export const subArticles: SubArticle[] = [
     crumb: 'What Workers’ Comp Covers',
     intro: [
       'After a serious work injury, you could be in a tough financial position. You’re hurt, you need funds to support yourself, and you’re unable to work. You may be eligible for a Workers’ Comp claim, but what does Workers’ Comp cover in Virginia?',
-      'At Pathfinder Injury Law, we’re here to help you understand the benefits you may be due. If you’re not sure what you’re eligible for after a work accident, reach out for help from our team. Continue reading to learn more.',
+      'Here’s what Virginia workers’ comp pays for, and what it doesn’t.',
     ],
     sections: [
       {
@@ -473,11 +472,17 @@ export const subArticles: SubArticle[] = [
         h2: 'Death Benefits',
         blocks: [DEATH],
       },
+      {
+        h2: 'What Workers’ Comp Doesn’t Cover',
+        blocks: [
+          'Workers’ comp does not pay for pain and suffering. It pays for specific things: medical care, part of your lost wages, and permanent loss of use of certain body parts. Here’s [how impairment ratings work](/impairment-rating-virginia-workers-comp/).',
+        ],
+      },
     ],
     closing: {
-      h2: 'Talk to a Workers’ Comp Lawyer in Virginia',
+      h2: 'Questions About What Your Claim Covers?',
       blocks: [
-        'After a work accident, you need Workers’ Comp benefits that cover your losses. But what does Workers’ Comp cover in Virginia? If you have questions about your benefits and what you’ll receive if you’re hurt, you may need a lawyer at [Pathfinder Injury Law](/) to guide you. For a free consultation, call us at {phone} or complete the online contact form below.',
+        'Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call {phone} or fill out the [form on this page](#contact).',
       ],
     },
   },

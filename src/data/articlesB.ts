@@ -362,12 +362,12 @@ export const articlesB = {
     path: '/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/',
     title: 'Lump Sum Work Comp Claim Settlements vs Other Settlements',
     description:
-      "Should you accept a lump sum workers' comp settlement? Here's what the trusted team at Pathfinder Injury Law in Virginia wants you to know.",
+      "Should you accept a lump sum workers' comp settlement in Virginia? What it closes, Medicare set-asides, and what to answer before you say yes.",
     h1: 'Should I Accept a Lump Sum Settlement for My Workers’ Comp Claim?',
     crumb: 'Lump Sum Settlement',
     lead: `
       <p class="lead">When you’re hurt in a work accident, you may have the option to take a lump sum settlement for your Workers’ Comp claim. A lump sum settlement means you may receive the benefits for your claim at once. But is it the best option for your Workers’ Comp claim?</p>
-      <p>If you’re <a href="${WC}">seeking Workers’ Comp</a> benefits and you’re unsure what options to pursue, Pathfinder Injury Law can guide you through your options. We can help you understand the benefits you may be due and weigh your choices.</p>
+      <p>If you’re <a href="${WC}">seeking Workers’ Comp</a> benefits, here’s how a lump sum compares with other settlements and what to weigh first.</p>
       <p>A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.</p>`,
     sections: [
       {
@@ -387,15 +387,20 @@ export const articlesB = {
         id: 'should-i',
         h2: 'Should I Accept a Lump Sum Settlement?',
         html: `
-          <p>On-the-job injuries can be complex and difficult to judge. That traumatic head injury may feel fine now, but you may suffer health complications shortly thereafter. Because you may need future benefits, keep in mind that settling your case closes everything and ends benefits. You should always consult with a lawyer before accepting a settlement.</p>
-          <p>That’s where your lawyer can step in. They have the tools to determine what benefits you may be due based on the severity of your injuries. They can also represent you in a <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Claims-and-Hearings-Flow-Chart.pdf" rel="noopener">Virginia Workers’ Comp hearing</a> if you’re struggling to get compensated fairly. A Virginia work comp lawyer can help those without the right tools for their claim recover from their losses.</p>`,
+          <p>On-the-job injuries can be complex and difficult to judge. That traumatic head injury may feel fine now, but you may suffer health complications shortly thereafter. Because you may need future benefits, keep in mind that settling your case closes everything and ends benefits.</p>
+          <p>Questions to answer before you say yes:</p>
+          <ul>
+            <li><strong>Will you need more treatment?</strong> A full and final settlement closes your medical benefits for good. Workers’ comp no longer pays for surgery, therapy, or prescriptions for the injury.</li>
+            <li><strong>Are you on Medicare, or likely to be within 30 months?</strong> Then Medicare’s interests have to be considered, and part of the money may need to go into a <a href="/workers-comp-settlement-in-virginia/#medicare">Medicare set-aside</a>.</li>
+            <li><strong>Can you go back to your old job?</strong> If not, remember that the settlement also ends wage loss and vocational rehab benefits.</li>
+            <li><strong>Has your doctor rated any permanent loss of use?</strong> Permanent partial disability benefits end with the settlement too. Here’s <a href="/impairment-rating-virginia-workers-comp/">how impairment ratings work</a>.</li>
+          </ul>
+          <p>If you don’t settle, your claim continues and you can still ask for a <a href="https://www.workcomp.virginia.gov/sites/default/files/documents/Claims-and-Hearings-Flow-Chart.pdf" rel="noopener">Virginia Workers’ Comp hearing</a> on any benefit in dispute, as long as the deadline for that benefit hasn’t passed.</p>`,
       },
     ],
     closing: {
-      h2: 'Connect with a Virginia Workers’ Comp Lawyer',
-      // Live: "can help you find the best path to your recovery".
-      html: `
-        <p>If you’ve been hurt on the job and you’re suffering, you have options when collecting your Workers’ Comp benefits. But should you accept a lump sum settlement for your Workers’ Comp claim? A lawyer at <a href="/">Pathfinder Injury Law</a> may be able to help you weigh your options, starting with a free consultation. Talk to a lawyer by calling <a href="tel:+18045050633">(804) 505-0633</a> or by <a href="#contact">completing the online contact form</a>.</p>`,
+      h2: 'Weighing a Settlement Offer?',
+      html: `<p>A settlement is binding once the Commission approves it. <a href="/">Pathfinder Injury Law</a> handles only Virginia workers’ compensation claims. Call ${phone} or <a href="#contact">use the contact form</a> on this page.</p>`,
     },
   },
 
