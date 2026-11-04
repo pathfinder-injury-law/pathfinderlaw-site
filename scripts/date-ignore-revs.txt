@@ -29,3 +29,6 @@ e3335c618260d4472bb49b6291b9128b1e4c839e
 # PR 98, Nov 3: Bryn's handwriting on "One kind of case." and the home form headline, by Design.
 # Same words (a span and a class); SEO's call: home's date must not move.
 2824d383a07d28fa11182086a854f3dd32be7d4c
+# About card headings to Title Case, Nov 4, by SEO.
+# Capitalization only; same words. /about-us/ date must not move. Do not rebase this branch (it would change this hash).
+f0962e0e3c1cfd420c37d14a5526ee7119df09ce
