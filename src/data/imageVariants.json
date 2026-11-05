@@ -379,31 +379,41 @@
       }
     ]
   },
-  "/images/photos/e4-trail-map-phone.webp": {
-    "width": 900,
-    "height": 1613,
+  "/images/photos/e4-trail-map-phone-2.webp": {
+    "width": 1536,
+    "height": 2752,
     "avif": [
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-480.avif",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-480.avif",
         "width": 480,
-        "bytes": 25963
+        "bytes": 19093
       },
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-900.avif",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-900.avif",
         "width": 900,
-        "bytes": 75735
+        "bytes": 45259
+      },
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-2-1320.avif",
+        "width": 1320,
+        "bytes": 77356
       }
     ],
     "webp": [
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-480.webp",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-480.webp",
         "width": 480,
-        "bytes": 63226
+        "bytes": 48610
       },
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-900.webp",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-900.webp",
         "width": 900,
-        "bytes": 182786
+        "bytes": 118532
+      },
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-2-1320.webp",
+        "width": 1320,
+        "bytes": 201976
       }
     ]
   },
