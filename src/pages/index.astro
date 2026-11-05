@@ -454,18 +454,22 @@ const doodle = {
   .e4 .btn-call { letter-spacing: 0.01em; font-weight: 800; padding: 0 1.75rem; }
   @media (max-width: 47.99rem) {
     .e4 .hero-e4 { --hero-top: calc(var(--logo-top) * 0.3065 + 2rem); }
-    /* Phones (Bryn, Nov 4): his own phone photo (E-phone-2) has the whole hiker and map up top and calm trail below,
-       so the words sit low over the photo. The hero fills the screen and the photo is anchored to its top: on short
-       screens the trail under the words is trimmed, on tall ones it scales at most a few percent. svh keeps Safari's
-       address bar from resizing it while scrolling. */
-    .e4 .hero-e4 { min-height: 100svh; max-height: none; }
-    .e4 .hero-e4 .hero-photo { object-position: 50% 0%; }
-    .e4 .hero-e4::after { background: linear-gradient(0deg, #294634 0, rgba(41, 70, 52, 0) 2.5rem), linear-gradient(0deg, rgba(20, 36, 27, 0.8) 0, rgba(20, 36, 27, 0.66) max(42%, 23rem), rgba(20, 36, 27, 0) max(56%, 30rem)); } /* rem floor: on short screens the shade still covers every line of the words */
+    /* Phones (Bryn, Nov 4): his own phone photo (E-phone-2) has the whole hiker and map up top and calm trail below.
+       The photo is shown at full width in its own shape, top-anchored, never cropped or zoomed, and the words start
+       56% of the way down it. Nothing here depends on the screen's height, so short in-app browser sheets, tall
+       phones, and Safari's address bar all show the same picture; the hero is as tall as the photo and words need. */
+    .e4 .hero-e4 { --ph: calc(100vw * 2752 / 1536); display: block; min-height: 0; max-height: none; background: #294634; }
+    .e4 .hero-e4 .hero-pic { position: relative; inset: auto; display: block; width: 100%; height: auto; aspect-ratio: 1536 / 2752; margin-top: var(--hero-top); }
+    .e4 .hero-e4 .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; -webkit-mask: linear-gradient(180deg, #000 88%, transparent 100%); mask: linear-gradient(180deg, #000 88%, transparent 100%); }
+    .e4 .hero-copy { margin-top: calc(var(--ph) * -0.44); }
+    .e4 .hero-e4::after { background: linear-gradient(0deg, #294634 0, rgba(41, 70, 52, 0) 2.5rem); }
+    /* The shade rides with the words: solid behind every line, fading out 7rem above them, however many lines wrap. */
+    .e4 .hero-copy::before { content: ''; position: absolute; z-index: -1; top: -7rem; bottom: 0; left: -50vw; right: -50vw; background: linear-gradient(180deg, rgba(20, 36, 27, 0) 0, rgba(20, 36, 27, 0.7) 5.5rem, rgba(20, 36, 27, 0.8) 100%); }
     .e4 .hero-big { margin-bottom: 0.75rem; }
     .e4 .hero-lede { font-size: 1.125rem; margin-bottom: 1.25rem; }
     .e4 .hero-acts { flex-direction: column; align-items: stretch; gap: 1rem; }
     .e4 .hero-acts .tl { text-align: center; }
-    .e4 .hero-copy { padding-bottom: 2.5rem; }
+    .e4 .hero-copy { padding-top: 0; padding-bottom: 2.5rem; }
   }
 
   /* Map lines: one shared contour file used as a mask, so each section picks its own line color.
