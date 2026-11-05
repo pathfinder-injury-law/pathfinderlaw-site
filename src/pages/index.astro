@@ -462,7 +462,7 @@ const doodle = {
     .e4 .hero-e4 .hero-pic { position: relative; inset: auto; display: block; width: 100%; height: auto; aspect-ratio: 1536 / 2752; margin-top: var(--hero-top); }
     .e4 .hero-e4 .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; -webkit-mask: linear-gradient(180deg, #000 88%, transparent 100%); mask: linear-gradient(180deg, #000 88%, transparent 100%); }
     .e4 .hero-copy { margin-top: calc(var(--ph) * -0.44); }
-    .e4 .hero-e4::after { background: linear-gradient(0deg, #294634 0, rgba(41, 70, 52, 0) 2.5rem); }
+    .e4 .hero-e4::after { background: linear-gradient(180deg, #e9efdf var(--hero-top), rgba(233, 239, 223, 0) calc(var(--hero-top) + 6rem)), linear-gradient(0deg, #294634 0, rgba(41, 70, 52, 0) 2.5rem); } /* the pale sky eases out of the sage header, no hard white edge */
     /* The shade rides with the words: solid behind every line, fading out 7rem above them, however many lines wrap. */
     .e4 .hero-copy::before { content: ''; position: absolute; z-index: -1; top: -7rem; bottom: 0; left: -50vw; right: -50vw; background: linear-gradient(180deg, rgba(20, 36, 27, 0) 0, rgba(20, 36, 27, 0.7) 5.5rem, rgba(20, 36, 27, 0.8) 100%); }
     .e4 .hero-big { margin-bottom: 0.75rem; }
