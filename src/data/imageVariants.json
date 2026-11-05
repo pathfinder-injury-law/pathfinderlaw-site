@@ -379,69 +379,41 @@
       }
     ]
   },
-  "/images/photos/e4-trail-map-phone.webp": {
-    "width": 900,
-    "height": 1613,
+  "/images/photos/e4-trail-map-phone-2.webp": {
+    "width": 1536,
+    "height": 2752,
     "avif": [
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-480.avif",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-480.avif",
         "width": 480,
-        "bytes": 25963
+        "bytes": 19093
       },
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-900.avif",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-900.avif",
         "width": 900,
-        "bytes": 75735
+        "bytes": 45259
+      },
+      {
+        "url": "/images/photos/sized/e4-trail-map-phone-2-1320.avif",
+        "width": 1320,
+        "bytes": 77356
       }
     ],
     "webp": [
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-480.webp",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-480.webp",
         "width": 480,
-        "bytes": 63226
+        "bytes": 48610
       },
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-900.webp",
+        "url": "/images/photos/sized/e4-trail-map-phone-2-900.webp",
         "width": 900,
-        "bytes": 182786
-      }
-    ]
-  },
-  "/images/photos/e4-trail-map-phone-wide.webp": {
-    "width": 1200,
-    "height": 1116,
-    "avif": [
-      {
-        "url": "/images/photos/sized/e4-trail-map-phone-wide-480.avif",
-        "width": 480,
-        "bytes": 18715
+        "bytes": 118532
       },
       {
-        "url": "/images/photos/sized/e4-trail-map-phone-wide-800.avif",
-        "width": 800,
-        "bytes": 37725
-      },
-      {
-        "url": "/images/photos/sized/e4-trail-map-phone-wide-1200.avif",
-        "width": 1200,
-        "bytes": 79921
-      }
-    ],
-    "webp": [
-      {
-        "url": "/images/photos/sized/e4-trail-map-phone-wide-480.webp",
-        "width": 480,
-        "bytes": 27836
-      },
-      {
-        "url": "/images/photos/sized/e4-trail-map-phone-wide-800.webp",
-        "width": 800,
-        "bytes": 55308
-      },
-      {
-        "url": "/images/photos/sized/e4-trail-map-phone-wide-1200.webp",
-        "width": 1200,
-        "bytes": 111568
+        "url": "/images/photos/sized/e4-trail-map-phone-2-1320.webp",
+        "width": 1320,
+        "bytes": 201976
       }
     ]
   },

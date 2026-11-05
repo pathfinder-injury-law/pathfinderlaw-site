@@ -31,8 +31,7 @@ const PHOTOS = {
   '/images/photos/e4-overlook-phone.webp': [480, 900],
   // Home hero from Nov 3 (AI-made in Google's image model from our prompts, see CREDITS.txt)
   '/images/photos/e4-trail-map-desktop.webp': [1024, 1440, 2000],
-  '/images/photos/e4-trail-map-phone.webp': [480, 900],
-  '/images/photos/e4-trail-map-phone-wide.webp': [480, 800, 1200], // phones from Nov 4: cut from the desktop photo so the whole hiker shows
+  '/images/photos/e4-trail-map-phone-2.webp': [480, 900, 1320], // phones from Nov 4: take E-phone-2, whole hiker and map up top, words low; 1320 is sharp at 3x
   '/images/photos/e4-farm-road.jpg': [480, 800],
   '/images/photos/e4-autumn-ridges.jpg': [480, 800],
   '/images/photos/e4-green-valley.jpg': [480, 800],
@@ -51,7 +50,7 @@ const OVERRIDES = {
   '/images/photos/e4-overlook-phone.webp': {
     avif: (img) => img.avif({ quality: 45, effort: 7, chromaSubsampling: '4:2:0' }),
   },
-  '/images/photos/e4-trail-map-phone.webp': {
+  '/images/photos/e4-trail-map-phone-2.webp': {
     avif: (img) => img.avif({ quality: 45, effort: 7, chromaSubsampling: '4:2:0' }),
   },
 };
