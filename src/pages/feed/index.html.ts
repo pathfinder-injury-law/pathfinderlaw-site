@@ -2,7 +2,7 @@
 // The file is written to feed/index.html so that the address /feed/ (with the slash) finds it;
 // public/_headers tells browsers and feed readers it is really RSS.
 import type { APIRoute } from 'astro';
-import { posts } from '../../data/blogPosts';
+import { indexedPosts as posts } from '../../data/blogPosts'; // posts marked noindex stay out
 import { site as firm } from '../../data/site';
 import { xmlEscape } from '../../data/sitemaps';
 

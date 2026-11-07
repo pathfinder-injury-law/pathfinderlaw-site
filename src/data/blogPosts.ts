@@ -14,6 +14,7 @@ export interface BlogPost {
   Content: any;
   headings: { depth: number; slug: string; text: string }[];
   words: number;
+  noindex: boolean; // front matter `noindex: true`: kept out of search, the XML sitemap, and /feed/
 }
 
 const files = import.meta.glob('../blog-posts/*.md', { eager: true }) as Record<string, any>;
@@ -34,9 +35,13 @@ export const posts: BlogPost[] = Object.entries(files)
       Content: mod.Content,
       headings: mod.getHeadings(),
       words: Math.round(String(mod.rawContent()).split(/\s+/).length),
+      noindex: fm.noindex === true,
     } as BlogPost;
   })
   .sort((a, b) => b.date.getTime() - a.date.getTime());
+
+// The posts search engines should see: the XML sitemap and /feed/ use this list.
+export const indexedPosts = posts.filter((p) => !p.noindex);
 
 export const longDate = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/New_York' });
