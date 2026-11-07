@@ -1,7 +1,7 @@
 ---
 title: "Virginia Workers’ Comp Decisions This Month: November 2026"
 metaTitle: "Virginia Workers’ Comp Decisions: November 2026"
-description: "Five Virginia Workers’ Compensation Commission decisions from early November 2026, in plain words: settlements and old medical bills, reporting new earnings, unexplained falls, and more."
+description: "Five Virginia workers’ comp decisions from November 2026: old medical bills after a settlement, reporting new earnings, unexplained falls, and more."
 date: 2026-11-06T16:00:00Z
 updated: 2026-11-06T16:00:00Z
 tags: ["claim-process","settlement"]
@@ -44,7 +44,7 @@ There was a limit on the insurance company, too. The duty to report starts when 
 
 When the Commission finds an overpayment came from a worker’s failure to report, the law lets the insurance company recover it from future checks or by suing for it (§ 65.2-712). Here’s more on [working another job while on workers’ comp](/quit-job-while-on-workers-comp-virginia/).
 
-## A Fall With No Known Cause Usually Isn’t Covered
+## A Fall with No Known Cause Usually Isn’t Covered
 
 **In Virginia, falling at work is not enough by itself. You have to show something about the job or the workplace caused the fall.** In *Hollands v. City of Norfolk* (VWC No. VA00002264929, Nov. 2, 2026), a case manager fell while walking quickly down a hallway at work and talking on the phone with a client. She hurt her shoulder. She testified there was nothing wrong with the floor and that she didn’t know why she stumbled.
 
@@ -72,7 +72,7 @@ The Full Commission hears appeals from deputy commissioners, and deputy commissi
 
 ### Can Any of These Decisions Still Change?
 
-Yes. *Allen* and *Radulovic* were sent back to a deputy commissioner to finish deciding. *Allen* can’t be appealed until that’s done. *Radulovic*, *Hollands*, *Menendez*, and *Shea* could be appealed to the Court of Appeals of Virginia within 30 days of the decision.
+Yes. *Allen* and *Radulovic* were sent back to a deputy commissioner to finish deciding. *Allen* can’t be appealed until that’s done. *Radulovic*, *Hollands*, *Menendez*, and *Shea* could be appealed to the Court of Appeals of Virginia within 30 days of the decision. Here’s more on [how appeals work in a Virginia workers’ comp case](/how-to-appeal-a-workers-comp-denial-in-virginia/).
 
 ## Pathfinder Injury Law
 
