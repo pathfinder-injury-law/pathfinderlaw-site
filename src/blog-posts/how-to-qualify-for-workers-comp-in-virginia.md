@@ -21,12 +21,12 @@ tags: ["claim-process","benefits"]
 
 ## Are You a Covered Employee?
 
-**Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance** ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)). Part-time workers count, and so do you if you got hurt on your first day.
+**Virtually all employers with three or more employees regularly in service in Virginia are required to carry workers’ compensation insurance** (Va. Code §§ [65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/), [65.2-801](https://law.lis.virginia.gov/vacode/title65.2/chapter8/section65.2-801/)). Part-time workers count, and so do you if you got hurt on your first day.
 
 Three situations come up often:
 
 - **You’re called an independent contractor.** The label on your paycheck doesn’t decide it. What matters most is whether the company had the right to control how you did the work. Here’s [what to do when your employer lists you as an independent contractor](/what-to-do-when-your-employer-lists-you-as-an-independent-contractor/).
-- **You work for a subcontractor.** If your direct employer has no insurance, the company above it on the job may be responsible as your “statutory employer” ([Va. Code § 65.2-302](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-302/)).
+- **You work for a subcontractor.** The company above it on the job may also be responsible as your “statutory employer.” That matters most when your direct employer has no insurance ([Va. Code § 65.2-302](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-302/)).
 - **Your employer should have had insurance and didn’t.** You can still file a claim. The Commission’s Uninsured Employer’s Fund may pay benefits when an employer that was required to have coverage has none ([Va. Code § 65.2-1203](https://law.lis.virginia.gov/vacode/title65.2/chapter12/section65.2-1203/)).
 
 ## Were You Hurt in an Accident?
