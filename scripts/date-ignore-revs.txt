@@ -44,3 +44,5 @@ a0431c128c7fae893adf782f29d7cc81c771c810
 6e9dcc17afa9b588d0a15dc926ccab2251fa5842
 430d51808d32320df4f451816715f040af31d02c
 7ff3839d96483d0b22a8d486825db9ac00ee258b
+# Links to the new shoulder guide and hearing-prep page, Nov 7, by SEO. Link-only; no page date should move. Do not rebase this branch.
+164eccf5e36239a3bf8ed014c04e443e1888aa8d

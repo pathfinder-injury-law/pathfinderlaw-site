@@ -3,7 +3,7 @@
 // Left out on purpose: /thank-you/, the HTML /sitemap/ page, /404, /client-portal/, and
 // /blog/page/2/ (the live site listed only /blog/).
 
-import { posts } from './blogPosts';
+import { indexedPosts as posts } from './blogPosts'; // posts marked noindex stay out
 import { cities } from './cities';
 import { subArticles, ARTICLE_BASE } from './subArticles';
 import { articlesB } from './articlesB';

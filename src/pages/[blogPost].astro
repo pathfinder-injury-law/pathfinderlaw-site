@@ -28,6 +28,7 @@ const updated = longDate(post.updated) !== longDate(post.date) && post.updated >
   datePublished={post.date.toISOString()}
   overlay
   author
+  noindex={post.noindex}
 >
   <BlogHero title={post.title} crumbs={[{ name: 'Blog', href: '/blog/' }, { name: post.title }]}>
     <p class="byline">
