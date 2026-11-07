@@ -46,9 +46,10 @@ export const indexedPosts = posts.filter((p) => !p.noindex);
 export const longDate = (d: Date) =>
   d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/New_York' });
 
-// Up to three posts on the same topics, newest first among equals.
+// Up to three posts on the same topics, newest first among equals. Posts marked noindex are
+// left out so every slot goes to a page that can rank (they still show in the /blog/ list).
 export function relatedPosts(current: BlogPost, count = 3): BlogPost[] {
-  return posts
+  return indexedPosts
     .filter((p) => p.slug !== current.slug)
     .map((p) => ({ p, score: p.tags.filter((t) => current.tags.includes(t)).length }))
     .sort((a, b) => b.score - a.score || b.p.date.getTime() - a.p.date.getTime())
