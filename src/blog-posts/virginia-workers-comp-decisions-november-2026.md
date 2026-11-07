@@ -9,7 +9,7 @@ tags: ["claim-process","settlement"]
 
 *Nothing in this article should be taken as legal advice. Every case is different.*
 
-The biggest Virginia workers’ comp decision so far this month says a full and final settlement does not erase the insurance company’s duty to pay medical bills from before the settlement, when the settlement made it responsible for them. Four other decisions from the Full Commission cover reporting new earnings, falls with no known cause, getting every injured body part into your medical records, and old injuries. All five came from the Full Commission, which reviews the deputy commissioners who hear cases first. Its decisions can be appealed to the Court of Appeals of Virginia.
+The biggest Virginia workers’ comp decision so far this month says a full and final settlement does not erase the insurance company’s duty to pay medical bills from before the settlement, when the settlement made it responsible for them. Four other decisions from the Full Commission cover reporting new earnings, falls with no known cause, getting every injured body part into your medical records, and old injuries. All five came from the Full Commission, which reviews the deputy commissioners who hear cases first. Once the Full Commission finishes deciding a case, its decision can be appealed to the Court of Appeals of Virginia.
 
 | Decision | What it means for you |
 |---|---|
@@ -23,7 +23,7 @@ The biggest Virginia workers’ comp decision so far this month says a full and 
 
 **If your settlement made the insurance company responsible for medical bills up to the date the Commission approved it, the insurance company can still be made to pay unpaid balances on reasonable, necessary, and related bills from before that date.** In a case against Kempsville Auto Care Center (VWC No. VA02000001452, Nov. 5, 2026), the worker settled full and final in 2013. The settlement said the insurance company would pay all reasonable, necessary, and authorized medical bills related to the accident up to the date of the settlement order. It also said the settlement was a “complete extinguishment” of all claims. In 2025, 12 years after he settled, the worker asked the Commission to make the insurance company pay balances still owed to three of his medical providers for treatment before the settlement.
 
-The deputy commissioner said the “extinguishment” language ended any claim. The Full Commission reversed. It followed the Court of Appeals of Virginia, which has held the same thing in a published decision (*Peters v. Portsmouth Plumbing Services, Inc.*, No. 1132-25-1 (Va. Ct. App. Sept. 29, 2026) (published)). Read together, the settlement gave up claims for future benefits but kept the insurance company’s promise to pay for treatment before the settlement. The Commission sent the case back to decide how much, if anything, is still owed.
+The deputy commissioner said the “extinguishment” language ended any claim. The Full Commission reversed. It followed the Court of Appeals of Virginia, which has held the same thing in a published decision involving Portsmouth Plumbing Services (No. 1132-25-1, Va. Ct. App. Sept. 29, 2026). Read together, the settlement gave up claims for future benefits but kept the insurance company’s promise to pay for treatment before the settlement. The Commission sent the case back to decide how much, if anything, is still owed.
 
 What this means for you:
 
@@ -68,11 +68,11 @@ The Full Commission affirmed the denial. Here’s more on [how pre-existing cond
 
 ### Are Full Commission Decisions Binding?
 
-The Full Commission hears appeals from deputy commissioners, and deputy commissioners follow its decisions. Its decisions can be appealed to the Court of Appeals of Virginia, and the Supreme Court of Virginia is over both. Each decision here turned on its own facts.
+The Full Commission hears appeals from deputy commissioners, and deputy commissioners follow its decisions. Once the Full Commission finishes deciding a case, its decision can be appealed to the Court of Appeals of Virginia, and the Supreme Court of Virginia is over both. Each decision here turned on its own facts.
 
 ### Can Any of These Decisions Still Change?
 
-Yes. The Kempsville Auto Care and JKM Com Archives cases were sent back to a deputy commissioner to finish deciding. The Kempsville Auto Care case can’t be appealed until that’s done. The JKM Com Archives, City of Norfolk, Smithfield Foods, and Accomack County cases could be appealed to the Court of Appeals of Virginia within 30 days of the decision. Here’s more on [how appeals work in a Virginia workers’ comp case](/how-to-appeal-a-workers-comp-denial-in-virginia/).
+Yes. The Kempsville Auto Care and JKM Com Archives cases were sent back to a deputy commissioner to finish deciding. A decision that sends part of a case back usually isn’t final, so an appeal in those two cases would generally come after that’s done. The City of Norfolk, Smithfield Foods, and Accomack County cases could be appealed to the Court of Appeals of Virginia within 30 days from the date of the decision. Here’s more on [how appeals work in a Virginia workers’ comp case](/how-to-appeal-a-workers-comp-denial-in-virginia/).
 
 ## Pathfinder Injury Law
 
