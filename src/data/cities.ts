@@ -1726,7 +1726,7 @@ export const cities: City[] = [
           },
           // VERIFY V1
           'Not every one of these is equally easy to prove. A burn from hot metal or a fall from scaffolding happens at one moment, and someone usually writes it down that day. A shoulder injury from lifting packages is a harder claim: the insurance company may say the injury came on gradually instead of from one identifiable incident, or that the problem is degenerative. If you felt it happen, write down the date, what you were doing, and who you told.',
-          'A crash caused by another driver while you were working may also give you a separate injury claim against that driver. More on [factory accidents](/virginia-factory-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [shoulder injuries on the job](/causes-of-on-the-job-shoulder-injuries/).',
+          'A crash caused by another driver while you were working may also give you a separate injury claim against that driver. More on [factory accidents](/virginia-factory-accident-lawyer/), [car accidents at work](/car-accident-at-work-in-virginia/), and [shoulder injuries on the job](/shoulder-injury-workers-comp/).',
         ],
       },
       {

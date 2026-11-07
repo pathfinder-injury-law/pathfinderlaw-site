@@ -119,7 +119,7 @@ export const subArticles: SubArticle[] = [
           'Once you know why you were denied, gather evidence that you’re due Workers’ Comp benefits. This evidence can show you were injured, you were actually injured on the job, and you’re unable to work until you’ve healed. Benefits can include [wage replacement](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), medical bill costs, and death benefits (if a loved one was [killed in a work accident](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)).',
           'But the insurance company may continue denying you the benefits you’re due for the severe injuries you suffered. ' +
             DISPUTE +
-            ' Here’s how to [prepare for your work comp hearing](/steps-to-take-before-a-workers-comp-hearing/).',
+            ' Here’s how to [prepare for your work comp hearing](/virginia-workers-comp-lawyer/how-to-prepare-for-a-virginia-workers-comp-hearing/).',
         ],
       },
     ],
