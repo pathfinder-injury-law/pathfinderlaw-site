@@ -490,28 +490,82 @@ export const subArticles: SubArticle[] = [
 
   {
     slug: 'how-to-prepare-for-a-virginia-workers-comp-hearing',
-    title: "Virginia Workers' Comp Hearing Guide | Pathfinder Injury Law",
+    title: 'How to Prepare for a Virginia Workers’ Comp Hearing',
     description:
-      "How to prepare for a Virginia workers' comp hearing: read the denial, gather the medical evidence, and know what the deputy commissioner decides.",
-    h1: 'Virginia Workers’ Comp Hearing Preparation',
+      'How to prepare for a Virginia workers’ comp hearing: what the deputy commissioner decides, the evidence that matters, testifying, and what comes after.',
+    h1: 'How to Prepare for a Virginia Workers’ Comp Hearing',
     crumb: 'Hearing Preparation',
     intro: [
-      'After a serious work injury, you may have been denied Workers’ Compensation after reporting your injury. Now, you’ll need to dispute your employer and their Workers’ Comp insurer.',
-      'Here’s how to prepare for a Virginia Workers’ Comp hearing.',
+      'A Virginia workers’ comp hearing is a trial before a deputy commissioner of the Virginia Workers’ Compensation Commission, and you have to prove your claim by a preponderance of the evidence. Most hearings are won or lost on the medical records, a doctor’s written opinion on what caused the injury, and whether your testimony matches what you told everyone before. Preparing means knowing exactly what the insurance company is disputing and lining up the evidence that answers it.',
+      'You can ask the Commission for a hearing whenever there’s a dispute, not only after a denial. Here’s how to get ready.',
     ],
     sections: [
       {
-        h2: 'Gather Evidence',
+        h2: 'What Happens at a Workers’ Comp Hearing?',
         blocks: [
-          'Before your hearing, you need to look at the reason for your denial. Your denial letter can show you why your claim was denied, as well as what you’ll need to prepare for your hearing.',
-          'For example, let’s say you’re unable to perform at your job because of a work injury. The insurance company may deny you on the grounds that you don’t have enough medical evidence of your injury. In this case, you may turn to your doctor for further exams and expert testimony.',
+          'At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due. You testify under oath, your lawyer asks you questions, and the insurance company’s lawyer cross-examines you. Other witnesses, such as a coworker or a supervisor, may testify too.',
+          'Doctors rarely come to the hearing. Their opinions usually come in through medical records, written reports, and answers to written questions, and sometimes through a deposition taken before the hearing. That’s why getting a clear written opinion from your doctor is often the most important step.',
+          'The deputy commissioner usually doesn’t decide on the spot. A written opinion comes later.',
         ],
       },
       {
-        h2: 'Calculate Your Workers’ Comp Benefits',
+        h2: 'Start with What the Insurance Company Is Disputing',
         blocks: [
-          'During your Virginia Workers’ Comp hearing, you have a chance to ask for the benefits you need for your injuries. These benefits may include wage replacement, coverage for medical expenses, and more.',
-          'At the hearing, a deputy commissioner hears the evidence and decides whether benefits are due.',
+          'Every hearing is about specific issues. Before you gather anything, pin down which ones are in play. A few of the many defenses insurance companies raise:',
+          {
+            ul: [
+              'No accident. The insurance company says there was no specific incident, only pain that came on over time.',
+              'Not work related. It says the accident didn’t arise out of your job, or the injury came from something else.',
+              'Pre-existing condition. It says your problem was there before the accident. Here’s more on [pre-existing conditions](/pre-existing-conditions-and-workers-comp-claims/).',
+              'Late notice. It says you didn’t tell your employer within 30 days.',
+              'Refused work or treatment. It says you turned down light duty or medical care that was offered.',
+              'The wage. It agrees you’re hurt but figures your average weekly wage too low, which shrinks every check.',
+            ],
+          },
+          'The denial letter, the insurance company’s filings with the Commission, and its answers to written questions tell you which of these you’re facing.',
+        ],
+      },
+      {
+        h2: 'Get the Medical Evidence in Writing',
+        blocks: [
+          'Medical records show what the doctor saw. They often don’t say, in so many words, that the work accident caused the injury, that the treatment is necessary, or that you can’t work. Those are the questions the deputy commissioner has to answer, so you want your doctor’s answers in writing.',
+          'Check your records for the history you gave. If the first urgent care note says your shoulder “has hurt for a while,” or leaves out a body part, expect the insurance company to build its case on it. If the insurance company sent you to its own doctor for an independent medical exam, expect that report to be its main evidence. Here’s [what happens after an IME](/virginia-workers-comp-lawyer/what-happens-after-a-workers-comp-ime-in-virginia/).',
+        ],
+      },
+      {
+        h2: 'Line Up Witnesses and Documents',
+        blocks: [
+          {
+            ul: [
+              'Coworkers or supervisors who saw the accident, or saw you right after it',
+              'The accident report and any written notice you gave your employer',
+              'Photos of the place it happened, the equipment, or the injury',
+              'Pay stubs or wage records for the 52 weeks before the accident, which set your average weekly wage',
+              'A job description showing what your work required',
+              'Records of every job you applied for, if you’re on restrictions and looking for work',
+            ],
+          },
+          'Before the hearing, each side can send written questions and document requests and take depositions. Here’s [how to prepare for a workers’ comp deposition](/how-to-prepare-for-a-workers-comp-deposition/).',
+        ],
+      },
+      {
+        h2: 'Prepare to Testify',
+        blocks: [
+          'The insurance company’s lawyer will compare what you say at the hearing with your recorded statement, your deposition, the accident report, and the history in your medical records. Differences, even innocent ones, are what it uses to argue you aren’t credible.',
+          'Before the hearing, reread all of those. Be ready to explain exactly what you were doing when you got hurt, every body part that hurt, when you first saw a doctor, and any earlier problems with the same body part. Answer the question asked, and don’t guess. If you don’t know or don’t remember, say so.',
+        ],
+      },
+      {
+        h2: 'Mediation Before the Hearing',
+        blocks: [
+          'The Commission offers mediation, where the two sides try to settle the dispute before the hearing. A deputy commissioner acts as the mediator, and the deputy commissioner who mediates your case is not the one who decides it. Here’s more on [how to settle a Virginia workers’ comp dispute](/virginia-work-injury-lawyer/how-to-settle-a-virginia-workers-comp-dispute/).',
+        ],
+      },
+      {
+        h2: 'What Happens After the Hearing?',
+        blocks: [
+          'The deputy commissioner issues a written opinion. Either side may request review of the deputy commissioner’s decision by the full Commission within thirty days of the date the opinion is issued. The Full Commission’s decision can be appealed to the Court of Appeals of Virginia, and the Supreme Court of Virginia is over both.',
+          'Here’s [how to appeal a workers’ comp denial in Virginia](/how-to-appeal-a-workers-comp-denial-in-virginia/).',
         ],
       },
     ],

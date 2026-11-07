@@ -1,9 +1,10 @@
 ---
 title: "Happy Birthday to Pathfinder Injury Law!"
-metaTitle: "Happy Birthday to Pathfinder Injury Law! - Pathfinder Injury Law"
-description: "Pathfinder Injury Law exclusively handles workers' compensation cases to help Virginia workers hurt on the job. Call 804-505-0633 today."
+metaTitle: "Happy Birthday to Pathfinder Injury Law!"
+description: "How Pathfinder Injury Law started: a layoff email three minutes before our son was born, and the family firm we built from it."
 date: 2020-09-03T20:25:05Z
-updated: 2022-09-01T14:35:49Z
+updated: 2026-11-07T18:00:00Z
+noindex: true
 tags: ["firm-news"]
 ---
 
@@ -47,11 +48,11 @@ We’d both had ties to the workers’ comp world for years, but running a law f
 
 Now we should say here that success can mean a lot of things. It can be measured by many different metrics. Some people (and maybe most in the legal field) measure it by money earned, material goods acquired, prestige, awards, accolades, and a bunch of other vapid junk like that. 
 
-If you want to measure success in strict terms of dollars and cents, we’ve been incredibly successful this year. We’ve had the privilege of delivering our clients life-altering sums of money, peace of mind, and most importantly, a sense that somebody finally has their back after they got hurt.
+For us, it starts with our clients. We’ve had the privilege of giving them peace of mind and, most importantly, a sense that somebody finally has their back after they got hurt.
 
 But success is more than money. It’s purpose, it’s self-determination, it’s autonomy, it’s lifestyle. It’s getting to raise your son with his parents around, teaching him cool things, bringing him to depositions and mediations (well, before the pandemic at least), showing him what struggle and grit and toughness and resourcefulness looks like, not just in words, but in actions. It’s getting to take bike rides in the middle of a weekday. There’s no dollar value to those things. That’s because they’re actually priceless. 
 
-And success is also professional achievement. We’ve opened up an avenue to transparency in discovering what insurance companies are paying their doctors to say against Workers’ Compensation claimants. We’ve faced down international behemoths and their multinational legal teams. 
+And success is also professional achievement. We’ve faced down international behemoths and their multinational legal teams. 
 
 Two upstarts in a tiny office they built themselves (literally swinging hammers and sanding drywall), with no big-firm infrastructure, rising from the ashes after a blow that would have crushed a lot of people, in the middle of a pandemic. Helping people hurt at work, and doing it all while raising an incredible little baby boy in the process with the lifestyle we wanted. That’s success. 
 
