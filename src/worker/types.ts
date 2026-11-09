@@ -38,6 +38,7 @@ export interface Deps {
   fetch: typeof fetch;
   now: () => Date;
   uuid: () => string;
+  sleep?: (ms: number) => Promise<void>; // pause before a retry (tests pass a no-op)
 }
 
 export const realDeps: Deps = {
