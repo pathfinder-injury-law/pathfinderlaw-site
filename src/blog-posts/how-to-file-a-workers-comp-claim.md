@@ -61,7 +61,7 @@ If your claim is denied, you may be able to request a hearing before the Commiss
 
 ## Do You Need a Lawyer to File?
 
-You are allowed to file a claim on your own. A lawyer is not required, but many people choose to talk with one, especially if the claim has been denied, the insurance company is not responding, or your employer is disputing what happened. Attorney fees in Workers’ Comp cases are subject to the approval and award of the Commission, so ask about fees and costs at your consultation. You can also read about the [essential elements of a successful claim](/essential-elements-of-a-successful-workers-comp-claim/).
+You are allowed to file a claim on your own. A lawyer is not required, but many people choose to talk with one, especially if the claim has been denied, the insurance company is not responding, or your employer is disputing what happened. Attorney fees in Workers’ Comp cases are subject to the approval and award of the Commission, so ask about fees and costs at your consultation. You can also read about the [essential elements of a successful claim](/essential-elements-of-a-successful-workers-comp-claim/). Here’s [where Virginia comp claims go wrong with and without a lawyer](/do-i-need-a-lawyer-for-workers-comp-virginia/), stage by stage.
 
 ## Filing a Claim?
 

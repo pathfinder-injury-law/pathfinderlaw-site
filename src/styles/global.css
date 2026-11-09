@@ -2169,6 +2169,11 @@ mark {
   margin: 0 0 1.5rem;
   font-size: 0.9375rem;
 }
+/* Where the article sits in the .page-body grid, let it shrink to the column so a wide table
+   scrolls inside itself instead of pushing the page wider than a phone screen. */
+.page-body > .prose {
+  min-width: 0;
+}
 .prose th,
 .prose td {
   text-align: left;
