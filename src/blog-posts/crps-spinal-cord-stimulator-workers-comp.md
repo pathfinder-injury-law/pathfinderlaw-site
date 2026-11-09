@@ -15,13 +15,13 @@ Complex regional pain syndrome (CRPS) that develops from a work injury is covere
 
 **CRPS is a long-lasting pain condition that usually affects an arm or a leg after an injury, such as a broken bone, a sprain, a burn or cut, or surgery** ([National Institute of Neurological Disorders and Stroke](https://www.ninds.nih.gov/health-information/disorders/complex-regional-pain-syndrome)). The pain is much stronger and lasts longer than the original injury would explain. It can come with swelling, changes in skin color and temperature, changes in sweating, stiffness, and changes in hair and nail growth. You may also see it called reflex sympathetic dystrophy (RSD) ([MedlinePlus](https://medlineplus.gov/ency/article/007184.htm)).
 
-For a comp claim, two facts about CRPS matter most. It usually shows up weeks after the accident, not the same day. And it often starts from an injury that looked minor at first, such as a sprained wrist or ankle, or a small cut or burn.
+For a comp claim, two facts about CRPS matter most. It usually shows up weeks after the accident, not the same day ([Cleveland Clinic](https://my.clevelandclinic.org/health/diseases/12085-complex-regional-pain-syndrome-crps)). And it often starts from an injury that looked minor at first, such as a sprained wrist or ankle, or a small cut or burn.
 
 ## Is CRPS From a Work Injury Covered?
 
 **Yes, when the CRPS is caused by a compensable work injury or by the treatment for it.** Virginia covers the injury from the accident and the conditions that flow from it, including a condition caused by surgery or other treatment for the original injury. The injury itself has to meet the usual test: an accident that happened in the course of your job and arose out of it ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)).
 
-Because CRPS shows up later, the insurance company may have accepted your hand or ankle injury months before anyone said “CRPS.” Accepting the original injury doesn’t mean the insurer accepts the CRPS. If it won’t treat the CRPS as part of the claim, the question goes to the Commission, and the answer turns on medical evidence that ties the CRPS to the work injury. Here’s more on [injuries that come from the first injury](/injured-another-body-part-favoring-work-injury/).
+Because CRPS shows up later, the insurance company may have accepted your hand or ankle injury months before anyone said “CRPS.” Accepting the original injury doesn’t mean the insurer accepts the CRPS. If it won’t treat the CRPS as part of the claim, the question goes to the Commission, and the answer turns on medical evidence that ties the CRPS to the work injury. Virginia doesn’t cover a new injury that connects to the work injury only through a second injury that came after it, but if a doctor says the CRPS is a direct result of the work injury itself, rather than of a separate condition that came after it, the CRPS can still be covered (a Supreme Court of Virginia decision involving Amoco Foam Products Co., Record No. 980139 (1999)). Here’s more on [injuries that come from the first injury](/injured-another-body-part-favoring-work-injury/).
 
 ## What Virginia Workers’ Comp Pays for CRPS
 
@@ -37,7 +37,7 @@ Workers’ comp does not pay for pain and suffering. For CRPS, that is the harde
 
 ## Spinal Cord Stimulators and Workers’ Comp
 
-**A spinal cord stimulator is a medical treatment like any other under Virginia comp: the insurance company is required to pay for it when it is reasonable, necessary, and causally related to the accident ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)).** A stimulator is a small implanted device that sends electrical pulses to the spinal cord to change how pain signals reach the brain. It usually starts with a trial of about a week, with temporary leads, and moves to a permanent implant only if the trial helps.
+**A spinal cord stimulator is a medical treatment like any other under Virginia comp: the insurance company is required to pay for it when it is reasonable, necessary, and causally related to the accident ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)).** A stimulator is a small implanted device that sends electrical pulses to the spinal cord to change how pain signals reach the brain. It usually starts with a [trial of a few weeks](https://my.clevelandclinic.org/health/treatments/24237-spinal-cord-stimulator-scs), with temporary leads, and moves to a permanent implant only if the trial helps.
 
 The stimulator is where many CRPS claims get fought, because it is expensive and starts a long run of follow-up care: programming, battery replacements, and sometimes revision surgery. Common ways the insurer pushes back:
 
@@ -50,7 +50,7 @@ Any of these is a few of many. If the insurance company won’t authorize the st
 
 ### Does a Stimulator Change My Restrictions?
 
-Often, yes. Doctors commonly limit bending, twisting, and lifting for weeks after the leads are placed, and some people keep permanent restrictions. Those restrictions affect whether you can do your old job or a [light-duty job](/light-duty-workers-comp-virginia/), and so they affect your wage checks.
+Often, yes. Doctors commonly limit bending, twisting, and lifting for weeks after the leads are placed ([MedlinePlus](https://medlineplus.gov/ency/article/007560.htm)), and some people keep permanent restrictions. Those restrictions affect whether you can do your old job or a [light-duty job](/light-duty-workers-comp-virginia/), and so they affect your wage checks.
 
 ## Why CRPS Claims Are Hard to Prove
 
@@ -81,7 +81,7 @@ Future medical care matters more in a CRPS claim than almost any other. Most Vir
 
 ### My CRPS Started Months After the Accident. Is It Too Late?
 
-Not necessarily. CRPS commonly shows up weeks or months later. What matters is that it is caused by the work injury or its treatment, and that your claim with the Commission was filed in time. A claim must be on file with the Commission within two years of your date of accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)).
+Not necessarily. CRPS commonly shows up weeks or months later. What matters is that it is caused by the work injury or its treatment, and that your claim with the Commission was filed in time. A claim must be on file with the Commission within two years of your date of accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). And if your doctor ties the CRPS to the original injury, it can count as a change in condition. In that case, if you have an award, a claim for more wage checks may fall under the 24-month deadline that runs from the last day you were paid under the award ([Va. Code § 65.2-708(A)](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)), instead of the two-year filing rule for a new injury (a published Court of Appeals decision involving Berglund Chevrolet, Inc., Record No. 2897-03-3 (2004)).
 
 ### Can I Refuse a Spinal Cord Stimulator?
 
