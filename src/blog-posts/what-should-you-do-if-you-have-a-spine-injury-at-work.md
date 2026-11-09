@@ -79,7 +79,7 @@ Many types of spinal injuries are possible in different workplaces. Some of the 
 
 The cervical spine is located directly below the skull and throughout the neck. Injuries to this area tend to be the most severe spinal cord injuries. The higher up the spine an injury occurs, the greater and longer-term the damage is likely to be, including paralysis. A cervical fracture, more commonly known as a broken neck, can be fatal. The extent to which a cervical spine injury causes nerve damage or impairment into the arms, hands, and fingers depends on the location of the injury in the spine and the degree to which the nerves coming out of the spine are damaged or impinged by the spinal injury.
 
-Injuries to the cervical spine are common in sports like football and gymnastics. In work-related settings, cervical spine injuries may occur as the result of falls, falling objects, lifting or pulling movements, or car accidents.
+Injuries to the cervical spine are common in sports like football and gymnastics. In work-related settings, cervical spine injuries may occur as the result of falls, falling objects, lifting or pulling movements, or car accidents. Here’s more on [neck injuries at work and Virginia workers’ comp](/neck-injury-workers-comp/).
 
 ### Thoracic Spine Injuries
 

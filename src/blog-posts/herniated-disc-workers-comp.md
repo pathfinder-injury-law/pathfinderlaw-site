@@ -27,7 +27,7 @@ Workers’ comp does not pay for pain and suffering. Wage checks are not paid fo
 A disc is the soft cushion between two bones of your spine. A herniation happens when the soft center pushes through the tough outer ring, where it can press on a nerve ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/herniated-disk-in-the-lower-back/)). Where the disc is decides where you feel it:
 
 - **Low back (lumbar).** Pain often starts in the back, then sciatica: sharp, shooting pain from the buttock down the back of one leg, with numbness, tingling, or weakness in the leg or foot ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/herniated-disk-in-the-lower-back/)).
-- **Neck (cervical).** Pain typically starts in the neck and travels down the arm, with tingling, numbness, or weakness in the shoulder, arm, or hand ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/cervical-radiculopathy-pinched-nerve/)). Doctors call this cervical radiculopathy, or a pinched nerve.
+- **Neck (cervical).** Pain typically starts in the neck and travels down the arm, with tingling, numbness, or weakness in the shoulder, arm, or hand ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/cervical-radiculopathy-pinched-nerve/)). Doctors call this cervical radiculopathy, or a pinched nerve. Here’s more on [neck injuries and Virginia workers’ comp](/neck-injury-workers-comp/).
 
 That arm-or-leg pattern is how doctors tie the disc to your symptoms, and it is the usual route to a permanent rating. Loss of bladder or bowel control with a low back disc is rare, but it is a medical emergency ([AAOS](https://www.orthoinfo.org/en/diseases--conditions/herniated-disk-in-the-lower-back/)).
 

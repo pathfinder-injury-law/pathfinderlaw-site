@@ -90,7 +90,7 @@ The law changed in 2022 for the most serious cases. Virginia pays lifetime benef
 
 A settlement is optional, and the Commission must approve it ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)). A full and final settlement can end your right to future benefits for the accident, and depending on its terms, that can include a knee or hip problem you haven’t claimed yet. If your other knee is starting to ache, the time to sort that out is before you settle, not after.
 
-Pathfinder obtained a [$1,200,000 settlement in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences](/results/). Every case is different, and past results don’t predict the result in yours. For more on the original injuries, see our guides to [ankle injuries at work](/ankle-injury-workers-comp/), [knee injuries at work](/knee-injury-compensation/), and [hip injuries at work](/hurt-your-hip-at-work/).
+Pathfinder obtained a [$1,200,000 settlement in a heavily contested ankle injury case with bodywide CRPS involvement and multiple compensable consequences](/results/). Every case is different, and past results don’t predict the result in yours. For more on the original injuries, see our guides to [ankle injuries at work](/ankle-injury-workers-comp/), [knee injuries at work](/knee-injury-compensation/), and [hip injuries at work](/hurt-your-hip-at-work/). Here’s more on [CRPS and spinal cord stimulators in a Virginia comp claim](/crps-spinal-cord-stimulator-workers-comp/).
 
 ## Compensable Consequence Questions
 

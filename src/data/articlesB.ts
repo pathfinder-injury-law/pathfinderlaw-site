@@ -270,41 +270,99 @@ export const articlesB = {
   // ---------------------------------------------------------------------------------------------
   claimOpen: {
     path: '/how-long-can-a-workers-comp-claim-stay-open/',
-    title: 'How Long Can a Work Comp Claim Stay Open?',
-    // Live: "from the legal experts at Pathfinder Injury Law".
+    title: 'How Long Can a Workers’ Comp Claim Stay Open in Virginia?',
+    // Rewritten Nov 9, 2026 (schedule #6): Search Console showed "how long can a workers' comp claim
+    // stay open" at position 20 on 851 impressions, and reopening searches at 11 to 35. Law check:
+    // audit file 54b.
     description:
-      "How long can a Virginia workers' comp claim stay open? Here's what you need to know from our team at Pathfinder Injury Law.",
-    h1: 'How Long Can a Workers’ Comp Claim Stay Open?',
+      'A Virginia workers’ comp claim with an award can stay open for life for medical care. Wage checks have a 24-month reopening deadline. Here’s how each clock works.',
+    h1: 'How Long Can a Workers’ Comp Claim Stay Open in Virginia?',
+    crumb: 'How Long a Claim Stays Open',
     lead: `
-      <p class="lead">If you have suffered an injury at work, it’s a good idea to file a Workers’ Comp claim. This way, medical services and wages can be paid even if you have to miss some time off work. Workers’ Compensation policies are put into place so that you can have medical care, wages, and ongoing care at least partially covered after a work injury. In the event of a fatal accident, benefits can pay for a limited amount of funeral expenses, medical bills incurred before the death, and lost wages for certain periods of time for certain survivors or dependents who meet statutory criteria.</p>
-      <p>Workers’ Compensation protects both the employer and the employee. Knowing the basics of claims and how to close and open claims is essential to both parties. Having a <a href="${WC}">Virginia Workers’ Comp lawyer</a> on your side will give you the advantage of knowledge.</p>`,
+      <p><em>Nothing on this page should be taken as legal advice. Every case is different.</em></p>
+      <p class="lead">In Virginia, a workers’ comp claim with an award stays open for medical care for as long as the care is necessary, which can be for life, unless you settle it with a full and final settlement (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/">Va. Code § 65.2-603</a>). Wage checks are different. Once they stop, you generally have 24 months from the last day you were paid compensation under an award to ask the Commission to start them again because your condition changed (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/">Va. Code § 65.2-708</a>).</p>
+      <p>Before any of that, the claim has to be opened in time. A claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/">Va. Code § 65.2-601</a>). Each of these clocks runs on its own, and missing one can close part of a claim for good even while the rest stays open.</p>`,
     sections: [
       {
-        id: 'opening',
-        h2: 'The Basics of Opening a Claim',
-        // Live said "one year from the time of injury to open a claim" and "notify the employer within
-        // 30-45 days". Replaced with the reviewed deadlines. "Scheduled payments" (structured
-        // settlements) removed from the last paragraph.
+        id: 'clocks',
+        h2: 'The Clocks That Decide How Long a Claim Stays Open',
         html: `
-          <p>In most cases, you must give notice to your employer within thirty days of the accident, and your claim must be on file with the Virginia Workers’ Compensation Commission within two years of your date of accident, although exceptions apply. Missing these deadlines could affect your ability to receive benefits.</p>
-          <p>A request for review based on a change in condition generally must be made within 24 months from the last day for which compensation was paid, with longer periods for some claims. Total compensation is generally capped at 500 weeks, with exceptions such as permanent total incapacity. There are limits on consequences of your accident being covered.</p>
-          <p>Here’s <a href="/how-long-does-workers-comp-last-in-virginia/">how long each workers’ comp benefit lasts in Virginia</a>.</p>`,
+          <p>A Virginia comp claim is not one thing that is either open or closed. Each benefit has its own deadline.</p>
+          <table>
+            <thead><tr><th>Clock</th><th>How long</th><th>Runs from</th><th>Law</th></tr></thead>
+            <tbody>
+              <tr><td>Notice to your employer</td><td>30 days, although exceptions exist</td><td>The accident</td><td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/">§ 65.2-600</a></td></tr>
+              <tr><td>Filing a claim with the Commission</td><td>2 years, although exceptions apply</td><td>The accident</td><td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/">§ 65.2-601</a></td></tr>
+              <tr><td>Medical care under an award</td><td>As long as necessary, which can be for life</td><td>The award</td><td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/">§ 65.2-603</a></td></tr>
+              <tr><td>Reopening wage checks for a change in condition</td><td>24 months</td><td>The last day compensation was paid under an award</td><td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/">§ 65.2-708</a></td></tr>
+              <tr><td>Reopening for permanent partial disability</td><td>36 months</td><td>The last day compensation was paid under an award</td><td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/">§ 65.2-708</a></td></tr>
+              <tr><td>Total wage benefits</td><td>500 weeks, with exceptions such as permanent and total incapacity</td><td>Counts weeks of wage benefits paid, not calendar time</td><td><a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/">§ 65.2-518</a></td></tr>
+            </tbody>
+          </table>
+          <p>A full and final settlement, once the Commission approves it, closes everything it covers, including future medical care (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/">Va. Code § 65.2-701</a>). Here’s <a href="/how-long-does-workers-comp-last-in-virginia/">how long each workers’ comp benefit lasts</a> while the claim is open.</p>`,
       },
       {
-        id: 'changes',
-        h2: 'Change in Circumstances',
-        // Live gave "within 90 days in most cases", "usually only two changes allowed" and a waiting
-        // period. Those specifics have no reviewed equivalent and are left out; the general point stays.
+        id: 'file',
+        h2: 'Why the Claim Has to Be Filed, Even if the Insurer Is Paying',
         html: `
-          <p>If you have a Workers’ Comp claim, you might experience a change in circumstances, such as an <a href="https://workcomp.virginia.gov/content/employers" rel="noopener">employer who stops paying</a>, a change in doctor, or being cleared to go back to work. If you experience any of these issues, time limits and limits on the number of changes may apply, so act quickly.</p>
-          <p>Your <a href="/questions-to-ask-a-workers-comp-lawyer/">work comp attorney in Virginia can answer your questions</a> and let you know about specific laws that apply to your case.</p>`,
+          <p><strong>The insurance company paying your bills or your checks does not open a claim with the Commission.</strong> A claim filed with the Commission, or an award, is what protects your rights. If two years pass without a claim on file, the right to benefits for that accident can be lost unless an exception applies. The insurer’s payments can pause the deadline in some cases, but not in every case.</p>
+          <p>The law pauses the two-year deadline in some cases. If your employer knew about the accident and paid you compensation or wages while you were out of work, or provided medical care through its workers’ comp insurance, the deadline can be paused until the last of those payments or treatments, as long as it came more than six months after the accident. Payments made after the two years already ran out don’t count. The deadline is also paused for as long as the employer fails to file the accident report the law requires (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-602/">Va. Code § 65.2-602</a>). Whether a pause applies, and for how long, is often a fight. Filing the claim avoids it.</p>
+          <blockquote><p>“Even when the insurance company is paying, I tell people to file a claim with the Commission. The insurer accepting your claim today doesn’t protect your deadline.” (Bryn Swartz)</p></blockquote>
+          <p>The claim should also list every body part that was hurt. If a body part is left off and no claim for it is filed within the two years, the Commission can find the claim for that body part too late, even though the rest of the claim was on time (a Supreme Court of Virginia decision involving Shea-Ball Construction Co., 216 Va. 442 (1975)). Here’s <a href="/how-to-file-a-workers-comp-claim/">how to file a workers’ comp claim in Virginia</a>.</p>`,
+      },
+      {
+        id: 'medical',
+        h2: 'How Long Medical Care Stays Open',
+        html: `
+          <p><strong>Once you have an award for medical benefits, the employer must provide necessary medical care for the injury “as long as necessary after an accident,” with no set number of weeks (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/">Va. Code § 65.2-603</a>).</strong> The Court of Appeals of Virginia has said these medical benefits “can last for a lifetime,” and that the 24-month change-in-condition deadline applies to compensation, not to medical care (<a href="https://www.vacourts.gov/opinions/opncavwp/0818112.pdf">a Court of Appeals decision involving Bullock Corp., 59 Va. App. 313 (2011)</a>).</p>
+          <p>So a worker who hasn’t seen the doctor for the injury in years can usually go back for treatment under the same award. The insurance company is still required to pay only for care that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will. Years later, the usual fight is over cause: the insurer says the new problem is age or arthritis, not the old injury. If it refuses, you can ask the Commission for a hearing.</p>`,
+      },
+      {
+        id: 'reopen',
+        h2: 'How to Reopen a Claim for a Change in Condition',
+        html: `
+          <p><strong>If your wage checks stopped and your injury later gets worse, you can ask the Commission to review your award based on a change in condition, within 24 months from the last day for which you were paid compensation under an award (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/">Va. Code § 65.2-708</a>).</strong> For permanent partial disability benefits, the period is 36 months.</p>
+          <p>Common reasons to reopen:</p>
+          <ul>
+            <li>Your doctor takes you back out of work, for example for a new surgery.</li>
+            <li>Your restrictions get worse and you can no longer do your light-duty job.</li>
+            <li>You lose a light-duty job and can’t find other work within your restrictions.</li>
+            <li>Your doctor raises your permanent rating.</li>
+          </ul>
+          <p>To reopen, you file a claim for the new benefits with the Commission, supported by medical evidence that the change is from the work injury. The Commission can’t award additional wage benefits for any period more than 90 days before the date you file the change-in-condition claim (<a href="https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section20/">Commission Rule 1.2</a>). So waiting to file can cost weeks of checks even when you are inside the 24 months.</p>
+          <p>Wages can extend this clock. If the work injury physically keeps you from going back to your old job, and you are given work within your restrictions at the same or higher pay, those wages count as compensation paid under an award for up to 24 consecutive months. That pushes back the date the deadline starts running, and those weeks don’t count against your 500 weeks (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/">Va. Code § 65.2-708(C)</a>).</p>
+          <p>Two less common exceptions: if no wage benefits were ever paid, a permanent partial disability award can still be made within 36 months of the accident, and surgery to repair or replace a prosthesis or orthosis starts a new 24-month period (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/">Va. Code § 65.2-708</a>).</p>
+          <p>Miss the deadline, and the Commission can’t award more wage benefits under that award, even if your condition has plainly changed. Medical care under the award continues. More on <a href="/light-duty-workers-comp-virginia/">light duty and losing a light-duty job</a>.</p>`,
+      },
+      {
+        id: 'close',
+        h2: 'What Closes a Workers’ Comp Claim',
+        html: `
+          <p>Most claims close in one of these ways:</p>
+          <ul>
+            <li><strong>A full and final settlement.</strong> One lump sum, approved by the Commission, that ends wage benefits and future medical care for the injury. You cannot come back for more. A settlement is optional; nobody can force you to settle (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/">§ 65.2-701</a>).</li>
+            <li><strong>Wage benefits end and the deadline passes.</strong> The award for medical care can stay open, but wage checks can’t be reopened after the 24 months (or 36 months for permanent partial disability).</li>
+            <li><strong>The 500-week limit.</strong> Wage benefits end when they reach the limit, except in cases of permanent and total incapacity (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/">§ 65.2-518</a>).</li>
+            <li><strong>The claim was never filed in time.</strong> Without a timely claim or an exception, there is no claim to keep open.</li>
+          </ul>
+          <p>Here’s more on <a href="/workers-comp-settlement-in-virginia/">workers’ comp settlements in Virginia</a>.</p>`,
+      },
+      {
+        id: 'questions',
+        h2: 'Questions About How Long a Claim Stays Open',
+        html: `
+          <h3>Does a Workers’ Comp Claim Close When I Go Back to Work?</h3>
+          <p>No. Your wage checks may stop, but an award for medical care stays open as long as treatment is necessary. The 24-month clock to reopen wage benefits starts from the last day you were paid compensation under an award. If you went back to lighter work at the same or higher pay, those wages can count as compensation for up to 24 months, which moves that start date later.</p>
+          <h3>Can I Reopen a Workers’ Comp Claim After I Settled?</h3>
+          <p>Generally not. A full and final settlement approved by the Commission closes the benefits it covers, including future medical care.</p>
+          <h3>Can the Insurance Company Close My Claim?</h3>
+          <p>Not on its own say-so once you have an award. To stop or reduce wage checks under an award, it has to file an application with the Commission, and you get a chance to respond (<a href="https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/">Va. Code § 65.2-708</a>). Here’s what to do <a href="/what-if-a-workers-comp-insurer-delays-my-benefits/">if the insurer delays or stops your benefits</a>.</p>`,
       },
     ],
     closing: {
-      h2: 'Call a Workers’ Comp Injury Lawyer for Help with Your Claim',
+      h2: 'Talk to Pathfinder Injury Law About Your Claim',
       html: `
-        <p>A Workers’ Comp claim isn’t always straightforward, especially if you have had a change in circumstances or a worsening of the original injury.</p>
-        <p>Find out what your options are by talking with a lawyer at Pathfinder Injury Law. Call ${phone} or fill out the <a href="#contact">contact form</a> to reach our firm.</p>`,
+        <p>Pathfinder Injury Law handles only Virginia workers’ compensation claims. Call ${phone} or fill out the <a href="#contact">contact form</a>.</p>`,
     },
   },
 
