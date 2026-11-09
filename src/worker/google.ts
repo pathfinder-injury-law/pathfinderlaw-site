@@ -36,6 +36,27 @@ async function signJwt(clientEmail: string, privateKeyPem: string, now: Date, to
   return `${header}.${claims}.${b64url(sig)}`;
 }
 
+// Google sometimes answers with a one-off server error (a 500 on Nov 9, 2026 lost one send
+// while the sends 90 seconds before and after went through). A server error (5xx), a rate
+// limit (429), or a dropped connection gets one more try after a short pause. A refusal
+// (other 4xx) is not retried: it means a setup problem, and the alert should go out at once.
+// A retried send could, rarely, deliver twice; a duplicate lead beats a lost one.
+const RETRY_DELAY_MS = 1000;
+const transient = (status: number) => status >= 500 || status === 429;
+const wait = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+async function fetchWithRetry(deps: Deps, url: string, init: RequestInit): Promise<Response> {
+  for (let attempt = 1; ; attempt++) {
+    let res: Response | null = null;
+    try {
+      res = await deps.fetch(url, init);
+    } catch (e) {
+      if (attempt >= 2) throw e;
+    }
+    if (res && (res.ok || !transient(res.status) || attempt >= 2)) return res;
+    await (deps.sleep ?? wait)(RETRY_DELAY_MS);
+  }
+}
+
 let cached: { token: string; expires: number; for: string } | null = null;
 export const resetTokenCache = () => {
   cached = null;
@@ -56,7 +77,7 @@ async function accessToken(env: Env, deps: Deps): Promise<string> {
   }
   let res: Response;
   try {
-    res = await deps.fetch(tokenUrl, {
+    res = await fetchWithRetry(deps, tokenUrl, {
       method: 'POST',
       headers: { 'content-type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: jwt }),
@@ -112,7 +133,7 @@ export async function sendMail(env: Env, deps: Deps, opts: { subject: string; bo
   const token = await accessToken(env, deps);
   let res: Response;
   try {
-    res = await deps.fetch(env.GMAIL_SEND_URL || GMAIL_SEND_URL, {
+    res = await fetchWithRetry(deps, env.GMAIL_SEND_URL || GMAIL_SEND_URL, {
       method: 'POST',
       headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
       body: JSON.stringify({ raw: b64url(utf8(buildRawMessage(opts))) }),

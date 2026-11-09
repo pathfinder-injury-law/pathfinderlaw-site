@@ -256,6 +256,51 @@ test('Gmail send failure: row kept as failed, phone-number failure response, ale
   assert.ok(calls.some((c) => c.url === 'https://hb.example/fail'));
 });
 
+test('Gmail one-off server error: retried once, lead sent, no alert', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld({ gmail: [500, 200] });
+  const res = await handleContact(post(goodInput()), env, deps);
+  assert.equal(res.status, 200);
+  assert.equal(gmail(calls).length, 2);
+  const [row] = rows(env);
+  assert.equal(row.delivery_status, 'sent'); assert.equal(row.delivery_detail, null);
+  assert.ok(!calls.some((c) => c.url === 'https://hb.example/fail'));
+});
+
+test('Gmail dropped connection or 429: retried once, lead sent', async () => {
+  for (const w of [{ gmailThrows: 1 }, { gmail: [429, 200] }]) {
+    resetTokenCache();
+    const env = liveEnv(); const { deps, calls } = makeWorld(w);
+    const res = await handleContact(post(goodInput()), env, deps);
+    assert.equal(res.status, 200, JSON.stringify(w));
+    assert.equal(gmail(calls).length, 2);
+  }
+});
+
+test('Google token server error: retried once, lead sent', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld({ token: [503, 200] });
+  const res = await handleContact(post(goodInput()), env, deps);
+  assert.equal(res.status, 200);
+  assert.equal(calls.filter((c) => c.url.includes('oauth2.googleapis.com')).length, 2);
+  assert.equal(rows(env)[0].delivery_status, 'sent');
+});
+
+test('Gmail refusal (4xx) and authorization failure are not retried', async () => {
+  for (const [w, host] of [[{ gmail: 400 }, 'gmail.googleapis.com'], [{ token: 401 }, 'oauth2.googleapis.com']] as const) {
+    resetTokenCache();
+    const env = liveEnv(); const { deps, calls } = makeWorld(w);
+    const res = await handleContact(post(goodInput()), env, deps);
+    assert.equal(res.status, 502);
+    assert.equal(calls.filter((c) => c.url.includes(host)).length, 1, host);
+    assert.ok(calls.some((c) => c.url === 'https://hb.example/fail'));
+  }
+});
+
+test('morning self-test survives a one-off Gmail server error and still pings the heartbeat', async () => {
+  const env = liveEnv(); const { deps, calls } = makeWorld({ gmail: [500, 200] });
+  assert.equal(await runSelfTest(env, deps), true);
+  assert.ok(!calls.some((c) => c.url === 'https://hb.example/fail'));
+});
+
 test('Google authorization failure: alert pinged immediately', async () => {
   const env = liveEnv(); const { deps, calls } = makeWorld({ token: 401 });
   const res = await handleContact(post(goodInput()), env, deps);

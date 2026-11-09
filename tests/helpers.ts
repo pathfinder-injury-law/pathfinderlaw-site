@@ -47,9 +47,13 @@ export interface Calls { url: string; method: string; body: string; auth?: strin
 
 // Routes every outside call the Worker makes to a scripted stand-in.
 let counter = 0;
-export function makeWorld(opts: { gmail?: number; token?: number; turnstile?: 'pass' | 'fail' | 'down'; hostname?: string; now?: string } = {}) {
+export function makeWorld(opts: { gmail?: number | number[]; token?: number | number[]; gmailThrows?: number; turnstile?: 'pass' | 'fail' | 'down'; hostname?: string; now?: string } = {}) {
   const calls: Calls[] = [];
+  // A list of statuses is used one per call, in order; the last one repeats.
+  const seq = (v: number | number[] | undefined, n: number) => (Array.isArray(v) ? v[Math.min(n, v.length - 1)] : v);
+  let tokenN = 0, gmailN = 0;
   const deps: Deps = {
+    sleep: async () => {},
     now: () => new Date(opts.now ?? '2026-11-03T15:00:00Z'),
     uuid: () => `id-${++counter}-xxxxxxxx`,
     fetch: (async (url: string, init: RequestInit = {}) => {
@@ -57,11 +61,16 @@ export function makeWorld(opts: { gmail?: number; token?: number; turnstile?: 'p
       calls.push({ url: String(url), method: init.method ?? 'GET', body, auth: (init.headers as Record<string, string> | undefined)?.authorization });
       const u = String(url);
       if (u.includes('oauth2.googleapis.com')) {
-        return opts.token && opts.token !== 200
-          ? new Response('{"error":"unauthorized_client"}', { status: opts.token })
+        const t = seq(opts.token, tokenN++);
+        return t && t !== 200
+          ? new Response('{"error":"unauthorized_client"}', { status: t })
           : Response.json({ access_token: 'tok', expires_in: 3600 });
       }
-      if (u.includes('gmail.googleapis.com')) return new Response('{}', { status: opts.gmail ?? 200 });
+      if (u.includes('gmail.googleapis.com')) {
+        const n = gmailN++;
+        if (n < (opts.gmailThrows ?? 0)) throw new Error('network');
+        return new Response('{}', { status: seq(opts.gmail, n) ?? 200 });
+      }
       if (u.includes('siteverify')) {
         if (opts.turnstile === 'down') throw new Error('network');
         return Response.json({ success: opts.turnstile !== 'fail', hostname: opts.hostname ?? 'pathfinderlaw.com' });
