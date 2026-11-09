@@ -616,38 +616,78 @@ export const subArticles: SubArticle[] = [
   },
 
   {
+    // Rewritten Nov 9, 2026 (schedule #8): 683 impressions at position 17.8 on a thin page, plus
+    // "average workers comp settlement for [knee, meniscus, ACL, hip labrum]" searches (Search
+    // Console). Bryn's rule: no ranges or averages; his approved first-call quote. Law check: file 54d.
     slug: 'average-workers-comp-settlement-in-virginia',
-    title: "What Affects Workers' Comp Settlement Value in Virginia",
+    title: 'Average Workers’ Comp Settlement in Virginia: Honest Answer',
     description:
-      "Your Virginia workers’ comp settlement depends on your injuries. Visit the Pathfinder Injury Law website or call us at 804-505-0633 today.",
-    h1: 'What Affects Workers’ Comp Settlement Value in Virginia',
+      'There is no useful average Virginia workers’ comp settlement. Here’s what actually sets the number: your wage, your rating, future medical care, and the risk.',
+    h1: 'What Is the Average Workers’ Comp Settlement in Virginia?',
     crumb: 'Average Settlement',
     intro: [
-      'When you’re hurt in a work accident, you need funds that meet your needs for your recovery. A settlement is optional, voluntary, and many factors affect its value.',
-      'At Pathfinder Injury Law, we can help you understand what you may be due after a work accident. If the average Workers’ Comp settlement in Virginia isn’t enough for you to recover, we can talk through what your situation may need.',
-      'A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements.',
+      'There is no average workers’ comp settlement in Virginia that will tell you what your claim is worth. A settlement is built from your own numbers: your average weekly wage, how many weeks of benefits are left, any permanent rating, the cost of your future medical care, and how strong the insurance company thinks its defenses are. Two workers with the same torn meniscus can have settlements far apart, because those numbers are different.',
+      'So this page doesn’t give a number. It shows what goes into one, so you can see which parts of your claim move it.',
+      'A settlement is optional. Nobody can force you to settle. Settlement ends the benefits it covers, and the Commission must approve all settlements ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)).',
     ],
     sections: [
       {
-        h2: 'Your Workers’ Comp Settlement Depends on Your Injuries',
+        h2: 'Why Averages Online Don’t Fit Your Claim',
         blocks: [
-          'Every work accident is different, and so every Virginia work compensation settlement is different. Because of this, you may have a little trouble settling your claim.',
-          'Luckily, your [Workers’ Comp lawyer in Virginia](/virginia-workers-comp-lawyer/) can step in and help you work through your losses and needs. For example, how do you calculate the value of your [vision loss](https://workcomp.virginia.gov/sites/default/files/documents/Claims-Services-Quick-Reference-Guide_0.pdf) after a work injury damages your eyes? Your lawyer has the tools to calculate the percentage of loss you’ve suffered and the benefits you may receive for it.',
+          'Settlement averages you find online usually mix claims that have little in common: a sprain with two weeks out of work and a spinal fusion with no return to work, claims from other states with different rules, and medical-only claims with no lost wages at all. An average of those tells you nothing about yours.',
+          'Virginia sets its own rules for what comp pays. Wage checks are two-thirds of your average weekly wage, up to a weekly maximum that is set each July 1. For injuries on or after July 1, 2026, the maximum is $1,507.01 a week ([Commission rates](https://www.workcomp.virginia.gov/documents/rates-min-max-benefits-cola-mileage); [Va. Code § 65.2-500](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/)). Permanent ratings are paid from Virginia’s own schedule of weeks for each body part ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). Virginia workers’ comp does not pay for pain and suffering, so a settlement doesn’t either.',
+          '“On the first call, I won’t guess what your case is worth. I don’t know anything about it yet. Any lawyer who puts a number on it that early is making it up.” (Bryn Swartz)',
         ],
       },
       {
-        h2: 'Understanding Your Virginia Workers’ Comp',
+        h2: 'What Actually Sets a Virginia Settlement',
         blocks: [
-          'Because your Workers’ Comp settlement can be so complex, you may need a work compensation lawyer to help determine what benefits you may be due. In Virginia, you can receive partial or total disability benefits, for example, which impact the funds you’ll receive.',
-          'These disability benefits depend on the severity of your injury and whether you’re able to work in any capacity. If you’re able to work, but you can’t do your old job, you may be put in a less-strenuous position. In these cases, you may be eligible for partial disability benefits, which cover some of the difference between your current and former wages. Talk to your lawyer about what benefits you’re due.',
+          'A settlement trades benefits you could receive in the future for money now. These are the pieces that set how much those future benefits are worth:',
+          {
+            ul: [
+              'Your compensation rate: two-thirds of your average weekly wage, which is generally your total earnings, including overtime pay, from the job where you got hurt during the 52 weeks before the injury, divided by 52. When that method would be unfair, for example because you worked there only a short time, the Commission can use another one ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)). A mistake in that number shrinks every check and every settlement built on them.',
+              'How many weeks of wage benefits are left: total compensation for an injury is generally capped at 500 weeks, with exceptions such as permanent and total incapacity, so weeks already paid come off what is left to settle ([Va. Code § 65.2-518](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-518/)).',
+              'Whether you can work, and at what pay: someone back at full duty at the same wage has less future wage loss to settle than someone who can’t go back.',
+              'Your permanent rating: a 20 percent loss of use of a leg is 20 percent of 175 weeks, or 35 weeks of pay at your compensation rate ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). A few points on a rating can mean weeks of benefits.',
+              'Future medical care: most Virginia settlements are full and final, which closes medical care for good, so the cost of future visits, medication, injections, and surgery has to be part of the number.',
+              'Medicare: if you are on Medicare, or have a reasonable expectation of being on it within 30 months, Medicare’s interest in future medical care has to be considered, and part of the money may need to go into a [Medicare set-aside](/workers-comp-settlement-in-virginia/#medicare). Not every settlement has one.',
+              'The risk on each side: if the insurer has a real defense, such as a question about whether the accident happened at work, that lowers what it will pay. If the claim is accepted and the evidence is strong, the insurer’s risk is higher.',
+              'The attorney’s fee, if you have a lawyer: in a Virginia comp case, the Commission must approve it ([Va. Code § 65.2-714](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/)).',
+            ],
+          },
+          'Here’s [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/), step by step.',
+        ],
+      },
+      {
+        h2: 'What About the Average Settlement for a Knee, Back, or Shoulder?',
+        blocks: [
+          'The body part matters less than people expect. What matters is what the injury did: whether it needed surgery, how long it kept you out of work, the permanent rating, and the care you still need. A torn meniscus that heals after surgery and a torn meniscus that leads to a knee replacement are different claims. Each of these pages explains what drives value for that injury:',
+          {
+            ul: [
+              '[Knee injuries](/knee-injury-compensation/), including meniscus and ACL tears',
+              '[Back injuries](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/) and [herniated discs](/herniated-disc-workers-comp/)',
+              '[Neck injuries](/neck-injury-workers-comp/) and [spine injuries](/what-should-you-do-if-you-have-a-spine-injury-at-work/)',
+              '[Shoulder injuries](/shoulder-injury-workers-comp/)',
+              '[Hip injuries](/hurt-your-hip-at-work/), including labral tears',
+              '[Ankle injuries](/ankle-injury-workers-comp/), [foot injuries](/foot-injury-workers-comp/), and [Achilles tendon ruptures](/achilles-tendon-rupture-workers-comp/)',
+              '[Concussions and brain injuries](/concussion-brain-injury-workers-comp/)',
+              '[CRPS and spinal cord stimulators](/crps-spinal-cord-stimulator-workers-comp/)',
+            ],
+          },
+        ],
+      },
+      {
+        h2: 'When Is the Right Time to Settle?',
+        blocks: [
+          'Usually not until you know what the injury will cost you. Before you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/), there is often no permanent rating and no clear picture of future care, and both are pieces of the number. An offer that comes early can look large next to a missed paycheck and still leave out years of medical care.',
+          'Once the Commission approves a full and final settlement, you cannot come back for more, even if the injury gets worse. Here’s more on [whether to accept a lump-sum settlement](/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/) and on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/).',
         ],
       },
     ],
     closing: {
-      h2: 'Talk to a Lawyer About Your Workers’ Comp Settlement in Virginia',
+      h2: 'Have a Settlement Offer on the Table?',
       blocks: [
-        'A serious work accident can leave you unable to work as you once did and in need of funds for yourself and your family. You may be worried you won’t receive the full amount you need.',
-        '[Pathfinder Injury Law](/) can help. If you’re struggling with a Workers’ Comp claim, your lawyer can talk with you about the compensation you may be due for your losses. Take advantage of our free consultations by calling {phone} or by completing the online contact form below.',
+        '[Pathfinder Injury Law](/) handles only Virginia workers’ compensation claims. Call {phone} or use the {contact} on this page.',
       ],
     },
   },
