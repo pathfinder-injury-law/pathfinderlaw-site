@@ -667,7 +667,7 @@ export const subArticles: SubArticle[] = [
               '[Knee injuries](/knee-injury-compensation/), including meniscus and ACL tears',
               '[Back injuries](/virginia-workers-comp-lawyer/virginia-back-injury-lawyer/) and [herniated discs](/herniated-disc-workers-comp/)',
               '[Neck injuries](/neck-injury-workers-comp/) and [spine injuries](/what-should-you-do-if-you-have-a-spine-injury-at-work/)',
-              '[Shoulder injuries](/causes-of-on-the-job-shoulder-injuries/)',
+              '[Shoulder injuries](/shoulder-injury-workers-comp/)',
               '[Hip injuries](/hurt-your-hip-at-work/), including labral tears',
               '[Ankle injuries](/ankle-injury-workers-comp/), [foot injuries](/foot-injury-workers-comp/), and [Achilles tendon ruptures](/achilles-tendon-rupture-workers-comp/)',
               '[Concussions and brain injuries](/concussion-brain-injury-workers-comp/)',
