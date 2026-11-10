@@ -189,7 +189,7 @@ test('404 and thank-you stay noindex in every build; other pages follow the buil
 test('privacy policy has no date placeholder', opts, () => {
   const html = read('/privacy-policy/');
   assert.doesNotMatch(html, /TO BE SET/);
-  assert.match(html, /last updated on October 30, 2026/);
+  assert.match(html, /last updated on November 10, 2026/);
 });
 
 test('Every sitemap URL carries a last-updated date, and none is in the future', opts, () => {
@@ -206,4 +206,10 @@ test('Every sitemap URL carries a last-updated date, and none is in the future',
       assert.ok(mod![1] >= '2019-01-01', `${loc}: ${mod![1]} looks wrong`);
     }
   }
+});
+
+test('footer and privacy policy name the legal entity (A2P texting registration)', opts, () => {
+  const line = /Pathfinder Injury Law is a trade name of Pathfinder Law Group, PLLC\./;
+  for (const p of ['/', '/contact/', '/privacy-policy/']) assert.match(read(p), line);
+  assert.match(read('/privacy-policy/'), /do not share or sell Your mobile phone number, or Your text-message opt-in data and consent/);
 });
