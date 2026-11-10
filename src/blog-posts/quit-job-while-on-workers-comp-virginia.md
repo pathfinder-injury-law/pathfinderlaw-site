@@ -15,7 +15,7 @@ Yes, you can quit your job while on workers’ comp in Virginia, but what happen
 
 | Your situation when you quit | What usually happens |
 |---|---|
-| Your doctor has you completely out of work | Total disability checks generally continue. As the Supreme Court of Virginia put it: “Injured workers who leave the workforce for reasons unrelated to their injuries are nonetheless entitled to temporary total disability compensation” (*McKellar v. Northrop Grumman Shipbuilding, Inc.*, Va. 2015). |
+| Your doctor has you completely out of work | Total disability checks generally continue. As the Supreme Court of Virginia put it: “Injured workers who leave the workforce for reasons unrelated to their injuries are nonetheless entitled to temporary total disability compensation” (a decision involving Northrop Grumman Shipbuilding, Inc., 290 Va. 349 (2015)). |
 | You’re working a light-duty job your employer gave you | Quitting is usually treated as refusing suitable work. Wage checks can stop until you cure the refusal ([Va. Code § 65.2-510](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-510/)). |
 | You’re released to light duty, but your employer has no job for you | You generally have to look for work within your restrictions to keep partial checks. Leaving the job market hurts that claim. |
 | You’re back at full duty | No wage checks are being paid. Medical care for the injury continues. |
@@ -24,13 +24,13 @@ In every row, medical treatment for the work injury continues ([Va. Code § 65.2
 
 ## Quitting While You’re Totally Disabled
 
-**When your injury keeps you from working at all, your job status generally doesn’t matter to your total disability checks.** In *McKellar*, the Supreme Court of Virginia said “an injured worker’s status in the labor market is irrelevant where the worker’s incapacity is total.” The worker in that case had retired, and he was still owed total disability checks for a later period when the injury kept him from working.
+**When your injury keeps you from working at all, your job status generally doesn’t matter to your total disability checks.** In the Northrop Grumman Shipbuilding case, the Supreme Court of Virginia said “an injured worker’s status in the labor market is irrelevant where the worker’s incapacity is total.” The worker in that case had retired, and he was still owed total disability checks for a later period when the injury kept him from working.
 
 That protection lasts only as long as your doctor keeps you completely out of work. The day you are released to light duty, the rules below apply, and having quit can make them harder to meet.
 
 ## Quitting a Light-Duty Job
 
-**Quitting a light-duty job your employer gave you usually counts as refusing suitable work.** The Supreme Court of Virginia has described the light-duty rule as applying when a worker “unjustifiably refuses to accept or continue selective employment” (*Big D Quality Homebuilders v. Hamilton*, 228 Va. 378, 381-82 (1984)).
+**Quitting a light-duty job your employer gave you usually counts as refusing suitable work.** The Supreme Court of Virginia has described the light-duty rule as applying when a worker “unjustifiably refuses to accept or continue selective employment” (a decision involving Big D Quality Homebuilders, 228 Va. 378, 381-82 (1984)).
 
 That means:
 
@@ -53,7 +53,7 @@ What the new job does to your checks:
 |---|---|---|
 | Total disability checks | Any job, even part-time | Total disability checks generally end, because you are no longer totally unable to work. If you still have restrictions, partial checks may take their place. |
 | Partial disability checks | A job that pays more | Your partial check goes down, because it is two-thirds of the difference between your old wage and your new one ([Va. Code § 65.2-502](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-502/)) |
-| Partial disability checks, after being released to light duty with no job from your employer | A lower-paying job with a new employer | You may be owed two-thirds of the difference, if you show you made a reasonable effort to find suitable work (*Ford Motor Co. v. Favinger*, 275 Va. 83 (2008)) |
+| Partial disability checks, after being released to light duty with no job from your employer | A lower-paying job with a new employer | You may be owed two-thirds of the difference, if you show you made a reasonable effort to find suitable work (a Supreme Court of Virginia decision involving Ford Motor Co., 275 Va. 83 (2008)) |
 
 Never work a job your doctor hasn’t cleared. The insurance company will use it to argue you were able to do the light duty it offered, or that a new injury happened at the new job.
 
@@ -61,14 +61,14 @@ Never work a job your doctor hasn’t cleared. The insurance company will use it
 
 **Only if the jobs are similar, or if both were for the same employer.** Your checks are based on your average weekly wage in “the employment in which [you were] working at the time of the injury” ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)).
 
-- **Two jobs with different employers:** wages are combined only if the jobs are related or similar (*County of Frederick Fire & Rescue v. Dodson*, Va. Ct. App. 1995). A warehouse worker who also delivers pizzas on weekends usually can’t add the pizza wages.
-- **Two jobs with the same employer:** the Supreme Court of Virginia combined the wages even though the jobs were different (*Dinwiddie County School Board v. Cole*, 258 Va. 430 (1999)).
+- **Two jobs with different employers:** wages are combined only if the jobs are related or similar (a Court of Appeals decision involving County of Frederick Fire & Rescue, 20 Va. App. 440 (1995)). A warehouse worker who also delivers pizzas on weekends usually can’t add the pizza wages.
+- **Two jobs with the same employer:** the Supreme Court of Virginia combined the wages even though the jobs were different (a decision involving the Dinwiddie County School Board, 258 Va. 430 (1999)).
 
 Here’s more on [how Virginia workers’ comp benefits are calculated](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/).
 
 ## Fired Instead of Quitting?
 
-**Being fired is treated differently from quitting, and the reason matters.** A business layoff from light duty generally keeps partial checks going, as long as you look for other work (*Carr v. Atkinson/Clark/Shea*, Va. Ct. App. 2014). A firing for serious misconduct can end partial checks for good. And firing someone solely for filing a workers’ comp claim is against the law ([Va. Code § 65.2-308](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/)). See [employer retaliation and your workers’ comp rights](/employer-retaliation-and-your-workers-comp-rights/).
+**Being fired is treated differently from quitting, and the reason matters.** A business layoff from light duty generally keeps partial checks going, as long as you look for other work (a Court of Appeals decision involving Atkinson/Clark/Shea, A Joint Venture, 63 Va. App. 281 (2014)). A firing for serious misconduct can end partial checks for good. And firing someone solely for filing a workers’ comp claim is against the law ([Va. Code § 65.2-308](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/)). See [employer retaliation and your workers’ comp rights](/employer-retaliation-and-your-workers-comp-rights/).
 
 ## Before You Quit
 

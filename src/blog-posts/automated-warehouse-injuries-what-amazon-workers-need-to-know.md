@@ -3,7 +3,7 @@ title: "Automated Warehouse Injuries: Amazon Workers Protection"
 metaTitle: "What Amazon Workers Should Know About Automated Injuries"
 description: "Were you hurt at work in an automated warehouse? Pathfinder Injury Law fights for benefits on behalf of injured Amazon workers in Virginia."
 date: 2020-12-18T21:06:39Z
-updated: 2026-11-04T14:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["causes","benefits"]
 ---
 Warehouses are using more robots, conveyors, and automated systems to move, sort, and pack items. Automation can change the kind of risks workers face. If you were hurt working in an automated warehouse, including a large e-commerce fulfillment center, Virginia Workers’ Compensation may be available to you.
@@ -18,7 +18,9 @@ Automated warehouses combine people with machines. Workers may load, unload, or 
 - Falls from platforms, ladders, or equipment
 - Electrical injuries while working around powered machinery
 - Crush injuries and, in serious cases, amputations
-- Repetitive motion and overexertion injuries from fast-paced or heavy work
+- Sudden strains from a specific lift, pull, or twist
+
+Virginia covers an injury by accident: an identifiable incident at a reasonably definite time that causes a sudden mechanical or structural change in your body. Injuries that build up gradually from repetitive work generally do not count as an injury by accident.
 
 The cause of your injury matters less for a Workers’ Comp claim than you might think. Fault generally doesn’t matter in Virginia Workers’ Compensation claims. You generally don’t have to prove who caused the accident, but your accident must arise out of and in the course of your employment.
 
@@ -29,7 +31,7 @@ Workers’ Comp benefits generally come through your employer’s insurance. In 
 ## What Should You Do After a Warehouse Injury?
 
 - **Get medical care.** See a doctor promptly, even if the injury seems minor. Your employer must offer a panel of at least three doctors, and you choose one.
-- **Report the injury in writing.** The Virginia Workers’ Compensation Act requires notice to your employer within thirty days of the accident, although exceptions exist. Give written notice if at all possible. Verbal notice is OK, but much harder to prove.
+- **Report the injury in writing.** Virginia law requires written notice to your employer within 30 days of the accident, although exceptions exist. Telling your supervisor out loud can also count, but it is much harder to prove because the employer can deny it happened, so put it in writing and keep a copy.
 - **Write down what happened.** Note the date, time, location, the equipment involved, and the names of any witnesses while the details are fresh.
 - **Keep your records.** Save medical records, work schedules, and pay stubs.
 - **Know your deadline.** Claims for benefits must generally be filed with the Virginia Workers’ Compensation Commission within two years of an accident, or else you can forever lose benefit entitlement. See our guide on [how to file a Workers’ Comp claim](/how-to-file-a-workers-comp-claim/).

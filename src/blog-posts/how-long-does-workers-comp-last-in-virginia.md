@@ -90,7 +90,7 @@ In those cases, the weekly checks continue for the worker’s lifetime with no l
 
 ## How Long Does Workers’ Comp Pay for Medical Treatment?
 
-**Virginia law requires the employer to provide necessary medical care “as long as necessary after an accident,” with no set number of weeks ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)).** The 500-week limit applies to compensation, not medical care, and the Court of Appeals of Virginia has said these medical benefits “can last for a lifetime” ([a Court of Appeals decision involving Bullock Corp.](https://www.vacourts.gov/opinions/opncavwp/0818112.pdf), Record No. 0818-11-2 (2011)).
+**Virginia law requires the employer to provide necessary medical care “as long as necessary after an accident,” with no set number of weeks ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)).** The 500-week limit applies to compensation, not medical care, and the Court of Appeals of Virginia has said these medical benefits “can last for a lifetime” ([a Court of Appeals decision involving Bullock Corp.](https://www.vacourts.gov/opinions/opncavwp/0818112.pdf), 59 Va. App. 313 (2011)).
 
 The insurance company is required to pay for treatment that is reasonable, necessary, and causally related to the accident. That doesn’t mean it will. As a claim goes on, the insurer may argue that new treatment is for age, arthritis, or some other cause instead of the work injury. If it refuses, you can ask the Commission for a hearing.
 
@@ -102,7 +102,7 @@ Most Virginia cases settle with a **full and final settlement**: one lump sum th
 
 ## Can Benefits Start Again After They Stop?
 
-**If your wage checks stop and your injury later gets worse, you generally have 24 months from the last day for which you were paid compensation under an award to ask the Commission to review it ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)).** For permanent partial disability claims, the period is 36 months. Miss the deadline, and the Commission can’t award more wage benefits under that award, even if your condition has plainly changed. The deadline applies to compensation, not to medical care, which continues under the award as long as it is necessary ([a Court of Appeals decision involving Bullock Corp.](https://www.vacourts.gov/opinions/opncavwp/0818112.pdf), Record No. 0818-11-2 (2011)). More on [how long a workers’ comp claim can stay open](/how-long-can-a-workers-comp-claim-stay-open/).
+**If your wage checks stop and your injury later gets worse, you generally have 24 months from the last day for which you were paid compensation under an award to ask the Commission to review it ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)).** For permanent partial disability claims, the period is 36 months. Miss the deadline, and the Commission can’t award more wage benefits under that award, even if your condition has plainly changed. The deadline applies to compensation, not to medical care, which continues under the award as long as it is necessary ([a Court of Appeals decision involving Bullock Corp.](https://www.vacourts.gov/opinions/opncavwp/0818112.pdf), 59 Va. App. 313 (2011)). More on [how long a workers’ comp claim can stay open](/how-long-can-a-workers-comp-claim-stay-open/).
 
 ## How Long Do Workers’ Comp Death Benefits Last?
 

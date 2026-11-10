@@ -9,13 +9,13 @@ tags: ["benefits","hiring-a-lawyer"]
 
 When you’re hurt in a work-related accident, you may have plenty of questions about your Workers’ Comp claim. You may be struggling to get the answers you need, and you may have trouble getting these answers on your own.
 
-Because of this, you may need to speak with a [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) before your claim goes to court. These claims can be confusing, and if you’re struggling to get answers, it can be easy to make mistakes. Luckily, your lawyer is here to help you avoid any problems that can impact your claim. Check out the following questions, and talk to a lawyer if you have more questions about your case.
+Because of this, you may need to speak with a [Workers’ Comp lawyer](/virginia-workers-comp-lawyer/) before your claim goes to a hearing before the Commission. These claims can be confusing, and if you’re struggling to get answers, it can be easy to make mistakes. Luckily, your lawyer is here to help you avoid any problems that can impact your claim. Check out the following questions.
 
 ## When Will I Receive My Workers’ Comp Benefits?
 
-When you’re hurt in a work accident, you should receive your benefits as soon as possible. You must give your employer [notice of the injury within thirty days](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/), and you generally have two years to file your claim, although exceptions apply. Unfortunately, you may have been denied, which can drag out your case even longer.
+When you’re hurt in a work accident, the insurance company is required to pay the benefits you’re owed, but that doesn’t mean it will pay them quickly. You must give your employer [notice of the injury within thirty days](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/), and you generally have two years to file your claim, although exceptions apply. Unfortunately, you may have been denied, which can drag out your case even longer.
 
-Because of this, your Workers’ Comp lawyer can’t give you an exact date that you’ll receive your benefits. There’s no set answer for [how long Virginia Workers’ Comp settlements take](/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/). But a lawyer can represent you at a hearing before the Commission and help you get benefits as soon as possible.
+Because of this, your Workers’ Comp lawyer can’t give you an exact date that you’ll receive your benefits. There’s no set answer for [how long Virginia Workers’ Comp settlements take](/virginia-workers-comp-lawyer/how-long-do-virginia-workers-comp-settlements-take/). But a lawyer can represent you at a hearing before the Commission and explain what to expect while you wait.
 
 ## If I Was Partly at Fault for the Work Accident, Can I Still Get a Settlement?
 

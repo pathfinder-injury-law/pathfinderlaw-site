@@ -3,7 +3,7 @@ title: "Foot Injury at Work in Virginia: Workers’ Comp Benefits and Settlement
 metaTitle: "Foot Injury at Work in Virginia: Workers’ Comp Guide"
 description: "Broke or injured your foot at work in Virginia? What workers’ comp covers, what you need to prove, and what affects the value of a foot injury claim."
 date: 2022-11-23T00:06:35Z
-updated: 2026-10-31T18:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
@@ -105,7 +105,7 @@ There is no average settlement for a foot injury. The value depends on:
 
 No one can put a fair number on a foot injury claim without reviewing the medical records and the facts. You will need to show the connection between the injury and your job, along with your symptoms, complications, and future medical needs.
 
-**A settlement is optional. Nobody can force you to settle, and nobody can force the insurance company to offer one.** There are a few kinds of settlements, and the right one depends on your situation. See [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/) and [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
+**A settlement is optional. Nobody can force you to settle, and nobody can force the insurance company to offer one.** Most Virginia workers’ comp cases settle full and final, which closes wage checks and medical care for good. Settlements that leave medical care open are rare. Either way, the Commission has to approve it. See [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/) and [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 
 A foot injury can cost you time at work, leave a lasting disability, or force a change of jobs. Any settlement needs to account for all of that.
 

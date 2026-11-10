@@ -3,7 +3,7 @@ title: "Ankle Injury at Work in Virginia: Workers’ Comp and Settlements"
 metaTitle: "Ankle Injury Workers’ Comp Settlement in Virginia"
 description: "Broke, sprained, or tore a ligament in your ankle at work in Virginia? What workers’ comp pays, how ankle ratings work, and what drives a settlement."
 date: 2026-11-01T18:00:00Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
@@ -59,7 +59,7 @@ The insurance company will also look for any earlier ankle sprains or injuries. 
 ## Steps to Take After an Ankle Injury at Work
 
 1. **Get medical care.** Tell every doctor that you hurt your ankle at work and how it happened, so your records say so from the start. If your knee, hip, or back hurts from the same fall, say so.
-2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires you to notify your employer within 30 days of the accident. Do it in writing. Late notice can limit or even bar your benefits. Include the date, the place, what you were doing, and what you hurt.
+2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires written notice to your employer within 30 days of the accident, although exceptions exist. Do it in writing. Late notice can limit or even bar your benefits. Include the date, the place, what you were doing, and what you hurt.
 3. **Write down what was under your foot.** A step, a curb, debris, a wet spot, a pallet edge. Take photos if you can, and note who saw it.
 4. **File your claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). File it even if the insurance company accepts your injury and starts paying. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 5. **Watch for the insurance company’s answer.** After you file, the Commission will order the insurance company to respond to your claim within 30 days. It may accept or deny it. Whatever it decides, you can ask the Commission for a hearing.
@@ -95,7 +95,9 @@ A broken ankle can need care long after the bone heals. Screws or plates sometim
 
 ### What Is a Broken Ankle Worth?
 
-It depends on the factors in the next sections: your rating, your wage, your time out, and your future medical care. Our [case results](/results/) include a $150,000 settlement in a broken ankle case. Every case is different, and past results don’t predict the result in yours.
+It depends on the factors in the next sections: your rating, your wage, your time out, and your future medical care.
+
+> “On the first call, I won’t guess what your case is worth. I don’t know anything about it yet. Any lawyer who puts a number on it that early is making it up.” (Bryn Swartz)
 
 ## How Is a Permanent Ankle Injury Rated?
 

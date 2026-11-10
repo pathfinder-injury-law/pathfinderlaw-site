@@ -3,7 +3,7 @@ title: "How Much Compensation Can You Get for a Work Injury in Virginia?"
 metaTitle: "How Much Compensation for a Work Injury in Virginia?"
 description: "What Virginia workers’ comp pays for a work injury: wage checks, medical care, and set weeks of pay for permanent loss of a hand, arm, leg, or foot."
 date: 2022-11-22T23:16:14Z
-updated: 2026-11-04T14:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["settlement","benefits"]
 ---
 
@@ -61,7 +61,7 @@ These cases are rare, and they pay for life.
 Two workers with the same surgery can end up with very different results. The difference usually comes from:
 
 - **Whether the accident qualifies.** The accident must arise out of and in the course of your job. A worker can be paralyzed in an accident at work and still get nothing if the accident doesn’t meet Virginia’s legal test. Here’s [how to qualify for workers’ comp in Virginia](/how-to-qualify-for-workers-comp-in-virginia/).
-- **Average weekly wage.** Overtime, second jobs, and how long you worked there all affect it, and mistakes here shrink every check.
+- **Average weekly wage.** Overtime and how long you worked there affect it. A second job counts only in some cases, such as similar work or a second job with the same employer. Mistakes here shrink every check.
 - **Time out of work and light duty.** A light-duty offer you can’t actually do, or a job search that doesn’t meet the rules, can cut off wage checks.
 - **Surgery.** A doctor’s surgical recommendation is often the single biggest driver of a claim’s value, which is why insurance companies fight surgery requests.
 - **The impairment rating.** As shown above, a few percentage points can mean weeks of pay.
