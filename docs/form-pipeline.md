@@ -7,7 +7,7 @@ How the website's contact forms work, what a person must do before launch, and h
 1. A visitor fills in the form (the main Contact form, or the sidebar form on bio, practice-area and city pages; both are the same component, `src/components/ContactForm.astro`). The page checks the fields, loads Cloudflare's bot check (Turnstile) the first time the visitor uses the form (not on page load), and sends the entry to `/api/contact`.
 2. A small Cloudflare Worker (`src/worker/`) answers only `/api/*`. Every other page is still a plain static file.
 3. The Worker checks the entry again on the server (including the required acknowledgement checkbox; an entry without it is refused and never stored).
-4. **It saves the entry to the database first** (Cloudflare D1, database `pathfinder-forms`), before any screening or emailing.
+4. **It saves the entry to the database first** (Cloudflare D1, database `pathfinder-forms-us`, US jurisdiction), before any screening or emailing.
 5. It runs the bot checks: Turnstile, the hidden trap field, and a minimum fill time (3 seconds).
 6. It screens the message with the rules stored in Cloudflare's settings store (KV, key `rules`). Three outcomes: **lead**, **screened**, **unsure** (unsure is treated as a lead).
 7. It emails both inboxes (`bswartz@` and `mtruman@pathfinderlaw.com`, nobody else) through Gmail, sent as `admin@pathfinderlaw.com`, with Reply-To set to the visitor. Screened messages get "[Screened]" at the start of the subject.
@@ -96,7 +96,7 @@ Previews need none of these. The previews build uses Cloudflare's published alwa
 3. **Add the four secrets** on the live Worker `pathfinderlaw-site` (Settings, Variables and Secrets, type Secret): `GOOGLE_SA_KEY`, `TURNSTILE_SECRET`, `HEARTBEAT_URL`, `ALERT_URL`. Create the Google JSON key only on the day of launch testing (Google may block key creation by organization policy; check first).
 4. **Apply the database migration** (creates the table). One command, from a copy of this repo, logged in to Cloudflare as admin@:
    ```bash
-   npx wrangler d1 migrations apply pathfinder-forms --remote
+   npx wrangler d1 migrations apply pathfinder-forms-us --remote
    ```
 5. **Add the rules** to the settings store:
    ```bash
@@ -133,7 +133,7 @@ The tests use Node's built-in SQLite as a stand-in for D1 and mock Google, Turns
 To run the Worker locally with a local database (nothing remote, nothing real is sent), create a file `.dev.vars` (it is git-ignored) with fake values and these three override variables pointing at a local stand-in server: `GOOGLE_TOKEN_URL`, `GMAIL_SEND_URL`, `TURNSTILE_VERIFY_URL`. Then:
 ```bash
 npm run build
-npx wrangler d1 migrations apply pathfinder-forms --local
+npx wrangler d1 migrations apply pathfinder-forms-us --local
 npx wrangler kv key put --binding SETTINGS --local rules --path docs/starter-rules.json
 npx wrangler dev --local --test-scheduled
 ```

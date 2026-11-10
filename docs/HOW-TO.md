@@ -11,7 +11,7 @@ For the contact form in detail (how it screens spam, the daily emails, the alarm
 | The code and words | GitHub: **pathfinder-injury-law/pathfinderlaw-site** (branch `main` is the live site) |
 | Hosting | Cloudflare, account **Pathfinder Injury Law**. The site is the Worker **pathfinderlaw-site** (Workers & Pages). |
 | Previews | Cloudflare, separate account **Pathfinder Previews**, Worker **site-preview** (settings in `wrangler.preview.jsonc`) |
-| Form log | Cloudflare D1 database **pathfinder-forms** (production account) |
+| Form log | Cloudflare D1 database **pathfinder-forms-us** (production account, US jurisdiction) |
 | Form screening rules | Cloudflare KV, bound to the Worker as `SETTINGS`, key `rules` |
 | Bot check on the form | Cloudflare Turnstile (production account) |
 | Visitor counts | Cloudflare Web Analytics (production account) |
