@@ -88,11 +88,13 @@ const questions = [
       </div>
       <!-- Required acknowledgement. First sentence: ethics review (LEO 1842), approved by the owner.
            The call-and-text consent was added at the owner's direction on Oct 31, 2026 (TCPA and the
-           Virginia Telephone Privacy Protection Act); it covers contact about the inquiry only, not marketing. -->
+           Virginia Telephone Privacy Protection Act); it covers contact about the inquiry only, not marketing.
+           The Privacy Policy link was added Nov 10, 2026 for A2P 10DLC texting registration (the carrier
+           asks for one in the consent text). It opens in a new tab so a half-filled form is not lost. -->
       <div class="consent">
         <input id={`${id}-consent`} name="acknowledged" type="checkbox" required />
         <label for={`${id}-consent`}>
-          I understand sending this form does not make me a client or create an attorney-client relationship, and Pathfinder Injury Law has not agreed to represent me. Pathfinder may call or text me about my inquiry at the number above. Message and data rates may apply. Reply STOP to opt out.<span aria-hidden="true">*</span>
+          I understand sending this form does not make me a client or create an attorney-client relationship, and Pathfinder Injury Law has not agreed to represent me. Pathfinder may call or text me about my inquiry at the number above. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy<span class="visually-hidden"> (opens in a new tab)</span></a>.<span aria-hidden="true">*</span>
         </label>
       </div>
       <!-- Spam trap: people never see this field, bots fill it in. -->

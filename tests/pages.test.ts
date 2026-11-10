@@ -214,3 +214,9 @@ test('footer and privacy policy name the legal entity (A2P texting registration)
   assert.match(read('/privacy-policy/'), /do not share or sell Your mobile phone number, or Your text-message opt-in data and consent/);
   assert.match(read('/privacy-policy/'), /All of the above categories exclude text-messaging originator opt-in data and consent\. This information will not be shared with any third parties, except the phone provider that sends and receives Our text messages, or as required by law\./);
 });
+
+test('contact form consent text links to the privacy policy (A2P texting registration)', opts, () => {
+  for (const p of ['/', '/contact/']) {
+    assert.match(read(p), /Reply STOP to opt out\. See our <a href="\/privacy-policy\/" target="_blank" rel="noopener"[^>]*>Privacy Policy<span class="visually-hidden"[^>]*> \(opens in a new tab\)<\/span><\/a>\./);
+  }
+});
