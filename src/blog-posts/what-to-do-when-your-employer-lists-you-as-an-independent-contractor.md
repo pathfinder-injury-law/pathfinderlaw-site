@@ -3,7 +3,7 @@ title: "What to Do When Your Employer Lists You as an Independent Contractor?"
 metaTitle: "Employer Listed Me As An Independent Contractor - What to Do"
 description: "What should you do if your employer lists you as an independent contractor? Speak to the trusted team at Pathfinder Injury Law in Virginia."
 date: 2021-07-22T12:36:00Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["eligibility"]
 ---
 

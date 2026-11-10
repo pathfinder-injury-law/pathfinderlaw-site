@@ -3,7 +3,7 @@ title: "How Faulty Equipment Causes Workplace Injuries"
 metaTitle: "How Does Faulty Equipment Cause Work Injuries in Virginia"
 description: "Pathfinder Injury Law helps injured Virginia workers get compensation. Read more about workplace injuries caused by faulty equipment."
 date: 2021-04-04T23:10:24Z
-updated: 2022-10-21T17:17:07Z
+updated: 2026-11-10T21:00:00Z
 tags: ["causes"]
 ---
 

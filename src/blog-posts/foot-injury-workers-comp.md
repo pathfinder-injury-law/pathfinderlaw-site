@@ -37,7 +37,7 @@ You need to be able to say exactly what you were doing when you got hurt and how
 
 **You have the burden of proving your claim,** so start collecting evidence early.
 
-1. **Give your employer written notice within 30 days of the accident.** Say how it happened and what you hurt. Keep a copy. Late notice can limit or bar your benefits.
+1. **Give your employer written notice within 30 days of the accident, although exceptions exist.** Say how it happened and what you hurt. Keep a copy. Late notice can limit or bar your benefits.
 2. **File a claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 3. **Gather your evidence:**
    - **Pay records.** Your wage benefits are based on your average weekly wage over the year before the accident, so keep your pay stubs.

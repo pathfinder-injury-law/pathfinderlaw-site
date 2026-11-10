@@ -3,7 +3,7 @@ title: "Achilles Tendon Rupture at Work in Virginia: Workers’ Comp and Settlem
 metaTitle: "Achilles Tendon Workers’ Comp Settlement in Virginia"
 description: "Tore your Achilles tendon at work in Virginia? When workers’ comp covers a rupture, how insurers fight it, how it’s rated, and what drives a settlement."
 date: 2026-11-01T20:00:00Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","settlement"]
 ---
 

@@ -3,7 +3,7 @@ title: "Important Questions For Your Workers’ Comp Attorney"
 metaTitle: "Important Questions For Your Workers’ Comp Attorney | Need To Know"
 description: "Pathfinder Injury Law is a workers' compensation law firm in Richmond, Virginia. Check out these top questions for a workers' comp lawyer."
 date: 2021-06-27T11:22:00Z
-updated: 2022-10-24T11:03:28Z
+updated: 2026-11-10T21:00:00Z
 tags: ["benefits","hiring-a-lawyer"]
 ---
 

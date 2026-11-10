@@ -3,7 +3,7 @@ title: "Hip Injury at Work in Virginia: What Workers’ Comp Covers"
 metaTitle: "Hip Injury Workers’ Comp in Virginia: Surgery & Settlement"
 description: "Hurt your hip at work in Virginia? What workers’ comp pays for hip fractures, labral tears, and hip replacement, and what drives a hip injury settlement."
 date: 2022-09-30T18:13:33Z
-updated: 2026-11-01T18:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","claim-process"]
 ---
 

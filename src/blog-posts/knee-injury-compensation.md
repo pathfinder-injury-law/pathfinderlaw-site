@@ -3,7 +3,7 @@ title: "Hurt Your Knee at Work in Virginia? Here’s What Workers’ Comp Covers
 metaTitle: "Knee Injury at Work in Virginia: Workers’ Comp Payouts"
 description: "Hurt your knee at work in Virginia? What workers’ comp pays for a torn meniscus, a torn ACL, or a knee replacement, and what drives a knee claim’s value."
 date: 2022-10-04T19:15:50Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","settlement"]
 ---
 

@@ -57,7 +57,7 @@ Our guide to [light duty and refusing light duty in Virginia](/light-duty-worker
 
 ## Fired Before You Filed a Claim
 
-**Being fired doesn’t take away your right to file.** If you were hurt at work and fired before you reported it or filed, you still have the same deadlines: written notice to your employer within 30 days of the accident ([Va. Code § 65.2-600](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)) and a claim filed with the Commission within two years ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). Expect the insurance company to argue that the injury story came after the firing. Medical records from right after the accident, and anyone you told at the time, are your answer to that. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
+**Being fired doesn’t take away your right to file.** If you were hurt at work and fired before you reported it or filed, you still have the same deadlines: written notice to your employer within 30 days of the accident, although exceptions exist ([Va. Code § 65.2-600](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/)), and a claim filed with the Commission within two years ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). Expect the insurance company to argue that the injury story came after the firing. Medical records from right after the accident, and anyone you told at the time, are your answer to that. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 
 ## What Being Fired Doesn’t Change
 
