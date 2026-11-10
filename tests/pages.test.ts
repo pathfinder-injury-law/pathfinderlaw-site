@@ -212,4 +212,5 @@ test('footer and privacy policy name the legal entity (A2P texting registration)
   const line = /Pathfinder Injury Law is a trade name of Pathfinder Law Group, PLLC\./;
   for (const p of ['/', '/contact/', '/privacy-policy/']) assert.match(read(p), line);
   assert.match(read('/privacy-policy/'), /do not share or sell Your mobile phone number, or Your text-message opt-in data and consent/);
+  assert.match(read('/privacy-policy/'), /All of the above categories exclude text-messaging originator opt-in data and consent\. This information will not be shared with any third parties, except the phone provider that sends and receives Our text messages, or as required by law\./);
 });
