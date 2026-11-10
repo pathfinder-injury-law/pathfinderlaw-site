@@ -20,8 +20,8 @@ What to know about the panel:
 | Question | The rule |
 |---|---|
 | How many doctors? | At least three physicians ([§ 65.2-603(A)(1)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)) |
-| Can the panel list a clinic instead of doctors? | The Court of Appeals has said “a clinic . . . is not a physician,” and a panel that doesn’t really offer three suitable doctors can be defective (*Turner Gilbane JV v. Guzman*, 59 Va. App. 128 (2011)) |
-| Does it have to come quickly? | The panel must be offered within a reasonable time after the injury (*Peninsula Transportation District Commission v. Gibbs*, 228 Va. 614 (1985)) |
+| Can the panel list a clinic instead of doctors? | The Court of Appeals has said “a clinic . . . is not a physician,” and a panel that doesn’t really offer three suitable doctors can be defective (a Court of Appeals decision involving Turner Gilbane JV, 59 Va. App. 128 (2011)) |
+| Does it have to come quickly? | The panel must be offered within a reasonable time after the injury (a Supreme Court of Virginia decision involving the Peninsula Transportation District Commission, 228 Va. 614 (1985)) |
 | Can I ask about my health insurance? | Yes. On request, the employer must say whether each panel doctor takes the health insurance your employer provides ([§ 65.2-603(E)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)) |
 | Can a chiropractor be on it? | Yes, where the injury is one a chiropractor treats ([§ 65.2-603(F)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)) |
 
@@ -29,23 +29,23 @@ What to know about the panel:
 
 ## What If Your Employer Never Gives You a Panel?
 
-**If your employer doesn’t provide a panel, you can generally choose your own doctor, and that doctor becomes your treating physician.** The Court of Appeals has said the worker’s own doctor “becomes the treating physician if the employer fails or refuses to provide a panel” (*Davis v. Brown & Williamson Tobacco Co.*, 3 Va. App. 123, 126 (1986)).
+**If your employer doesn’t provide a panel, you can generally choose your own doctor, and that doctor becomes your treating physician.** The Court of Appeals has said the worker’s own doctor “becomes the treating physician if the employer fails or refuses to provide a panel” (a decision involving Brown & Williamson Tobacco Co., 3 Va. App. 123, 126 (1986)).
 
-Trying isn’t enough. In 2023 the Court of Appeals held that the statute “does not permit an employer to make only a good faith effort to provide a panel” (*Jalloh v. S.W. Rodgers*, Va. Ct. App. 2023). A defective panel, such as one with only two real doctors, can also free you to choose (*Turner Gilbane*).
+Trying isn’t enough. In 2023 the Court of Appeals held that the statute “does not permit an employer to make only a good faith effort to provide a panel” (a decision involving S.W. Rodgers, 77 Va. App. 195 (2023)). A defective panel, such as one with only two real doctors, can also free you to choose (the Turner Gilbane JV decision).
 
 If no one has handed you a list, write down that you asked for one, when, and whom you asked.
 
 ## What If Your Claim Is Denied?
 
-**When the insurance company denies your claim, you can generally choose your own doctor.** The Court of Appeals has held that “where an insurer denies liability and refuses to pay compensation, the claimant is entitled to choose his own physician” (*Trammel Crow Co. v. Redmond*, 12 Va. App. 610, 615 (1991)).
+**When the insurance company denies your claim, you can generally choose your own doctor.** The Court of Appeals has held that “where an insurer denies liability and refuses to pay compensation, the claimant is entitled to choose his own physician” (a decision involving Trammel Crow Co., 12 Va. App. 610, 615 (1991)).
 
-If the Commission later finds your claim compensable, the employer can be ordered to pay for that doctor’s reasonable, necessary care (*Goodyear Tire & Rubber Co. v. Pierce*, 9 Va. App. 120 (1989); [§ 65.2-603(C)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). Until then, the bills are in dispute, so keep every bill and record. Here’s [what to do if your workers’ comp claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).
+If the Commission later finds your claim compensable, the employer can be ordered to pay for that doctor’s reasonable, necessary care (a Court of Appeals decision involving Goodyear Tire & Rubber Co., 9 Va. App. 120 (1989); [§ 65.2-603(C)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). Until then, the bills are in dispute, so keep every bill and record. Here’s [what to do if your workers’ comp claim is denied](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).
 
 ## Can You Change Your Workers’ Comp Doctor?
 
-**Yes, but you need your employer’s agreement or an order from the Commission.** If the employer or insurance company agrees to the change, you don’t need any other reason (*Food Lion, LLC v. Wright*, Va. Ct. App. 2008). If it won’t agree, you can ask the Commission to order a new doctor or a new panel.
+**Yes, but you need your employer’s agreement or an order from the Commission.** If the employer or insurance company agrees to the change, you don’t need any other reason (a Court of Appeals decision involving Food Lion, LLC, 53 Va. App. 23 (2008)). If it won’t agree, you can ask the Commission to order a new doctor or a new panel.
 
-The Commission has ordered a change of treating doctor when, among other things (*Allen & Rocks, Inc. v. Briggs*, 28 Va. App. 662, 675 (1998)):
+The Commission has ordered a change of treating doctor when, among other things (a Court of Appeals decision involving Allen & Rocks, Inc., 28 Va. App. 662, 675 (1998)):
 
 1. The treatment is inadequate
 2. You need a specialist and aren’t getting that care
@@ -53,9 +53,9 @@ The Commission has ordered a change of treating doctor when, among other things 
 4. The doctor isn’t using conventional treatment
 5. The doctor has no plan of treatment for your long-term care
 
-In one case, a worker whose treatment wasn’t relieving her pain or improving her function won a new panel (*H.J. Holz & Son, Inc. v. Dumas-Thayer*, 37 Va. App. 645 (2002)).
+In one case, a worker whose treatment wasn’t relieving her pain or improving her function won a new panel (a Court of Appeals decision involving H.J. Holz & Son, Inc., 37 Va. App. 645 (2002)).
 
-The insurance company can’t force a change on a whim either. It has to show specific reasons, and wanting you to switch to a doctor closer to where you live isn’t enough (*Apple Construction Corp. v. Sexton*, 44 Va. App. 458 (2004)).
+The insurance company can’t force a change on a whim either. It has to show specific reasons, and wanting you to switch to a doctor closer to where you live isn’t enough (a Court of Appeals decision involving Apple Construction Corp., 44 Va. App. 458 (2004)).
 
 ### What If Your Doctor Retires or Stops Treating You?
 
@@ -63,15 +63,15 @@ You may be able to pick a new doctor. The answer depends on what happened: a ref
 
 ## Are Referrals to Specialists Covered?
 
-**Yes. Care your treating doctor refers you to is authorized.** The employer pays for the care the attending physician “deems necessary,” including referrals to specialists (*Volvo White Truck Corp. v. Hedge*, 1 Va. App. 195, 200 (1985)). A referral to an orthopedic surgeon, a pain management doctor, or physical therapy from your treating doctor doesn’t need a new panel. Ask your doctor to put each referral in writing.
+**Yes. Care your treating doctor refers you to is authorized.** The employer pays for the care the attending physician “deems necessary,” including referrals to specialists (a Court of Appeals decision involving Volvo White Truck Corp., 1 Va. App. 195, 200 (1985)). A referral to an orthopedic surgeon, a pain management doctor, or physical therapy from your treating doctor doesn’t need a new panel. Ask your doctor to put each referral in writing.
 
 ## Seeing a Doctor Who Isn’t Authorized
 
 **Treatment outside the panel generally isn’t paid, with three exceptions.** Under [Va. Code § 65.2-603(C)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/), the Commission can order the employer to pay for other care in an emergency, when the employer fails to provide care, or for “other good reasons.”
 
-For “other good reasons,” the Court of Appeals looks at whether you acted in good faith, whether the care the employer provided was inadequate, and whether the outside care was reasonable and necessary (*Shenandoah Products, Inc. v. Whitlock*, 15 Va. App. 207 (1992)). An emergency room visit right after the accident is the classic emergency.
+For “other good reasons,” the Court of Appeals looks at whether you acted in good faith, whether the care the employer provided was inadequate, and whether the outside care was reasonable and necessary (a decision involving Shenandoah Products, Inc., 15 Va. App. 207 (1992)). An emergency room visit right after the accident is the classic emergency.
 
-Seeing an unauthorized doctor is not automatically a refusal of treatment (*Southland Corp. v. Welch*, 33 Va. App. 633 (2000)). But refusing the treatment your authorized doctor recommends, without a good reason, can stop your wage checks until the refusal ends ([§ 65.2-603(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)).
+Seeing an unauthorized doctor is not automatically a refusal of treatment (a Court of Appeals decision involving Southland Corp., 33 Va. App. 633 (2000)). But refusing the treatment your authorized doctor recommends, without a good reason, can stop your wage checks until the refusal ends ([§ 65.2-603(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)).
 
 ## The Insurance Company’s Doctor Is Not Your Doctor
 

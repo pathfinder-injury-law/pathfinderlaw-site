@@ -3,7 +3,7 @@ title: "Hurt Your Knee at Work in Virginia? Here’s What Workers’ Comp Covers
 metaTitle: "Knee Injury at Work in Virginia: Workers’ Comp Payouts"
 description: "Hurt your knee at work in Virginia? What workers’ comp pays for a torn meniscus, a torn ACL, or a knee replacement, and what drives a knee claim’s value."
 date: 2022-10-04T19:15:50Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
@@ -61,7 +61,7 @@ These cases turn on the medical details: what the MRI shows, what your doctor wr
 ## Steps to Take After a Knee Injury at Work
 
 1. **Get medical care.** In an emergency, your health comes first. Tell every doctor that you hurt your knee at work and how it happened, so your records say so from the start.
-2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires you to notify your employer within 30 days of the accident. Do it in writing. Late notice can limit or even bar your benefits. Include your name and address, the date and time of the accident, where it happened, what you were doing, and what part of your body you hurt. If you also told someone in person, note who and when.
+2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires written notice to your employer within 30 days of the accident, although exceptions exist. Do it in writing. Late notice can limit or even bar your benefits. Include your name and address, the date and time of the accident, where it happened, what you were doing, and what part of your body you hurt. If you also told someone in person, note who and when.
 3. **File your claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). File it even if the insurance company accepts your injury and starts paying. A filed claim protects your two-year filing deadline (the statute of limitations) if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 4. **Watch for the insurance company’s answer.** After you file, the Commission will order your employer’s insurance company to respond to your claim within 30 days. It may accept the claim or deny it. Whatever it decides, you can ask the Commission for a hearing, including if it [delays your benefits](/what-if-a-workers-comp-insurer-delays-my-benefits/) or [denies your claim](/virginia-workers-comp-lawyer/what-happens-if-your-workers-comp-claim-is-denied/).
 
@@ -116,7 +116,7 @@ The insurance company’s main argument is almost always the same: the replaceme
 | Part of the claim | What changes |
 |---|---|
 | Medical | If the replacement is reasonable, necessary, and causally related to the accident, the insurance company is required to pay for it and the rehab after it ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). That does not mean it will. |
-| Wage checks | Most people resume daily activities within 3 to 6 weeks of a knee replacement ([AAOS](https://www.orthoinfo.org/en/treatment/total-knee-replacement/)), but heavy work takes longer. If you were back at work, wage checks can restart. A claim for them generally must be filed within 24 months from the last day for which you were paid compensation under an award, and checks generally can’t be awarded for more than 90 days before you file ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). |
+| Wage checks | Most people resume daily activities within 3 to 6 weeks of a knee replacement ([AAOS](https://www.orthoinfo.org/en/treatment/total-knee-replacement/)), but heavy work takes longer. If you were back at work, wage checks can restart. A claim for them generally must be filed within 24 months from the last day for which you were paid compensation under an award, ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)), and checks generally can’t be awarded for more than 90 days before you file ([Commission Rule 1, 16VAC30-50-20(B)(2)](https://law.lis.virginia.gov/admincode/title16/agency30/chapter50/section20/)). |
 | Permanent rating | The rating has to be to the leg, not just the knee. If the replacement improves how your leg works, the loss of use is measured as it was before the replacement, not after. Each 1% of the leg is worth 1.75 weeks of pay, because the leg is scheduled at 175 weeks ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). A claim for a new or higher rating generally must be filed within 36 months from the last day for which compensation was paid under an award ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). |
 | Settlement | A full and final settlement usually closes your medical benefits for good. Settle before a likely replacement, and workers’ comp will not pay for it. |
 

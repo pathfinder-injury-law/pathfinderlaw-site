@@ -3,7 +3,7 @@ title: "Herniated Disc at Work in Virginia: Workers’ Comp and Settlements"
 metaTitle: "Herniated Disc Workers’ Comp Settlement in Virginia"
 description: "Herniated a disc in your neck or back at work in Virginia? When workers’ comp covers it, the “degenerative” defense, ratings, and what drives a settlement."
 date: 2026-11-02T14:00:00Z
-updated: 2026-11-02T14:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
@@ -62,7 +62,7 @@ So the insurance company’s doctor can almost always find “degenerative chang
 ## Steps to Take After a Disc Injury at Work
 
 1. **Get medical care.** Tell every doctor the injury happened at work and exactly what you were doing, so your records say so from the start.
-2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires you to notify your employer within 30 days of the accident. Do it in writing. Late notice can limit or even bar your benefits.
+2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires written notice to your employer within 30 days of the accident, although exceptions exist. Do it in writing. Late notice can limit or even bar your benefits.
 3. **Write down the details.** The object, its weight, your position, the time, and who saw it. In a disc case, these facts often decide whether the claim is an accident or “wear and tear.”
 4. **File your claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). File it even if the insurance company accepts your injury and starts paying.
 5. **Watch for the insurance company’s answer.** After you file, the Commission will order the insurance company to respond within 30 days. Whatever it decides, you can ask the Commission for a hearing.
@@ -91,7 +91,7 @@ Whether you can ever return to a heavy job is one of the biggest questions in th
 
 ## Can You Get a Permanent Rating for a Herniated Disc?
 
-**Not for the disc itself.** Virginia’s schedule of body parts lists arms, legs, hands, feet, and others, but not the back or the neck ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). Virginia’s Court of Appeals has, however, “read the statute to allow compensation for any work-related injury which manifests itself in a scheduled member,” and upheld an award for loss of use of a leg caused by a back injury (*Washington Metropolitan Area Transit Authority v. Rogers*, 17 Va. App. 657, 659 (1994)).
+**Not for the disc itself.** Virginia’s schedule of body parts lists arms, legs, hands, feet, and others, but not the back or the neck ([Va. Code § 65.2-503](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-503/)). Virginia’s Court of Appeals has, however, “read the statute to allow compensation for any work-related injury which manifests itself in a scheduled member,” and upheld an award for loss of use of a leg caused by a back injury (a decision involving the Washington Metropolitan Area Transit Authority, 17 Va. App. 657, 659 (1994)).
 
 In practice:
 
@@ -123,7 +123,7 @@ No one can fairly value a disc claim without the medical records. What usually m
 
 A settlement is optional, and the Commission must approve it ([Va. Code § 65.2-701](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-701/)). Settle before a recommended surgery, and workers’ comp will usually not pay for it later. Here’s more on [how a Virginia workers’ comp settlement is calculated](/virginia-workers-comp-lawyer/how-to-calculate-a-virginia-workers-comp-settlement/).
 
-One of our [past results](/results/): Settlement obtained in a lumbar herniation case before the Virginia Workers’ Compensation Commission ($240,000). Every case is different, and past results don’t predict the result in yours.
+> “On the first call, I won’t guess what your case is worth. I don’t know anything about it yet. Any lawyer who puts a number on it that early is making it up.” (Bryn Swartz)
 
 ## Herniated Disc Questions
 

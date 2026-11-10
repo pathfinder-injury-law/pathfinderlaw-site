@@ -3,7 +3,7 @@ title: "What to Do When Your Employer Lists You as an Independent Contractor?"
 metaTitle: "Employer Listed Me As An Independent Contractor - What to Do"
 description: "What should you do if your employer lists you as an independent contractor? Speak to the trusted team at Pathfinder Injury Law in Virginia."
 date: 2021-07-22T12:36:00Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["eligibility"]
 ---
 
@@ -47,6 +47,6 @@ It can also put you in harm’s way if you were to get [injured on the job](/vir
 
 ## Get Ahold of a Lawyer After Being Listed as an Independent Contractor
 
-Now you have an answer to your question about what to do when your employer lists you as an independent contractor. You don’t always have to go to court or get a lawyer when your job status has been filed incorrectly, but it’s certainly an option. It might be important to contact a lawyer, especially if your employer isn’t willing to fix the mistake or change it.
+Now you have an answer to your question about what to do when your employer lists you as an independent contractor. You don’t always have to go to a hearing at the Commission or get a lawyer when your job status has been filed incorrectly, but it’s certainly an option. It might be important to contact a lawyer, especially if your employer isn’t willing to fix the mistake or change it.
 
 Talk with a lawyer at Pathfinder Injury Law. Call [804-505-0633](tel:+18045050633) or fill out the contact form below.

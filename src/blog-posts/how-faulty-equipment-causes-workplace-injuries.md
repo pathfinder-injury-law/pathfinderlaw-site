@@ -3,7 +3,7 @@ title: "How Faulty Equipment Causes Workplace Injuries"
 metaTitle: "How Does Faulty Equipment Cause Work Injuries in Virginia"
 description: "Pathfinder Injury Law helps injured Virginia workers get compensation. Read more about workplace injuries caused by faulty equipment."
 date: 2021-04-04T23:10:24Z
-updated: 2022-10-21T17:17:07Z
+updated: 2026-11-10T21:00:00Z
 tags: ["causes"]
 ---
 
@@ -27,10 +27,10 @@ But if they failed to do their part of the job, you may have been seriously inju
 
 Faulty equipment can malfunction at any time and leave you seriously injured on the job, but what can you do about it? If you’re an injured worker, Virginia law may have you covered with Workers’ Comp insurance. That’s great, but it’s only step one. The next step is navigating the [claim process](/workers-comp-process-in-virginia/) and dealing with greedy insurers and reluctant employers.
 
-If you’re having trouble with the insurer or your employer, reach out to a Workers’ Comp lawyer. They can identify the cause of your accident, gather evidence in your favor, and represent you in court hearings and negotiations.
+If you’re having trouble with the insurer or your employer, reach out to a Workers’ Comp lawyer. They can identify the cause of your accident, gather evidence in your favor, and represent you at hearings before the Commission and in negotiations.
 
 ## Need Help? Speak with a Workers’ Comp Lawyer
 
-If you’re struggling to get compensated when faulty equipment has left you seriously injured, you may need legal help to recover from your injuries. Pathfinder Injury Law is here to guide you to the legal solution you need when you’re injured at work.
+If you’re struggling to get compensated when faulty equipment has left you seriously injured, you may need legal help to recover from your injuries. Pathfinder Injury Law can explain how a Virginia workers’ comp claim works when you’re injured at work.
 
 Discuss your heavy equipment injury case during a free consultation with a work comp lawyer. To schedule your meeting, call [804-505-0633](tel:+18045050633) or fill out the online contact form at the bottom of this page.

@@ -3,7 +3,7 @@ title: "Achilles Tendon Rupture at Work in Virginia: Workers’ Comp and Settlem
 metaTitle: "Achilles Tendon Workers’ Comp Settlement in Virginia"
 description: "Tore your Achilles tendon at work in Virginia? When workers’ comp covers a rupture, how insurers fight it, how it’s rated, and what drives a settlement."
 date: 2026-11-01T20:00:00Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","settlement"]
 ---
 
@@ -50,7 +50,7 @@ A weak tendon does not automatically end your claim. If a work accident caused t
 ## Steps to Take After an Achilles Rupture at Work
 
 1. **Get medical care.** Tell every doctor that the injury happened at work and exactly what you were doing, so your records say so from the start.
-2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires you to notify your employer within 30 days of the accident. Do it in writing. Late notice can limit or even bar your benefits.
+2. **Give your employer written notice within 30 days.** [Virginia law](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) requires written notice to your employer within 30 days of the accident, although exceptions exist. Do it in writing. Late notice can limit or even bar your benefits.
 3. **Write down the details.** The step, the load, the surface, the height, and who saw it. In an Achilles case, these facts often decide whether the claim is covered.
 4. **File your claim with the Virginia Workers’ Compensation Commission.** Notice to your employer is not the same as a claim. The claim must generally be filed with the Commission within two years of the accident, although exceptions apply ([Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/)). File it even if the insurance company accepts your injury and starts paying. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).
 5. **Watch for the insurance company’s answer.** After you file, the Commission will order the insurance company to respond within 30 days. Whatever it decides, you can ask the Commission for a hearing.

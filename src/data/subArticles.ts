@@ -153,7 +153,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'Qualifying for Workers’ Comp',
         blocks: [
-          'When qualifying for these programs, getting Workers’ Comp benefits may be simpler. If you’re an employee who qualifies for Workers’ Comp benefits and you’re [hurt on the job](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), you should be eligible for Workers’ Compensation. But disability benefits may not be so simple.',
+          'When qualifying for these programs, getting Workers’ Comp benefits may be simpler. If you’re an employee who qualifies for Workers’ Comp benefits and you’re [hurt on the job](https://workcomp.virginia.gov/documents/injured-workers-benefits-guide), you may be eligible for Workers’ Compensation. But disability benefits may not be so simple.',
         ],
       },
     ],
@@ -289,14 +289,13 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'Bring Someone with You',
         blocks: [
-          'You cannot bring friends or family to your IME appointment, but you have the right to have your own doctor present at the exam, at your own expense. These exams are supposed to give insurers a clear medical opinion about your health, and it can impact your insurance. It’s easy to get frustrated or confused without a little help.',
-          'That’s where your companion can help. They can help you follow the questions, avoid saying the wrong thing, and keep up with anything you need to know about your injuries.',
+          'Virginia law gives you the right to have a qualified doctor of your own at the exam, paid by you ([Va. Code § 65.2-607](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-607/)). The law doesn’t say whether a friend or family member can come into the exam room, so ask the office ahead of time. Someone can still drive you, wait for you, and help you write down what happened right after. If the office says no, don’t argue at the appointment. Call your lawyer instead, because refusing or getting in the way of the exam can put your checks on hold.',
         ],
       },
       {
         h2: 'Be Honest',
         blocks: [
-          'You want the full settlement you need for your work injuries. Because of this, it may be tempting to stretch the truth on how seriously you were injured. We’re here to tell you that it won’t help you to downplay your injuries; being honest about your accident is crucial to your rightful Virginia Workers’ Comp benefits.',
+          'You want the full settlement you need for your work injuries. Because of this, it may be tempting to stretch the truth on how seriously you were injured. We’re here to tell you that it won’t help you to exaggerate your injuries, and it won’t help to downplay them either; being honest about your accident is crucial to your rightful Virginia Workers’ Comp benefits.',
           'For example, let’s say you suffered a concussion in your work-related accident. You should point out the confusion, memory loss, and fatigue that make your job difficult. But adding on other symptoms you don’t have may do nothing but hurt your claim.',
         ],
       },
@@ -369,7 +368,7 @@ export const subArticles: SubArticle[] = [
       {
         h2: 'When Your Doctor and the IME Doctor Disagree',
         blocks: [
-          'When the doctors disagree, the Commission weighs the medical evidence. In Virginia, the opinion of your treating physician is generally given great weight, because that doctor has seen you over time (Vital Link, Inc. v. Hope, 69 Va. App. 43, 64 (2018)). That is not automatic. The Commission can accept the IME doctor’s opinion if it finds it more persuasive, and a short or unexplained note from your own doctor can lose to a detailed IME report.',
+          'When the doctors disagree, the Commission weighs the medical evidence. In Virginia, the opinion of your treating physician is generally given great weight, because that doctor has seen you over time (a Court of Appeals decision involving Vital Link, Inc., 69 Va. App. 43, 64 (2018)). That is not automatic. The Commission can accept the IME doctor’s opinion if it finds it more persuasive, and a short or unexplained note from your own doctor can lose to a detailed IME report.',
           'That is why what your treating doctor writes after an IME often matters more than the IME itself. A response that deals with the IME doctor’s reasons point by point carries more weight than a one-line disagreement, and doctors rarely write one unless someone asks the right questions.',
         ],
       },
@@ -594,7 +593,7 @@ export const subArticles: SubArticle[] = [
         blocks: [
           'When you’re hurt on the job in Virginia, you may be due benefits that cover your losses for a work accident. You may expect coverage for your medical bills, from specialist care to travel costs. But what about your wages?',
           'Disability benefits replace a portion of the wages you would have received. Although you won’t receive your full paycheck, these funds can help keep you and your family supported and fed while you heal from your injuries.',
-          'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8.',
+          'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8, and if you are out of work more than three weeks, the first seven days are paid too ([Va. Code § 65.2-509](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/)).',
         ],
       },
       {
@@ -680,7 +679,7 @@ export const subArticles: SubArticle[] = [
         h2: 'When Is the Right Time to Settle?',
         blocks: [
           'Usually not until you know what the injury will cost you. Before you reach [maximum medical improvement](/virginia-workers-comp-lawyer/what-is-maximum-medical-improvement-in-virginia-workers-comp-claims/), there is often no permanent rating and no clear picture of future care, and both are pieces of the number. An offer that comes early can look large next to a missed paycheck and still leave out years of medical care.',
-          'Once the Commission approves a full and final settlement, you cannot come back for more, even if the injury gets worse. Here’s more on [whether to accept a lump-sum settlement](/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/) and on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/).',
+          'Once the Commission approves a full and final settlement and the 30-day review period passes, you cannot come back for more, even if the injury gets worse. Here’s more on [whether to accept a lump-sum settlement](/should-i-accept-a-lump-sum-settlement-for-my-workers-comp-claim/) and on [workers’ comp settlements in Virginia](/workers-comp-settlement-in-virginia/).',
         ],
       },
     ],
@@ -723,7 +722,7 @@ export const subArticles: SubArticle[] = [
     closing: {
       h2: 'Know Your Claim’s Value with Help From a Virginia Workers’ Comp Lawyer',
       blocks: [
-        'Injured in a Virginia work accident and unsure how to get compensated for your related losses? Reach out to a dedicated lawyer at [Pathfinder Injury Law](/). We can help you understand the potential value of your benefits. To start with a free consultation, call {phone} or fill out the online contact form below.',
+        'Injured in a Virginia work accident and unsure how to get compensated for your related losses? Reach out to a dedicated lawyer at [Pathfinder Injury Law](/). We can explain which benefits Virginia workers’ comp pays and how they work. To start with a free consultation, call {phone} or fill out the online contact form below.',
       ],
     },
   },
@@ -757,7 +756,7 @@ export const subArticles: SubArticle[] = [
       },
     ],
     closing: {
-      h2: 'Get Your Benefits Soon with a Virginia Work Comp Lawyer',
+      h2: 'Waiting on Your Virginia Workers’ Comp Benefits?',
       blocks: [
         'After you’re injured in a work accident, there’s no single answer for how long your Virginia Workers’ Comp settlement will take. You may already be worried about how you’ll cover your family expenses in the meantime and pay off those bills.',
         'At [Pathfinder Injury Law](/), we’re ready to help with your Workers’ Comp claim as soon as possible. That’s why we offer free consultations with a Workers’ Comp lawyer in Virginia. If you’re struggling to settle your Workers’ Comp claim quickly, call {phone} or fill out the {contact} below.',
@@ -806,7 +805,7 @@ export const subArticles: SubArticle[] = [
               'Your employer or its insurance company must report the injury to the Commission within 10 days after learning of it ([Va. Code § 65.2-900](https://law.lis.virginia.gov/vacode/title65.2/chapter9/section65.2-900/)).',
               'File a claim with the Commission, even if the insurance company accepts your injury and starts paying. ' + FILING + ' A filed claim protects that deadline if anything goes wrong later. Here’s [how to file a workers’ comp claim](/how-to-file-a-workers-comp-claim/).',
               'After you file, the Commission will order the insurance company to respond to your claim within 30 days. It may accept the claim or deny it.',
-              'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8.',
+              'If the insurance company accepts your claim for lost wages, it sends you an Award Agreement. Once that is signed and the Commission enters an award, you are paid for the time you are unable to work because of the injury, starting on day 8, and if you are out of work more than three weeks, the first seven days are paid too ([Va. Code § 65.2-509](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-509/)).',
             ],
           },
           'Be careful what you say to the [insurance adjuster](/how-to-avoid-work-comp-adjusters-tricks/), and do not assume they are looking out for you. Here’s [what to know before giving a recorded statement](/insurance-recorded-statement/).',

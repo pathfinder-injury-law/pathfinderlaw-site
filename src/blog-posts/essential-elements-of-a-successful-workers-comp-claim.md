@@ -3,7 +3,7 @@ title: "Essential Elements of a Successful Workers’ Comp Claim"
 metaTitle: "The Most Important Elements of a Successful Work Comp Claim"
 description: "The elements of a successful Virginia workers' comp claim: an accident at work, a covered employer, timely notice and filing, and the evidence to prove it."
 date: 2021-01-04T20:56:38Z
-updated: 2026-11-04T14:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["hearing","claim-process"]
 ---
 
@@ -33,7 +33,7 @@ Sometimes, it takes more than the average eyewitness to make your Workers’ Com
 
 For example, you may have suffered a spinal cord injury during your work accident. The insurance company may doubt that your injuries are as serious as they are, especially if you’re more active than they believe you should be.
 
-Your doctor can step in as an expert witness. They can discuss the evidence of your injuries and prove you’re unable to work. Your doctor’s testimony may be a key part of your formal hearing, which can help you receive the benefits you’re due.
+Your doctor’s opinion is often the most important evidence in your case. Doctors rarely come to the hearing. Their opinions usually come in through medical records, written reports, and answers to written questions, and sometimes through a deposition taken before the hearing.
 
 ## A Strong Defense
 

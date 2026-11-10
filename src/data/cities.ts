@@ -808,7 +808,7 @@ export const cities: City[] = [
           },
           'Big projects often have several layers of contractors, and it isn’t always clear which company’s insurance should pay.',
           // VERIFY 1: new legal sentence (statutory employer, Va. Code § 65.2-302).
-          `If you work for a subcontractor, the company above it on the job can be responsible for your workers’ comp benefits in some cases ([Va. Code § 65.2-302](${CODE}title65.2/chapter3/section65.2-302/)). More on [construction accidents](/virginia-construction-accident-lawyer/).`,
+          `If a subcontractor employs you, the company above it on the job may also be responsible for your workers’ comp benefits as your “statutory employer,” which matters most when your direct employer has no insurance ([Va. Code § 65.2-302](${CODE}title65.2/chapter3/section65.2-302/)). More on [construction accidents](/virginia-construction-accident-lawyer/).`,
         ],
       },
       {
@@ -2010,7 +2010,7 @@ export const cities: City[] = [
         body: [
           'Construction jobs often stack several companies on one site: a general contractor, subcontractors, and sometimes subcontractors under them. That can make it hard to tell who is supposed to cover you.',
           // VERIFY V1
-          `If the subcontractor you work for doesn’t carry workers’ comp insurance, the contractor above it on the job may have to pay your benefits ([Va. Code § 65.2-302](${CODE}title65.2/chapter3/section65.2-302/)). Write down every company name you see on the site: on trucks, signs, hard hats, and paperwork.`,
+          `If a subcontractor employs you, the company above it on the job may also be responsible for your workers’ comp benefits as your “statutory employer,” which matters most when your direct employer has no insurance ([Va. Code § 65.2-302](${CODE}title65.2/chapter3/section65.2-302/)). Write down every company name you see on the site: on trucks, signs, hard hats, and paperwork.`,
           'If you were paid as a 1099 worker, read [what to do when your employer lists you as an independent contractor](/what-to-do-when-your-employer-lists-you-as-an-independent-contractor/).',
         ],
       },

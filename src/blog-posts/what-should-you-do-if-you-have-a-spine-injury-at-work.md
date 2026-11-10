@@ -3,7 +3,7 @@ title: "What to Do After a Spine Injury at Work in Virginia"
 metaTitle: "Spine Injury at Work in Virginia: What to Do Next"
 description: "Hurt your back or neck at work in Virginia? The steps to take, the deadlines, how spine claims get denied, and what drives their value."
 date: 2022-11-29T06:00:10Z
-updated: 2026-10-31T20:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["body-parts","claim-process"]
 ---
 
@@ -23,7 +23,7 @@ Seeking medical care should be your first priority. It is extremely important to
 
 ### Report Your Injury
 
-The Virginia Workers’ Compensation Act requires you to [report your injury to your employer](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) within thirty days of the accident, ideally in writing. Even though some injuries (like spinal cord injuries or back injuries) are not apparent immediately after an accident, the law only gives you thirty days from the date your accident happens to report your accident in writing. Your employer may have a specific form or process they want you to use to make the report. You should check with your employer’s human resources department to see if they have any such requirements. If you received a work status note at your doctor visit, also give this to your employer. Your employer is entitled to knowing about your work status and your availability to work as a result of your injury or restrictions.
+Virginia law requires [written notice to your employer](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-600/) within 30 days of the accident, although exceptions exist. Telling your supervisor out loud can also count, but it is much harder to prove because the employer can deny it happened, so put it in writing and keep a copy. Your employer may have a specific form or process they want you to use to make the report. You should check with your employer’s human resources department to see if they have any such requirements. If you received a work status note at your doctor visit, also give this to your employer. Your employer is entitled to knowing about your work status and your availability to work as a result of your injury or restrictions.
 
 ### File a Workers’ Comp Claim
 
@@ -49,15 +49,15 @@ When the Commission learns of your injury, often from your employer’s report, 
 
 After you file a claim, the Virginia Workers’ Compensation Commission will issue an order to the insurance company requiring them to respond to your claim within 30 days either approving or denying it. An initial denial of an accident victim’s workers’ compensation claim is fairly common, so there is no cause for despair just yet. The denial simply means that your employer or their insurance company will not voluntarily pay you benefits. Yet the process is far from over.
 
-But let’s be real here: If you get to this point and the insurance company says they’re denying your claim, you need to talk with a lawyer. The insurance company is required to have an attorney when your case goes to hearing. If you don’t, you’ll be going up in court against the insurance company’s lawyer. So, do yourself a favor and talk to an experienced Virginia workers’ compensation attorney if the insurance company denies your claim.
+A denial isn’t the final word. You can ask the Commission for a hearing, and at that hearing, the Commission says the employer and insurer will always be represented by a lawyer.
 
 ### Request and Attend an Evidentiary Hearing
 
-If you receive a denial of your claim from the insurance company, you will have the opportunity to “appeal” this decision by requesting the hearing be docketed with the Virginia Workers’ Compensation Commission. Your claim must be on file with the Commission in writing before you can ask for a hearing. You or your lawyer can then ask the Commission to send the claim to a hearing, including through WebFile.
+If you receive a denial of your claim from the insurance company, you can ask for a hearing by requesting that your claim be docketed with the Virginia Workers’ Compensation Commission. Your claim must be on file with the Commission in writing before you can ask for a hearing. You or your lawyer can then ask the Commission to send the claim to a hearing, including through WebFile.
 
-At the hearing, you must demonstrate to a preponderance of the evidence that your injuries arose out of and in the course of your employment. A work accident lawyer can guide you through the process of preparing for the hearing, assembling medical evidence, interviewing witnesses, conducting discovery, and other important pretrial steps. They can also then represent you and advocate on your behalf at hearing. You may present evidence at hearing, including testimony from witnesses and opinions from doctors and medical experts. The Commission doesn’t follow every courtroom rule of evidence, but it has its own rules and deadlines, such as filing your medical records and exhibits before the hearing. Missing them can keep important evidence out of your case.
+At the hearing, you must demonstrate to a preponderance of the evidence that your injuries arose out of and in the course of your employment. A work accident lawyer can guide you through the process of preparing for the hearing, assembling medical evidence, interviewing witnesses, conducting discovery, and other important steps before the hearing. They can also then represent you and advocate on your behalf at hearing. You may present evidence at hearing, including testimony from witnesses and opinions from doctors and other medical providers. The Commission doesn’t follow every formal rule of evidence, but it has its own rules and deadlines, such as filing your medical records and exhibits before the hearing. Missing them can keep important evidence out of your case.
 
-The evidentiary hearing can be the most important part of a work-related injury case. You might feel discouraged because of the amount of time that it often takes to get to this point. It might not seem like it would be worth the effort to attend the hearing. However, this is your chance to make your case in front of the decision-makers, called “deputy commissioners.” You and your lawyer can potentially turn a denial into an approval, but only if you show up and comply with your lawyer’s instructions and requests as the case proceeds toward trial.
+The evidentiary hearing can be the most important part of a work-related injury case. You might feel discouraged because of the amount of time that it often takes to get to this point. It might not seem like it would be worth the effort to attend the hearing. However, this is your chance to make your case in front of the decision-makers, called “deputy commissioners.” You and your lawyer can potentially turn a denial into an approval, but only if you show up and comply with your lawyer’s instructions and requests as the case proceeds toward the hearing.
 
 ### Request Review / File an Appeal
 
@@ -147,7 +147,7 @@ Permanent total disability compensation, on the other hand, is much less common 
 
 ### What Were Your Wages Before Your Injury?
 
-Workers’ comp benefits can compensate for your loss of earning capacity. The amount of money you earned at your job before your injury will play a major role in determining how much you might be able to receive in workers’ comp benefits or a settlement. Generally, the law calculates your workers’ compensation rate by taking the average of your earnings in the 52 weeks prior to your accident and paying you two thirds of this figure on a weekly basis while a doctor has you totally out of work. Overtime, second jobs, and how long you worked there can all change the number, and a mistake in it shrinks every check.
+Workers’ comp benefits can compensate for your loss of earning capacity. The amount of money you earned at your job before your injury will play a major role in determining how much you might be able to receive in workers’ comp benefits or a settlement. Generally, the law calculates your workers’ compensation rate by taking the average of your earnings in the 52 weeks prior to your accident and paying you two thirds of this figure on a weekly basis while a doctor has you totally out of work. Overtime and how long you worked there can change the number, and wages from a second job count only if the work is similar or the second job is with the same employer. A mistake in it shrinks every check.
 
 ### Did Your Injuries Cause Permanent Damage?
 
@@ -201,7 +201,7 @@ Workers’ comp is supposed to make the process of claiming benefits easier, but
 
 ### Dealing With Insurance Companies
 
-Insurance companies know a wide variety of tricks that allow them to deny your claim or minimize the amount of money they must pay you. Insurance adjusters will try to get you to admit facts that would harm your case without telling you about your right to have a lawyer help you out with your case. Workers’ comp lawyers know the insurance companies’ tricks and know how best to respond to them. If the insurance company denies your claim, your lawyer will know how to present your case to the Virginia Workers’ Compensation Commission at an evidentiary hearing or posture your case for a pre- or post-hearing settlement to optimize the outcome for you.
+Insurance companies know a wide variety of tricks that allow them to deny your claim or minimize the amount of money they must pay you. Insurance adjusters will try to get you to admit facts that would harm your case without telling you about your right to have a lawyer help you out with your case. Workers’ comp lawyers know the insurance companies’ tricks and know how best to respond to them. If the insurance company denies your claim, your lawyer will know how to present your case to the Virginia Workers’ Compensation Commission at an evidentiary hearing or prepare your case for a possible settlement before or after the hearing.
 
 ## Talk to Pathfinder Injury Law About Your Spine Injury
 

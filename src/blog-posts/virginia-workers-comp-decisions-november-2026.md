@@ -3,7 +3,7 @@ title: "Virginia Workers’ Comp Decisions This Month: November 2026"
 metaTitle: "Virginia Workers’ Comp Decisions: November 2026"
 description: "Five Virginia workers’ comp decisions from November 2026: old medical bills after a settlement, reporting new earnings, unexplained falls, and more."
 date: 2026-11-06T16:00:00Z
-updated: 2026-11-06T16:00:00Z
+updated: 2026-11-10T21:00:00Z
 tags: ["claim-process","settlement"]
 ---
 
@@ -68,7 +68,7 @@ The Full Commission affirmed the denial. Here’s more on [how pre-existing cond
 
 ### Are Full Commission Decisions Binding?
 
-The Full Commission hears appeals from deputy commissioners, and deputy commissioners follow its decisions. Once the Full Commission finishes deciding a case, its decision can be appealed to the Court of Appeals of Virginia, and the Supreme Court of Virginia is over both. Each decision here turned on its own facts.
+The Full Commission hears appeals from deputy commissioners, and deputy commissioners are expected to follow its decisions. Once the Full Commission finishes deciding a case, its decision can be appealed to the Court of Appeals of Virginia, and the Supreme Court of Virginia is over both. Each decision here turned on its own facts.
 
 ### Can Any of These Decisions Still Change?
 
