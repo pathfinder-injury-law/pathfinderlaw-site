@@ -54,13 +54,14 @@ One more setting that is **not** secret: `PUBLIC_TURNSTILE_SITE_KEY` (the bot ch
 - On a normal day you get **no** emails about the form. The morning self-test (about 7:15 a.m.) goes only to the admin@ mailbox, and the outside check-in service (Healthchecks.io) quietly records that it worked.
 - You get an email only when something needs attention, and it says in plain words what to do:
   - From the website (about 7:30 a.m.): a message that never reached the inbox (it lists who to call back), the spam filter being down, or three days with no messages at all.
+  - From the website, any time of day: a message marked "(re-sent)" in the subject. Its email failed the first time and the site sent it again on its own, up to 45 minutes later. Treat it like any new message; the note at the top says when the person sent it.
   - From Healthchecks.io: the morning self-test did not run or could not send email. Send a test from the website on your phone, and get help if it does not arrive.
 
 **Each week:**
 - **Dependabot pull requests.** Every Monday GitHub checks for newer versions of the building blocks the site uses and opens a pull request for any it finds (small updates come grouped together). If its checks are green, approve and merge it as usual. If the checks are red, leave it and ask for help; nothing is broken on the live site, since nothing changes until a merge.
 
 **Twice a year (daylight saving time):**
-- The morning jobs run on UTC (world time), so their hour changes when the clocks do. In **March 2027** (daylight time starts March 14, 2027), edit `wrangler.jsonc` and change the two times from `"15 12 * * *"` and `"30 12 * * *"` to `"15 11 * * *"` and `"30 11 * * *"`. Change only the hour (12 to 11); keep the minutes 15 and 30. In **November**, when standard time returns, change 11 back to 12. Merge it like any other change.
+- The morning jobs run on UTC (world time), so their hour changes when the clocks do. In **March 2027** (daylight time starts March 14, 2027), edit `wrangler.jsonc` and change the two times from `"15 12 * * *"` and `"30 12 * * *"` to `"15 11 * * *"` and `"30 11 * * *"`. Change only the hour (12 to 11); keep the minutes 15 and 30. Leave the third entry, `"*/15 * * * *"` (the every-15-minutes re-send), as it is. In **November**, when standard time returns, change 11 back to 12. Merge it like any other change.
 
 **Each year:**
 - **Domain renewal** at Namecheap (check that auto-renew is on and the card is current).

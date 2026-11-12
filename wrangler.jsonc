@@ -44,8 +44,10 @@
   // only the hours here, 12 to 11 ("15 11 * * *" and "30 11 * * *"). That is
   // the only change needed: the code picks the job by the minute (15 = morning
   // self-test, 30 = digest and purge), so keep the minutes 15 and 30.
+  // "*/15 * * * *" is the re-send of undelivered leads, every 15 minutes all
+  // day. It has no hour, so it never changes for daylight time.
   "triggers": {
-    "crons": ["15 12 * * *", "30 12 * * *"]
+    "crons": ["15 12 * * *", "30 12 * * *", "*/15 * * * *"]
   }
   // Secrets, added in the dashboard and never written here:
   //   GOOGLE_SA_KEY, TURNSTILE_SECRET, HEARTBEAT_URL, ALERT_URL

@@ -90,7 +90,8 @@ export async function buildDailyCheck(env: Env, deps: Deps): Promise<{ subject: 
   ).results;
   const real = yesterday.filter((r) => !isTest(r));
   // Only yesterday's rows, so the same problem is reported once, not every day for a week.
-  const undelivered = real.filter((r) => r.delivery_status === 'pending' || r.delivery_status === 'failed');
+  // 'sending' = the Worker stopped (or the log could not be updated) after calling Gmail: maybe not delivered.
+  const undelivered = real.filter((r) => r.delivery_status === 'pending' || r.delivery_status === 'failed' || r.delivery_status === 'sending');
   const spamCheckDown = real.filter((r) => r.turnstile === 'error' || r.turnstile === 'not_configured').length;
   const rulesErrors = real.filter((r) => r.reason === 'rules_error').length;
 

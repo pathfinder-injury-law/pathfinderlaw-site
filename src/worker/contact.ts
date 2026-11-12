@@ -55,7 +55,8 @@ const SUBJECT_MARK: Record<string, string> = {
   not_configured: ' - TURNSTILE NOT CONFIGURED',
 };
 
-type EmailFacts = { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string };
+// resentFrom: set only on an automatic re-send (resend.ts), the time the person first sent it.
+type EmailFacts = { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string; resentFrom?: string };
 
 // Why a message needs a second look, in plain words: a filing-deadline warning, screening, or a
 // problem on our side. Empty for a clean, recent lead.
@@ -71,7 +72,11 @@ export function leadNotes(o: EmailFacts, sub?: Submission): string[] {
   };
   const ts = o.turnstile ?? 'skipped';
   const deadline = sub?.intake ? deadlineNote(sub.intake) : null;
+  const resent = o.resentFrom
+    ? [`This message did not reach you when it was sent (${new Date(o.resentFrom).toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' })}). This is the automatic re-send.`]
+    : [];
   return [
+    ...resent,
     ...(deadline ? [deadline] : []),
     ...(o.outcome === 'lead' || o.reason === 'self_test' ? [] : [why(o.reason)]),
     ...(ts === 'error' ? ['The spam check was down when this was sent, so it was let through.'] : []),
@@ -139,7 +144,7 @@ export const loggedMessage = (sub: Submission) =>
   sub.intake ? [...intakeLines(sub.intake), '', 'What happened and when:', sub.message].join('\n') : sub.message;
 
 // The end of the subject: the intake form's sorting tag, or which form a plain message came from.
-const subjectTopic = (sub: Submission) =>
+export const subjectTopic = (sub: Submission) =>
   sub.intake ? ` - ${ROUTE_SUBJECT[route(sub.intake)]}` : ` (${sub.form === 'sidebar' ? 'sidebar form' : 'main form'})`;
 
 // The one path every submission takes: log, bot checks, screen, email, update log.
@@ -243,6 +248,17 @@ export async function processSubmission(
   let detail: string | null = null;
   if (deliver) {
     const prefix = opts.test ? `[Form Test ${opts.test.tag}] ` : outcome === 'screened' ? '[Screened] ' : '';
+    // Mark the row 'sending' (with the screening result again, in case the update above failed)
+    // right before Gmail is called. If the Worker stops or the final update fails after this,
+    // the row stays 'sending': the automatic re-send leaves it alone (Gmail may already have
+    // accepted it) and the daily check reports it instead. A failed mark does not stop the send.
+    if (logged) {
+      await db!
+        .prepare("UPDATE submissions SET delivery_status = 'sending', outcome = ?, reason = ?, turnstile = ? WHERE id = ?")
+        .bind(outcome, reason, turnstile, id)
+        .run()
+        .catch(() => logCode('db_update_failed'));
+    }
     try {
       await sendMail(env, deps, {
         subject: `${prefix}Website inquiry${subjectTopic(sub)}${SUBJECT_MARK[turnstile] ?? ''}`,
