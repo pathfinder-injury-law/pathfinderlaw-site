@@ -78,8 +78,7 @@ export function leadNotes(o: EmailFacts, sub?: Submission): string[] {
   return [
     ...resent,
     ...(deadline ? [deadline] : []),
-    // 'pending' means the Worker stopped before screening (only seen on a re-send): nothing to explain.
-    ...(o.outcome === 'lead' || o.reason === 'self_test' || o.reason === 'pending' ? [] : [why(o.reason)]),
+    ...(o.outcome === 'lead' || o.reason === 'self_test' ? [] : [why(o.reason)]),
     ...(ts === 'error' ? ['The spam check was down when this was sent, so it was let through.'] : []),
     ...(ts === 'not_configured' ? ['The spam check is not set up on the website. Tell Claude: "The website spam check is not set up."'] : []),
     ...(o.logged ? [] : ['This message was not saved in the form log. This email is the only copy, so keep it.']),
@@ -249,6 +248,17 @@ export async function processSubmission(
   let detail: string | null = null;
   if (deliver) {
     const prefix = opts.test ? `[Form Test ${opts.test.tag}] ` : outcome === 'screened' ? '[Screened] ' : '';
+    // Mark the row 'sending' (with the screening result again, in case the update above failed)
+    // right before Gmail is called. If the Worker stops or the final update fails after this,
+    // the row stays 'sending': the automatic re-send leaves it alone (Gmail may already have
+    // accepted it) and the daily check reports it instead. A failed mark does not stop the send.
+    if (logged) {
+      await db!
+        .prepare("UPDATE submissions SET delivery_status = 'sending', outcome = ?, reason = ?, turnstile = ? WHERE id = ?")
+        .bind(outcome, reason, turnstile, id)
+        .run()
+        .catch(() => logCode('db_update_failed'));
+    }
     try {
       await sendMail(env, deps, {
         subject: `${prefix}Website inquiry${subjectTopic(sub)}${SUBJECT_MARK[turnstile] ?? ''}`,

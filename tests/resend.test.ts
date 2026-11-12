@@ -2,7 +2,7 @@ import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { handleContact } from '../src/worker/contact.ts';
 import { resetTokenCache } from '../src/worker/google.ts';
-import { RESEND_MAX_ATTEMPTS, runResend } from '../src/worker/resend.ts';
+import { RESEND_BATCH, RESEND_MAX_ATTEMPTS, runResend } from '../src/worker/resend.ts';
 import { buildDailyCheck } from '../src/worker/scheduled.ts';
 import { cronJob, runScheduled } from '../src/worker/index.ts';
 import { decodeRaw, goodInput, liveEnv, makeWorld, post } from './helpers.ts';
@@ -12,6 +12,14 @@ beforeEach(() => resetTokenCache());
 const rows = (env: ReturnType<typeof liveEnv>) => env.sqlite.prepare('SELECT * FROM submissions ORDER BY created_at').all() as Record<string, any>[];
 const gmail = (calls: { url: string }[]) => calls.filter((c) => c.url.includes('gmail.googleapis.com'));
 const alerted = (calls: { url: string }[]) => calls.some((c) => c.url === 'https://hb.example/fail');
+const quiet = async <T>(f: () => Promise<T>) => { const o = console.error; console.error = () => {}; try { return await f(); } finally { console.error = o; } };
+
+// A database whose writes matching `breaks` throw, to stand in for D1 failing part way.
+function breakWrites(env: ReturnType<typeof liveEnv>, breaks: (sql: string) => boolean) {
+  const db = env.DB!;
+  env.DB = { prepare: (sql: string) => (breaks(sql) ? { bind: () => ({ run: async () => { throw new Error('d1 down'); }, first: async () => { throw new Error('d1 down'); } }) } : db.prepare(sql)) } as never;
+  return () => { env.DB = db; };
+}
 
 // A lead whose email failed at `when` (Gmail answered 500 twice, so the one built-in retry also failed).
 async function failedLead(env: ReturnType<typeof liveEnv>, when: string, o: Record<string, unknown> = {}) {
@@ -121,24 +129,6 @@ test('re-send: Gmail back on the second try: one email, then nothing more', asyn
   assert.equal(rows(env)[0].delivery_status, 'sent');
 });
 
-test('re-send: if the database update after a send fails, the next run fixes the record and sends nothing', async () => {
-  const env = liveEnv();
-  await failedLead(env, '2026-11-12T14:00:00Z');
-  // Make the "mark sent" update fail once.
-  const db = env.DB!;
-  let breakUpdate = true;
-  env.DB = { prepare: (sql: string) => (breakUpdate && sql.startsWith("UPDATE submissions SET delivery_status = 'sent'") ? { bind: () => ({ run: async () => { throw new Error('d1 down'); } }) } : db.prepare(sql)) } as never;
-  const orig = console.error; console.error = () => {};
-  let w = makeWorld({ now: '2026-11-12T14:15:00Z' });
-  try { assert.equal((await runResend(env, w.deps)).sent, 1); } finally { console.error = orig; }
-  assert.equal(rows(env)[0].delivery_status, 'failed');
-  breakUpdate = false;
-  resetTokenCache(); w = makeWorld({ now: '2026-11-12T14:30:00Z' });
-  assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 1 });
-  assert.equal(gmail(w.calls).length, 0);
-  assert.equal(rows(env)[0].delivery_status, 'sent');
-});
-
 test('re-send: self-tests, bot-check failures, sent and skipped rows are never re-sent', async () => {
   const env = liveEnv();
   const at = '2026-11-12T14:00:00.000Z';
@@ -151,17 +141,6 @@ test('re-send: self-tests, bot-check failures, sent and skipped rows are never r
   const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
   assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 0 });
   assert.equal(w.calls.length, 0);
-});
-
-test('re-send: a lead the Worker never finished (still pending) is sent, with no spam-filter note', async () => {
-  const env = liveEnv();
-  insert(env, { created_at: '2026-11-12T14:00:00.000Z', outcome: 'unsure', reason: 'pending', turnstile: 'skipped', delivery_status: 'pending' });
-  const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
-  assert.equal((await runResend(env, w.deps)).sent, 1);
-  const { head, body } = decodeRaw(gmail(w.calls)[0]);
-  assert.doesNotMatch(head, /Screened/);
-  assert.doesNotMatch(body, /spam filter/i);
-  assert.match(body, /automatic re-send/);
 });
 
 test('re-send: a screened message keeps its [Screened] tag', async () => {
@@ -197,4 +176,122 @@ test('re-send: runs from the every-15-minutes cron and writes no personal data t
   assert.ok(logs.some((l) => l.includes('resend_failed')));
   assert.ok(logs.some((l) => l.includes('resend_sent')));
   assert.doesNotMatch(logs.join('\n'), /Pat|pat@example|555|claim was denied/);
+});
+
+test('first send: the row is marked "sending" before Gmail is called, then "sent"', async () => {
+  const env = liveEnv(); const w = makeWorld();
+  const seen: string[] = [];
+  const f = w.deps.fetch;
+  w.deps.fetch = (async (url: string, init?: RequestInit) => {
+    if (String(url).includes('gmail.googleapis.com')) seen.push(rows(env)[0].delivery_status);
+    return f(url as never, init);
+  }) as typeof fetch;
+  await handleContact(post(goodInput()), env, w.deps);
+  assert.deepEqual(seen, ['sending']);
+  assert.equal(rows(env)[0].delivery_status, 'sent');
+});
+
+test('never twice: Gmail accepted the first send but the final update failed: not re-sent, daily check lists it', async () => {
+  const env = liveEnv();
+  const restore = breakWrites(env, (sql) => sql.startsWith('UPDATE submissions SET delivery_status = ?, delivery_at'));
+  await quiet(() => handleContact(post(goodInput()), env, makeWorld({ now: '2026-11-12T14:00:00Z' }).deps));
+  restore();
+  assert.equal(rows(env)[0].delivery_status, 'sending');
+  for (const t of ['14:15', '14:30', '15:00']) {
+    resetTokenCache(); const w = makeWorld({ now: `2026-11-12T${t}:00Z` });
+    assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 0 });
+    assert.equal(gmail(w.calls).length, 0);
+  }
+  resetTokenCache();
+  const d = await buildDailyCheck(env, makeWorld({ now: '2026-11-13T12:30:00Z' }).deps);
+  assert.ok(d); assert.match(d.body, /Pat Example/);
+});
+
+test('never twice: the Worker stopped right after the send (row left "sending"): not re-sent', async () => {
+  const env = liveEnv();
+  insert(env, { created_at: '2026-11-12T14:00:00.000Z', delivery_status: 'sending' });
+  const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 0 });
+  assert.equal(w.calls.length, 0);
+});
+
+test('never twice: a re-send Gmail accepted whose final update failed stays "sending" and is not sent again', async () => {
+  const env = liveEnv();
+  await failedLead(env, '2026-11-12T14:00:00Z');
+  const restore = breakWrites(env, (sql) => sql.startsWith('UPDATE submissions SET delivery_status = ?, delivery_at'));
+  let w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.equal((await quiet(() => runResend(env, w.deps))).sent, 1);
+  restore();
+  assert.equal(rows(env)[0].delivery_status, 'sending');
+  resetTokenCache(); w = makeWorld({ now: '2026-11-12T14:30:00Z' });
+  await runResend(env, w.deps);
+  assert.equal(gmail(w.calls).length, 0);
+});
+
+test('never twice: if the row cannot be claimed (database down), nothing is sent', async () => {
+  const env = liveEnv();
+  await failedLead(env, '2026-11-12T14:00:00Z');
+  breakWrites(env, (sql) => sql.includes('RETURNING id'));
+  const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.deepEqual(await quiet(() => runResend(env, w.deps)), { sent: 0, failed: 0, skipped: 1 });
+  assert.equal(gmail(w.calls).length, 0);
+});
+
+test('bots: a Turnstile failure whose screening update failed (reason still "pending") is never emailed', async () => {
+  const env = liveEnv();
+  // Every update fails, so the row keeps the first-insert values: pending, unsure, reason 'pending'.
+  const restore = breakWrites(env, (sql) => sql.startsWith('UPDATE'));
+  const res = await quiet(() => handleContact(post(goodInput()), env, makeWorld({ now: '2026-11-12T14:00:00Z', turnstile: 'fail' }).deps));
+  restore();
+  assert.equal(res.status, 403);
+  const [row] = rows(env);
+  assert.equal(row.delivery_status, 'pending'); assert.equal(row.reason, 'pending');
+  const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 0 });
+  assert.equal(w.calls.length, 0);
+});
+
+test('re-send: a screened-as-real lead left "pending" that never reached "sending" is sent', async () => {
+  const env = liveEnv();
+  insert(env, { created_at: '2026-11-12T14:00:00.000Z', delivery_status: 'pending' }); // reason 'clean', turnstile 'pass'
+  const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.equal((await runResend(env, w.deps)).sent, 1);
+  const { head, body } = decodeRaw(gmail(w.calls)[0]);
+  assert.doesNotMatch(head, /Screened/);
+  assert.match(body, /automatic re-send/);
+  assert.equal(rows(env)[0].delivery_status, 'sent');
+});
+
+test(`batch: rows out of tries do not use up the ${RESEND_BATCH}-send batch, so a newer lead still goes out`, async () => {
+  const env = liveEnv();
+  const old: string[] = [];
+  for (let i = 0; i < RESEND_BATCH + 2; i++) old.push(insert(env, { created_at: `2026-11-12T10:${String(i).padStart(2, '0')}:00.000Z`, email: `old${i}@example.com` }));
+  for (const id of old) await env.SETTINGS!.put!(`resend:${id}`, JSON.stringify({ n: RESEND_MAX_ATTEMPTS }));
+  insert(env, { created_at: '2026-11-12T14:00:00.000Z', email: 'new@example.com' });
+  const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.deepEqual(await runResend(env, w.deps), { sent: 1, failed: 0, skipped: RESEND_BATCH + 2 });
+  assert.match(decodeRaw(gmail(w.calls)[0]).head, /Reply-To: new@example\.com/);
+});
+
+test(`batch: at most ${RESEND_BATCH} sends per run; the rest go out on the next run`, async () => {
+  const env = liveEnv();
+  for (let i = 0; i < RESEND_BATCH + 5; i++) insert(env, { created_at: `2026-11-12T13:${String(i).padStart(2, '0')}:00.000Z`, email: `p${i}@example.com` });
+  let w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.equal((await runResend(env, w.deps)).sent, RESEND_BATCH);
+  resetTokenCache(); w = makeWorld({ now: '2026-11-12T14:30:00Z' });
+  assert.equal((await runResend(env, w.deps)).sent, 5);
+  assert.equal(rows(env).filter((r) => r.delivery_status === 'sent').length, RESEND_BATCH + 5);
+});
+
+test('never twice: a row that changes after it is read (its own request finished) is not claimed or sent', async () => {
+  const env = liveEnv();
+  await failedLead(env, '2026-11-12T14:00:00Z');
+  const db = env.DB!;
+  env.DB = { prepare: (sql: string) => {
+    if (sql.includes('RETURNING id')) env.sqlite.prepare("UPDATE submissions SET delivery_status = 'sent'").run();
+    return db.prepare(sql);
+  } } as never;
+  const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
+  assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 1 });
+  assert.equal(gmail(w.calls).length, 0);
 });

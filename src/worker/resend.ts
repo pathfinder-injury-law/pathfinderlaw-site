@@ -4,17 +4,23 @@ import { SendError, sendMail } from './google.ts';
 import type { Deps, Env } from './types.ts';
 import type { Submission } from './validate.ts';
 
-// Re-send of real leads whose email did not go out (Gmail down, or the Worker stopped mid-way).
+// Re-send of real leads whose email did not go out (Gmail down, or the Worker stopped before sending).
 // Runs every 15 minutes. Each lead gets at most RESEND_MAX_ATTEMPTS tries, and only while it is
 // younger than RESEND_WINDOW_HOURS, so an old lead is never mailed days late. Anything still
 // unsent after that is listed in the next morning's daily check, as before.
+//
+// Never twice: every send (first try or re-send) first marks the row 'sending'. Only rows that are
+// 'failed' (Gmail said no) or 'pending' and never reached 'sending' are picked up. A row left at
+// 'sending' may already be in the inbox, so it is never re-sent; the daily check reports it.
 export const RESEND_AFTER_MINUTES = 5; // leave a lead alone while its own request may still be running
 export const RESEND_WINDOW_HOURS = 24;
 export const RESEND_MAX_ATTEMPTS = 3;
-const BATCH = 10;
+export const RESEND_BATCH = 10; // send attempts per run; rows already out of tries do not count
+const SCAN_LIMIT = 500; // rows read per run, a safety bound only (24 hours of failures)
 
-// Never delivered on purpose (bots), so never re-sent either.
+// Never emailed on purpose (bots), so never re-sent either.
 const NOT_FOR_DELIVERY = ['trap_field', 'turnstile_failed', 'turnstile_wrong_hostname'];
+const BOT_TURNSTILE = ['fail', 'wrong_hostname'];
 
 interface Row {
   id: string;
@@ -29,18 +35,17 @@ interface Row {
   message: string;
 }
 
-// The attempt count lives in the settings store (KV), one key per lead, so no database change is needed.
-// { n: tries so far, done: true once Gmail accepted it }. Keys expire after two days.
+// The try count lives in the settings store (KV), one key per lead, so no database change is needed.
+// Keys expire after two days (the window is one).
 const KEY = (id: string) => `resend:${id}`;
 const KEY_TTL = 2 * 86400;
-type Mark = { n: number; done?: boolean };
 
 export async function runResend(env: Env, deps: Deps): Promise<{ sent: number; failed: number; skipped: number }> {
   const out = { sent: 0, failed: 0, skipped: 0 };
   const db = env.DB;
   const kv = env.SETTINGS;
   if (!db) return out;
-  // Without a place to count attempts, a broken Gmail would be retried every 15 minutes all day. Don't.
+  // Without a place to count tries, a broken Gmail would be retried every 15 minutes all day. Don't.
   if (!kv?.put) {
     logCode('resend_no_store');
     return out;
@@ -49,17 +54,19 @@ export async function runResend(env: Env, deps: Deps): Promise<{ sent: number; f
   const now = deps.now().getTime();
   const from = new Date(now - RESEND_WINDOW_HOURS * 3600_000).toISOString();
   const until = new Date(now - RESEND_AFTER_MINUTES * 60_000).toISOString();
+  const marks = (xs: string[]) => xs.map(() => '?').join(', ');
   let rows: Row[];
   try {
     rows = (
       await db
         .prepare(
           `SELECT id, created_at, form, outcome, reason, turnstile, name, email, phone, message FROM submissions
-           WHERE is_test = 0 AND delivery_status IN ('failed', 'pending') AND created_at >= ? AND created_at < ?
-           AND reason NOT IN (${NOT_FOR_DELIVERY.map(() => '?').join(', ')})
-           ORDER BY created_at LIMIT ${BATCH}`,
+           WHERE is_test = 0 AND created_at >= ? AND created_at < ?
+           AND (delivery_status = 'failed' OR (delivery_status = 'pending' AND reason != 'pending'))
+           AND reason NOT IN (${marks(NOT_FOR_DELIVERY)}) AND turnstile NOT IN (${marks(BOT_TURNSTILE)})
+           ORDER BY created_at LIMIT ${SCAN_LIMIT}`,
         )
-        .bind(from, until, ...NOT_FOR_DELIVERY)
+        .bind(from, until, ...NOT_FOR_DELIVERY, ...BOT_TURNSTILE)
         .all<Row>()
     ).results;
   } catch {
@@ -67,41 +74,54 @@ export async function runResend(env: Env, deps: Deps): Promise<{ sent: number; f
     return out;
   }
 
-  const markSent = (id: string) =>
+  const setStatus = (id: string, status: 'sent' | 'failed', detail: string) =>
     db
-      .prepare("UPDATE submissions SET delivery_status = 'sent', delivery_at = ?, delivery_detail = 'resent' WHERE id = ? AND delivery_status IN ('failed', 'pending')")
-      .bind(deps.now().toISOString(), id)
+      .prepare("UPDATE submissions SET delivery_status = ?, delivery_at = ?, delivery_detail = ? WHERE id = ? AND delivery_status = 'sending'")
+      .bind(status, deps.now().toISOString(), detail, id)
       .run()
       .catch(() => logCode('db_update_failed'));
 
+  let attempts = 0;
   for (const r of rows) {
-    let mark: Mark;
+    if (attempts >= RESEND_BATCH) break;
+    let n: number;
     try {
       const raw = await kv.get(KEY(r.id));
-      mark = raw ? (JSON.parse(raw) as Mark) : { n: 0 };
+      n = raw ? Number((JSON.parse(raw) as { n: number }).n) || 0 : 0;
     } catch {
       out.skipped++;
       logCode('resend_store_failed');
       continue;
     }
-    // Already delivered by an earlier run whose database update did not stick: fix the record, send nothing.
-    if (mark.done) {
-      await markSent(r.id);
+    // Out of tries: left for the daily check, and does not use up this run's batch.
+    if (n >= RESEND_MAX_ATTEMPTS) {
       out.skipped++;
       continue;
     }
-    if (mark.n >= RESEND_MAX_ATTEMPTS) {
-      out.skipped++;
-      continue;
-    }
-    // Count the attempt BEFORE sending, so a crash mid-send still uses up a try.
+    // Count the try BEFORE sending, so a crash mid-send still uses it up.
     try {
-      await kv.put(KEY(r.id), JSON.stringify({ n: mark.n + 1 }), { expirationTtl: KEY_TTL });
+      await kv.put(KEY(r.id), JSON.stringify({ n: n + 1 }), { expirationTtl: KEY_TTL });
     } catch {
       out.skipped++;
       logCode('resend_store_failed');
       continue;
     }
+    // Claim the row: 'sending', only if it is still failed or pending. No row back = someone else has it,
+    // or the database is down; either way, send nothing.
+    let claimed: { id: string } | null = null;
+    try {
+      claimed = await db
+        .prepare("UPDATE submissions SET delivery_status = 'sending' WHERE id = ? AND delivery_status IN ('failed', 'pending') RETURNING id")
+        .bind(r.id)
+        .first<{ id: string }>();
+    } catch {
+      logCode('db_update_failed');
+    }
+    if (!claimed) {
+      out.skipped++;
+      continue;
+    }
+    attempts++;
 
     const sub: Submission = {
       name: r.name,
@@ -125,19 +145,14 @@ export async function runResend(env: Env, deps: Deps): Promise<{ sent: number; f
     } catch (e) {
       out.failed++;
       const detail = e instanceof SendError ? e.code : 'unknown';
-      logCode('resend_failed', { detail, attempt: mark.n + 1 });
-      await db
-        .prepare("UPDATE submissions SET delivery_status = 'failed', delivery_at = ?, delivery_detail = ? WHERE id = ? AND delivery_status IN ('failed', 'pending')")
-        .bind(deps.now().toISOString(), detail, r.id)
-        .run()
-        .catch(() => logCode('db_update_failed'));
+      logCode('resend_failed', { detail, attempt: n + 1 });
+      await setStatus(r.id, 'failed', detail);
       continue;
     }
     out.sent++;
-    logCode('resend_sent', { attempt: mark.n + 1 });
-    // Remember the send first, so a failed database update can never cause a second email.
-    await kv.put(KEY(r.id), JSON.stringify({ n: mark.n + 1, done: true }), { expirationTtl: KEY_TTL }).catch(() => logCode('resend_store_failed'));
-    await markSent(r.id);
+    logCode('resend_sent', { attempt: n + 1 });
+    // If this update fails the row stays 'sending': never sent again, and the daily check lists it.
+    await setStatus(r.id, 'sent', 'resent');
   }
 
   // One alarm per run, not one per lead.
