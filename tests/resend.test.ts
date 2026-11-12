@@ -251,15 +251,33 @@ test('bots: a Turnstile failure whose screening update failed (reason still "pen
   assert.equal(w.calls.length, 0);
 });
 
-test('re-send: a screened-as-real lead left "pending" that never reached "sending" is sent', async () => {
+test('never twice: every "pending" row is left to the daily check, with or without a screening result', async () => {
   const env = liveEnv();
-  insert(env, { created_at: '2026-11-12T14:00:00.000Z', delivery_status: 'pending' }); // reason 'clean', turnstile 'pass'
+  // A recorded result with "pending" usually means the "sending" mark failed and Gmail may already have it.
+  insert(env, { created_at: '2026-11-12T14:00:00.000Z', delivery_status: 'pending' });
+  insert(env, { created_at: '2026-11-12T14:01:00.000Z', delivery_status: 'pending', outcome: 'unsure', reason: 'pending', turnstile: 'skipped', email: 'p2@example.com' });
+  for (const t of ['14:15', '14:30', '20:00']) {
+    resetTokenCache(); const w = makeWorld({ now: `2026-11-12T${t}:00Z` });
+    assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 0 });
+    assert.equal(w.calls.length, 0);
+  }
+  assert.deepEqual(rows(env).map((r) => r.delivery_status), ['pending', 'pending']);
+  resetTokenCache();
+  const d = await buildDailyCheck(env, makeWorld({ now: '2026-11-13T12:30:00Z' }).deps);
+  assert.ok(d); assert.match(d.body, /2 people filled out the website form yesterday/);
+});
+
+test('never twice: first send went out but both the "sending" mark and the final update failed: not re-sent', async () => {
+  const env = liveEnv();
+  const restore = breakWrites(env, (sql) => sql.startsWith("UPDATE submissions SET delivery_status = 'sending'") || sql.startsWith('UPDATE submissions SET delivery_status = ?, delivery_at'));
+  const res = await quiet(() => handleContact(post(goodInput()), env, makeWorld({ now: '2026-11-12T14:00:00Z' }).deps));
+  restore();
+  assert.equal(res.status, 200);
+  const [row] = rows(env);
+  assert.equal(row.delivery_status, 'pending'); assert.equal(row.reason, 'clean');
   const w = makeWorld({ now: '2026-11-12T14:15:00Z' });
-  assert.equal((await runResend(env, w.deps)).sent, 1);
-  const { head, body } = decodeRaw(gmail(w.calls)[0]);
-  assert.doesNotMatch(head, /Screened/);
-  assert.match(body, /automatic re-send/);
-  assert.equal(rows(env)[0].delivery_status, 'sent');
+  assert.deepEqual(await runResend(env, w.deps), { sent: 0, failed: 0, skipped: 0 });
+  assert.equal(gmail(w.calls).length, 0);
 });
 
 test(`batch: rows out of tries do not use up the ${RESEND_BATCH}-send batch, so a newer lead still goes out`, async () => {

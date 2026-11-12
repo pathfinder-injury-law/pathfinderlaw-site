@@ -4,14 +4,15 @@ import { SendError, sendMail } from './google.ts';
 import type { Deps, Env } from './types.ts';
 import type { Submission } from './validate.ts';
 
-// Re-send of real leads whose email did not go out (Gmail down, or the Worker stopped before sending).
+// Re-send of real leads whose email Gmail refused (Gmail down or erroring).
 // Runs every 15 minutes. Each lead gets at most RESEND_MAX_ATTEMPTS tries, and only while it is
 // younger than RESEND_WINDOW_HOURS, so an old lead is never mailed days late. Anything still
 // unsent after that is listed in the next morning's daily check, as before.
 //
-// Never twice: every send (first try or re-send) first marks the row 'sending'. Only rows that are
-// 'failed' (Gmail said no) or 'pending' and never reached 'sending' are picked up. A row left at
-// 'sending' may already be in the inbox, so it is never re-sent; the daily check reports it.
+// Never twice: every send (first try or re-send) first marks the row 'sending'. Only 'failed' rows
+// (Gmail answered no) are picked up. A row left at 'sending' or 'pending' may already be in the
+// inbox (a 'pending' row can mean the 'sending' mark itself failed), so it is never re-sent; the
+// daily check reports it. 'failed' is written only after Gmail refused, so bots never reach it.
 export const RESEND_AFTER_MINUTES = 5; // leave a lead alone while its own request may still be running
 export const RESEND_WINDOW_HOURS = 24;
 export const RESEND_MAX_ATTEMPTS = 3;
@@ -62,7 +63,7 @@ export async function runResend(env: Env, deps: Deps): Promise<{ sent: number; f
         .prepare(
           `SELECT id, created_at, form, outcome, reason, turnstile, name, email, phone, message FROM submissions
            WHERE is_test = 0 AND created_at >= ? AND created_at < ?
-           AND (delivery_status = 'failed' OR (delivery_status = 'pending' AND reason != 'pending'))
+           AND delivery_status = 'failed'
            AND reason NOT IN (${marks(NOT_FOR_DELIVERY)}) AND turnstile NOT IN (${marks(BOT_TURNSTILE)})
            ORDER BY created_at LIMIT ${SCAN_LIMIT}`,
         )
@@ -106,12 +107,12 @@ export async function runResend(env: Env, deps: Deps): Promise<{ sent: number; f
       logCode('resend_store_failed');
       continue;
     }
-    // Claim the row: 'sending', only if it is still failed or pending. No row back = someone else has it,
+    // Claim the row: 'sending', only if it is still failed. No row back = it changed since it was read,
     // or the database is down; either way, send nothing.
     let claimed: { id: string } | null = null;
     try {
       claimed = await db
-        .prepare("UPDATE submissions SET delivery_status = 'sending' WHERE id = ? AND delivery_status IN ('failed', 'pending') RETURNING id")
+        .prepare("UPDATE submissions SET delivery_status = 'sending' WHERE id = ? AND delivery_status = 'failed' RETURNING id")
         .bind(r.id)
         .first<{ id: string }>();
     } catch {
