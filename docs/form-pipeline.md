@@ -12,6 +12,7 @@ How the website's contact forms work, what a person must do before launch, and h
 6. It screens the message with the rules stored in Cloudflare's settings store (KV, key `rules`). Three outcomes: **lead**, **screened**, **unsure** (unsure is treated as a lead).
 7. It emails both inboxes (`bswartz@` and `mtruman@pathfinderlaw.com`, nobody else) through Gmail, sent as `admin@pathfinderlaw.com`, with Reply-To set to the visitor. Screened messages get "[Screened]" at the start of the subject.
 8. It records in the database whether the email was delivered. If sending fails, the visitor sees the firm's phone number (804-505-0633) instead of a success message, and the outside alarm is pinged.
+9. If the email did not go out, the Worker tries again on its own every 15 minutes (up to 3 times, within 24 hours). See "Re-send of undelivered leads" below.
 
 ### The step-by-step questions (added Oct 31, 2026)
 The form asks one question per screen. Questions, answers and the sorting rule are in `src/worker/intake.ts` (shared by the page and the Worker; the Worker re-sorts on its own and never trusts the page).
@@ -41,7 +42,7 @@ The email lists each answer as a plain line ("How hurt: An accident at work") un
 | Turnstile service unreachable | yes | yes (a Cloudflare outage must not cost a lead), subject ends "- spam check unavailable" | Thank-you page |
 | `TURNSTILE_SECRET` missing (setup mistake) | yes | yes, subject ends "- TURNSTILE NOT CONFIGURED"; `ALERT_URL` pinged (at most once an hour) and the code `turnstile_not_configured` logged | Thank-you page |
 | Database down | no (email only, flagged "NOT saved") | yes | Thank-you page, and the alarm fires |
-| Gmail refuses or is down | yes, marked failed | no | Failure message with the phone number, alarm fires |
+| Gmail refuses or is down | yes, marked failed | no at first; re-sent automatically within about 15 minutes, up to 3 tries (subject says "(re-sent)") | Failure message with the phone number, alarm fires |
 | Missing acknowledgement or bad field | no | no | "Please check the fields" |
 
 ### Screening rules (all in KV, none in the code)
@@ -72,7 +73,18 @@ The email lists each answer as a plain line ("How hurt: An accident at work") un
 | 12:15 | **Morning self-test.** Sends a message tagged `[Form Test xxxxxxxx]` through the same path, but only to the admin@ mailbox (the sender), so nobody's inbox fills up. If Gmail accepts it, the Worker pings `HEARTBEAT_URL`. If not, no ping, and the outside service raises the alarm. |
 | 12:30 | **Daily check**, then the 90-day spam purge. The check emails Bryn only (`ALERT_RECIPIENTS`) and only when something needs attention: a message from yesterday that never reached the inboxes (with the person's name, phone, email and time so they can be called back), the spam filter (Turnstile) down or not configured, the spam rules not loading, or the first day of a 3-day stretch with no submissions. Each problem is written in plain English with what to do. A normal day sends nothing. Each problem is reported once (yesterday's rows only). |
 
-Cron runs in UTC. 12:30 UTC is 7:30 a.m. Eastern standard time (now until March 14, 2027). **When daylight time starts, change only the hours in `wrangler.jsonc`, from 12 to 11 (`15 11 * * *` and `30 11 * * *`). Nothing else needs to change.** The Worker picks the job by the minute alone (15 = self-test, 30 = daily check and purge), so keep the minutes at 15 and 30. Any other minute is logged as `cron_unrecognized` and does nothing.
+| every 15 minutes | **Re-send of undelivered leads** (`src/worker/resend.ts`). See below. Usually finds nothing and sends nothing. |
+
+Cron runs in UTC. 12:30 UTC is 7:30 a.m. Eastern standard time (now until March 14, 2027). **When daylight time starts, change only the hours in `wrangler.jsonc`, from 12 to 11 (`15 11 * * *` and `30 11 * * *`). Nothing else needs to change.** The Worker picks the job by the minute alone (15 = self-test, 30 = daily check and purge), so keep the minutes at 15 and 30. The re-send cron (`*/15 * * * *`) has no hour, so it never changes. Any other minute is logged as `cron_unrecognized` and does nothing.
+
+### Re-send of undelivered leads (added Nov 12, 2026)
+A real lead whose email did not go out (Gmail down, or the Worker stopped part way) is re-sent automatically:
+- **Which rows:** `is_test = 0`, `delivery_status` `failed` or `pending`, created **more than 5 minutes ago** (so a request still running is left alone) and **less than 24 hours ago** (so an old lead is never mailed days late). Bot-check rows that are never emailed (`trap_field`, `turnstile_failed`, `turnstile_wrong_hostname`) are left out. At most 10 rows per run.
+- **What is sent:** the same email as the original, to both inboxes with Reply-To set, subject "Website inquiry (re-sent)" (with "[Screened]" first if it was screened), and a first note saying when the person sent it. The step-by-step answers come from the saved message text, so they appear as plain lines, not the colored sorting tag.
+- **Tries:** at most 3 per lead (about 45 minutes). The count is kept in the settings store (KV) under `resend:<id>`, expiring after 2 days, so no database change is needed. The try is counted before sending, and a successful send is recorded there before the database is updated, so a lead is never emailed twice. With no settings store, nothing is re-sent.
+- **Record:** on success the row becomes `sent`, `delivery_detail` `resent`. On failure it stays `failed` with the new error code, and `ALERT_URL` is pinged once per run.
+- **After 3 failed tries:** nothing more is sent. The next morning's daily check lists the person to call back, as before.
+- **Older failed rows are not touched.** The one lead from before this change (`12cb90c8`, Nov 9, 2026, already called back) is outside the 24-hour window and stays `failed` as the record.
 
 The Gmail filters from the plan should match only the exact "[Screened]" tag and the "[Form Test" tag, so no filter can bury a real lead.
 
@@ -103,7 +115,7 @@ Previews need none of these. The previews build uses Cloudflare's published alwa
    npx wrangler kv key put --binding SETTINGS --remote rules --path docs/starter-rules.json
    ```
    (Edit the agency domains in that file first. Use a copy outside the repo if the list should stay private; the repo is public.)
-6. **Cron triggers** are already declared in `wrangler.jsonc` (`15 12 * * *` and `30 12 * * *`) and are created when the live Worker deploys. After the first deploy, confirm both appear under the Worker's Settings, Triggers.
+6. **Cron triggers** are already declared in `wrangler.jsonc` (`15 12 * * *`, `30 12 * * *`, and `*/15 * * * *`) and are created when the live Worker deploys. After a deploy, confirm all three appear under the Worker's Settings, Triggers.
 7. **Add the rate-limit rule** in the Cloudflare dashboard (Security, WAF, Rate limiting rules). Rate limiting is not coded:
    - If incoming requests match: URI Path equals `/api/contact` and Method equals `POST`
    - Count by IP address; the free plan offers a short window (10 seconds in my understanding; check the screen), so use the largest limit the screen allows that stops floods, for example 5 requests per window
@@ -128,7 +140,7 @@ Previews need none of these. The previews build uses Cloudflare's published alwa
 ```bash
 node --test tests/
 ```
-The tests use Node's built-in SQLite as a stand-in for D1 and mock Google, Turnstile and the check-in service. They cover: validation, every screening rule, all outcomes in the table above, the Google sign-in (RS256) and its scope, no personal data in logs, preview mode, the morning test, the daily check and the purge.
+The tests use Node's built-in SQLite as a stand-in for D1 and mock Google, Turnstile and the check-in service. They cover: validation, every screening rule, all outcomes in the table above, the Google sign-in (RS256) and its scope, no personal data in logs, preview mode, the morning test, the daily check, the purge, and the re-send (`tests/resend.test.ts`).
 
 To run the Worker locally with a local database (nothing remote, nothing real is sent), create a file `.dev.vars` (it is git-ignored) with fake values and these three override variables pointing at a local stand-in server: `GOOGLE_TOKEN_URL`, `GMAIL_SEND_URL`, `TURNSTILE_VERIFY_URL`. Then:
 ```bash
@@ -143,5 +155,6 @@ Trigger a cron by hand with `curl "localhost:8787/cdn-cgi/handler/scheduled?cron
 - **Admin@ sends all mail.** A flood could hit admin@'s daily Gmail limit; the rate-limit rule and Turnstile guard against that. Changing admin@'s password is a planned event (see the plan), not automatic.
 - **Bot-check failures are not emailed.** A Turnstile "not human" result and a filled trap field are saved but not emailed, to keep floods out of the inboxes. A real person who fails Turnstile sees the phone number. Both stay in the database for 90 days; they are not emailed or reported.
 - **Daily check window.** The delivery check looks at yesterday's rows only, so a message still being processed is never reported as lost, and each problem is reported once.
+- **Re-send window.** A failed lead is re-sent only within 24 hours of when it was sent, and at most 3 times. A lead that misses that window is reported by the daily check, never mailed late.
 - **Logs.** Cloudflare may record the request path and time for the Worker; the Worker itself never writes message content. Do not add `console.log` of any submission field.
 - **Preview mode** (`PREVIEW_MODE` in `wrangler.preview.jsonc`) validates exactly as live, then sends and stores nothing and answers "Preview: nothing was sent."

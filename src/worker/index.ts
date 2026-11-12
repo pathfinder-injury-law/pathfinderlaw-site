@@ -1,5 +1,6 @@
 import { logCode } from './alerts.ts';
 import { handleContact } from './contact.ts';
+import { runResend } from './resend.ts';
 import { runDailyCheck, runPurge, runSelfTest } from './scheduled.ts';
 import { realDeps, type Deps, type Env } from './types.ts';
 
@@ -7,11 +8,13 @@ import { realDeps, type Deps, type Env } from './types.ts';
 // MINUTE alone, so the hours can change there (daylight saving) with no code change:
 //   minute 15  morning self-test
 //   minute 30  daily check (emails Bryn only if something is wrong), then spam purge
+//   minute */15  re-send of real leads whose email did not go out (resend.ts)
 //   anything else: logged and ignored
-export function cronJob(cron: string): 'self_test' | 'daily_check' | 'none' {
+export function cronJob(cron: string): 'self_test' | 'daily_check' | 'resend' | 'none' {
   const minute = cron.trim().split(/\s+/)[0];
   if (minute === '15') return 'self_test';
   if (minute === '30') return 'daily_check';
+  if (minute === '*/15') return 'resend';
   return 'none';
 }
 
@@ -19,6 +22,7 @@ export async function runScheduled(cron: string, env: Env, deps: Deps): Promise<
   const job = cronJob(cron);
   if (job === 'self_test') await runSelfTest(env, deps);
   else if (job === 'daily_check') await runDailyCheck(env, deps).then(() => runPurge(env, deps));
+  else if (job === 'resend') await runResend(env, deps);
   else logCode('cron_unrecognized', { minute: cron.trim().split(/\s+/)[0] ?? '' });
   return job;
 }

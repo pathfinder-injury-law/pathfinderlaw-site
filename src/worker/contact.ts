@@ -55,7 +55,8 @@ const SUBJECT_MARK: Record<string, string> = {
   not_configured: ' - TURNSTILE NOT CONFIGURED',
 };
 
-type EmailFacts = { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string };
+// resentFrom: set only on an automatic re-send (resend.ts), the time the person first sent it.
+type EmailFacts = { id: string; outcome: string; reason: string; logged: boolean; turnstile?: string; resentFrom?: string };
 
 // Why a message needs a second look, in plain words: a filing-deadline warning, screening, or a
 // problem on our side. Empty for a clean, recent lead.
@@ -71,9 +72,14 @@ export function leadNotes(o: EmailFacts, sub?: Submission): string[] {
   };
   const ts = o.turnstile ?? 'skipped';
   const deadline = sub?.intake ? deadlineNote(sub.intake) : null;
+  const resent = o.resentFrom
+    ? [`This message did not reach you when it was sent (${new Date(o.resentFrom).toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' })}). This is the automatic re-send.`]
+    : [];
   return [
+    ...resent,
     ...(deadline ? [deadline] : []),
-    ...(o.outcome === 'lead' || o.reason === 'self_test' ? [] : [why(o.reason)]),
+    // 'pending' means the Worker stopped before screening (only seen on a re-send): nothing to explain.
+    ...(o.outcome === 'lead' || o.reason === 'self_test' || o.reason === 'pending' ? [] : [why(o.reason)]),
     ...(ts === 'error' ? ['The spam check was down when this was sent, so it was let through.'] : []),
     ...(ts === 'not_configured' ? ['The spam check is not set up on the website. Tell Claude: "The website spam check is not set up."'] : []),
     ...(o.logged ? [] : ['This message was not saved in the form log. This email is the only copy, so keep it.']),
@@ -139,7 +145,7 @@ export const loggedMessage = (sub: Submission) =>
   sub.intake ? [...intakeLines(sub.intake), '', 'What happened and when:', sub.message].join('\n') : sub.message;
 
 // The end of the subject: the intake form's sorting tag, or which form a plain message came from.
-const subjectTopic = (sub: Submission) =>
+export const subjectTopic = (sub: Submission) =>
   sub.intake ? ` - ${ROUTE_SUBJECT[route(sub.intake)]}` : ` (${sub.form === 'sidebar' ? 'sidebar form' : 'main form'})`;
 
 // The one path every submission takes: log, bot checks, screen, email, update log.
