@@ -70,7 +70,7 @@ The Commission can also stop an employer from using the deadline when the employ
 - **A decision you disagree with.** You have 30 days to ask the full Commission to review it ([§ 65.2-705](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-705/)). Here’s [how to appeal a workers’ comp denial in Virginia](/how-to-appeal-a-workers-comp-denial-in-virginia/).
 - **An injury that gets worse after checks stop.** The change-in-condition deadline runs from the last day you were paid under an award. Here’s [how long a workers’ comp claim can stay open](/how-long-can-a-workers-comp-claim-stay-open/).
 
-> “File the claim, even if the insurance company is paying. Filing has never hurt a client of mine. Not filing can end a case before it starts.” (Bryn Swartz)
+> “File the claim, even if the insurance company is paying. Not filing can end a case before it starts.” (Bryn Swartz)
 
 ## Workers’ Comp Deadline Questions
 
