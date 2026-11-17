@@ -3,7 +3,7 @@ title: "How to Qualify for Workers’ Comp in Virginia"
 metaTitle: "How to Qualify for Workers’ Comp in Virginia"
 description: "Who qualifies for workers’ comp in Virginia: a covered employee, a work accident, notice within 30 days, and a claim within two years. What each one means."
 date: 2021-10-27T12:00:58Z
-updated: 2026-11-07T18:00:00Z
+updated: 2026-11-16T16:00:00Z
 tags: ["claim-process","benefits"]
 ---
 
