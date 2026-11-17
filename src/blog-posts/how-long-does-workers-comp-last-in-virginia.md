@@ -3,7 +3,7 @@ title: "How Long Does Workers’ Comp Last in Virginia?"
 metaTitle: "How Long Does Workers’ Comp Last in Virginia?"
 description: "Virginia workers’ comp wage checks are generally capped at 500 weeks. Medical care lasts as long as necessary, and some benefits last for life."
 date: 2026-11-01T20:00:00Z
-updated: 2026-11-01T20:00:00Z
+updated: 2026-11-16T17:00:00Z
 tags: ["benefits"]
 ---
 
