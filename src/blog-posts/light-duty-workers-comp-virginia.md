@@ -1,9 +1,9 @@
 ---
 title: "Can I Refuse Light Duty? Virginia Workers’ Comp Rules"
 metaTitle: "Can I Refuse Light Duty on Workers’ Comp in Virginia?"
-description: "Refusing a light-duty job in Virginia can stop your wage checks but not your medical care. When a refusal is justified, the 6-month cure, and what light duty pays."
+description: "Refusing a light-duty job in Virginia can stop your wage checks but not your medical care. When a refusal is justified, what light duty pays, and a full-duty release."
 date: 2026-11-02T16:00:00Z
-updated: 2026-11-10T21:00:00Z
+updated: 2026-11-16T16:00:00Z
 tags: ["benefits","return-to-work"]
 ---
 
@@ -87,6 +87,33 @@ Keep a written log: the date, employer, job, how you applied, the person you spo
 | Your doctor later takes you completely out of work | Total disability checks can be owed even after a firing for cause (a Supreme Court of Virginia decision involving Northrop Grumman Shipbuilding, Inc., 290 Va. 349 (2015)) |
 
 Firing someone solely for filing a workers’ comp claim is separately against the law ([Va. Code § 65.2-308](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-308/)). Here’s more on [employer retaliation and your workers’ comp rights](/employer-retaliation-and-your-workers-comp-rights/).
+
+## What Happens When Your Doctor Releases You to Full Duty?
+
+**A full-duty release usually ends your wage checks, but not your medical care, and not your right to more benefits if the injury gets worse.** Wage checks in Virginia pay for time you can’t work, or can only work at lower pay, because of the injury ([Va. Code §§ 65.2-500](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-500/) and [65.2-502](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-502/)). Once your doctor says you can do your old job without restrictions, the insurance company will move to stop them.
+
+| Question | What usually happens |
+|---|---|
+| Do my wage checks stop? | Usually, yes. If you have an award, the insurance company can’t just stop paying. It has to file an application with the Commission, and you generally have 15 days from its filing to respond. |
+| Does my medical care stop? | No. Under an award, the insurance company is still required to pay for treatment of the work injury that is reasonable, necessary, and related to the accident ([Va. Code § 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). Follow-up visits, therapy, and later surgery can still be covered. |
+| What about a permanent rating? | A full-duty release often comes near maximum medical improvement, when the doctor can assign an [impairment rating](/impairment-rating-virginia-workers-comp/). A rating is paid separately from wage checks, even if you’re back at work. |
+| What if my employer won’t take me back? | Comp generally doesn’t pay wage checks after a full-duty release just because the job is gone, since the injury is no longer what keeps you from working. |
+| What if the injury gets worse later? | You can ask the Commission to restart wage checks on a change in condition, generally within 24 months of the last day covered by compensation paid under an award ([Va. Code § 65.2-708](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)). Here’s [how long a workers’ comp claim can stay open](/how-long-can-a-workers-comp-claim-stay-open/). |
+
+### What if You Don’t Agree With the Full-Duty Release?
+
+**Tell your treating doctor exactly what you can’t do, and ask for the answer in writing.** A release often comes from a short visit. If lifting, standing, or using the injured arm or leg still causes problems, the doctor needs to hear specifics, not “it still hurts.” The Commission usually gives great weight to the treating doctor’s opinion, so a release written by your own doctor is hard to overcome with your testimony alone.
+
+If the release came from a doctor the insurance company sent you to for a one-time exam, that is not the same as your treating doctor’s opinion, and the Commission weighs it differently. You can ask the Commission for a hearing on whether you are still disabled, whatever the insurance company decides.
+
+### Going Back at Full Duty: What to Watch
+
+1. **Keep every work note.** Your release, any return-to-work slip, and anything you sign at work.
+2. **Report flare-ups in writing.** If the injury acts up on the job, tell your supervisor and your doctor, and keep a copy.
+3. **Keep your medical care going.** Missing follow-up visits makes it harder to tie a later setback to the accident.
+4. **Watch the calendar.** The 24-month change-in-condition window runs from the last day covered by compensation paid under an award, not the day the last check arrived.
+
+One detail helps workers who aren’t released to full duty: if your restrictions keep you from doing your old job, but your employer gives you other work within them at your old pay or more, those wages can count as compensation paid under an award for up to 24 consecutive months, which keeps the change-in-condition window open longer ([Va. Code § 65.2-708(C)](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-708/)).
 
 ## Steps to Take When You Get a Light-Duty Offer
 

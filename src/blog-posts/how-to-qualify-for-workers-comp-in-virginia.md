@@ -3,7 +3,7 @@ title: "How to Qualify for Workers’ Comp in Virginia"
 metaTitle: "How to Qualify for Workers’ Comp in Virginia"
 description: "Who qualifies for workers’ comp in Virginia: a covered employee, a work accident, notice within 30 days, and a claim within two years. What each one means."
 date: 2021-10-27T12:00:58Z
-updated: 2026-11-07T18:00:00Z
+updated: 2026-11-16T16:00:00Z
 tags: ["claim-process","benefits"]
 ---
 
@@ -27,7 +27,7 @@ Three situations come up often:
 
 - **You’re called an independent contractor.** The label on your paycheck doesn’t decide it. What matters most is whether the company had the right to control how you did the work. Here’s [what to do when your employer lists you as an independent contractor](/what-to-do-when-your-employer-lists-you-as-an-independent-contractor/).
 - **You work for a subcontractor.** The company above it on the job may also be responsible as your “statutory employer.” That matters most when your direct employer has no insurance ([Va. Code § 65.2-302](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-302/)).
-- **Your employer should have had insurance and didn’t.** You can still file a claim. The Commission’s Uninsured Employer’s Fund may pay benefits when an employer that was required to have coverage has none ([Va. Code § 65.2-1203](https://law.lis.virginia.gov/vacode/title65.2/chapter12/section65.2-1203/)).
+- **Your employer should have had insurance and didn’t.** You can still file a claim. The Commission’s Uninsured Employer’s Fund may pay benefits when an employer that was required to have coverage has none ([Va. Code § 65.2-1203](https://law.lis.virginia.gov/vacode/title65.2/chapter12/section65.2-1203/)). Here’s [what to do when your employer has no workers’ comp insurance](/employer-has-no-workers-comp-insurance-virginia/).
 
 ## Were You Hurt in an Accident?
 
