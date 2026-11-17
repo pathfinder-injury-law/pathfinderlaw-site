@@ -20,8 +20,8 @@
   --white: #ffffff;
   --page: #e9efdf; /* page background: pale sage, as on the home page; no stark white (Bryn, Nov 3 2026) */
 
-  /* The Brand Book font, Nexa, is a paid font, so it is not used on the site.
-     Figtree is a free font (SIL Open Font License), served from this site. */
+  /* The Brand Book's font is a paid font and appears only inside the trademarked logo files.
+     All set text on the site is Figtree, a free font (SIL Open Font License), served from this site. */
   --font-head: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Figtree Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
@@ -1044,12 +1044,12 @@ body:not(.has-overlay) main {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/images/contour-map.svg") center / cover no-repeat;
+  background: url("/images/contour-texture.svg") center / cover no-repeat;
   opacity: 0.07;
   z-index: -1;
   pointer-events: none;
 }
-/* The footer and contact band (.tex-img) carry the same texture as a lazy image instead (184 KB), so on
+/* The footer and contact band (.tex-img) carry the same texture as a lazy image instead (90 KB), so on
    phones it waits until the section is near the screen and doesn't compete with the top photo (LCP).
    They must not match the rule above at all: Chrome fetches that background even with content: none. */
 .contour-tex {

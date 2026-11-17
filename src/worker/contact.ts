@@ -109,7 +109,7 @@ const BADGE: Record<Route | 'message', { label: string; bg: string; fg: string }
 };
 
 const html = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const FONT = "Nexa, Aptos, 'Segoe UI', Helvetica, Arial, sans-serif";
+const FONT = "Aptos, 'Segoe UI', Helvetica, Arial, sans-serif";
 
 // The styled copy: a colored tag, any notes, the name, Call and Text buttons, the email,
 // then every answer (what happened last) in the same style.

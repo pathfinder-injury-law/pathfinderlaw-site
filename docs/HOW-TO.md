@@ -94,6 +94,12 @@ Avoid em dashes (the long dash); the checks will flag them. A comma, colon or fu
 3. Link to it from a menu (`src/data/site.ts`) or from a related page.
 4. Never rename or remove an existing page without adding a permanent redirect for its old address to **`public/_redirects`** (one line: old address, new address, `301`).
 
+## How to add a picture
+
+1. Use only pictures the firm made, free pictures with a license that allows business use (such as Unsplash, not Unsplash+), or AI pictures made from our own prompts. Never paid stock without a saved license.
+2. Add a line for it to **`public/images/photos/CREDITS.txt`**: the file name, who made it, where it came from, and the license. The build stops with a list of any picture that has no line (`scripts/check-credits.mjs`).
+3. Set words in pictures in Figtree, the site's font. The Brand Book font appears only inside the logo files.
+
 ## Safety settings worth knowing about
 
 - **Security headers** are in `public/_headers`. The Content-Security-Policy there lists every outside service the pages may load (today only Cloudflare Turnstile and Cloudflare Web Analytics). If a new outside service is ever added (a map, a video, a chat box, a booking tool), its address must be added there too, or browsers will block it.

@@ -1,21 +1,24 @@
-// Draws the faint map contour lines used behind home page sections (the "map" end of the
-// wilderness-to-map motif). One shared file; each section sets its own color and strength in CSS
-// (the file is used as a mask, so the line color comes from the page, not the file).
+// Draws the map contour lines drawn for this site. Two files, both made here, so we own them:
+//  - public/images/contours.svg: faint lines behind home page sections (the "map" end of the
+//    wilderness-to-map motif). Used as a mask, so the line color comes from the page.
+//  - public/images/contour-texture.svg: the denser topographic texture behind the footer, the
+//    contact band, and other dark sections on every page (Nov 16, 2026; replaced an old-site file
+//    with no known source).
 //
 //   node scripts/make-contours.mjs
-// Writes public/images/contours.svg. Commit it. Same seed, same lines, every run.
+// Writes both files. Commit them. Same seed, same lines, every run.
 
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
-const OUT = fileURLToPath(new URL('../public/images/contours.svg', import.meta.url));
-const W = 1440, H = 1000, C = 16;
+function draw({ file, W, H, C = 16, seed, nWaves = 6, nHills = 5, waveFreq = [1.6, 0.4], hillR = [200, 260], hillH = [0.8, 1], levels = [-3.2, 4.4, 0.26], stroke = '#000', width = 1.4, minLen = 6, knockout = false, eps = 1.1 }) {
+const OUT = fileURLToPath(new URL(`../public/images/${file}`, import.meta.url));
 
 // A smooth height field: a few broad waves plus some hills.
-let s = 11;
+let s = seed;
 const rnd = () => ((s = (s * 16807) % 2147483647) / 2147483647);
-const waves = Array.from({ length: 6 }, () => ({ fx: (rnd() * 1.6 + 0.4) / W, fy: (rnd() * 1.6 + 0.4) / H, p: rnd() * 6.28, a: rnd() * 0.6 + 0.4, r: rnd() * 6.28 }));
-const hills = Array.from({ length: 5 }, () => ({ x: rnd() * W, y: rnd() * H, r: 200 + rnd() * 260, h: 0.8 + rnd() }));
+const waves = Array.from({ length: nWaves }, () => ({ fx: (rnd() * waveFreq[0] + waveFreq[1]) / W, fy: (rnd() * waveFreq[0] + waveFreq[1]) / H, p: rnd() * 6.28, a: rnd() * 0.6 + 0.4, r: rnd() * 6.28 }));
+const hills = Array.from({ length: nHills }, () => ({ x: rnd() * W, y: rnd() * H, r: hillR[0] + rnd() * hillR[1], h: hillH[0] + rnd() * hillH[1] }));
 function field(x, y) {
   let v = 0;
   for (const w of waves) {
@@ -81,15 +84,28 @@ function rdp(pts, eps) {
 }
 
 const paths = [];
-for (let L = -3.2; L < 4.4; L += 0.26) {
+for (let L = levels[0]; L < levels[1]; L += levels[2]) {
   let d = '';
   for (const line of level(L)) {
-    if (line.length < 6) continue; // drop tiny specks
-    const p = rdp(line, 1.1).map(([x, y]) => [Math.round(x), Math.round(y)]);
+    if (line.length < minLen) continue; // drop tiny specks
+    const p = rdp(line, eps).map(([x, y]) => [Math.round(x), Math.round(y)]);
     d += `M${p[0][0]} ${p[0][1]}` + p.slice(1).map((q, i) => `l${q[0] - p[i][0]} ${q[1] - p[i][1]}`).join('');
   }
   if (d) paths.push(d);
 }
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice"><path fill="none" stroke="#000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="${paths.join('')}"/></svg>\n`;
+const line = `<path fill="none" stroke="${stroke}" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round" d="${paths.join('')}"/>`;
+// knockout: a white sheet with the lines cut out of it, so the page color shows through the lines
+// (the look of the old texture: a faint pale wash with darker map lines).
+const svg = knockout
+  ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice"><mask id="m"><rect width="${W}" height="${H}" fill="#fff"/>${line}</mask><rect width="${W}" height="${H}" fill="#fff" mask="url(#m)"/></svg>\n`
+  : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice">${line}</svg>\n`;
 writeFileSync(OUT, svg);
 console.log(`${OUT}: ${svg.length} bytes, ${paths.length} levels`);
+}
+
+draw({ file: 'contours.svg', W: 1440, H: 1000, seed: 11 });
+draw({
+  file: 'contour-texture.svg', W: 2560, H: 1600, C: 10, seed: 7, knockout: true, stroke: '#000',
+  nWaves: 12, waveFreq: [5, 2], nHills: 220, hillR: [35, 55], hillH: [-0.4, 1.0],
+  levels: [-4, 5, 0.42], width: 0.8, minLen: 5, eps: 0.8,
+});
