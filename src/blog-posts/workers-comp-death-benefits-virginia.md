@@ -23,7 +23,7 @@ When a work accident causes a worker’s death in Virginia within nine years, th
 | Transportation of the deceased | Up to $1,000 | [§ 65.2-512(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/) |
 | Medical bills from the injury before death | Covered as in any comp claim | [§ 65.2-603](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/) |
 
-Starting January 1, 2028, the Commission will adjust the burial and transportation limits each year for inflation ([§ 65.2-512(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)). Some older pages online still show a lower funeral limit. The current statute says $15,000.
+The burial limit rose from $10,000 to $15,000 on July 1, 2026 ([2026 Acts ch. 832](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)), so older pages online may still show the lower figure. The new law does not say whether a death before that date gets the higher limit, so a family in that position should not assume it does. Starting January 1, 2028, the Commission will adjust the burial and transportation limits each year for inflation ([§ 65.2-512(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-512/)).
 
 The weekly amount is figured from the worker’s average weekly wage, generally the worker’s earnings in the 52 weeks before the injury ([Va. Code § 65.2-101](https://law.lis.virginia.gov/vacode/title65.2/chapter1/section65.2-101/)). Overtime, raises, and short or irregular work histories can all change that figure, and the insurance company’s number is not always right. Pay stubs, tax returns, and the employer’s payroll records matter.
 
