@@ -3,7 +3,7 @@ title: "How to File a Workers’ Compensation Claim"
 metaTitle: "How to File a Workers' Compensation Claim in Virginia"
 description: "If you're hurt at work in Virginia, it's important to know your rights. Check out workers' comp claim resources from Pathfinder Injury Law."
 date: 2021-09-16T08:59:00Z
-updated: 2026-11-10T21:00:00Z
+updated: 2026-11-16T16:00:00Z
 tags: ["claim-process"]
 ---
 Getting hurt at work is stressful. You may be missing paychecks, dealing with doctors, and wondering what to do first. One of the most important steps is making sure your Workers’ Comp claim is filed correctly and on time. This guide walks through the steps in Virginia.
@@ -20,7 +20,7 @@ Virginia law requires [written notice to your employer within 30 days of the acc
 
 ## Step 2: Know Your Deadline
 
-Claims for benefits must generally be filed with the Commission within two years of the date of your accident, or else you can forever lose benefit entitlement. Exceptions exist, but they are narrow and hard to count on. Do not wait until the end of that period. You can read more about [filing deadlines](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/) in the Virginia Code, and a lawyer can tell you how the deadline applies to your situation.
+Claims for benefits must generally be filed with the Commission within two years of the date of your accident, or else you can forever lose benefit entitlement. Exceptions exist, but they are narrow and hard to count on. Do not wait until the end of that period. The deadline is in [Va. Code § 65.2-601](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-601/). Here are [all the Virginia workers’ comp deadlines](/workers-comp-deadlines-virginia/), including how the two years are counted and what doesn’t stop the clock.
 
 ## Step 3: Gather Your Information
 
