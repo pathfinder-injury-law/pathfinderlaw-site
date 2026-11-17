@@ -24,7 +24,7 @@ e4-green-valley.jpg      Girma Nigusse  https://unsplash.com/photos/_dJ_pNSWehQ
 
 No paid stock photos or paid fonts belong in this public repository.
 
-public/images/blog/birthday/   23 photos in the "Happy Birthday to Pathfinder Injury Law!" post.
+public/images/blog/birthday/   (whole folder) 23 photos in the "Happy Birthday to Pathfinder Injury Law!" post.
                  The firm's own photos (owner-approved for use, Oct 28, 2026), copied from the
                  old site's uploads folder. Not stock photos; no license needed.
 
@@ -36,3 +36,22 @@ public/images/blog/   Free photos from Unsplash (Unsplash License, https://unspl
   sore-back.jpg       @sasun1990     https://unsplash.com/photos/woman-holding-her-sore-lower-back-bNdiJ1FEbV4
   neck-pain.jpg       @kkalerry      https://unsplash.com/photos/person-touching-neck-with-blonde-hair-TcUfF24fUMY
   broken-leg.jpg      @tomspentys    https://unsplash.com/photos/a-person-with-a-broken-leg-wearing-a-pair-of-blue-boots-AtWb4spCKHI
+
+Firm portraits (owned by the firm):
+bryn.jpg, bryn-round.webp, mandy.jpg, mandy-round.webp   Bryn Swartz and Mandy Truman, photographed for the firm on
+                 Jan 6, 2020, during its brand development work with Simon Studios. Cropped and resized here.
+
+Drawn for this site (owned by the firm; no outside source):
+contour-texture.svg   The topographic texture behind the footer, the contact band, and other dark sections.
+                 Drawn by scripts/make-contours.mjs, Nov 16, 2026. Replaced an older texture whose source was unknown.
+contours.svg     The faint map lines on the home page. Drawn by scripts/make-contours.mjs, Nov 2, 2026.
+edge.svg         The torn edge under page heroes. Generated for this site as a repeating tile, Oct 28, 2026.
+
+open-graph-card.jpg   The link-preview picture. Made by scripts/make-og-card.mjs, Nov 16, 2026, from the AI-made
+                 hero-over-shoulder-desktop.webp (above), the firm's trademarked logo, and the words set in Figtree
+                 (SIL Open Font License).
+
+Logos and icons (public/images/brand/, favicon.png, apple-touch-icon.png) are the firm's trademarked logo and need no credit line.
+
+Every image under public/ needs a line here. scripts/check-credits.mjs checks this before each build.
+
