@@ -111,7 +111,7 @@ Most Virginia cases settle with a **full and final settlement**: one lump sum th
 - **500 weeks** for a spouse or children presumed wholly dependent. That includes a dependent spouse and children under 18, children over 18 who are physically or mentally unable to earn a living, and children under 23 who are full-time students ([Va. Code § 65.2-515](https://law.lis.virginia.gov/vacode/title65.2/chapter5/section65.2-515/)).
 - **400 weeks** if there is no such spouse or child, for parents in destitute circumstances, others who were wholly dependent in fact, or, if there are none, partial dependents.
 
-Because the weeks run from the date of injury, weeks the worker was paid before death come out of that period. The employer also pays burial expenses of up to $15,000 and transportation expenses for the deceased of up to $1,000. If one dependent’s benefits end, that share is divided among the remaining dependents in the same class.
+Because the weeks run from the date of injury, weeks the worker was paid before death come out of that period. The employer also pays burial expenses of up to $15,000 and transportation expenses for the deceased of up to $1,000. If one dependent’s benefits end, that share is divided among the remaining dependents in the same class. Here’s more on [who gets workers’ comp death benefits in Virginia](/workers-comp-death-benefits-virginia/), the amounts, and the deadlines.
 
 ## Questions About How Long Workers’ Comp Lasts
 
