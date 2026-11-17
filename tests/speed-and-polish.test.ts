@@ -45,7 +45,7 @@ test('The map texture never loads with the hero: no CSS background, no early src
     }
     for (const img of html.match(/<img class="contour-tex"[^>]*>/g) ?? []) {
       assert.doesNotMatch(img, /\ssrc=/, page);
-      assert.match(img, /data-src="\/images\/contour-map\.svg"/, page);
+      assert.match(img, /data-src="\/images\/contour-texture\.svg"/, page);
     }
     assert.match(html, /img\.contour-tex\[data-src\]/, `${page}: the loader script`);
   }
