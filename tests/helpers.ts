@@ -1,12 +1,16 @@
 import { DatabaseSync } from 'node:sqlite';
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { generateKeyPairSync } from 'node:crypto';
 import type { Deps, Env } from '../src/worker/types.ts';
 
 // A D1-shaped wrapper over Node's built-in SQLite, running the real migration.
-export function makeDb() {
+export function makeDb(upTo?: string) {
   const sqlite = new DatabaseSync(':memory:');
-  sqlite.exec(readFileSync(new URL('../migrations/0001_create_submissions.sql', import.meta.url), 'utf8'));
+  // Every migration, in order, as the live database has them (pass upTo to stop early).
+  for (const f of readdirSync(new URL('../migrations/', import.meta.url)).filter((f) => f.endsWith('.sql')).sort()) {
+    if (upTo && f > upTo) break;
+    sqlite.exec(readFileSync(new URL(`../migrations/${f}`, import.meta.url), 'utf8'));
+  }
   const mk = (sql: string, args: unknown[] = []) => ({
     bind: (...v: unknown[]) => mk(sql, v),
     run: async () => void sqlite.prepare(sql).run(...(args as never[])),

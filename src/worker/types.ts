@@ -23,6 +23,9 @@ export interface Env {
   TURNSTILE_SECRET?: string;
   HEARTBEAT_URL?: string;
   ALERT_URL?: string;
+  // Intake sheet push (sheet.ts). Both unset = the push is off. Bryn sets them; nobody else sees them.
+  INTAKE_URL?: string; // the Apps Script web app's /exec address (kept out of the public repo)
+  INTAKE_SECRET?: string; // shared HMAC key, also in the script's Script Properties
   // Plain variables
   PREVIEW_MODE?: string;
   // Comma-separated hostnames a Turnstile token may come from (default in config.ts).

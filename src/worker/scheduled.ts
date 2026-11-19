@@ -148,13 +148,46 @@ export async function buildDailyCheck(env: Env, deps: Deps): Promise<{ subject: 
       ].join('\n'),
     );
   }
+  // Intake sheet (sheet.ts): yesterday's leads that never reached the sheet. Its own query, so a
+  // missing migration (no sheet columns) cannot break the rest of this check. NULL rows were never
+  // meant for the sheet (push off, bots, self-test) and are not listed.
+  let notInSheet: { created_at: string; name: string }[] = [];
+  try {
+    notInSheet = (
+      await env.DB.prepare(
+        "SELECT created_at, name FROM submissions WHERE created_at >= ? AND created_at < ? AND is_test = 0 AND sheet_status IN ('pending', 'sending', 'failed', 'gave_up') ORDER BY created_at",
+      )
+        .bind(day.start, day.end)
+        .all<{ created_at: string; name: string }>()
+    ).results;
+  } catch {
+    // no sheet columns yet: nothing to report
+  }
+  if (notInSheet.length) {
+    const people = notInSheet.map((r) => {
+      const when = new Date(r.created_at).toLocaleString('en-US', { timeZone: ET, dateStyle: 'medium', timeStyle: 'short' });
+      return `  - ${r.name} (sent ${when})`;
+    });
+    problems.push(
+      [
+        `${notInSheet.length === 1 ? 'One website message' : `${notInSheet.length} website messages`} from yesterday did not reach the Intake sheet. ${notInSheet.length === 1 ? 'It' : 'Each one'} still reached your inbox by email.`,
+        '',
+        'What to do:',
+        '1. Add them to the Intake sheet by hand from the email:',
+        ...people,
+        '2. Tell Claude: "Website leads are not reaching the Intake sheet."',
+      ].join('\n'),
+    );
+  }
   if (!problems.length) return null;
 
   const subject = undelivered.length
     ? `Website form: ${undelivered.length === 1 ? 'a message' : 'messages'} did not reach you. Please call back`
     : quiet
       ? 'Website form: no messages in 3 days. Please test it'
-      : 'Website form: spam filter needs attention';
+      : notInSheet.length && problems.length === 1
+        ? 'Website form: messages did not reach the Intake sheet'
+        : 'Website form: spam filter needs attention';
   const body = [...problems.flatMap((p, i) => (i ? ['', '---', '', p] : [p])), '', `(Daily website form check for ${day.label}. You only get this email when something needs attention.)`].join('\n');
   return { subject, body };
 }
