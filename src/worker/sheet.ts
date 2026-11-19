@@ -51,9 +51,14 @@ const answer = (message: string, question: string) =>
   message.split('\n').find((l) => l.startsWith(`${question}: `))?.slice(question.length + 2) ?? '';
 
 // Field names match the Intake tab's columns. The form asks "when" and "where do you work" as
-// choices, not a date or an employer name, so DOI and Employer carry the choice text.
+// choices, not a date or an employer name, so DOI and Employer go blank (staff fill them in) and the
+// choices lead the Summary as "When: <choice>. Where: <choice>." (agreed with the App expert, Nov 19).
+// Summary: sorting tag, then that line, then the logged message (all answers, then what was typed).
 export function sheetPayload(l: SheetLead): Record<string, string> {
   const tag = l.route && (ROUTES as string[]).includes(l.route) ? ROUTE_SUBJECT[l.route as Route] : '';
+  const when = answer(l.message, 'When it happened');
+  const where = answer(l.message, 'Where they work');
+  const choices = [when && `When: ${when}.`, where && `Where: ${where}.`].filter(Boolean).join(' ');
   return {
     LeadID: l.id,
     ReceivedAt: l.created_at,
@@ -61,9 +66,9 @@ export function sheetPayload(l: SheetLead): Record<string, string> {
     Phone: l.phone,
     Email: l.email,
     Source: 'Website',
-    DOI: answer(l.message, 'When it happened'),
-    Employer: answer(l.message, 'Where they work'),
-    Summary: tag ? `${tag}\n\n${l.message}` : l.message,
+    DOI: '',
+    Employer: '',
+    Summary: [tag, choices, l.message].filter(Boolean).join('\n\n'),
     Status: l.outcome === 'screened' ? 'Screened' : 'New',
   };
 }

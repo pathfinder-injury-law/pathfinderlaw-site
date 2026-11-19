@@ -99,8 +99,8 @@ Code: `src/worker/sheet.ts`. Database columns: `migrations/0002_sheet_status.sql
 - Screened messages that are still emailed go with `Status` = `Screened`. All others go as `New`.
 
 **What is sent.** These columns: `LeadID` (the database row id), `ReceivedAt` (UTC), `Name`, `Phone`, `Email`, `Source` = `Website`, `DOI`, `Employer`, `Summary`, and `Status`.
-- `DOI` is the "When did it happen?" choice and `Employer` is the "Where do you work?" choice. The form asks for neither a date nor a company name.
-- `Summary` is the sorting tag, then the answers, then what the person typed.
+- `DOI` and `Employer` are sent blank. The form asks for neither a date nor a company name, so staff fill them in.
+- `Summary` is, in order: the sorting tag; then `When: <choice>. Where: <choice>.` (the "When did it happen?" and "Where do you work?" choices, whichever were asked); then the answers; then what the person typed.
 
 **Signing.** The body is `{ "v": 1, "ts": <unix seconds>, "payload": "<payload JSON as a string>", "sig": "<hex>" }`.
 - `sig` is HMAC-SHA256 over `ts + "." + payload`, keyed with `INTAKE_SECRET`, as lowercase hex.

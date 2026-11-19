@@ -81,15 +81,25 @@ test('sheet: a lead is emailed as before, then posted once, signed, with the Int
   assert.equal(p.Phone, '(804) 555-0100');
   assert.equal(p.Email, 'pat@example.com');
   assert.equal(p.Source, 'Website');
-  assert.equal(p.DOI, '1 to 6 months ago');
-  assert.equal(p.Employer, 'A private company, or a city or county government, in Virginia');
-  assert.match(p.Summary, /^PRIORITY case\n\nHow hurt: An accident at work\n/);
+  assert.equal(p.DOI, '');
+  assert.equal(p.Employer, '');
+  assert.match(p.Summary, /^PRIORITY case\n\nWhen: 1 to 6 months ago\. Where: A private company, or a city or county government, in Virginia\.\n\nHow hurt: An accident at work\n/);
   assert.match(p.Summary, /What happened and when:\nFell off a ladder\.$/);
   assert.equal(p.Status, 'New');
   assert.equal(row.sheet_status, 'sent');
   assert.equal(row.sheet_tries, 1);
   assert.equal(row.sheet_detail, null);
   assert.equal(row.delivery_status, 'sent'); // the email record is untouched
+});
+
+test('sheet: a refer-out lead (no work question asked) leads the Summary with When only', async () => {
+  const env = on();
+  const w = world();
+  await send(env, w, { intake: { how: 'sick', when: 'year' }, message: '' });
+  const p = JSON.parse(JSON.parse(w.posts[0].body).payload);
+  assert.equal(p.DOI, '');
+  assert.equal(p.Employer, '');
+  assert.match(p.Summary, /^Refer out\n\nWhen: 6 months to a year ago\.\n\nHow hurt: /);
 });
 
 test('sheet: a plain message (no step-by-step answers) has blank DOI and Employer and no tag', async () => {
