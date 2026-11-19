@@ -6,6 +6,7 @@ import { ROUTE_SUBJECT, deadlineNote, intakeLines, intakeRows, route, type Route
 import type { Deps, Env } from './types.ts';
 import { realDeps } from './types.ts';
 import { validate, type Submission } from './validate.ts';
+import { pushLead, sheetEnabled, type SheetLead } from './sheet.ts';
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
@@ -47,6 +48,9 @@ export interface Processed {
   outcome: 'lead' | 'screened' | 'unsure';
   reason: string;
   delivery: 'sent' | 'failed' | 'skipped';
+  // Set when this lead should also go to the Intake sheet (sheet.ts). The caller pushes it in the
+  // background, so the visitor's answer never waits on Google.
+  sheet?: SheetLead;
 }
 
 // Added to the end of the subject so the "[Screened]" and "[Form Test" filters still match.
@@ -243,6 +247,19 @@ export async function processSubmission(
       .catch(() => logCode('db_update_failed'));
   }
 
+  // The Intake sheet gets every lead that is emailed (screened ones marked Status = Screened),
+  // never a bot and never the self-test. Kept in separate columns and a separate statement, so a
+  // missing migration or a failed write here never touches the email path.
+  const leadRoute = sub.intake ? route(sub.intake) : null;
+  const forSheet = deliver && !opts.test && sheetEnabled(env);
+  if (logged) {
+    await db!
+      .prepare('UPDATE submissions SET route = ?, sheet_status = ? WHERE id = ?')
+      .bind(leadRoute, forSheet ? 'pending' : null, id)
+      .run()
+      .catch(() => logCode('sheet_track_failed'));
+  }
+
   // 3. Email.
   let delivery: Processed['delivery'] = 'skipped';
   let detail: string | null = null;
@@ -285,12 +302,17 @@ export async function processSubmission(
   }
 
   const status = turnstileBlocked(reason) ? 'verification_failed' : delivery === 'failed' ? 'delivery_failed' : 'ok';
-  return { status, outcome, reason, delivery };
+  const sheet: SheetLead | undefined = forSheet
+    ? { id, created_at: created, name: sub.name, phone: sub.phone, email: sub.email, message: loggedMessage(sub), outcome, route: leadRoute }
+    : undefined;
+  return { status, outcome, reason, delivery, ...(sheet ? { sheet } : {}) };
 }
 
 const turnstileBlocked = (reason: string) => reason === 'turnstile_failed' || reason === 'turnstile_wrong_hostname';
 
-export async function handleContact(request: Request, env: Env, deps: Deps = realDeps): Promise<Response> {
+type Ctx = { waitUntil(p: Promise<unknown>): void };
+
+export async function handleContact(request: Request, env: Env, deps: Deps = realDeps, ctx?: Ctx): Promise<Response> {
   if (request.method !== 'POST') return json({ ok: false, error: 'method_not_allowed' }, 405);
   if (!(request.headers.get('content-type') ?? '').toLowerCase().startsWith('application/json')) {
     return json({ ok: false, error: 'bad_request' }, 415);
@@ -316,6 +338,12 @@ export async function handleContact(request: Request, env: Env, deps: Deps = rea
   }
 
   const result = await processSubmission(env, deps, sub, { ip: request.headers.get('CF-Connecting-IP') });
+  if (result.sheet) {
+    // Never throws (pushLead catches everything). In the Worker it runs after the answer is sent.
+    const push = pushLead(env, deps, result.sheet);
+    if (ctx) ctx.waitUntil(push);
+    else await push;
+  }
   if (result.status === 'verification_failed') return json({ ok: false, error: 'verification_failed' }, 403);
   if (result.status === 'delivery_failed') return json({ ok: false, error: 'delivery_failed', phone: FIRM_PHONE }, 502);
   return json({ ok: true, ...routeField(sub) });
