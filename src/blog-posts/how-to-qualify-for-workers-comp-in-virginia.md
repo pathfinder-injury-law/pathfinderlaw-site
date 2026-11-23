@@ -39,7 +39,7 @@ It generally does not cover injuries that build up over time from repetitive wor
 
 **The accident has to happen while you’re working (“in the course of”) and be caused by a risk of the job (“arising out of”).** Virginia uses an “actual risk” test: the job itself has to expose you to the danger that hurt you. A risk anyone could face anywhere, apart from work, usually isn’t enough.
 
-That’s why the details matter so much. A fall on stairs at work isn’t automatically covered. A fall caused by a wet step, a loose handrail, or a heavy load your job had you carrying usually is. And a fall with no known cause usually isn’t covered at all, unless a legal presumption applies.
+That’s why the details matter so much. A fall on stairs at work isn’t automatically covered. A fall caused by a wet step, a loose handrail, or a heavy load your job had you carrying usually is. And a fall with no known cause usually isn’t covered at all, unless a legal presumption applies. Here’s more on [when a fall at work is covered](/fall-at-work-workers-comp-virginia/).
 
 Injuries on the way to or from work are generally not covered, with exceptions, such as when your employer provides the transportation or the trip is part of your job. Here’s more on [a car accident at work in Virginia](/car-accident-at-work-in-virginia/).
 
