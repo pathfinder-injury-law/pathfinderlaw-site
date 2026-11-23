@@ -9,15 +9,15 @@ tags: ["process","claims"]
 
 *Nothing in this article should be taken as legal advice. Every case is different.*
 
-Most Virginia workers’ comp lawyers charge nothing up front. The fee is usually a percentage of the money the lawyer recovers for you, and in a Virginia comp case the Workers’ Compensation Commission has to approve that fee before the lawyer can be paid ([Va. Code § 65.2-714](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/)). The Commission can cut a fee it finds too high and can order a lawyer to pay back a fee that was excessive. The Commission also says it does not set fees by a schedule or a percentage. It looks at the time spent, the effort, the kind of work, and the results ([Commission page for attorneys](https://workcomp.virginia.gov/content/attorneys)). That makes comp fees different from almost any other kind of legal work.
+In Virginia workers’ comp, a lawyer is often paid only if money is recovered, so there may be nothing to pay up front. Check the fee agreement before you sign. Whatever the agreement says, the Workers’ Compensation Commission has to approve the fee before the lawyer can be paid ([Va. Code § 65.2-714](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/)). The Commission can cut a fee it finds too high and can order a lawyer to pay back a fee that was excessive. The Commission also says it does not set fees by a schedule or a percentage. It looks at the time spent, the effort, the kind of work, and the results ([Commission page for attorneys](https://workcomp.virginia.gov/content/attorneys)).
 
 ## How Workers’ Comp Lawyers Are Paid in Virginia
 
-**A comp lawyer is almost always paid on a contingency: a share of what the lawyer gets for you, approved by the Commission.**
+**A comp lawyer is usually paid on a contingency: a share of what the lawyer gets for you, and the Commission decides what fee is reasonable.**
 
 | Question | Short answer | Where it comes from |
 |---|---|---|
-| Do I pay anything up front? | Usually not. Ask before you sign. | The fee agreement |
+| Do I pay anything up front? | Ask. It depends on the fee agreement. | The fee agreement |
 | Who decides the fee? | The Commission has the final say on every fee in a comp case | [§ 65.2-714(A)](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/) |
 | Can the Commission lower a fee? | Yes, and it can order an excessive fee paid back | [§ 65.2-714(A)](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/) |
 | Does the agreement have to be in writing? | A contingent fee agreement has to be in writing and say how the fee is figured | [Va. Rule of Professional Conduct 1.5(c)](https://vsb.org/Site/Site/about/rules-regulations/rpc-part6-sec2.aspx) |
@@ -29,7 +29,7 @@ The fee comes out of the benefits the lawyer recovers, such as back pay for week
 
 **The question that matters more than the percentage is what the percentage is taken from.** Two agreements with the same percentage can cost you very different amounts.
 
-- **Weekly checks the insurer was already paying.** If the insurance company accepted your claim and was paying before you hired anyone, ask whether the lawyer takes a share of those checks. Many lawyers don’t.
+- **Weekly checks the insurer was already paying.** If the insurance company accepted your claim and was paying before you hired anyone, ask whether the lawyer takes a share of those checks.
 - **Back pay the lawyer wins.** When the insurer denied the claim or stopped your checks, the fee usually comes from the past-due benefits the Commission awards.
 - **A settlement.** The fee is part of the settlement paperwork, and the deputy commissioner who approves the settlement also approves the fee.
 - **Medical bills.** In a contested claim that the Commission finds compensable after a hearing, or after the insurer drops its defense, the Commission awards your lawyer a reasonable fee paid out of the money the insurer pays to doctors and hospitals (or to a health insurer that paid those bills first), not out of your pocket ([§ 65.2-714(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/)).

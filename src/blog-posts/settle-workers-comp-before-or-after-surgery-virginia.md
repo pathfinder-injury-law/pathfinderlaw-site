@@ -51,7 +51,7 @@ Here’s more on [whether to accept a lump sum settlement](/should-i-accept-a-lu
 | Situation | What to weigh |
 |---|---|
 | You don’t want the surgery | Without the surgery, the rating and restrictions may be fixed now. But refusing medical care the insurer provides can suspend your wage benefits until the refusal ends, and those weeks aren’t paid back, unless the Commission finds the refusal was justified ([Va. Code § 65.2-603(B)](https://law.lis.virginia.gov/vacode/title65.2/chapter6/section65.2-603/)). |
-| You have other health insurance | Health insurers often exclude work injuries. Find out in writing before you count on it. |
+| You have other health insurance | Health plans can exclude work injuries. Find out in writing before you count on it. |
 | You’re on Medicare, or reasonably expect to be within 30 months | If the settlement closes your medical care, Medicare’s interests have to be considered. A [Medicare set-aside](/workers-comp-settlement-in-virginia/#medicare) comes up only when Medicare’s interest must be protected. Not every settlement has one. |
 | The insurer disputes that the injury caused the need for surgery | The dispute itself is a risk on both sides, and that risk is part of the price. |
 
