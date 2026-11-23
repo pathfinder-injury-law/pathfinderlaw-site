@@ -81,7 +81,7 @@ These exams are often called IMEs. The insurance company picks and pays the doct
 
 ## Looking for a Workers’ Comp Doctor Near You?
 
-Whether you’re in Norfolk, Newport News, Richmond, or anywhere else in Virginia, the first question is the same: has your employer given you a panel? If it has, your choice is limited to that list. If it hasn’t, or your claim has been denied, you can generally choose any doctor, including one in your health insurance network. Either way, choose a doctor whose specialty fits your injury, and tell the office at the first visit that it is a work injury.
+Whether you’re in Norfolk, Newport News, Richmond, the Eastern Shore, or anywhere else in Virginia, the first question is the same: has your employer given you a panel? If it has, your choice is limited to that list. If it hasn’t, or your claim has been denied, you can generally choose any doctor, including one in your health insurance network. Either way, choose a doctor whose specialty fits your injury, and tell the office at the first visit that it is a work injury.
 
 ## Steps to Take
 
