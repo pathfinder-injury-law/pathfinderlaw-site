@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.3.0",
-    "astro": "7.4.12"
+    "astro": "7.4.13"
   },
   "devDependencies": {
-    "wrangler": "4.162.0"
+    "wrangler": "4.165.0"
   }
 }
