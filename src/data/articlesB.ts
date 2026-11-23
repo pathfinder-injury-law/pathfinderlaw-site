@@ -444,7 +444,7 @@ export const articlesB = {
           <p>On-the-job injuries can be complex and difficult to judge. That traumatic head injury may feel fine now, but you may suffer health complications shortly thereafter. Because you may need future benefits, keep in mind that settling your case closes everything and ends benefits.</p>
           <p>Questions to answer before you say yes:</p>
           <ul>
-            <li><strong>Will you need more treatment?</strong> A full and final settlement closes your medical benefits for good. Workers’ comp no longer pays for surgery, therapy, or prescriptions for the injury.</li>
+            <li><strong>Will you need more treatment?</strong> A full and final settlement closes your medical benefits for good. Workers’ comp no longer pays for surgery, therapy, or prescriptions for the injury. Here’s more on <a href="/settle-workers-comp-before-or-after-surgery-virginia/">settling before or after surgery</a>.</li>
             <li><strong>Are you on Medicare, or likely to be within 30 months?</strong> Then Medicare’s interests have to be considered, and part of the money may need to go into a <a href="/workers-comp-settlement-in-virginia/#medicare">Medicare set-aside</a>.</li>
             <li><strong>Can you go back to your old job?</strong> If not, remember that the settlement also ends wage loss and vocational rehab benefits.</li>
             <li><strong>Has your doctor rated any permanent loss of use?</strong> Permanent partial disability benefits end with the settlement too. Here’s <a href="/impairment-rating-virginia-workers-comp/">how impairment ratings work</a>.</li>
