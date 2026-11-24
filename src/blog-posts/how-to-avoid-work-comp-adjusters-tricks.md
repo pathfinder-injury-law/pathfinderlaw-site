@@ -9,7 +9,7 @@ tags: ["insurance","settlement"]
 
 *Nothing in this article should be taken as legal advice. Every case is different.*
 
-A workers’ comp adjuster works for your employer’s insurance company, and the adjuster’s job is to pay what the law requires and not a dollar more. The tactics that cost Virginia workers the most aren’t dramatic. They’re quiet: a recorded statement taken the first week, a medical release that opens your whole history, an agreement form with the wage figured low, or a body part left off the claim. Each one has an answer in Virginia law, and most of those answers have deadlines.
+A workers’ comp adjuster works for your employer’s insurance company or a claims administrator it hires ([what that means when Gallagher Bassett calls](/gallagher-bassett-workers-comp-claim-virginia/)), and the adjuster’s job is to pay what the law requires and not a dollar more. The tactics that cost Virginia workers the most aren’t dramatic. They’re quiet: a recorded statement taken the first week, a medical release that opens your whole history, an agreement form with the wage figured low, or a body part left off the claim. Each one has an answer in Virginia law, and most of those answers have deadlines.
 
 ## The Most Common Adjuster Tactics, and the Answer to Each
 
