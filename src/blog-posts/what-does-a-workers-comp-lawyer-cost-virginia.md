@@ -47,7 +47,7 @@ The fee comes out of the benefits the lawyer recovers, such as back pay for week
 
 Ask whether costs come out of your share or the lawyer’s, and whether you owe them if there is no recovery. When an employer or insurer brings or defends a proceeding without reasonable grounds, or delays payment without reasonable grounds, the Commission can make the employer or insurer pay the whole cost of the proceeding, including a reasonable attorney’s fee ([Va. Code § 65.2-713](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-713/)).
 
-## Why the Cheapest Choice Isn’t Always No Lawyer
+## Where an Unrepresented Claim Loses Money
 
 **A lawyer’s fee is easy to see. The cost of a claim that goes wrong is not.** Here are a few of the places where an unrepresented claim loses money in Virginia:
 
@@ -67,8 +67,6 @@ Here’s more on [where Virginia comp claims go wrong without a lawyer](/do-i-ne
 5. Will I see the fee in writing before the Commission approves it?
 
 Here are more [questions to ask a workers’ comp lawyer](/questions-to-ask-a-workers-comp-lawyer/).
-
-> “People ask what it costs before they ask anything else, and they should. Get the fee in writing, and make sure you know what it comes out of.” (Bryn Swartz)
 
 ## Talk to Pathfinder Injury Law About Your Claim
 
