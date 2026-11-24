@@ -73,8 +73,6 @@ A 20 percent loss of use of the leg, for example, is 20 percent of 175 weeks, or
 
 ## What Is a Broken Bone Worth?
 
-> “On the first call, I won’t guess what your case is worth. I don’t know anything about it yet. Any lawyer who puts a number on it that early is making it up.” (Bryn Swartz)
-
 What drives the value is your average weekly wage, the weeks you’re out, the body part and the rating, whether you can go back to your old job, and the future care the break will need.
 
 ## Talk to Pathfinder Injury Law About a Fracture

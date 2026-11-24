@@ -57,8 +57,6 @@ Here’s more on [whether to accept a lump sum settlement](/should-i-accept-a-lu
 
 ## What Drives the Value Either Way
 
-> “On the first call, I won’t guess what your case is worth. I don’t know anything about it yet. Any lawyer who puts a number on it that early is making it up.” (Bryn Swartz)
-
 There isn’t an honest average for a settlement before or after surgery. What drives the number is the [average weekly wage](/virginia-workers-comp-lawyer/how-is-workers-comp-calculated-in-virginia/) behind your checks, how many weeks of benefits remain, the impairment rating, the cost of future medical care, and how strong the insurer’s defenses are. Here’s more on [the average workers’ comp settlement question](/virginia-workers-comp-lawyer/average-workers-comp-settlement-in-virginia/).
 
 ## Talk to Pathfinder Injury Law Before You Sign
