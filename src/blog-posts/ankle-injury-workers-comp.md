@@ -72,7 +72,7 @@ If the surgery is reasonable, necessary, and related to your work injury, the in
 
 ## Broken Ankle at Work: Recovery Time and Settlement
 
-**A broken ankle from a fall, a missed step, or a crush at work is usually a clear accident under Virginia workers’ comp. What the claim is worth depends mostly on the type of break, whether it needs surgery, and whether the joint is left permanently damaged.** The insurance company rarely argues that a fracture didn’t happen. It argues about how long you are out, what your rating should be, and whether later problems belong to the work injury.
+**A broken ankle from a fall, a missed step, or a crush at work is usually a clear accident under Virginia workers’ comp. What the claim is worth depends mostly on the type of break, whether it needs surgery, and whether the joint is left permanently damaged.** The insurance company rarely argues that a fracture didn’t happen. It argues about how long you are out, what your rating should be, and whether later problems belong to the work injury. Here’s what comp pays for [broken bones at work](/broken-bone-fracture-workers-comp-virginia/) generally.
 
 | Type of break | Usual treatment | What it means for your claim |
 |---|---|---|
