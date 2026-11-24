@@ -1,5 +1,6 @@
 import { DEFAULT_ALLOWED_HOSTNAMES, FIRM_PHONE, MIN_FILL_MS, SELF_TEST_RECIPIENTS, TURNSTILE_TEST_SECRET, TURNSTILE_VERIFY_URL } from './config.ts';
 import { alertThrottled, logCode, ping } from './alerts.ts';
+import { bump, refererPath } from './counts.ts';
 import { SendError, sendMail } from './google.ts';
 import { decide, loadRules } from './screen.ts';
 import { ROUTE_SUBJECT, deadlineNote, intakeLines, intakeRows, route, type Route } from './intake.ts';
@@ -318,6 +319,11 @@ export async function handleContact(request: Request, env: Env, deps: Deps = rea
   const result = await processSubmission(env, deps, sub, { ip: request.headers.get('CF-Connecting-IP') });
   if (result.status === 'verification_failed') return json({ ok: false, error: 'verification_failed' }, 403);
   if (result.status === 'delivery_failed') return json({ ok: false, error: 'delivery_failed', phone: FIRM_PHONE }, 502);
+  // Form-send counter (counts.ts): real messages only, never screened ones. Page path and day only.
+  if (result.outcome !== 'screened') {
+    const page = refererPath(request, env);
+    if (page) await bump(env, deps, page, 'form');
+  }
   return json({ ok: true, ...routeField(sub) });
 }
 

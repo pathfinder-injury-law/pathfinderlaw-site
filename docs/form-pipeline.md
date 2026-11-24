@@ -91,6 +91,16 @@ A real lead whose email Gmail refused (Gmail down or erroring) is re-sent automa
 
 The Gmail filters from the plan should match only the exact "[Screened]" tag and the "[Form Test" tag, so no filter can bury a real lead.
 
+## Call-tap and form-send counters (added Nov 24, 2026)
+
+Bryn asked to see which pages lead people to call or write. Two counters do that, with no visitor data at all.
+
+- **Call taps.** A tap on any phone link (`tel:`) on any page sends that page's path to `POST /api/tap` with `navigator.sendBeacon` (the listener is in `src/components/Header.astro`). The browser fires it and moves on, so the call is never held up. The Worker counts it only if the request comes from the firm's own site (Origin) and the path is a real page on the site.
+- **Form sends.** After a message is accepted and is not screened as spam, the Worker adds 1 for the page it was sent from (the browser's Referer). Failed sends, screened messages, and the morning self-test are not counted.
+- **What is stored.** One row per day (Eastern time), page path, and kind (`call` or `form`), holding a count: table `contact_counts`, migration `0003_contact_counts.sql`. No IP address, browser, cookie, name, phone, or message. Each row stops at 100 a day, so a bot cannot run up the database writes the contact form needs.
+- **Reading the counts.** `npm run counts` (last 30 days by page), `npm run counts -- 7`, or `npm run counts -- 30 day` (by day). It runs a read-only query through Wrangler, so it needs a Wrangler login. There is no public page or endpoint that shows the counts.
+- **Until migration 0003 is applied** to `pathfinder-forms-us`, both counters quietly do nothing (the code catches the missing table) and the form works as before. Apply it after merge, with Bryn's OK: `npx wrangler d1 migrations apply pathfinder-forms-us --remote`. That command applies every migration not yet applied. Migration 0002 belongs to the Intake sheet work (PR 138); if 138 is not merged yet, only 0003 runs, and 0002 can follow later, since each migration is tracked by name.
+
 ## Secrets and settings (names are exact)
 
 | Name | Type | What it is | Who adds it |
