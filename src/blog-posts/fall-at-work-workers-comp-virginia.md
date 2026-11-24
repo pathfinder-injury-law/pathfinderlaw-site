@@ -48,8 +48,6 @@ For everyone else, what you remember matters. A worker who says “I don’t kno
 
 Falls often break bones and hurt heads. Here’s more on [broken bones at work](/broken-bone-fracture-workers-comp-virginia/) and [concussions](/concussion-brain-injury-workers-comp/).
 
-> “There’s no such thing as ‘just a fall.’ What made you fall is the whole case.” (Bryn Swartz)
-
 ## Can I Sue My Employer for a Fall at Work?
 
 **Generally no.** In Virginia, workers’ comp is the only remedy against your employer for a work injury, whoever was at fault ([Va. Code § 65.2-307](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-307/)). Your own carelessness usually doesn’t bar the claim either, though willful misconduct, willfully breaking a known safety rule, and a few other things listed in the statute can ([Va. Code § 65.2-306](https://law.lis.virginia.gov/vacode/title65.2/chapter3/section65.2-306/)). Here’s [how to qualify for workers’ comp in Virginia](/how-to-qualify-for-workers-comp-in-virginia/).
