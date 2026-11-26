@@ -72,6 +72,16 @@ import { nav, site } from '../data/site';
 </header>
 
 <script>
+  // Call-tap counter (src/worker/counts.ts). A tap on any phone link anywhere on the page sends only
+  // this page's path. sendBeacon hands it to the browser and returns at once, so the call is never held
+  // up, and nothing is sent if the browser lacks it. No cookie, no ID, no outside service.
+  document.addEventListener('click', (e) => {
+    const link = (e.target as Element | null)?.closest?.('a[href^="tel:"]');
+    if (link && navigator.sendBeacon) {
+      try { navigator.sendBeacon('/api/tap', location.pathname); } catch { /* counting is optional */ }
+    }
+  });
+
   // Desktop dropdowns: open on hover (with a short delay before closing, so moving the mouse into the
   // panel does not close it), on keyboard focus, and on a click or tap of the arrow button. Esc closes.
   document.querySelectorAll<HTMLLIElement>('.desktop-nav .has-sub').forEach((li) => {

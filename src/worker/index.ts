@@ -1,5 +1,6 @@
 import { logCode } from './alerts.ts';
 import { handleContact } from './contact.ts';
+import { handleTap } from './counts.ts';
 import { runResend } from './resend.ts';
 import { runSheetRetry } from './sheet.ts';
 import { runDailyCheck, runPurge, runSelfTest } from './scheduled.ts';
@@ -33,6 +34,7 @@ export default {
   async fetch(request: Request, env: Env, ctx?: { waitUntil(p: Promise<unknown>): void }): Promise<Response> {
     const url = new URL(request.url);
     if (url.pathname === '/api/contact') return handleContact(request, env, undefined, ctx);
+    if (url.pathname === '/api/tap') return handleTap(request, env);
     if (url.pathname.startsWith('/api/')) return new Response('Not found', { status: 404 });
     return env.ASSETS ? env.ASSETS.fetch(request) : new Response('Not found', { status: 404 });
   },

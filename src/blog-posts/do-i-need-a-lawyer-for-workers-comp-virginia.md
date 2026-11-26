@@ -55,7 +55,7 @@ The insurance company has people who handle comp claims every day. At a hearing,
 
 ## What a Workers’ Comp Lawyer Costs in Virginia
 
-**In a Virginia comp case, the Commission must approve the attorney’s fee ([Va. Code § 65.2-714](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/)).** That applies to every lawyer representing an injured worker before the Commission. Ask about the fee, and what it is figured from, before you sign anything. Here are [questions to ask a workers’ comp lawyer](/questions-to-ask-a-workers-comp-lawyer/).
+**In a Virginia comp case, the Commission must approve the attorney’s fee ([Va. Code § 65.2-714](https://law.lis.virginia.gov/vacode/title65.2/chapter7/section65.2-714/)).** That applies to every lawyer representing an injured worker before the Commission. Ask about the fee, and what it is figured from, before you sign anything. Here’s more on [what a workers’ comp lawyer costs in Virginia](/what-does-a-workers-comp-lawyer-cost-virginia/), and here are [questions to ask a workers’ comp lawyer](/questions-to-ask-a-workers-comp-lawyer/).
 
 ## Questions About Hiring a Workers’ Comp Lawyer
 
