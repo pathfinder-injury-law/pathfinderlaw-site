@@ -2,6 +2,7 @@ import { logCode } from './alerts.ts';
 import { handleContact } from './contact.ts';
 import { handleTap } from './counts.ts';
 import { runResend } from './resend.ts';
+import { runSheetRetry } from './sheet.ts';
 import { runDailyCheck, runPurge, runSelfTest } from './scheduled.ts';
 import { realDeps, type Deps, type Env } from './types.ts';
 
@@ -9,7 +10,8 @@ import { realDeps, type Deps, type Env } from './types.ts';
 // MINUTE alone, so the hours can change there (daylight saving) with no code change:
 //   minute 15  morning self-test
 //   minute 30  daily check (emails Bryn only if something is wrong), then spam purge
-//   minute */15  re-send of real leads whose email did not go out (resend.ts)
+//   minute */15  re-send of real leads whose email did not go out (resend.ts), then the
+//                Intake sheet retry (sheet.ts; does nothing until its secrets are set)
 //   anything else: logged and ignored
 export function cronJob(cron: string): 'self_test' | 'daily_check' | 'resend' | 'none' {
   const minute = cron.trim().split(/\s+/)[0];
@@ -23,15 +25,15 @@ export async function runScheduled(cron: string, env: Env, deps: Deps): Promise<
   const job = cronJob(cron);
   if (job === 'self_test') await runSelfTest(env, deps);
   else if (job === 'daily_check') await runDailyCheck(env, deps).then(() => runPurge(env, deps));
-  else if (job === 'resend') await runResend(env, deps);
+  else if (job === 'resend') await runResend(env, deps).then(() => runSheetRetry(env, deps));
   else logCode('cron_unrecognized', { minute: cron.trim().split(/\s+/)[0] ?? '' });
   return job;
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx?: { waitUntil(p: Promise<unknown>): void }): Promise<Response> {
     const url = new URL(request.url);
-    if (url.pathname === '/api/contact') return handleContact(request, env);
+    if (url.pathname === '/api/contact') return handleContact(request, env, undefined, ctx);
     if (url.pathname === '/api/tap') return handleTap(request, env);
     if (url.pathname.startsWith('/api/')) return new Response('Not found', { status: 404 });
     return env.ASSETS ? env.ASSETS.fetch(request) : new Response('Not found', { status: 404 });

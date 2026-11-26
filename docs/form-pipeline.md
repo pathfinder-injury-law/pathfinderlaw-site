@@ -13,6 +13,7 @@ How the website's contact forms work, what a person must do before launch, and h
 7. It emails both inboxes (`bswartz@` and `mtruman@pathfinderlaw.com`, nobody else) through Gmail, sent as `admin@pathfinderlaw.com`, with Reply-To set to the visitor. Screened messages get "[Screened]" at the start of the subject.
 8. It records in the database whether the email was delivered. If sending fails, the visitor sees the firm's phone number (804-505-0633) instead of a success message, and the outside alarm is pinged.
 9. If Gmail refused the email, the Worker tries again on its own every 15 minutes (up to 3 times, within 24 hours). See "Re-send of undelivered leads" below.
+10. **Intake sheet (added Nov 19, 2026; off until its two secrets are set).** After the email step, the Worker also posts the lead to the firm's Google Sheet "Intake" tab through a signed call. This is extra: steps 4 to 9 do not depend on it. See "Intake sheet push" below.
 
 ### The step-by-step questions (added Oct 31, 2026)
 The form asks one question per screen. Questions, answers and the sorting rule are in `src/worker/intake.ts` (shared by the page and the Worker; the Worker re-sorts on its own and never trusts the page).
@@ -89,6 +90,43 @@ A real lead whose email Gmail refused (Gmail down or erroring) is re-sent automa
 - **After 3 failed tries:** nothing more is sent. The next morning's daily check lists the person to call back, as before (it now counts `sending` rows as undelivered too, alongside `pending` and `failed`).
 - **Older failed rows are not touched.** The one lead from before this change (`12cb90c8`, Nov 9, 2026, already called back) is outside the 24-hour window and stays `failed` as the record.
 
+### Intake sheet push (added Nov 19, 2026)
+Code: `src/worker/sheet.ts`. Database columns: `migrations/0002_sheet_status.sql`, which only adds columns. The push stays off until **both** `INTAKE_URL` and `INTAKE_SECRET` are set, and it never runs in preview mode.
+
+**Which leads go.**
+- Every submission that is emailed goes, except the morning self-test.
+- Bots are never emailed, so they never go.
+- Screened messages that are still emailed go with `Status` = `Screened`. All others go as `New`.
+
+**What is sent.** These columns: `LeadID` (the database row id), `ReceivedAt` (UTC), `Name`, `Phone`, `Email`, `Source` = `Website`, `DOI`, `Employer`, `Summary`, and `Status`.
+- `DOI` and `Employer` are sent blank. The form asks for neither a date nor a company name, so staff fill them in.
+- `Summary` is, in order: the sorting tag; then `When: <choice>. Where: <choice>.` (the "When did it happen?" and "Where do you work?" choices, whichever were asked); then the answers; then what the person typed.
+
+**Signing.** The body is `{ "v": 1, "ts": <unix seconds>, "payload": "<payload JSON as a string>", "sig": "<hex>" }`.
+- `sig` is HMAC-SHA256 over `ts + "." + payload`, keyed with `INTAKE_SECRET`, as lowercase hex.
+- The Apps Script side recomputes it, refuses a `ts` more than 300 seconds off, and skips a `LeadID` it already has.
+- It answers `{"ok":true,"leadId":"..."}`. Anything else counts as a failure, recorded as a fixed code (`not_json`, `wrong_lead`, `app_bad_signature`, `http_500`, `network`, and so on).
+
+**When it runs.**
+- The first push runs in the background after the visitor gets an answer, so Google never slows the form.
+- The visitor's answer and the email never depend on it.
+- A lead whose email failed still goes to the sheet.
+
+**Record.** Each push writes `sheet_status`: `pending`, then `sending`, then `sent`, `failed`, or `gave_up`. It also writes `sheet_tries`, `sheet_at`, and `sheet_detail` (a code only).
+
+**Retry.**
+- The `*/15` cron runs the email re-send and then the sheet retry.
+- It picks `pending`, `sending`, and `failed` rows older than 5 minutes and younger than 24 hours, up to 10 per run.
+- Unlike email, a `sending` row is safe to retry, because the sheet skips a `LeadID` it already has.
+- After 10 tries (about 2 hours) a row becomes `gave_up`.
+
+**Alerts.**
+- A passing failure alerts nobody, because the email already went.
+- A setup problem pings `ALERT_URL`, at most every 6 hours. The setup problems are a sign-in or HTML page, a bad signature, a wrong lead id, and HTTP 401, 403, or 404.
+- The next morning's daily check lists yesterday's leads that never reached the sheet, by name and time only, so they can be added by hand from the email.
+
+**Before migration 0002 is applied,** everything else works as before. The first push still happens once, untracked, and the retry and the daily-check section do nothing.
+
 The Gmail filters from the plan should match only the exact "[Screened]" tag and the "[Form Test" tag, so no filter can bury a real lead.
 
 ## Call-tap and form-send counters (added Nov 24, 2026)
@@ -109,6 +147,8 @@ Bryn asked to see which pages lead people to call or write. Two counters do that
 | `TURNSTILE_SECRET` | Worker secret | The Turnstile site's secret key | Bryn |
 | `HEARTBEAT_URL` | Worker secret | The check-in service's "I am alive" address | Bryn (after the vendor is chosen) |
 | `ALERT_URL` | Worker secret | The check-in service's "failure" address | Bryn |
+| `INTAKE_URL` | Worker secret | The Intake sheet's Apps Script web app address (`.../exec`). Kept out of the public repo. | Bryn |
+| `INTAKE_SECRET` | Worker secret | The shared signing key, a random 32-byte value. The same value goes in the Apps Script's Script Properties. | Bryn; nobody else views or stores it |
 | `PUBLIC_TURNSTILE_SITE_KEY` | Build variable (not secret; it is public on the page) | Turnstile's public site key | Set in the live Worker's Build variables |
 | `ALLOWED_HOSTNAMES` | Plain variable in `wrangler.jsonc` (not secret) | Comma-separated hostnames a Turnstile token may be issued for. Default `pathfinderlaw.com,www.pathfinderlaw.com` (also used if unset). A token from any other hostname is stored as screened (`turnstile_wrong_hostname`), not emailed, and the visitor sees the phone number, the same as a failed check. For the launch test, add the locked test hostname to the list in `wrangler.jsonc`, deploy, test, then remove it. Edit it in the file, not the dashboard: every deploy resets plain variables to the file. | Claude or Bryn, by a commit |
 
@@ -136,6 +176,12 @@ Previews need none of these. The previews build uses Cloudflare's published alwa
    - A blocked visitor sees the form's failure message with the phone number.
 8. **Choose the outside check-in service** (free tier, texts both phones and emails). Create two checks: a **heartbeat** expected daily by about 7:45 a.m. Eastern (give its ping address to `HEARTBEAT_URL`) and a **failure** address that alerts at once (`ALERT_URL`). The Worker only does a plain GET, so any vendor that supports this works.
 9. **Gmail filters** (Bryn or Claude): label and keep in the inbox "[Screened]" and "[Form Test" subjects.
+
+### Switching on the Intake sheet push (each step is an account change and needs Bryn's own yes)
+1. Apply the column migration: `npx wrangler d1 migrations apply pathfinder-forms-us --remote` (adds columns only).
+2. Bryn adds the Worker secrets `INTAKE_URL` and `INTAKE_SECRET` (Settings, Variables and Secrets, type Secret).
+3. Send a test from a phone on the live site. Confirm one row appears in the Intake tab, then confirm the database row shows `sheet_status = sent` (read the status only).
+4. To switch it off, delete either secret. Nothing else changes.
 
 ## Launch checklist
 - [ ] Steps 1 to 9 above done
